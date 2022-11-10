@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Lecture 1 | Lecture Note on Terwilliger Algebra</title>
+  <title>Chapter 3 Lecture 3 | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Lecture 1 | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:title" content="Chapter 3 Lecture 3 | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Lecture 1 | Lecture Note on Terwilliger Algebra" />
+  <meta name="twitter:title" content="Chapter 3 Lecture 3 | Lecture Note on Terwilliger Algebra" />
   
   <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="lec2.html"/>
+<link rel="prev" href="lec2.html"/>
+<link rel="next" href="applications.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -110,33 +110,38 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lec1" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Lecture 1<a href="lec1.html#lec1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A graph (undirected, without loops or multiple edges) is a pair <span class="math inline">\(\Gamma = (X, E)\)</span>, where
-<span class="math display">\[\begin{align}
-X &amp;= \textrm{finite set (of vertices)}\\
-E &amp; = \textrm{set of (distinct) 2-element subsets of }X \textrm{ (= edges of ) }\Gamma.
-\end{align}\]</span>
-vertices <span class="math inline">\(x\)</span> and <span class="math inline">\(y\in X\)</span> are adjacent if and only if <span class="math inline">\(xy\in E\)</span>.</p>
-<div class="example">
-<p><span id="exm:unlabeled-div-1" class="example"><strong>Example 1.1  </strong></span>Let <span class="math inline">\(\Gamma\)</span> be a graph. <span class="math inline">\(X = \{a, b, c, d\}\)</span>, <span class="math inline">\(E = \{ab, ac, bc, bd\}\)</span>.</p>
-</div>
-<p>Set <span class="math inline">\(n = |X|\)</span>, the order of <span class="math inline">\(\Gamma\)</span>.</p>
-<p>Pick a field <span class="math inline">\(K\)</span> (<span class="math inline">\(=\mathbb{R}\)</span> or <span class="math inline">\(\mathbb{C}\)</span>). Then <span class="math inline">\(\mathrm{Mat}_X(K)\)</span> denotes the <span class="math inline">\(K\)</span> algebra of all <span class="math inline">\(n\times n\)</span> matrices with entries in <span class="math inline">\(K\)</span>. (rows and columns are indexed by <span class="math inline">\(X\)</span>)</p>
-<p>Adjacency matrix <span class="math inline">\(A\in \mathrm{Mat}_X(K)\)</span> is defined by
-<span class="math display">\[\begin{align}
-A_{xy} &amp; = \left\{\begin{array}{cl} 1 &amp; \textrm{ if } \; xy\in E\\
-0 &amp; \textrm{ else } . \end{array}\right.
-\end{align}\]</span></p>
+<div id="lec3" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Lecture 3<a href="lec3.html#lec3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We describe our methods in this chapter.</p>
+<p>Math can be added in body using usual syntax like this</p>
+<div id="math-example" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> math example<a href="lec3.html#math-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(p\)</span> is unknown but expected to be around 1/3. Standard error will be approximated</p>
+<p><span class="math display">\[
+SE = \sqrt(\frac{p(1-p)}{n}) \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027
+\]</span></p>
+<p>You can also use math in footnotes like this<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>We will approximate standard error to 0.027<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>where we mention <span class="math inline">\(p = \frac{a}{b}\)</span><a href="lec3.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p><span class="math inline">\(p\)</span> is unknown but expected to be around 1/3. Standard error will be approximated</p>
+<p><span class="math display">\[
+SE = \sqrt(\frac{p(1-p)}{n}) \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027
+\]</span><a href="lec3.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lec2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -167,7 +172,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-lecture1.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-lecture3.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -175,7 +180,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/icu-hsuzuki/t-algebra/master/01-lecture1.Rmd",
+"link": "https://github.com/icu-hsuzuki/t-algebra/master/03-lecture3.Rmd",
 "text": null
 },
 "download": ["t-algebra.pdf", "t-algebra.epub"],

@@ -14,6 +14,8 @@ description: "This is a lecture note using the bookdown package. The output form
 
 # About this lecturenote {-}
 
+## Setting {-}
+
 This note is created by `bookdown` package on RStudio.
 
 1. Log-in to my GitHub Account
@@ -40,3 +42,11 @@ This note is created by `bookdown` package on RStudio.
 	2. git push -u origin main
 	3. type in the password of the computer
 14. Use GIT in R Studio
+
+## Access from Another Host {-}
+
+1. library(usethis)
+2. use_git()
+3. create_github_token()
+4. gitcreds::gitcreds_set(): Replace these credentials
+

@@ -4,6 +4,10 @@
 %
 \documentclass[
 ]{book}
+\title{Lecture Note on Terwilliger Algebra}
+\author{P. Terwilliger, edited by H. Suzuki}
+\date{2022-11-10}
+
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -33,6 +37,14 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Lecture Note on Terwilliger Algebra},
+  pdfauthor={P. Terwilliger, edited by H. Suzuki},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -73,19 +85,24 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
-\hypersetup{
-  pdftitle={Lecture Note on Terwilliger Algebra},
-  pdfauthor={P. Terwilliger, edited by H. Suzuki},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
 
-\title{Lecture Note on Terwilliger Algebra}
-\author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-11-10}
-
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{definition}
+\newtheorem{hypothesis}{Hypothesis}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -96,6 +113,10 @@
 \hypertarget{about-this-lecturenote}{%
 \chapter*{About this lecturenote}\label{about-this-lecturenote}}
 \addcontentsline{toc}{chapter}{About this lecturenote}
+
+\hypertarget{setting}{%
+\section*{Setting}\label{setting}}
+\addcontentsline{toc}{section}{Setting}
 
 This note is created by \texttt{bookdown} package on RStudio.
 
@@ -166,6 +187,23 @@ This note is created by \texttt{bookdown} package on RStudio.
   Use GIT in R Studio
 \end{enumerate}
 
+\hypertarget{access-from-another-host}{%
+\section*{Access from Another Host}\label{access-from-another-host}}
+\addcontentsline{toc}{section}{Access from Another Host}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  library(usethis)
+\item
+  use\_git()
+\item
+  create\_github\_token()
+\item
+  gitcreds::gitcreds\_set(): Replace these credentials
+\end{enumerate}
+
 \hypertarget{lec1}{%
 \chapter{Lecture 1}\label{lec1}}
 
@@ -178,13 +216,27 @@ E & = \textrm{set of (distinct) 2-element subsets of }X \textrm{ (= edges of ) }
 \end{align}
 vertices \(x\) and \(y\in X\) are adjacent if and only if \(xy\in E\).
 
-\hypertarget{literature}{%
-\chapter{Literature}\label{literature}}
+\begin{example}
+Let \(\Gamma\) be a graph. \(X = \{a, b, c, d\}\), \(E = \{ab, ac, bc, bd\}\).
+\end{example}
+
+Set \(n = |X|\), the order of \(\Gamma\).
+
+Pick a field \(K\) (\(=\mathbb{R}\) or \(\mathbb{C}\)). Then \(\mathrm{Mat}_X(K)\) denotes the \(K\) algebra of all \(n\times n\) matrices with entries in \(K\). (rows and columns are indexed by \(X\))
+
+Adjacency matrix \(A\in \mathrm{Mat}_X(K)\) is defined by
+\begin{align}
+A_{xy} & = \left\{\begin{array}{cl} 1 & \textrm{ if } \; xy\in E\\
+0 & \textrm{ else } . \end{array}\right.
+\end{align}
+
+\hypertarget{lec2}{%
+\chapter{Lecture 2}\label{lec2}}
 
 Here is a review of existing methods.
 
-\hypertarget{methods}{%
-\chapter{Methods}\label{methods}}
+\hypertarget{lec3}{%
+\chapter{Lecture 3}\label{lec3}}
 
 We describe our methods in this chapter.
 

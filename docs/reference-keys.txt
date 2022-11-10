@@ -1,6 +1,6 @@
 lec1
-literature
-methods
+lec2
+lec3
 math-example
 applications
 example-one

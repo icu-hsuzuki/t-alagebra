@@ -8,3 +8,17 @@ X &= \textrm{finite set (of vertices)}\\
 E & = \textrm{set of (distinct) 2-element subsets of }X \textrm{ (= edges of ) }\Gamma.
 \end{align}
 vertices $x$ and $y\in X$ are adjacent if and only if $xy\in E$.
+
+:::{.example}
+Let $\Gamma$ be a graph. $X = \{a, b, c, d\}$, $E = \{ab, ac, bc, bd\}$.
+:::
+
+Set $n = |X|$, the order of $\Gamma$.
+
+Pick a field $K$ ($=\mathbb{R}$ or $\mathbb{C}$). Then $\mathrm{Mat}_X(K)$ denotes the $K$ algebra of all $n\times n$ matrices with entries in $K$. (rows and columns are indexed by $X$)
+
+Adjacency matrix $A\in \mathrm{Mat}_X(K)$ is defined by 
+\begin{align}
+A_{xy} & = \left\{\begin{array}{cl} 1 & \textrm{ if } \; xy\in E\\
+0 & \textrm{ else } . \end{array}\right.
+\end{align}
