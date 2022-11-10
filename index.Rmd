@@ -12,25 +12,31 @@ github-repo: rstudio/bookdown-demo
 description: "This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook."
 ---
 
-# Prerequisites
+# About this lecturenote
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+This note is created by `bookdown` package on RStudio.
 
-The **bookdown** package can be installed from CRAN or Github:
-
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
-
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
-
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
-
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+1. Log-in to my GitHub Account
+2. Go to RStudio/bookdown-demo repository: https://github.com/rstudio/bookdown-demo
+3. Use This Template
+4. Input Repository Name
+5. Select Public - default
+6. Create repository from template
+7. From Code download ZIP
+8. Move the extracted folder into a favorite directory
+9. Open RStudio Project in the folder
+10. Use Terminal in the buttom left pane
+	- confirm that the current directory is the home directry of the project by pwd
+11. (failed to proceed by ssh)
+12. Use Console
+	1. library(usethis)
+	2. use_git()
+	3. use_github() --- Error
+	4. gh_token_help()
+	5. create_github_token(): create a token in the github page. Copy the token
+	6. gitcreds::gitcreds_set(): paste the token, the token is to be expired in 30 days
+13. Use Terminal
+	1. git remote add origin https://github.com/icu-hsuzuki/t-alagebra.git
+	2. git push -u origin main
+	3. type in the password of the computer
+14. Use GIT in R Studio
