@@ -12,7 +12,7 @@ github-repo: rstudio/bookdown-demo
 description: "This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook."
 ---
 
-# About this lecturenote
+# About this lecturenote {-}
 
 This note is created by `bookdown` package on RStudio.
 
