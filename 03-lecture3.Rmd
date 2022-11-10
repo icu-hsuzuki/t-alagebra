@@ -1,4 +1,4 @@
-# Methods
+# Lecture 3 {#lec3}
 
 We describe our methods in this chapter.
 
