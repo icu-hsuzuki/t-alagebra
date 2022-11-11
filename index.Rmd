@@ -43,7 +43,7 @@ This note is created by `bookdown` package on RStudio.
 	3. type in the password of the computer
 14. Use GIT in R Studio
 
-## Access from Another Host {-}
+## Another Host {-}
 
 1. library(usethis)
 2. use_git()

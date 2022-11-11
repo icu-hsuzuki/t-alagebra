@@ -187,9 +187,9 @@ This note is created by \texttt{bookdown} package on RStudio.
   Use GIT in R Studio
 \end{enumerate}
 
-\hypertarget{access-from-another-host}{%
-\section*{Access from Another Host}\label{access-from-another-host}}
-\addcontentsline{toc}{section}{Access from Another Host}
+\hypertarget{another-host}{%
+\section*{Another Host}\label{another-host}}
+\addcontentsline{toc}{section}{Another Host}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -207,7 +207,7 @@ This note is created by \texttt{bookdown} package on RStudio.
 \hypertarget{lec1}{%
 \chapter{Lecture 1}\label{lec1}}
 
-\hfill [Wednesday, January 20, 1993]{style="float:right"}
+\textbf{Wednesday, January 20, 1993}
 
 A graph (undirected, without loops or multiple edges) is a pair \(\Gamma = (X, E)\), where
 \begin{align}
@@ -254,9 +254,176 @@ Since \(A\) is a real symmetrix matrix,
 \[V = V_0 + V_1 + \cdots + V_r \quad \textrm{ some } r\in \mathbb{Z}^{\geq0},\]
 the orthogonal direct sum of maximal \(A\)-eigenspaces.
 
-Let \(E_i\mathrm{Mat}_X(K)\) denote the orthogonal projection,
+Let \(E_i\in\mathrm{Mat}_X(K)\) denote the orthogonal projection,
 \[E_i: V \longrightarrow V_i.\]
 Then \(E_0, \ldots, E_r\) are the primitive idempotents of \(M\).
+\[M = \mathrm{Span}_K(E_0, \ldots, E_r),\]
+\[E_iE_j = \delta_{ij}E_i \quad \textrm{for all }\; i, j, \quad E_0 + \cdots + E_r = I.\]
+Let \(\theta_i\) denote the eigenvalue of \(A\) for \(V_i\) in \(\mathbb{R}\). Without loss of generality we may assume that
+\[\theta_0 > \theta_1 > \cdots > \theta_r.\]
+Let
+\[m_i = \textrm{the multiplicity of }\: \theta_i = \mathrm{dim} V_i = \mathrm{rank} E_i.\]
+Set
+\[\mathrm{Spec}(\Gamma) = \begin{pmatrix} \theta_0, & \theta_1, & \cdots, & \theta_r\\m_0, & m_1, & \cdots, & m_r\end{pmatrix}.\]
+\textbf{Problem. }
+What can we say about \(\Gamma\) when \(\mathrm{Spec}(\Gamma)\) is given?
+
+The following Lemma\ref{lem:largestev}, is an example of Problem.
+
+For every \(x\in X\),
+\[k(x) \equiv \textrm{ valency of }x \equiv \textrm{ degree of }x \equiv |\{y\mid y\in X, \: xy\in E\}|.\]
+
+\begin{definition}
+\protect\hypertarget{def:regular}{}\label{def:regular}The graph \(\Gamma\) is regular of valency \(k\) if \(k = k(x)\) for every \(x\in X\).
+\end{definition}
+
+\begin{lemma}
+\protect\hypertarget{lem:largestev}{}\label{lem:largestev}With the above notation,\\
+1. \(\theta_0\leq \max\{k(x) \mid x\in X\} = k^{\max}\).\\
+2. If \(\Gamma\) is regular of valency \(k\), then \(\theta_0 = k\).
+\end{lemma}
+
+\begin{proof}
+\leavevmode
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Without loss of generality we may assume that \(\theta_0>0\), else done. Let \(v:=\sum_{x\in X}\alpha_x\hat{x}\) denote the eivenvector for \(\theta_0\).
+\end{enumerate}
+
+Pick \(x\in X\) with \(|\alpha_x|\) maximal. Then \(|\alpha_x|\neq 0\).
+
+Since \(Av = \theta_0v\),
+\[\theta_0\alpha_x = \sum_{y\in X, xy\in E}\alpha_y.\]
+So,
+\[\theta_0 |\alpha_x| = |\theta_0\alpha_x| \leq \sum_{y\in X, xy\in E}|\alpha_y| \leq k(x)|\alpha_x| \leq k^{\max}|\alpha_x|.\]
+2. All 1's vector \(v = \sum_{x\in X}\hat{x}\) satisfies \(Av = kv\).
+
+\end{proof}
+
+\textbf{Subconstituent Algebra}
+
+Let \(x, y\in X\) and \(\ell \in \mathbb{Z}^{\geq 0}\).
+
+\begin{definition}
+A path of length \(\ell\) connecting \(x, y\) is a sequence
+\[x = x_0, x_1, \ldots, x_{\ell} = y, \quad x_i\in X, \; 0\leq i\leq \ell\]
+such that \(x_ix_{i+1}\in E\) for \(0\leq i \leq \ell-1\).
+\end{definition}
+
+\begin{definition}
+The distance \(\partial(x,y)\) is the length of a shortest path connecting \(x\) and \(y\).
+\[\partial(x,y) \in \mathbb{Z}^{\geq 0} \cup \{\infty\}.\]
+\end{definition}
+
+\begin{definition}
+The graph \(\Gamma\) is connected if and only if \(\partial(x,y) < \infty\) for all \(x, y\in X\).
+\end{definition}
+
+From now on, assume that \(\Gamma\) is connected with \(|X|\geq 2\).
+
+Set
+\[d_\Gamma = d = \max\{\partial(x,y)\mid x, y\in X\} \equiv \textrm{the diameter of }\Gamma.\]
+Fix a `base' vertex \(x\in X\).
+
+\begin{definition}
+\[d(x) = \textrm{the diameter with respect to }x = \max\{\partial(x,y)\mid y\in X\} \leq d.\]
+\end{definition}
+
+Observe that
+\[V = V_0^* + V_1^* + \cdots + V_{d(x)}^* \quad \textrm{(orthogonal direct sum)},\]
+where
+\[V_i^* = \mathrm{Span}_K(\hat{y}\mid \partial(x,y) = i) \equiv V_i*(x)\]
+and \(V_i^* = V_i^*(x)\) is called the \(i\)-the subconstituent with respect to \(x\).
+
+Let \(E_i^* = E_i^*(x)\) denote the orthogonal projection
+\[E_i^*: V \longrightarrow V_i^*(x).\]
+View \(E_i^*(x) \in \mathrm{Mat}_X(K)\). So, \(E_i^*(x)\) is diagonal with \(yy\) entry
+\[(E_i^*(x))_{yy} = \begin{cases} 1 & \textrm{if } \: \partial(x,y) = i\\ 0 & \textrm{else,}\end{cases} \quad \textrm{ for } y\in X.\]
+Set
+\[M^* = M^*(x) \equiv \textrm{Span}_K(E_0^*(x), \ldots, E_{d(x)}^*(x)).\]
+Then \(M^*(x)\) is a commutative subalgebra of \(\mathrm{Mat}_X(K)\) and is calle the \emph{dual Bose-Mesner algbara with respect to \(x\)}.
+
+\begin{definition}[Subconstituent Algebra]
+Let \(\Gamma = (X, E)\), \(x\), \(M\), \(M^*(x)\) be as above. Let \(T = T(x)\) denote the subalgebra of \(\mathrm{Mat}_X(K)\) generated by \(M\) and \(M^*(x)\). \(T\) is the \emph{subconstituent algebra} of \(\Gamma\) with respect to \(x\).
+\end{definition}
+
+\begin{definition}
+A \(T\)-module is any subspace \(W\subset V\) such that \(aw\in W\) for all \(a\in T\) and \(w\in W\).
+
+\(T\)-module \(W\) is \emph{irreducible} if and only if \(W\neq 0\) and \(W\) does not properly contain a nonzero \(T\)-module.
+\end{definition}
+
+For any \(a\in \mathrm{Mat}_X(K)\), let \(a^*\) denbote the conjugate transpose of \(a\).
+
+Observe that
+\[\langle au, v\rangle = \langle u, a^*v\rangle \quad \textrm{for all }\; a\in \mathrm{Mat}_X(K), \textrm{ and for all } \; u,v\in V.\]
+
+\begin{lemma}
+
+Let \(\Gamma = (X,E)\), \(x\in X\) and \(T \equiv T(x)\) be as above.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If \(a\in T\), then \(a^*\in T\).
+\item
+  For any \(T\)-module \(W\subset V\),
+  \[W^\bot := \{v\in V\mid \langle w, v\rangle = 0, \textrm{ for all }w\in W\}\]
+  is a \(T\)-module.
+\item
+  \(V\) decomposes as an orthogonal direct sum of irreducible \(T\)-modules.
+\end{enumerate}
+
+\end{lemma}
+
+\begin{proof}
+\leavevmode
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  It is becase \(T\) is generated by symmetric real matrices
+  \[A, E^*_0(x), E^*_1(x), \ldots, E^*_{d(x)(x)}.\]
+\item
+  Pick \(v\in W^\bot\) and \(a\in T\), it suffices to show that \(av\in W^\bot\). For all \(w\in W\),
+  \[\langle w, av\rangle = \langle a^*w, v\rangle = 0\]
+  as \(a^*\in T\).
+\item
+  This is proved by the induction on the dimension of \(T\)-modules. If \(W\) is an irreducible \(T\)-module of \(V\), then
+  \[V = W + W^\bot \quad \textrm{(orthogonal direct sum)}.\]
+\end{enumerate}
+
+\end{proof}
+
+\textbf{Problem. }
+What does the structure of the \(T(x)\)-module tell us about \(\Gamma\)?
+
+Study those \(\Gamma\) whose modules take `simple' form. The \(\Gamma\)'s involved are highly regular.
+
+\begin{remark}
+\leavevmode
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The subconstituent algebra \(T\) is semisimple as the left regular representation of \(T\) is completely reducible. See Curtis-Reiner 25.2.
+\item
+  The inner product \(\langle a, b\rangle_T = \mathrm{tr}(a^\top\bar{b})\) is nondegenerate on \(T\).
+\item
+  In general,
+  \begin{align}
+  T\textrm{: Semisimple and Artinian} & \Leftrightarrow T\textrm{: Artinian with } J(T) = 0 \\
+  & \Leftarrow T\textrm{: Artinian with nonzero nilpotent element} \\
+  & \Leftarrow T \subset \mathrm{Mat}_X(K) \textrm{ such that for all } a\in T \textrm{ is normal.}
+  \end{align}
+\end{enumerate}
+
+\end{remark}
 
 \hypertarget{lec2}{%
 \chapter{Lecture 2}\label{lec2}}

@@ -75,7 +75,7 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#setting"><i class="fa fa-check"></i>Setting</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#access-from-another-host"><i class="fa fa-check"></i>Access from Another Host</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Lecture 1</a></li>
 <li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Lecture 2</a></li>
@@ -112,6 +112,7 @@
             <section class="normal" id="section-">
 <div id="lec1" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Lecture 1<a href="lec1.html#lec1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Wednesday, January 20, 1993</strong></p>
 <p>A graph (undirected, without loops or multiple edges) is a pair <span class="math inline">\(\Gamma = (X, E)\)</span>, where
 <span class="math display">\[\begin{align}
 X &amp;= \textrm{finite set (of vertices)}\\
@@ -146,9 +147,123 @@ where <span class="math inline">\(1\)</span> is at the <span class="math inline"
 Since <span class="math inline">\(A\)</span> is a real symmetrix matrix,
 <span class="math display">\[V = V_0 + V_1 + \cdots + V_r \quad \textrm{ some } r\in \mathbb{Z}^{\geq0},\]</span>
 the orthogonal direct sum of maximal <span class="math inline">\(A\)</span>-eigenspaces.</p>
-<p>Let <span class="math inline">\(E_i\mathrm{Mat}_X(K)\)</span> denote the orthogonal projection,
+<p>Let <span class="math inline">\(E_i\in\mathrm{Mat}_X(K)\)</span> denote the orthogonal projection,
 <span class="math display">\[E_i: V \longrightarrow V_i.\]</span>
-Then <span class="math inline">\(E_0, \ldots, E_r\)</span> are the primitive idempotents of <span class="math inline">\(M\)</span>.</p>
+Then <span class="math inline">\(E_0, \ldots, E_r\)</span> are the primitive idempotents of <span class="math inline">\(M\)</span>.
+<span class="math display">\[M = \mathrm{Span}_K(E_0, \ldots, E_r),\]</span>
+<span class="math display">\[E_iE_j = \delta_{ij}E_i \quad \textrm{for all }\; i, j, \quad E_0 + \cdots + E_r = I.\]</span>
+Let <span class="math inline">\(\theta_i\)</span> denote the eigenvalue of <span class="math inline">\(A\)</span> for <span class="math inline">\(V_i\)</span> in <span class="math inline">\(\mathbb{R}\)</span>. Without loss of generality we may assume that
+<span class="math display">\[\theta_0 &gt; \theta_1 &gt; \cdots &gt; \theta_r.\]</span>
+Let
+<span class="math display">\[m_i = \textrm{the multiplicity of }\: \theta_i = \mathrm{dim} V_i = \mathrm{rank} E_i.\]</span>
+Set
+<span class="math display">\[\mathrm{Spec}(\Gamma) = \begin{pmatrix} \theta_0, &amp; \theta_1, &amp; \cdots, &amp; \theta_r\\m_0, &amp; m_1, &amp; \cdots, &amp; m_r\end{pmatrix}.\]</span>
+<strong>Problem. </strong>
+What can we say about <span class="math inline">\(\Gamma\)</span> when <span class="math inline">\(\mathrm{Spec}(\Gamma)\)</span> is given?</p>
+<p>The following Lemma<a href="lec1.html#lem:largestev">1.1</a>, is an example of Problem.</p>
+<p>For every <span class="math inline">\(x\in X\)</span>,
+<span class="math display">\[k(x) \equiv \textrm{ valency of }x \equiv \textrm{ degree of }x \equiv |\{y\mid y\in X, \: xy\in E\}|.\]</span></p>
+<div class="definition">
+<p><span id="def:regular" class="definition"><strong>Definition 1.1  </strong></span>The graph <span class="math inline">\(\Gamma\)</span> is regular of valency <span class="math inline">\(k\)</span> if <span class="math inline">\(k = k(x)\)</span> for every <span class="math inline">\(x\in X\)</span>.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:largestev" class="lemma"><strong>Lemma 1.1  </strong></span>With the above notation,<br />
+1. <span class="math inline">\(\theta_0\leq \max\{k(x) \mid x\in X\} = k^{\max}\)</span>.<br />
+2. If <span class="math inline">\(\Gamma\)</span> is regular of valency <span class="math inline">\(k\)</span>, then <span class="math inline">\(\theta_0 = k\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-3" class="proof"><em>Proof</em>. </span></p>
+<ol style="list-style-type: decimal">
+<li>Without loss of generality we may assume that <span class="math inline">\(\theta_0&gt;0\)</span>, else done. Let <span class="math inline">\(v:=\sum_{x\in X}\alpha_x\hat{x}\)</span> denote the eivenvector for <span class="math inline">\(\theta_0\)</span>.</li>
+</ol>
+<p>Pick <span class="math inline">\(x\in X\)</span> with <span class="math inline">\(|\alpha_x|\)</span> maximal. Then <span class="math inline">\(|\alpha_x|\neq 0\)</span>.</p>
+<p>Since <span class="math inline">\(Av = \theta_0v\)</span>,
+<span class="math display">\[\theta_0\alpha_x = \sum_{y\in X, xy\in E}\alpha_y.\]</span>
+So,
+<span class="math display">\[\theta_0 |\alpha_x| = |\theta_0\alpha_x| \leq \sum_{y\in X, xy\in E}|\alpha_y| \leq k(x)|\alpha_x| \leq k^{\max}|\alpha_x|.\]</span>
+2. All 1’s vector <span class="math inline">\(v = \sum_{x\in X}\hat{x}\)</span> satisfies <span class="math inline">\(Av = kv\)</span>.</p>
+</div>
+<p><strong>Subconstituent Algebra</strong></p>
+<p>Let <span class="math inline">\(x, y\in X\)</span> and <span class="math inline">\(\ell \in \mathbb{Z}^{\geq 0}\)</span>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-4" class="definition"><strong>Definition 1.2  </strong></span>A path of length <span class="math inline">\(\ell\)</span> connecting <span class="math inline">\(x, y\)</span> is a sequence
+<span class="math display">\[x = x_0, x_1, \ldots, x_{\ell} = y, \quad x_i\in X, \; 0\leq i\leq \ell\]</span>
+such that <span class="math inline">\(x_ix_{i+1}\in E\)</span> for <span class="math inline">\(0\leq i \leq \ell-1\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-5" class="definition"><strong>Definition 1.3  </strong></span>The distance <span class="math inline">\(\partial(x,y)\)</span> is the length of a shortest path connecting <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.
+<span class="math display">\[\partial(x,y) \in \mathbb{Z}^{\geq 0} \cup \{\infty\}.\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-6" class="definition"><strong>Definition 1.4  </strong></span>The graph <span class="math inline">\(\Gamma\)</span> is connected if and only if <span class="math inline">\(\partial(x,y) &lt; \infty\)</span> for all <span class="math inline">\(x, y\in X\)</span>.</p>
+</div>
+<p>From now on, assume that <span class="math inline">\(\Gamma\)</span> is connected with <span class="math inline">\(|X|\geq 2\)</span>.</p>
+<p>Set
+<span class="math display">\[d_\Gamma = d = \max\{\partial(x,y)\mid x, y\in X\} \equiv \textrm{the diameter of }\Gamma.\]</span>
+Fix a ‘base’ vertex <span class="math inline">\(x\in X\)</span>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-7" class="definition"><strong>Definition 1.5  </strong></span><span class="math display">\[d(x) = \textrm{the diameter with respect to }x = \max\{\partial(x,y)\mid y\in X\} \leq d.\]</span></p>
+</div>
+<p>Observe that
+<span class="math display">\[V = V_0^* + V_1^* + \cdots + V_{d(x)}^* \quad \textrm{(orthogonal direct sum)},\]</span>
+where
+<span class="math display">\[V_i^* = \mathrm{Span}_K(\hat{y}\mid \partial(x,y) = i) \equiv V_i*(x)\]</span>
+and <span class="math inline">\(V_i^* = V_i^*(x)\)</span> is called the <span class="math inline">\(i\)</span>-the subconstituent with respect to <span class="math inline">\(x\)</span>.</p>
+<p>Let <span class="math inline">\(E_i^* = E_i^*(x)\)</span> denote the orthogonal projection
+<span class="math display">\[E_i^*: V \longrightarrow V_i^*(x).\]</span>
+View <span class="math inline">\(E_i^*(x) \in \mathrm{Mat}_X(K)\)</span>. So, <span class="math inline">\(E_i^*(x)\)</span> is diagonal with <span class="math inline">\(yy\)</span> entry
+<span class="math display">\[(E_i^*(x))_{yy} = \begin{cases} 1 &amp; \textrm{if } \: \partial(x,y) = i\\ 0 &amp; \textrm{else,}\end{cases} \quad \textrm{ for } y\in X.\]</span>
+Set
+<span class="math display">\[M^* = M^*(x) \equiv \textrm{Span}_K(E_0^*(x), \ldots, E_{d(x)}^*(x)).\]</span>
+Then <span class="math inline">\(M^*(x)\)</span> is a commutative subalgebra of <span class="math inline">\(\mathrm{Mat}_X(K)\)</span> and is calle the <em>dual Bose-Mesner algbara with respect to <span class="math inline">\(x\)</span></em>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-8" class="definition"><strong>Definition 1.6  (Subconstituent Algebra) </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span>, <span class="math inline">\(x\)</span>, <span class="math inline">\(M\)</span>, <span class="math inline">\(M^*(x)\)</span> be as above. Let <span class="math inline">\(T = T(x)\)</span> denote the subalgebra of <span class="math inline">\(\mathrm{Mat}_X(K)\)</span> generated by <span class="math inline">\(M\)</span> and <span class="math inline">\(M^*(x)\)</span>. <span class="math inline">\(T\)</span> is the <em>subconstituent algebra</em> of <span class="math inline">\(\Gamma\)</span> with respect to <span class="math inline">\(x\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-9" class="definition"><strong>Definition 1.7  </strong></span>A <span class="math inline">\(T\)</span>-module is any subspace <span class="math inline">\(W\subset V\)</span> such that <span class="math inline">\(aw\in W\)</span> for all <span class="math inline">\(a\in T\)</span> and <span class="math inline">\(w\in W\)</span>.</p>
+<p><span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is <em>irreducible</em> if and only if <span class="math inline">\(W\neq 0\)</span> and <span class="math inline">\(W\)</span> does not properly contain a nonzero <span class="math inline">\(T\)</span>-module.</p>
+</div>
+<p>For any <span class="math inline">\(a\in \mathrm{Mat}_X(K)\)</span>, let <span class="math inline">\(a^*\)</span> denbote the conjugate transpose of <span class="math inline">\(a\)</span>.</p>
+<p>Observe that
+<span class="math display">\[\langle au, v\rangle = \langle u, a^*v\rangle \quad \textrm{for all }\; a\in \mathrm{Mat}_X(K), \textrm{ and for all } \; u,v\in V.\]</span></p>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-10" class="lemma"><strong>Lemma 1.2  </strong></span>Let <span class="math inline">\(\Gamma = (X,E)\)</span>, <span class="math inline">\(x\in X\)</span> and <span class="math inline">\(T \equiv T(x)\)</span> be as above.</p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(a\in T\)</span>, then <span class="math inline">\(a^*\in T\)</span>.</li>
+<li>For any <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\subset V\)</span>,
+<span class="math display">\[W^\bot := \{v\in V\mid \langle w, v\rangle = 0, \textrm{ for all }w\in W\}\]</span>
+is a <span class="math inline">\(T\)</span>-module.</li>
+<li><span class="math inline">\(V\)</span> decomposes as an orthogonal direct sum of irreducible <span class="math inline">\(T\)</span>-modules.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-11" class="proof"><em>Proof</em>. </span></p>
+<ol style="list-style-type: decimal">
+<li><p>It is becase <span class="math inline">\(T\)</span> is generated by symmetric real matrices
+<span class="math display">\[A, E^*_0(x), E^*_1(x), \ldots, E^*_{d(x)(x)}.\]</span></p></li>
+<li><p>Pick <span class="math inline">\(v\in W^\bot\)</span> and <span class="math inline">\(a\in T\)</span>, it suffices to show that <span class="math inline">\(av\in W^\bot\)</span>. For all <span class="math inline">\(w\in W\)</span>,
+<span class="math display">\[\langle w, av\rangle = \langle a^*w, v\rangle = 0\]</span>
+as <span class="math inline">\(a^*\in T\)</span>.</p></li>
+<li><p>This is proved by the induction on the dimension of <span class="math inline">\(T\)</span>-modules. If <span class="math inline">\(W\)</span> is an irreducible <span class="math inline">\(T\)</span>-module of <span class="math inline">\(V\)</span>, then
+<span class="math display">\[V = W + W^\bot \quad \textrm{(orthogonal direct sum)}.\]</span></p></li>
+</ol>
+</div>
+<p><strong>Problem. </strong>
+What does the structure of the <span class="math inline">\(T(x)\)</span>-module tell us about <span class="math inline">\(\Gamma\)</span>?</p>
+<p>Study those <span class="math inline">\(\Gamma\)</span> whose modules take ‘simple’ form. The <span class="math inline">\(\Gamma\)</span>’s involved are highly regular.</p>
+<div class="remark">
+<p><span id="unlabeled-div-12" class="remark"><em>Remark</em>. </span></p>
+<ol style="list-style-type: decimal">
+<li>The subconstituent algebra <span class="math inline">\(T\)</span> is semisimple as the left regular representation of <span class="math inline">\(T\)</span> is completely reducible. See Curtis-Reiner 25.2.</li>
+<li>The inner product <span class="math inline">\(\langle a, b\rangle_T = \mathrm{tr}(a^\top\bar{b})\)</span> is nondegenerate on <span class="math inline">\(T\)</span>.</li>
+<li>In general,
+<span class="math display">\[\begin{align}
+T\textrm{: Semisimple and Artinian} &amp; \Leftrightarrow T\textrm{: Artinian with } J(T) = 0 \\
+&amp; \Leftarrow T\textrm{: Artinian with nonzero nilpotent element} \\
+&amp; \Leftarrow T \subset \mathrm{Mat}_X(K) \textrm{ such that for all } a\in T \textrm{ is normal.}
+\end{align}\]</span></li>
+</ol>
+</div>
 
 </div>
             </section>
