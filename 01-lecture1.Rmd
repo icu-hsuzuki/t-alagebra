@@ -175,9 +175,9 @@ Study those $\Gamma$ whose modules take 'simple' form. The $\Gamma$'s involved a
 1. The subconstituent algebra $T$ is semisimple as the left regular representation of $T$ is completely reducible. See Curtis-Reiner 25.2. 
 2. The inner product $\langle a, b\rangle_T = \mathrm{tr}(a^\top\bar{b})$ is nondegenerate on $T$.
 3. In general,
-\begin{align}
+\begin{align*}
 T\textrm{: Semisimple and Artinian} & \Leftrightarrow T\textrm{: Artinian with } J(T) = 0 \\
 & \Leftarrow T\textrm{: Artinian with nonzero nilpotent element} \\
 & \Leftarrow T \subset \mathrm{Mat}_X(K) \textrm{ such that for all } a\in T \textrm{ is normal.}
-\end{align}
+\end{align*}
 :::
