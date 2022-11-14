@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Lecture 2 | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Lecture 2 | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-11" />
+<meta name="date" content="2022-11-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -79,10 +79,7 @@
 </ul></li>
 <li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Lecture 1</a></li>
 <li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Lecture 2</a></li>
-<li class="chapter" data-level="3" data-path="lec3.html"><a href="lec3.html"><i class="fa fa-check"></i><b>3</b> Lecture 3</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="lec3.html"><a href="lec3.html#math-example"><i class="fa fa-check"></i><b>3.1</b> math example</a></li>
-</ul></li>
+<li class="chapter" data-level="3" data-path="lec3.html"><a href="lec3.html"><i class="fa fa-check"></i><b>3</b> Lecture 3</a></li>
 <li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
@@ -112,7 +109,156 @@
             <section class="normal" id="section-">
 <div id="lec2" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Lecture 2<a href="lec2.html#lec2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Here is a review of existing methods.</p>
+<p><strong>Friday, January 22, 1993</strong></p>
+<p>In this lecture we use the Perron Frobenius theory of nonnegative matrices to obtain informaiton on eigenvalues of a graph.</p>
+<p>Let <span class="math inline">\(K = \mathbb{R}\)</span>. For <span class="math inline">\(n\in \mathbb{Z}\)</span>{&gt; 0}$, pick a symmetrix matrix <span class="math inline">\(C\in \mathrm{Mat}_n(\mathbb{R})\)</span>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-13" class="definition"><strong>Definition 2.1  </strong></span>The matrix <span class="math inline">\(C\)</span> is <em>reducible</em> if and only if there is a bipartition <span class="math inline">\(\{1, 2, \ldots, n\} = X^+ \cup X^-\)</span> (disjoint union of nonempty sets) such that <span class="math inline">\(C_{ij} = 0\)</span> for all <span class="math inline">\(i\in X^+\)</span>, and for all <span class="math inline">\(j\in X^-\)</span>, and for all <span class="math inline">\(i\in X^-\)</span>, and for all <span class="math inline">\(j\in X^+\)</span>,i.e.,
+<span class="math display">\[ C \sim \begin{pmatrix} \ast &amp; O \\ O &amp; \ast \end{pmatrix}.\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-14" class="definition"><strong>Definition 2.2  </strong></span>The matrix <span class="math inline">\(C\)</span> is <em>bipartite</em> if and only if there is a bipartition <span class="math inline">\(\{1, 2, \ldots, n\} = X^+ \cup X^-\)</span> (disjoint union of nonempty sets) such that <span class="math inline">\(C_{ij} = 0\)</span> for all <span class="math inline">\(i,j\in X^+\)</span>, and for all <span class="math inline">\(i,j\in X^-\)</span>, i.e.,
+<span class="math display">\[ C \sim \begin{pmatrix} O &amp; \ast \\ \ast &amp; O \end{pmatrix}.\]</span></p>
+</div>
+<p><strong>Note.</strong></p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(C\)</span> is bipatite, for every eigenvalue <span class="math inline">\(\theta\)</span> of <span class="math inline">\(C\)</span>, <span class="math inline">\(-\theta\)</span> is an eigenvalue of <span class="math inline">\(C\)</span> such that <span class="math inline">\(\mathrm{mult}(\theta) = \mathrm{mult}(-\theta)\)</span>.</li>
+</ol>
+<p>Indeed, let <span class="math inline">\(C = \begin{pmatrix} O &amp; A \\ B &amp; O \end{pmatrix}\)</span>,
+<span class="math display">\[\begin{pmatrix} O &amp; A \\ B &amp; O \end{pmatrix} \begin{pmatrix}x\\y\end{pmatrix} = \theta \begin{pmatrix}x\\y\end{pmatrix}\Leftrightarrow \begin{pmatrix} O &amp; A \\ B &amp; O \end{pmatrix} \begin{pmatrix}x\\-y\end{pmatrix} = -\theta \begin{pmatrix}x\\-y\end{pmatrix}, \]</span>
+where <span class="math inline">\(Ay = \theta x\)</span> and <span class="math inline">\(Bx = \theta y\)</span>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>If <span class="math inline">\(C\)</span> is bipartite, <span class="math inline">\(C^2\)</span> is reducible.</p></li>
+<li><p>The matrix <span class="math inline">\(C\)</span> is irreducible and <span class="math inline">\(C^2\)</span> is reducible, if <span class="math inline">\(C_{ij} \geq 0\)</span> for all <span class="math inline">\(i,j\)</span> and <span class="math inline">\(C\)</span> is reducible. (Exercise)</p></li>
+</ol>
+<div class="remark">
+<p><span id="unlabeled-div-15" class="remark"><em>Remark</em>. </span>Note 1. Even if <span class="math inline">\(C\)</span> is not symmetric
+<span class="math display">\[\begin{pmatrix} O &amp; A \\ B &amp; O \end{pmatrix} \begin{pmatrix}x\\y\end{pmatrix} = \theta \begin{pmatrix}x\\y\end{pmatrix}\Leftrightarrow \begin{pmatrix} O &amp; A \\ B &amp; O \end{pmatrix} \begin{pmatrix}x\\-y\end{pmatrix} = -\theta \begin{pmatrix}x\\-y\end{pmatrix}\]</span>
+holds. So the geometrix multiplicities coincide. How about the algebraic multiplicities?</p>
+<p>Note 3. Set <span class="math inline">\(x \sim y\)</span> if and only if <span class="math inline">\(C_{xy}&gt;0\)</span>. So the graph may have loops. Then
+<span class="math display">\[(C^2)_{xy} &gt; 0 \Leftrightarrow \textrm{ if there exists } z\in X \textrm{ such that } x\sim z \sim y.\]</span>
+Note that <span class="math inline">\(C\)</span> is irreducible if and only if <span class="math inline">\(\Gamma(C)\)</span> is connected. Let
+<span class="math display">\[\begin{align}
+X^+ &amp; = \{y\mid \textrm{there is a path of even length from }x \textrm{ to }y\}\\
+X^- &amp; = \{y\mid \textrm{there is no path of even length from }x \textrm{ to }y\} \neq \emptyset.
+\end{align}\]</span>
+If there is an edge <span class="math inline">\(y\sim z\)</span> in <span class="math inline">\(X^+\)</span> and <span class="math inline">\(w\in X^-\)</span>. Then there would be a path from <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span> of even length.
+So <span class="math inline">\(\mathrm{e}(X^+, X^+) = \mathrm{e}(X^-, X^-) = 0.\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:pf" class="theorem"><strong>Theorem 2.1  (Perron-Frobenius) </strong></span>Given a matrix <span class="math inline">\(C\)</span> in <span class="math inline">\(\mathrm{Mat}_n(\mathbb{R})\)</span> such that</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(C\)</span> is symmetric.<br />
+</li>
+<li><span class="math inline">\(C\)</span> is irreducible.<br />
+</li>
+<li><span class="math inline">\(C_{ij} \geq 0\)</span> for all <span class="math inline">\(i,j\)</span>.
+Let <span class="math inline">\(\theta_0\)</span> be the maximal eigenvalue of <span class="math inline">\(C\)</span> with eigenspace <span class="math inline">\(V_0 \subseteq \mathbb{R}^n\)</span>, and let <span class="math inline">\(\theta_r\)</span> be the maximal eigenvalue of <span class="math inline">\(C\)</span> with eigenspace <span class="math inline">\(V_r \subseteq \mathbb{R}^n\)</span>. Then the following hold.</li>
+</ol>
+<ol style="list-style-type: decimal">
+<li>Suppose <span class="math inline">\(0\neq v = \begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\\\alpha_n\end{pmatrix} \in V_0\)</span>. Then <span class="math inline">\(\alpha_0 &gt; 0\)</span> for all <span class="math inline">\(i\)</span>, or <span class="math inline">\(\alpha_i &lt; 0\)</span> for all <span class="math inline">\(i\)</span>.<br />
+</li>
+<li><span class="math inline">\(\mathrm{dim}V_0 = 1\)</span>.<br />
+</li>
+<li><span class="math inline">\(\theta_r \geq -\theta_0\)</span>.<br />
+</li>
+<li><span class="math inline">\(\theta_r = \theta_0\)</span> if and only if <span class="math inline">\(C\)</span> is bipartite.</li>
+</ol>
+</div>
+<p>First, we prove the following lemma.</p>
+<div class="lemma">
+<p><span id="lem:pfl" class="lemma"><strong>Lemma 2.1  </strong></span>Let <span class="math inline">\(\langle , \rangle\)</span> be the dot product in <span class="math inline">\(V = \mathbb{R}^n\)</span>. Pick a symmetric matrix <span class="math inline">\(B \in \mathrm{Mat}_n(\mathbb{R})\)</span>. Suppose all eigenvalues of <span class="math inline">\(B\)</span> are nonnegative. (i.e., <span class="math inline">\(B\)</span> is positive semidefinite.) Then there exist vectors <span class="math inline">\(v_1, v_2, \ldots, v_n\in V\)</span> such that <span class="math inline">\(B_{ij} = \langle v_i, v_j\rangle\)</span> for <span class="math inline">\((1\leq i, j \leq n)\)</span>.</p>
+</div>
+<p>:::{.proof}
+By elementary linear algebra, there exists an orthonormal basis <span class="math inline">\(w_1, w_2, \ldots, w_n\)</span> of <span class="math inline">\(V\)</span> consisting of eigenvectors of <span class="math inline">\(B\)</span>. Set the <span class="math inline">\(i\)</span>-th column of <span class="math inline">\(P\)</span> is <span class="math inline">\(w_i\)</span> and <span class="math inline">\(D = \mathrm{diag}(\theta_1,\ldots, \theta_n)\)</span>. Then <span class="math inline">\(P^\top P = I\)</span> and <span class="math inline">\(BP = PD\)</span>.</p>
+<p>Hence,
+<span class="math display">\[B = PDP^{-1} = PDP^\top = QQ^\top,\]</span>
+where
+<span class="math display">\[Q = P\cdot \mathrm{diag}(\sqrt{\theta_1}, \sqrt{\theta_2}, \ldots, \sqrt{\theta_n}) \in \mathrm{Mat}_n(\mathbb{R}).\]</span>
+Now, let <span class="math inline">\(v_i\)</span> be the <span class="math inline">\(i\)</span>-th column of <span class="math inline">\(Q^\top\)</span>. Then
+<span class="math display">\[B_{ij} = v_i^\top\cdot v_j^- = \langle v_i, v_j\rangle.\]</span>
+Now we start the proof of Theorem <a href="lec2.html#thm:pf">2.1</a>.</p>
+<p><em>Proof of Theorem <a href="lec2.html#thm:pf">2.1</a></em></p>
+<ol style="list-style-type: decimal">
+<li>Let <span class="math inline">\(\langle , \rangle\)</span> denote the dot product on <span class="math inline">\(V = \mathbb{R}^n\)</span>. Set
+<span class="math display">\[\begin{align}
+B &amp; = \theta I - C\\
+  &amp; = \textrm{symmetric matrix with eigenvalues }\theta_0 - \theta_i \geq 0\\
+  &amp; = (\langle v_i, v_j\rangle)_{1\leq i,j\leq n}
+\end{align}\]</span>
+with the same <span class="math inline">\(v_1, \ldots, v_n \in V\)</span> by Lemma <a href="lec2.html#lem:pfl">2.1</a>.</li>
+</ol>
+<p>Observe: <span class="math inline">\(\sum_{i = 1}^n \alpha_iv_i = 0\)</span>.</p>
+<p><em>Pf.</em>
+<span class="math display">\[\begin{align}
+\|\sum_{i = 1}^n \alpha_iv_i\|^2 &amp; = \langle \sum_{i=1}^n\alpha_iv_i, \sum_{i=1}^n\alpha_iv_i\rangle\\
+&amp; = \begin{pmatrix} \alpha_1 &amp;\ldots &amp;\alpha_n\end{pmatrix}B\begin{pmatrix} \alpha_1\\\vdots\\\alpha_n\end{pmatrix}\\
+&amp; = v^\top Bv\\
+&amp; = 0,
+\end{align}\]</span>
+since <span class="math inline">\(Bv = (\theta_0 I - C)v = 0\)</span>.</p>
+<p>Now set
+<span class="math display">\[s = \textrm{the number of indices} i, \textrm{ where } \alpha_i &gt;0.\]</span>
+Replacing <span class="math inline">\(v\)</span> by <span class="math inline">\(-v\)</span> if necessary, without loss of generality we may assume that <span class="math inline">\(s\geq 1\)</span>. We want to show <span class="math inline">\(s = n\)</span>.</p>
+<p>Assume <span class="math inline">\(s &lt; n\)</span>. Without loss of generality, we may assume that <span class="math inline">\(\alpha_i &gt;0\)</span> for <span class="math inline">\(1\leq s\leq s\)</span> and <span class="math inline">\(\alpha_i = 0\)</span> for <span class="math inline">\(s+1 \leq i \leq n\)</span>.
+Set
+<span class="math display">\[ \rho = \alpha_1v_1 + \cdots + \alpha_sv_s = -\alpha_{s+1}v_{s+1} - \cdots - \alpha_nv_n.\]</span>
+Then, for <span class="math inline">\(i = 1,\ldots, s\)</span>,
+<span class="math display">\[\begin{align}
+\langle v_i, \rho \rangle &amp; = \sum_{j = s+1}^n -\alpha_j\langle v_i, v_j\rangle \quad (\langle v_i, v_j\rangle = B_{ij}, B = \theta_0I - C)\\
+  &amp; = \sum_{j = s+1}^n (-\alpha_{ij})(-C_{ij})\\
+  &amp; \leq 0.
+\end{align}\]</span>
+Hence
+<span class="math display">\[0\leq \langle \rho, \rho\rangle = \sum_{i=1}^s \alpha_i \langle v_i, \rho\rangle \leq 0,\]</span>
+as <span class="math inline">\(\alpha &gt; 0\)</span> and <span class="math inline">\(\langle v_i, \rho\rangle \leq 0\)</span>. Thus, we have
+<span class="math inline">\(\langle, \rho, \rho \rangle = 0\)</span> and <span class="math inline">\(\rho = 0\)</span>.
+For <span class="math inline">\(j = s+1, \ldots, n\)</span>,
+<span class="math display">\[0 = \langle \rho, v_j\rangle = \sum_{i=1}^s \alpha_i\langle v_i, v_j\rangle \leq 0,\]</span>
+as <span class="math inline">\(\langle v_i, v_j\rangle = -C_{ij}\)</span>.</p>
+<p>Therefore,
+<span class="math display">\[0 = \langle v_i, v_j \rangle = -C_{ij} \textrm{ for } 1\leq i, \leq s, \: s+1 \leq j \leq n.\]</span>
+Since <span class="math inline">\(C\)</span> is symmetric,
+<span class="math display">\[C = \begin{pmatrix} \ast &amp; O \\ O &amp; \ast\end{pmatrix}\]</span>
+Thus <span class="math inline">\(C\)</span> is reducible, which is not the case. Hence <span class="math inline">\(s = n\)</span>.</p>
+<p><em>Proof of Theorem <a href="lec2.html#thm:pf">2.1</a> 2.</em></p>
+<p>Suppose <span class="math inline">\(\dim V_0 \geq 2\)</span>. Then,
+<span class="math display">\[\dim\left(V_0 \cap \begin{pmatrix}1\\0\\\vdots\\0\end{pmatrix}^\bot\right) \geq 1.\]</span>
+So, there is a vector
+<span class="math display">\[0\neq v = \begin{pmatrix}\alpha_1\\\vdots\\\alpha_n\end{pmatrix} \in V_0\]</span>
+with <span class="math inline">\(\alpha_1 = 0\)</span>. This contradicts 1.</p>
+<p>Now pick
+<span class="math display">\[0\neq w = \begin{pmatrix}\beta_1\\\vdots\\\beta_n\end{pmatrix} \in V_r.\]</span></p>
+<p><em>Proof of Theorem <a href="lec2.html#thm:pf">2.1</a> 3.</em></p>
+<p>Suppose <span class="math inline">\(\theta_r &lt; -\theta_0\)</span>. Since the eigenvalues of <span class="math inline">\(C^2\)</span> are the squares of those of <span class="math inline">\(C\)</span>, <span class="math inline">\(\theta_r^2\)</span> is the maximal eigenvalue of <span class="math inline">\(C^2\)</span>.</p>
+<p>Also we have <span class="math inline">\(C^2w = \theta_r^2w\)</span>.</p>
+<p>Observe that <span class="math inline">\(C^2\)</span> is irreducible. (As otherwise, <span class="math inline">\(C\)</span> is bipartite by Note 3, and we must have <span class="math inline">\(\theta_r = -\theta_0\)</span>.)
+Therefore, <span class="math inline">\(\beta_i &gt; 0\)</span> for all <span class="math inline">\(i\)</span> or <span class="math inline">\(\beta_i &lt; 0\)</span> for all <span class="math inline">\(i\)</span>. We have
+<span class="math display">\[\langle v, w\rangle = \sum_{i=1}^n\alpha_i\beta_j \neq 0.\]</span>
+This is a contradiction, as <span class="math inline">\(V_0 \bot V_r\)</span>.</p>
+<p><em>Proof of Theorem <a href="lec2.html#thm:pf">2.1</a> 4.</em></p>
+<p><span class="math inline">\(\Rightarrow\)</span>: Let <span class="math inline">\(\theta_r = -\theta_0\)</span>. Then <span class="math inline">\(\theta = \theta_1^2 = \theta_0^2\)</span> is the maximal eigenvalue of <span class="math inline">\(C^2\)</span>, and <span class="math inline">\(v\)</span> and <span class="math inline">\(w\)</span> are linearly independent eigenvalues for <span class="math inline">\(\theta\)</span> for <span class="math inline">\(C^2\)</span>. Hence, for <span class="math inline">\(C^2\)</span>, <span class="math inline">\(\mathrm{mult}(\theta) \geq 2\)</span>.</p>
+<p>Thus by 2, <span class="math inline">\(C^2\)</span> must be reducible. Therefore, <span class="math inline">\(C\)</span> is bipartite by Note 3.</p>
+<p><span class="math inline">\(\Leftarrow\)</span>: This is Note 1.
+<span class="math inline">\(\Box\)</span></p>
+<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any graph.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-16" class="definition"><strong>Definition 2.3  </strong></span><span class="math inline">\(\Gamma\)</span> is said to be <em>bipartite</em> if the adjacency matrix <span class="math inline">\(A\)</span> is bipartite. That is, <span class="math inline">\(X\)</span> can be written as a disjoint union of <span class="math inline">\(X^+\)</span> and <span class="math inline">\(X^-\)</span> such that <span class="math inline">\(X^+, X^-\)</span> contain no edges of <span class="math inline">\(\Gamma\)</span>.</p>
+</div>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-17" class="corollary"><strong>Corollary 2.1  </strong></span>For any (connected) graph <span class="math inline">\(\Gamma\)</span> with
+<span class="math display">\[\mathrm{Spec}(\Gamma) = \begin{pmatrix}\theta_0 &amp; \theta_1 &amp;\cdots &amp; \theta_r\\m_1 &amp; m_1 &amp; \cdots &amp; m_r\end{pmatrix} \:\textrm{ with }\: \theta_0 &gt; \theta_1 &gt; \cdots &gt; \theta_r.\]</span>
+Let <span class="math inline">\(V_i\)</span> be the eigenspace of <span class="math inline">\(\theta_i\)</span>. Then the following holds.</p>
+<ol style="list-style-type: decimal">
+<li><p>Supppose <span class="math inline">\(0\neq v = \begin{pmatrix} \alpha_1\\\vdots \\\alpha_n \end{pmatrix} \in V_0\in \mathbb{R}^n\)</span>. Then <span class="math inline">\(\alpha_i &gt; 0\)</span> for all <span class="math inline">\(i\)</span> or <span class="math inline">\(\alpha_i &lt; 0\)</span> for all <span class="math inline">\(i\)</span>.</p></li>
+<li><p><span class="math inline">\(m_0 = 1\)</span>.</p></li>
+<li><p><span class="math inline">\(\theta_r \geq -\theta_0\)</span> if and only if <span class="math inline">\(\Gamma\)</span> is bipartite. In this case,
+<span class="math display">\[-\theta_i = \theta_{r-i} \; \textrm{and} \; m_i = m_{r-i} \quad (0\leq i\leq r)\]</span></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-18" class="proof"><em>Proof</em>. </span>This is a direct consequences of Theorem <a href="lec2.html#thm:pf">2.1</a> and Note 3.</p>
+</div>
 
 </div>
             </section>

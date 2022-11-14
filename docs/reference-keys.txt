@@ -1,7 +1,6 @@
 lec1
 lec2
 lec3
-math-example
 applications
 example-one
 example-two

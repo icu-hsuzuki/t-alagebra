@@ -4,10 +4,6 @@
 %
 \documentclass[
 ]{book}
-\title{Lecture Note on Terwilliger Algebra}
-\author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-11-11}
-
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -37,14 +33,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Lecture Note on Terwilliger Algebra},
-  pdfauthor={P. Terwilliger, edited by H. Suzuki},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -85,6 +73,18 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Lecture Note on Terwilliger Algebra},
+  pdfauthor={P. Terwilliger, edited by H. Suzuki},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Lecture Note on Terwilliger Algebra}
+\author{P. Terwilliger, edited by H. Suzuki}
+\date{2022-11-14}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -284,7 +284,6 @@ For every \(x\in X\),
 \end{lemma}
 
 \begin{proof}
-\leavevmode
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -381,7 +380,6 @@ Let \(\Gamma = (X,E)\), \(x\in X\) and \(T \equiv T(x)\) be as above.
 \end{lemma}
 
 \begin{proof}
-\leavevmode
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -405,7 +403,6 @@ What does the structure of the \(T(x)\)-module tell us about \(\Gamma\)?
 Study those \(\Gamma\) whose modules take `simple' form. The \(\Gamma\)'s involved are highly regular.
 
 \begin{remark}
-\leavevmode
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -428,31 +425,228 @@ Study those \(\Gamma\) whose modules take `simple' form. The \(\Gamma\)'s involv
 \hypertarget{lec2}{%
 \chapter{Lecture 2}\label{lec2}}
 
-Here is a review of existing methods.
+\textbf{Friday, January 22, 1993}
+
+In this lecture we use the Perron Frobenius theory of nonnegative matrices to obtain informaiton on eigenvalues of a graph.
+
+Let \(K = \mathbb{R}\). For \(n\in \mathbb{Z}\)\{\textgreater{} 0\}\$, pick a symmetrix matrix \(C\in \mathrm{Mat}_n(\mathbb{R})\).
+
+\begin{definition}
+The matrix \(C\) is \emph{reducible} if and only if there is a bipartition \(\{1, 2, \ldots, n\} = X^+ \cup X^-\) (disjoint union of nonempty sets) such that \(C_{ij} = 0\) for all \(i\in X^+\), and for all \(j\in X^-\), and for all \(i\in X^-\), and for all \(j\in X^+\),i.e.,
+\[ C \sim \begin{pmatrix} \ast & O \\ O & \ast \end{pmatrix}.\]
+\end{definition}
+
+\begin{definition}
+The matrix \(C\) is \emph{bipartite} if and only if there is a bipartition \(\{1, 2, \ldots, n\} = X^+ \cup X^-\) (disjoint union of nonempty sets) such that \(C_{ij} = 0\) for all \(i,j\in X^+\), and for all \(i,j\in X^-\), i.e.,
+\[ C \sim \begin{pmatrix} O & \ast \\ \ast & O \end{pmatrix}.\]
+\end{definition}
+
+\textbf{Note.}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If \(C\) is bipatite, for every eigenvalue \(\theta\) of \(C\), \(-\theta\) is an eigenvalue of \(C\) such that \(\mathrm{mult}(\theta) = \mathrm{mult}(-\theta)\).
+\end{enumerate}
+
+Indeed, let \(C = \begin{pmatrix} O & A \\ B & O \end{pmatrix}\),
+\[\begin{pmatrix} O & A \\ B & O \end{pmatrix} \begin{pmatrix}x\\y\end{pmatrix} = \theta \begin{pmatrix}x\\y\end{pmatrix}\Leftrightarrow \begin{pmatrix} O & A \\ B & O \end{pmatrix} \begin{pmatrix}x\\-y\end{pmatrix} = -\theta \begin{pmatrix}x\\-y\end{pmatrix}, \]
+where \(Ay = \theta x\) and \(Bx = \theta y\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  If \(C\) is bipartite, \(C^2\) is reducible.
+\item
+  The matrix \(C\) is irreducible and \(C^2\) is reducible, if \(C_{ij} \geq 0\) for all \(i,j\) and \(C\) is reducible. (Exercise)
+\end{enumerate}
+
+\begin{remark}
+Note 1. Even if \(C\) is not symmetric
+\[\begin{pmatrix} O & A \\ B & O \end{pmatrix} \begin{pmatrix}x\\y\end{pmatrix} = \theta \begin{pmatrix}x\\y\end{pmatrix}\Leftrightarrow \begin{pmatrix} O & A \\ B & O \end{pmatrix} \begin{pmatrix}x\\-y\end{pmatrix} = -\theta \begin{pmatrix}x\\-y\end{pmatrix}\]
+holds. So the geometrix multiplicities coincide. How about the algebraic multiplicities?
+
+Note 3. Set \(x \sim y\) if and only if \(C_{xy}>0\). So the graph may have loops. Then
+\[(C^2)_{xy} > 0 \Leftrightarrow \textrm{ if there exists } z\in X \textrm{ such that } x\sim z \sim y.\]
+Note that \(C\) is irreducible if and only if \(\Gamma(C)\) is connected. Let
+\begin{align}
+X^+ & = \{y\mid \textrm{there is a path of even length from }x \textrm{ to }y\}\\
+X^- & = \{y\mid \textrm{there is no path of even length from }x \textrm{ to }y\} \neq \emptyset.
+\end{align}
+If there is an edge \(y\sim z\) in \(X^+\) and \(w\in X^-\). Then there would be a path from \(x\) to \(y\) of even length.
+So \(\mathrm{e}(X^+, X^+) = \mathrm{e}(X^-, X^-) = 0.\).
+\end{remark}
+
+\begin{theorem}[Perron-Frobenius]
+\protect\hypertarget{thm:pf}{}\label{thm:pf}
+
+Given a matrix \(C\) in \(\mathrm{Mat}_n(\mathbb{R})\) such that
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(C\) is symmetric.\\
+\item
+  \(C\) is irreducible.\\
+\item
+  \(C_{ij} \geq 0\) for all \(i,j\).
+  Let \(\theta_0\) be the maximal eigenvalue of \(C\) with eigenspace \(V_0 \subseteq \mathbb{R}^n\), and let \(\theta_r\) be the maximal eigenvalue of \(C\) with eigenspace \(V_r \subseteq \mathbb{R}^n\). Then the following hold.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Suppose \(0\neq v = \begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\\\alpha_n\end{pmatrix} \in V_0\). Then \(\alpha_0 > 0\) for all \(i\), or \(\alpha_i < 0\) for all \(i\).\\
+\item
+  \(\mathrm{dim}V_0 = 1\).\\
+\item
+  \(\theta_r \geq -\theta_0\).\\
+\item
+  \(\theta_r = \theta_0\) if and only if \(C\) is bipartite.
+\end{enumerate}
+
+\end{theorem}
+
+First, we prove the following lemma.
+
+\begin{lemma}
+\protect\hypertarget{lem:pfl}{}\label{lem:pfl}Let \(\langle , \rangle\) be the dot product in \(V = \mathbb{R}^n\). Pick a symmetric matrix \(B \in \mathrm{Mat}_n(\mathbb{R})\). Suppose all eigenvalues of \(B\) are nonnegative. (i.e., \(B\) is positive semidefinite.) Then there exist vectors \(v_1, v_2, \ldots, v_n\in V\) such that \(B_{ij} = \langle v_i, v_j\rangle\) for \((1\leq i, j \leq n)\).
+\end{lemma}
+
+:::\{.proof\}
+By elementary linear algebra, there exists an orthonormal basis \(w_1, w_2, \ldots, w_n\) of \(V\) consisting of eigenvectors of \(B\). Set the \(i\)-th column of \(P\) is \(w_i\) and \(D = \mathrm{diag}(\theta_1,\ldots, \theta_n)\). Then \(P^\top P = I\) and \(BP = PD\).
+
+Hence,
+\[B = PDP^{-1} = PDP^\top = QQ^\top,\]
+where
+\[Q = P\cdot \mathrm{diag}(\sqrt{\theta_1}, \sqrt{\theta_2}, \ldots, \sqrt{\theta_n}) \in \mathrm{Mat}_n(\mathbb{R}).\]
+Now, let \(v_i\) be the \(i\)-th column of \(Q^\top\). Then
+\[B_{ij} = v_i^\top\cdot v_j^- = \langle v_i, v_j\rangle.\]
+Now we start the proof of Theorem \ref{thm:pf}.
+
+\emph{Proof of Theorem \ref{thm:pf}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Let \(\langle , \rangle\) denote the dot product on \(V = \mathbb{R}^n\). Set
+  \begin{align}
+  B & = \theta I - C\\
+    & = \textrm{symmetric matrix with eigenvalues }\theta_0 - \theta_i \geq 0\\
+    & = (\langle v_i, v_j\rangle)_{1\leq i,j\leq n}
+  \end{align}
+  with the same \(v_1, \ldots, v_n \in V\) by Lemma \ref{lem:pfl}.
+\end{enumerate}
+
+Observe: \(\sum_{i = 1}^n \alpha_iv_i = 0\).
+
+\emph{Pf.}
+\begin{align}
+\|\sum_{i = 1}^n \alpha_iv_i\|^2 & = \langle \sum_{i=1}^n\alpha_iv_i, \sum_{i=1}^n\alpha_iv_i\rangle\\
+& = \begin{pmatrix} \alpha_1 &\ldots &\alpha_n\end{pmatrix}B\begin{pmatrix} \alpha_1\\\vdots\\\alpha_n\end{pmatrix}\\
+& = v^\top Bv\\
+& = 0,
+\end{align}
+since \(Bv = (\theta_0 I - C)v = 0\).
+
+Now set
+\[s = \textrm{the number of indices} i, \textrm{ where } \alpha_i >0.\]
+Replacing \(v\) by \(-v\) if necessary, without loss of generality we may assume that \(s\geq 1\). We want to show \(s = n\).
+
+Assume \(s < n\). Without loss of generality, we may assume that \(\alpha_i >0\) for \(1\leq s\leq s\) and \(\alpha_i = 0\) for \(s+1 \leq i \leq n\).
+Set
+\[ \rho = \alpha_1v_1 + \cdots + \alpha_sv_s = -\alpha_{s+1}v_{s+1} - \cdots - \alpha_nv_n.\]
+Then, for \(i = 1,\ldots, s\),
+\begin{align}
+\langle v_i, \rho \rangle & = \sum_{j = s+1}^n -\alpha_j\langle v_i, v_j\rangle \quad (\langle v_i, v_j\rangle = B_{ij}, B = \theta_0I - C)\\
+  & = \sum_{j = s+1}^n (-\alpha_{ij})(-C_{ij})\\
+  & \leq 0.
+\end{align}
+Hence
+\[0\leq \langle \rho, \rho\rangle = \sum_{i=1}^s \alpha_i \langle v_i, \rho\rangle \leq 0,\]
+as \(\alpha > 0\) and \(\langle v_i, \rho\rangle \leq 0\). Thus, we have
+\(\langle, \rho, \rho \rangle = 0\) and \(\rho = 0\).
+For \(j = s+1, \ldots, n\),
+\[0 = \langle \rho, v_j\rangle = \sum_{i=1}^s \alpha_i\langle v_i, v_j\rangle \leq 0,\]
+as \(\langle v_i, v_j\rangle = -C_{ij}\).
+
+Therefore,
+\[0 = \langle v_i, v_j \rangle = -C_{ij} \textrm{ for } 1\leq i, \leq s, \: s+1 \leq j \leq n.\]
+Since \(C\) is symmetric,
+\[C = \begin{pmatrix} \ast & O \\ O & \ast\end{pmatrix}\]
+Thus \(C\) is reducible, which is not the case. Hence \(s = n\).
+
+\emph{Proof of Theorem \ref{thm:pf} 2.}
+
+Suppose \(\dim V_0 \geq 2\). Then,
+\[\dim\left(V_0 \cap \begin{pmatrix}1\\0\\\vdots\\0\end{pmatrix}^\bot\right) \geq 1.\]
+So, there is a vector
+\[0\neq v = \begin{pmatrix}\alpha_1\\\vdots\\\alpha_n\end{pmatrix} \in V_0\]
+with \(\alpha_1 = 0\). This contradicts 1.
+
+Now pick
+\[0\neq w = \begin{pmatrix}\beta_1\\\vdots\\\beta_n\end{pmatrix} \in V_r.\]
+
+\emph{Proof of Theorem \ref{thm:pf} 3.}
+
+Suppose \(\theta_r < -\theta_0\). Since the eigenvalues of \(C^2\) are the squares of those of \(C\), \(\theta_r^2\) is the maximal eigenvalue of \(C^2\).
+
+Also we have \(C^2w = \theta_r^2w\).
+
+Observe that \(C^2\) is irreducible. (As otherwise, \(C\) is bipartite by Note 3, and we must have \(\theta_r = -\theta_0\).)
+Therefore, \(\beta_i > 0\) for all \(i\) or \(\beta_i < 0\) for all \(i\). We have
+\[\langle v, w\rangle = \sum_{i=1}^n\alpha_i\beta_j \neq 0.\]
+This is a contradiction, as \(V_0 \bot V_r\).
+
+\emph{Proof of Theorem \ref{thm:pf} 4.}
+
+\(\Rightarrow\): Let \(\theta_r = -\theta_0\). Then \(\theta = \theta_1^2 = \theta_0^2\) is the maximal eigenvalue of \(C^2\), and \(v\) and \(w\) are linearly independent eigenvalues for \(\theta\) for \(C^2\). Hence, for \(C^2\), \(\mathrm{mult}(\theta) \geq 2\).
+
+Thus by 2, \(C^2\) must be reducible. Therefore, \(C\) is bipartite by Note 3.
+
+\(\Leftarrow\): This is Note 1.
+\(\Box\)
+
+Let \(\Gamma = (X, E)\) be any graph.
+
+\begin{definition}
+\(\Gamma\) is said to be \emph{bipartite} if the adjacency matrix \(A\) is bipartite. That is, \(X\) can be written as a disjoint union of \(X^+\) and \(X^-\) such that \(X^+, X^-\) contain no edges of \(\Gamma\).
+\end{definition}
+
+\begin{corollary}
+
+For any (connected) graph \(\Gamma\) with
+\[\mathrm{Spec}(\Gamma) = \begin{pmatrix}\theta_0 & \theta_1 &\cdots & \theta_r\\m_1 & m_1 & \cdots & m_r\end{pmatrix} \:\textrm{ with }\: \theta_0 > \theta_1 > \cdots > \theta_r.\]
+Let \(V_i\) be the eigenspace of \(\theta_i\). Then the following holds.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Supppose \(0\neq v = \begin{pmatrix} \alpha_1\\\vdots \\\alpha_n \end{pmatrix} \in V_0\in \mathbb{R}^n\). Then \(\alpha_i > 0\) for all \(i\) or \(\alpha_i < 0\) for all \(i\).
+\item
+  \(m_0 = 1\).
+\item
+  \(\theta_r \geq -\theta_0\) if and only if \(\Gamma\) is bipartite. In this case,
+  \[-\theta_i = \theta_{r-i} \; \textrm{and} \; m_i = m_{r-i} \quad (0\leq i\leq r)\]
+\end{enumerate}
+
+\end{corollary}
+
+\begin{proof}
+This is a direct consequences of Theorem \ref{thm:pf} and Note 3.
+\end{proof}
 
 \hypertarget{lec3}{%
 \chapter{Lecture 3}\label{lec3}}
 
-We describe our methods in this chapter.
+\textbf{Monday, January 25, 1993}
 
-Math can be added in body using usual syntax like this
-
-\hypertarget{math-example}{%
-\section{math example}\label{math-example}}
-
-\(p\) is unknown but expected to be around 1/3. Standard error will be approximated
-
-\[
-SE = \sqrt(\frac{p(1-p)}{n}) \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027
-\]
-
-You can also use math in footnotes like this\footnote{where we mention \(p = \frac{a}{b}\)}.
-
-We will approximate standard error to 0.027\footnote{\(p\) is unknown but expected to be around 1/3. Standard error will be approximated
-
-  \[
-  SE = \sqrt(\frac{p(1-p)}{n}) \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027
-  \]}
+Given graphs \(\Gamma = (X, E)\) and \(\Gamma' = (X', E')\).
 
 \hypertarget{applications}{%
 \chapter{Applications}\label{applications}}
