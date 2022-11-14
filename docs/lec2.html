@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-14" />
+<meta name="date" content="2022-11-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -111,13 +111,13 @@
 <h1><span class="header-section-number">Chapter 2</span> Lecture 2<a href="lec2.html#lec2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Friday, January 22, 1993</strong></p>
 <p>In this lecture we use the Perron Frobenius theory of nonnegative matrices to obtain informaiton on eigenvalues of a graph.</p>
-<p>Let <span class="math inline">\(K = \mathbb{R}\)</span>. For <span class="math inline">\(n\in \mathbb{Z}\)</span>{&gt; 0}$, pick a symmetrix matrix <span class="math inline">\(C\in \mathrm{Mat}_n(\mathbb{R})\)</span>.</p>
+<p>Let <span class="math inline">\(K = \mathbb{R}\)</span>. For <span class="math inline">\(n\in \mathbb{Z}^{&gt; 0}\)</span>, pick a symmetrix matrix <span class="math inline">\(C\in \mathrm{Mat}_n(\mathbb{R})\)</span>.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-13" class="definition"><strong>Definition 2.1  </strong></span>The matrix <span class="math inline">\(C\)</span> is <em>reducible</em> if and only if there is a bipartition <span class="math inline">\(\{1, 2, \ldots, n\} = X^+ \cup X^-\)</span> (disjoint union of nonempty sets) such that <span class="math inline">\(C_{ij} = 0\)</span> for all <span class="math inline">\(i\in X^+\)</span>, and for all <span class="math inline">\(j\in X^-\)</span>, and for all <span class="math inline">\(i\in X^-\)</span>, and for all <span class="math inline">\(j\in X^+\)</span>,i.e.,
+<p><span id="def:unlabeled-div-1" class="definition"><strong>Definition 2.1  </strong></span>The matrix <span class="math inline">\(C\)</span> is <em>reducible</em> if and only if there is a bipartition <span class="math inline">\(\{1, 2, \ldots, n\} = X^+ \cup X^-\)</span> (disjoint union of nonempty sets) such that <span class="math inline">\(C_{ij} = 0\)</span> for all <span class="math inline">\(i\in X^+\)</span>, and for all <span class="math inline">\(j\in X^-\)</span>, and for all <span class="math inline">\(i\in X^-\)</span>, and for all <span class="math inline">\(j\in X^+\)</span>,i.e.,
 <span class="math display">\[ C \sim \begin{pmatrix} \ast &amp; O \\ O &amp; \ast \end{pmatrix}.\]</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-14" class="definition"><strong>Definition 2.2  </strong></span>The matrix <span class="math inline">\(C\)</span> is <em>bipartite</em> if and only if there is a bipartition <span class="math inline">\(\{1, 2, \ldots, n\} = X^+ \cup X^-\)</span> (disjoint union of nonempty sets) such that <span class="math inline">\(C_{ij} = 0\)</span> for all <span class="math inline">\(i,j\in X^+\)</span>, and for all <span class="math inline">\(i,j\in X^-\)</span>, i.e.,
+<p><span id="def:unlabeled-div-2" class="definition"><strong>Definition 2.2  </strong></span>The matrix <span class="math inline">\(C\)</span> is <em>bipartite</em> if and only if there is a bipartition <span class="math inline">\(\{1, 2, \ldots, n\} = X^+ \cup X^-\)</span> (disjoint union of nonempty sets) such that <span class="math inline">\(C_{ij} = 0\)</span> for all <span class="math inline">\(i,j\in X^+\)</span>, and for all <span class="math inline">\(i,j\in X^-\)</span>, i.e.,
 <span class="math display">\[ C \sim \begin{pmatrix} O &amp; \ast \\ \ast  &amp; O \end{pmatrix}.\]</span></p>
 </div>
 <p><strong>Note.</strong></p>
@@ -132,7 +132,7 @@ where <span class="math inline">\(Ay = \theta x\)</span> and <span class="math i
 <li><p>The matrix <span class="math inline">\(C\)</span> is irreducible and <span class="math inline">\(C^2\)</span> is reducible, if <span class="math inline">\(C_{ij} \geq 0\)</span> for all <span class="math inline">\(i,j\)</span> and <span class="math inline">\(C\)</span> is reducible. (Exercise)</p></li>
 </ol>
 <div class="remark">
-<p><span id="unlabeled-div-15" class="remark"><em>Remark</em>. </span>Note 1. Even if <span class="math inline">\(C\)</span> is not symmetric
+<p><span id="unlabeled-div-3" class="remark"><em>Remark</em>. </span>Note 1. Even if <span class="math inline">\(C\)</span> is not symmetric
 <span class="math display">\[\begin{pmatrix} O &amp; A \\ B &amp; O \end{pmatrix} \begin{pmatrix}x\\y\end{pmatrix} = \theta \begin{pmatrix}x\\y\end{pmatrix}\Leftrightarrow \begin{pmatrix} O &amp; A \\ B &amp; O \end{pmatrix} \begin{pmatrix}x\\-y\end{pmatrix} = -\theta \begin{pmatrix}x\\-y\end{pmatrix}\]</span>
 holds. So the geometrix multiplicities coincide. How about the algebraic multiplicities?</p>
 <p>Note 3. Set <span class="math inline">\(x \sim y\)</span> if and only if <span class="math inline">\(C_{xy}&gt;0\)</span>. So the graph may have loops. Then
@@ -243,10 +243,10 @@ This is a contradiction, as <span class="math inline">\(V_0 \bot V_r\)</span>.</
 <span class="math inline">\(\Box\)</span></p>
 <p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any graph.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-16" class="definition"><strong>Definition 2.3  </strong></span><span class="math inline">\(\Gamma\)</span> is said to be <em>bipartite</em> if the adjacency matrix <span class="math inline">\(A\)</span> is bipartite. That is, <span class="math inline">\(X\)</span> can be written as a disjoint union of <span class="math inline">\(X^+\)</span> and <span class="math inline">\(X^-\)</span> such that <span class="math inline">\(X^+, X^-\)</span> contain no edges of <span class="math inline">\(\Gamma\)</span>.</p>
+<p><span id="def:unlabeled-div-4" class="definition"><strong>Definition 2.3  </strong></span><span class="math inline">\(\Gamma\)</span> is said to be <em>bipartite</em> if the adjacency matrix <span class="math inline">\(A\)</span> is bipartite. That is, <span class="math inline">\(X\)</span> can be written as a disjoint union of <span class="math inline">\(X^+\)</span> and <span class="math inline">\(X^-\)</span> such that <span class="math inline">\(X^+, X^-\)</span> contain no edges of <span class="math inline">\(\Gamma\)</span>.</p>
 </div>
 <div class="corollary">
-<p><span id="cor:unlabeled-div-17" class="corollary"><strong>Corollary 2.1  </strong></span>For any (connected) graph <span class="math inline">\(\Gamma\)</span> with
+<p><span id="cor:unlabeled-div-5" class="corollary"><strong>Corollary 2.1  </strong></span>For any (connected) graph <span class="math inline">\(\Gamma\)</span> with
 <span class="math display">\[\mathrm{Spec}(\Gamma) = \begin{pmatrix}\theta_0 &amp; \theta_1 &amp;\cdots &amp; \theta_r\\m_1 &amp; m_1 &amp; \cdots &amp; m_r\end{pmatrix} \:\textrm{ with }\: \theta_0 &gt; \theta_1 &gt; \cdots &gt; \theta_r.\]</span>
 Let <span class="math inline">\(V_i\)</span> be the eigenspace of <span class="math inline">\(\theta_i\)</span>. Then the following holds.</p>
 <ol style="list-style-type: decimal">
@@ -257,7 +257,7 @@ Let <span class="math inline">\(V_i\)</span> be the eigenspace of <span class="m
 </ol>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-18" class="proof"><em>Proof</em>. </span>This is a direct consequences of Theorem <a href="lec2.html#thm:pf">2.1</a> and Note 3.</p>
+<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span>This is a direct consequences of Theorem <a href="lec2.html#thm:pf">2.1</a> and Note 3.</p>
 </div>
 
 </div>

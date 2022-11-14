@@ -3,7 +3,7 @@
 
 In this lecture we use the Perron Frobenius theory of nonnegative matrices to obtain informaiton on eigenvalues of a graph.
 
-Let $K = \mathbb{R}$. For $n\in \mathbb{Z}${> 0}$, pick a symmetrix matrix $C\in \mathrm{Mat}_n(\mathbb{R})$.
+Let $K = \mathbb{R}$. For $n\in \mathbb{Z}^{> 0}$, pick a symmetrix matrix $C\in \mathrm{Mat}_n(\mathbb{R})$.
 
 :::{.definition}
 The matrix $C$ is _reducible_ if and only if there is a bipartition $\{1, 2, \ldots, n\} = X^+ \cup X^-$ (disjoint union of nonempty sets) such that $C_{ij} = 0$ for all $i\in X^+$, and for all $j\in X^-$, and for all $i\in X^-$, and for all $j\in X^+$,i.e.,

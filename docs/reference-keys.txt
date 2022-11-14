@@ -5,3 +5,9 @@ applications
 example-one
 example-two
 final-words
+def:unlabeled-div-1
+def:unlabeled-div-2
+thm:pf
+lem:pfl
+def:unlabeled-div-4
+cor:unlabeled-div-5
