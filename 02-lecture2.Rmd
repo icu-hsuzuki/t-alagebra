@@ -12,7 +12,7 @@ $$ C \sim \begin{pmatrix} \ast & O \\ O & \ast \end{pmatrix}.$$
 
 :::{.definition}
 The matrix $C$ is _bipartite_ if and only if there is a bipartition $\{1, 2, \ldots, n\} = X^+ \cup X^-$ (disjoint union of nonempty sets) such that $C_{ij} = 0$ for all $i,j\in X^+$, and for all $i,j\in X^-$, i.e.,
-$$ C \sim \begin{pmatrix} O & \ast \\ \ast & O \end{pmatrix}.$$
+$$ C \sim \begin{pmatrix} O & \ast \\ \ast  & O \end{pmatrix}.$$
 :::
 
 **Note.**
