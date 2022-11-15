@@ -1,7 +1,21 @@
-# Applications
+# Examples {#lec4}
 
-Some _significant_ applications are demonstrated in this chapter.
+:::{.theorem}
+Given a Cayley graph $\Gamma = \Gamma(G, \Delta)$. View the standard module $V \equiv \mathbb{C}G$ (the group algebra), so 
+$$\left\langle \sum_{g\in G}\alpha_g g, \;\sum_{g\in G}\beta_g g\right\rangle = \sum_{g\in G}\alpha_g\overline{\beta_g}, \quad \textrm{with}\; \alpha_g, \beta_g\in \mathbb{C}.$$ 
+For any $\theta\in X(G)$, write
+$$\hat{\theta} = \sum_{g\in G}\theta(g^{-1})g.$$
+Then the following hold.
 
-## Example one
+(i). $\langle \hat{\theta_1}, \hat{\theta_2}\rangle = |G|$ if $\theta_1 = \theta_2$ and $0$ othewise for $\theta_1, \theta_2\in X(G)$. In particular, $\{\hat{\theta}\mid \theta\in X(G)\}$ forms a basis for $V$.
 
-## Example two
+(ii). $A\hat{\theta} = \Delta_\theta \hat{\theta}$ for $\theta \in X(G)$, where $A$ is the adjacency matrix and 
+$$\Delta_\theta = \sum_{g\in \Delta}\theta(g).$$
+In particular, the eigenvalues of $\Gamma$ are precisely 
+$$\Delta_\theta \mid \theta\in X(G)\}.$$
+:::
+
+:::{.proof}
+Claim: For 
+
+:::

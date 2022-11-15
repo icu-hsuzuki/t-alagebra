@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Lecture 3 | Lecture Note on Terwilliger Algebra</title>
+  <title>Chapter 3 Cayley Graphs | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Lecture 3 | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:title" content="Chapter 3 Cayley Graphs | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Lecture 3 | Lecture Note on Terwilliger Algebra" />
+  <meta name="twitter:title" content="Chapter 3 Cayley Graphs | Lecture Note on Terwilliger Algebra" />
   
   <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-14" />
+<meta name="date" content="2022-11-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="lec2.html"/>
-<link rel="next" href="applications.html"/>
+<link rel="next" href="lec4.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -77,14 +77,10 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#setting"><i class="fa fa-check"></i>Setting</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Lecture 1</a></li>
-<li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Lecture 2</a></li>
-<li class="chapter" data-level="3" data-path="lec3.html"><a href="lec3.html"><i class="fa fa-check"></i><b>3</b> Lecture 3</a></li>
-<li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
-<li class="chapter" data-level="4.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
-</ul></li>
+<li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Subconstituent Algebra of a Graph</a></li>
+<li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
+<li class="chapter" data-level="3" data-path="lec3.html"><a href="lec3.html"><i class="fa fa-check"></i><b>3</b> Cayley Graphs</a></li>
+<li class="chapter" data-level="4" data-path="lec4.html"><a href="lec4.html"><i class="fa fa-check"></i><b>4</b> Examples</a></li>
 <li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -108,21 +104,138 @@
 
             <section class="normal" id="section-">
 <div id="lec3" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Lecture 3<a href="lec3.html#lec3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapter 3</span> Cayley Graphs<a href="lec3.html#lec3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Monday, January 25, 1993</strong></p>
 <p>Given graphs <span class="math inline">\(\Gamma = (X, E)\)</span> and <span class="math inline">\(\Gamma&#39; = (X&#39;, E&#39;)\)</span>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-19" class="definition"><strong>Definition 3.1  </strong></span>A map <span class="math inline">\(\sigma: X \to X&#39;\)</span> is an <em>isomorphism</em> of graphs whenever;</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(\sigma\)</span> is one-to-one and onto,</li>
+<li><span class="math inline">\(xy\in E\)</span> if and only if <span class="math inline">\(\sigma x \sigma y \in E&#39;\)</span> for all <span class="math inline">\(x, y\in X\)</span>.</li>
+</ol>
+</div>
+<p>We do not distinguish between isomorphic graphs.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-20" class="definition"><strong>Definition 3.2  </strong></span>Suppose <span class="math inline">\(\Gamma = \Gamma&#39;\)</span>. Above isomorphism <span class="math inline">\(\sigma\)</span> is called an <em>automorphism</em> of <span class="math inline">\(\Gamma\)</span>. Then set <span class="math inline">\(\mathrm{Aut}(\Gamma)\)</span> of all automorphisms of <span class="math inline">\(\Gamma\)</span> becomes a finite group under composition.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-21" class="definition"><strong>Definition 3.3  </strong></span>If <span class="math inline">\(\mathrm{Aut}(\Gamma)\)</span> acts transitive on <span class="math inline">\(X\)</span>, <span class="math inline">\(\Gamma\)</span> is called <em>vertex transitive</em>.</p>
+</div>
 <div class="example">
-<p><span id="exm:unlabeled-div-19" class="example"><strong>Example 3.1  </strong></span><span class="math inline">\(\Delta = \{a, a^{-1}\}\)</span></p>
+<p><span id="exm:unlabeled-div-22" class="example"><strong>Example 3.1  </strong></span>A Cayley graphs:</p>
+</div>
+<div class="definition">
+<p><span id="def:cayley" class="definition"><strong>Definition 3.4  (Cayley Graphs) </strong></span>Let <span class="math inline">\(G\)</span> be any finite group, and <span class="math inline">\(\Delta\)</span> any generating set for <span class="math inline">\(G\)</span> such that <span class="math inline">\(1_G \not\in \Delta\)</span> and <span class="math inline">\(g\in \Delta \to g^{-1}\in \Delta\)</span>.
+Then Cayley graph <span class="math inline">\(\Gamma = \Gamma(G, \Delta)\)</span> is defined on the vetex set <span class="math inline">\(X = G\)</span> with the edge set <span class="math inline">\(E\)</span> define by the following.</p>
+<p><span class="math display">\[E = \{(h_1,h_2)\mid h_1, h_2\in G, h_1^{-1}h_2\in \Delta\} = \{(h, hg) \mid h\in G, g\in \Delta\}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-23" class="example"><strong>Example 3.2  </strong></span><span class="math inline">\(G = \langle a \mid a^6 = 1\rangle\)</span>, <span class="math inline">\(\Delta = \{a, a^{-1}\}\)</span>.</p>
 <p><img src="t-algebra_files/figure-html/unnamed-chunk-2-1.png" width="192" style="display: block; margin: auto;" /></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-20" class="example"><strong>Example 3.2  </strong></span><span class="math inline">\(\Delta = \{a, a^{-1}, a^2, a^{-2}\}\)</span></p>
+<p><span id="exm:unlabeled-div-24" class="example"><strong>Example 3.3  </strong></span><span class="math inline">\(G = \langle a \mid a^6 = 1\rangle\)</span>, <span class="math inline">\(\Delta = \{a, a^{-1}, a^2, a^{-2}\}\)</span>.</p>
 <p><img src="t-algebra_files/figure-html/unnamed-chunk-3-1.png" width="192" style="display: block; margin: auto;" /></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-21" class="example"><strong>Example 3.3  </strong></span><span class="math inline">\(G = \langle a, b \mid a^6 = 1, b^2, ab = ba\rangle\)</span>, <span class="math inline">\(\Delta = \{a, a^{-1}, b\}\)</span></p>
+<p><span id="exm:unlabeled-div-25" class="example"><strong>Example 3.4  </strong></span><span class="math inline">\(G = \langle a, b \mid a^6 = 1, b^2, ab = ba\rangle\)</span>, <span class="math inline">\(\Delta = \{a, a^{-1}, b\}\)</span>.</p>
 <p><img src="t-algebra_files/figure-html/unnamed-chunk-4-1.png" width="336" style="display: block; margin: auto;" /></p>
 </div>
+<div class="remark">
+<p><span id="unlabeled-div-26" class="remark"><em>Remark</em>. </span><span class="math inline">\(\mathrm{Aut}(\Gamma) \simeq D_6\times \mathbb{Z}_2\)</span> contains two regular subgroups isomorphic to <span class="math inline">\(D_6\)</span> and <span class="math inline">\(\mathbb{Z}_5 \times \mathbb{Z}_2\)</span> and <span class="math inline">\(\Gamma\)</span> is obtained as Cayley graphs in two ways.</p>
+</div>
+<p>Cayley graphs are vertex transitive, indeed.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-27" class="theorem"><strong>Theorem 3.1  </strong></span>The following hold.</p>
+<p>(i). For any Cayley graph <span class="math inline">\(\Gamma = \Gamma(G, \Delta)\)</span>, the map
+<span class="math display">\[G \to \mathrm{Aut}(\Gamma) \; (g\mapsto \hat{g})\]</span>
+is an injective homomorphism of groups, where
+<span class="math display">\[\hat{g}(x) = gx \quad \textrm{for all }\: g\in G \textrm{ and for all } x\in X (= G).\]</span>
+Also, the image <span class="math inline">\(\hat{G}\)</span> is regular on <span class="math inline">\(X\)</span>. i.e., the image <span class="math inline">\(\hat{G}\)</span> acts transitively on <span class="math inline">\(X\)</span> with trivial vertex stabilizers.</p>
+<p>(ii). For any graph <span class="math inline">\(\Gamma = (X, E)\)</span>, suppose there exists a subgroup <span class="math inline">\(G \subseteq \mathrm{Aut}(\Gamma)\)</span> that is regular on <span class="math inline">\(X\)</span>. Pick <span class="math inline">\(x\in X\)</span>, and let
+<span class="math display">\[\Delta = \{g\in G\mid \langle x, g(x)\in E\}.\]</span>
+Then <span class="math inline">\(1\not\in \Delta\)</span>, <span class="math inline">\(g\in \Delta \to g^{-1}\in \Delta\)</span>, and <span class="math inline">\(\Delta\)</span> generates <span class="math inline">\(G\)</span>. Moreover, <span class="math inline">\(\Gamma \simeq \Gamma(G, \Delta)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-28" class="proof"><em>Proof</em>. </span>(i). Let <span class="math inline">\(g\in G\)</span>. We want to show that <span class="math inline">\(\hat{g}\in \mathrm{Aut}(\Gamma)\)</span>. Let <span class="math inline">\(h_1, h_2\in X = G\)</span>. Then,
+<span class="math display">\[\begin{align}
+(h_1, h_2)\in E &amp; \to h_1^{-1}h_2\in \Delta\\
+  &amp; \to (gh_1)^{-1}(gh_2)\in \Delta \\
+  &amp; \to (gh_1, gh_2)\in E\\
+  &amp; \to (\hat{g}(h_1), \hat{g}(h_2)) \in E.
+\end{align}\]</span>
+Hence, <span class="math inline">\(\hat{g}\in \mathrm{Aut}(\Gamma)\)</span>.</p>
+<p>Observe: <span class="math inline">\(g \mapsto \hat{g}\)</span> is a homomorphism of groups:
+<span class="math display">\[\hat{1}_G = 1, \; \widehat{g_1g_2} = \widehat{g_1}\widehat{g_2}.\]</span></p>
+<p>Observe: <span class="math inline">\(g \mapsto \hat{g}\)</span> is one-to-one:
+<span class="math display">\[\widehat{g_1} = \widehat{g_2} \to g_1 = \widehat{g_1}(1_G) = \widehat{g_2}(1_G) = g_2.\]</span></p>
+<p>Observe: <span class="math inline">\(\hat{G}\)</span> is regular on <span class="math inline">\(X\)</span>: Clear by construction.</p>
+<p>(ii). <span class="math inline">\(1_G\not\in \Delta\)</span>: Since <span class="math inline">\(\Gamma\)</span> has not loops, <span class="math inline">\((x, 1_Gx) \not\in E\)</span>.</p>
+<p><span class="math inline">\(g\in \Delta \to g^{-1}\in \Delta\)</span>:
+<span class="math display">\[g\in \Delta \to (x, g(x))\in E \to E \ni (g^{-1}(x), g^{-1}(g(x))) = (g^{-1}(x), x).\]</span></p>
+<p><span class="math inline">\(\Delta\)</span> generates <span class="math inline">\(G\)</span>: Suppose <span class="math inline">\(\langle \Delta \subsetneq G\)</span>. Let <span class="math inline">\(\hat{X} = \{g(x)\mid g\in \langle \Delta\rangle\} \subsetneq X\)</span>. (<span class="math inline">\(\hat{X} \subsetneq X\)</span> as <span class="math inline">\(G\)</span> acts regularly on <span class="math inline">\(X\)</span>.)</p>
+<p>Since <span class="math inline">\(\Gamma\)</span> is connected, there exists <span class="math inline">\(y\in \hat{X}\)</span> and <span class="math inline">\(z\in X\setminus \hat{X}\)</span> with <span class="math inline">\(yz\in E\)</span>.</p>
+<p>Let <span class="math inline">\(y = g(x)\)</span>, <span class="math inline">\(g\in \langle \Delta\rangle\)</span>, <span class="math inline">\(z\in h(x)\)</span>, <span class="math inline">\(h\in G\setminus \langle \Delta\rangle\)</span>. Then
+<span class="math display">\[(y,z)=(g(x),h(x))\in E \to (x,g^{-1}h(x))\in E \to g^{-1}h\in \langle \Delta \rangle \to h\in \langle \Delta \rangle. \]</span>
+This is a contradition. Therefore, <span class="math inline">\(\Delta\)</span> generates <span class="math inline">\(G\)</span>.</p>
+<p>Let <span class="math inline">\(\Gamma&#39; = (X&#39;, E&#39;)\)</span> denote <span class="math inline">\(\Gamma(G, \Delta)\)</span>. We shall show that
+<span class="math display">\[\theta: X&#39; \to X \; (g\mapsto g(x))\]</span>
+is an isomorphism of graphs.</p>
+<p><span class="math inline">\(\theta\)</span> is one-to-one: For <span class="math inline">\(h_1, h_2\in X&#39; = G\)</span>,
+<span class="math display">\[\theta(h_1)=\theta(h_2) \to h_1(x) = h_2(x) \to h_2^{-1}h_1(x)=x \to h_2^{-1}h_1\in \mathrm{Stab}_G(x) = \{1_G\} \to h_1 = h_2.\]</span>
+(<span class="math inline">\(\mathrm{Stab}_G = \{g\in G\mid g(x) = x\}\)</span>.)</p>
+<p><span class="math inline">\(\theta\)</span> is onto: Since <span class="math inline">\(G\)</span> is transitive,
+<span class="math display">\[X = \{g(x)\mid g\in G\} = \theta(X&#39;) = \theta(G).\]</span></p>
+<p><span class="math inline">\(\theta\)</span> respects adjacency: For <span class="math inline">\(h_1, h_2\in X&#39; = G\)</span>,
+<span class="math display">\[(h_1,h_2)\in E&#39; \leftrightarrow h_1^{-1}h_2\in \Delta \leftrightarrow (x, h_1^{-1}h_2(x))\in E \leftrightarrow (h_1(x),h_2(x))\in E \leftrightarrow (\theta(h_1), \theta(h_2))\in E.\]</span>
+Therefore <span class="math inline">\(\theta\)</span> is an isomorphism between graphs <span class="math inline">\(\Gamma(G, \Delta)\)</span> and <span class="math inline">\(\Gamma(X, E)\)</span>.</p>
+</div>
+<p>How to compute the eigenvalues of the Cayley graph of and abelian group.</p>
+<p>Let <span class="math inline">\(G\)</span> be any finite abelian group. Let <span class="math inline">\(\mathbb{C}^*\)</span> be the multiplicative group on <span class="math inline">\(\mathbb{C}\setminus \{0\}\)</span>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-29" class="definition"><strong>Definition 3.5  </strong></span>A (linear) <span class="math inline">\(G\)</span>-character is any group homomorphism <span class="math inline">\(\theta: G \to \mathbb{C}^*\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-30" class="example"><strong>Example 3.5  </strong></span><span class="math inline">\(G = \langle a\mid a^3 =1\rangle\)</span> has three characters, <span class="math inline">\(\theta_0, \theta_1, \theta_2\)</span>.
+<span class="math display">\[
+\begin{array}{c|ccc}
+\theta_i(a^j) &amp; 1 &amp; a &amp; a^2 \\
+\hline
+\theta_0 &amp; 1 &amp; 1 &amp; 1\\
+\theta_1 &amp; 1 &amp; \omega &amp; \omega^2\\
+\theta_2 &amp; 1 &amp; \omega^2 &amp; \omega
+\end{array}, \quad \textrm{with }\; \omega = \frac{-1+\sqrt{-3}}{2}.
+\]</span>
+Here <span class="math inline">\(\omega\)</span> is a primitive cube root pf <span class="math inline">\(q\)</span> in <span class="math inline">\(\mathbb{C}^*\)</span>, i.e., <span class="math inline">\(1+\omega + \omega^2 = 0\)</span>.</p>
+</div>
+<p>For arbitraty group <span class="math inline">\(G\)</span>, let <span class="math inline">\(X(G)\)</span> be the set of all characters of <span class="math inline">\(G\)</span>.</p>
+<p>Observe: For <span class="math inline">\(\theta_1, \theta_2\in X(G)\)</span>, one can define product $_1_2:
+<span class="math display">\[\theta_1\theta_2(g) = \theta_1(g)\theta_2(g) \quad \textrm{for all }\; g\in G.\]</span>
+Then <span class="math inline">\(\theta_1\theta_2\in X(G)\)</span>.</p>
+<p>Observe: <span class="math inline">\(X(G)\)</span> with this product is an (abelian) group.</p>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-31" class="lemma"><strong>Lemma 3.1  </strong></span>The groups <span class="math inline">\(G\)</span> and <span class="math inline">\(X(G)\)</span> are isomorphic for all finite abelian groups <span class="math inline">\(G\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-32" class="proof"><em>Proof</em>. </span><span class="math inline">\(G\)</span> is a direct sum of cyclic groups;
+<span class="math display">\[G = G_1\oplus G_2 \oplus \cdots \oplus G_m, \quad \textrm{where } \; G_i = \langle a_i\mid a_i^{d_i} = 1\rangle \quad (1\leq i\leq m).\]</span>
+Pick any alement <span class="math inline">\(\omega_i\)</span> of order <span class="math inline">\(d_i\)</span> in <span class="math inline">\(\mathbb{C}^*\)</span>, i.e., a primitive <span class="math inline">\(d_i\)</span>-the root of <span class="math inline">\(1\)</span>. Define
+<span class="math display">\[\theta_i: G \to \mathbb{C}^* \quad (a_1^{\varepsilon_1}\cdots a_m^{\varepsilon_m} \mapsto \omega_i^{\varepsilon_i} \quad \textrm{where }\; 0\leq \varepsilon_i &lt; d_i, 1\leq i\leq m).\]</span>
+Then <span class="math inline">\(\theta_i\in X(G)\)</span>. (Exercise)</p>
+<p>Claim: There exists an isomorphism of groups <span class="math inline">\(G \to X(G)\)</span> that sends <span class="math inline">\(a_i\)</span> to <span class="math inline">\(\theta_i\)</span>.</p>
+<p>Observe: <span class="math inline">\(\theta_i^{d_i} = 1\)</span>. For every <span class="math inline">\(g = a_1^{\varepsilon_1}\cdots a_m^{\varepsilon_m} \in G\)</span>,
+<span class="math display">\[\theta_i^{d_i}(g) = (\theta_i(g))^{d_i} = (\omega_i^{\varepsilon_i})^{d_i} = (\omega_i^{d_i})^{\varepsilon_i} = 1.\]</span>
+Observe: If <span class="math inline">\(\theta_1^{\varepsilon_1}\theta_2^{\varepsilon_2}\cdots \theta_m^{\varepsilon_m} = 1\)</span> for some <span class="math inline">\(0\leq \varepsilon_i &lt; d_i, 1\leq i\leq m\)</span>. Then <span class="math inline">\(\varepsilon_1 = \varepsilon_2 = \cdots = \varepsilon_m = 0\)</span>.</p>
+<p><em>Pf.</em> <span class="math inline">\(1 = \theta_1^{\varepsilon_1}\theta_2^{\varepsilon_2}\cdots \theta_m^{\varepsilon_m}(a_i) = \omega_i^{\varepsilon_i}\)</span>, Since <span class="math inline">\(\omega_i\)</span> is a primitive <span class="math inline">\(d_i\)</span>-th root of <span class="math inline">\(1\)</span>, <span class="math inline">\(\varepsilon_i = 0\)</span> for <span class="math inline">\(1\leq i\leq m\)</span>.</p>
+<p>Observe: <span class="math inline">\(\theta_1, \ldots, \theta_m\)</span> generate <span class="math inline">\(X(G)\)</span>. Pick <span class="math inline">\(\theta\in X(G)\)</span>. Since
+<span class="math inline">\(a_i^{d_i} = 1\)</span>, <span class="math inline">\(1 = \theta(a_i^{d_i}) = \theta(a_i)^{d_i}\)</span>.</p>
+<p>Hence <span class="math inline">\(\theta(a_i) = \omega^{\varepsilon_i}\)</span> for some <span class="math inline">\(\varepsilon_i\)</span> with <span class="math inline">\(0\leq \varepsilon_i &lt; d_i\)</span>.</p>
+<p>Now <span class="math inline">\(\theta = \theta_1^{\varepsilon_1}\cdots \theta_m^{\varepsilon_m}\)</span>, since these are both equal to <span class="math inline">\(\omega_i^{\varepsilon_i}\)</span> at <span class="math inline">\(a_i\)</span> for <span class="math inline">\(1\leq i \leq m\)</span>.</p>
+<p>Therefore,
+<span class="math display">\[G \to X(G) \quad (a_i \mapsto \theta_i)\]</span>
+is an isomorphism of groups.</p>
+</div>
+<p><strong>Note.</strong> The correspondence above is clearly a group homomorphism.</p>
 
 </div>
             </section>
@@ -131,7 +244,7 @@
         </div>
       </div>
 <a href="lec2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

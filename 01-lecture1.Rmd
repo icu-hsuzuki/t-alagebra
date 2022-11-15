@@ -1,4 +1,4 @@
-# Lecture 1 {#lec1}
+# Subconstituent Algebra of a Graph {#lec1}
 **Wednesday, January 20, 1993**
 
 A graph (undirected, without loops or multiple edges) is a pair $\Gamma = (X, E)$, where 

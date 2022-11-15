@@ -1,4 +1,4 @@
-# Lecture 2 {#lec2}
+# Perron-Frobenius Theorem {#lec2}
 **Friday, January 22, 1993**
 
 In this lecture we use the Perron Frobenius theory of nonnegative matrices to obtain informaiton on eigenvalues of a graph.

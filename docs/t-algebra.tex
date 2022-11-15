@@ -84,7 +84,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-11-14}
+\date{2022-11-15}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -205,7 +205,7 @@ This note is created by \texttt{bookdown} package on RStudio.
 \end{enumerate}
 
 \hypertarget{lec1}{%
-\chapter{Lecture 1}\label{lec1}}
+\chapter{Subconstituent Algebra of a Graph}\label{lec1}}
 
 \textbf{Wednesday, January 20, 1993}
 
@@ -427,13 +427,13 @@ Study those \(\Gamma\) whose modules take `simple' form. The \(\Gamma\)'s involv
 \end{remark}
 
 \hypertarget{lec2}{%
-\chapter{Lecture 2}\label{lec2}}
+\chapter{Perron-Frobenius Theorem}\label{lec2}}
 
 \textbf{Friday, January 22, 1993}
 
 In this lecture we use the Perron Frobenius theory of nonnegative matrices to obtain informaiton on eigenvalues of a graph.
 
-Let \(K = \mathbb{R}\). For \(n\in \mathbb{Z}\)\{\textgreater{} 0\}\$, pick a symmetrix matrix \(C\in \mathrm{Mat}_n(\mathbb{R})\).
+Let \(K = \mathbb{R}\). For \(n\in \mathbb{Z}^{> 0}\), pick a symmetrix matrix \(C\in \mathrm{Mat}_n(\mathbb{R})\).
 
 \begin{definition}
 The matrix \(C\) is \emph{reducible} if and only if there is a bipartition \(\{1, 2, \ldots, n\} = X^+ \cup X^-\) (disjoint union of nonempty sets) such that \(C_{ij} = 0\) for all \(i\in X^+\), and for all \(j\in X^-\), and for all \(i\in X^-\), and for all \(j\in X^+\),i.e.,
@@ -646,15 +646,51 @@ This is a direct consequences of Theorem \ref{thm:pf} and Note 3.
 \end{proof}
 
 \hypertarget{lec3}{%
-\chapter{Lecture 3}\label{lec3}}
+\chapter{Cayley Graphs}\label{lec3}}
 
 \textbf{Monday, January 25, 1993}
 
 Given graphs \(\Gamma = (X, E)\) and \(\Gamma' = (X', E')\).
 
+\begin{definition}
+
+A map \(\sigma: X \to X'\) is an \emph{isomorphism} of graphs whenever;
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\tightlist
+\item
+  \(\sigma\) is one-to-one and onto,
+\item
+  \(xy\in E\) if and only if \(\sigma x \sigma y \in E'\) for all \(x, y\in X\).
+\end{enumerate}
+
+\end{definition}
+
+We do not distinguish between isomorphic graphs.
+
+\begin{definition}
+Suppose \(\Gamma = \Gamma'\). Above isomorphism \(\sigma\) is called an \emph{automorphism} of \(\Gamma\). Then set \(\mathrm{Aut}(\Gamma)\) of all automorphisms of \(\Gamma\) becomes a finite group under composition.
+\end{definition}
+
+\begin{definition}
+If \(\mathrm{Aut}(\Gamma)\) acts transitive on \(X\), \(\Gamma\) is called \emph{vertex transitive}.
+\end{definition}
+
+\begin{example}
+A Cayley graphs:
+\end{example}
+
+\begin{definition}[Cayley Graphs]
+\protect\hypertarget{def:cayley}{}\label{def:cayley}Let \(G\) be any finite group, and \(\Delta\) any generating set for \(G\) such that \(1_G \not\in \Delta\) and \(g\in \Delta \to g^{-1}\in \Delta\).
+Then Cayley graph \(\Gamma = \Gamma(G, \Delta)\) is defined on the vetex set \(X = G\) with the edge set \(E\) define by the following.
+
+\[E = \{(h_1,h_2)\mid h_1, h_2\in G, h_1^{-1}h_2\in \Delta\} = \{(h, hg) \mid h\in G, g\in \Delta\}\]
+\end{definition}
+
 \begin{example}
 
-\(\Delta = \{a, a^{-1}\}\)
+\(G = \langle a \mid a^6 = 1\rangle\), \(\Delta = \{a, a^{-1}\}\).
 
 \begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-2-1} \end{center}
 
@@ -662,7 +698,7 @@ Given graphs \(\Gamma = (X, E)\) and \(\Gamma' = (X', E')\).
 
 \begin{example}
 
-\(\Delta = \{a, a^{-1}, a^2, a^{-2}\}\)
+\(G = \langle a \mid a^6 = 1\rangle\), \(\Delta = \{a, a^{-1}, a^2, a^{-2}\}\).
 
 \begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-3-1} \end{center}
 
@@ -670,22 +706,163 @@ Given graphs \(\Gamma = (X, E)\) and \(\Gamma' = (X', E')\).
 
 \begin{example}
 
-\(G = \langle a, b \mid a^6 = 1, b^2, ab = ba\rangle\), \(\Delta = \{a, a^{-1}, b\}\)
+\(G = \langle a, b \mid a^6 = 1, b^2, ab = ba\rangle\), \(\Delta = \{a, a^{-1}, b\}\).
 
 \begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \end{example}
 
-\hypertarget{applications}{%
-\chapter{Applications}\label{applications}}
+\begin{remark}
+\(\mathrm{Aut}(\Gamma) \simeq D_6\times \mathbb{Z}_2\) contains two regular subgroups isomorphic to \(D_6\) and \(\mathbb{Z}_5 \times \mathbb{Z}_2\) and \(\Gamma\) is obtained as Cayley graphs in two ways.
+\end{remark}
 
-Some \emph{significant} applications are demonstrated in this chapter.
+Cayley graphs are vertex transitive, indeed.
 
-\hypertarget{example-one}{%
-\section{Example one}\label{example-one}}
+\begin{theorem}
+The following hold.
 
-\hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
+(i). For any Cayley graph \(\Gamma = \Gamma(G, \Delta)\), the map
+\[G \to \mathrm{Aut}(\Gamma) \; (g\mapsto \hat{g})\]
+is an injective homomorphism of groups, where
+\[\hat{g}(x) = gx \quad \textrm{for all }\: g\in G \textrm{ and for all } x\in X (= G).\]
+Also, the image \(\hat{G}\) is regular on \(X\). i.e., the image \(\hat{G}\) acts transitively on \(X\) with trivial vertex stabilizers.
+
+(ii). For any graph \(\Gamma = (X, E)\), suppose there exists a subgroup \(G \subseteq \mathrm{Aut}(\Gamma)\) that is regular on \(X\). Pick \(x\in X\), and let
+\[\Delta = \{g\in G\mid \langle x, g(x)\in E\}.\]
+Then \(1\not\in \Delta\), \(g\in \Delta \to g^{-1}\in \Delta\), and \(\Delta\) generates \(G\). Moreover, \(\Gamma \simeq \Gamma(G, \Delta)\).
+\end{theorem}
+
+\begin{proof}
+(i). Let \(g\in G\). We want to show that \(\hat{g}\in \mathrm{Aut}(\Gamma)\). Let \(h_1, h_2\in X = G\). Then,
+\begin{align}
+(h_1, h_2)\in E & \to h_1^{-1}h_2\in \Delta\\
+  & \to (gh_1)^{-1}(gh_2)\in \Delta \\
+  & \to (gh_1, gh_2)\in E\\
+  & \to (\hat{g}(h_1), \hat{g}(h_2)) \in E.
+\end{align}
+Hence, \(\hat{g}\in \mathrm{Aut}(\Gamma)\).
+
+Observe: \(g \mapsto \hat{g}\) is a homomorphism of groups:
+\[\hat{1}_G = 1, \; \widehat{g_1g_2} = \widehat{g_1}\widehat{g_2}.\]
+
+Observe: \(g \mapsto \hat{g}\) is one-to-one:
+\[\widehat{g_1} = \widehat{g_2} \to g_1 = \widehat{g_1}(1_G) = \widehat{g_2}(1_G) = g_2.\]
+
+Observe: \(\hat{G}\) is regular on \(X\): Clear by construction.
+
+(ii). \(1_G\not\in \Delta\): Since \(\Gamma\) has not loops, \((x, 1_Gx) \not\in E\).
+
+\(g\in \Delta \to g^{-1}\in \Delta\):
+\[g\in \Delta \to (x, g(x))\in E \to E \ni (g^{-1}(x), g^{-1}(g(x))) = (g^{-1}(x), x).\]
+
+\(\Delta\) generates \(G\): Suppose \(\langle \Delta \subsetneq G\). Let \(\hat{X} = \{g(x)\mid g\in \langle \Delta\rangle\} \subsetneq X\). (\(\hat{X} \subsetneq X\) as \(G\) acts regularly on \(X\).)
+
+Since \(\Gamma\) is connected, there exists \(y\in \hat{X}\) and \(z\in X\setminus \hat{X}\) with \(yz\in E\).
+
+Let \(y = g(x)\), \(g\in \langle \Delta\rangle\), \(z\in h(x)\), \(h\in G\setminus \langle \Delta\rangle\). Then
+\[(y,z)=(g(x),h(x))\in E \to (x,g^{-1}h(x))\in E \to g^{-1}h\in \langle \Delta \rangle \to h\in \langle \Delta \rangle. \]
+This is a contradition. Therefore, \(\Delta\) generates \(G\).
+
+Let \(\Gamma' = (X', E')\) denote \(\Gamma(G, \Delta)\). We shall show that
+\[\theta: X' \to X \; (g\mapsto g(x))\]
+is an isomorphism of graphs.
+
+\(\theta\) is one-to-one: For \(h_1, h_2\in X' = G\),
+\[\theta(h_1)=\theta(h_2) \to h_1(x) = h_2(x) \to h_2^{-1}h_1(x)=x \to h_2^{-1}h_1\in \mathrm{Stab}_G(x) = \{1_G\} \to h_1 = h_2.\]
+(\(\mathrm{Stab}_G = \{g\in G\mid g(x) = x\}\).)
+
+\(\theta\) is onto: Since \(G\) is transitive,
+\[X = \{g(x)\mid g\in G\} = \theta(X') = \theta(G).\]
+
+\(\theta\) respects adjacency: For \(h_1, h_2\in X' = G\),
+\[(h_1,h_2)\in E' \leftrightarrow h_1^{-1}h_2\in \Delta \leftrightarrow (x, h_1^{-1}h_2(x))\in E \leftrightarrow (h_1(x),h_2(x))\in E \leftrightarrow (\theta(h_1), \theta(h_2))\in E.\]
+Therefore \(\theta\) is an isomorphism between graphs \(\Gamma(G, \Delta)\) and \(\Gamma(X, E)\).
+\end{proof}
+
+How to compute the eigenvalues of the Cayley graph of and abelian group.
+
+Let \(G\) be any finite abelian group. Let \(\mathbb{C}^*\) be the multiplicative group on \(\mathbb{C}\setminus \{0\}\).
+
+\begin{definition}
+A (linear) \(G\)-character is any group homomorphism \(\theta: G \to \mathbb{C}^*\).
+\end{definition}
+
+\begin{example}
+\(G = \langle a\mid a^3 =1\rangle\) has three characters, \(\theta_0, \theta_1, \theta_2\).
+\[
+\begin{array}{c|ccc}
+\theta_i(a^j) & 1 & a & a^2 \\
+\hline
+\theta_0 & 1 & 1 & 1\\
+\theta_1 & 1 & \omega & \omega^2\\
+\theta_2 & 1 & \omega^2 & \omega
+\end{array}, \quad \textrm{with }\; \omega = \frac{-1+\sqrt{-3}}{2}.
+\]
+Here \(\omega\) is a primitive cube root pf \(q\) in \(\mathbb{C}^*\), i.e., \(1+\omega + \omega^2 = 0\).
+\end{example}
+
+For arbitraty group \(G\), let \(X(G)\) be the set of all characters of \(G\).
+
+Observe: For \(\theta_1, \theta_2\in X(G)\), one can define product \$\theta\_1\theta\_2:
+\[\theta_1\theta_2(g) = \theta_1(g)\theta_2(g) \quad \textrm{for all }\; g\in G.\]
+Then \(\theta_1\theta_2\in X(G)\).
+
+Observe: \(X(G)\) with this product is an (abelian) group.
+
+\begin{lemma}
+The groups \(G\) and \(X(G)\) are isomorphic for all finite abelian groups \(G\).
+\end{lemma}
+
+\begin{proof}
+\(G\) is a direct sum of cyclic groups;
+\[G = G_1\oplus G_2 \oplus \cdots \oplus G_m, \quad \textrm{where } \; G_i = \langle a_i\mid a_i^{d_i} = 1\rangle \quad (1\leq i\leq m).\]
+Pick any alement \(\omega_i\) of order \(d_i\) in \(\mathbb{C}^*\), i.e., a primitive \(d_i\)-the root of \(1\). Define
+\[\theta_i: G \to \mathbb{C}^* \quad (a_1^{\varepsilon_1}\cdots a_m^{\varepsilon_m} \mapsto \omega_i^{\varepsilon_i} \quad \textrm{where }\; 0\leq \varepsilon_i < d_i, 1\leq i\leq m).\]
+Then \(\theta_i\in X(G)\). (Exercise)
+
+Claim: There exists an isomorphism of groups \(G \to X(G)\) that sends \(a_i\) to \(\theta_i\).
+
+Observe: \(\theta_i^{d_i} = 1\). For every \(g = a_1^{\varepsilon_1}\cdots a_m^{\varepsilon_m} \in G\),
+\[\theta_i^{d_i}(g) = (\theta_i(g))^{d_i} = (\omega_i^{\varepsilon_i})^{d_i} = (\omega_i^{d_i})^{\varepsilon_i} = 1.\]
+Observe: If \(\theta_1^{\varepsilon_1}\theta_2^{\varepsilon_2}\cdots \theta_m^{\varepsilon_m} = 1\) for some \(0\leq \varepsilon_i < d_i, 1\leq i\leq m\). Then \(\varepsilon_1 = \varepsilon_2 = \cdots = \varepsilon_m = 0\).
+
+\emph{Pf.} \(1 = \theta_1^{\varepsilon_1}\theta_2^{\varepsilon_2}\cdots \theta_m^{\varepsilon_m}(a_i) = \omega_i^{\varepsilon_i}\), Since \(\omega_i\) is a primitive \(d_i\)-th root of \(1\), \(\varepsilon_i = 0\) for \(1\leq i\leq m\).
+
+Observe: \(\theta_1, \ldots, \theta_m\) generate \(X(G)\). Pick \(\theta\in X(G)\). Since
+\(a_i^{d_i} = 1\), \(1 = \theta(a_i^{d_i}) = \theta(a_i)^{d_i}\).
+
+Hence \(\theta(a_i) = \omega^{\varepsilon_i}\) for some \(\varepsilon_i\) with \(0\leq \varepsilon_i < d_i\).
+
+Now \(\theta = \theta_1^{\varepsilon_1}\cdots \theta_m^{\varepsilon_m}\), since these are both equal to \(\omega_i^{\varepsilon_i}\) at \(a_i\) for \(1\leq i \leq m\).
+
+Therefore,
+\[G \to X(G) \quad (a_i \mapsto \theta_i)\]
+is an isomorphism of groups.
+\end{proof}
+
+\textbf{Note.} The correspondence above is clearly a group homomorphism.
+
+\hypertarget{lec4}{%
+\chapter{Examples}\label{lec4}}
+
+\begin{theorem}
+Given a Cayley graph \(\Gamma = \Gamma(G, \Delta)\). View the standard module \(V \equiv \mathbb{C}G\) (the group algebra), so
+\[\left\langle \sum_{g\in G}\alpha_g g, \;\sum_{g\in G}\beta_g g\right\rangle = \sum_{g\in G}\alpha_g\overline{\beta_g}, \quad \textrm{with}\; \alpha_g, \beta_g\in \mathbb{C}.\]
+For any \(\theta\in X(G)\), write
+\[\hat{\theta} = \sum_{g\in G}\theta(g^{-1})g.\]
+Then the following hold.
+
+(i). \(\langle \hat{\theta_1}, \hat{\theta_2}\rangle = |G|\) if \(\theta_1 = \theta_2\) and \(0\) othewise for \(\theta_1, \theta_2\in X(G)\). In particular, \(\{\hat{\theta}\mid \theta\in X(G)\}\) forms a basis for \(V\).
+
+(ii). \(A\hat{\theta} = \Delta_\theta \hat{\theta}\) for \(\theta \in X(G)\), where \(A\) is the adjacency matrix and
+\[\Delta_\theta = \sum_{g\in \Delta}\theta(g).\]
+In particular, the eigenvalues of \(\Gamma\) are precisely
+\[\Delta_\theta \mid \theta\in X(G)\}.\]
+\end{theorem}
+
+\begin{proof}
+Claim: For
+\end{proof}
 
 \hypertarget{final-words}{%
 \chapter{Final Words}\label{final-words}}

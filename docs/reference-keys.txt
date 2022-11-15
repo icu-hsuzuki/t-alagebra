@@ -1,13 +1,5 @@
 lec1
 lec2
 lec3
-applications
-example-one
-example-two
+lec4
 final-words
-def:unlabeled-div-1
-def:unlabeled-div-2
-thm:pf
-lem:pfl
-def:unlabeled-div-4
-cor:unlabeled-div-5
