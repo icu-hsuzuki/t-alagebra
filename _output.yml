@@ -11,6 +11,8 @@ bookdown::gitbook:
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
+#    after_body:
+#      \printindex
   latex_engine: xelatex
   citation_package: natbib
   keep_tex: yes

@@ -18,6 +18,8 @@ description: "This is a lecture note using the bookdown package. The output form
 
 This note is created by `bookdown` package on RStudio.
 
+For `bookdown` See [@xie2015], [@xie2017], [@xie2018].
+
 1. Log-in to my GitHub Account
 2. Go to RStudio/bookdown-demo repository: https://github.com/rstudio/bookdown-demo
 3. Use This Template
