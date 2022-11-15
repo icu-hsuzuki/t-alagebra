@@ -4,7 +4,7 @@
 Given graphs $\Gamma = (X, E)$ and $\Gamma' = (X', E')$.
 
 :::{.definition}
-A map $\sigma: X \to X'$ is an _isomorphism_ of graphs whenever;
+A map $\sigma: X \to X'$ is an _isomorphism_\index{isomorophism of graphs whenever;
 
 i. $\sigma$ is one-to-one and onto,
 ii. $xy\in E$ if and only if $\sigma x \sigma y \in E'$ for all $x, y\in X$.
@@ -13,11 +13,11 @@ ii. $xy\in E$ if and only if $\sigma x \sigma y \in E'$ for all $x, y\in X$.
 We do not distinguish between isomorphic graphs.
 
 :::{.definition}
-Suppose $\Gamma = \Gamma'$. Above isomorphism $\sigma$ is called an _automorphism_ of $\Gamma$. Then set $\mathrm{Aut}(\Gamma)$ of all automorphisms of $\Gamma$ becomes a finite group under composition.
+Suppose $\Gamma = \Gamma'$. Above isomorphism $\sigma$ is called an _automorphism_\index{automorphism} of $\Gamma$. Then set $\mathrm{Aut}(\Gamma)$ of all automorphisms of $\Gamma$ becomes a finite group under composition.
 :::
 
 :::{.definition}
-If $\mathrm{Aut}(\Gamma)$ acts transitive on $X$, $\Gamma$ is called _vertex transitive_.
+If $\mathrm{Aut}(\Gamma)$ acts transitive on $X$, $\Gamma$ is called _vertex transitive_\index{vertex transitive}.
 :::
 
 :::{.example}
@@ -28,7 +28,7 @@ A Cayley graphs:
 
 :::{.definition #cayley name="Cayley Graphs"}
 Let $G$ be any finite group, and $\Delta$ any generating set for $G$ such that $1_G \not\in \Delta$ and $g\in \Delta \to g^{-1}\in \Delta$.
-Then Cayley graph $\Gamma = \Gamma(G, \Delta)$ is defined on the vetex set $X = G$ with the edge set $E$ define by the following.
+Then Cayley graph $\Gamma = \Gamma(G, \Delta)$ is defined on the vetex set $X = G$ with the edge set $E$ define by the following. \index{Cayley graph}
 
 $$E = \{(h_1,h_2)\mid h_1, h_2\in G, h_1^{-1}h_2\in \Delta\} = \{(h, hg) \mid h\in G, g\in \Delta\}$$
 :::
@@ -157,7 +157,7 @@ How to compute the eigenvalues of the Cayley graph of and abelian group.
 Let $G$ be any finite abelian group. Let $\mathbb{C}^*$ be the multiplicative group on $\mathbb{C}\setminus \{0\}$.
 
 :::{.definition}
-A (linear) $G$-character is any group homomorphism $\theta: G \to \mathbb{C}^*$.
+A (linear) $G$-character\index{character} is any group homomorphism $\theta: G \to \mathbb{C}^*$.
 :::
 
 :::{.example}

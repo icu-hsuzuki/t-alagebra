@@ -441,12 +441,12 @@ In this lecture we use the Perron Frobenius theory of nonnegative matrices to ob
 Let \(K = \mathbb{R}\). For \(n\in \mathbb{Z}^{> 0}\), pick a symmetrix matrix \(C\in \mathrm{Mat}_n(\mathbb{R})\).
 
 \begin{definition}
-The matrix \(C\) is \emph{reducible} if and only if there is a bipartition \(\{1, 2, \ldots, n\} = X^+ \cup X^-\) (disjoint union of nonempty sets) such that \(C_{ij} = 0\) for all \(i\in X^+\), and for all \(j\in X^-\), and for all \(i\in X^-\), and for all \(j\in X^+\),i.e.,
+The matrix \(C\) is \emph{reducible}\index{reducible} if and only if there is a bipartition \(\{1, 2, \ldots, n\} = X^+ \cup X^-\) (disjoint union of nonempty sets) such that \(C_{ij} = 0\) for all \(i\in X^+\), and for all \(j\in X^-\), and for all \(i\in X^-\), and for all \(j\in X^+\),i.e.,
 \[ C \sim \begin{pmatrix} \ast & O \\ O & \ast \end{pmatrix}.\]
 \end{definition}
 
 \begin{definition}
-The matrix \(C\) is \emph{bipartite} if and only if there is a bipartition \(\{1, 2, \ldots, n\} = X^+ \cup X^-\) (disjoint union of nonempty sets) such that \(C_{ij} = 0\) for all \(i,j\in X^+\), and for all \(i,j\in X^-\), i.e.,
+The matrix \(C\) is \emph{bipartite}\index{bipartite} if and only if there is a bipartition \(\{1, 2, \ldots, n\} = X^+ \cup X^-\) (disjoint union of nonempty sets) such that \(C_{ij} = 0\) for all \(i,j\in X^+\), and for all \(i,j\in X^-\), i.e.,
 \[ C \sim \begin{pmatrix} O & \ast \\ \ast  & O \end{pmatrix}.\]
 \end{definition}
 
@@ -624,7 +624,7 @@ Thus by 2, \(C^2\) must be reducible. Therefore, \(C\) is bipartite by Note 3.
 Let \(\Gamma = (X, E)\) be any graph.
 
 \begin{definition}
-\(\Gamma\) is said to be \emph{bipartite} if the adjacency matrix \(A\) is bipartite. That is, \(X\) can be written as a disjoint union of \(X^+\) and \(X^-\) such that \(X^+, X^-\) contain no edges of \(\Gamma\).
+\(\Gamma\) is said to be \emph{bipartite}\index{bipartite} if the adjacency matrix \(A\) is bipartite. That is, \(X\) can be written as a disjoint union of \(X^+\) and \(X^-\) such that \(X^+, X^-\) contain no edges of \(\Gamma\).
 \end{definition}
 
 \begin{corollary}
@@ -659,7 +659,7 @@ Given graphs \(\Gamma = (X, E)\) and \(\Gamma' = (X', E')\).
 
 \begin{definition}
 
-A map \(\sigma: X \to X'\) is an \emph{isomorphism} of graphs whenever;
+A map \(\sigma: X \to X'\) is an \emph{isomorphism}\textbackslash index\{isomorophism of graphs whenever;
 
 \begin{enumerate}
 \def\labelenumi{\roman{enumi}.}
@@ -675,11 +675,11 @@ A map \(\sigma: X \to X'\) is an \emph{isomorphism} of graphs whenever;
 We do not distinguish between isomorphic graphs.
 
 \begin{definition}
-Suppose \(\Gamma = \Gamma'\). Above isomorphism \(\sigma\) is called an \emph{automorphism} of \(\Gamma\). Then set \(\mathrm{Aut}(\Gamma)\) of all automorphisms of \(\Gamma\) becomes a finite group under composition.
+Suppose \(\Gamma = \Gamma'\). Above isomorphism \(\sigma\) is called an \emph{automorphism}\index{automorphism} of \(\Gamma\). Then set \(\mathrm{Aut}(\Gamma)\) of all automorphisms of \(\Gamma\) becomes a finite group under composition.
 \end{definition}
 
 \begin{definition}
-If \(\mathrm{Aut}(\Gamma)\) acts transitive on \(X\), \(\Gamma\) is called \emph{vertex transitive}.
+If \(\mathrm{Aut}(\Gamma)\) acts transitive on \(X\), \(\Gamma\) is called \emph{vertex transitive}\index{vertex transitive}.
 \end{definition}
 
 \begin{example}
@@ -688,7 +688,7 @@ A Cayley graphs:
 
 \begin{definition}[Cayley Graphs]
 \protect\hypertarget{def:cayley}{}\label{def:cayley}Let \(G\) be any finite group, and \(\Delta\) any generating set for \(G\) such that \(1_G \not\in \Delta\) and \(g\in \Delta \to g^{-1}\in \Delta\).
-Then Cayley graph \(\Gamma = \Gamma(G, \Delta)\) is defined on the vetex set \(X = G\) with the edge set \(E\) define by the following.
+Then Cayley graph \(\Gamma = \Gamma(G, \Delta)\) is defined on the vetex set \(X = G\) with the edge set \(E\) define by the following. \index{Cayley graph}
 
 \[E = \{(h_1,h_2)\mid h_1, h_2\in G, h_1^{-1}h_2\in \Delta\} = \{(h, hg) \mid h\in G, g\in \Delta\}\]
 \end{definition}
@@ -789,7 +789,7 @@ How to compute the eigenvalues of the Cayley graph of and abelian group.
 Let \(G\) be any finite abelian group. Let \(\mathbb{C}^*\) be the multiplicative group on \(\mathbb{C}\setminus \{0\}\).
 
 \begin{definition}
-A (linear) \(G\)-character is any group homomorphism \(\theta: G \to \mathbb{C}^*\).
+A (linear) \(G\)-character\index{character} is any group homomorphism \(\theta: G \to \mathbb{C}^*\).
 \end{definition}
 
 \begin{example}
@@ -874,11 +874,8 @@ Claim: For
 
 We have finished a nice book.
 
-\hypertarget{index}{%
-\chapter{Index}\label{index}}
+  \bibliography{book.bib,packages.bib}
 
 \printindex
-
-  \bibliography{book.bib,packages.bib}
 
 \end{document}
