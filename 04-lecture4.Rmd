@@ -65,6 +65,16 @@ This completes the proof.
 :::{.example}
 Let $G = \langle a\mid a^6 = 1\rangle$, and $\Delta = \{a, a^{-1}\}$. Pick a primitive 6-th root of 1, $\omega$. Then 
 $$X(G) = \{\theta^i\mid 0\leq i\leq 5\} \quad \text{such that }\quad \theta(a) = \omega, \; \omega + \omega^{-1} = 1.$$
+```{r echo=FALSE, fig.width=2, fig.height=1.5, message=FALSE, fig.align="center"}
+library(tidyverse)
+df_eg41 <- data.frame(x = c(0, 1, 2, 1, 0.5, 1, 1.5, 1, 0.5, 1, 1.5, 1), y = c(0, 0, 0, 0, 1, 0, 1, 0, -1, 0, -1, 0))
+ggplot(df_eg41, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(panel.border = element_blank(),line = element_blank(),
+        text = element_blank(),
+        title = element_blank()) +
+  annotate("text", x=-0.1, y = 0.05, label = "w^3", parse = TRUE) + annotate("text", x=0.4, y = -1, label = "w^4", parse = TRUE) +
+  annotate("text", x=1.6, y = -1, label = "w^5", parse = TRUE) + annotate("text", x=2.1, y = 0, label = "1", parse = TRUE) +
+  annotate("text", x=0.4, y = 1.05, label = "w^2", parse = TRUE) + annotate("text", x=1.6, y = 1, label = "w", parse = TRUE)
+```
 $$\begin{array}{c | c | c}
 \varphi\in X(G) & \varphi(a) & \Delta_\varphi = \theta(a) + \theta(a)^{-1}\\
 \hline
