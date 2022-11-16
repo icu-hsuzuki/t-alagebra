@@ -94,19 +94,19 @@ Cayley graphs are vertex transitive, indeed.
 :::{.theorem}
 The following hold.
 
-(i). For any Cayley graph $\Gamma = \Gamma(G, \Delta)$, the map 
+| $(i)$ For any Cayley graph $\Gamma = \Gamma(G, \Delta)$, the map 
 $$G \to \mathrm{Aut}(\Gamma) \; (g\mapsto \hat{g})$$
 is an injective homomorphism of groups, where
 $$\hat{g}(x) = gx \quad \textrm{for all }\: g\in G \textrm{ and for all } x\in X (= G).$$
 Also, the image $\hat{G}$ is regular on $X$. i.e., the image $\hat{G}$ acts transitively on $X$ with trivial vertex stabilizers.
 
-(ii). For any graph $\Gamma = (X, E)$, suppose there exists a subgroup $G \subseteq \mathrm{Aut}(\Gamma)$ that is regular on $X$. Pick $x\in X$, and let 
+| $(ii)$ For any graph $\Gamma = (X, E)$, suppose there exists a subgroup $G \subseteq \mathrm{Aut}(\Gamma)$ that is regular on $X$. Pick $x\in X$, and let 
 $$\Delta = \{g\in G\mid \langle x, g(x)\in E\}.$$
 Then $1\not\in \Delta$, $g\in \Delta \to g^{-1}\in \Delta$, and $\Delta$ generates $G$. Moreover, $\Gamma \simeq \Gamma(G, \Delta)$.
 :::
 
 :::{.proof}
-(i). Let $g\in G$. We want to show that $\hat{g}\in \mathrm{Aut}(\Gamma)$. Let $h_1, h_2\in X = G$. Then,
+$(i)$ Let $g\in G$. We want to show that $\hat{g}\in \mathrm{Aut}(\Gamma)$. Let $h_1, h_2\in X = G$. Then,
 \begin{align}
 (h_1, h_2)\in E & \to h_1^{-1}h_2\in \Delta\\
   & \to (gh_1)^{-1}(gh_2)\in \Delta \\
@@ -123,7 +123,7 @@ $$\widehat{g_1} = \widehat{g_2} \to g_1 = \widehat{g_1}(1_G) = \widehat{g_2}(1_G
 
 Observe: $\hat{G}$ is regular on $X$: Clear by construction.
 
-(ii). $1_G\not\in \Delta$: Since $\Gamma$ has not loops, $(x, 1_Gx) \not\in E$.
+| $(ii)$ $1_G\not\in \Delta$: Since $\Gamma$ has not loops, $(x, 1_Gx) \not\in E$.
 
 $g\in \Delta \to g^{-1}\in \Delta$: 
 $$g\in \Delta \to (x, g(x))\in E \to E \ni (g^{-1}(x), g^{-1}(g(x))) = (g^{-1}(x), x).$$
@@ -182,7 +182,7 @@ Then $\theta_1\theta_2\in X(G)$.
 
 Observe: $X(G)$ with this product is an (abelian) group.
 
-:::{.lemma}
+:::{.lemma #charactergroup}
 The groups $G$ and $X(G)$ are isomorphic for all finite abelian groups $G$.
 :::
 

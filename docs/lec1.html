@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-15" />
+<meta name="date" content="2022-11-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -183,21 +183,19 @@ What can we say about <span class="math inline">\(\Gamma\)</span> when <span cla
 <p><span id="def:regular" class="definition"><strong>Definition 1.1  </strong></span>The graph <span class="math inline">\(\Gamma\)</span> is regular of valency <span class="math inline">\(k\)</span> if <span class="math inline">\(k = k(x)\)</span> for every <span class="math inline">\(x\in X\)</span>.</p>
 </div>
 <div class="lemma">
-<p><span id="lem:largestev" class="lemma"><strong>Lemma 1.1  </strong></span>With the above notation,<br />
-1. <span class="math inline">\(\theta_0\leq \max\{k(x) \mid x\in X\} = k^{\max}\)</span>.<br />
-2. If <span class="math inline">\(\Gamma\)</span> is regular of valency <span class="math inline">\(k\)</span>, then <span class="math inline">\(\theta_0 = k\)</span>.</p>
+<p><span id="lem:largestev" class="lemma"><strong>Lemma 1.1  </strong></span>With the above notation,</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\theta_0\leq \max\{k(x) \mid x\in X\} = k^{\max}\)</span>.<br />
+<span class="math inline">\((ii)\)</span> If <span class="math inline">\(\Gamma\)</span> is regular of valency <span class="math inline">\(k\)</span>, then <span class="math inline">\(\theta_0 = k\)</span>.</div>
 </div>
 <div class="proof">
-<ol style="list-style-type: decimal">
-<li><span id="unlabeled-div-3" class="proof"><em>Proof</em>. </span></li>
-<li>Without loss of generality we may assume that <span class="math inline">\(\theta_0&gt;0\)</span>, else done. Let <span class="math inline">\(v:=\sum_{x\in X}\alpha_x\hat{x}\)</span> denote the eivenvector for <span class="math inline">\(\theta_0\)</span>.</li>
-</ol>
+<div class="line-block"><span id="unlabeled-div-3" class="proof"><em>Proof</em>. </span><br />
+<span class="math inline">\((i)\)</span> Without loss of generality we may assume that <span class="math inline">\(\theta_0&gt;0\)</span>, else done. Let <span class="math inline">\(v:=\sum_{x\in X}\alpha_x\hat{x}\)</span> denote the eivenvector for <span class="math inline">\(\theta_0\)</span>.</div>
 <p>Pick <span class="math inline">\(x\in X\)</span> with <span class="math inline">\(|\alpha_x|\)</span> maximal. Then <span class="math inline">\(|\alpha_x|\neq 0\)</span>.</p>
 <p>Since <span class="math inline">\(Av = \theta_0v\)</span>,
 <span class="math display">\[\theta_0\alpha_x = \sum_{y\in X, xy\in E}\alpha_y.\]</span>
 So,
-<span class="math display">\[\theta_0 |\alpha_x| = |\theta_0\alpha_x| \leq \sum_{y\in X, xy\in E}|\alpha_y| \leq k(x)|\alpha_x| \leq k^{\max}|\alpha_x|.\]</span>
-2. All 1’s vector <span class="math inline">\(v = \sum_{x\in X}\hat{x}\)</span> satisfies <span class="math inline">\(Av = kv\)</span>.</p>
+<span class="math display">\[\theta_0 |\alpha_x| = |\theta_0\alpha_x| \leq \sum_{y\in X, xy\in E}|\alpha_y| \leq k(x)|\alpha_x| \leq k^{\max}|\alpha_x|.\]</span></p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> All 1’s vector <span class="math inline">\(v = \sum_{x\in X}\hat{x}\)</span> satisfies <span class="math inline">\(Av = kv\)</span>.</div>
 </div>
 <p><strong>Subconstituent Algebra</strong></p>
 <p>Let <span class="math inline">\(x, y\in X\)</span> and <span class="math inline">\(\ell \in \mathbb{Z}^{\geq 0}\)</span>.</p>
@@ -245,25 +243,21 @@ Then <span class="math inline">\(M^*(x)\)</span> is a commutative subalgebra of 
 <span class="math display">\[\langle au, v\rangle = \langle u, a^*v\rangle \quad \textrm{for all }\; a\in \mathrm{Mat}_X(K), \textrm{ and for all } \; u,v\in V.\]</span></p>
 <div class="lemma">
 <p><span id="lem:unlabeled-div-10" class="lemma"><strong>Lemma 1.2  </strong></span>Let <span class="math inline">\(\Gamma = (X,E)\)</span>, <span class="math inline">\(x\in X\)</span> and <span class="math inline">\(T \equiv T(x)\)</span> be as above.</p>
-<ol style="list-style-type: decimal">
-<li>If <span class="math inline">\(a\in T\)</span>, then <span class="math inline">\(a^*\in T\)</span>.</li>
-<li>For any <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\subset V\)</span>,
-<span class="math display">\[W^\bot := \{v\in V\mid \langle w, v\rangle = 0, \textrm{ for all }w\in W\}\]</span>
-is a <span class="math inline">\(T\)</span>-module.</li>
-<li><span class="math inline">\(V\)</span> decomposes as an orthogonal direct sum of irreducible <span class="math inline">\(T\)</span>-modules.</li>
-</ol>
+<div class="line-block"><span class="math inline">\((i)\)</span> If <span class="math inline">\(a\in T\)</span>, then <span class="math inline">\(a^*\in T\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> For any <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\subset V\)</span>,</div>
+<p><span class="math display">\[W^\bot := \{v\in V\mid \langle w, v\rangle = 0, \textrm{ for all }w\in W\}\]</span>
+is a <span class="math inline">\(T\)</span>-module.</p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(V\)</span> decomposes as an orthogonal direct sum of irreducible <span class="math inline">\(T\)</span>-modules.</div>
 </div>
 <div class="proof">
-<ol style="list-style-type: decimal">
-<li><span id="unlabeled-div-11" class="proof"><em>Proof</em>. </span></li>
-<li><p>It is becase <span class="math inline">\(T\)</span> is generated by symmetric real matrices
-<span class="math display">\[A, E^*_0(x), E^*_1(x), \ldots, E^*_{d(x)(x)}.\]</span></p></li>
-<li><p>Pick <span class="math inline">\(v\in W^\bot\)</span> and <span class="math inline">\(a\in T\)</span>, it suffices to show that <span class="math inline">\(av\in W^\bot\)</span>. For all <span class="math inline">\(w\in W\)</span>,
-<span class="math display">\[\langle w, av\rangle = \langle a^*w, v\rangle = 0\]</span>
-as <span class="math inline">\(a^*\in T\)</span>.</p></li>
-<li><p>This is proved by the induction on the dimension of <span class="math inline">\(T\)</span>-modules. If <span class="math inline">\(W\)</span> is an irreducible <span class="math inline">\(T\)</span>-module of <span class="math inline">\(V\)</span>, then
-<span class="math display">\[V = W + W^\bot \quad \textrm{(orthogonal direct sum)}.\]</span></p></li>
-</ol>
+<div class="line-block"><span id="unlabeled-div-11" class="proof"><em>Proof</em>. </span><br />
+<span class="math inline">\((i)\)</span> It is becase <span class="math inline">\(T\)</span> is generated by symmetric real matrices</div>
+<p><span class="math display">\[A, E^*_0(x), E^*_1(x), \ldots, E^*_{d(x)(x)}.\]</span></p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Pick <span class="math inline">\(v\in W^\bot\)</span> and <span class="math inline">\(a\in T\)</span>, it suffices to show that <span class="math inline">\(av\in W^\bot\)</span>. For all <span class="math inline">\(w\in W\)</span>,</div>
+<p><span class="math display">\[\langle w, av\rangle = \langle a^*w, v\rangle = 0\]</span>
+as <span class="math inline">\(a^*\in T\)</span>.</p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> This is proved by the induction on the dimension of <span class="math inline">\(T\)</span>-modules. If <span class="math inline">\(W\)</span> is an irreducible <span class="math inline">\(T\)</span>-module of <span class="math inline">\(V\)</span>, then</div>
+<p><span class="math display">\[V = W + W^\bot \quad \textrm{(orthogonal direct sum)}.\]</span></p>
 </div>
 <p><strong>Problem. </strong>
 What does the structure of the <span class="math inline">\(T(x)\)</span>-module tell us about <span class="math inline">\(\Gamma\)</span>?</p>

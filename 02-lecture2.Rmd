@@ -46,22 +46,29 @@ So $\mathrm{e}(X^+, X^+) = \mathrm{e}(X^-, X^-) = 0.$.
 :::{.theorem #pf name="Perron-Frobenius"}
 Given a matrix $C$ in $\mathrm{Mat}_n(\mathbb{R})$ such that
 
-a. $C$ is symmetric.  
-b. $C$ is irreducible.  
-c. $C_{ij} \geq 0$ for all $i,j$.
+| $(a)$ $C$ is symmetric.  
+
+| $(b)$ $C$ is irreducible.  
+
+| $(c)$ $C_{ij} \geq 0$ for all $i,j$.
+
 Let $\theta_0$ be the maximal eigenvalue of $C$ with eigenspace $V_0 \subseteq \mathbb{R}^n$, and let $\theta_r$ be the maximal eigenvalue of $C$ with eigenspace $V_r \subseteq \mathbb{R}^n$. Then the following hold.  
 
-1. Suppose $0\neq v = \begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\\\alpha_n\end{pmatrix} \in V_0$. Then $\alpha_0 > 0$ for all $i$, or $\alpha_i < 0$ for all $i$.  
-2. $\mathrm{dim}V_0 = 1$.  
-3. $\theta_r \geq -\theta_0$.  
-4. $\theta_r = \theta_0$ if and only if $C$ is bipartite.
+| $(i)$ Suppose $0\neq v = \begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\\\alpha_n\end{pmatrix} \in V_0$. Then $\alpha_0 > 0$ for all $i$, or $\alpha_i < 0$ for all $i$.  
+
+| $(ii)$ $\mathrm{dim}V_0 = 1$.  
+
+| $(iii)$ $\theta_r \geq -\theta_0$.  
+
+| $(iv)$ $\theta_r = \theta_0$ if and only if $C$ is bipartite.
 :::
 
 First, we prove the following lemma.
 
 :::{.lemma #pfl}
-Let $\langle , \rangle$ be the dot product in $V = \mathbb{R}^n$. Pick a symmetric matrix $B \in \mathrm{Mat}_n(\mathbb{R})$. Suppose all eigenvalues of $B$ are nonnegative. (i.e., $B$ is positive semidefinite.) Then there exist vectors $v_1, v_2, \ldots, v_n\in V$ such that $B_{ij} = \langle v_i, v_j\rangle$ for $(1\leq i, j \leq n)$.
+Let $\langle \;,\; \rangle$ be the dot product in $V = \mathbb{R}^n$. Pick a symmetric matrix $B \in \mathrm{Mat}_n(\mathbb{R})$. Suppose all eigenvalues of $B$ are nonnegative. (i.e., $B$ is positive semidefinite.) Then there exist vectors $v_1, v_2, \ldots, v_n\in V$ such that $B_{ij} = \langle v_i, v_j\rangle$ for $(1\leq i, j \leq n)$.
 :::
+
 :::{.proof}
 By elementary linear algebra, there exists an orthonormal basis $w_1, w_2, \ldots, w_n$ of $V$ consisting of eigenvectors of $B$. Set the $i$-th column of $P$ is $w_i$ and $D = \mathrm{diag}(\theta_1,\ldots, \theta_n)$. Then $P^\top P = I$ and $BP = PD$.
 
@@ -71,11 +78,13 @@ where
 $$Q = P\cdot \mathrm{diag}(\sqrt{\theta_1}, \sqrt{\theta_2}, \ldots, \sqrt{\theta_n}) \in \mathrm{Mat}_n(\mathbb{R}).$$
 Now, let $v_i$ be the $i$-th column of $Q^\top$. Then
 $$B_{ij} = v_i^\top\cdot v_j^- = \langle v_i, v_j\rangle.$$
+:::
+
 Now we start the proof of Theorem \@ref(thm:pf).
 
-_Proof of Theorem \@ref(thm:pf)_
+_Proof of Theorem \@ref(thm:pf)_$(i)$
 
-1. Let $\langle , \rangle$ denote the dot product on $V = \mathbb{R}^n$. Set
+Let $\langle , \rangle$ denote the dot product on $V = \mathbb{R}^n$. Set
 \begin{align}
 B & = \theta I - C\\
   & = \textrm{symmetric matrix with eigenvalues }\theta_0 - \theta_i \geq 0\\
@@ -121,7 +130,7 @@ Since $C$ is symmetric,
 $$C = \begin{pmatrix} \ast & O \\ O & \ast\end{pmatrix}$$
 Thus $C$ is reducible, which is not the case. Hence $s = n$.
 
-_Proof of Theorem \@ref(thm:pf) 2._
+_Proof of Theorem \@ref(thm:pf) $(ii)$._
 
 Suppose $\dim V_0 \geq 2$. Then,
 $$\dim\left(V_0 \cap \begin{pmatrix}1\\0\\\vdots\\0\end{pmatrix}^\bot\right) \geq 1.$$
@@ -132,7 +141,7 @@ with $\alpha_1 = 0$. This contradicts 1.
 Now pick
 $$0\neq w = \begin{pmatrix}\beta_1\\\vdots\\\beta_n\end{pmatrix} \in V_r.$$
 
-_Proof of Theorem \@ref(thm:pf) 3._
+_Proof of Theorem \@ref(thm:pf) $(iii)$._
 
 Suppose $\theta_r < -\theta_0$. Since the eigenvalues of $C^2$ are the squares of those of $C$, $\theta_r^2$ is the maximal eigenvalue of $C^2$.
 
@@ -143,7 +152,7 @@ Therefore, $\beta_i > 0$ for all $i$ or $\beta_i < 0$ for all $i$. We have
 $$\langle v, w\rangle = \sum_{i=1}^n\alpha_i\beta_j \neq 0.$$
 This is a contradiction, as $V_0 \bot V_r$.
 
-_Proof of Theorem \@ref(thm:pf) 4._
+_Proof of Theorem \@ref(thm:pf) $(iv)$_
 
 $\Rightarrow$: Let $\theta_r = -\theta_0$. Then $\theta = \theta_1^2 = \theta_0^2$ is the maximal eigenvalue of $C^2$, and $v$ and $w$ are linearly independent eigenvalues for  $\theta$ for $C^2$. Hence, for $C^2$, $\mathrm{mult}(\theta) \geq 2$.
 
