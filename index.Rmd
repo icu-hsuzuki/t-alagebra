@@ -47,8 +47,10 @@ For `bookdown` See [@xie2015], [@xie2017], [@xie2018].
 
 ## Another Host {-}
 
-1. library(usethis)
-2. use_git()
-3. create_github_token()
-4. gitcreds::gitcreds_set(): Replace these credentials
+1. create a project by version control git
+2. git init
+3. git remote add origin git@github.com:<account>/<repository>.git
+4. git branch -r
+5. git fetch
+6. git pull origin main
 
