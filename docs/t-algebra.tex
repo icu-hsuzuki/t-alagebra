@@ -241,13 +241,17 @@ For \texttt{bookdown} See \citep{xie2015}, \citep{xie2017}, \citep{xie2018}.
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  library(usethis)
+  create a project by version control git
 \item
-  use\_git()
+  git init
 \item
-  create\_github\_token()
+  git remote add origin \href{mailto:git@github.com}{\nolinkurl{git@github.com}}:/.git
 \item
-  gitcreds::gitcreds\_set(): Replace these credentials
+  git branch -r
+\item
+  git fetch
+\item
+  git pull origin main
 \end{enumerate}
 
 \hypertarget{lec1}{%
@@ -1301,12 +1305,30 @@ This completes the proof of \((i)\) and \((ii)\).
 
 \textbf{Monday, February 1, 1993}
 
-\textbf{Proof of Theorem \ref{thm:hd2-modules} Continued}
+\begin{proof}[Proof of Theorem \ref{thm:hd2-modules} Continued]
 
-\[\begin{pmatrix} D_1t&-a_{12}t_2&\dots&-a_{1n}t_n\\
--a_{21}t_1&D_2t&\dots&-a_{2n}t_n\\
-\hdotsfor[2]{4}\\
--a_{n1}t_1&-a_{n2}t_2&\dots&D_nt\end{pmatrix}\]
+\((iii)\) Let \(r = r'\),
+
+\(w_0,\ldots, w_d\): a basis for \(W\) with \(w_i\in E^*_iW\), and
+
+\(w_0', \ldots, w_d'\): a basis for \(W'\) with \(w_i'\in E^*_iW'\).
+
+Then \(d = D-2r = D-2r' = d'\), and
+\[\sigma: W \to W' \quad (w_i\mapsto w_i')\]
+is an isomorsphism of \(T\)-modules by \((i)\).
+
+If \(r\neq r'\), then
+\[d = D-2r \neq D-2r' = d',\]
+hence, \(\dim W \neq \dim W'\).
+
+\((iv)\) Let \(W_i\) be the irreducible \(T\)-module with endpoint \(i\). Then
+
+\[\dim E_r^*V = \binom{D}{r} = \sum_{i=0}^r \mathrm{mult}(W_i).\]
+Hence, we have that
+\[\mathrm{mult}(W_r) = \binom{D}{r} - \binom{D}{r-1}\]
+by induction on \(r\).
+
+\end{proof}
 
   \bibliography{book.bib,packages.bib}
 
