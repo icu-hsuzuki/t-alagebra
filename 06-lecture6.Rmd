@@ -1,3 +1,9 @@
-`r if (knitr:::is_html_output()) '
-# References {-}
-'`
+# $T$-Modules of $H(D,2)$, II {#lec6}
+**Monday, February 1, 1993**
+
+**Proof of Theorem \@ref(hd2-modules) Continued**
+
+| $(iii)$ Let $r = r'$
+<!-- `r if (knitr:::is_html_output()) ' -->
+<!-- # References {-} -->
+<!-- '` -->

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 \(T\)-Modules of \(H(D,2)\), I | Lecture Note on Terwilliger Algebra</title>
+  <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 \(T\)-Modules of \(H(D,2)\), I | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 \(T\)-Modules of \(H(D,2)\), I | Lecture Note on Terwilliger Algebra" />
+  
+  <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
+
+
+<meta name="date" content="2022-11-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="lec4.html"/>
+<link rel="next" href="lec6.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Lecture Note on Terwilliger Algebra</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#setting"><i class="fa fa-check"></i>Setting</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Subconstituent Algebra of a Graph</a></li>
+<li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
+<li class="chapter" data-level="3" data-path="lec3.html"><a href="lec3.html"><i class="fa fa-check"></i><b>3</b> Cayley Graphs</a></li>
+<li class="chapter" data-level="4" data-path="lec4.html"><a href="lec4.html"><i class="fa fa-check"></i><b>4</b> Examples</a></li>
+<li class="chapter" data-level="5" data-path="lec5.html"><a href="lec5.html"><i class="fa fa-check"></i><b>5</b> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, I</a></li>
+<li class="chapter" data-level="6" data-path="lec6.html"><a href="lec6.html"><i class="fa fa-check"></i><b>6</b> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, II</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Lecture Note on Terwilliger Algebra</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lec5" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, I<a href="lec5.html#lec5" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Friday, January 29, 1993</strong></p>
+<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be a graph, <span class="math inline">\(A\)</span> the adjacency matrix, and <span class="math inline">\(V\)</span> the standard module over <span class="math inline">\(K = \mathbb{C}\)</span>.</p>
+<p>Fix a base <span class="math inline">\(x\in X\)</span> and write <span class="math inline">\(E_I^* \equiv E_i^*(x)\)</span>, and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
+<p>Let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r:= \min\{i\mid E_i^*W \neq 0\}\)</span> and diameter <span class="math inline">\(d:=|\{i\mid E_i^*W\neq 0\}|-1\)</span>.</p>
+<p>We have
+<span class="math display">\[\begin{align}
+E_i^*W &amp; \neq 0 &amp; r\leq i \leq r+d\\
+&amp; = 0 &amp; 0 \leq i &lt; r \;\text{ or }\; r+d &lt; i \leq d(x).
+\end{align}\]</span></p>
+<p>Claim: <span class="math inline">\(E_i^*AE_j^*W \neq 0\)</span> if $-j| = 1 for <span class="math inline">\(r\leq i,j\leq r+d\)</span>. (See Lemma <a href="lec4.html#lem:irreducible">4.1</a>.)</p>
+<p>Suppose <span class="math inline">\(E_{j+1}^*AE_j^*W = 0\)</span> for some <span class="math inline">\(j\)</span> with <span class="math inline">\(r \leq j &lt; r+d\)</span>.</p>
+<p>Observe that
+<span class="math display">\[\tilde{W} = E^*_rW + \cdot E^*_jW\]</span>
+is <span class="math inline">\(T\)</span>-invariant with
+<span class="math display">\[0 \subsetneq \tilde{W} \subsetneq W.\]</span>
+Becase <span class="math inline">\(A\tilde{W} \subseteq \tilde{W}\)</span> since <span class="math inline">\(AE_j^*W \subseteq E^*_{j-1}W + E^*_jW\)</span>,
+<span class="math display">\[E_k^*\tilde{W} \subseteq \tilde{W} \quad\text{for all }\; k,\]</span>
+we have <span class="math inline">\(T\tilde{W} \subseteq{W}\)</span>.</p>
+<p>Suppose <span class="math inline">\(E_{i-1}^*AE_i^*W = 0\)</span> for some <span class="math inline">\(i\)</span> with <span class="math inline">\(r \leq i &lt; r+d\)</span>.</p>
+<p>Similarly,
+<span class="math display">\[\tilde{W} = E^*_iW + \cdot E^*_{r+d}.W\]</span>
+is a <span class="math inline">\(T\)</span>-module with <span class="math inline">\(0\subsetneq \tilde{W} \subsetneq W\)</span>.</p>
+<div class="definition">
+<p><span id="def:isomorphic-modules" class="definition"><strong>Definition 5.1  </strong></span>Let <span class="math inline">\(\Gamma\)</span>, <span class="math inline">\(E^*_i\)</span>, and <span class="math inline">\(T\)</span> be as above. Irreducible <span class="math inline">\(T\)</span>-modules <span class="math inline">\(W\)</span> and <span class="math inline">\(W&#39;\)</span> are isomorphic whenever there is an isomorphism <span class="math inline">\(\sigma: W \to W&#39;\)</span> of vector spaces such that <span class="math inline">\(a\sigma = \sigma a\)</span> for all <span class="math inline">\(a\in T\)</span>.</p>
+</div>
+<p>Recall that the standard module <span class="math inline">\(V\)</span> is an orthogonal direct sum of irreducible <span class="math inline">\(T\)</span>-modules <span class="math inline">\(W_1 \oplus W_2 \oplus \cdots\)</span>. Given <span class="math inline">\(W\)</span> in this list, the multiplicity of <span class="math inline">\(W\)</span> in <span class="math inline">\(V\)</span> is
+<span class="math display">\[|\{j \mid W_j \simeq W\}|.\]</span></p>
+<div class="remark">
+<p><span id="unlabeled-div-40" class="remark"><em>Remark</em>. </span>It is known that the multiplicity does not depend on the decomposition.</p>
+</div>
+<p>Now assume that <span class="math inline">\(\Gamma\)</span> is the <span class="math inline">\(D\)</span>-cube, <span class="math inline">\(H(D,2)\)</span> with <span class="math inline">\(D\geq 1\)</span>. Vew
+<span class="math display">\[\begin{align}
+X &amp; = \{a_1\cdots a_D\mid a_i\in \{1, -1\}, 1\leq i\leq D\},\\
+E &amp; = \{xy\mid x, y\in X, \; x, y \;\text{ differ in exactly 1 coordinate.}\}.
+\end{align}\]</span>
+Find <span class="math inline">\(T\)</span>-modules.</p>
+<p>Claim: <span class="math inline">\(H(D,2)\)</span> is bipartite with a partition <span class="math inline">\(X = X^+ \cup X^-\)</span>, where
+<span class="math display">\[\begin{align}
+X^+ &amp; = \{a_1\cdots a_D\in X\mid \prod a_i &gt; 0\}\\
+X^- &amp; = \{a_1\cdots a_D \in X \mid \prod a_i &lt; 0\}
+\end{align}\]</span></p>
+<p>Observe: for all <span class="math inline">\(y, z\in X\)</span>,
+<span class="math display">\[\partial(y,z) = i \Leftrightarrow y, z \; \text{ differ in exactly in }\; i\; \text{ coorinates with }\; 0\leq i\leq D.\]</span>
+Here, the diameter of <span class="math inline">\(H(D, 2) = D = d\)</span> for all <span class="math inline">\(x\in X\)</span>.</p>
+<div class="theorem">
+<p><span id="thm:hd2-modules" class="theorem"><strong>Theorem 5.1  </strong></span>Let <span class="math inline">\(\Gamma = H(D,2)\)</span> be as above. Fix <span class="math inline">\(x\in X\)</span>, and write <span class="math inline">\(E_i^* = E^*_i(x)\)</span>, and <span class="math inline">\(T = T(x)\)</span>.</p>
+<p>Let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r\)</span>, and diameter <span class="math inline">\(d\)</span> with <span class="math inline">\(0\leq r \leq r+d\leq D\)</span>.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(W\)</span> has a basis <span class="math inline">\(w_0, w_1, \ldots, w_d\)</span> with <span class="math inline">\(w_i\in E^*_{i+r}W\)</span> for <span class="math inline">\(0\leq i\leq d\)</span>. With respect to which the matrix representing <span class="math inline">\(A\)</span> is</div>
+<p><span class="math display">\[
+\begin{pmatrix}
+0 &amp; d &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; d-1 &amp; \cdots &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 3 &amp; \cdots &amp; 0 &amp; 0 &amp; 0\\
+\cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 2 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; d-1 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; d &amp; 0
+\end{pmatrix}
+\]</span></p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> $ d= D - 2r$. In particular, <span class="math inline">\(0\leq r\leq D/2\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> Let <span class="math inline">\(W&#39;\)</span> denote an irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r&#39;\)</span>. Then <span class="math inline">\(W\)</span> and <span class="math inline">\(W&#39;\)</span> are isormorphic as <span class="math inline">\(T\)</span>-modules if and only if <span class="math inline">\(r = r&#39;\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> The multiplicity of the irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r\)</span> is</div>
+<p><span class="math display">\[\binom{D}{r} - \binom{D}{r-1} \quad \text{if } 1\leq r \leq R/2,\]</span>
+and <span class="math inline">\(1\)</span> if <span class="math inline">\(r = 0\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-42" class="proof"><em>Proof</em>. </span>Recall that <span class="math inline">\(\Gamma\)</span> is vertex transitive. It is a Cayley graph.</p>
+<p>Hence without loss of generality, we may assume that
+<span class="math inline">\(x = \overbrace{11\cdots 1}^{D}\)</span>.</p>
+<p>Notation: Set <span class="math inline">\(\Omega = \{1, 2, \ldots, D\}\)</span>. For every subset <span class="math inline">\(S \subseteq \Omega\)</span>, let
+<span class="math display">\[\hat{S} = a_1\cdot a_d \in X \quad a_i = \begin{cases} -1 &amp; \text{if }\; i\in S\\ 1 &amp; \text{if } i\not\in S.\end{cases}\]</span>
+In particular, <span class="math inline">\(\hat{emptyset} = x\)</span> and
+<span class="math display">\[|S| = i \Leftrightarrow \partial(x, \hat{S}) = i \Leftrightarrow \hat{S}\in E^*_iV.\]</span>
+For all <span class="math inline">\(S, T\subseteq \Omega\)</span>, we say <span class="math inline">\(S\)</span> covers T$ if and only if <span class="math inline">\(S\supseteq T\)</span> and <span class="math inline">\(|S| = |T| +1\)</span>.</p>
+<p>Observe that <span class="math inline">\(\hat{S}, \hat{T}\)</span> are adjacent in <span class="math inline">\(\Gamma\)</span> if and only if either <span class="math inline">\(T\)</span> coverse <span class="math inline">\(S\)</span> or <span class="math inline">\(S\)</span> coverr <span class="math inline">\(T\)</span>.</p>
+<p>Define the ‘raising matrix’
+<span class="math display">\[R = \sum_{i=0}^D E^*_{i+1}AE^*_i.\]</span></p>
+<p>Observe that
+<span class="math display">\[RE_i^*V \subseteq E^*_{i+1}V \; \text{ for }\; 0\leq i \leq D, \; \text{ and }E^*_{D+1}V = 0.\]</span>
+Indeed for any <span class="math inline">\(S\subseteq \Omega\)</span> with <span class="math inline">\(|S| = i\)</span>,
+<span class="math display">\[\begin{align}
+R\hat{S} &amp; = RE^*_i\hat{S} \\
+&amp; = E^*_{i+1}A\hat{S} \\
+&amp; = \sum_{T_1 \subseteq \Omega, S \text{ covers }T_1} E^*_{i+1}\widehat{T_1} + \sum_{T \subseteq \Omega, T \text{ covers }S} E^*_{i+1}\hat{T}\\
+&amp; = \sum_{T \subseteq \Omega, T \text{ covers }S} E^*_{i+1}\hat{T}.
+\end{align}\]</span></p>
+<p>Define the ‘lowering matrix’
+<span class="math display">\[L = \sum_{i=0}^D E^*_{i-1}AE^*_i.\]</span></p>
+<p>Observe that
+<span class="math display">\[LE_i^*V \subseteq E^*_{i-1V} \; \text{ for }\; 0\leq i \leq D, \; \text{ and }E^*_{-1}V = 0.\]</span>
+Indeed for any <span class="math inline">\(S\subseteq \Omega\)</span>,
+<span class="math display">\[L\hat{S} = \sum_{T\subseteq \Omega, S \text{ covers }T} \hat{T}.\]</span></p>
+<p>Observe that <span class="math inline">\(A = L + R\)</span>.</p>
+<p>For convenience, set
+<span class="math display">\[A^* = \sum_{i=0}^D (D-2i)E_i^*.\]</span></p>
+<p>Claim: The following hold.</p>
+<div class="line-block"><span class="math inline">\((a)\)</span> <span class="math inline">\(LR - RL = A^*\)</span>.<br />
+<span class="math inline">\((b)\)</span> <span class="math inline">\(A*L - LA^* = 2L\)</span>.<br />
+<span class="math inline">\((c)\)</span> <span class="math inline">\(A^*R - RA^* = -2R\)</span>.</div>
+<p>In particular <span class="math inline">\(\mathrm{Span}(R,L, A^*)\)</span> is a ’representation of Lie algebra <span class="math inline">\(\mathrm{sl}_2(\mathbb{C})\)</span>.</p>
+<div class="remark">
+<p><span id="unlabeled-div-41" class="remark"><em>Remark</em> (Lie Algebra sl2(C)). </span><span class="math display">\[\mathrm{sl}_2(\mathbb{C}) = \{X\mid \mathrm{Mat}(\mathbb{C} \mid \mathrm{tr}(X) = 0\}.\]</span>
+For <span class="math inline">\(X, Y\in \mathrm{sl}_2(\mathbb{C})\)</span>, define a binary operation <span class="math inline">\([X, Y] = XY - YX\)</span>.
+<span class="math display">\[A^*\sim \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1\end{pmatrix}, \quad L\sim \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0\end{pmatrix}, \quad R\sim \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0\end{pmatrix}.\]</span>
+Then these satisfy the relations <span class="math inline">\((a)\)</span> - <span class="math inline">\((c)\)</span> above.</p>
+</div>
+<p><em>Proof of Claim.</em>
+Apply both sides to <span class="math inline">\(\hat{S}\)</span> <span class="math inline">\((S\subseteq \Omega)\)</span>. Say <span class="math inline">\(|S| = i\)</span>.</p>
+<p><em>Proof of <span class="math inline">\((a)\)</span>:</em>
+<span class="math display">\[\begin{align}
+(LR - RL)\hat{S} &amp; = L\left(\sum_{\substack{T \subseteq \Omega, T \text{ covers }S\\(D-i \text{ of them})}}\hat{T}\right) - R \left(\sum_{\substack{U \subseteq \Omega, S \text{ covers }U\\(i \text{ of them})}}\hat{T}\right)\\
+&amp; = (D-i)\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V} - \left(i\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V}\right)\\
+&amp; = (D-2i)\hat{S}\\
+&amp; = A^*\hat{S}.
+\end{align}\]</span></p>
+<p><em>Proof of <span class="math inline">\((b)\)</span>:</em>
+<span class="math display">\[\begin{align}
+(A^*L - LA^*)\hat{S} &amp; = (D-2(i-1))L\hat{S} - (D-2i)L\hat{S} \quad (\text{since} \; L\hat{S}\in E^*_{i-1}V)\\
+&amp; = 2L\hat{S}.
+\end{align}\]</span></p>
+<p><em>Proof of <span class="math inline">\((c)\)</span>:</em>
+<span class="math display">\[\begin{align}
+(A^*R - RA^*)\hat{S} &amp; = (D-2(i+1))R\hat{S} - (D-2i)R\hat{S} \quad (\text{since} \; R\hat{S}\in E^*_{i+1}V)\\
+&amp; = 2R\hat{S}.
+\end{align}\]</span></p>
+<p>Let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r\)</span> and diameter <span class="math inline">\(d\)</span> <span class="math inline">\((0\leq r \leq r+d \leq D)\)</span>.</p>
+<p><em>Proof of <span class="math inline">\((i)\)</span> and <span class="math inline">\((ii)\)</span>:</em></p>
+<p>Pick <span class="math inline">\(0\neq w \in E^*_rW\)</span>.</p>
+<p>Claim: <span class="math inline">\(LRw = (D-2r)w\)</span>.</p>
+<p><em>Pf.</em>
+<span class="math display">\[\begin{align}
+LRw &amp; = (A^*+RL)w \quad (\text{by Claim }(a))\\
+&amp; = A^*w \quad (Lw \in E^*_{r-1}W = 0)\\
+(D-2r)w.
+\end{align}\]</span>
+Define
+<span class="math display">\[w_i = \frac{1}{i!}R^iw \in E^*_{r+i}W \quad (0\leq i \leq d).\]</span>
+Then,
+<span class="math display">\[\begin{align}
+Rw_i &amp; = (i+1)w_{i+1}\quad (0\leq i \leq d)\\
+Rw_d &amp; = 0 \quad (\text{by definition of }d)
+\end{align}\]</span></p>
+<p>Claim: <span class="math inline">\(Lw_0 = 0\)</span> and
+<span class="math display">\[Lw_i = (D-2r-i+1)w_{i-1} \quad (1\leq i\leq d).\]</span></p>
+<p><em>Pf.</em> We prove by induction on <span class="math inline">\(i\)</span>.
+The case <span class="math inline">\(i=0\)</span> is trivial, and the case <span class="math inline">\(i=1\)</span> follows from above claim.
+Let <span class="math inline">\(i\geq 2\)</span>,
+<span class="math display">\[\begin{align}
+Lw_i &amp; = \frac{1}{i}LRw_{i-1} = \frac{1}{i}(A^*+RL)w_{i-1} \quad (\text{by Claim (a)})\\
+&amp; \quad \text{(by induction hypothesis)}\\
+&amp; = \frac{1}{i}((D-2(r+i-1))w_{i-1} + (D-2r-(i-1)+1)Rw_{i-2} \quad (Rw_{i-2} = (i-1)w_{i-1})\\
+&amp; = \frac{1}{i}i(D-2r-i+1)w_{i-1}\\
+&amp; = (D-2r-i+1)w_{i-1}.
+\end{align}\]</span></p>
+<p>Claim: <span class="math inline">\(w_0, \ldots, w_d\)</span> is a basis for <span class="math inline">\(W\)</span>.</p>
+<p><em>Pf.</em>
+Let <span class="math inline">\(W&#39; = \mathrm{Span}\{w_0, \ldots, w_d\}\)</span>. Then <span class="math inline">\(W&#39;\)</span> is <span class="math inline">\(R\)</span> and <span class="math inline">\(L\)</span> invariant. So it is <span class="math inline">\(A = R+L\)</span> invariant.</p>
+<p>Also it is <span class="math inline">\(E^*_i\)</span>-invariant for every <span class="math inline">\(i\)</span>.</p>
+<p>Hence <span class="math inline">\(W&#39;\)</span> is a <span class="math inline">\(T\)</span>-module.</p>
+<p>Since <span class="math inline">\(W\)</span> is irreducible, <span class="math inline">\(W&#39; = W\)</span>.</p>
+<p>As <span class="math inline">\(w_i\)</span>’s are orthogonal, theyy are linearly independent. Note that <span class="math inline">\(w_i\neq 0\)</span> by the definition of <span class="math inline">\(d\)</span> and Lemma <a href="lec4.html#lem:irreducible">4.1</a> <span class="math inline">\((iv)\)</span>.</p>
+<p>Claim: <span class="math inline">\(d = D-2r\)</span>.</p>
+<p><em>Pf.</em>
+By <span class="math inline">\((a)\)</span>,
+<span class="math display">\[\begin{align}
+0 &amp; = (LR - RL - A^*)w_d \\
+&amp; = 0 - (D-2r-d+1)Rw_{d-1} - (D-2(r+d))w_d\\
+&amp; = -d(D-2r-d+1)w_d - (D-2(r+d))w_d\\
+&amp; = (-dD + 2rd + d^2 - d - D + 2r + 2d)w_d\\
+&amp; = (d^2 + (2r-D+1)d + 2r - D)w_d\\
+&amp; = (d+2r-D)(d+1)w_d.
+\end{align}\]</span>
+Hence <span class="math inline">\(d = D-2r\)</span>.</p>
+<p>Therefore, with respect to a bais <span class="math inline">\(w_0, w_1, \ldots, w_d\)</span>,
+<span class="math inline">\(A = L+R\)</span>, <span class="math inline">\(w_{-1} = w_{d+1} = 0\)</span>,
+<span class="math display">\[Lw_i = (d-i+1)w_{i-1}, \quad Rw_i = (i+1)w_{i+1}.\]</span>
+<span class="math display">\[L = \begin{pmatrix} 0 &amp; d &amp; 0 &amp; \cdots &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; d-1 &amp; \cdots &amp; 0 &amp; 0\\
+&amp; &amp; \cdots &amp; \cdots &amp; &amp; \\
+&amp; &amp; &amp; &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0
+\end{pmatrix}, \qquad
+R = \begin{pmatrix} 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 0 &amp; \cdots &amp; &amp; \\
+&amp; &amp; &amp; &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; d &amp; 0
+\end{pmatrix}.\]</span>
+This completes the proof of <span class="math inline">\((i)\)</span> and <span class="math inline">\((ii)\)</span>.</p>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lec4.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lec6.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-lecture5.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/icu-hsuzuki/t-algebra/master/05-lecture5.Rmd",
+"text": null
+},
+"download": ["t-algebra.pdf", "t-algebra.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-16" />
+<meta name="date" content="2022-11-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="lec3.html"/>
-<link rel="next" href="final-words.html"/>
+<link rel="next" href="lec5.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -103,8 +103,8 @@ div.csl-indent {
 <li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
 <li class="chapter" data-level="3" data-path="lec3.html"><a href="lec3.html"><i class="fa fa-check"></i><b>3</b> Cayley Graphs</a></li>
 <li class="chapter" data-level="4" data-path="lec4.html"><a href="lec4.html"><i class="fa fa-check"></i><b>4</b> Examples</a></li>
-<li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="5" data-path="lec5.html"><a href="lec5.html"><i class="fa fa-check"></i><b>5</b> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, I</a></li>
+<li class="chapter" data-level="6" data-path="lec6.html"><a href="lec6.html"><i class="fa fa-check"></i><b>6</b> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, II</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -127,6 +127,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="lec4" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Examples<a href="lec4.html#lec4" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Wednesday, January 27, 1993</strong></p>
 <div class="theorem">
 <p><span id="thm:unlabeled-div-33" class="theorem"><strong>Theorem 4.1  </strong></span>Given a Cayley graph <span class="math inline">\(\Gamma = \Gamma(G, \Delta)\)</span>. View the standard module <span class="math inline">\(V \equiv \mathbb{C}G\)</span> (the group algebra), so
 <span class="math display">\[\left\langle \sum_{g\in G}\alpha_g g, \;\sum_{g\in G}\beta_g g\right\rangle = \sum_{g\in G}\alpha_g\overline{\beta_g}, \quad \textrm{with}\; \alpha_g, \beta_g\in \mathbb{C}.\]</span>
@@ -224,14 +225,14 @@ The diameter <span class="math inline">\(d = d(W)\)</span> satisfied
 <span class="math display">\[d = |\{i\mid E_i^*W \neq 0\}| - 1.\]</span></p>
 </div>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-39" class="lemma"><strong>Lemma 4.1  </strong></span>With the above notation, let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module. Then</p>
+<p><span id="lem:irreducible" class="lemma"><strong>Lemma 4.1  </strong></span>With the above notation, let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module. Then</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E_i^*AE_j^* = 0 \; \text{ if }\; |i-j|=1, \quad \neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d(x)\)</span>.<br />
 <span class="math inline">\((ii)\)</span> <span class="math inline">\(AE_j^*W \subseteq E_{j-1}^*W + E_j^*W + E^*_{j+1}W\)</span>, <span class="math inline">\(0\leq j \leq d(x)\)</span>. <span class="math inline">\((E_i^*W = 0 \; \text{ if } i&lt;j\)</span> or <span class="math inline">\(i &gt; d(x)\)</span>.)<br />
 <span class="math inline">\((iii)\)</span> <span class="math inline">\(E^*_jW \neq 0\)</span> if <span class="math inline">\(r\leq j \leq r+d\)</span>, <span class="math inline">\(=0\)</span> if <span class="math inline">\(0\leq j\leq r\)</span> or <span class="math inline">\(r+d &lt; j \leq d(x)\)</span>.<br />
 <span class="math inline">\((iv)\)</span> <span class="math inline">\(E_i^*AE^*_jW \neq 0\)</span>, if <span class="math inline">\(|i-j| = 1\)</span> <span class="math inline">\((r \leq i,j \leq r+d)\)</span>.</div>
 </div>
 <div class="proof">
-<div class="line-block"><span id="unlabeled-div-40" class="proof"><em>Proof</em>. </span><br />
+<div class="line-block"><span id="unlabeled-div-39" class="proof"><em>Proof</em>. </span><br />
 <span class="math inline">\((i)\)</span> Pick <span class="math inline">\(y\in X\)</span> with <span class="math inline">\(\partial(x,y) = j\)</span>. We want to find <span class="math inline">\(E_i^*AE^*_j \hat{y}\)</span>. Note,</div>
 <p><span class="math display">\[E_j^*\hat{y} = \begin{cases} 0 &amp; \text{if }\; \partial(x.y)\neq j\\
 \hat{y} &amp; \text{if }\; \partial(x,y) = j.\end{cases}.\]</span>
@@ -263,7 +264,7 @@ Also <span class="math inline">\(A\tilde{W} \subseteq \tilde{W}\)</span> by <spa
         </div>
       </div>
 <a href="lec3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="final-words.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
