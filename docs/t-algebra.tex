@@ -1336,6 +1336,239 @@ by induction on \(r\).
 
 \end{proof}
 
+\begin{theorem}
+\protect\hypertarget{thm:hd2-modules2}{}\label{thm:hd2-modules2}Let \(\Gamma = H(D,2)\) with \(D\geq 1\). Fix a vertex \(x\in X\) and write
+\[E^*_i \equiv E^*_i(x), \quad T = T(x), and A^* \equiv \sum_{i=0}^D(D-2i)E^*_i.\]
+Let \(W\) be an irreducible \(T\)-module with endpoint \(r\) with \(0\leq r\leq D/2\). Then,
+
+\((i)\) \(W\) has a basis
+
+\[w_0^*, w_1^*, \ldots, w_d^* \quad(d = D-2r), \; \text{ such that }\; w_i^*\in E_{i+r}W\; (0\leq i \leq d)\]
+with respect to which the matrix corresponding to \(A^*\) is
+\[\begin{pmatrix} 
+0 & d & 0   &  & & &  \\
+1 & 0 & d-1 &  & & & \\
+0 & 2 & 0   &  & & & \\
+  &   & \ddots    & \ddots & \ddots &  & \\
+  &   &                   & & 0 & 2 & 0 \\
+  &   &      & & d-1 & 0 & 1\\
+  &   &      & & 0 & d & 0
+\end{pmatrix}.\]
+In particular,
+\textbar{} \((ii)\) \(E_iA^*E_j = 0\) if \(|i-j|\neq 1\) for \(0 \leq i, j\leq D\).
+\end{theorem}
+
+\begin{proof}
+We use the notation,
+\[[\alpha, \beta] = \alpha\beta - \beta\alpha \; (=-[\beta, \alpha]).\]
+
+Recall that
+
+\((a)\) \([L, R] = A^*\),\\
+\((b)\) \([A^*, L] = wL\),\\
+\((c)\) \([A^*, R] = -2R\),
+
+and \(A = L + R\).
+
+Write \((a) - (c)\) in terms of \(A\) and \(A^*\), we have,
+\[[A, A^*] = [L, A^*]+ [R, A^*] = 2(R-L).\]
+\[\begin{cases} R + L & = A\\
+R-L & = [A,A^*]/2. \end{cases}.\]
+Hence,
+\begin{align}
+R & = \frac{1}{4}(2A + [A, A^*]) \quad \text{ and }\\
+L & = \frac{1}{4}(2A - [A, A^*]).
+\end{align}
+
+Now \((a)\), \((b)\) become
+\begin{align}
+A^2A^* - 2AA^*A + A^*A^2 - 4A^*  & = 0  \label{eq:6-1}\\
+{A^*}^2A - 2A^*AA^* + A{A^*}^2 - 4A  & = 0 \label{eq:6-2}
+\end{align}
+\emph{Pf.} \quad By \((b)\),
+\begin{align}
+2A - AA^* + A^*A & = 4L\\
+& = 2[A^*, L]\\
+& = A^* \frac{2A - [A,A^*]}{2} - \frac{2A - [A, A^*]}{2}A^*
+\end{align}
+So we have (\textbackslash2\label{eq:6-2})
+\[
+{A^*}^2A - 2A^*AA^* + A{A^*}^2 - 4A   = 0.
+\]
+
+By \((a)\),
+\begin{align}
+-16A^* & = [2A + [A, A^*], 2A - [A, A^*]]\\
+& (2A + [A, A^*])(2A - [A, A^*]) - (2A - [A,A^*])(2A + [A, A^*])\\
+& = [4A^2 - 2A[A, A^*] + [A, A^*](2A) - [A,A^*]^2\\
+& \quad - 4A^2 - 2A[A, A^*] + [A, A^*](2A) + [A, A^*]^2\\
+& = -4A^2A^* + 4AA^*A + 4AA^*A - 4A^*A^2.
+\end{align}
+So,
+\[A^2A^* - 2AA^*A + A^*A^2 - 4A^* = 0.\]
+
+Claim: \(E_i^*A^*E_j = 0\) if \(|i-j| \neq 1\) for \(0\leq i, j\leq D\).
+
+\emph{Pf.} We have,
+\begin{align}
+0 & = E_i(A^2A^* - 2AA^*A + A^*A^2 - 4A^*)E_j\\
+& = E_iA^*E_j(\theta_i^2 - 2\theta_i\theta_j + \theta_j^2 - 4)\\
+& \quad (AE_j = \theta_jE_j, \; E_iA = (AE_j)^\top = (\theta_iE_i)^\top = \theta_iE_i)\\
+& = E_iA^*E_j(\theta_i - \theta_j -2)(\theta_i - \theta_j + 2)\\
+& = E_iA^*E_j(D-2i - (D-2j)-2)(D-2i - (D-2j) + 2)\\
+& \quad (\theta_k = D-2k)\\
+& = E_iA^*E_j \cdot 4(i-j+1)(i-j-1)
+\end{align}
+and \(i-j+1 \neq 0\), \(i-j-1\neq 0\).
+Hence, \(E_i^*A^*E_j = 0\).
+
+Now define ``dual raising matrix'',
+\[R^* = \sum_{i=0}^D E_{i+1}A^*E_i.\]
+So,
+\[R^*E_iV \subseteq E_{i+1}V, \quad (0\leq i\leq D, \; E_{D+1}V = 0).\]
+Define ``dual lowering matrix''
+\[L^* = \sum_{i=0}^D E_{i-1}A^*E_i.\]
+Then
+\[L^*E_iV \subseteq E_{i-1}V \quad (0\leq i\leq D, \; E_{-1}V = 0).\]
+Observe that
+\[A^* = \left(\sum_{i=0}^DE_i\right)A^*\left(\sum_{j=0}^DE_j\right) = L^* + R^*\]
+by Claim 1.
+
+Claim 2. We have
+\textbar{} \((a)\) \([L^*, R^*] = A\),
+\textbar{} \((b)\) \([A, L^*] = 2L^*\),
+\textbar{} \((c)\) \([A, R^*] = -2R^*\).
+
+\emph{Pf.}
+\((b)\)
+\begin{align}
+AL^* - L^*A & = \sum_{i=0}^D(AE_{i-1}A^*E_i - E_{i-1}A^*E_iA)\\
+& = \sum_{i=0}^D E_{i-1}A^*E_i (\theta_{i-1} - \theta_i)\\
+& \quad (\theta_k = D-2k, \quad \theta_{i-1}- \theta_i = 2I - 2(i-1) = 2\\
+& = 2L^*.
+\end{align}
+
+\((c)\) Similar.
+
+\begin{remark}
+\begin{align}
+AR^* - R^*A & = \sum_{i=0}^D (AE_{i+1}A^*E_i - E_{i+1}A^*E_iA)\\
+& = \sum_{i=0}^D E_{i+1}A^*E_i (\theta_{i+1} - \theta_i)\\
+& = 2R^*.
+\end{align}
+\end{remark}
+
+\((a)\) We have, by \((b)\), \((c)\)
+\begin{equation}
+[A, A^*] = [A, L^*] + [A, R^*] = 2(L^* - R^*).
+\end{equation}
+Since \(A^* = L^* + R^*\),
+\[R^* = \frac{2A^* + [A^*, A]}{4}, \quad L^* = \frac{2A^* - [A^* - A]}{4}.\]
+Now \((a)\) is seen to be equivalent to (@\label{eq:6-2}) upon evaluation.
+This proves Claim 2.
+
+\begin{remark}
+\begin{align}
+[L^*,R^*] & = \frac{1}{16}((2A^*-[A^*,A])(2A^*+[A^*,A]) - (2A^*+[A^*,A])(2A^*- [A,A^*]))\\
+& = \frac{1}{16}(4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* - [A^*,A]^2 - 4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* + [A^*,A]^2)\\
+& = \frac{1}{4}({A^*}^2A - 2A^*AA^* + A{A^*}^2)\\
+& = A,
+\end{align}
+by (@\label{eq:6-2}).
+\end{remark}
+
+Now apply same argument as for (@\label{eq:6-1}), (@\label{eq:6-2}) of Theorem @(thm:hd2-module1) and observe \(A^*\) has \(D+1\) distinct eigenvalues. So,
+\[A^* = \sum_{i=0}^D(D-2i)E^*_i\]
+generates
+\[M^* = \mathrm{Span}(E^*_0, \ldots, E^*_D).\]
+Hence, \(E_0, \ldots, E_D, \; A^*\) generates \(T\).
+
+Take an irreducible \(T\)-module \(W\) with endpoint \(r\) with \(0\leq r \leq D/2\). Set
+\(t = \min\{i\mid E_iW\}\).
+
+Pick \(0\neq w_0^*\in E_tW\). Set
+\[w_i^* = \frac{1}{i!}{R^*}^i w_0^* \in E_{t+i}W \quad \text{for all }i.\]
+Then,
+\[R^*w_i^* = (i+1)w_{i+1}^* \quad \text{for all }i.\]
+By \((a)\), we get by induction, \(L^*w_i^* = (D-2t-i+1)w^*_{i-1}\),
+\begin{align}
+L^*w_i^* & = \frac{1}{i}L^*R^*w_{i-1}^* \\
+& = \frac{1}{i}(A + R^*L^*)w_{i-1}^* \\
+& = \frac{1}{i}((D-2(t+i-1))w^*_{i-1} + (i-1)(D-2t-i+2)w_{i-1}^*)\\
+& = (D-2t - i + 1)w_{i-1}^*.
+\end{align}
+
+So \(\mathrm{Span}(w_0^*, w_1^*, \ldots )\) is \(L^*\), \(R^*\), \(A^*\)-invariant. Hence,
+\(W = \mathrm(Span)(w_0^*, w_1^*, \ldots, w_d^*)\), \(w_0^*, w_1^*, \ldots, w_d^* \neq 0\), \(w^*_i = 0\) for every \(i>d\) by dimension.
+
+Thus \(d = D-2t\).
+
+\emph{Pf.}
+\begin{align}
+(D -2(t+d))w^*_d & = Aw_d^* \\
+& = (L^*R^* - R^*L^*)w_d^*\\
+& = -(D-2t - d + 1)R^*w_{d-1}^*\\
+& = -(D-2t - d +1)dw^*_d.
+\end{align}
+Hence,
+\[0 = d^2 + (2t - D - 1 + 2)d - (D-2t) = (d-D+2t)(d+1)\]
+So \(d = D-2t\).
+\end{proof}
+
+\begin{definition}
+
+For any graph \(\Gamma = (X, E)\), pick a vertex \(x\in X\) and set \(E^*_i \equiv E^*_i(x)\) and \(T \equiv T(x)\).
+
+\((i)\) an irreducible \(T\)-module \(W\) is thin \index{thin} if \(\dim E_i^*W \leq 1\) for every \(i\),
+
+\((ii)\) \(\Gamma\) is thin with respet to \(x\), if every irreducible \(T(x)\)-module is thin,
+
+\((iii)\) an irreducible \(T\)-module \(W\) is dual thin \index{dual thin} if \(\dim E_iW \leq 1\) for every \(i\),
+
+\((iv)\) \(\Gamma\) is dual thin with respect to \(x\), if every irreducible \(T(x)\)-module is dual thin.
+
+\end{definition}
+
+Observe: \(H(D,2)\) is thin, dual thin with respect to each \(x\in X\).
+
+With above notation, write \(D \equiv D(x)\).
+
+\((i)\) an ordering \(E_0, E_1, \ldots, E_R\) of primitive idempotents of \(\Gamma\) is restricted \index{restricted} if \(E_0\) corresponds to the maximal eigenvalue.
+
+Fix a restricted ordering,
+
+\((ii)\) \(\Gamma\) is \(Q\)-polynomial with respect to \(x\), above ordering if there exists \(A^* \equiv A^*(x)\) such that
+
+\(\quad (a)\) \(E_0^*V, \ldots, E_D^*V\) are the maximal eigenspaces for \(A^*\).
+
+\(\quad (b)\) \(E_iA^*E_j = 0\) if \(|i-j| > 1\) for \(0\leq i,j\leq R\).
+
+Observe \(H(D,2)\) is \(Q\)-polynomial with respect to the natural ordering of the idempotents and every vetex.
+
+\textbf{Program.} Study graphs that are thin and \(Q\)-polynomial with respect to each vertex.
+
+(In fact, thin with respect to \(x\) implies dual thin with respect to \(x\).)
+
+GEt a situation like \(H(D,2)\), where \(T\) is generated by \(A\), \(A^*\). Except \(\mathrm{sl}_s(\mathbb{C})\) is repalaced by a quantum Lie algebra.
+
+\hypertarget{lec7}{%
+\chapter{\texorpdfstring{The Johnson Graph \(J(D,n)\)}{The Johnson Graph J(D,n)}}\label{lec7}}
+
+\textbf{Wednesday, February 3, 1993}
+
+\begin{definition}
+The Johnson graph, \(\Gamma = J(D,N)\) \((1\leq D\leq N-1)\) satisfies
+\begin{align}
+X & = \{S\mid S\subset \Omega, \; |S| = D\} \quad\text{where }\; \Omega = \{1, 2, \ldots, N\}\\
+E & = \{ST\mid S, T\in X, \quad |S\cap T| = D-1\}.
+\end{align}
+\end{definition}
+
+\hypertarget{lec8}{%
+\chapter{Thin Graphs}\label{lec8}}
+
+\textbf{Friday, February 5, 1993}
+
   \bibliography{book.bib,packages.bib}
 
 \printindex

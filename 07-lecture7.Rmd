@@ -1,0 +1,12 @@
+# The Johnson Graph $J(D,n)$ {#lec7}
+**Wednesday, February 3, 1993**
+
+:::{.definition}
+The Johnson graph, $\Gamma = J(D,N)$ $(1\leq D\leq N-1)$ satisfies
+\begin{align}
+X & = \{S\mid S\subset \Omega, \; |S| = D\} \quad\text{where }\; \Omega = \{1, 2, \ldots, N\}\\
+E & = \{ST\mid S, T\in X, \quad |S\cap T| = D-1\}.
+\end{align}
+:::
+
+

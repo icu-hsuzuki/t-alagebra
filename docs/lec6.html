@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="lec5.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="lec7.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -105,6 +105,8 @@ div.csl-indent {
 <li class="chapter" data-level="4" data-path="lec4.html"><a href="lec4.html"><i class="fa fa-check"></i><b>4</b> Examples</a></li>
 <li class="chapter" data-level="5" data-path="lec5.html"><a href="lec5.html"><i class="fa fa-check"></i><b>5</b> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, I</a></li>
 <li class="chapter" data-level="6" data-path="lec6.html"><a href="lec6.html"><i class="fa fa-check"></i><b>6</b> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, II</a></li>
+<li class="chapter" data-level="7" data-path="lec7.html"><a href="lec7.html"><i class="fa fa-check"></i><b>7</b> The Johnson Graph <span class="math inline">\(J(D,n)\)</span></a></li>
+<li class="chapter" data-level="8" data-path="lec8.html"><a href="lec8.html"><i class="fa fa-check"></i><b>8</b> Thin Graphs</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -146,10 +148,180 @@ Hence, we have that
 <span class="math display">\[\mathrm{mult}(W_r) = \binom{D}{r} - \binom{D}{r-1}\]</span>
 by induction on <span class="math inline">\(r\)</span>.</p>
 </div>
-<!-- $$\begin{pmatrix} D_1t&-a_{12}t_2&\dots&-a_{1n}t_n\\ -->
-<!-- -a_{21}t_1&D_2t&\dots&-a_{2n}t_n\\ -->
-<!-- \hdotsfor[2]{4}\\ -->
-<!-- -a_{n1}t_1&-a_{n2}t_2&\dots&D_nt\end{pmatrix}$$ -->
+<div class="theorem">
+<p><span id="thm:hd2-modules2" class="theorem"><strong>Theorem 6.1  </strong></span>Let <span class="math inline">\(\Gamma = H(D,2)\)</span> with <span class="math inline">\(D\geq 1\)</span>. Fix a vertex <span class="math inline">\(x\in X\)</span> and write
+<span class="math display">\[E^*_i \equiv E^*_i(x), \quad T = T(x), and A^* \equiv \sum_{i=0}^D(D-2i)E^*_i.\]</span>
+Let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r\)</span> with <span class="math inline">\(0\leq r\leq D/2\)</span>. Then,</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(W\)</span> has a basis</div>
+<p><span class="math display">\[w_0^*, w_1^*, \ldots, w_d^* \quad(d = D-2r), \; \text{ such that }\; w_i^*\in E_{i+r}W\; (0\leq i \leq d)\]</span>
+with respect to which the matrix corresponding to <span class="math inline">\(A^*\)</span> is
+<span class="math display">\[\begin{pmatrix} 
+0 &amp; d &amp; 0   &amp;  &amp; &amp; &amp;  \\
+1 &amp; 0 &amp; d-1 &amp;  &amp; &amp; &amp; \\
+0 &amp; 2 &amp; 0   &amp;  &amp; &amp; &amp; \\
+  &amp;   &amp; \ddots    &amp; \ddots &amp; \ddots &amp;  &amp; \\
+  &amp;   &amp;                   &amp; &amp; 0 &amp; 2 &amp; 0 \\
+  &amp;   &amp;      &amp; &amp; d-1 &amp; 0 &amp; 1\\
+  &amp;   &amp;      &amp; &amp; 0 &amp; d &amp; 0
+\end{pmatrix}.\]</span>
+In particular,
+| <span class="math inline">\((ii)\)</span> <span class="math inline">\(E_iA^*E_j = 0\)</span> if <span class="math inline">\(|i-j|\neq 1\)</span> for <span class="math inline">\(0 \leq i, j\leq D\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-46" class="proof"><em>Proof</em>. </span>We use the notation,
+<span class="math display">\[[\alpha, \beta] = \alpha\beta - \beta\alpha \; (=-[\beta, \alpha]).\]</span></p>
+<p>Recall that</p>
+<div class="line-block"><span class="math inline">\((a)\)</span> <span class="math inline">\([L, R] = A^*\)</span>,<br />
+<span class="math inline">\((b)\)</span> <span class="math inline">\([A^*, L] = wL\)</span>,<br />
+<span class="math inline">\((c)\)</span> <span class="math inline">\([A^*, R] = -2R\)</span>,</div>
+<p>and <span class="math inline">\(A = L + R\)</span>.</p>
+<p>Write <span class="math inline">\((a) - (c)\)</span> in terms of <span class="math inline">\(A\)</span> and <span class="math inline">\(A^*\)</span>, we have,
+<span class="math display">\[[A, A^*] = [L, A^*]+ [R, A^*] = 2(R-L).\]</span>
+<span class="math display">\[\begin{cases} R + L &amp; = A\\
+R-L &amp; = [A,A^*]/2. \end{cases}.\]</span>
+Hence,
+<span class="math display">\[\begin{align}
+R &amp; = \frac{1}{4}(2A + [A, A^*]) \quad \text{ and }\\
+L &amp; = \frac{1}{4}(2A - [A, A^*]).
+\end{align}\]</span></p>
+<p>Now <span class="math inline">\((a)\)</span>, <span class="math inline">\((b)\)</span> become
+<span class="math display" id="eq:6-2" id="eq:6-1">\[\begin{align}
+A^2A^* - 2AA^*A + A^*A^2 - 4A^*  &amp; = 0  \tag{6.1}\\
+{A^*}^2A - 2A^*AA^* + A{A^*}^2 - 4A  &amp; = 0 \tag{6.2}
+\end{align}\]</span>
+<em>Pf.</em> By <span class="math inline">\((b)\)</span>,
+<span class="math display" id="eq:6-2">\[\begin{align}
+2A - AA^* + A^*A &amp; = 4L\\
+&amp; = 2[A^*, L]\\
+&amp; = A^* \frac{2A - [A,A^*]}{2} - \frac{2A - [A, A^*]}{2}A^*
+\end{align}\]</span>
+So we have (\2\tag{6.2})
+<span class="math display">\[
+{A^*}^2A - 2A^*AA^* + A{A^*}^2 - 4A   = 0.
+\]</span></p>
+<p>By <span class="math inline">\((a)\)</span>,
+<span class="math display">\[\begin{align}
+-16A^* &amp; = [2A + [A, A^*], 2A - [A, A^*]]\\
+&amp; (2A + [A, A^*])(2A - [A, A^*]) - (2A - [A,A^*])(2A + [A, A^*])\\
+&amp; = [4A^2 - 2A[A, A^*] + [A, A^*](2A) - [A,A^*]^2\\
+&amp; \quad - 4A^2 - 2A[A, A^*] + [A, A^*](2A) + [A, A^*]^2\\
+&amp; = -4A^2A^* + 4AA^*A + 4AA^*A - 4A^*A^2.
+\end{align}\]</span>
+So,
+<span class="math display">\[A^2A^* - 2AA^*A + A^*A^2 - 4A^* = 0.\]</span></p>
+<p>Claim: <span class="math inline">\(E_i^*A^*E_j = 0\)</span> if <span class="math inline">\(|i-j| \neq 1\)</span> for <span class="math inline">\(0\leq i, j\leq D\)</span>.</p>
+<p><em>Pf.</em> We have,
+<span class="math display">\[\begin{align}
+0 &amp; = E_i(A^2A^* - 2AA^*A + A^*A^2 - 4A^*)E_j\\
+&amp; = E_iA^*E_j(\theta_i^2 - 2\theta_i\theta_j + \theta_j^2 - 4)\\
+&amp; \quad (AE_j = \theta_jE_j, \; E_iA = (AE_j)^\top = (\theta_iE_i)^\top = \theta_iE_i)\\
+&amp; = E_iA^*E_j(\theta_i - \theta_j -2)(\theta_i - \theta_j + 2)\\
+&amp; = E_iA^*E_j(D-2i - (D-2j)-2)(D-2i - (D-2j) + 2)\\
+&amp; \quad (\theta_k = D-2k)\\
+&amp; = E_iA^*E_j \cdot 4(i-j+1)(i-j-1)
+\end{align}\]</span>
+and <span class="math inline">\(i-j+1 \neq 0\)</span>, <span class="math inline">\(i-j-1\neq 0\)</span>.
+Hence, <span class="math inline">\(E_i^*A^*E_j = 0\)</span>.</p>
+<p>Now define “dual raising matrix,”
+<span class="math display">\[R^* = \sum_{i=0}^D E_{i+1}A^*E_i.\]</span>
+So,
+<span class="math display">\[R^*E_iV \subseteq E_{i+1}V, \quad (0\leq i\leq D, \; E_{D+1}V = 0).\]</span>
+Define “dual lowering matrix”
+<span class="math display">\[L^* = \sum_{i=0}^D E_{i-1}A^*E_i.\]</span>
+Then
+<span class="math display">\[L^*E_iV \subseteq E_{i-1}V \quad (0\leq i\leq D, \; E_{-1}V = 0).\]</span>
+Observe that
+<span class="math display">\[A^* = \left(\sum_{i=0}^DE_i\right)A^*\left(\sum_{j=0}^DE_j\right) = L^* + R^*\]</span>
+by Claim 1.</p>
+<p>Claim 2. We have
+| <span class="math inline">\((a)\)</span> <span class="math inline">\([L^*, R^*] = A\)</span>,
+| <span class="math inline">\((b)\)</span> <span class="math inline">\([A, L^*] = 2L^*\)</span>,
+| <span class="math inline">\((c)\)</span> <span class="math inline">\([A, R^*] = -2R^*\)</span>.</p>
+<p><em>Pf.</em>
+<span class="math inline">\((b)\)</span>
+<span class="math display">\[\begin{align}
+AL^* - L^*A &amp; = \sum_{i=0}^D(AE_{i-1}A^*E_i - E_{i-1}A^*E_iA)\\
+&amp; = \sum_{i=0}^D E_{i-1}A^*E_i (\theta_{i-1} - \theta_i)\\
+&amp; \quad (\theta_k = D-2k, \quad \theta_{i-1}- \theta_i = 2I - 2(i-1) = 2\\
+&amp; = 2L^*.
+\end{align}\]</span></p>
+<p><span class="math inline">\((c)\)</span> Similar.</p>
+<div class="remark">
+<p><span id="unlabeled-div-44" class="remark"><em>Remark</em>. </span><span class="math display">\[\begin{align}
+AR^* - R^*A &amp; = \sum_{i=0}^D (AE_{i+1}A^*E_i - E_{i+1}A^*E_iA)\\
+&amp; = \sum_{i=0}^D E_{i+1}A^*E_i (\theta_{i+1} - \theta_i)\\
+&amp; = 2R^*.
+\end{align}\]</span></p>
+</div>
+<p><span class="math inline">\((a)\)</span> We have, by <span class="math inline">\((b)\)</span>, <span class="math inline">\((c)\)</span>
+<span class="math display">\[\begin{equation}
+[A, A^*] = [A, L^*] + [A, R^*] = 2(L^* - R^*).
+\end{equation}\]</span>
+Since <span class="math inline">\(A^* = L^* + R^*\)</span>,
+<span class="math display" id="eq:6-2">\[R^* = \frac{2A^* + [A^*, A]}{4}, \quad L^* = \frac{2A^* - [A^* - A]}{4}.\]</span>
+Now <span class="math inline">\((a)\)</span> is seen to be equivalent to (@\tag{6.2}) upon evaluation.
+This proves Claim 2.</p>
+<div class="remark">
+<p><span id="unlabeled-div-45" class="remark"><em>Remark</em>. </span><span class="math display" id="eq:6-1" id="eq:6-2">\[\begin{align}
+[L^*,R^*] &amp; = \frac{1}{16}((2A^*-[A^*,A])(2A^*+[A^*,A]) - (2A^*+[A^*,A])(2A^*- [A,A^*]))\\
+&amp; = \frac{1}{16}(4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* - [A^*,A]^2 - 4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* + [A^*,A]^2)\\
+&amp; = \frac{1}{4}({A^*}^2A - 2A^*AA^* + A{A^*}^2)\\
+&amp; = A,
+\end{align}\]</span>
+by (@\tag{6.2}).</p>
+</div>
+<p>Now apply same argument as for (@\tag{6.1}), (@\tag{6.2}) of Theorem @(thm:hd2-module1) and observe <span class="math inline">\(A^*\)</span> has <span class="math inline">\(D+1\)</span> distinct eigenvalues. So,
+<span class="math display">\[A^* = \sum_{i=0}^D(D-2i)E^*_i\]</span>
+generates
+<span class="math display">\[M^* = \mathrm{Span}(E^*_0, \ldots, E^*_D).\]</span>
+Hence, <span class="math inline">\(E_0, \ldots, E_D, \; A^*\)</span> generates <span class="math inline">\(T\)</span>.</p>
+<p>Take an irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> with endpoint <span class="math inline">\(r\)</span> with <span class="math inline">\(0\leq r \leq D/2\)</span>. Set
+<span class="math inline">\(t = \min\{i\mid E_iW\}\)</span>.</p>
+<p>Pick <span class="math inline">\(0\neq w_0^*\in E_tW\)</span>. Set
+<span class="math display">\[w_i^* = \frac{1}{i!}{R^*}^i w_0^* \in E_{t+i}W \quad \text{for all }i.\]</span>
+Then,
+<span class="math display">\[R^*w_i^* = (i+1)w_{i+1}^* \quad \text{for all }i.\]</span>
+By <span class="math inline">\((a)\)</span>, we get by induction, <span class="math inline">\(L^*w_i^* = (D-2t-i+1)w^*_{i-1}\)</span>,
+<span class="math display">\[\begin{align}
+L^*w_i^* &amp; = \frac{1}{i}L^*R^*w_{i-1}^* \\
+&amp; = \frac{1}{i}(A + R^*L^*)w_{i-1}^* \\
+&amp; = \frac{1}{i}((D-2(t+i-1))w^*_{i-1} + (i-1)(D-2t-i+2)w_{i-1}^*)\\
+&amp; = (D-2t - i + 1)w_{i-1}^*.
+\end{align}\]</span></p>
+<p>So <span class="math inline">\(\mathrm{Span}(w_0^*, w_1^*, \ldots )\)</span> is <span class="math inline">\(L^*\)</span>, <span class="math inline">\(R^*\)</span>, <span class="math inline">\(A^*\)</span>-invariant. Hence,
+<span class="math inline">\(W = \mathrm(Span)(w_0^*, w_1^*, \ldots, w_d^*)\)</span>, <span class="math inline">\(w_0^*, w_1^*, \ldots, w_d^* \neq 0\)</span>, <span class="math inline">\(w^*_i = 0\)</span> for every <span class="math inline">\(i&gt;d\)</span> by dimension.</p>
+<p>Thus <span class="math inline">\(d = D-2t\)</span>.</p>
+<p><em>Pf.</em>
+<span class="math display">\[\begin{align}
+(D -2(t+d))w^*_d &amp; = Aw_d^* \\
+&amp; = (L^*R^* - R^*L^*)w_d^*\\
+&amp; = -(D-2t - d + 1)R^*w_{d-1}^*\\
+&amp; = -(D-2t - d +1)dw^*_d.
+\end{align}\]</span>
+Hence,
+<span class="math display">\[0 = d^2 + (2t - D - 1 + 2)d - (D-2t) = (d-D+2t)(d+1)\]</span>
+So <span class="math inline">\(d = D-2t\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-47" class="definition"><strong>Definition 6.1  </strong></span>For any graph <span class="math inline">\(\Gamma = (X, E)\)</span>, pick a vertex <span class="math inline">\(x\in X\)</span> and set <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span> and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> an irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is thin  if <span class="math inline">\(\dim E_i^*W \leq 1\)</span> for every <span class="math inline">\(i\)</span>,</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> is thin with respet to <span class="math inline">\(x\)</span>, if every irreducible <span class="math inline">\(T(x)\)</span>-module is thin,</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> an irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is dual thin  if <span class="math inline">\(\dim E_iW \leq 1\)</span> for every <span class="math inline">\(i\)</span>,</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(\Gamma\)</span> is dual thin with respect to <span class="math inline">\(x\)</span>, if every irreducible <span class="math inline">\(T(x)\)</span>-module is dual thin.</div>
+</div>
+<p>Observe: <span class="math inline">\(H(D,2)\)</span> is thin, dual thin with respect to each <span class="math inline">\(x\in X\)</span>.</p>
+<div class="defintion">
+<p>With above notation, write <span class="math inline">\(D \equiv D(x)\)</span>.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> an ordering <span class="math inline">\(E_0, E_1, \ldots, E_R\)</span> of primitive idempotents of <span class="math inline">\(\Gamma\)</span> is restricted  if <span class="math inline">\(E_0\)</span> corresponds to the maximal eigenvalue.</div>
+<p>Fix a restricted ordering,</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(x\)</span>, above ordering if there exists <span class="math inline">\(A^* \equiv A^*(x)\)</span> such that</div>
+<div class="line-block"><span class="math inline">\(\quad (a)\)</span> <span class="math inline">\(E_0^*V, \ldots, E_D^*V\)</span> are the maximal eigenspaces for <span class="math inline">\(A^*\)</span>.</div>
+<div class="line-block"><span class="math inline">\(\quad (b)\)</span> <span class="math inline">\(E_iA^*E_j = 0\)</span> if <span class="math inline">\(|i-j| &gt; 1\)</span> for <span class="math inline">\(0\leq i,j\leq R\)</span>.</div>
+</div>
+<p>Observe <span class="math inline">\(H(D,2)\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to the natural ordering of the idempotents and every vetex.</p>
+<p><strong>Program.</strong> Study graphs that are thin and <span class="math inline">\(Q\)</span>-polynomial with respect to each vertex.</p>
+<p>(In fact, thin with respect to <span class="math inline">\(x\)</span> implies dual thin with respect to <span class="math inline">\(x\)</span>.)</p>
+<p>GEt a situation like <span class="math inline">\(H(D,2)\)</span>, where <span class="math inline">\(T\)</span> is generated by <span class="math inline">\(A\)</span>, <span class="math inline">\(A^*\)</span>. Except <span class="math inline">\(\mathrm{sl}_s(\mathbb{C})\)</span> is repalaced by a quantum Lie algebra.</p>
 
 </div>
             </section>
@@ -158,7 +330,7 @@ by induction on <span class="math inline">\(r\)</span>.</p>
         </div>
       </div>
 <a href="lec5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
