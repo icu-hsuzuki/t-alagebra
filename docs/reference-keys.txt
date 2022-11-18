@@ -4,3 +4,8 @@ lec3
 lec4
 lec5
 lec6
+thm:unlabeled-div-1
+exm:unlabeled-div-3
+exm:unlabeled-div-4
+def:unlabeled-div-6
+lem:irreducible
