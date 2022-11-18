@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Examples | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Examples | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
@@ -55,6 +55,28 @@
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -108,7 +130,7 @@
 <h1><span class="header-section-number">Chapter 4</span> Examples<a href="lec4.html#lec4" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Wednesday, January 27, 1993</strong></p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-1" class="theorem"><strong>Theorem 4.1  </strong></span>Given a Cayley graph <span class="math inline">\(\Gamma = \Gamma(G, \Delta)\)</span>. View the standard module <span class="math inline">\(V \equiv \mathbb{C}G\)</span> (the group algebra), so
+<p><span id="thm:unlabeled-div-33" class="theorem"><strong>Theorem 4.1  </strong></span>Given a Cayley graph <span class="math inline">\(\Gamma = \Gamma(G, \Delta)\)</span>. View the standard module <span class="math inline">\(V \equiv \mathbb{C}G\)</span> (the group algebra), so
 <span class="math display">\[\left\langle \sum_{g\in G}\alpha_g g, \;\sum_{g\in G}\beta_g g\right\rangle = \sum_{g\in G}\alpha_g\overline{\beta_g}, \quad \textrm{with}\; \alpha_g, \beta_g\in \mathbb{C}.\]</span>
 For any <span class="math inline">\(\theta\in X(G)\)</span>, write
 <span class="math display">\[\hat{\theta} = \sum_{g\in G}\theta(g^{-1})g.\]</span>
@@ -120,10 +142,10 @@ In particular, the eigenvalues of <span class="math inline">\(\Gamma\)</span> ar
 <span class="math display">\[\Delta_\theta \mid \theta\in X(G)\}.\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span></p>
-<div class="line-block"><span class="math inline">\((i)\)</span> Claim: For every <span class="math inline">\(\theta \in X(G)\)</span>, let</div>
+<div class="line-block"><span id="unlabeled-div-34" class="proof"><em>Proof</em>. </span><br />
+<span class="math inline">\((i)\)</span> Claim: For every <span class="math inline">\(\theta \in X(G)\)</span>, let</div>
 <p><span class="math display">\[s:= \sum_{g\in G}\theta(g^{-1}) = \begin{cases} |G| &amp; \text{if }\;\theta = 1\\
-0 &amp; \text{if } \;\theta \neq 1. 
+0 &amp; \text{if } \;\theta \neq 1.
 \end{cases}\]</span>
 <em>Pf.</em> Clear if <span class="math inline">\(\theta =1\)</span>.</p>
 <p>Let <span class="math inline">\(\theta \neq 1\)</span>. Then <span class="math inline">\(\theta(h)\neq 1\)</span> for some <span class="math inline">\(h\in G\)</span>.
@@ -144,7 +166,7 @@ Hence <span class="math inline">\(\theta(g^{1}) = \overline{\theta(g)}\)</span>.
 0 &amp; \text{if} \quad \theta_1\theta_2^{-1}\neq 1.
 \end{cases}
 \end{align}\]</span>
-Since <span class="math inline">\(|G| = |X(G)|\)</span> by Lemma <a href="#lem:charactergroup"><strong>??</strong></a>, and <span class="math inline">\(\widehat{\theta_i}\)</span>’s are orthogonal nonzero elements in <span class="math inline">\(V\)</span>, thet form a basis of <span class="math inline">\(V\)</span>.</p>
+Since <span class="math inline">\(|G| = |X(G)|\)</span> by Lemma <a href="lec3.html#lem:charactergroup">3.1</a>, and <span class="math inline">\(\widehat{\theta_i}\)</span>’s are orthogonal nonzero elements in <span class="math inline">\(V\)</span>, thet form a basis of <span class="math inline">\(V\)</span>.</p>
 <div class="line-block"> <span class="math inline">\((ii)\)</span> Let <span class="math inline">\(\Delta = \{g_1, \ldots, g_r\}\)</span>. Then</div>
 <p><span class="math display">\[\begin{align}
 A\hat{\theta} &amp; = A\left(\sum_{g\in G}\theta(g^{-1}g)\right)\\
@@ -160,9 +182,9 @@ Since <span class="math inline">\(\{\hat{\theta}\mid \theta\in X(G)\}\)</span> f
 <p>This completes the proof.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-3" class="example"><strong>Example 4.1  </strong></span>Let <span class="math inline">\(G = \langle a\mid a^6 = 1\rangle\)</span>, and <span class="math inline">\(\Delta = \{a, a^{-1}\}\)</span>. Pick a primitive 6-th root of 1, <span class="math inline">\(\omega\)</span>. Then
+<p><span id="exm:unlabeled-div-35" class="example"><strong>Example 4.1  </strong></span>Let <span class="math inline">\(G = \langle a\mid a^6 = 1\rangle\)</span>, and <span class="math inline">\(\Delta = \{a, a^{-1}\}\)</span>. Pick a primitive 6-th root of 1, <span class="math inline">\(\omega\)</span>. Then
 <span class="math display">\[X(G) = \{\theta^i\mid 0\leq i\leq 5\} \quad \text{such that }\quad \theta(a) = \omega, \; \omega + \omega^{-1} = 1.\]</span>
-<img src="t-algebra_files/figure-html/unnamed-chunk-1-1.png" width="192" style="display: block; margin: auto;" />
+<img src="t-algebra_files/figure-html/unnamed-chunk-5-1.png" width="192" style="display: block; margin: auto;" />
 <span class="math display">\[\begin{array}{c | c | c}
 \varphi\in X(G) &amp; \varphi(a) &amp; \Delta_\varphi = \theta(a) + \theta(a)^{-1}\\
 \hline
@@ -176,7 +198,7 @@ Since <span class="math inline">\(\{\hat{\theta}\mid \theta\in X(G)\}\)</span> f
 <span class="math display">\[\text{Spec}(\Gamma) = \begin{pmatrix} 2 &amp; 1 &amp; -1 &amp; -2\\ 1 &amp; 2 &amp; 2 &amp; 1\end{pmatrix}.\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-4" class="example"><strong>Example 4.2  </strong></span><span class="math inline">\(D\)</span>-cube, <span class="math inline">\(H(D,2)\)</span>. Let
+<p><span id="exm:unlabeled-div-36" class="example"><strong>Example 4.2  </strong></span><span class="math inline">\(D\)</span>-cube, <span class="math inline">\(H(D,2)\)</span>. Let
 <span class="math display">\[X = \{(a_1, \ldots, a_D)\mid a_i\in \{1,-1\}, \; 1\leq i\leq D\},\]</span>
 <span class="math display">\[E = \{xy\mid x, y\in X, \; x, y \text{: different in exactly one coordinate}\}.\]</span>
 Also <span class="math inline">\(H(D,2)\)</span> is a Cayley graph <span class="math inline">\(\Gamma(G, \Delta)\)</span>, where
@@ -189,7 +211,7 @@ m_0 &amp; m_1 &amp; \cdots &amp; m_D\end{pmatrix},\]</span>
 where
 <span class="math display">\[\theta_i = D-2i \quad (0\leq i\leq D), \quad m_i = \binom{D}{i}.\]</span></p>
 <div class="remark">
-<p><span id="unlabeled-div-5" class="remark"><em>Remark</em>. </span>Let <span class="math inline">\(\theta \in X(G)\)</span>. Then <span class="math inline">\(\theta: X \to \{\pm 1\}\)</span>. If
+<p><span id="unlabeled-div-37" class="remark"><em>Remark</em>. </span>Let <span class="math inline">\(\theta \in X(G)\)</span>. Then <span class="math inline">\(\theta: X \to \{\pm 1\}\)</span>. If
 <span class="math display">\[\nu(\theta) = |\{i\mid \theta(a_i) = -1\}|, \]</span>
 then <span class="math inline">\(\Delta_\theta = D-2i\)</span>. Since there are <span class="math inline">\(\binom{D}{i}\)</span> such <span class="math inline">\(\theta\)</span>, we have te assertion.</p>
 </div>
@@ -198,7 +220,7 @@ then <span class="math inline">\(\Delta_\theta = D-2i\)</span>. Since there are 
 <p>Fix a base <span class="math inline">\(x\in X\)</span>. Write <span class="math inline">\(E_i^* = E_i^*(x)\)</span>, and
 <span class="math display">\[T \equiv T(x) = \text{the algebra generated by}\; A, E_0^*, E_1^*, \ldots .\]</span></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-6" class="definition"><strong>Definition 4.1  </strong></span>Let <span class="math inline">\(W\)</span> be any orreducible <span class="math inline">\(T\)</span>-module (<span class="math inline">\(\subseteq V\)</span>). Then the endpoint <span class="math inline">\(r \equiv r(W)\)</span> satisfied
+<p><span id="def:unlabeled-div-38" class="definition"><strong>Definition 4.1  </strong></span>Let <span class="math inline">\(W\)</span> be any orreducible <span class="math inline">\(T\)</span>-module (<span class="math inline">\(\subseteq V\)</span>). Then the endpoint <span class="math inline">\(r \equiv r(W)\)</span> satisfied
 <span class="math display">\[r = \min\{i\mid E_i^*W \neq 0\}.\]</span>
 The diameter <span class="math inline">\(d = d(W)\)</span> satisfied
 <span class="math display">\[d = |\{i\mid E_i^*W \neq 0\}| - 1.\]</span></p>
@@ -211,8 +233,8 @@ The diameter <span class="math inline">\(d = d(W)\)</span> satisfied
 <span class="math inline">\((iv)\)</span> <span class="math inline">\(E_i^*AE^*_jW \neq 0\)</span>, if <span class="math inline">\(|i-j| = 1\)</span> <span class="math inline">\((r \leq i,j \leq r+d)\)</span>.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-7" class="proof"><em>Proof</em>. </span></p>
-<div class="line-block"><span class="math inline">\((i)\)</span> Pick <span class="math inline">\(y\in X\)</span> with <span class="math inline">\(\partial(x,y) = j\)</span>. We want to find <span class="math inline">\(E_i^*AE^*_j \hat{y}\)</span>. Note,</div>
+<div class="line-block"><span id="unlabeled-div-39" class="proof"><em>Proof</em>. </span><br />
+<span class="math inline">\((i)\)</span> Pick <span class="math inline">\(y\in X\)</span> with <span class="math inline">\(\partial(x,y) = j\)</span>. We want to find <span class="math inline">\(E_i^*AE^*_j \hat{y}\)</span>. Note,</div>
 <p><span class="math display">\[E_j^*\hat{y} = \begin{cases} 0 &amp; \text{if }\; \partial(x.y)\neq j\\
 \hat{y} &amp; \text{if }\; \partial(x,y) = j.\end{cases}.\]</span>
 <span class="math display">\[\begin{align}
