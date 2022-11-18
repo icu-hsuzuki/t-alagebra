@@ -110,7 +110,7 @@ $$\nu(\theta) = |\{i\mid \theta(a_i) = -1\}|, $$
 then $\Delta_\theta = D-2i$. Since there are $\binom{D}{i}$ such $\theta$, we have te assertion.
 :::
 
-We want to compute the subconstituent algebra for $H(D,2)$. First, we make a few observations about arbitrary graphd.
+We want to compute the subconstituent algebra for $H(D,2)$. First, we make a few observations about arbitrary graphs.
 
 Let $\Gamma = (X,E)$ be any graph, $A$, the adjacemcy matrix of $\Gamma$, and $V$, the standard module over $K = \mathbb{C}$.
 
