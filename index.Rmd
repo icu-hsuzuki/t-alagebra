@@ -15,7 +15,7 @@ description: "This is a lecture note using the bookdown package. The output form
 # About this lecturenote {-}
 
 ## Setting {-}
-
+sudo 
 This note is created by `bookdown` package on RStudio.
 
 For `bookdown` See [@xie2015], [@xie2017], [@xie2018].

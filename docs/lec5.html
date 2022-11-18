@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 \(T\)-Modules of \(H(D,2)\), I | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 \(T\)-Modules of \(H(D,2)\), I | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-17" />
+<meta name="date" content="2022-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,9 +137,9 @@ div.csl-indent {
 E_i^*W &amp; \neq 0 &amp; r\leq i \leq r+d\\
 &amp; = 0 &amp; 0 \leq i &lt; r \;\text{ or }\; r+d &lt; i \leq d(x).
 \end{align}\]</span></p>
-<p>Claim: <span class="math inline">\(E_i^*AE_j^*W \neq 0\)</span> if $-j| = 1 for <span class="math inline">\(r\leq i,j\leq r+d\)</span>. (See Lemma <a href="lec4.html#lem:irreducible">4.1</a>.)</p>
-<p>Suppose <span class="math inline">\(E_{j+1}^*AE_j^*W = 0\)</span> for some <span class="math inline">\(j\)</span> with <span class="math inline">\(r \leq j &lt; r+d\)</span>.</p>
-<p>Observe that
+<p>Claim: <span class="math inline">\(E_i^*AE_j^*W \neq 0\)</span> if <span class="math inline">\(|i-j| = 1\)</span> for <span class="math inline">\(r\leq i,j\leq r+d\)</span>. (See Lemma <a href="lec4.html#lem:irreducible">4.1</a>.)</p>
+<p>Suppose <span class="math inline">\(E_{j+1}^*AE_j^*W = 0\)</span> for some <span class="math inline">\(j\)</span> with <span class="math inline">\(r \leq j &lt; r+d\)</span>.
+Observe that
 <span class="math display">\[\tilde{W} = E^*_rW + \cdot E^*_jW\]</span>
 is <span class="math inline">\(T\)</span>-invariant with
 <span class="math display">\[0 \subsetneq \tilde{W} \subsetneq W.\]</span>
@@ -238,19 +238,19 @@ Then these satisfy the relations <span class="math inline">\((a)\)</span> - <spa
 <p><em>Proof of Claim.</em>
 Apply both sides to <span class="math inline">\(\hat{S}\)</span> <span class="math inline">\((S\subseteq \Omega)\)</span>. Say <span class="math inline">\(|S| = i\)</span>.</p>
 <p><em>Proof of <span class="math inline">\((a)\)</span>:</em>
-<span class="math display">\[\begin{align}
+<span class="math display">\[\begin{align} 
 (LR - RL)\hat{S} &amp; = L\left(\sum_{\substack{T \subseteq \Omega, T \text{ covers }S\\(D-i \text{ of them})}}\hat{T}\right) - R \left(\sum_{\substack{U \subseteq \Omega, S \text{ covers }U\\(i \text{ of them})}}\hat{T}\right)\\
 &amp; = (D-i)\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V} - \left(i\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V}\right)\\
 &amp; = (D-2i)\hat{S}\\
 &amp; = A^*\hat{S}.
 \end{align}\]</span></p>
 <p><em>Proof of <span class="math inline">\((b)\)</span>:</em>
-<span class="math display">\[\begin{align}
+<span class="math display">\[\begin{align} 
 (A^*L - LA^*)\hat{S} &amp; = (D-2(i-1))L\hat{S} - (D-2i)L\hat{S} \quad (\text{since} \; L\hat{S}\in E^*_{i-1}V)\\
 &amp; = 2L\hat{S}.
 \end{align}\]</span></p>
 <p><em>Proof of <span class="math inline">\((c)\)</span>:</em>
-<span class="math display">\[\begin{align}
+<span class="math display">\[\begin{align} 
 (A^*R - RA^*)\hat{S} &amp; = (D-2(i+1))R\hat{S} - (D-2i)R\hat{S} \quad (\text{since} \; R\hat{S}\in E^*_{i+1}V)\\
 &amp; = 2R\hat{S}.
 \end{align}\]</span></p>
@@ -259,7 +259,7 @@ Apply both sides to <span class="math inline">\(\hat{S}\)</span> <span class="ma
 <p>Pick <span class="math inline">\(0\neq w \in E^*_rW\)</span>.</p>
 <p>Claim: <span class="math inline">\(LRw = (D-2r)w\)</span>.</p>
 <p><em>Pf.</em>
-<span class="math display">\[\begin{align}
+<span class="math display">\[\begin{align} 
 LRw &amp; = (A^*+RL)w \quad (\text{by Claim }(a))\\
 &amp; = A^*w \quad (Lw \in E^*_{r-1}W = 0)\\
 (D-2r)w.
@@ -310,7 +310,7 @@ Hence <span class="math inline">\(d = D-2r\)</span>.</p>
 &amp; &amp; \cdots &amp; \cdots &amp; &amp; \\
 &amp; &amp; &amp; &amp; 0 &amp; 1\\
 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0
-\end{pmatrix}, \qquad
+\end{pmatrix}, \qquad 
 R = \begin{pmatrix} 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0\\
 1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0\\
 0 &amp; 2 &amp; 0 &amp; \cdots &amp; &amp; \\

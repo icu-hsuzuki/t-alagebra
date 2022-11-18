@@ -13,10 +13,9 @@ E_i^*W & \neq 0 & r\leq i \leq r+d\\
 & = 0 & 0 \leq i < r \;\text{ or }\; r+d < i \leq d(x).
 \end{align}
 
-Claim: $E_i^*AE_j^*W \neq 0$ if $\i-j| = 1 for $r\leq i,j\leq r+d$. (See Lemma \@ref(lem:irreducible).)
+Claim: $E_i^*AE_j^*W \neq 0$ if $|i-j| = 1$ for $r\leq i,j\leq r+d$. (See Lemma \@ref(lem:irreducible).)
 
 Suppose $E_{j+1}^*AE_j^*W = 0$ for some $j$ with $r \leq j < r+d$.
-
 Observe that
 $$\tilde{W} = E^*_rW + \cdot E^*_jW$$
 is $T$-invariant with 

@@ -143,7 +143,7 @@ E_i^*AE_j^*\hat{y} &= E_i^*A\hat{y} \\
 & = 0 \; \text{ if }\; |i-j|>1 \; \text{by triangle inequality.}
 \end{align}
 If $|i-j| = 1$, there exist $y, y'\in X$ such that $\partial(x,y) = j$, $\partial(x,y') = i$, $yy'\in E$ by connectivity of $\Gamma$. Hence 
-(*) contains $\widehat{y'}$ and $* \neq 0$.
+(*) contains $\widehat{y'}$ and $* \neq 0$
 
 
 | $(ii)$ We have
@@ -154,7 +154,7 @@ AE_j^*W & = \left(\sum_{i=0}^{d(x)}E_i^*\right)AE_j^*W\\
 \end{align}
 
 | $(iii)$ Suppose $E_j^*W = 0$ for some $j$ $(r\leq j \leq r+d)$. Then $r < j$ by the definition of $r$. Set
-$$\tilde{W} = E^*_iW + E^*_{r+1}W + \cdots + E^*_{j-1}W.$$
+$$\tilde{W} = E^*_rW + E^*_{r+1}W + \cdots + E^*_{j-1}W.$$
 Observe $0\subsetneq \tilde{W} \subsetneq W$. 
 Also $A\tilde{W} \subseteq \tilde{W}$ by $(ii)$ and $E_i^*\tilde{W} \subseteq \tilde{W}$ for every $i$ by construction.
 
