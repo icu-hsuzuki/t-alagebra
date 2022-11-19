@@ -9,4 +9,175 @@ E & = \{ST\mid S, T\in X, \quad |S\cap T| = D-1\}.
 \end{align}
 :::
 
+:::{.example}
+$J(2,4)$
+```{r echo=FALSE, fig.width=3, fig.height=3, message=FALSE, fig.align="center"}
+library(tidyverse)
+df_eg41 <- data.frame(x = c(0, 2.2, 5, 2.2, 2, 2.2, 3, 2.2, 0, 2, 5, 3, 0), y = c(0, -3, 0, 3, -1, -3, 1, 3, 0, -1, 0, 1, 0))
+ggplot(df_eg41, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(panel.border = element_blank(),line = element_blank(),
+        text = element_blank(),
+        title = element_blank()) +
+  annotate("text", x=-0.3, y = 0.05, label = "12") + annotate("text", x=1.8, y = -3, label = "14") +
+  annotate("text", x=1.7, y = -1.2, label = "13") + annotate("text", x=5.3, y = 0, label = "34") +
+  annotate("text", x=1.8, y = 3, label = "23") + annotate("text", x=2.6, y = 1.2, label = "24") 
+```
+:::
 
+
+**Note 1.** 
+The symmetric group $S_N$ acts on $\Omega$. $S_N \subseteq \mathrm{Aut}(\Gamma)$ acts vertex transitively on $\Gamma$.
+
+**Note 2.**
+$\Gamma = J(D,N)$ is isomorphic to $\Gamma' = J(N-D,N)$.
+\begin{align}
+\Gamma = (X, E) & & \Gamma' = (X', E')\\
+X\ni S & \qquad \longrightarrow & \bar{S} = \Omega\setminus S \in X'
+\end{align}
+This correspondence induces an isomorphism of graphs.
+
+_Pf._
+\begin{align}
+ST\in E & \Leftrightarrow  |S\cap T| = D-1\\
+  & \Leftrightarrow  |\Omega - (S\cup T)| = N-D-1\\
+  & \Leftrightarrow  |\bar{S} \cap \bar{T}| = N-D-1\\
+  & \Leftrightarrow  \bar{S}\bar{T} \in E'
+\end{align}
+
+Hence, without loss of generality, assume
+$$D\leq N/2 \quad \text{for } J(D,N).$$
+
+We sill need the eigenvalues of $J(D,N)$ for certain problem later in the course. We can get these eigenvalues from our study of $H(D,2)$.
+
+:::{.lemma}
+The eigenvalues for $J(D,N)$ with $1\leq D \leq N/2$ are give by
+\begin{align}
+\theta_i & = (N-D-i)(D-i) - i \quad (0\leq i\leq D)\\
+m_i & = \binom{D}{i} - \binom{N}{i-1}.
+\end{align}
+:::
+
+:::{.proof}
+Let 
+\begin{align}
+\Gamma_J & \equiv J(D,N) = (X_J, E_J)\\
+\Gamma_H & \equiv H(N,2) = (X_H, E_H).
+\end{align}
+Set $x \equiv 11\cdots 1 \in X_H$. 
+
+Define $\tilde{\Gamma} \equiv (\tilde{X}, \tilde{E})$, where
+\begin{align}
+\tilde{X} & = \{y\in X_H \mid \partial_H(x,y) = D\} \quad \partial_H:\text{distance in }\Gamma_H\\
+\tilde{E} & = \{yz\in X_H \mid \partial_H(y,z) = 2\}.
+\end{align}
+Observe
+\begin{align}
+X_J & \to & \tilde{X}\\
+S & \mapsto & \hat{S},
+\end{align}
+where 
+$$\hat{S} = a_1\cdots a_N, \quad a_i = \begin{cases} -1 & \text{if }i\in S\\ 1 & \text{if }i\not\in S \end{cases}$$
+induces an isomorphism of graphs $\Gamma_J \to \tilde{\Gamma}$.
+
+_Pf._
+\begin{align}
+ST \in E_J &\Leftrightarrow |S\cap T| = D-1\\
+& \Leftrightarrow \partial_H(\hat{S}, \hat{T}) = 2\\
+& \Leftrightarrow (\hat{S}, \hat{T})\in \tilde{E}.
+\end{align}
+
+Identify, $\Gamma_J$ with $\tilde{\Gamma}$. Then the standard module $V_J$ of $\Gamma_J$ becomes $\tilde{V} = E^*_DV_H$, where $V_H$ is the standard module of $\Gamma_H$, and $E^*_D \equiv E^*_D(x)$.
+
+Let $R$ be the raising matrix with respect to $x$ in $\Gamma_H$, and 
+
+let $L$ be the lowering matrix with respect to $x$ in $\Gamma_H$.
+
+Recall
+$$(RL - DE^*_D) |_{\tilde{V}}$$
+is the adjacency map in $\tilde{\Gamma}$.
+
+To find eigenvalues of $\tilde{A}$, pick any irreducible $T(x)$-module $W$ with the endpoint $r\leq D$. Then by Theorem \@ref(thm:hd2-module) 
+$$\text{diam}(W) = N-2r+1.$$
+Let $w_0, w_1, \ldots, w_{N-2r}$ denote a basis for $W$ as in Theorem \@ref(thm:hd2-module). Then,
+$$w_{D-r} \in E^*_DW \subseteq \tilde{V}.$$
+
+Observe: 
+\begin{align}
+\tilde{A}w_{D-r} & = RLw_{D-r} - DE_D^*w_{D-r}\\
+& = R(N-2r-D+r+1)w_{D-r-1} - Dw_{D-r}\\
+& = ((N-D-r+1)(D-r) - D)w_{D-r}.
+\end{align}
+Note that this is valid for $D = r$ as well.
+
+Hence,
+$$\tilde{A}w_{D-r}  = ((N-D-r)(D-r)-r)w_{D-r}.$$
+Let 
+$$V_H = \sum W \quad (\text{direct sum of irreducible }T(x)-\text{modules}.)$$
+Then,
+\begin{align}
+V_J & = E_D^*V_H\\
+& = \sum_{W:r(W)\leq D} E_D^*W\\
+& = \text{a direct sum of 1 dimensional eigenspaces for }\tilde{A}.
+\end{align}
+The eigenspace for eigenvalue
+$$(N-D-r)(D-r)-r \quad (\text{monotonously decreasing with respec to }r)$$
+appears with multiplicity
+$$\binom{N}{r} - \binom{N}{r-1}$$
+in this sum by Theorem \@ref(thm:hd2-module) $(iv)$.
+:::
+
+:::{.theorem #thin-condition}
+Let $\Gamma = (X, E)$ be any graph. For a fixed vertex $x\in X$, let
+$$E_i^*\equiv E_i^*(x), \quad T\equiv T(x), \quad D \equiv D(x), \text{ and } K = \mathbb{C}.$$
+Then we have the following implications of conditions:
+$$\text{TH} \Leftrightarrow \text{C} \Leftarrow \text{S} \Leftarrow \text{G}.$$
+where
+
+| (TH) $\Gamma$ is thinn with respect to $x$.
+
+| (C) $E^*_iTE^*_i$ is commutative for every $i$,  $(0\leq i \leq D)$.
+
+| (S) $E^*_iTE^*_i$ is symmetric for every $i$,  $(0\leq i \leq D)$.
+
+| (G) For every $y, z\in X$ with $\partial(x,y) = \partial(x,z)$, there exists $g\in \mathrm{Aut}(\Gamma)$ such that
+$$gx = x, \; gy = z, \; gz = y.$$
+:::
+
+:::{.proof}
+| (TH) $\Rightarrow$ (C)
+Fix $i$ with $0\leq i\leq D$. Let 
+$$V = \sum W. \; \text{The standard module written as a direct sum of irreducible $T$-modules}.$$
+The, 
+$$E_i^*V = \sum E_i^*W. \; \text{The direct sum of 1-dimensional $E_i^*TE_i^*$-modules}.$$
+Since $\dim E_i^*W = 1$, for $a, b\in E_i^*TE_i^*$, ${ab - ba}_{| E_i^*W} = 0$. Hence $ab - ba = 0$.
+
+| (C) $\Rightarrow$ (TH)
+Suppose $\dim E_i^*W \geq 2$ for some irreducible $T$-module $W$ with some $i$ with $1\leq i\leq D$.
+
+Claim: $E_i^*W$ is an irreducible $E_i^*TE_i^*$-module.
+
+_Pf._ 
+Suppose 
+$$0 \subsetneq U \subsetneq E_i^*W,$$
+where $U$ is a $E_i^*TE_i^*$-module. Then by the irreducibility,
+$$TU = W.$$
+So 
+$$U \supseteq E_i^*TE_i^*U = E_i^*TU = E^*_iW.$$
+This is a contradiction.
+
+Claim 2: Each irreducible $S = E_i^*TE_i^*$-module $U$ has dimension $1$. In particular, $\Gamma$ is thin with respect to $x$.
+
+_Pf._
+Pick
+$$0\neq a \in E_i^*TE_i^*.$$
+Since $\mathbb{C}$ is algebraicallt closed, $a$ has an eigenvector $w\in U$ with eigenvalue $\theta$. Then,
+\begin{align}
+(a- \theta I)U & = (a-\theta I)Sw\\
+& = S(a-\theta I)w\\
+& = 0.
+\end{align}
+Hence, 
+$$a_{|U} = \theta I_{|U} \quad \text{for all }\; a\in S.$$
+Thus each $1$ dimensional subspace of $U$ is an $S$-module. We have
+$$\dim U = 1.$$
+By Claim 1 and Claim 2, we hat (TH).
+:::

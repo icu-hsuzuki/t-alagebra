@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Thin Graphs | Lecture Note on Terwilliger Algebra</title>
+  <title>Chapter 9 Thin \(T\)-Module | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Thin Graphs | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:title" content="Chapter 9 Thin \(T\)-Module | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Thin Graphs | Lecture Note on Terwilliger Algebra" />
+  <meta name="twitter:title" content="Chapter 9 Thin \(T\)-Module | Lecture Note on Terwilliger Algebra" />
   
   <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="lec7.html"/>
-<link rel="next" href="lec9.html"/>
+<link rel="prev" href="lec8.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -129,57 +129,10 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lec8" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Thin Graphs<a href="lec8.html#lec8" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><strong>Friday, February 5, 1993</strong></p>
-<div class="proof">
-<div class="line-block"><span id="unlabeled-div-53" class="proof"><em>Proof</em> (Proof of Theorem <a href="lec7.html#thm:thin-condition">7.1</a> continued). </span><br />
-(S) <span class="math inline">\(\Rightarrow\)</span> (C)</div>
-<p>Fix <span class="math inline">\(i\)</span> and pick <span class="math inline">\(a, b\in E_i^*TE_i^*\)</span>.</p>
-<p>Since <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(ab\)</span> are symmetric,
-<span class="math display">\[ab = (ab)^\top = b^\top a^\top = ba.\]</span>
-Hence <span class="math inline">\(E_i^*TE_i^*\)</span> is commutative.</p>
-<div class="line-block">(G) <span class="math inline">\(\Rightarrow\)</span> (S)</div>
-<p>Fix <span class="math inline">\(i\)</span> and pick <span class="math inline">\(a \in E_i^*TE_i^*\)</span>. Pick vertices <span class="math inline">\(y, z\in X\)</span>.</p>
-<p>We want to show that
-<span class="math display">\[a_{yz} = a_{zy}.\]</span>
-We may assume that
-<span class="math display">\[\partial(x, y) = \partial(x,z) = i,\]</span>
-othewise
-<span class="math display">\[a_{yz} = a_{zy} = 0.\]</span>
-By our assumption, there exists <span class="math inline">\(g\in G\)</span> such that
-<span class="math display">\[g(y) = z, \quad g(z) = y, \quad g(x) = x.\]</span>
-Let <span class="math inline">\(\hat{g}\)</span> denote the permutation matrix representing <span class="math inline">\(g\)</span>, i.e.,
-<span class="math display">\[\hat{g}\hat{y} =\widehat{g(y)} \quad \text{for all }\ y\in X, \quad \hat{y} = \begin{pmatrix}0\\\vdots \\ 1 \\\vdots \\0\end{pmatrix}\begin{matrix} \\ \\ \leftarrow y \\ \\ \text{ } \end{matrix}.\]</span>
-If <span class="math inline">\(g\in \mathrm{Aut}(\Gamma)\)</span>, then
-<span class="math display">\[\hat{g}A = A\hat{g} \quad \text{Exercise}.\]</span>
-Also we have
-<span class="math display">\[\hat{g}E_j^* = E^*_j\hat{g} \quad (0\leq j\leq D),\]</span>
-since
-<span class="math display">\[\partial(x,y) = \partial(g(x), g(y)) = \partial(x, g(y)).\]</span>
-Hence <span class="math inline">\(\hat{g}\)</span> commutes with each element of <span class="math inline">\(T\)</span>. We have
-<span class="math display">\[\begin{align}
-a_{yz} &amp; = (\hat{g}^{-1}a\hat{g})_{yz}, \quad (\hat{g})_{yz} = \begin{cases} 1 &amp; g(z) = y\\ 0 &amp; \text{else.}\end{cases}\\
-&amp; = \sum_{y&#39;, z&#39;}(\hat{g}^{-1})_{yy&#39;}a_{y&#39;z&#39;}\hat{g}_{z&#39;z}\\
-&amp; \quad (\text{zero except for $g^{-1}(y&#39;) = y, \; g(z) = z&#39;$}.)\\
-&amp; = a_{g(y)g(z)}\\
-&amp; a_{zy}.
-\end{align}\]</span>
-This proves Theorem <a href="lec7.html#thm:thin-condition">7.1</a>.</p>
-</div>
-<p><strong>Open Problem:</strong>
-Find all the graphs that satisfy the condition (G) for every vertex <span class="math inline">\(x\)</span>.</p>
-<p><span class="math inline">\(H(N, 2)\)</span> is one example, because
-<span class="math display">\[\mathrm{Aut}\Gamma_{1\cdots 1} \simeq S_\Omega, \quad x = (1\cdots 1), \Gamma_i(x)
-= \{\hat{S} \mid |S| = i\}.\]</span></p>
-<p>Property (G) is clearly related to the distance-transitive property.</p>
-<div class="definition">
-<p><span id="def:unlabeled-div-54" class="definition"><strong>Definition 8.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any graph. <span class="math inline">\(\Gamma\)</span> with <span class="math inline">\(G\subseteq \mathrm{Aut}(\Gamma)\)</span> is said to be distance-transitive (or two-point homogeneous), whenever
-<span class="math display">\[\text{for all } x, x&#39;, y, y&#39;\in X \; \text{ with } \partial(x,y) = \partial(x&#39;,y&#39;),\]</span>
-there exists <span class="math inline">\(g\in G\)</span> such that
-<span class="math display">\[g(x) = y,\quad g(x&#39;) = y&#39;.\]</span>
-(This means <span class="math inline">\(G\)</span> is as close to being doubly transitive as possible.)</p>
-</div>
+<div id="lec9" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Thin <span class="math inline">\(T\)</span>-Module<a href="lec9.html#lec9" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Monday, February 8, 1993</strong></p>
+<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any graph.</p>
 
 </div>
             </section>
@@ -187,8 +140,8 @@ there exists <span class="math inline">\(g\in G\)</span> such that
           </div>
         </div>
       </div>
-<a href="lec7.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lec9.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec8.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -219,7 +172,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-lecture8.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/09-lecture9.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -227,7 +180,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/icu-hsuzuki/t-algebra/master/08-lecture8.Rmd",
+"link": "https://github.com/icu-hsuzuki/t-algebra/master/09-lecture9.Rmd",
 "text": null
 },
 "download": ["t-algebra.pdf", "t-algebra.epub"],
