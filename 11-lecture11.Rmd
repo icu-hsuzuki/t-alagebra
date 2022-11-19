@@ -1,0 +1,4 @@
+# Examples of $T$-Module {#lec11}
+**Friday, February 12, 1993**
+
+Let $\Gamma = (X, E)$ be any graph.

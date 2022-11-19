@@ -1,4 +1,4 @@
-# Thin $T$-Module {#lec9}
+# Thin $T$-Module, I {#lec9}
 **Monday, February 8, 1993**
 
 Let $\Gamma = (X, E)$ be any graph.
