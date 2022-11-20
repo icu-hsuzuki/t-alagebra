@@ -1,4 +1,4 @@
-# The Johnson Graph $J(D,n)$ {#lec7}
+# The Johnson Graph $J(D,N)$ {#lec7}
 **Wednesday, February 3, 1993**
 
 :::{.definition}
@@ -95,9 +95,9 @@ Recall
 $$(RL - DE^*_D) |_{\tilde{V}}$$
 is the adjacency map in $\tilde{\Gamma}$.
 
-To find eigenvalues of $\tilde{A}$, pick any irreducible $T(x)$-module $W$ with the endpoint $r\leq D$. Then by Theorem \@ref(thm:hd2-module) 
+To find eigenvalues of $\tilde{A}$, pick any irreducible $T(x)$-module $W$ with the endpoint $r\leq D$. Then by Theorem \@ref(thm:hd2-modules) 
 $$\text{diam}(W) = N-2r+1.$$
-Let $w_0, w_1, \ldots, w_{N-2r}$ denote a basis for $W$ as in Theorem \@ref(thm:hd2-module). Then,
+Let $w_0, w_1, \ldots, w_{N-2r}$ denote a basis for $W$ as in Theorem \@ref(thm:hd2-modules). Then,
 $$w_{D-r} \in E^*_DW \subseteq \tilde{V}.$$
 
 Observe: 
@@ -122,7 +122,7 @@ The eigenspace for eigenvalue
 $$(N-D-r)(D-r)-r \quad (\text{monotonously decreasing with respec to }r)$$
 appears with multiplicity
 $$\binom{N}{r} - \binom{N}{r-1}$$
-in this sum by Theorem \@ref(thm:hd2-module) $(iv)$.
+in this sum by Theorem \@ref(thm:hd2-modules) $(iv)$.
 :::
 
 :::{.theorem #thin-condition}

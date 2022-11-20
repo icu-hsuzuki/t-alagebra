@@ -77,7 +77,7 @@ _Pf._ \quad By $(b)$,
 & = 2[A^*, L]\\
 & = A^* \frac{2A - [A,A^*]}{2} - \frac{2A - [A, A^*]}{2}A^*
 \end{align}
-So we have (\2(#eq:6-2))
+So we have (\@ref(eq:6-2))
 $$
 {A^*}^2A - 2A^*AA^* + A{A^*}^2 - 4A   = 0.
 $$
@@ -150,7 +150,7 @@ $(a)$ We have, by $(b)$, $(c)$
 \end{equation}
 Since $A^* = L^* + R^*$, 
 $$R^* = \frac{2A^* + [A^*, A]}{4}, \quad L^* = \frac{2A^* - [A^* - A]}{4}.$$
-Now $(a)$ is seen to be equivalent to (\@(#eq:6-2)) upon evaluation. 
+Now $(a)$ is seen to be equivalent to (\@ref(eq:6-2)) upon evaluation. 
 This proves Claim 2.
 
 :::{.remark}
@@ -160,10 +160,10 @@ This proves Claim 2.
 & = \frac{1}{4}({A^*}^2A - 2A^*AA^* + A{A^*}^2)\\
 & = A,
 \end{align}
-by (\@(#eq:6-2)).
+by (\@ref(eq:6-2)).
 :::
 
-Now apply same argument as for (\@(#eq:6-1)), (\@(#eq:6-2)) of Theorem \@(thm:hd2-module1) and observe $A^*$ has $D+1$ distinct eigenvalues. So,
+Now apply same argument as for (\@ref(eq:6-1)), (\@ref(eq:6-2)) of Theorem \@ref(thm:hd2-modules) and observe $A^*$ has $D+1$ distinct eigenvalues. So,
 $$A^* = \sum_{i=0}^D(D-2i)E^*_i$$
 generates 
 $$M^* = \mathrm{Span}(E^*_0, \ldots, E^*_D).$$

@@ -66,10 +66,9 @@ ggplot(df_eg32, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(pan
 
 :::{.example}
 $G = \langle a, b \mid a^6 = 1, b^2, ab = ba\rangle$, $\Delta = \{a, a^{-1}, b\}$.
-
 ```{r echo=FALSE, fig.width=3.5, fig.height=2.5, message=FALSE, fig.align="center", warning = FALSE}
 library(tidyverse)
-df_eg32 <- data.frame(x = c(0, 1, 3, 4, 3, 1, 0, 0.8, 1.5, 1, 1.5, 1.5, 2.5, 3, 2.5, 2.5, 3.2, 4, 3.2, 3.2, 2.5, 3, 2.5,2.5, 1.5, 1, 1.5, 1.5, 0.8), y = c(0, -1.5, -1.5, 0, 1.5, 1.5, 0, 0, -1, -1.5, NA, -1, -1, -1.5, NA, -1, 0, 0, NA, 0, 1, 1.5, NA, 1, 1, 1.5, NA, 1, 0))
+df_eg32 <- data.frame(x = c(0, 1, 3, 4, 3, 1, 0, 0.8, 1.5, 1, 1.5, 1.5, 2.5, 3, 2.5, 2.5, 3.2, 4, 3.2, 3.2, 2.5, 3, 2.5,2.5, 1.5, 1, 1.5, 1.5, 0.8), y = c(0, -1.5, -1.5, 0, 1.5, 1.5, 0, 0, -1, -1.5, -1, -1, -1, -1.5, -1, -1, 0, 0, 0, 0, 1, 1.5, 1, 1, 1, 1.5, 1, 1, 0))
 ggplot(df_eg32, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(panel.border = element_blank(),line = element_blank(),
         text = element_blank(),
         title = element_blank()) +
@@ -84,6 +83,8 @@ ggplot(df_eg32, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(pan
   annotate("text", x=1.6, y = 0.85, label = "a^{-1}", parse = TRUE) + annotate("text", x=2.4, y = 0.85, label = "a^{-2}", parse = TRUE)
 ```
 :::
+
+
 
 :::{.remark}
 $\mathrm{Aut}(\Gamma) \simeq D_6\times \mathbb{Z}_2$ contains two regular subgroups isomorphic to $D_6$ and $\mathbb{Z}_5 \times \mathbb{Z}_2$ and $\Gamma$ is obtained as Cayley graphs in two ways.
