@@ -1,4 +1,3 @@
 # Thin $T$-Module, II {#lec10}
 **Wednesday, February 10, 1993**
 
-Let $\Gamma = (X, E)$ be any graph.
