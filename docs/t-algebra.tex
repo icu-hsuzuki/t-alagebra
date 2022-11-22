@@ -2323,7 +2323,57 @@ with multiplicity \(\dim (\mathrm{Ker}(\theta I - L) = 1)\).
 
 \textbf{Friday, February 12, 1993}
 
-Let \(\Gamma = (X, E)\) be any graph.
+Let \(\Gamma = (X, E)\) be a connected graph.
+
+Let \(\theta_0\) be the maximal eigenvalue of \(\Gamma\), and \(\delta\) its corresponding eigenvector.
+\[\delta = \sum_{y\in X}\delta_y \hat{y}.\]
+Without loss of generality, we may assume that \(\delta_y\in \mathbb{R}^*\) for all \(y\in X\).
+
+\begin{lemma}
+\protect\hypertarget{lem:principal-module}{}\label{lem:principal-module}
+
+Fix a vertex \(x\in X\). Write \(T \equiv T(x)\), \(E^*_i\equiv E^*_i(x)\).
+
+\((i)\) \(T\delta = T\hat{x}\) is an irreducible \(T\)-module.
+
+\((ii)\) Given any irreducible \(T\)-module \(W\), the following are equivalent:\\
+\(\quad (iia)\) \(W = T\delta\).\\
+\(\quad (iib)\) The diameter \(d(W) = d(x)\).\\
+\(\quad (iic)\) The endpoint \(r(W) = 0\).
+
+\end{lemma}
+
+\begin{proof}
+\((i)\) Observe: there exists an irreducible \(T\)-module \(W\) that contains \(\delta\).
+
+Let \(V = \sum_{i}W_i\) be a direct sum decomposition of the standard module. Then
+\[\mathrm{Span}\delta = E_0V = \sum_{i}E_0W_i.\]
+So, \(E_0W_i \neq 0\) for some \(i\). Then,
+\[\delta \in E_0W_i \subseteq W_i.\]
+Observe: \(T\delta\) is an irreducible \(T\)-module.
+
+Since \(\delta\in W\), where \(W\) is a \(T\)-module. As \(T\delta \subseteq W\) and \(W\) is irreducible, \(T\delta = W\).
+
+Observe: \(T\delta = T\hat{x}\).
+
+Since \(\hat{x} = \delta_x^{-1}E^*_0\delta \in T\delta\), \(T\hat{x} \subseteq T\delta\). Since \(T\delta\) is irreducible, \(T\hat{x} = T\delta\).
+
+\((ii)\) \((a)\to (b)\):
+\[E^*_i\delta = \sum_{y\in X, \partial(x,y) = i}\delta_y\hat{y} \neq 0, \quad (0\leq i\leq d(x)), \]
+because \(\delta_y >0\) for every \(y\in X\).
+
+Hence,
+\[E^*_iT\delta \neq 0, \quad (0\leq i\leq d(x)).\]
+Thus, \(d(x) = d(W)\).
+
+\((b)\to (c)\): Immediate.
+
+\((c)\to (a)\):
+Since \(r(W) = 0\), \(E^*_0W \neq 0\).
+Hence, \(\hat{x}\in W\) and \(T\hat{x} \subseteq W\).
+
+By the irreduciblity, we have \(T\hat{x} = W\).
+\end{proof}
 
   \bibliography{book.bib,packages.bib}
 

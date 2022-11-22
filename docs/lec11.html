@@ -134,7 +134,40 @@ div.csl-indent {
 <div id="lec11" class="section level1 hasAnchor" number="11">
 <h1><span class="header-section-number">Chapter 11</span> Examples of <span class="math inline">\(T\)</span>-Module<a href="lec11.html#lec11" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Friday, February 12, 1993</strong></p>
-<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any graph.</p>
+<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be a connected graph.</p>
+<p>Let <span class="math inline">\(\theta_0\)</span> be the maximal eigenvalue of <span class="math inline">\(\Gamma\)</span>, and <span class="math inline">\(\delta\)</span> its corresponding eigenvector.
+<span class="math display">\[\delta = \sum_{y\in X}\delta_y \hat{y}.\]</span>
+Without loss of generality, we may assume that <span class="math inline">\(\delta_y\in \mathbb{R}^*\)</span> for all <span class="math inline">\(y\in X\)</span>.</p>
+<div class="lemma">
+<p><span id="lem:principal-module" class="lemma"><strong>Lemma 11.1  </strong></span>Fix a vertex <span class="math inline">\(x\in X\)</span>. Write <span class="math inline">\(T \equiv T(x)\)</span>, <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(T\delta = T\hat{x}\)</span> is an irreducible <span class="math inline">\(T\)</span>-module.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Given any irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span>, the following are equivalent:<br />
+<span class="math inline">\(\quad (iia)\)</span> <span class="math inline">\(W = T\delta\)</span>.<br />
+<span class="math inline">\(\quad (iib)\)</span> The diameter <span class="math inline">\(d(W) = d(x)\)</span>.<br />
+<span class="math inline">\(\quad (iic)\)</span> The endpoint <span class="math inline">\(r(W) = 0\)</span>.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-69" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span> Observe: there exists an irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> that contains <span class="math inline">\(\delta\)</span>.</p>
+<p>Let <span class="math inline">\(V = \sum_{i}W_i\)</span> be a direct sum decomposition of the standard module. Then
+<span class="math display">\[\mathrm{Span}\delta = E_0V = \sum_{i}E_0W_i.\]</span>
+So, <span class="math inline">\(E_0W_i \neq 0\)</span> for some <span class="math inline">\(i\)</span>. Then,
+<span class="math display">\[\delta \in E_0W_i \subseteq W_i.\]</span>
+Observe: <span class="math inline">\(T\delta\)</span> is an irreducible <span class="math inline">\(T\)</span>-module.</p>
+<p>Since <span class="math inline">\(\delta\in W\)</span>, where <span class="math inline">\(W\)</span> is a <span class="math inline">\(T\)</span>-module. As <span class="math inline">\(T\delta \subseteq W\)</span> and <span class="math inline">\(W\)</span> is irreducible, <span class="math inline">\(T\delta = W\)</span>.</p>
+<p>Observe: <span class="math inline">\(T\delta = T\hat{x}\)</span>.</p>
+<p>Since <span class="math inline">\(\hat{x} = \delta_x^{-1}E^*_0\delta \in T\delta\)</span>, <span class="math inline">\(T\hat{x} \subseteq T\delta\)</span>. Since <span class="math inline">\(T\delta\)</span> is irreducible, <span class="math inline">\(T\hat{x} = T\delta\)</span>.</p>
+<p><span class="math inline">\((ii)\)</span> <span class="math inline">\((a)\to (b)\)</span>:
+<span class="math display">\[E^*_i\delta = \sum_{y\in X, \partial(x,y) = i}\delta_y\hat{y} \neq 0, \quad (0\leq i\leq d(x)), \]</span>
+because <span class="math inline">\(\delta_y &gt;0\)</span> for every <span class="math inline">\(y\in X\)</span>.</p>
+<p>Hence,
+<span class="math display">\[E^*_iT\delta \neq 0, \quad (0\leq i\leq d(x)).\]</span>
+Thus, <span class="math inline">\(d(x) = d(W)\)</span>.</p>
+<p><span class="math inline">\((b)\to (c)\)</span>: Immediate.</p>
+<p><span class="math inline">\((c)\to (a)\)</span>:
+Since <span class="math inline">\(r(W) = 0\)</span>, <span class="math inline">\(E^*_0W \neq 0\)</span>.
+Hence, <span class="math inline">\(\hat{x}\in W\)</span> and <span class="math inline">\(T\hat{x} \subseteq W\)</span>.</p>
+<p>By the irreduciblity, we have <span class="math inline">\(T\hat{x} = W\)</span>.</p>
+</div>
 
 </div>
             </section>
