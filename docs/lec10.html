@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 10 Thin \(T\)-Module, II | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 10 Thin \(T\)-Module, II | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-21" />
+<meta name="date" content="2022-11-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -134,6 +134,179 @@ div.csl-indent {
 <div id="lec10" class="section level1 hasAnchor" number="10">
 <h1><span class="header-section-number">Chapter 10</span> Thin <span class="math inline">\(T\)</span>-Module, II<a href="lec10.html#lec10" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Wednesday, February 10, 1993</strong></p>
+<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any graph.</p>
+<p>Fix a vertex <span class="math inline">\(x\in X\)</span>. Let <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>, the subconstituent algebra over <span class="math inline">\(\mathbb{C}\)</span>, and <span class="math inline">\(V = \mathbb{C}^{|X|}\)</span> the standard module.</p>
+<div class="lemma">
+<p><span id="lem:orthogonality" class="lemma"><strong>Lemma 10.1  </strong></span>With above notation, let <span class="math inline">\(W\)</span> denote a thin irreducible <span class="math inline">\(T(x)\)</span>-module with endpoint <span class="math inline">\(r\)</span> and diameter <span class="math inline">\(d\)</span>. Let
+<span class="math display">\[\begin{align}
+a_i &amp; = a_i(W) \quad (0\leq i \leq d)\\
+x_i &amp; = x_i(W) \quad (1\leq i \leq d)\\
+p_i &amp; = p_i(W) \quad (0\leq i \leq d+1)
+\end{align}\]</span>
+be from Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>, and measure <span class="math inline">\(m = m_W\)</span>.
+Then,</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(p_0, \ldots, p_{d+1}\)</span> are orthogonal with respect to <span class="math inline">\(m\)</span>, i.e.,</div>
+<p><span class="math display">\[\sum_{\theta\in \mathbb{R}}p_i(\theta)p_j(\theta)m(\theta) = \delta_{ij}x_1x_2\cdots x_i \quad (0\leq i,j\leq d+1) \text{ with }\; x_{d+1}=0.\]</span></p>
+<div class="line-block"><span class="math inline">\(\quad (ia)\)</span> <span class="math inline">\({\displaystyle \sum_{\theta\in \mathbb{R}}p_i(\theta)^2m(\theta) = x_1\cdots x_i \quad (0\leq i\leq d)}\)</span>.</div>
+<div class="line-block"><span class="math inline">\(\quad (iia)\)</span> <span class="math inline">\({\displaystyle \sum_{\theta\in \mathbb{R}}m(\theta) = 1}\)</span>.</div>
+<div class="line-block"><span class="math inline">\(\quad (iiia)\)</span> <span class="math inline">\({\displaystyle \sum_{\theta\in \mathbb{R}}p_i(\theta)^2\theta m(\theta) = x_1\cdots x_ia_i \quad (0\leq i\leq d)}\)</span>.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-64" class="proof"><em>Proof</em>. </span>Pick <span class="math inline">\(0\neq w_0\in E^*_rW\)</span>. Set
+<span class="math display">\[w_i = p_i(A)w_0 \in E^*_{r+i}W.\]</span>
+Since <span class="math inline">\(E^*_iW\)</span> and <span class="math inline">\(E^*_jW\)</span> are orthogonal if <span class="math inline">\(i\neq j\)</span>,</p>
+<p><span class="math display">\[\begin{align}
+\delta_{ij}\|w_i\|^2 &amp; = \langle w_i, w_j\rangle\\
+&amp; = \langle p_i(A)w_0, p_j(A)w_0\rangle\\
+&amp; = \left\langle p_i(A)\left(\sum_{\ell=0}^R E_\ell\right)w_0, p_j(A)\left(\sum_{\ell=0}^R E_\ell\right)w_0\right\rangle\\
+&amp; = \left\langle \sum_{\ell=0}^R p_i(\theta_\ell)E_\ell w_0, \sum_{\ell=0}^R p_j(\theta_\ell)E_\ell w_0\right\rangle &amp;&amp; (\text{as } AE_j = \theta_jE_j)\\
+&amp; = \sum_{\ell=0}^R p_i(\theta_\ell)\overline{p_j(\theta_\ell)}\|E_\ell w_0\|^2\\
+&amp; \qquad\qquad (\text{as } \; p_j\in \mathbb{R}[\lambda], \quad
+\theta_\ell\in \mathbb{R}, \quad m(\theta_i)\|w_0\|^2 = \|E_iw_0\|^2)\\
+&amp; = \sum_{\theta\in \mathbb{R}} p_i(\theta)p_j(\theta)m(\theta)\|w_0\|^2.
+\end{align}\]</span>
+Now we are done by Lemma <a href="lec9.html#lem:measure-wi">9.2</a> as
+<span class="math display">\[\|w_i\|^2 = \|w_0\|^2 x_1x_2\ldots x_i.\]</span>
+For <span class="math inline">\((ia)\)</span>, set <span class="math inline">\(i = j\)</span>, and for <span class="math inline">\((ib)\)</span>, set <span class="math inline">\(i=j=0\)</span>.</p>
+<p><span class="math inline">\((ii)\)</span> We have
+<span class="math display">\[\begin{align}
+\langle w_i,Aw_i\rangle &amp; = \langle w_i, w_{i+1} + a_iw_i + x_i w_{i-1}\rangle\\
+&amp; = \overline{a_i}\|w_i\|^2\\
+&amp; = a_i x_1\cdots x_i\|w_0\|^2,
+\end{align}\]</span>
+as <span class="math inline">\(a_i\in \mathbb{R}\)</span> by Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>.</p>
+<p>Also,
+<span class="math display">\[\begin{align}
+\langle w_i, Aw_i\rangle &amp; = \langle p_i(A)w_0, Ap_i(A)w_0\rangle \\
+&amp; = \left\langle p_i(A)\left(\sum_{\ell=0}^R E_\ell\right)w_0, A p_i(A)\left(\sum_{\ell=0}^R E_\ell\right)w_0\right\rangle &amp;&amp; (\text{ as in $(i)$})\\
+&amp; = \sum_{\ell = 0}^D p_i(\theta_\ell)^2 \theta_\ell \|E_\ell w_0\|^2\\
+&amp; = \sum_{\theta\in \mathbb{R}}p_i(\theta)^2\theta m(\theta)\|w_0\|^2.
+\end{align}\]</span>
+Thus, we have <span class="math inline">\((ii)\)</span>.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:determined-by-m" class="lemma"><strong>Lemma 10.2  </strong></span>With above notation, let
+<span class="math inline">\(W\)</span> be a thin irreducible <span class="math inline">\(T(x)\)</span>-module with measure <span class="math inline">\(m\)</span>. Then <span class="math inline">\(m\)</span> determines diameter <span class="math inline">\(d(W)\)</span>,
+<span class="math display">\[\begin{align}
+a_i &amp; = a_i(W) \quad (0\leq i\leq d)\\
+x_i &amp; = x_i(W) \quad (1\leq i\leq d)\\
+p_i &amp; = p_i(W) \quad (0\leq i\leq d+1).
+\end{align}\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-65" class="proof"><em>Proof</em>. </span>Note that <span class="math inline">\(d+1\)</span> is the number of <span class="math inline">\(\theta\in \mathbb{R}\)</span> such that <span class="math inline">\(m(\theta)\neq 0\)</span>.
+Hence <span class="math inline">\(m\)</span> determines <span class="math inline">\(d\)</span>.</p>
+<p>Apply <span class="math inline">\((ia)\)</span>, <span class="math inline">\((ii)\)</span> of Lemma <a href="#lemma:orthogonality"><strong>??</strong></a>.
+<span class="math display">\[\begin{align}
+&amp; \sum_{\theta\in\mathbb{R}}m(\theta) = 1 &amp;&amp; p_0 =1.\\
+&amp; \sum_{\theta\in\mathbb{R}}\theta m(\theta) = a_0 &amp;&amp; p_1 = \lambda - a_0\\
+&amp; \sum_{\theta\in\mathbb{R}}p_1(\theta)^2 m(\theta) = x_1 \\
+&amp; \sum_{\theta\in\mathbb{R}}p_1(\theta)^2\theta m(\theta) = x_1a &amp;&amp; \to a_1\\
+&amp; \qquad p_2 = (\lambda - a_1)p_1 - x_1p_0\\
+&amp; \sum_{\theta\in\mathbb{R}}p_2(\theta)^2 m(\theta) = x_1x_2 &amp;&amp; \to x_2\\
+&amp; \sum_{\theta\in\mathbb{R}}p_2(\theta)^2\theta m(\theta) = x_1x_2a_2 &amp;&amp; \to a_2\\
+&amp; \qquad p_3 = (\lambda-a_2)p_2 - x_2p_1\\
+&amp; \qquad\qquad \vdots\\
+&amp; \sum_{\theta\in\mathbb{R}}p_d(\theta)^2 m(\theta) = x_1x_2\cdots x_d &amp;&amp; \to x_d\\
+&amp; \sum_{\theta\in\mathbb{R}}p_d(\theta)^2\theta m(\theta) = x_1x_2\cdots x_da_d &amp;&amp; \to a_d\\
+&amp; \qquad p_{d+1} = (\lambda-a_d)p_d - x_dp_{d-1}.\\
+\end{align}\]</span>
+This proves the assertions.</p>
+</div>
+<div class="corollary">
+<p><span id="cor:isomorphic" class="corollary"><strong>Corollary 10.1  </strong></span>With above notation, let
+<span class="math inline">\(W\)</span>, <span class="math inline">\(W&#39;\)</span> denote thin irreducible <span class="math inline">\(T(x)\)</span>-modules. The following are equivalent.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(W\)</span>, <span class="math inline">\(W\)</span> are isomorpphic as <span class="math inline">\(T\)</span>-modoles.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(r(W) = r(W&#39;)\)</span> and <span class="math inline">\(m_W = m_{W&#39;}\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(r(W) = r(W&#39;)\)</span>, <span class="math inline">\(d(W) = d(W&#39;)\)</span>, <span class="math inline">\(a_i(W) = a_i(W&#39;)\)</span> amd <span class="math inline">\(x_i(W) = x_i(W&#39;)\)</span> <span class="math inline">\(\quad (0\leq i\leq d)\)</span>.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-67" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\Rightarrow (iii)\)</span>
+Write <span class="math inline">\(r\equiv r(W)\)</span>, <span class="math inline">\(r&#39; \equiv r(W&#39;)\)</span>, <span class="math inline">\(d = d(W)\)</span>, <span class="math inline">\(d&#39; = d(W&#39;)\)</span>, <span class="math inline">\(a_i = a_i(W)\)</span>, <span class="math inline">\(a_i&#39; = a_i(W&#39;)\)</span>, <span class="math inline">\(x_i = x_i(W)\)</span> and <span class="math inline">\(x_i&#39; = x_i(W&#39;)\)</span>.</p>
+<p>Let <span class="math inline">\(\sigma: W\to W&#39;\)</span> denote an isomorphism of <span class="math inline">\(T\)</span>-modules. (See Definition <a href="lec5.html#def:isomorphic-modules">5.1</a>.)</p>
+<p>For every <span class="math inline">\(i\)</span>,
+<span class="math display">\[\sigma E^*_iW = E^*_i\sigma W = E^*_iW&#39;.\]</span>
+So, <span class="math inline">\(r = r&#39;\)</span> and <span class="math inline">\(d = d&#39;\)</span>.</p>
+<p>To show <span class="math inline">\(a_i = a_i&#39;\)</span>, pick <span class="math inline">\(w\in E^*_{r+i}W \setminus \{0\}\)</span>. Then,
+<span class="math display">\[E^*_{r+i}AE^*_{r+i}\sigma (W) = \sigma(E^*_{r+i}AE^*_{r+i}w) = \sigma(a_iw) = a_i\sigma(w), \]</span>
+and <span class="math inline">\(\sigma w\neq 0\)</span>. So,
+<span class="math display">\[\begin{align}
+a_i &amp; = \text{eigenvalue of $E^*_{r+i}AE^*_{r+i}$ on $E^*_{r+i}W$}\\
+&amp; = a_i&#39;
+\end{align}\]</span>
+It is similar to show <span class="math inline">\(x = x&#39;\)</span>.</p>
+<div class="remark">
+<p><span id="unlabeled-div-66" class="remark"><em>Remark</em>. </span>Pick <span class="math inline">\(w\in E^*_{r+i-1}W \setminus \{0\}\)</span>
+<span class="math display">\[E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}\sigma(W) = \sigma(E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}w) = x_i\sigma(w).\]</span>
+Hence, <span class="math inline">\(x_i\)</span> is the eigenvalue of <span class="math inline">\(E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}\)</span> on <span class="math inline">\(E^*_{r+i-1}W = x_i&#39;\)</span>.</p>
+</div>
+<p><span class="math inline">\((iii)\Rightarrow (i)\)</span></p>
+<p>Pick <span class="math inline">\(0\neq w_0\in E^*_rW\)</span>, <span class="math inline">\(0\neq w_0&#39;\in E^*_rW&#39;\)</span>. Let <span class="math inline">\(p_i\)</span> be in Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>, and set
+<span class="math display">\[\begin{align}
+w_i &amp; = p_i(A)w_0\in E^*_{r+i}W \quad (0\leq i\leq d) \\
+w_i&#39; &amp; = p_i&#39;(A)w_0&#39; \in E^*_{r+i}W \quad (0\leq i\leq d)
+\end{align}\]</span></p>
+<p>Define a linear transformation,
+<span class="math display">\[\sigma: W \to W&#39; \quad (w_i \mapsto w_i&#39;).\]</span>
+Since <span class="math inline">\(\{w_i\}\)</span> and <span class="math inline">\(\{w_i&#39;\}\)</span> are bases with <span class="math inline">\(d = d&#39;\)</span>, <span class="math inline">\(\sigma\)</span> is an isomorphism of vector spaces.</p>
+<p>We need to show
+<span class="math display">\[a\sigma = \sigma a \quad (\text{for all }\; a\in T).\]</span>
+Take <span class="math inline">\(a = E^*_j\)</span> for some <span class="math inline">\(j\)</span> <span class="math inline">\((0\leq j\leq d(x))\)</span>. Then for all <span class="math inline">\(i\)</span>, we have
+<span class="math display">\[E^*_j \sigma w_i = E^*_jw_i&#39; = \delta_{ij}w_i&#39;,\]</span>
+<span class="math display">\[\sigma E^*_jw_i = \delta_{ij}\sigma(w_i) = \delta_{ij}w_i&#39;.\]</span>
+<span class="math display">\[E^*_j \sigma w_i = \sigma E^*_jw_i?\]</span>
+Take an adjacency matrix <span class="math inline">\(A\)</span> of <span class="math inline">\(a\)</span>. Then,
+<span class="math display">\[A\sigma w_i = Aw_i&#39; = w_{i+1}&#39; + a_i&#39;w_i&#39; + x_i&#39;w_{i-1}&#39; = \sigma(w_{i+1} + a_iw_i + x_iw_{i-1}) = \sigma Aw_i.\]</span></p>
+<p><span class="math inline">\((ii)\Rightarrow (iii)\)</span> Lemma <a href="lec10.html#lem:determined-by-m">10.2</a>.</p>
+<p><span class="math inline">\((iii)\Rightarrow (ii)\)</span>
+Given <span class="math inline">\(d\)</span>, <span class="math inline">\(a_i\)</span>, <span class="math inline">\(x_i\)</span>, we can compute the polynomial sequence
+<span class="math display">\[p_0, p_1, \ldots, p_{d+1}\]</span>
+for <span class="math inline">\(W\)</span>.</p>
+<p>Show <span class="math inline">\(p_0, p_1, \ldots, p_{d+1}\)</span> determines <span class="math inline">\(m = m_W\)</span>. Set
+<span class="math display">\[\Delta = \{\theta\in \mathbb{R}\mid p_{d+1}(\theta) = 0\}.\]</span></p>
+<p>Observe: <span class="math inline">\(|\Delta| = d+1\)</span>. See ‘An Introcuction to Interlacing’.</p>
+<p><span class="math inline">\(m(\theta) = 0\)</span> if <span class="math inline">\(\theta\not\in\Delta\quad (\theta\in \mathbb{R})\)</span>. So it suffices to find <span class="math inline">\(m(\theta)\)</span>, <span class="math inline">\(\theta\in \Delta\)</span>.</p>
+<p>By Lemma <a href="lec10.html#lem:orthogonality">10.1</a> <span class="math inline">\((i)\)</span>,
+<span class="math display">\[
+\begin{cases}
+\sum_{\theta\in\Delta} m(\theta)p_0(\theta) &amp; = 1\\
+\sum_{\theta\in\Delta} m(\theta)p_1(\theta) &amp; = 0\\
+\qquad \vdots &amp; \\
+\sum_{\theta\in\Delta} m(\theta)p_d(\theta) &amp; = 0
+\end{cases}
+\]</span>
+<span class="math inline">\(d+1\)</span> linear equation with <span class="math inline">\(d+1\)</span> unknowns <span class="math inline">\(m(\theta)\)</span> (<span class="math inline">\(\theta\in \Delta\)</span>).</p>
+<p>But the coefficient matrix is essentially Vander Monde (since <span class="math inline">\(\deg p_i = i\)</span>).
+Hence the system is nonsingular and there are unique values for <span class="math inline">\(m(\theta)\)</span> <span class="math inline">\((\theta\in \Delta)\)</span>.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-68" class="remark"><em>Remark</em>. </span><span class="math display">\[\begin{pmatrix}
+\theta-a_0 &amp; -1 &amp; \cdots &amp; 0 &amp; 0 \\
+-x_1 &amp; \theta - a_1  &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \ddots  &amp; \ddots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; \theta-a_{d-1}  &amp; -1\\
+0 &amp; 0 &amp; \cdots &amp; -x_d &amp; \theta - a_d
+\end{pmatrix}
+\begin{pmatrix}
+p_0(\theta)\\
+\vdots\\
+\vdots\\
+\vdots\\
+p_d(\theta)
+\end{pmatrix} = 0,\]</span>
+where <span class="math inline">\(\theta\)</span> is an eigenvalue of a diagonalizable matrix
+<span class="math display">\[
+L =
+\begin{pmatrix}
+a_0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+x_1 &amp; a_1  &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \ddots  &amp; \ddots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; a_{d-1}  &amp; 1\\
+0 &amp; 0 &amp; \cdots &amp; x_d &amp; \theta a_d
+\end{pmatrix}
+\]</span>
+with multiplicity <span class="math inline">\(\dim (\mathrm{Ker}(\theta I - L) = 1)\)</span>.</p>
+</div>
 
 </div>
             </section>

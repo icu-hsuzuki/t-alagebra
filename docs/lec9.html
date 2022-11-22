@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 Thin \(T\)-Module, I | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 Thin \(T\)-Module, I | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-21" />
+<meta name="date" content="2022-11-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -149,7 +149,7 @@ Let <span class="math inline">\(x_i = x_i(W)\in \mathbb{C}\)</span> satisfying
 <span class="math display">\[E_{r+i-1}^*A{E^*_{r+i}AE^*_{r+i-1}|}_{E_{r+i}^*W} = x_i1|_{E_{r+i}^*} \quad (0\leq i\leq d).\]</span></p>
 </div>
 <div class="lemma">
-<p><span id="lem:thin-module-stucture" class="lemma"><strong>Lemma 9.1  </strong></span>With above notation, the following hold.</p>
+<p><span id="lem:thin-module-structure" class="lemma"><strong>Lemma 9.1  </strong></span>With above notation, the following hold.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(a_i\in \mathbb{R} \quad (0\leq i\leq d)\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(x_i\in \mathbb{R}^{&gt;0} \quad (0\leq i\leq d)\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iii)\)</span> Pick <span class="math inline">\(0\neq w_0\in E^*_rW\)</span>. Set <span class="math inline">\(w_i = E^*_{r+i}A^iw_0\)</span> for all <span class="math inline">\(i\)</span>. Then</div>
@@ -215,7 +215,7 @@ Hence <span class="math inline">\(\beta_0 = \cdots = \beta_d = 0\)</span> by <sp
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(d = |\{i \mid E_iW \neq 0\}| - 1.\)</span></div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-61" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span> Set as in Lemma <a href="lec9.html#lem:thin-module-stucture">9.1</a>,
+<p><span id="unlabeled-div-61" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span> Set as in Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>,
 <span class="math display">\[w_i = p_i(A)w_0\in E^*_{r+i}W.\]</span>
 Then <span class="math inline">\(w_0, w_1, \ldots, w_d\)</span> is a basis for <span class="math inline">\(W\)</span>. We have
 <span class="math display">\[W = Mw_0.\]</span>
@@ -238,7 +238,7 @@ Then,
 <div class="proof">
 <p><span id="unlabeled-div-62" class="proof"><em>Proof</em>. </span>It suffices to show that
 <span class="math display">\[\|w_i\|^2 = x_i\|w_i\|^2 \quad (1\leq i\leq d).\]</span>
-Recall by Lemma <a href="lec9.html#lem:thin-module-stucture">9.1</a> <span class="math inline">\((iiib)\)</span> that
+Recall by Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a> <span class="math inline">\((iiib)\)</span> that
 <span class="math display">\[Aw_j = w_{j+1} + a_jw_j + x_jw_{j-1} \quad (0\leq j\leq d), \quad w_{-1} = w_{d+1} = 0.\]</span>
 Now observe,
 <span class="math display">\[\begin{align}
@@ -246,7 +246,7 @@ Now observe,
 &amp; = \overline{x_i}\|w_{i-1}\|^2\\
 &amp; = x_i\|w_{i-1}\|^2.
 \end{align}\]</span>
-by Lemma <a href="lec9.html#lem:thin-module-stucture">9.1</a> <span class="math inline">\((ii)\)</span>.
+by Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a> <span class="math inline">\((ii)\)</span>.
 Also,
 <span class="math display">\[\begin{align}
 \langle w_{i-1}, Aw_i\rangle &amp; = \langle Aw_{i-1}, w_i\rangle \quad (text{since}\; \bar{A}^\top = A)\\
@@ -257,7 +257,7 @@ This proves the lemma.</p>
 </div>
 <div class="definition">
 <p><span id="def:unlabeled-div-63" class="definition"><strong>Definition 9.2  </strong></span>Let <span class="math inline">\(W\)</span> be an irreducible thin <span class="math inline">\(T(x)\)</span> module with endpoint <span class="math inline">\(r\)</span>, <span class="math inline">\(E^*_i \equiv E_i^*(x)\)</span>.</p>
-<p>The measure <span class="math inline">\(mm = m_W\)</span> is the function
+<p>The measure <span class="math inline">\(m = m_W\)</span> is the function
 <span class="math display">\[m: \mathbb{R} \to \mathbb{R}\]</span>
 such that
 <span class="math display">\[
