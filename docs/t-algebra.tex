@@ -128,7 +128,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-11-22}
+\date{2022-11-23}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -2347,7 +2347,7 @@ Fix a vertex \(x\in X\). Write \(T \equiv T(x)\), \(E^*_i\equiv E^*_i(x)\).
 \((i)\) Observe: there exists an irreducible \(T\)-module \(W\) that contains \(\delta\).
 
 Let \(V = \sum_{i}W_i\) be a direct sum decomposition of the standard module. Then
-\[\mathrm{Span}\delta = E_0V = \sum_{i}E_0W_i.\]
+\[\mathrm{Span}(\delta) = E_0V = \sum_{i}E_0W_i.\]
 So, \(E_0W_i \neq 0\) for some \(i\). Then,
 \[\delta \in E_0W_i \subseteq W_i.\]
 Observe: \(T\delta\) is an irreducible \(T\)-module.
@@ -2374,6 +2374,135 @@ Hence, \(\hat{x}\in W\) and \(T\hat{x} \subseteq W\).
 
 By the irreduciblity, we have \(T\hat{x} = W\).
 \end{proof}
+
+\begin{lemma}
+\protect\hypertarget{lem:baiparite-principal}{}\label{lem:baiparite-principal}Assume \(\Gamma\) is bipartite \((X = X^+ \cup X^-)\) (\(X^+\) and \(X^-\) are nonempty). Then the following are equivalent.
+
+\((i)\) There exist \(\alpha^+\) and \(\alpha^-\in \mathbb{R}\) such that
+
+\[\delta_x = \begin{cases} \alpha^+ & \text{if }\: x\in X^+\\
+\alpha^- & \text{if } x\in X^-.
+\end{cases}\]
+\textbar{} \((ii)\) There exist \(k+\) and \(k^-\in \mathbb{Z}^{>0}\) such that
+\[k(x) = \begin{cases} k^+ & \text{if }\: x\in X^+\\
+k^- & \text{if } x\in X^-.
+\end{cases}\]
+In this xase, \(k^+k^- = \theta_0^2\), and \(\Gamma\) is called bi-regular.
+\end{lemma}
+
+\begin{proof}
+\((i)\to(ii)\)
+
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-7-1} \end{center}
+
+\begin{align}
+A\delta & = A\left(\alpha^+\sum_{x\in X^+}\hat{x} + \alpha^-\sum_{y\in X^-}\hat{y}\right)\\
+& = \alpha^+\sum_{y\in X^-}k(y)\hat{y} + \alpha^-\sum_{x\in X^+}k(x)\hat{x}\\
+& = \theta_0\delta.
+\end{align}
+So,
+\[k(x)\alpha^- = \theta_0\alpha^+, \quad k(y)\alpha^+ = \theta_0\alpha^-.\]
+As \(\alpha^+\neq =\) and \(\alpha^- \neq 0\),
+\begin{align}
+k^+ & := k(x) \; \text{ is independent of the choice of $x\in X^+$, and}\\
+k^- & := k(y) \; \text{ is independent of the choice of $y\in X^-$.}
+\end{align}
+Moreover, \(k^+k^- = \theta_0^2\).
+
+\((ii)\to(i)\)
+Set
+\[\delta' = \sum_{y\in X}\alpha_y\hat{y} \quad \text{where}\; \alpha = \begin{cases} 1/\sqrt{k^-} & \text{if }\; y\in X^+\\ 1/\sqrt{k^+} & \text{if }\; y\in X^-.\end{cases}\]
+Then one checks
+\begin{align}
+A\delta' & = A\left(\frac{1}{\sqrt{k^-}}\sum_{y\in X^+}\hat{y} + \frac{1}{\sqrt{k^+}}\sum_{y\in X^-}\hat{y}\right)\\
+& =  \frac{k^-}{\sqrt{k^-}}\sum_{y\in X^-}\hat{y} + \frac{k^+}{\sqrt{k^+}}\sum_{y\in X^+}\hat{y}\\
+& = \sqrt{k^+k^-}\delta'
+\end{align}
+Since \(\delta' >0\), \(\delta'\in \mathrm{Span}(\delta)\), and \(\theta_0 = \sqrt{k^+k^-}\).
+\end{proof}
+
+\begin{definition}
+\protect\hypertarget{def:distance-regular}{}\label{def:distance-regular}For any graph \(\Gamma = (X, E)\), fix a vertex \(x\in X\). Set \(d = d(x)\).
+
+\(\Gamma\) is distance-regular \index{distance-regular} with respect to \(x\), if for all \(i\) : (0\leq i\leq d), and all \(y\in X\) such that \(\partial(x,y) = i\):
+\begin{align}
+c_i(x) & := |\{z\in X \mid \partial(x,z) = i-1, \; \partial(y,z) = 1\}|\\
+a_i(x) & := |\{z\in X \mid \partial(x,z) = i, \; \partial(y,z) = 1\}|\\
+b_i(x) & := |\{z\in X \mid \partial(x,z) = i+1, \; \partial(y,z) = 1\}|
+\end{align}
+depends only on \(i\), \(x\), and not on \(y\).
+
+(In this case, \(c_0(x) = a_0(x) = b_d(x) = 0\), \(c_1(x) = 1\), \(b_0(x) = k(x)\) is the valency of \(x\).)
+
+We call \(c_i(x)\), \(a_i(x)\) and \(b_i(x)\) the intersection numbers with respect to \(x\).
+\end{definition}
+
+\begin{example}
+\leavevmode
+
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-8-1} \end{center}
+
+\begin{align}
+c_0 &= 1 & c_1 &= 1 & c_2 &= 1\\
+a_0 &= 0 & a_1 &= 1 & a_2 &= 1\\
+b_0 &= 2 & b_1 &= 1 & b_2 &= 0
+\end{align}
+
+\end{example}
+
+\hypertarget{lec12}{%
+\chapter{Distance-Regular}\label{lec12}}
+
+\textbf{Monday, February 15, 1993}
+
+\begin{lemma}
+\protect\hypertarget{lem:distance-reguarity}{}\label{lem:distance-reguarity}
+
+For any connected graph \(\Gamma = (X, E)\), the following are equivalent.
+
+\((i)\) The trivial \(T(x)\)-module is thin for all \(x\in X\).
+
+\((ii)\) \(\displaystyle{\left\{\sum_{y\in X, \partial(x,y) = i}\hat{y} \left| 0\leq i\leq d(x)\right.\right\}}\) is a basis for the trivial \(T(x)\)-module for every \(x\in X\).
+
+\((iii)\) \(\Gamma\) is distance-regular with respect to \(x\) for all \(x\in X\).
+
+\end{lemma}
+
+\textbf{Note.}
+Let \(\Gamma = (X, E)\) be a graph, with \(X = \{x, y_1, y_2, y_3, z_1, z_2, z_3\}\), \(E = \{xy_1, xy_2, xy_3, y_1z_1, y_1z_2, y_2z_3, y_3z_3\}\).
+
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-9-1} \end{center}
+
+Then \((i)\), \((ii)\) are not equivalent for a single vertex \(x\).
+\begin{align}
+E^*_0T\hat{x} & = \langle \hat{x}\rangle, \\
+E^*_1T\hat{x} & = \langle y_1 + y_2 + y_3\rangle, \\
+E^*_2T\hat{x} & = \langle z_1 + z_2 + 2z_3\rangle.
+\end{align}
+
+:::\{.proof name=``Proof of Lemma \textbackslash2ref(distance-reguarity)\}
+\((i)\to (ii)\)
+Let \(\delta = \sum_{y\in X}\delta_y\hat{y}\) be an eigenvector for the maximal eigenvalue \(\theta_0\). Then,
+\begin{align}
+\sum_{y\in X, \partial(x,y) = 1}\hat{y} & = A\hat{x} \in T(x)\hat{x} = T(x)\delta \ni E^*_1\delta\\
+& = \sum_{y\in X, \partial(x,y)=1}\delta_h\hat{y}
+\end{align}
+If the trivial \(T(x)\)-module is thin,
+\[\delta_y = \delta_z \; \text{ for }\; y, z\in X, \; \partial(x,y) = \partial(x,z) = 1.\]
+Hence, \(\delta_y = \delta_z\) if \(y\) and \(z\) in \(X\) are connected by a path of even length.
+
+So, \(\Gamma\) is regular or bipartite biregular by Lemma \ref{lem:baiparite-principal}.
+:::
+
+\hypertarget{lec13}{%
+\chapter{Modules of a DRG}\label{lec13}}
+
+\textbf{Wednesday, February 17, 1993}
+
+\hypertarget{lec55}{%
+\chapter{Title of the Chapter}\label{lec55}}
+
+\textbf{Wednesday, February 17, 1993} \# Edit Date
 
   \bibliography{book.bib,packages.bib}
 

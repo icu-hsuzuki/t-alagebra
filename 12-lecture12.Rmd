@@ -1,0 +1,46 @@
+# Distance-Regular {#lec12}
+**Monday, February 15, 1993**
+
+:::{.lemma #distance-reguarity}
+For any connected graph $\Gamma = (X, E)$, the following are equivalent.
+
+| $(i)$ The trivial $T(x)$-module is thin for all $x\in X$.
+
+| $(ii)$ $\displaystyle{\left\{\sum_{y\in X, \partial(x,y) = i}\hat{y} \left| 0\leq i\leq d(x)\right.\right\}}$ is a basis for the trivial $T(x)$-module for every $x\in X$.
+
+| $(iii)$ $\Gamma$ is distance-regular with respect to $x$ for all $x\in X$.
+:::
+
+**Note.** 
+Let $\Gamma = (X, E)$ be a graph, with $X = \{x, y_1, y_2, y_3, z_1, z_2, z_3\}$, $E = \{xy_1, xy_2, xy_3, y_1z_1, y_1z_2, y_2z_3, y_3z_3\}$. 
+```{r echo=FALSE, fig.width=2, fig.height=1.5, message=FALSE, fig.align="center"}
+library(tidyverse)
+df_eg121 <- data.frame(x = c(0, 2, 4, 2, 0, 2, 4, 2, 4), y = c(0, -2, -2, 0, 0, 2, 0, 2, 2))
+ggplot(df_eg121, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(panel.border = element_blank(),line = element_blank(),
+        text = element_blank(),
+        title = element_blank()) +
+  annotate("text", x=-0.3, y = 0, label = "x") + annotate("text", x=1.6, y = -2, label = "y[3]", parse = TRUE) +
+  annotate("text", x=1.6, y = 2, label = "y[1]", parse = TRUE) + annotate("text", x=2, y = 0.3, label = "y[2]", parse = TRUE) +
+  annotate("text", x=4.3, y = 0, label = "z[2]", parse = TRUE) +
+  annotate("text", x=4.3, y = 2, label = "z[1]", parse = TRUE) + annotate("text", x=4.3, y = -2, label = "z[3]", parse = TRUE) 
+```
+Then $(i)$, $(ii)$ are not equivalent for a single vertex $x$.
+\begin{align}
+E^*_0T\hat{x} & = \langle \hat{x}\rangle, \\
+E^*_1T\hat{x} & = \langle y_1 + y_2 + y_3\rangle, \\
+E^*_2T\hat{x} & = \langle z_1 + z_2 + 2z_3\rangle.
+\end{align}
+
+:::{.proof name="Proof of Lemma \2ref(distance-reguarity)}
+$(i)\to (ii)$
+Let $\delta = \sum_{y\in X}\delta_y\hat{y}$ be an eigenvector for the maximal eigenvalue $\theta_0$. Then,
+\begin{align}
+\sum_{y\in X, \partial(x,y) = 1}\hat{y} & = A\hat{x} \in T(x)\hat{x} = T(x)\delta \ni E^*_1\delta\\
+& = \sum_{y\in X, \partial(x,y)=1}\delta_h\hat{y}
+\end{align}
+If the trivial $T(x)$-module is thin, 
+$$\delta_y = \delta_z \; \text{ for }\; y, z\in X, \; \partial(x,y) = \partial(x,z) = 1.$$
+Hence, $\delta_y = \delta_z$ if $y$ and $z$ in $X$ are connected by a path of even length. 
+
+So, $\Gamma$ is regular or bipartite biregular by Lemma \@ref(lem:baiparite-principal).
+:::

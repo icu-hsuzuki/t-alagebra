@@ -11,3 +11,6 @@ lec8
 lec9
 lec10
 lec11
+lec12
+lec13
+lec55

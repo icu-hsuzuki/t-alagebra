@@ -22,7 +22,7 @@ Fix a vertex $x\in X$. Write $T \equiv T(x)$, $E^*_i\equiv E^*_i(x)$.
 $(i)$ Observe: there exists an irreducible $T$-module $W$ that contains $\delta$. 
 
 Let $V = \sum_{i}W_i$ be a direct sum decomposition of the standard module. Then
-$$\mathrm{Span}\delta = E_0V = \sum_{i}E_0W_i.$$
+$$\mathrm{Span}(\delta) = E_0V = \sum_{i}E_0W_i.$$
 So, $E_0W_i \neq 0$ for some $i$. Then,
 $$\delta \in E_0W_i \subseteq W_i.$$
 Observe: $T\delta$ is an irreducible $T$-module.
@@ -48,4 +48,99 @@ Since $r(W) = 0$, $E^*_0W \neq 0$.
 Hence, $\hat{x}\in W$ and $T\hat{x} \subseteq W$. 
 
 By the irreduciblity, we have $T\hat{x} = W$.
+:::
+
+:::{.lemma #baiparite-principal}
+Assume $\Gamma$ is bipartite $(X = X^+ \cup X^-)$ ($X^+$ and $X^-$ are nonempty). Then the following are equivalent.
+
+| $(i)$ There exist $\alpha^+$ and $\alpha^-\in \mathbb{R}$ such that
+$$\delta_x = \begin{cases} \alpha^+ & \text{if }\: x\in X^+\\
+\alpha^- & \text{if } x\in X^-.
+\end{cases}$$
+| $(ii)$ There exist $k+$ and $k^-\in \mathbb{Z}^{>0}$ such that
+$$k(x) = \begin{cases} k^+ & \text{if }\: x\in X^+\\
+k^- & \text{if } x\in X^-.
+\end{cases}$$
+In this xase, $k^+k^- = \theta_0^2$, and $\Gamma$ is called bi-regular.
+:::
+
+:::{.proof}
+$(i)\to(ii)$
+```{r echo=FALSE, fig.width=2, fig.height=1.5, message=FALSE, fig.align="center"}
+library(tidyverse)
+df_eg111 <- data.frame(b1x = c(1, 0, 0, 4, 4, 3), b1y = c(3, 3, -3, -3, 3, 3), 
+                      b2x = c(6, 5, 5, 9, 9, 8), b2y = c(3, 3, -3, -3, 3, 3),
+                      p1x = c(2, 7, 2, 7, 2, 7), p1y = c(2, 2, 2, 1, 2, 0), 
+                      p2x = c(7, 2, 7, 2, 7, 2), p2y = c(-2, -2, -2, -1, -2, 0),
+                      sb1x = c(1, 1, 3, 3, 1, 1), sb1y = c(-0.5, 0.5, 0.5, -2.5, -2.5, -1.5), 
+                      sb2x = c(8, 8, 6, 6, 8, 8), sb2y = c(1.5, 2.5, 2.5, -0.5, -0.5, 0.5))
+ggplot(df_eg111) + geom_path(aes(b1x, b1y), color = "red") + geom_path(aes(b2x, b2y), color = "red") + 
+        geom_path(aes(sb1x, sb1y), color = "blue", linetype = "dotted") + geom_path(aes(sb2x, sb2y), color = "blue", linetype = "dotted") + 
+        geom_point(aes(p1x, p1y)) + geom_path(aes(p1x, p1y)) +
+        geom_point(aes(p2x, p2y)) + geom_path(aes(p2x, p2y)) +
+        theme_bw() + theme(panel.border = element_blank(),line = element_blank(),
+        text = element_blank(),
+        title = element_blank()) +
+  annotate("text", x=2, y = 3, label = "X") + annotate("text", x=2.3, y = 3.2, label = "+") + 
+  annotate("text", x=7, y = 3, label = "X") + annotate("text", x=7.3, y = 3.2, label = "-") + 
+  annotate("text", x=1.6, y = 2, label = "x") + annotate("text", x=8, y = 1, label = "k(x)") + 
+  annotate("text", x=7.3, y = -2, label = "y") + annotate("text", x=1, y = -1, label = "k(y)")
+```
+\begin{align}
+A\delta & = A\left(\alpha^+\sum_{x\in X^+}\hat{x} + \alpha^-\sum_{y\in X^-}\hat{y}\right)\\
+& = \alpha^+\sum_{y\in X^-}k(y)\hat{y} + \alpha^-\sum_{x\in X^+}k(x)\hat{x}\\
+& = \theta_0\delta.
+\end{align}
+So, 
+$$k(x)\alpha^- = \theta_0\alpha^+, \quad k(y)\alpha^+ = \theta_0\alpha^-.$$
+As $\alpha^+\neq =$ and $\alpha^- \neq 0$, 
+\begin{align}
+k^+ & := k(x) \; \text{ is independent of the choice of $x\in X^+$, and}\\
+k^- & := k(y) \; \text{ is independent of the choice of $y\in X^-$.}
+\end{align}
+Moreover, $k^+k^- = \theta_0^2$.
+
+$(ii)\to(i)$
+Set 
+$$\delta' = \sum_{y\in X}\alpha_y\hat{y} \quad \text{where}\; \alpha = \begin{cases} 1/\sqrt{k^-} & \text{if }\; y\in X^+\\ 1/\sqrt{k^+} & \text{if }\; y\in X^-.\end{cases}$$
+Then one checks
+\begin{align}
+A\delta' & = A\left(\frac{1}{\sqrt{k^-}}\sum_{y\in X^+}\hat{y} + \frac{1}{\sqrt{k^+}}\sum_{y\in X^-}\hat{y}\right)\\
+& =  \frac{k^-}{\sqrt{k^-}}\sum_{y\in X^-}\hat{y} + \frac{k^+}{\sqrt{k^+}}\sum_{y\in X^+}\hat{y}\\
+& = \sqrt{k^+k^-}\delta'
+\end{align}
+Since $\delta' >0$, $\delta'\in \mathrm{Span}(\delta)$, and $\theta_0 = \sqrt{k^+k^-}$.
+:::
+
+:::{.definition #distance-regular}
+For any graph $\Gamma = (X, E)$, fix a vertex $x\in X$. Set $d = d(x)$. 
+
+$\Gamma$ is distance-regular \index{distance-regular} with respect to $x$, if for all $i$ \: (0\leq i\leq d), and all $y\in X$ such that $\partial(x,y) = i$:
+\begin{align}
+c_i(x) & := |\{z\in X \mid \partial(x,z) = i-1, \; \partial(y,z) = 1\}|\\
+a_i(x) & := |\{z\in X \mid \partial(x,z) = i, \; \partial(y,z) = 1\}|\\
+b_i(x) & := |\{z\in X \mid \partial(x,z) = i+1, \; \partial(y,z) = 1\}|
+\end{align}
+depends only on $i$, $x$, and not on $y$.
+
+(In this case, $c_0(x) = a_0(x) = b_d(x) = 0$, $c_1(x) = 1$, $b_0(x) = k(x)$ is the valency of $x$.)
+
+We call $c_i(x)$, $a_i(x)$ and $b_i(x)$ the intersection numbers with respect to $x$.
+:::
+
+
+:::{.example}
+```{r echo=FALSE, fig.width=1.5, fig.height=1, message=FALSE, fig.align="center"}
+library(tidyverse)
+df_eg112 <- data.frame(x = c(2, 0, 2, 5, 5, 2, 2), y = c(-2, 0, 2, 2, -2, -2, 2))
+ggplot(df_eg112, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(panel.border = element_blank(),line = element_blank(),
+        text = element_blank(),
+        title = element_blank()) +
+  annotate("text", x=-0.3, y = 0, label = "x") 
+```
+\begin{align}
+c_0 &= 1 & c_1 &= 1 & c_2 &= 1\\
+a_0 &= 0 & a_1 &= 1 & a_2 &= 1\\
+b_0 &= 2 & b_1 &= 1 & b_2 &= 0
+\end{align}
 :::
