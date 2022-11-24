@@ -1,3 +1,154 @@
 # Modules of a DRG {#lec13}
 **Wednesday, February 17, 1993**
 
+:::{.lemma #two-principal-modules}
+Let $\Gamma = (X, E)$ be any graph. Pick an edge $xy\in E$. 
+
+Assume the trivial $T(x)$-module $T(x)\delta$ is thin with measure $m_x$,
+
+and the trivial $T(y)$-module $T(y)\delta$ is thin with measure $m_y$.
+
+Then,
+
+| $(ia)$ ${\displaystyle \frac{m_x(\theta)}{k_x} = \frac{m_y(\theta)}{k_y} \text{ for all } \theta\in \mathbb{R}\setminus \{0\}}$.
+
+| $(ib)$ ${\displaystyle \frac{m_x(0) -1}{k_x} = \frac{m_y(0)-1}{k_y} \text{ for all } \theta\in \mathbb{R}\setminus \{0\}}$.
+
+$$(\delta = \sum_{y\in X}\delta_y \hat{y} \quad \text{eigenvector corresponding to the maximal eigenvalue})$$
+:::
+
+
+:::{.proof}
+Apply Theorem \@ref(thm:two-thin-modules),
+\begin{align}
+W & = T(x)\delta \quad r = 0, \quad d = d(x)\\
+W' & = T(y)\delta \quad r' = 0, \quad d' = d(y).
+\end{align}
+Take $w = \hat{x}$, $w' = \hat{y}$.
+
+Claim. $\mathrm{proj}_{T(y)\delta}\hat{x} = k^{-1}_yA\hat{y}$.
+
+_Pf._
+Since 
+$$\hat{y}\in T(y)\delta, \quad A\hat{y}\in T(y)\delta.$$
+Show 
+$$(\hat{x} - {k_y}^{-1} A\hat{y}) \bot (T(y)\delta).$$
+Recall 
+$$A\hat{y} = \sum_{z\in X, yz\in E}\hat{z}.$$
+$$\hat{x} - {k_y}^{-1}Ay \i E^*_1(y)V.$$
+So, 
+$$\hat{x} - \frac{1}{k_y}A\hat{y} \; \bot \; E^*_j(y)T(y)\delta \quad \text{if $j\neq 1$}\; (0\leq j\leq k(y)).$$
+And we have,
+\begin{align}
+\left\langle \hat{x} - \frac{1}{k_y}A\hat{y}, A\hat{y}\right\rangle
+& = \left\langle \hat{x}, \sum_{z\in X, yz\in E}\hat{z}\right\rangle - \frac{1}{k_y}\left\|\sum_{z\in X, yz\in E}\hat{z}\right\|^2\\
+& =  1 - 1\\
+& = 0
+\end{align}
+This proves Claim.
+
+Similarly, 
+$$\mathrm{prof}_{T(x)\delta}\hat{y} = {k_x}^{-1}A\hat{x}.$$
+Hence, the polynomials $p, p'\in \mathbb{C}[\lambda]$ from Theorem \@ref(thm:two-thin-modules) equal
+$$\frac{\lambda}{k_y} \quad \text{ and }\quad \frac{\lambda}{k_x}$$
+respectively.
+
+By Theorem \@ref(thm:two-thin-modules), 
+$$\frac{m_x(\theta)\theta}{k_x} = m_x(\theta)\overline{p'(\theta)} = m_y(\theta)\overline{p(\theta)} = \frac{m_y(\theta)\theta}{k_y}.$$
+If $\theta\neq 0$, we have $(ia)$.
+
+Also, 
+\begin{align}
+\frac{1-m_x(0)}{k_x} & = \left(\sum_{\theta\in \mathbb{R}\setminus \{0\}}m_x(0)\right)\frac{1}{k_x} && \text{by $(ia)$}\\
+& = \left(\sum_{\theta\in \mathbb{R}\setminus \{0\}}m_y(0)\right)\frac{1}{k_y}\\
+& = \frac{1 - m_y(0)}{k_y}
+\end{align}
+Hence, we have $(ib)$.
+:::
+
+
+:::{.theorem #distance-regular-x}
+Suppose any graph $\Gamma = (X, E)$ is distance-regular with respect to every vertex $x\in X$.
+(So $\Gamma$ is regular or biregular by Lemma \@ref(lem:distance-reguarity).)
+
+Then,
+
+| Case $\Gamma$ is regular: the diameter $d(x)$ and the intersection numbers $a_i(x)$, $b_i(x)$, $c_i(x)$ $(0\leq i\leq d(x))$ are independent of $x\in X$.
+(And $\Gamma$ is called distance-regular.)
+
+| Case $\Gamma$ is biregular: $(X = X^+\cup X^-)$
+$d(x)$ and $a_i(x)$, $b_i(x)$, $c_i(x)$ $(0\leq i\leq d(x))$ are constant over $X^+$ and $X^-$. 
+(And $\Gamma$ is called distance-biregular.)
+:::
+
+:::{.proof}
+We apply Lemma \@ref(lem:two-principal-modules).
+
+| Case $\Gamma$: regular.
+
+Then $m_x = m_y$ for all $xy\in E$. Hence, the measure of the trivial $T(x)$-module is independent of $x\in X$.
+
+| Case $\Gamma$ is biregular.
+
+Then $m_x = m_{x'}$ for all $x, x'\in X$ with $\partial(x,x') = 2$. 
+
+Hence, the measure of the trivial $T(x)$-module is constant over $x\in X^+$, $X^-$.
+
+Fix $x\in X$. Write $T\equiv T(x)$, $E^*_i \equiv E^*_i(x)$, $W = T\delta$ with measure $m$, diameter $d = d(x)$.
+
+We know by Corollary \@ref(cor:isomorphic) that $m$ determines 
+$$d, \quad a_i(W) \; (0\leq i\leq d), \quad x_i(W) \; (1\leq i\leq d)$$
+(as $d = D(x) = d(W)$ by Lemma \@ref(lem:principal-module).)
+
+We shall show that $m$ determines
+$$a_i(x), \;  c_i(x), \; b_i(x) \quad (0\leq i\leq d).$$
+Observe: 
+\begin{align}
+a_i(W) & = a_i(x) \quad (0\leq i\leq d)\\
+x_i(W) & = b_{i-1}c_i(x) \quad (1\leq i\leq d)
+\end{align}
+
+:::{.remark}
+$a_i = a_i(W)$ is an eigenvalue of 
+$$E^*_iAE^*_i \text{ on } E^*_iW = \langle \sum_{y\in \Gamma_i(x)}\hat{y}\rangle. $$
+(See Lemma \@ref(lem:distance-reguarity).)
+
+$x_i = x_i(W)$ is an eigenvalue of 
+$$E^*_{i-1}AE^*_iAE^*_{i-1} \text{ on } E^*_{i-1}W,$$
+and
+\begin{align}
+A\sum_{y\in X,\partial(x,y)}\hat{y} & = b_{i-1}(x)\sum_{y\in X, \partial(x,y)=i-1}\hat{y} \\
+& \quad + a_i(x)\sum_{y\in X, \partial(x,y)=i}\hat{y} \\
+& \quad + c_{i+1}\sum_{y\in X, \partial(x,y)=i+1}\hat{y}
+\end{align}
+So $x_i = b_{i-1}(x)c_i(x)$.
+:::
+
+Set $k^+ = k_x$. Define
+$$k^- = \frac{{\theta_0}^2}{k^+},$$
+where $\theta_0$ is the maximal eigenvalue. (See Lemma \@ref(lem:principal-module).)
+
+(So, $k^+ = k^-$ is the valency, if $\Gamma$ is regular.)
+
+For every $i \; (0\leq i\leq d)$ and for every $z\in X$ with $\partial(x,z) = i$,
+\begin{align}
+k_z & = c_i(x) + a_i(x) + b_i(x)\\
+& = \begin{cases} k^+ & \text{if $i$ is even,}\\
+k^- & \text{ if $i$ is odd.}
+\end{cases}
+\end{align}
+
+Now $m$ determines 
+$$c_0(x) = a_0(x) = 0,\quad c_1(x) = 1,$$
+$$b_0(x) = b_0(x)c_1(x) = x_1(W).$$
+\begin{align}
+k^+ & = b_0(x)\\
+k^- & = {\theta_0}^2/k^+\\
+c_i(x) & = x_i(W)/b_{i-1}(x) \quad (1\leq i\leq d)\\
+b_i(x) & = \begin{cases} k^+ - a_i(x) - c_i(c) \quad \text{$i$; even,}\\
+k^--a_i(x)-c_i(x) \quad \text{$i$: odd}.
+\end{cases}
+\end{align}
+This proves the assertions.
+:::
+
