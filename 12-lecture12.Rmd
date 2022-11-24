@@ -127,7 +127,7 @@ $W'$: thin irreducible $T(y)$-module with endpoint $r'$, diameter $d'$, and meas
 
 $W$ and $W'$ are not orghotonal. 
 
-Now ppick
+Now pick
 $$0\neq w\in E^*_r(x)W, \quad 0\neq w\in E^*_{r'}(x)W'.$$
 Then,
 
