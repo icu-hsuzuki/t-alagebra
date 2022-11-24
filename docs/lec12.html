@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-23" />
+<meta name="date" content="2022-11-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -152,8 +152,8 @@ E^*_0T\hat{x} &amp; = \langle \hat{x}\rangle, \\
 E^*_1T\hat{x} &amp; = \langle y_1 + y_2 + y_3\rangle, \\
 E^*_2T\hat{x} &amp; = \langle z_1 + z_2 + 2z_3\rangle.
 \end{align}\]</span></p>
-<p>:::{.proof name=“Proof of Lemma \2ref(distance-reguarity)}
-<span class="math inline">\((i)\to (ii)\)</span>
+<div class="proof">
+<p><span id="unlabeled-div-72" class="proof"><em>Proof</em> (Proof of Lemma <a href="lec12.html#lem:distance-reguarity">12.1</a>). </span><span class="math inline">\((i)\to (ii)\)</span>
 Let <span class="math inline">\(\delta = \sum_{y\in X}\delta_y\hat{y}\)</span> be an eigenvector for the maximal eigenvalue <span class="math inline">\(\theta_0\)</span>. Then,
 <span class="math display">\[\begin{align}
 \sum_{y\in X, \partial(x,y) = 1}\hat{y} &amp; = A\hat{x} \in T(x)\hat{x} = T(x)\delta \ni E^*_1\delta\\
@@ -162,8 +162,149 @@ Let <span class="math inline">\(\delta = \sum_{y\in X}\delta_y\hat{y}\)</span> b
 If the trivial <span class="math inline">\(T(x)\)</span>-module is thin,
 <span class="math display">\[\delta_y = \delta_z \; \text{ for }\; y, z\in X, \; \partial(x,y) = \partial(x,z) = 1.\]</span>
 Hence, <span class="math inline">\(\delta_y = \delta_z\)</span> if <span class="math inline">\(y\)</span> and <span class="math inline">\(z\)</span> in <span class="math inline">\(X\)</span> are connected by a path of even length.</p>
-<p>So, <span class="math inline">\(\Gamma\)</span> is regular or bipartite biregular by Lemma <a href="lec11.html#lem:baiparite-principal">11.2</a>.
-:::</p>
+<p>So, <span class="math inline">\(\Gamma\)</span> is regular or bipartite biregular by Lemma <a href="lec11.html#lem:baiparite-principal">11.2</a>.</p>
+<p>In particular, <span class="math inline">\(\delta_y = \delta_z\)</span> if <span class="math inline">\(\partial(x,y) = \partial(x,z)\)</span>, as there is a path of length <span class="math inline">\(2\cdot \partial(x,y)\)</span>;
+<span class="math display">\[y\sim \cdots \sim x \sim \cdots \sim z.\]</span>
+Hence,
+<span class="math display">\[E^*_i\delta \in \mathrm{Span}\left(\sum_{y\in X, \partial(x,y) = i}\hat{y}\right).\]</span>
+Since <span class="math inline">\(E^*_0\delta, E^*_1\delta, \ldots, E^*_d\delta\)</span> forms a basis for <span class="math inline">\(T(x)\delta\)</span>, we have <span class="math inline">\((ii)\)</span>.</p>
+<p><span class="math inline">\((ii)\to (iii)\)</span>
+Fix <span class="math inline">\(x\in X\)</span>, and let <span class="math inline">\(T \equiv T(x)\)</span>, <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, and <span class="math inline">\(d \equiv d(x)\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+A\sum_{y\in X, \partial(x.y)=i}\hat{y} &amp; = \sum_{z\in X} |\{y\in X \mid \partial(y,z) = 1, \; \partial(x,y) = i\}|\hat{z}\\
+&amp; = \sum_{z\in X, \partial(x,y) = i-1}b_{i-1}(x,z)\hat{z} \\
+&amp; \qquad + \sum_{z\in X, \partial(x,y) = i} a_{i}(x,z)\hat{z} \\
+&amp; \qquad + \sum_{z\in X, \partial(x,y) = i+1} c_{i+1}(x,z)\hat{z}\\
+&amp; \in \mathrm{Span}\left\{\left.\sum_{z\in X, \partial(x,z) = j}\hat{z} \; \right| \; j = 0, 1, \ldots, d \right\}.
+\end{align}\]</span></p>
+<p>Hence, <span class="math inline">\(b_{i-1}(x,z)\)</span>, <span class="math inline">\(a_i(x,z)\)</span> and <span class="math inline">\(c_{i+1}(x,z)\)</span> depend only on <span class="math inline">\(i\)</span> and <span class="math inline">\(x\)</span>, and not on <span class="math inline">\(z\)</span>.
+Therefore, <span class="math inline">\(\Gamma\)</span> is distance-regular with respect to <span class="math inline">\(x\)</span>.</p>
+<p><span class="math inline">\((iii)\to (i)\)</span>
+Fix <span class="math inline">\(x\in X\)</span>, and let <span class="math inline">\(T \equiv T(x)\)</span>, <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, and <span class="math inline">\(d \equiv d(x)\)</span>.
+By defintion of distance-regularity, for every <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq d)\)</span>,
+<span class="math display">\[\begin{align}
+A\left(\sum_{y\in X, \partial(x,y)=i}\hat{y}\right) &amp; =
+b_{i-1}(x)\sum_{y\in X, \partial(x,y) = i-1}\hat{y} \\
+&amp; \qquad + a_{i}(x)\sum_{y\in X, \partial(x,y) = i}\hat{y}\\
+&amp; \qquad + c_{i+1}(x)\sum_{y\in X, \partial(x,y) = i+1}\hat{y}.
+\end{align}\]</span>
+Hence,
+<span class="math display">\[W = \left\{\left.\sum_{y\in X, \partial(x,y)=i}\hat{y} \; \right| \; 0\leq i\leq d\; \right\}\]</span>
+is <span class="math inline">\(A\)</span>-invariant and so <span class="math inline">\(T\)</span>-invariant. Since <span class="math inline">\(\hat{x}\in W\)</span>, <span class="math inline">\(T\hat{x} = W\)</span> is the trivial module and <span class="math inline">\(T\hat{x}\)</span> is thin.</p>
+</div>
+<p>Next, we show more is true if <span class="math inline">\((i)-(iii)\)</span> hold in Lemma <a href="lec12.html#lem:distance-reguarity">12.1</a>.</p>
+<p>In fact, <span class="math inline">\(d(x)\)</span>, <span class="math inline">\(a_i(x)\)</span>, <span class="math inline">\(c_i(x)\)</span>, and <span class="math inline">\(b_i(x)\)</span> are
+<span class="math display">\[\begin{cases}
+\text{independent of $X$} &amp; \text{if $\Gamma$ is regular; or}\\
+\text{constant over $X^+$ and $X^-$} &amp; \text{if $\Gamma$ is biregular.}
+\end{cases}\]</span></p>
+<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any (connected) graph. Pick vertices <span class="math inline">\(x, y\in X\)</span>.</p>
+<p>Let <span class="math inline">\(W\)</span> be a thin, irreducible <span class="math inline">\(T(x)\)</span>-module, and
+measure <span class="math inline">\(m: \mathbb{R} \to \mathbb{R}\)</span> determined by <span class="math inline">\(W\)</span>.</p>
+<p>Let <span class="math inline">\(W&#39;\)</span> be a thin, irreducible <span class="math inline">\(T(y)\)</span>-module, and
+measure <span class="math inline">\(m: \mathbb{R} \to \mathbb{R}\)</span> determined by <span class="math inline">\(W&#39;\)</span>.</p>
+<p>Recall <span class="math inline">\(W\)</span>, <span class="math inline">\(W&#39;\)</span> are orthogonal if
+<span class="math display">\[\langle w, w&#39;\rangle = 0 \quad \text{for all }w\in W, w&#39;\in W&#39;.\]</span></p>
+<p>We shall show if <span class="math inline">\(W\)</span> and <span class="math inline">\(W&#39;\)</span> are note orthogonal, then <span class="math inline">\(m\)</span> and <span class="math inline">\(m&#39;\)</span> are related:
+<span class="math display">\[m\cdot \mathrm{poly}_1 = m&#39;\cdot \mathrm{poly}_2\]</span>
+for some polynomials with
+<span class="math display">\[\deg \mathrm{poly}_1 + \deg \mathrm{poly}_2 \leq 2\cdot \partial(x,y).\]</span></p>
+<p><strong>Notation.</strong>
+<span class="math inline">\(V\)</span>: standard module of <span class="math inline">\(\Gamma\)</span>.</p>
+<p><span class="math inline">\(H\)</span>: any subspace of <span class="math inline">\(V\)</span>.</p>
+<p><span class="math display">\[V = H + H^\bot \quad \text{orthogonal direct sum},\]</span>
+and for <span class="math inline">\(v = v_1 + v_2\)</span> <span class="math inline">\(\mathrm{proj}_H: V\to H \; (v\mapsto v_1)\)</span>: linear transformation.</p>
+<p>Observe:
+For every <span class="math inline">\(v\in V\)</span>,
+<span class="math display">\[v - \mathrm{proj}_H v \in H^\bot.\]</span>
+So,
+<span class="math display">\[\langle v - \mathrm{proj}_H v, h\rangle = 0 \quad \text{for all }\;h\in H \text{ or},\]</span>
+<span class="math display">\[\langle v, h\rangle = \langle \mathrm{proj}_H v, h\rangle \quad \text{for all }\;v\in V, \;\text{ and for all }\: h\in H.\]</span></p>
+<div class="theorem">
+<p><span id="thm:two-thin-modules" class="theorem"><strong>Theorem 12.1  </strong></span>Let <span class="math inline">\(\Gamma = (X,E)\)</span> be any graph. Pick vertices <span class="math inline">\(x,y\in X\)</span> and set <span class="math inline">\(\Delta = \partial(x,y)\)</span>. Assume</p>
+<p><span class="math inline">\(W\)</span>: thin irreducible <span class="math inline">\(T(x)\)</span>-module with endpoint <span class="math inline">\(r\)</span>, diameter <span class="math inline">\(d\)</span>, and measure <span class="math inline">\(m\)</span>.</p>
+<p><span class="math inline">\(W&#39;\)</span>: thin irreducible <span class="math inline">\(T(y)\)</span>-module with endpoint <span class="math inline">\(r&#39;\)</span>, diameter <span class="math inline">\(d&#39;\)</span>, and measure <span class="math inline">\(m&#39;\)</span>.</p>
+<p><span class="math inline">\(W\)</span> and <span class="math inline">\(W&#39;\)</span> are not orghotonal.</p>
+<p>Now ppick
+<span class="math display">\[0\neq w\in E^*_r(x)W, \quad 0\neq w\in E^*_{r&#39;}(x)W&#39;.\]</span>
+Then,</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\({\displaystyle \mathrm{proj}_{W&#39;}w = p(A)\frac{\|w\|}{\|w&#39;\|}w&#39;}\)</span></div>
+<p>for some <span class="math inline">\(0\neq p\in \mathbb{C}[\lambda]\)</span> with <span class="math inline">\(\deg p \leq \Delta - r&#39; + r, d&#39;\)</span>,</p>
+<p><span class="math inline">\({\displaystyle \mathrm{proj}_{W}w&#39; = p&#39;(A)\frac{\|w&#39;\|}{\|w\|}w}\)</span></p>
+<p>for some <span class="math inline">\(0\neq p&#39;\in \mathbb{C}[\lambda]\)</span> with <span class="math inline">\(\deg p \leq \Delta - r + r&#39;, d\)</span>.</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> For all eigenvalues <span class="math inline">\(\theta_i\)</span> of <span class="math inline">\(\Gamma\)</span>,</div>
+<p><span class="math display">\[\frac{\langle E_iw, E_iw&#39;\rangle}{\|w\|\|w&#39;\|} = m(\theta_i)\overline{p&#39;(\theta_i)}.\]</span></p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> For all eigenvalues <span class="math inline">\(\theta_i\)</span> of <span class="math inline">\(\Gamma\)</span>,</div>
+<p><span class="math display">\[p(\theta_i)p&#39;(\theta_i)\]</span>
+is in a real number in interval <span class="math inline">\([0,1]\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-73" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span> Since <span class="math inline">\(W\)</span>, <span class="math inline">\(W&#39;\)</span> are not orthogonal, there exist
+<span class="math display">\[v\in W, \; v&#39;\in W&#39; \; \text{ sich that }\; \langle v, v&#39;\rangle \neq 0.\]</span>
+Then there exists <span class="math inline">\(a\in M\)</span> such that
+<span class="math display">\[v&#39; = aw&#39;.\]</span>
+(This is becase <span class="math inline">\(w&#39;_i = p&#39;_i(A)w_0&#39;\)</span> and hence for every <span class="math inline">\(v&#39;\in W&#39;\)</span>, there is a polynomial <span class="math inline">\(q\in \mathbb{C}[\lambda]\)</span>, <span class="math inline">\(q(A)w_0&#39; = v\)</span>.)</p>
+<p>We have
+<span class="math display">\[0\neq \langle v&#39;, v\rangle = \langle aw&#39;, v\rangle = \langle w&#39;, a^*v\rangle\]</span>
+and <span class="math inline">\(a^*v\in W\)</span>.</p>
+<p>Hence, <span class="math inline">\(\mathrm{proj}_{W} w&#39; \neq 0\)</span>.</p>
+<p>Let <span class="math inline">\(p_0, \ldots, p_d\in \mathbb{C}[\lambda]\)</span> be from Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>.</p>
+<p>Then, <span class="math inline">\(w_i = p_i(A)w\)</span> is a basis for <span class="math inline">\(E^*_{r+i}(x)W \quad (0\leq i\leq d)\)</span>.</p>
+<p>Hence,
+<span class="math display">\[\mathrm{proj}_{W}w&#39; = \alpha_0w_0 + \cdots + \alpha_dw_d \quad \text{for some }\; \alpha_j\in \mathbb{C}.\]</span>
+Set
+<span class="math display">\[p&#39; := \frac{\|w\|}{\|w&#39;\|}\sum_{i=0}^d \alpha_ip_i.\]</span>
+Then <span class="math inline">\(0\neq p&#39;\in \mathbb{C}[\lambda]\)</span> and <span class="math inline">\(\deg p&#39; \leq d\)</span>.</p>
+<p>Claim: <span class="math inline">\(\alpha_i = 0\)</span> <span class="math inline">\((\Delta - r + r&#39; &lt; i\leq d)\)</span>.</p>
+<p>In particular, <span class="math inline">\(\deg p&#39; \leq \Delta - r + r&#39;\)</span>.</p>
+<p><em>Pf.</em> Obseve:
+<span class="math display">\[w&#39;\in E^*_{r&#39;}(y)V, \quad w \in E^*_r(x)V,\]</span>
+for <span class="math inline">\(\partial(x,y) = \Delta\)</span>.
+<span class="math display">\[E^*_{r&#39;}(y)V \cap E^*_{r+i}(x)V = 0\]</span>
+by triangle inequality.</p>
+<p>(<span class="math inline">\(\Delta = \partial(x,y) &lt; r+i - r&#39;\)</span> or <span class="math inline">\(\Delta + r&#39; &lt; r + i\)</span> by our choice of <span class="math inline">\(i\)</span>.)</p>
+<p><img src="t-algebra_files/figure-html/unnamed-chunk-10-1.png" width="192" style="display: block; margin: auto;" /></p>
+<p>Hence,
+<span class="math display">\[E^*_{r&#39;}(y)V \bot E^*_{r+i}(x)V,\]</span>
+or
+<span class="math display">\[\begin{align}
+0 &amp; = \langle w&#39;, w_i\rangle \\
+&amp; = \langle \mathrm{proj}_{W}w&#39;, w_i\rangle\\
+&amp; = \sum_{j=0}^d\alpha_j\langle w_j, w_i\rangle\\
+&amp; = \alpha_i\|w_i\|^2.
+\end{align}\]</span>
+Hence, <span class="math inline">\(\alpha_i = 0\)</span>.
+Thus,
+<span class="math display">\[\begin{align}
+\mathrm{proj}_{W}w&#39; &amp; = \sum_{i=0}^{\Delta + r&#39; - r}\alpha_iw_i\\
+&amp; = \sum_{i=0}^{\Delta + r&#39; - r}\alpha_ip_i(A)w_0\\
+&amp; = p&#39;(A)\frac{\|w&#39;\|}{\|w\|}w.
+\end{align}\]</span></p>
+<p><span class="math inline">\((ii)\)</span> We have
+<span class="math display">\[\begin{align}
+\frac{\langle E_iw, E_iw&#39;\rangle}{\|w\|\|w&#39;\|}
+&amp; = \frac{\langle E_iw, w&#39;\rangle}{\|w\|\|w&#39;\|}\\
+&amp; = \frac{\langle E_iw, \mathrm{proj}_W w&#39;\rangle}{\|w\|\|w&#39;\|} &amp;&amp; \text{as }\; \mathrm{proj}_Ww&#39; = p&#39;(A)\frac{\|w\|}{\|w&#39;\|}w\\
+&amp; = \frac{\langle E_iw, p&#39;(A) w\rangle}{\|w\|^2}\\
+&amp; = \frac{\langle E_iw, E_ip&#39;(A) w\rangle}{\|w\|^2}\\
+&amp; = \overline{p&#39;(\theta_i)}\frac{\|E_iW\|^2}{\|w\|^2}\\
+&amp; = \overline{p&#39;(\theta_i)}m(\theta_i).
+\end{align}\]</span>
+Moreover, as <span class="math inline">\(m(\theta_i)\)</span>, <span class="math inline">\(m&#39;(\theta_i)\in \mathbb{R}\)</span>,
+<span class="math display">\[\frac{\langle E_iw, E_iw&#39;\rangle}{\|w\|\|w&#39;\|}  = \frac{\overline{\langle E_iw, E_iw&#39;\rangle}}{\|w&#39;\|\|w\|}
+= \overline{\overline{p(\theta_i)}m&#39;(\theta_i)}
+= p(\theta_i)m&#39;(\theta_i).\]</span></p>
+<p><span class="math inline">\((iii)\)</span> Sicne,
+<span class="math display">\[\frac{|\langle E_iw, E_iw&#39;\rangle\|^2}{\|w\|^2\|w&#39;\|^2} = p(\theta_i)p&#39;(\theta_i)m(\theta_i)m&#39;(\theta_i),\]</span>
+<span class="math display">\[\begin{align}
+p(\theta_i)p&#39;(\theta_i) &amp; = \frac{|\langle E_iw, E_iw&#39;\rangle\|^2}{m(\theta_i)m&#39;(\theta_i)\|w\|^2\|w&#39;\|^2} \in \mathbb{R}\\
+&amp; = \frac{|\langle E_iw, E_iw&#39;\rangle\|^2}{\frac{\|E_iw\|^2}{\|w\|^2}\frac{\|E_iw&#39;\|^2}{\|w&#39;\|^2}\|w\|^2\|w&#39;\|^2}.
+\end{align}\]</span></p>
+<p>By Cauchy-Schwartz inequality,
+<span class="math display">\[(|\langle a, b\rangle | \leq \|a\|\|b\|,)\]</span>
+<span class="math display">\[\frac{|\langle E_iw, E_iw&#39;\rangle\|^2}{\|E_iw\|^2\|E_iw&#39;\|^2} \leq 1.\]</span>
+Hence, we have the assertion.</p>
+</div>
 
 </div>
             </section>
