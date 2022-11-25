@@ -70,14 +70,14 @@ $$
 1 & 0 & d-1 & \cdots & 0 & 0 & 0\\
 0 & 2 & 0 & \cdots & 0 & 0 & 0\\
 0 & 0 & 3 & \cdots & 0 & 0 & 0\\
-\cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\
+\cdots & \cdots & \cdots & \ddots & \ddots & \cdots & \cdots \\
 0 & 0 & 0 & \cdots & 0 & 2 & 0\\
 0 & 0 & 0 & \cdots & d-1 & 0 & 1\\
 0 & 0 & 0 & \cdots & 0 & d & 0
 \end{pmatrix}
 $$
 
-| $(ii)$ $ d= D - 2r$. In particular, $0\leq r\leq D/2$.
+| $(ii)$ $d= D-2r$. In particular, $0\leq r\leq D/2$.
 
 | $(iii)$ Let $W'$ denote an irreducible $T$-module with endpoint $r'$. Then $W$ and $W'$ are isormorphic as $T$-modules if and only if $r = r'$.
 
