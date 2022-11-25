@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 14 Parameters of Thin Modules | Lecture Note on Terwilliger Algebra</title>
+  <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 14 Parameters of Thin Modules | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 14 Parameters of Thin Modules | Lecture Note on Terwilliger Algebra" />
+  
+  <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
+
+
+<meta name="date" content="2022-11-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="lec13.html"/>
+<link rel="next" href="lec55.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Lecture Note on Terwilliger Algebra</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#setting"><i class="fa fa-check"></i>Setting</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Subconstituent Algebra of a Graph</a></li>
+<li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
+<li class="chapter" data-level="3" data-path="lec3.html"><a href="lec3.html"><i class="fa fa-check"></i><b>3</b> Cayley Graphs</a></li>
+<li class="chapter" data-level="4" data-path="lec4.html"><a href="lec4.html"><i class="fa fa-check"></i><b>4</b> Examples</a></li>
+<li class="chapter" data-level="5" data-path="lec5.html"><a href="lec5.html"><i class="fa fa-check"></i><b>5</b> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, I</a></li>
+<li class="chapter" data-level="6" data-path="lec6.html"><a href="lec6.html"><i class="fa fa-check"></i><b>6</b> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, II</a></li>
+<li class="chapter" data-level="7" data-path="lec7.html"><a href="lec7.html"><i class="fa fa-check"></i><b>7</b> The Johnson Graph <span class="math inline">\(J(D,N)\)</span></a></li>
+<li class="chapter" data-level="8" data-path="lec8.html"><a href="lec8.html"><i class="fa fa-check"></i><b>8</b> Thin Graphs</a></li>
+<li class="chapter" data-level="9" data-path="lec9.html"><a href="lec9.html"><i class="fa fa-check"></i><b>9</b> Thin <span class="math inline">\(T\)</span>-Module, I</a></li>
+<li class="chapter" data-level="10" data-path="lec10.html"><a href="lec10.html"><i class="fa fa-check"></i><b>10</b> Thin <span class="math inline">\(T\)</span>-Module, II</a></li>
+<li class="chapter" data-level="11" data-path="lec11.html"><a href="lec11.html"><i class="fa fa-check"></i><b>11</b> Examples of <span class="math inline">\(T\)</span>-Module</a></li>
+<li class="chapter" data-level="12" data-path="lec12.html"><a href="lec12.html"><i class="fa fa-check"></i><b>12</b> Distance-Regular</a></li>
+<li class="chapter" data-level="13" data-path="lec13.html"><a href="lec13.html"><i class="fa fa-check"></i><b>13</b> Modules of a DRG</a></li>
+<li class="chapter" data-level="14" data-path="lec14.html"><a href="lec14.html"><i class="fa fa-check"></i><b>14</b> Parameters of Thin Modules</a></li>
+<li class="chapter" data-level="15" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>15</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Lecture Note on Terwilliger Algebra</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lec14" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">Chapter 14</span> Parameters of Thin Modules<a href="lec14.html#lec14" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Friday, February 19, 1993</strong></p>
+<p>Summary.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-79" class="definition"><strong>Definition 14.1  </strong></span>Assume <span class="math inline">\(\Gamma = (X, E)\)</span> is distance-regular with respect to every vertex <span class="math inline">\(x\in X\)</span>.</p>
+<p>Notation: Let <span class="math inline">\(x\in X\)</span>. The data of the trivial <span class="math inline">\(T(x)\)</span>-module.</p>
+<p><span class="math display">\[\begin{array}{|c|c|c|}
+\hline
+&amp; \text{Case DR}  &amp; \text{Case DBR} \\
+\hline
+\text{valency} k_x &amp; k &amp; \begin{cases} k^+ &amp; \text{ if } x\in X^+\\
+k^- &amp; \text{ if } x\in X^-\end{cases}\\
+x\text{-diameter } D_x &amp; D &amp; \begin{cases} D^+ &amp; \text{ if } x\in X^+\\
+D^- &amp; \text{ if } x\in X^-\end{cases}\\
+\text{measure $m_x$} &amp; m &amp; \begin{cases} m^+ &amp; \text{ if } x\in X^+\\
+m^- &amp; \text{ if } x\in X^-\end{cases}\\
+\text{int. number }c_i(x) &amp; c_i &amp; \begin{cases} c_i^+ &amp; \text{ if } x\in X^+\\
+c_i^- &amp; \text{ if } x\in X^-\end{cases}\\
+\text{int. number }b_i(x) &amp; b_i &amp; \begin{cases} b_i^+ &amp; \text{ if } x\in X^+\\
+b_i^- &amp; \text{ if } x\in X^-\end{cases}\\
+\text{int. number }a_i(x) &amp; a_i &amp; \begin{cases} a_i^+ &amp; \text{ if } x\in X^+\\
+a_i^- &amp; \text{ if } x\in X^-\end{cases}\\
+\hline
+\end{array}\]</span></p>
+<p>Call <span class="math inline">\(m\)</span>, <span class="math inline">\(m^{\pm 1}\)</span> the measure of <span class="math inline">\(\Gamma\)</span>.</p>
+</div>
+<p>Assume <span class="math inline">\(\Gamma = (X, E)\)</span> is distance-regular.</p>
+<p>To what extent do <span class="math inline">\(a_i\)</span>’s, <span class="math inline">\(b_i\)</span>’s and <span class="math inline">\(c_i\)</span>’s determine the structure of irreducible <span class="math inline">\(T(x)\)</span>-modules? In general the following hold.</p>
+<div class="lemma">
+<p><span id="lem:basic-data" class="lemma"><strong>Lemma 14.1  </strong></span>Assume <span class="math inline">\(\Gamma = (X, E)\)</span> is distance-regular. Pick <span class="math inline">\(x\in X\)</span>. Let <span class="math inline">\(X\)</span> be a thin irreducible <span class="math inline">\(T(x)\)</span>-module with endpoint <span class="math inline">\(r\)</span>, diameter <span class="math inline">\(d\)</span> and measure <span class="math inline">\(m_W\)</span>.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> There is a unique polynomial <span class="math inline">\(f_W \in \mathbb{C}[\lambda]\)</span> with the following properties.</div>
+<div class="line-block"><span class="math inline">\(\quad (ia)\)</span> <span class="math inline">\(\deg f_W \leq D\)</span> (diameter of <span class="math inline">\(\Gamma\)</span>).</div>
+<div class="line-block"><span class="math inline">\(\quad (ib)\)</span> <span class="math inline">\(m_W(\theta) = m(\theta)f_W(\theta)\)</span> for every <span class="math inline">\(\theta\in \mathbb{R}\)</span>, where <span class="math inline">\(m\)</span> is the measure of <span class="math inline">\(\Gamma\)</span>.</div>
+<p>Moreover, <span class="math inline">\(f_W\in \mathbb{R}[\lambda]\)</span>, and</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\deg f_W \leq 2r\)</span>.<br />
+<span class="math inline">\((iii)\)</span> For all eigenvalues <span class="math inline">\(\theta_i\)</span> of <span class="math inline">\(\Gamma\)</span>, <span class="math inline">\(\lambda - \theta_i\)</span> is a factor of <span class="math inline">\(f_W\)</span> whenever, <span class="math inline">\(E_iW = 0\)</span>.</div>
+<p>In particular, <span class="math inline">\(2r-D+d\geq 0\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-80" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(\theta_0, \ldots, \theta_D\)</span> denote distinct eigenvalues of <span class="math inline">\(\Gamma\)</span>. Then <span class="math inline">\(m(\theta_i) \neq 0\)</span> <span class="math inline">\((0\leq i\leq D)\)</span> by Proposition <a href="#prop:dim-diamter"><strong>??</strong></a>.</p>
+<p>There exists a unique <span class="math inline">\(f_W\in \mathbb{C}[\lambda]\)</span> with <span class="math inline">\(\deg f_W\leq D\)</span> such that
+<span class="math display">\[f_W(\theta_i) = \frac{m_W(\theta_i)}{m(\theta_i)} \quad (0\leq i\leq D)\]</span>
+by polynomial interpolation.</p>
+<p><span class="math inline">\(f_W\in \mathbb{R}[\lambda]\)</span> since
+<span class="math display">\[\theta_0, \ldots, \theta_D\in \mathbb{R} \quad \text{and}\quad f_W(\theta_0), \ldots, f_W(\theta_D) \in \mathbb{R}.\]</span></p>
+<p><span class="math inline">\((ii)\)</span> Without loss of generality, we may assume <span class="math inline">\(r &lt; D/2\)</span>, else trivial.</p>
+<p>Pick <span class="math inline">\(0\neq w \in E^*_r(x)W\)</span>.
+<span class="math display">\[w = \sum_{y\in W, \partial(x,y) = r}\alpha_y\hat{y} \quad \text{ some } \; \alpha_y\in \mathbb{C}.\]</span>
+Pick <span class="math inline">\(y\in X\)</span> such that <span class="math inline">\(\alpha_y\neq 0\)</span>.</p>
+<p>Set <span class="math inline">\(W&#39;\)</span> be the trivial <span class="math inline">\(T(y)\)</span>-module. (<span class="math inline">\(\langle w, \hat{y}\rangle \neq 0, \text{ as } W\not\bot W&#39;\)</span>.)
+<span class="math display">\[r&#39; = 0, \quad m&#39; = m, \quad \Delta = r.\]</span></p>
+<p>Apply Theorem <a href="lec12.html#thm:two-thin-modules">12.1</a>, we have
+<span class="math display">\[\begin{align}
+\deg p &amp; \leq \Delta - r&#39; + r = 2r, \quad p\neq 0\\
+\deg p&#39; &amp; \leq \Delta - r + r&#39; = 0 , \quad p&#39;\neq 0.
+\end{align}\]</span>
+<span class="math display">\[m_W(\theta)\overline{p&#39;(\theta)} = m(\theta)p(\theta) \quad (\text{ for all } \theta \in \mathbb{R}).\]</span>
+So,
+<span class="math display">\[\deg p/\bar{p}&#39; \leq 2r,\]</span>
+and <span class="math inline">\(p/\bar{p}&#39;\)</span> satisfies the conditions of <span class="math inline">\(f_W\)</span>.
+<span class="math display">\[\left(\frac{p(\theta)}{\bar{p}&#39;(\theta)} = \frac{m_W(\theta)}{m(\theta)}\right)\]</span></p>
+<p><span class="math inline">\((iii)\)</span>
+<span class="math display">\[E_iW = 0 \rightarrow m_W(\theta_i) = 0 \rightarrow f_W(\theta_i) = 0.\]</span>
+that is, <span class="math inline">\(E_iW = 0\)</span>. Hence <span class="math inline">\(\theta_i\)</span> is a root of <span class="math inline">\(f_W(\lambda) = 0\)</span>.
+So,
+<span class="math display">\[2r \geq \deg f_W \geq |\{\theta_i\mid E_iW = 0\}| = D-d.\]</span>
+Hence,
+<span class="math display">\[2r-D + d \geq 0.\]</span>
+This proves the assertions.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:thin-endpoint1" class="lemma"><strong>Lemma 14.2  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any distance-regular graph with valency <span class="math inline">\(k\)</span>, diameter <span class="math inline">\(D\)</span> <span class="math inline">\((d\geq 2)\)</span>, measure <span class="math inline">\(m\)</span>, and eigenvalues
+<span class="math display">\[k = \theta_0 &gt; \theta_1 &gt; \cdots &gt; \theta_D.\]</span>
+Pick <span class="math inline">\(x\in X\)</span>. Let
+<span class="math inline">\(W\)</span> be a thin irreducible <span class="math inline">\(T(x)\)</span>-module with endpoint <span class="math inline">\(r = 1\)</span>, diameter <span class="math inline">\(D\)</span> and measure <span class="math inline">\(m_W = mf_W\)</span>.
+Then one fo the following cases <span class="math inline">\((i)-(iv)\)</span> occurs.</p>
+<p><span class="math display">\[\begin{array}{|c|c|c|c|}
+\hline
+\text{Case} &amp; d  &amp; f_W(\lambda) &amp; a_0(W) \\
+\hline
+(i) &amp; D-2 &amp; \frac{(\lambda - k)(\lambda - \theta_1)}{k(\theta_1 + 1)} &amp; -\frac{b_1}{\theta_1 + 1} -1\\
+(ii) &amp; D-2 &amp; \frac{(\lambda - k)(\lambda - \theta_D)}{k(\theta_D + 1)} &amp; -\frac{b_1}{\theta_1 + 1} -1\\
+(iii) &amp; D-1 &amp; \frac{k - \lambda}{k} &amp; -1\\
+(iv) &amp; D-1 &amp; \frac{(\lambda - k)(\lambda - \beta)}{k(\beta + 1)} &amp; -\frac{b_1}{\beta + 1} -1\\
+\hline
+\end{array}\]</span>
+for some <span class="math inline">\(\beta\in \mathbb{R}\)</span> with <span class="math inline">\(\beta\in (-\infty, \theta_D) \cup (\theta_1, \infty)\)</span>.
+Moreover, the isomorphism class of <span class="math inline">\(W\)</span> is determined by <span class="math inline">\(a_0(W)\)</span>.</p>
+</div>
+<p><strong>Note.</strong> By <span class="math inline">\((iii)\)</span>, the possible “shapes” of a thin irreducible <span class="math inline">\(T(x)\)</span>-modules are:
+<span class="math display">\[\begin{align}
+r = 0 &amp; \quad d = D\\
+r = 1 &amp; \quad d = D-1\\
+r = 1 &amp; \quad d = D-2
+\end{align}\]</span></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lec13.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lec55.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/14-lecture14.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/icu-hsuzuki/t-algebra/master/14-lecture14.Rmd",
+"text": null
+},
+"download": ["t-algebra.pdf", "t-algebra.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
