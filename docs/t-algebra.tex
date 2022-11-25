@@ -4,10 +4,6 @@
 %
 \documentclass[
 ]{book}
-\title{Lecture Note on Terwilliger Algebra}
-\author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-11-25}
-
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -37,14 +33,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Lecture Note on Terwilliger Algebra},
-  pdfauthor={P. Terwilliger, edited by H. Suzuki},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -129,6 +117,18 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Lecture Note on Terwilliger Algebra},
+  pdfauthor={P. Terwilliger, edited by H. Suzuki},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Lecture Note on Terwilliger Algebra}
+\author{P. Terwilliger, edited by H. Suzuki}
+\date{2022-11-25}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -2717,7 +2717,7 @@ Show
 \[(\hat{x} - {k_y}^{-1} A\hat{y}) \bot (T(y)\delta).\]
 Recall
 \[A\hat{y} = \sum_{z\in X, yz\in E}\hat{z}.\]
-\[\hat{x} - {k_y}^{-1}Ay \i E^*_1(y)V.\]
+\[\hat{x} - {k_y}^{-1}Ay \in E^*_1(y)V.\]
 So,
 \[\hat{x} - \frac{1}{k_y}A\hat{y} \; \bot \; E^*_j(y)T(y)\delta \quad \text{if $j\neq 1$}\; (0\leq j\leq k(y)).\]
 And we have,
@@ -2833,6 +2833,72 @@ k^--a_i(x)-c_i(x) \quad \text{$i$: odd}.
 \end{cases}
 \end{align}
 This proves the assertions.
+\end{proof}
+
+\begin{proposition}
+\protect\hypertarget{prp:dim-diamter}{}\label{prp:dim-diamter}
+
+Under the assumption of Theorem \ref{thm:distance-regular-x}, the following hold.
+
+Case \(\Gamma\): regular.
+
+\((i)\) \(\dim E_iV = |X|m(\theta_i)\).\\
+\((ii)\) \(\Gamma\) has exactly \(d+1\) distinct eigenvalues
+
+(\(d = \mathrm{diam}\Gamma = d(x), \; \text{ for all }\; x\in X\)).
+
+Case \(\Gamma\): biregular.
+
+\((i)\) \(\dim E_V = |X^+| m^+(\theta_i) + |X^-|m^-(\theta_i)\).\\
+\((ii)\) \(\Gamma\) has exactly \(d^++1\) distinct eigenvalues \((d^+\geq d^-\)).\\
+\((iii)\) If \(d^+\) is odd, the \(\Gamma\) is regular.\\
+\((iv)\) \(d^+ = d^-\), or \(d^+ = d^-+1\) is even.\\
+\((v)\) \(a_i(x) = 0\) for all \(i\) and for all \(x\).
+
+\end{proposition}
+
+\begin{proof}
+
+\((i)\) Suppose \(\Gamma\) is regular.
+
+Let \(m_x\) be the measure of the trivial \(T(x)\)-module,
+\[m_x(\theta_i) = \|E_i\hat{x}\|^2, \quad \text{as}\; \|\hat{x}\| = 1.\]
+Now,
+\begin{align}
+|X|m_x(\theta_i) & = \sum_{x\in X}m_x(\theta_i)\\
+& = \sum_{x\in X}\|E_i\hat{x}\|^2\\
+& = \sum_{y,z\in X}|(E_i)_{yz}|^2\\
+& = \mathrm{trace} E_i\overline{E_i}^\top.
+\end{align}
+Since \(A\) is real symmetric and
+\[E_i\overline{E_i}^\top = E_i^2 = E_i\]
+with \(E_i\) symmetric
+\[E_i \sim \begin{pmatrix} I & O \\ O & I\end{pmatrix}.\]
+\[\mathrm{trace} E_i = \rank E_i = \dim E_iV.\]
+Thus, we have the assertion in this case.
+
+Suppose \(\Gamma\) is biregular.
+
+Then, same except,
+\[\sum_{x\in X} m_x(\theta_i) = |X^+|m^+(\theta_i) + |X^-||m^-(\theta_i).\]
+
+\((ii)\)
+\(\Gamma\): regular. Immediately, if \(\theta\) is an eigenvalue of \(\Gamma\), then \(m(\theta) \neq 0\).
+
+\(\Gamma\): biregular. For each \(\theta = \theta_i \in \mathbb{R}\setminus\{0\}\),
+\begin{align}
+m^-(\theta) \neq 0 &\Leftrightarrow m^+(\theta) \neq 0\\
+& \Leftrightarrow \theta \; \text{ is an eigenvalue of $\Gamma$}\\
+& \quad\quad \left(\frac{m^+(\theta)}{k^+} = \frac{m^-(\theta)}{k^-} \right)
+\end{align}
+
+\((iv)\) and \((v)\) are clear.
+
+\begin{remark}
+\((iii)\) If \(d^+\) is odd, \(d^+ = d^-\) and \(\Gamma\) has even number of eigenvalues, i.e., \(0\) is not an eigenvalue.
+So \(A\) is nonsingular, and \(\Gamma\) is regular.
+\end{remark}
+
 \end{proof}
 
 \hypertarget{lec55}{%

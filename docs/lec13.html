@@ -161,7 +161,7 @@ Show
 <span class="math display">\[(\hat{x} - {k_y}^{-1} A\hat{y}) \bot (T(y)\delta).\]</span>
 Recall
 <span class="math display">\[A\hat{y} = \sum_{z\in X, yz\in E}\hat{z}.\]</span>
-<span class="math display">\[\hat{x} - {k_y}^{-1}Ay \i E^*_1(y)V.\]</span>
+<span class="math display">\[\hat{x} - {k_y}^{-1}Ay \in E^*_1(y)V.\]</span>
 So,
 <span class="math display">\[\hat{x} - \frac{1}{k_y}A\hat{y} \; \bot \; E^*_j(y)T(y)\delta \quad \text{if $j\neq 1$}\; (0\leq j\leq k(y)).\]</span>
 And we have,
@@ -253,6 +253,53 @@ k^--a_i(x)-c_i(x) \quad \text{$i$: odd}.
 \end{cases}
 \end{align}\]</span>
 This proves the assertions.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:dim-diamter" class="proposition"><strong>Proposition 13.1  </strong></span>Under the assumption of Theorem <a href="lec13.html#thm:distance-regular-x">13.1</a>, the following hold.</p>
+<div class="line-block">Case <span class="math inline">\(\Gamma\)</span>: regular.</div>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\dim E_iV = |X|m(\theta_i)\)</span>.<br />
+<span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> has exactly <span class="math inline">\(d+1\)</span> distinct eigenvalues</div>
+<p>(<span class="math inline">\(d = \mathrm{diam}\Gamma = d(x), \; \text{ for all }\; x\in X\)</span>).</p>
+<div class="line-block">Case <span class="math inline">\(\Gamma\)</span>: biregular.</div>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\dim E_V = |X^+| m^+(\theta_i) + |X^-|m^-(\theta_i)\)</span>.<br />
+<span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> has exactly <span class="math inline">\(d^++1\)</span> distinct eigenvalues <span class="math inline">\((d^+\geq d^-\)</span>).<br />
+<span class="math inline">\((iii)\)</span> If <span class="math inline">\(d^+\)</span> is odd, the <span class="math inline">\(\Gamma\)</span> is regular.<br />
+<span class="math inline">\((iv)\)</span> <span class="math inline">\(d^+ = d^-\)</span>, or <span class="math inline">\(d^+ = d^-+1\)</span> is even.<br />
+<span class="math inline">\((v)\)</span> <span class="math inline">\(a_i(x) = 0\)</span> for all <span class="math inline">\(i\)</span> and for all <span class="math inline">\(x\)</span>.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-78" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span> Suppose <span class="math inline">\(\Gamma\)</span> is regular.</p>
+<p>Let <span class="math inline">\(m_x\)</span> be the measure of the trivial <span class="math inline">\(T(x)\)</span>-module,
+<span class="math display">\[m_x(\theta_i) = \|E_i\hat{x}\|^2, \quad \text{as}\; \|\hat{x}\| = 1.\]</span>
+Now,
+<span class="math display">\[\begin{align}
+|X|m_x(\theta_i) &amp; = \sum_{x\in X}m_x(\theta_i)\\
+&amp; = \sum_{x\in X}\|E_i\hat{x}\|^2\\
+&amp; = \sum_{y,z\in X}|(E_i)_{yz}|^2\\
+&amp; = \mathrm{trace} E_i\overline{E_i}^\top.
+\end{align}\]</span>
+Since <span class="math inline">\(A\)</span> is real symmetric and
+<span class="math display">\[E_i\overline{E_i}^\top = E_i^2 = E_i\]</span>
+with <span class="math inline">\(E_i\)</span> symmetric
+<span class="math display">\[E_i \sim \begin{pmatrix} I &amp; O \\ O &amp; I\end{pmatrix}.\]</span>
+<span class="math display">\[\mathrm{trace} E_i = \rank E_i = \dim E_iV.\]</span>
+Thus, we have the assertion in this case.</p>
+<p>Suppose <span class="math inline">\(\Gamma\)</span> is biregular.</p>
+<p>Then, same except,
+<span class="math display">\[\sum_{x\in X} m_x(\theta_i) = |X^+|m^+(\theta_i) + |X^-||m^-(\theta_i).\]</span></p>
+<p><span class="math inline">\((ii)\)</span>
+<span class="math inline">\(\Gamma\)</span>: regular. Immediately, if <span class="math inline">\(\theta\)</span> is an eigenvalue of <span class="math inline">\(\Gamma\)</span>, then <span class="math inline">\(m(\theta) \neq 0\)</span>.</p>
+<p><span class="math inline">\(\Gamma\)</span>: biregular. For each <span class="math inline">\(\theta = \theta_i \in \mathbb{R}\setminus\{0\}\)</span>,
+<span class="math display">\[\begin{align}
+m^-(\theta) \neq 0 &amp;\Leftrightarrow m^+(\theta) \neq 0\\
+&amp; \Leftrightarrow \theta \; \text{ is an eigenvalue of $\Gamma$}\\
+&amp; \quad\quad \left(\frac{m^+(\theta)}{k^+} = \frac{m^-(\theta)}{k^-} \right)
+\end{align}\]</span></p>
+<p><span class="math inline">\((iv)\)</span> and <span class="math inline">\((v)\)</span> are clear.</p>
+<div class="remark">
+<p><span id="unlabeled-div-77" class="remark"><em>Remark</em>. </span><span class="math inline">\((iii)\)</span> If <span class="math inline">\(d^+\)</span> is odd, <span class="math inline">\(d^+ = d^-\)</span> and <span class="math inline">\(\Gamma\)</span> has even number of eigenvalues, i.e., <span class="math inline">\(0\)</span> is not an eigenvalue.
+So <span class="math inline">\(A\)</span> is nonsingular, and <span class="math inline">\(\Gamma\)</span> is regular.</p>
+</div>
 </div>
 
 </div>
