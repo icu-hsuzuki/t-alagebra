@@ -3,7 +3,7 @@
 
 Let $\Gamma = (X, E)$ be a graph, $A$ the adjacency matrix, and $V$ the standard module over $K = \mathbb{C}$.
 
-Fix a base $x\in X$ and write $E_I^* \equiv E_i^*(x)$, and $T \equiv T(x)$. 
+Fix a base $x\in X$ and write $E_i^* \equiv E_i^*(x)$, and $T \equiv T(x)$. 
 
 Let $W$ be an irreducible $T$-module with endpoint $r:= \min\{i\mid E_i^*W \neq 0\}$ and diameter $d:=|\{i\mid E_i^*W\neq 0\}|-1$. 
 
@@ -17,7 +17,7 @@ Claim: $E_i^*AE_j^*W \neq 0$ if $|i-j| = 1$ for $r\leq i,j\leq r+d$. (See Lemma 
 
 Suppose $E_{j+1}^*AE_j^*W = 0$ for some $j$ with $r \leq j < r+d$.
 Observe that
-$$\tilde{W} = E^*_rW + \cdot E^*_jW$$
+$$\tilde{W} = E^*_rW + \cdots + E^*_jW$$
 is $T$-invariant with 
 $$0 \subsetneq \tilde{W} \subsetneq W.$$
 Becase $A\tilde{W} \subseteq \tilde{W}$ since $AE_j^*W \subseteq E^*_{j-1}W + E^*_jW$, 
@@ -27,7 +27,7 @@ we have $T\tilde{W} \subseteq{W}$.
 Suppose $E_{i-1}^*AE_i^*W = 0$ for some $i$ with $r \leq i < r+d$. 
 
 Similarly,
-$$\tilde{W} = E^*_iW + \cdot E^*_{r+d}.W$$
+$$\tilde{W} = E^*_iW + \cdots + E^*_{r+d}.W$$
 is a $T$-module with $0\subsetneq \tilde{W} \subsetneq W$.
 
 :::{.definition #isomorphic-modules}
@@ -71,7 +71,7 @@ $$
 0 & 2 & 0 & \cdots & 0 & 0 & 0\\
 0 & 0 & 3 & \cdots & 0 & 0 & 0\\
 \cdots & \cdots & \cdots & \ddots & \ddots & \cdots & \cdots \\
-0 & 0 & 0 & \cdots & 0 & 2 & 0\\
+0 & 0 & 0 & \ddots & 0 & 2 & 0\\
 0 & 0 & 0 & \cdots & d-1 & 0 & 1\\
 0 & 0 & 0 & \cdots & 0 & d & 0
 \end{pmatrix}
@@ -93,10 +93,10 @@ Hence without loss of generality, we may assume that
 $x = \overbrace{11\cdots 1}^{D}$.
 
 Notation: Set $\Omega = \{1, 2, \ldots, D\}$. For every subset $S \subseteq \Omega$, let 
-$$\hat{S} = a_1\cdot a_d \in X \quad a_i = \begin{cases} -1 & \text{if }\; i\in S\\ 1 & \text{if } i\not\in S.\end{cases}$$
-In particular, $\hat{emptyset} = x$ and 
+$$\hat{S} = a_1\cdots a_d \in X \quad a_i = \begin{cases} -1 & \text{if }\; i\in S\\ 1 & \text{if } i\not\in S.\end{cases}$$
+In particular, $\hat{\emptyset} = x$ and 
 $$|S| = i \Leftrightarrow \partial(x, \hat{S}) = i \Leftrightarrow \hat{S}\in E^*_iV.$$
-For all $S, T\subseteq \Omega$, we say $S$ covers T$ if and only if $S\supseteq T$ and $|S| = |T| +1$.
+For all $S, T\subseteq \Omega$, we say $S$ covers $T$ if and only if $S\supseteq T$ and $|S| = |T| +1$.
 
 Observe that $\hat{S}, \hat{T}$ are adjacent in $\Gamma$ if and only if either $T$ coverse $S$ or $S$ coverr $T$.
 
@@ -104,7 +104,7 @@ Define the 'raising matrix'
 $$R = \sum_{i=0}^D E^*_{i+1}AE^*_i.$$
 
 Observe that
-$$RE_i^*V \subseteq E^*_{i+1}V \; \text{ for }\; 0\leq i \leq D, \; \text{ and }E^*_{D+1}V = 0.$$
+$$RE_i^*V \subseteq E^*_{i+1} V \; \text{ for }\; 0\leq i \leq D, \; \text{ and }E^*_{D+1}V = 0.$$
 Indeed for any $S\subseteq \Omega$ with $|S| = i$,
 \begin{align}
 R\hat{S} & = RE^*_i\hat{S} \\
@@ -117,7 +117,7 @@ Define the 'lowering matrix'
 $$L = \sum_{i=0}^D E^*_{i-1}AE^*_i.$$
 
 Observe that
-$$LE_i^*V \subseteq E^*_{i-1V} \; \text{ for }\; 0\leq i \leq D, \; \text{ and }E^*_{-1}V = 0.$$
+$$LE_i^*V \subseteq E^*_{i-1}V \; \text{ for }\; 0\leq i \leq D, \; \text{ and }E^*_{-1}V = 0.$$
 Indeed for any $S\subseteq \Omega$,
 $$L\hat{S} = \sum_{T\subseteq \Omega, S \text{ covers }T} \hat{T}.$$
 
@@ -129,7 +129,7 @@ $$A^* = \sum_{i=0}^D (D-2i)E_i^*.$$
 Claim: The following hold.
 
 | $(a)$ $LR - RL = A^*$.
-| $(b)$ $A*L - LA^* = 2L$.
+| $(b)$ $A^*L - LA^* = 2L$.
 | $(c)$ $A^*R - RA^* = -2R$.
 
 In particular $\mathrm{Span}(R,L, A^*)$ is a 'representation of Lie algebra $\mathrm{sl}_2(\mathbb{C})$.
@@ -176,7 +176,7 @@ _Pf._
 \begin{align} 
 LRw & = (A^*+RL)w \quad (\text{by Claim }(a))\\
 & = A^*w \quad (Lw \in E^*_{r-1}W = 0)\\
-(D-2r)w.
+& (D-2r)w.
 \end{align}
 Define
 $$w_i = \frac{1}{i!}R^iw \in E^*_{r+i}W \quad (0\leq i \leq d).$$
@@ -232,14 +232,14 @@ $A = L+R$, $w_{-1} = w_{d+1} = 0$,
 $$Lw_i = (d-i+1)w_{i-1}, \quad Rw_i = (i+1)w_{i+1}.$$
 $$L = \begin{pmatrix} 0 & d & 0 & \cdots & 0 & 0\\
 0 & 0 & d-1 & \cdots & 0 & 0\\
-& & \cdots & \cdots & & \\
-& & & & 0 & 1\\
+\vdots & \vdots & \ddots & \ddots & \vdots & \vdots \\
+\vdots & \vdots & \cdots & \cdots & 0 & 1\\
 0 & 0 & 0 & \cdots & 0 & 0
 \end{pmatrix}, \qquad 
 R = \begin{pmatrix} 0 & 0 & 0 & \cdots & 0 & 0\\
 1 & 0 & 0 & \cdots & 0 & 0\\
-0 & 2 & 0 & \cdots & & \\
-& & & & 0 & 1\\
+0 & 2 & 0 & \cdots & \vdots & \vdots\\
+\vdots & \vdots & \ddots  & \ddots & 0 & 1\\
 0 & 0 & 0 & \cdots & d & 0
 \end{pmatrix}.$$
 This completes the proof of $(i)$ and $(ii)$.

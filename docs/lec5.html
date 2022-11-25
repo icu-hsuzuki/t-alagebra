@@ -138,7 +138,7 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 5</span> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, I<a href="lec5.html#lec5" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Friday, January 29, 1993</strong></p>
 <p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be a graph, <span class="math inline">\(A\)</span> the adjacency matrix, and <span class="math inline">\(V\)</span> the standard module over <span class="math inline">\(K = \mathbb{C}\)</span>.</p>
-<p>Fix a base <span class="math inline">\(x\in X\)</span> and write <span class="math inline">\(E_I^* \equiv E_i^*(x)\)</span>, and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
+<p>Fix a base <span class="math inline">\(x\in X\)</span> and write <span class="math inline">\(E_i^* \equiv E_i^*(x)\)</span>, and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
 <p>Let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r:= \min\{i\mid E_i^*W \neq 0\}\)</span> and diameter <span class="math inline">\(d:=|\{i\mid E_i^*W\neq 0\}|-1\)</span>.</p>
 <p>We have
 <span class="math display">\[\begin{align}
@@ -148,7 +148,7 @@ E_i^*W &amp; \neq 0 &amp; r\leq i \leq r+d\\
 <p>Claim: <span class="math inline">\(E_i^*AE_j^*W \neq 0\)</span> if <span class="math inline">\(|i-j| = 1\)</span> for <span class="math inline">\(r\leq i,j\leq r+d\)</span>. (See Lemma <a href="lec4.html#lem:irreducible">4.1</a>.)</p>
 <p>Suppose <span class="math inline">\(E_{j+1}^*AE_j^*W = 0\)</span> for some <span class="math inline">\(j\)</span> with <span class="math inline">\(r \leq j &lt; r+d\)</span>.
 Observe that
-<span class="math display">\[\tilde{W} = E^*_rW + \cdot E^*_jW\]</span>
+<span class="math display">\[\tilde{W} = E^*_rW + \cdots + E^*_jW\]</span>
 is <span class="math inline">\(T\)</span>-invariant with
 <span class="math display">\[0 \subsetneq \tilde{W} \subsetneq W.\]</span>
 Becase <span class="math inline">\(A\tilde{W} \subseteq \tilde{W}\)</span> since <span class="math inline">\(AE_j^*W \subseteq E^*_{j-1}W + E^*_jW\)</span>,
@@ -156,7 +156,7 @@ Becase <span class="math inline">\(A\tilde{W} \subseteq \tilde{W}\)</span> since
 we have <span class="math inline">\(T\tilde{W} \subseteq{W}\)</span>.</p>
 <p>Suppose <span class="math inline">\(E_{i-1}^*AE_i^*W = 0\)</span> for some <span class="math inline">\(i\)</span> with <span class="math inline">\(r \leq i &lt; r+d\)</span>.</p>
 <p>Similarly,
-<span class="math display">\[\tilde{W} = E^*_iW + \cdot E^*_{r+d}.W\]</span>
+<span class="math display">\[\tilde{W} = E^*_iW + \cdots + E^*_{r+d}.W\]</span>
 is a <span class="math inline">\(T\)</span>-module with <span class="math inline">\(0\subsetneq \tilde{W} \subsetneq W\)</span>.</p>
 <div class="definition">
 <p><span id="def:isomorphic-modules" class="definition"><strong>Definition 5.1  </strong></span>Let <span class="math inline">\(\Gamma\)</span>, <span class="math inline">\(E^*_i\)</span>, and <span class="math inline">\(T\)</span> be as above. Irreducible <span class="math inline">\(T\)</span>-modules <span class="math inline">\(W\)</span> and <span class="math inline">\(W&#39;\)</span> are isomorphic whenever there is an isomorphism <span class="math inline">\(\sigma: W \to W&#39;\)</span> of vector spaces such that <span class="math inline">\(a\sigma = \sigma a\)</span> for all <span class="math inline">\(a\in T\)</span>.</p>
@@ -191,7 +191,7 @@ Here, the diameter of <span class="math inline">\(H(D, 2) = D = d\)</span> for a
 0 &amp; 2 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0\\
 0 &amp; 0 &amp; 3 &amp; \cdots &amp; 0 &amp; 0 &amp; 0\\
 \cdots &amp; \cdots &amp; \cdots &amp; \ddots &amp; \ddots &amp; \cdots &amp; \cdots \\
-0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 2 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; \ddots &amp; 0 &amp; 2 &amp; 0\\
 0 &amp; 0 &amp; 0 &amp; \cdots &amp; d-1 &amp; 0 &amp; 1\\
 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; d &amp; 0
 \end{pmatrix}
@@ -207,15 +207,15 @@ and <span class="math inline">\(1\)</span> if <span class="math inline">\(r = 0\
 <p>Hence without loss of generality, we may assume that
 <span class="math inline">\(x = \overbrace{11\cdots 1}^{D}\)</span>.</p>
 <p>Notation: Set <span class="math inline">\(\Omega = \{1, 2, \ldots, D\}\)</span>. For every subset <span class="math inline">\(S \subseteq \Omega\)</span>, let
-<span class="math display">\[\hat{S} = a_1\cdot a_d \in X \quad a_i = \begin{cases} -1 &amp; \text{if }\; i\in S\\ 1 &amp; \text{if } i\not\in S.\end{cases}\]</span>
-In particular, <span class="math inline">\(\hat{emptyset} = x\)</span> and
+<span class="math display">\[\hat{S} = a_1\cdots a_d \in X \quad a_i = \begin{cases} -1 &amp; \text{if }\; i\in S\\ 1 &amp; \text{if } i\not\in S.\end{cases}\]</span>
+In particular, <span class="math inline">\(\hat{\emptyset} = x\)</span> and
 <span class="math display">\[|S| = i \Leftrightarrow \partial(x, \hat{S}) = i \Leftrightarrow \hat{S}\in E^*_iV.\]</span>
-For all <span class="math inline">\(S, T\subseteq \Omega\)</span>, we say <span class="math inline">\(S\)</span> covers T$ if and only if <span class="math inline">\(S\supseteq T\)</span> and <span class="math inline">\(|S| = |T| +1\)</span>.</p>
+For all <span class="math inline">\(S, T\subseteq \Omega\)</span>, we say <span class="math inline">\(S\)</span> covers <span class="math inline">\(T\)</span> if and only if <span class="math inline">\(S\supseteq T\)</span> and <span class="math inline">\(|S| = |T| +1\)</span>.</p>
 <p>Observe that <span class="math inline">\(\hat{S}, \hat{T}\)</span> are adjacent in <span class="math inline">\(\Gamma\)</span> if and only if either <span class="math inline">\(T\)</span> coverse <span class="math inline">\(S\)</span> or <span class="math inline">\(S\)</span> coverr <span class="math inline">\(T\)</span>.</p>
 <p>Define the ‘raising matrix’
 <span class="math display">\[R = \sum_{i=0}^D E^*_{i+1}AE^*_i.\]</span></p>
 <p>Observe that
-<span class="math display">\[RE_i^*V \subseteq E^*_{i+1}V \; \text{ for }\; 0\leq i \leq D, \; \text{ and }E^*_{D+1}V = 0.\]</span>
+<span class="math display">\[RE_i^*V \subseteq E^*_{i+1} V \; \text{ for }\; 0\leq i \leq D, \; \text{ and }E^*_{D+1}V = 0.\]</span>
 Indeed for any <span class="math inline">\(S\subseteq \Omega\)</span> with <span class="math inline">\(|S| = i\)</span>,
 <span class="math display">\[\begin{align}
 R\hat{S} &amp; = RE^*_i\hat{S} \\
@@ -226,7 +226,7 @@ R\hat{S} &amp; = RE^*_i\hat{S} \\
 <p>Define the ‘lowering matrix’
 <span class="math display">\[L = \sum_{i=0}^D E^*_{i-1}AE^*_i.\]</span></p>
 <p>Observe that
-<span class="math display">\[LE_i^*V \subseteq E^*_{i-1V} \; \text{ for }\; 0\leq i \leq D, \; \text{ and }E^*_{-1}V = 0.\]</span>
+<span class="math display">\[LE_i^*V \subseteq E^*_{i-1}V \; \text{ for }\; 0\leq i \leq D, \; \text{ and }E^*_{-1}V = 0.\]</span>
 Indeed for any <span class="math inline">\(S\subseteq \Omega\)</span>,
 <span class="math display">\[L\hat{S} = \sum_{T\subseteq \Omega, S \text{ covers }T} \hat{T}.\]</span></p>
 <p>Observe that <span class="math inline">\(A = L + R\)</span>.</p>
@@ -234,7 +234,7 @@ Indeed for any <span class="math inline">\(S\subseteq \Omega\)</span>,
 <span class="math display">\[A^* = \sum_{i=0}^D (D-2i)E_i^*.\]</span></p>
 <p>Claim: The following hold.</p>
 <div class="line-block"><span class="math inline">\((a)\)</span> <span class="math inline">\(LR - RL = A^*\)</span>.<br />
-<span class="math inline">\((b)\)</span> <span class="math inline">\(A*L - LA^* = 2L\)</span>.<br />
+<span class="math inline">\((b)\)</span> <span class="math inline">\(A^*L - LA^* = 2L\)</span>.<br />
 <span class="math inline">\((c)\)</span> <span class="math inline">\(A^*R - RA^* = -2R\)</span>.</div>
 <p>In particular <span class="math inline">\(\mathrm{Span}(R,L, A^*)\)</span> is a ’representation of Lie algebra <span class="math inline">\(\mathrm{sl}_2(\mathbb{C})\)</span>.</p>
 <div class="remark">
@@ -270,7 +270,7 @@ Apply both sides to <span class="math inline">\(\hat{S}\)</span> <span class="ma
 <span class="math display">\[\begin{align} 
 LRw &amp; = (A^*+RL)w \quad (\text{by Claim }(a))\\
 &amp; = A^*w \quad (Lw \in E^*_{r-1}W = 0)\\
-(D-2r)w.
+&amp; (D-2r)w.
 \end{align}\]</span>
 Define
 <span class="math display">\[w_i = \frac{1}{i!}R^iw \in E^*_{r+i}W \quad (0\leq i \leq d).\]</span>
@@ -315,14 +315,14 @@ Hence <span class="math inline">\(d = D-2r\)</span>.</p>
 <span class="math display">\[Lw_i = (d-i+1)w_{i-1}, \quad Rw_i = (i+1)w_{i+1}.\]</span>
 <span class="math display">\[L = \begin{pmatrix} 0 &amp; d &amp; 0 &amp; \cdots &amp; 0 &amp; 0\\
 0 &amp; 0 &amp; d-1 &amp; \cdots &amp; 0 &amp; 0\\
-&amp; &amp; \cdots &amp; \cdots &amp; &amp; \\
-&amp; &amp; &amp; &amp; 0 &amp; 1\\
+\vdots &amp; \vdots &amp; \ddots &amp; \ddots &amp; \vdots &amp; \vdots \\
+\vdots &amp; \vdots &amp; \cdots &amp; \cdots &amp; 0 &amp; 1\\
 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0
 \end{pmatrix}, \qquad 
 R = \begin{pmatrix} 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0\\
 1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0\\
-0 &amp; 2 &amp; 0 &amp; \cdots &amp; &amp; \\
-&amp; &amp; &amp; &amp; 0 &amp; 1\\
+0 &amp; 2 &amp; 0 &amp; \cdots &amp; \vdots &amp; \vdots\\
+\vdots &amp; \vdots &amp; \ddots  &amp; \ddots &amp; 0 &amp; 1\\
 0 &amp; 0 &amp; 0 &amp; \cdots &amp; d &amp; 0
 \end{pmatrix}.\]</span>
 This completes the proof of <span class="math inline">\((i)\)</span> and <span class="math inline">\((ii)\)</span>.</p>
