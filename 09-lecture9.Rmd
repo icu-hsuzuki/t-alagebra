@@ -101,7 +101,7 @@ $$0  = q(A)w_0  = \sum_{i=0}^d \beta_iw_i.$$
 Hence $\beta_0 = \cdots = \beta_d = 0$ by $(iiia)$. Thus $q = 0$ and a contradiction.
 :::
 
-:::{.corollary}
+:::{.corollary #thin-is-dualthin}
 Let $\Gamma$, $W$, $r$, $d$ be as above. Then
 
 | $(i)$ $W$ is dual thin, that is, 
@@ -156,7 +156,7 @@ Also,
 This proves the lemma.
 :::
 
-:::{.definition}
+:::{.definition #measure)}
 Let $W$ be an irreducible thin $T(x)$ module with endpoint $r$, $E^*_i \equiv E_i^*(x)$. 
 
 The measure \index{measure} $m = m_W$ is the function

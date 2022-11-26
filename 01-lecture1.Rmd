@@ -159,7 +159,7 @@ For any $a\in \mathrm{Mat}_X(K)$, let $a^*$ denbote the conjugate transpose of $
 Observe that 
 $$\langle au, v\rangle = \langle u, a^*v\rangle \quad \textrm{for all }\; a\in \mathrm{Mat}_X(K), \textrm{ and for all } \; u,v\in V.$$
 
-:::{.lemma}
+:::{.lemma #complete-reducibility}
 Let $\Gamma = (X,E)$, $x\in X$ and $T \equiv T(x)$ be as above.
 
 | $(i)$ If $a\in T$, then $a^*\in T$.

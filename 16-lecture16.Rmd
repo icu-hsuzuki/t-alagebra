@@ -1,0 +1,21 @@
+# Thin Modoles of a DRG {#lec16}
+**Wednesday, February 24, 1993**
+
+Let $\Gamma = (X, E)$ denote any graph of diameter $D$.
+
+:::{.definition #ith-incidence}
+For all integer $i$, the $i$-th incidence matrix $A_i\in \mathrm{Mat}_X(\mathbb{C})$ satisfies
+$$(A_i)_{xy} = \begin{cases} 1 & \text{if $\partial(x,y) = i$,}\\
+0 & \text{if $\partial(x,y)\neq i$,}
+\end{cases} \quad (x,y\in X).$$
+Observe, 
+\begin{align}
+A_0 & = I && (\text{identity})\\
+A_1 & = A && (\text{adjacency matrix})\\
+A_0 + A_1 + \cdots + A_D & = J && (\text{all 1's matrix}).
+\end{align}
+In general, $A_i$ may not belong to Bose-Mesner algebra.
+:::
+
+
+

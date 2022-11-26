@@ -1,5 +1,6 @@
 eq:6-1
 eq:6-2
+eq:a0W
 lec1
 lec2
 lec3
@@ -14,4 +15,6 @@ lec11
 lec12
 lec13
 lec14
+lec15
+lec16
 lec55

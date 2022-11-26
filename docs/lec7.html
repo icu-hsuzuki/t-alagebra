@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-25" />
+<meta name="date" content="2022-11-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,8 +112,10 @@ div.csl-indent {
 <li class="chapter" data-level="11" data-path="lec11.html"><a href="lec11.html"><i class="fa fa-check"></i><b>11</b> Examples of <span class="math inline">\(T\)</span>-Module</a></li>
 <li class="chapter" data-level="12" data-path="lec12.html"><a href="lec12.html"><i class="fa fa-check"></i><b>12</b> Distance-Regular</a></li>
 <li class="chapter" data-level="13" data-path="lec13.html"><a href="lec13.html"><i class="fa fa-check"></i><b>13</b> Modules of a DRG</a></li>
-<li class="chapter" data-level="14" data-path="lec14.html"><a href="lec14.html"><i class="fa fa-check"></i><b>14</b> Parameters of Thin Modules</a></li>
-<li class="chapter" data-level="15" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>15</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="14" data-path="lec14.html"><a href="lec14.html"><i class="fa fa-check"></i><b>14</b> Parameters of Thin Modules, I</a></li>
+<li class="chapter" data-level="15" data-path="lec15.html"><a href="lec15.html"><i class="fa fa-check"></i><b>15</b> Parameters of Thin Modules, II</a></li>
+<li class="chapter" data-level="16" data-path="lec16.html"><a href="lec16.html"><i class="fa fa-check"></i><b>16</b> Thin Modoles of a DRG</a></li>
+<li class="chapter" data-level="17" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>17</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -139,14 +141,14 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 7</span> The Johnson Graph <span class="math inline">\(J(D,N)\)</span><a href="lec7.html#lec7" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Wednesday, February 3, 1993</strong></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-48" class="definition"><strong>Definition 7.1  </strong></span>The Johnson graph, <span class="math inline">\(\Gamma = J(D,N)\)</span> <span class="math inline">\((1\leq D\leq N-1)\)</span> satisfies
+<p><span id="def:unlabeled-div-44" class="definition"><strong>Definition 7.1  </strong></span>The Johnson graph, <span class="math inline">\(\Gamma = J(D,N)\)</span> <span class="math inline">\((1\leq D\leq N-1)\)</span> satisfies
 <span class="math display">\[\begin{align}
 X &amp; = \{S\mid S\subset \Omega, \; |S| = D\} \quad\text{where }\; \Omega = \{1, 2, \ldots, N\}\\
 E &amp; = \{ST\mid S, T\in X, \quad |S\cap T| = D-1\}.
 \end{align}\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-49" class="example"><strong>Example 7.1  </strong></span><span class="math inline">\(J(2,4)\)</span>
+<p><span id="exm:unlabeled-div-45" class="example"><strong>Example 7.1  </strong></span><span class="math inline">\(J(2,4)\)</span>
 <img src="t-algebra_files/figure-html/unnamed-chunk-6-1.png" width="288" style="display: block; margin: auto;" /></p>
 </div>
 <p><strong>Note 1.</strong>
@@ -169,14 +171,14 @@ ST\in E &amp; \Leftrightarrow  |S\cap T| = D-1\\
 <span class="math display">\[D\leq N/2 \quad \text{for } J(D,N).\]</span></p>
 <p>We sill need the eigenvalues of <span class="math inline">\(J(D,N)\)</span> for certain problem later in the course. We can get these eigenvalues from our study of <span class="math inline">\(H(D,2)\)</span>.</p>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-50" class="lemma"><strong>Lemma 7.1  </strong></span>The eigenvalues for <span class="math inline">\(J(D,N)\)</span> with <span class="math inline">\(1\leq D \leq N/2\)</span> are give by
+<p><span id="lem:unlabeled-div-46" class="lemma"><strong>Lemma 7.1  </strong></span>The eigenvalues for <span class="math inline">\(J(D,N)\)</span> with <span class="math inline">\(1\leq D \leq N/2\)</span> are give by
 <span class="math display">\[\begin{align}
 \theta_i &amp; = (N-D-i)(D-i) - i \quad (0\leq i\leq D)\\
 m_i &amp; = \binom{D}{i} - \binom{N}{i-1}.
 \end{align}\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-51" class="proof"><em>Proof</em>. </span>Let
+<p><span id="unlabeled-div-47" class="proof"><em>Proof</em>. </span>Let
 <span class="math display">\[\begin{align}
 \Gamma_J &amp; \equiv J(D,N) = (X_J, E_J)\\
 \Gamma_H &amp; \equiv H(N,2) = (X_H, E_H).
@@ -247,7 +249,7 @@ where</p>
 <p><span class="math display">\[gx = x, \; gy = z, \; gz = y.\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-52" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-48" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block">(TH) <span class="math inline">\(\Rightarrow\)</span> (C)</div>
 <p>Fix <span class="math inline">\(i\)</span> with <span class="math inline">\(0\leq i\leq D\)</span>. Let
 <span class="math display">\[V = \sum W. \; \text{The standard module written as a direct sum of irreducible $T$-modules}.\]</span>

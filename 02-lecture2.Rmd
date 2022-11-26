@@ -167,7 +167,7 @@ Let $\Gamma = (X, E)$ be any graph.
 $\Gamma$ is said to be _bipartite_\index{bipartite} if the adjacency matrix $A$ is bipartite. That is, $X$ can be written as a disjoint union of $X^+$ and $X^-$ such that $X^+, X^-$ contain no edges of $\Gamma$. 
 :::
 
-:::{.corollary}
+:::{.corollary #spec}
 For any (connected) graph $\Gamma$ with
 $$\mathrm{Spec}(\Gamma) = \begin{pmatrix}\theta_0 & \theta_1 &\cdots & \theta_r\\m_1 & m_1 & \cdots & m_r\end{pmatrix} \:\textrm{ with }\: \theta_0 > \theta_1 > \cdots > \theta_r.$$
 Let $V_i$ be the eigenspace of $\theta_i$. Then the following holds.

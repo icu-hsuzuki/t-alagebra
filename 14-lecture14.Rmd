@@ -1,4 +1,4 @@
-# Parameters of Thin Modules {#lec14}
+# Parameters of Thin Modules, I {#lec14}
 **Friday, February 19, 1993** 
 
 Summary.

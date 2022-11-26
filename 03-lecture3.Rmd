@@ -92,7 +92,7 @@ $\mathrm{Aut}(\Gamma) \simeq D_6\times \mathbb{Z}_2$ contains two regular subgro
 
 Cayley graphs are vertex transitive, indeed.
 
-:::{.theorem}
+:::{.theorem #cayley-graph}
 The following hold.
 
 | $(i)$ For any Cayley graph $\Gamma = \Gamma(G, \Delta)$, the map 

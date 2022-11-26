@@ -57,7 +57,7 @@ $$g(x) = y,\quad g(x') = y'.$$
 (This means $G$ is as close to being doubly transitive as possible.)
 :::
 
-:::{.lemma}
+:::{.lemma #property-g}
 Suppose a graph $\Gamma = (X, E)$ satisfies the property \textrm{(G) = (G($x$))} for every $x\in X$. Then, 
 
 | $(i)$ either

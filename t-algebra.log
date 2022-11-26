@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.2.28)  25 NOV 2022 22:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.2.28)  26 NOV 2022 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -843,13 +843,13 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 2.
-)
+[3])
 \tf@toc=\write4
 \openout4 = `t-algebra.toc'.
 
-[3] [4
+[4] [5
 
-] [5] [6]
+] [6]
 Chapter 1.
 File: t-algebra_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf
 )
@@ -857,7 +857,7 @@ File: t-algebra_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf
 [7
 
 ] [8] [9] [10]
-Overfull \hbox (30.03506pt too wide) detected at line 474
+Overfull \hbox (30.03506pt too wide) detected at line 475
 []
  []
 
@@ -866,7 +866,7 @@ Chapter 2.
 [13
 
 ]
-Underfull \hbox (badness 1742) in paragraph at lines 566--567
+Underfull \hbox (badness 1742) in paragraph at lines 567--568
 []\TU/lmr/m/n/10 By elementary linear algebra, there exists an orthonormal basi
 s
  []
@@ -891,13 +891,13 @@ ipt=math;language=dflt;!
 Missing character: There is no ⧵ (U+29F5) in font [latinmodern-math.otf]/OT:scr
 ipt=math;language=dflt;!
 [21]
-Overfull \hbox (45.62827pt too wide) detected at line 811
+Overfull \hbox (45.62827pt too wide) detected at line 813
 [][][][][] [] [][][][][] [] [][][][][] [] [][][][][] [] [][][][][][][] [] [] []
  [][][][] [] [][][][][] [] [][][][] [] [][] [] [][][]
  []
 
 
-Overfull \hbox (58.16245pt too wide) detected at line 818
+Overfull \hbox (58.16245pt too wide) detected at line 820
 [][][][] [][][] [] [][] [] [][][][] [] [] [] [][][] [][][][][][][][] [] [] [] [
 ][][][][][][] [][][][][][] [] [] [] [][][][][][][] [][][][][][] [] [][]
  []
@@ -925,32 +925,32 @@ Underfull \vbox (badness 2359) has occurred while \output is active []
 [27] [28] [29] [30]
 Chapter 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 1058.
+(Font)              scaled to size 24.88pt on input line 1060.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 1058.
+(Font)              scaled to size 20.74pt on input line 1060.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 1058.
+(Font)              scaled to size 17.28pt on input line 1060.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 24.88228pt on input line 1058.
+(Font)              scaled to size 24.88228pt on input line 1060.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 20.7419pt on input line 1058.
+(Font)              scaled to size 20.7419pt on input line 1060.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 17.28157pt on input line 1058.
+(Font)              scaled to size 17.28157pt on input line 1060.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 24.87733pt on input line 1058.
+(Font)              scaled to size 24.87733pt on input line 1060.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 20.73778pt on input line 1058.
+(Font)              scaled to size 20.73778pt on input line 1060.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 17.27815pt on input line 1058.
+(Font)              scaled to size 17.27815pt on input line 1060.
 [31
 
 ] [32] [33]
-Overfull \hbox (2.82185pt too wide) detected at line 1213
+Overfull \hbox (2.82185pt too wide) detected at line 1215
 []
  []
 
 [34]
-Overfull \hbox (38.56146pt too wide) detected at line 1261
+Overfull \hbox (38.56146pt too wide) detected at line 1263
 []
  []
 
@@ -959,7 +959,7 @@ Chapter 6.
 [37
 
 ] [38] [39]
-Overfull \hbox (98.12941pt too wide) detected at line 1476
+Overfull \hbox (98.12941pt too wide) detected at line 1478
 []
  []
 
@@ -975,7 +975,7 @@ ipt=math;language=dflt;!
 [43
 
 ] [44] [45]
-Overfull \hbox (21.69089pt too wide) detected at line 1700
+Overfull \hbox (21.69089pt too wide) detected at line 1702
 [] [] [] [][] [][]
  []
 
@@ -984,7 +984,7 @@ Overfull \hbox (21.69089pt too wide) detected at line 1700
 ]
 Chapter 8.
 [49] [50] [51]
-Overfull \hbox (35.64603pt too wide) detected at line 1875
+Overfull \hbox (35.64603pt too wide) detected at line 1878
 []
  []
 
@@ -1004,7 +1004,7 @@ Chapter 9.
 Missing character: There is no ⧵ (U+29F5) in font [latinmodern-math.otf]/OT:scr
 ipt=math;language=dflt;!
 [56] [57]
-Overfull \hbox (5.79597pt too wide) detected at line 2062
+Overfull \hbox (5.79597pt too wide) detected at line 2066
 [][] [] [][][][][] [][] [] [] [] [][][]  [][] [] [][][][][][][] [] [][][] [][] 
 [] [] [] [][][]  [] [] [][] [] [][][][]
  []
@@ -1014,7 +1014,7 @@ Overfull \hbox (5.79597pt too wide) detected at line 2062
 ]
 Chapter 10.
 [61]
-Overfull \hbox (25.35379pt too wide) detected at line 2148
+Overfull \hbox (25.35379pt too wide) detected at line 2152
 []
  []
 
@@ -1077,15 +1077,28 @@ Chapter 14.
 ]
 
 LaTeX Warning: Reference `prop:dim-diamter' on page 86 undefined on input line 
-2960.
+2964.
 
 [86] [87] [88
 
 ]
 Chapter 15.
-(./t-algebra.bbl [89] [90
+[89] [90]
 
-]) (./t-algebra.ind [91] [92
+LaTeX Warning: Reference `def:measure' on page 91 undefined on input line 3131.
+
+
+[91] [92] [93] [94]
+Chapter 16.
+[95
+
+] [96
+
+]
+Chapter 17.
+(./t-algebra.bbl [97] [98
+
+]) (./t-algebra.ind [99] [100
 
 
 ]) (./t-algebra.aux)
@@ -1094,12 +1107,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18239 strings out of 476919
- 325153 string characters out of 5821840
- 849719 words of memory out of 5000000
- 37919 multiletter control sequences out of 15000+600000
+ 18254 strings out of 476919
+ 325379 string characters out of 5821840
+ 853154 words of memory out of 5000000
+ 37934 multiletter control sequences out of 15000+600000
  412796 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,19n,122p,514b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on t-algebra.pdf (92 pages).
+Output written on t-algebra.pdf (100 pages).

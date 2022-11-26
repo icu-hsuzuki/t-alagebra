@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-25" />
+<meta name="date" content="2022-11-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,8 +112,10 @@ div.csl-indent {
 <li class="chapter" data-level="11" data-path="lec11.html"><a href="lec11.html"><i class="fa fa-check"></i><b>11</b> Examples of <span class="math inline">\(T\)</span>-Module</a></li>
 <li class="chapter" data-level="12" data-path="lec12.html"><a href="lec12.html"><i class="fa fa-check"></i><b>12</b> Distance-Regular</a></li>
 <li class="chapter" data-level="13" data-path="lec13.html"><a href="lec13.html"><i class="fa fa-check"></i><b>13</b> Modules of a DRG</a></li>
-<li class="chapter" data-level="14" data-path="lec14.html"><a href="lec14.html"><i class="fa fa-check"></i><b>14</b> Parameters of Thin Modules</a></li>
-<li class="chapter" data-level="15" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>15</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="14" data-path="lec14.html"><a href="lec14.html"><i class="fa fa-check"></i><b>14</b> Parameters of Thin Modules, I</a></li>
+<li class="chapter" data-level="15" data-path="lec15.html"><a href="lec15.html"><i class="fa fa-check"></i><b>15</b> Parameters of Thin Modules, II</a></li>
+<li class="chapter" data-level="16" data-path="lec16.html"><a href="lec16.html"><i class="fa fa-check"></i><b>16</b> Thin Modoles of a DRG</a></li>
+<li class="chapter" data-level="17" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>17</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -145,7 +147,7 @@ div.csl-indent {
 <p>Fix <span class="math inline">\(x\in X\)</span>, let
 <span class="math inline">\(D \equiv D(x)\)</span> be the <span class="math inline">\(x\)</span>-diameter, and <span class="math inline">\(k = k(x)\)</span> be the valency of <span class="math inline">\(x\)</span>.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-58" class="definition"><strong>Definition 9.1  </strong></span>Pick <span class="math inline">\(x\in X\)</span> and write <span class="math inline">\(E_i^* \equiv E_i^*(x)\)</span> and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
+<p><span id="def:unlabeled-div-53" class="definition"><strong>Definition 9.1  </strong></span>Pick <span class="math inline">\(x\in X\)</span> and write <span class="math inline">\(E_i^* \equiv E_i^*(x)\)</span> and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
 <p>Let <span class="math inline">\(W\)</span> be an irreducible thin <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r\)</span>, diameter <span class="math inline">\(d\)</span>.</p>
 <p>Let <span class="math inline">\(a_i = a_i(W)\in \mathbb{C}\)</span> satisfying
 <span class="math display">\[E_{r+i}^*A{E^*_{r+i}|}_{E_{r+i}^*W} = a_i1|_{E_{r+i}^*} \quad (0\leq i\leq d).\]</span>
@@ -165,7 +167,7 @@ Let <span class="math inline">\(x_i = x_i(W)\in \mathbb{C}\)</span> satisfying
 <span class="math inline">\(\quad (ivb)\)</span> <span class="math inline">\(p_{d+1}\)</span> is the minimal polynomial of <span class="math inline">\(A|_W\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-59" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span> <span class="math inline">\(a_i\)</span> is an eigenvalue of a real symmetric matrix <span class="math inline">\(E_{r+i}^*AE^*_{r+i}\)</span>.</p>
+<p><span id="unlabeled-div-54" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span> <span class="math inline">\(a_i\)</span> is an eigenvalue of a real symmetric matrix <span class="math inline">\(E_{r+i}^*AE^*_{r+i}\)</span>.</p>
 <p><span class="math inline">\((ii)\)</span> <span class="math inline">\(x_i\)</span> is an eigenvalue of a real symmetrix matrix <span class="math inline">\(B^\top B\)</span>, where
 <span class="math display">\[B = E^*_{r+i}AE^*_{r+i-1}.\]</span>
 Hence, <span class="math inline">\(x_i\in \mathbb{R}\)</span>.</p>
@@ -213,13 +215,13 @@ We have,
 Hence <span class="math inline">\(\beta_0 = \cdots = \beta_d = 0\)</span> by <span class="math inline">\((iiia)\)</span>. Thus <span class="math inline">\(q = 0\)</span> and a contradiction.</p>
 </div>
 <div class="corollary">
-<p><span id="cor:unlabeled-div-60" class="corollary"><strong>Corollary 9.1  </strong></span>Let <span class="math inline">\(\Gamma\)</span>, <span class="math inline">\(W\)</span>, <span class="math inline">\(r\)</span>, <span class="math inline">\(d\)</span> be as above. Then</p>
+<p><span id="cor:thin-is-dualthin" class="corollary"><strong>Corollary 9.1  </strong></span>Let <span class="math inline">\(\Gamma\)</span>, <span class="math inline">\(W\)</span>, <span class="math inline">\(r\)</span>, <span class="math inline">\(d\)</span> be as above. Then</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(W\)</span> is dual thin, that is,</div>
 <p><span class="math display">\[\dim E_iW \leq 1 \quad (1\leq i \leq d).\]</span></p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(d = |\{i \mid E_iW \neq 0\}| - 1.\)</span></div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-61" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span> Set as in Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>,
+<p><span id="unlabeled-div-55" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span> Set as in Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>,
 <span class="math display">\[w_i = p_i(A)w_0\in E^*_{r+i}W.\]</span>
 Then <span class="math inline">\(w_0, w_1, \ldots, w_d\)</span> is a basis for <span class="math inline">\(W\)</span>. We have
 <span class="math display">\[W = Mw_0.\]</span>
@@ -240,7 +242,7 @@ Then,
 <span class="math display">\[\frac{\|w_i\|^2}{\|w_0\|^2} = x_1x_2\cdots x_i \quad (1\leq i\leq d).\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-62" class="proof"><em>Proof</em>. </span>It suffices to show that
+<p><span id="unlabeled-div-56" class="proof"><em>Proof</em>. </span>It suffices to show that
 <span class="math display">\[\|w_i\|^2 = x_i\|w_i\|^2 \quad (1\leq i\leq d).\]</span>
 Recall by Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a> <span class="math inline">\((iiib)\)</span> that
 <span class="math display">\[Aw_j = w_{j+1} + a_jw_j + x_jw_{j-1} \quad (0\leq j\leq d), \quad w_{-1} = w_{d+1} = 0.\]</span>
@@ -259,8 +261,8 @@ Also,
 \end{align}\]</span>
 This proves the lemma.</p>
 </div>
-<div class="definition">
-<p><span id="def:unlabeled-div-63" class="definition"><strong>Definition 9.2  </strong></span>Let <span class="math inline">\(W\)</span> be an irreducible thin <span class="math inline">\(T(x)\)</span> module with endpoint <span class="math inline">\(r\)</span>, <span class="math inline">\(E^*_i \equiv E_i^*(x)\)</span>.</p>
+<p>:::{.definition #measure)}
+Let <span class="math inline">\(W\)</span> be an irreducible thin <span class="math inline">\(T(x)\)</span> module with endpoint <span class="math inline">\(r\)</span>, <span class="math inline">\(E^*_i \equiv E_i^*(x)\)</span>.</p>
 <p>The measure <span class="math inline">\(m = m_W\)</span> is the function
 <span class="math display">\[m: \mathbb{R} \to \mathbb{R}\]</span>
 such that
@@ -268,8 +270,8 @@ such that
 m(\theta) = \begin{cases}\frac{\|E_iw\|^2}{\|w\|^2} &amp; \text{where } 0\neq w \in E^*_rW\\
 &amp; \text{ if $\theta = \theta_i$ is an eigenvalue for $\Gamma$}\\
 0 &amp; \text{if $\theta$ is not an eigenvalue for $\Gamma$.}
-\end{cases}\]</span></p>
-</div>
+\end{cases}\]</span>
+:::</p>
 
 </div>
             </section>

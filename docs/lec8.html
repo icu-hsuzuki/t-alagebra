@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-25" />
+<meta name="date" content="2022-11-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,8 +112,10 @@ div.csl-indent {
 <li class="chapter" data-level="11" data-path="lec11.html"><a href="lec11.html"><i class="fa fa-check"></i><b>11</b> Examples of <span class="math inline">\(T\)</span>-Module</a></li>
 <li class="chapter" data-level="12" data-path="lec12.html"><a href="lec12.html"><i class="fa fa-check"></i><b>12</b> Distance-Regular</a></li>
 <li class="chapter" data-level="13" data-path="lec13.html"><a href="lec13.html"><i class="fa fa-check"></i><b>13</b> Modules of a DRG</a></li>
-<li class="chapter" data-level="14" data-path="lec14.html"><a href="lec14.html"><i class="fa fa-check"></i><b>14</b> Parameters of Thin Modules</a></li>
-<li class="chapter" data-level="15" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>15</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="14" data-path="lec14.html"><a href="lec14.html"><i class="fa fa-check"></i><b>14</b> Parameters of Thin Modules, I</a></li>
+<li class="chapter" data-level="15" data-path="lec15.html"><a href="lec15.html"><i class="fa fa-check"></i><b>15</b> Parameters of Thin Modules, II</a></li>
+<li class="chapter" data-level="16" data-path="lec16.html"><a href="lec16.html"><i class="fa fa-check"></i><b>16</b> Thin Modoles of a DRG</a></li>
+<li class="chapter" data-level="17" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>17</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -139,7 +141,7 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 8</span> Thin Graphs<a href="lec8.html#lec8" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Friday, February 5, 1993</strong></p>
 <div class="proof">
-<p><span id="unlabeled-div-53" class="proof"><em>Proof</em> (Proof of Theorem <a href="lec7.html#thm:thin-condition">7.1</a> continued). </span></p>
+<p><span id="unlabeled-div-49" class="proof"><em>Proof</em> (Proof of Theorem <a href="lec7.html#thm:thin-condition">7.1</a> continued). </span></p>
 <div class="line-block">(S) <span class="math inline">\(\Rightarrow\)</span> (C)</div>
 <p>Fix <span class="math inline">\(i\)</span> and pick <span class="math inline">\(a, b\in E_i^*TE_i^*\)</span>.</p>
 <p>Since <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(ab\)</span> are symmetric,
@@ -180,21 +182,21 @@ Find all the graphs that satisfy the condition (G) for every vertex <span class=
 = \{\hat{S} \mid |S| = i\}.\]</span></p>
 <p>Property (G) is clearly related to the distance-transitive property.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-54" class="definition"><strong>Definition 8.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any graph. <span class="math inline">\(\Gamma\)</span> with <span class="math inline">\(G\subseteq \mathrm{Aut}(\Gamma)\)</span> is said to be distance-transitive (or two-point homogeneous), whenever
+<p><span id="def:unlabeled-div-50" class="definition"><strong>Definition 8.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any graph. <span class="math inline">\(\Gamma\)</span> with <span class="math inline">\(G\subseteq \mathrm{Aut}(\Gamma)\)</span> is said to be distance-transitive (or two-point homogeneous), whenever
 <span class="math display">\[\text{for all } x, x&#39;, y, y&#39;\in X \; \text{ with } \partial(x,y) = \partial(x&#39;,y&#39;),\]</span>
 there exists <span class="math inline">\(g\in G\)</span> such that
 <span class="math display">\[g(x) = y,\quad g(x&#39;) = y&#39;.\]</span>
 (This means <span class="math inline">\(G\)</span> is as close to being doubly transitive as possible.)</p>
 </div>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-55" class="lemma"><strong>Lemma 8.1  </strong></span>Suppose a graph <span class="math inline">\(\Gamma = (X, E)\)</span> satisfies the property for every <span class="math inline">\(x\in X\)</span>. Then,</p>
+<p><span id="lem:property-g" class="lemma"><strong>Lemma 8.1  </strong></span>Suppose a graph <span class="math inline">\(\Gamma = (X, E)\)</span> satisfies the property for every <span class="math inline">\(x\in X\)</span>. Then,</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> either<br />
 <span class="math inline">\(\quad (ia)\)</span> <span class="math inline">\(\Gamma\)</span> is vertex transitive; or<br />
 <span class="math inline">\(\quad (iia)\)</span> <span class="math inline">\(\Gamma\)</span> is bipartite <span class="math inline">\((X = X^+ \cup X^-)\)</span> with <span class="math inline">\(X^+\)</span>, <span class="math inline">\(X^-\)</span> each an orbit of <span class="math inline">\(\mathrm{Aut}(\Gamma)\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> if <span class="math inline">\((ia)\)</span> holds, then <span class="math inline">\(\Gamma\)</span> is distance-transitive.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-56" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span>
+<p><span id="unlabeled-div-51" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span>
 Claim. Suppose <span class="math inline">\(y, z\in X\)</span> are conneced by a path of even length. Then <span class="math inline">\(y, z\)</span> are in the same orbit of <span class="math inline">\(\mathrm{Aut}(\Gamma)\)</span>.</p>
 <p><em>Pf.</em>
 It suffices to assume that the path has lenght <span class="math inline">\(2\)</span>, <span class="math inline">\(y \sim w\sim z\)</span>.</p>
@@ -246,7 +248,7 @@ X &amp; = \text{the set of all $D\times N$ matrices with entries in $GF(q)$}.\\
 E &amp; = \{xy\mid y, x\in X, \; \mathrm{rank}(x-y) = 1.\}.
 \end{align}\]</span></p>
 <div class="remark">
-<p><span id="unlabeled-div-57" class="remark"><em>Remark</em>. </span></p>
+<p><span id="unlabeled-div-52" class="remark"><em>Remark</em>. </span></p>
 <div class="line-block"><span class="math inline">\(H(D,r)\)</span>: <span class="math inline">\(G = S_r \mathrm{wr} S_D\)</span>, <span class="math inline">\(G_x = S_{r-1} \mathrm{wr} S_D\)</span>,</div>
 <p>For <span class="math inline">\(x, y\in X\)</span> with <span class="math inline">\(\partial(x, y) = \partial(x,z) = i\)</span>,
 <span class="math display">\[\begin{align}

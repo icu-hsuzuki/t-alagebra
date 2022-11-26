@@ -128,7 +128,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-11-25}
+\date{2022-11-26}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -418,6 +418,7 @@ Observe that
 \[\langle au, v\rangle = \langle u, a^*v\rangle \quad \textrm{for all }\; a\in \mathrm{Mat}_X(K), \textrm{ and for all } \; u,v\in V.\]
 
 \begin{lemma}
+\protect\hypertarget{lem:complete-reducibility}{}\label{lem:complete-reducibility}
 
 Let \(\Gamma = (X,E)\), \(x\in X\) and \(T \equiv T(x)\) be as above.
 
@@ -661,6 +662,7 @@ Let \(\Gamma = (X, E)\) be any graph.
 \end{definition}
 
 \begin{corollary}
+\protect\hypertarget{cor:spec}{}\label{cor:spec}
 
 For any (connected) graph \(\Gamma\) with
 \[\mathrm{Spec}(\Gamma) = \begin{pmatrix}\theta_0 & \theta_1 &\cdots & \theta_r\\m_1 & m_1 & \cdots & m_r\end{pmatrix} \:\textrm{ with }\: \theta_0 > \theta_1 > \cdots > \theta_r.\]
@@ -757,7 +759,7 @@ Then Cayley graph \(\Gamma = \Gamma(G, \Delta)\) is defined on the vetex set \(X
 Cayley graphs are vertex transitive, indeed.
 
 \begin{theorem}
-The following hold.
+\protect\hypertarget{thm:cayley-graph}{}\label{thm:cayley-graph}The following hold.
 
 \((i)\) For any Cayley graph \(\Gamma = \Gamma(G, \Delta)\), the map
 
@@ -888,7 +890,7 @@ is an isomorphism of groups.
 \textbf{Wednesday, January 27, 1993}
 
 \begin{theorem}
-Given a Cayley graph \(\Gamma = \Gamma(G, \Delta)\). View the standard module \(V \equiv \mathbb{C}G\) (the group algebra), so
+\protect\hypertarget{thm:charcter-group}{}\label{thm:charcter-group}Given a Cayley graph \(\Gamma = \Gamma(G, \Delta)\). View the standard module \(V \equiv \mathbb{C}G\) (the group algebra), so
 \[\left\langle \sum_{g\in G}\alpha_g g, \;\sum_{g\in G}\beta_g g\right\rangle = \sum_{g\in G}\alpha_g\overline{\beta_g}, \quad \textrm{with}\; \alpha_g, \beta_g\in \mathbb{C}.\]
 For any \(\theta\in X(G)\), write
 \[\hat{\theta} = \sum_{g\in G}\theta(g^{-1})g.\]
@@ -1802,6 +1804,7 @@ there exists \(g\in G\) such that
 \end{definition}
 
 \begin{lemma}
+\protect\hypertarget{lem:property-g}{}\label{lem:property-g}
 
 Suppose a graph \(\Gamma = (X, E)\) satisfies the property \textrm{(G) = (G($x$))} for every \(x\in X\). Then,
 
@@ -2029,6 +2032,7 @@ Hence \(\beta_0 = \cdots = \beta_d = 0\) by \((iiia)\). Thus \(q = 0\) and a con
 \end{proof}
 
 \begin{corollary}
+\protect\hypertarget{cor:thin-is-dualthin}{}\label{cor:thin-is-dualthin}
 
 Let \(\Gamma\), \(W\), \(r\), \(d\) be as above. Then
 
@@ -2085,7 +2089,7 @@ Also,
 This proves the lemma.
 \end{proof}
 
-\begin{definition}
+:::\{.definition \#measure)\}
 Let \(W\) be an irreducible thin \(T(x)\) module with endpoint \(r\), \(E^*_i \equiv E_i^*(x)\).
 
 The measure \index{measure} \(m = m_W\) is the function
@@ -2096,7 +2100,7 @@ m(\theta) = \begin{cases}\frac{\|E_iw\|^2}{\|w\|^2} & \text{where } 0\neq w \in 
 & \text{ if $\theta = \theta_i$ is an eigenvalue for $\Gamma$}\\
 0 & \text{if $\theta$ is not an eigenvalue for $\Gamma$.}
 \end{cases}\]
-\end{definition}
+:::
 
 \hypertarget{lec10}{%
 \chapter{\texorpdfstring{Thin \(T\)-Module, II}{Thin T-Module, II}}\label{lec10}}
@@ -2902,7 +2906,7 @@ So \(A\) is nonsingular, and \(\Gamma\) is regular.
 \end{proof}
 
 \hypertarget{lec14}{%
-\chapter{Parameters of Thin Modules}\label{lec14}}
+\chapter{Parameters of Thin Modules, I}\label{lec14}}
 
 \textbf{Friday, February 19, 1993}
 
@@ -3023,6 +3027,235 @@ r = 0 & \quad d = D\\
 r = 1 & \quad d = D-1\\
 r = 1 & \quad d = D-2
 \end{align}
+
+\hypertarget{lec15}{%
+\chapter{Parameters of Thin Modules, II}\label{lec15}}
+
+\textbf{Monday, February 22, 1993}
+
+\begin{proof}[Proof of Lemma \ref{lem:thin-endpoint1} Continued]
+We have \(\deg f_W\leq 2\) by Lemma \ref{lem:basic-data} \((ii)\).
+
+Also bt Lemma \ref{lem:principal-module}, \(E_0W = 0\).
+
+(As otherwise \(\langle \delta \rangle = E_0V \subseteq W\) and \(r(W) = 0\).)
+
+Hence, \(\lambda - \theta_0 = \lambda - k\) is a factor of \(f_W\) by Lemma \ref{lem:basic-data} \((iii)\).
+
+Let \(p_0, p_1, \ldots, p_D\) denote the polynomials for the trivial \(T(x)\)-module from Lemma \ref{lem:thin-module-structure}.
+
+Recall,
+\begin{align}
+\sum_{\theta\in \mathbb{R}}m(\theta)p_i(\theta)p_j(\theta) & = \delta_{ij}x_1x_2\cdots x_i \quad (0\leq i,j\leq D)\\
+& = \delta_{ij}b_0b_1\cdots b_{i-1}c_1c_2\cdots c_i.
+\end{align}
+Note that \(x_i = b_{i-1}c_i\) is in the proof of Theorem \ref{thm:thin-condition}.
+
+By construction,
+\begin{align}
+p_0(\lambda) & = 1.
+p_1(\lambda) & = \lambda.
+p_2(\lambda) & \lambda^2 - a_1\lambda - k.
+\end{align}
+
+Apparently,
+\[f_W = \sigma_0 p_0 + \sigma p_1 + \sigma_2 p_2\]
+for some \(\sigma_0, \sigma_1, \sigma_2\in \mathbb{C}\).
+
+Claim:
+\begin{align}
+\sigma_0 & = 1,\\
+\sigma_1 & = \frac{a_0(W)}{k},\\
+\sigma_2 & -\frac{1+a_0(W)}{kb_1}.
+\end{align}
+
+\emph{Pf of Claim.}
+\begin{align}
+1 & = \sum_{\theta\in \mathbb{R}}m_W(\theta)\\
+& = \sum_{\theta\in \mathbb{R}}m(\theta)f_W(\theta)\\
+& = \sum_{j=0}^2 \sigma_j\left(\sum_{\theta\in \mathbb{R}}m(\theta)p_j(\theta)\right)\\
+& = \sigma_0.
+\end{align}
+We applied Lemma \ref{lem:orthogonality} \((ib)\), Lemma \ref{lem:basic-data} \((ib)\), and Lemma \ref{lem:orthogonality} \((i)\) in this order.
+
+Next by Lemma \ref{lem:orthogonality} \((ii)\), and \(p_1(\theta) = \theta\),
+\begin{align}
+a_0(W) & = \sum_{\theta\in \mathbb{R}}m_W(\theta)\theta\\
+& = \sum_{\theta\in \mathbb{R}}f_W(\theta)\theta\\
+& = \sum_{j = 0}^2\sigma_j\sum_{\theta\in \mathbb{R}}m(\theta)p_j(\theta)p_1(\theta)\\
+& = \sigma_1 x_1(T\delta)\\
+& = \sigma_1b_0c_1\\
+& = \sigma_1 k.
+\end{align}
+So for,
+\[f_W(\lambda) = 1 + \frac{a_0(W)}{k}\lambda + \sigma_2(\lambda^2 - a_1\lambda-k).\]
+But,
+\begin{align}
+0 & = f_W(k)\\
+& = 1 + a_0(W) + \sigma_2k(k-a_1-1)\\
+& 1 + a_0(W) + \sigma_2kb_1.
+\end{align}
+Thus,
+\[\sigma_2 = -\frac{1+a_0(W)}{kb_1}.\]
+This proves Claim.
+
+Case: \(a_0(W) = -1\).
+
+Here, \(\sigma_2 = 0\) and
+\[f_W(\lambda) = 1 + \frac{a_0(W)\lambda}{k} = 1-\frac{\lambda}{k}.\]
+Also,
+\[d+1 = |\{\theta \mid \theta \;\text{ is an eigenvalue of $\Gamma$}, \; f_W(\theta)\neq 0\} = D.\]
+
+Case: \(a_0(W) \neq -1\).
+
+Here, \(\sigma_2\neq 0\), and \(\deg f_W = 2\). So,
+\[f_W(\lambda) = (\lambda - k)(\lambda - \beta)\alpha\]
+for some \(\alpha, \beta\in \mathbb{C}, \; \alpha \neq 0\).
+
+Comparing the coefficients in
+\[(\lambda-k)(\lambda - \beta)\alpha = 1 + \frac{a_0(W)}{k}\lambda - \frac{a_0(W)+1}{kb_1}(\lambda^2 - a_1\lambda -k),\]
+we find
+\begin{align}
+\alpha & = -\frac{a_0(W) + 1}{kb_1},\\
+-(k+\beta)\alpha & = \frac{a_0(W)}{k} + \frac{a_0(W)+1}{kb_1}a_1,\\
+k\beta\alpha & = 1 + \frac{a_0(W)+1}{b_1}.
+\end{align}
+Hence,
+\[-\beta(a_0(W) + 1) = b_1 + (a_0(W) + 1).\]
+Thus, we have
+\begin{equation}
+(1+a_0(W))(1+\beta) = -b_1. \label{eq:a0W}
+\end{equation}
+In particular, \(\beta \neq -1\), and
+\[\alpha = -\frac{1+a_0(W)}{kb_1} = \frac{1}{k(\beta+1)}.\]
+Also, by Definition \ref{def:measure},
+\begin{align}
+0 &\leq m_W(\theta) \\
+& = m(\theta)f_W(\theta) \quad (\text{for all} \; \theta\in \mathbb{R}).
+\end{align}
+But if \(\theta\) is an eigenvalue of \(\Gamma\),
+\[0 < m(\theta).\]
+So,
+\begin{align}
+0 & \leq f_W(\theta)\\
+& = \frac{(\theta-k)(\theta-\beta)}{k(\beta+1)}.
+\end{align}
+Either
+\[\beta+1 >0 \to \theta-\beta \leq 0 \;\text{ or }\; \beta \geq \theta_1,\]
+or
+\[\beta+1 < 0 \to \theta-\beta \geq 0 \;\text{ or }\; \beta \leq \theta_D.\]
+If \(\beta = \theta_1\),
+\begin{align}
+a_0(W) & = - \frac{b_1}{\beta+1}-1 = -\frac{b_1}{\theta_1+1}-1\\
+f_W(\lambda) & = \frac{(\lambda - k)(\lambda - \theta_1)}{k(\theta_1+1)},
+\end{align}
+and we have \((i)\).
+
+If \(\beta = \theta_D\),
+\begin{align}
+a_0(W) & = -\frac{b_1}{\theta_D+1}-1\\
+f_W(\lambda) & = \frac{(\lambda - k)(\lambda - \theta_D)}{k(\theta_D+1)},
+\end{align}
+and we have \((ii)\).
+
+If \(\beta \not\in \{\theta_1, \theta_2\}\),
+\[\theta \in (-\infty, \theta_D) \cup (\theta_1, \infty),\]
+we have \((iv)\).
+
+Note using \eqref{eq:a0W}, we have \((iv)\).
+\end{proof}
+
+\textbf{Note.}
+Using \eqref{eq:a0W},
+\[a_0(W) \to \beta \to f_W \to m_W \to \text{isomorphism class of $W$}.\]
+
+\textbf{Note on Lemma \ref{lem:thin-endpoint1}.}
+In fact, \(\theta_1 > -1\), \(\theta_D < -1\) if \(D\geq 2\).
+
+\begin{definition}
+\protect\hypertarget{def:complete-graph}{}\label{def:complete-graph}The complete graph \index{complete graph} \(K_n\) has \(n\) vertices and diameter \(D = 1\), i.e., \(xy\in E\) for all vertices \(x,t\).
+\end{definition}
+
+\(K_n\) is distance-regular with valency \(k = n-1\) and \(a_1 = n-2\), \(D = 1\).
+Moreover, it has two distince eigenvalues \(\theta_0\), \(\theta_1\).
+
+Recall, \(\theta_0, \ldots, \theta_D\) are roots of \(p_{D+1}\), i.e., \(D+1\) st polynomial for the trivial module/
+\begin{align}
+p_0 & = 1\\
+p_1 & = \lambda\\
+p_2 & = \lambda^2 - a_1\lambda - k\\
+& = \lambda^2 - (n-2)\lambda - (n-1)\\
+& = (\lambda - (n-1))(\lambda +1).
+\end{align}
+The roots are \(\theta_0 = n-1 = k\) and \(\theta_1 = -1\).
+
+\begin{lemma}
+\protect\hypertarget{lem:sedond-and-largest-ev}{}\label{lem:sedond-and-largest-ev}
+
+Let \(\Gamma = (X, E)\) be distance-regular of diameter \(D\geq 1\) with distinct eigenvalues
+\[k = \theta_0 > \theta_1 > \cdots > \theta_D.\]
+
+\((i)\) \(\theta_D\leq -1\) with equality if and only if \(D = 1\).
+
+\((ii)\) \(\theta_1 \geq -1\) with equality if and only if \(D=1\).
+
+\end{lemma}
+
+\begin{proof}
+\((i)\) Suppose \(\theta_D \geq -1\).
+
+Then \(I + A\) is positive semi-definite.
+
+By Lemma \ref{lem:pfl}, there exists vectors \(\{v_x\mid x\in X\}\) in a Euclidean space such that
+\begin{align}
+\langle v_x,v_y\rangle & = (I+A)_{xy}\\
+& = \begin{cases} 1 & \text{if $x = y$ or $xy\in E$,}\\0 & \text{othewise}.
+\end{cases}
+\end{align}
+For every \(xy\in E\),
+\[\langle v_x, v_y\rangle = \|v_x\|\|v_y\| = 1.\]
+Hence, \(v_x = v_y\), and \(v_x\) is independent of \(x\in X\).
+
+Shus \(\langle v_x,v_y\rangle = 1\) for all \(x,y\in X\).
+
+We have \(I + A = J\), (all 1's matrix), and \(D = 1\).
+
+\((ii)\) Let \(m\) be the trivial measure. Then,
+\begin{align}
+1 & = \sum_{\theta\in \mathbb{R}}m(\theta) + \sum_{\theta\in \mathbb{R}}m(\theta)\theta \\
+& = \sum_{\theta\in \mathbb{R}}m(\theta)(\theta+1)\\
+& = m(k)(k+1) + \sum_{\theta\neq k}m(\theta)(\theta+1)\\
+& \leq (k+1)|X|^{-1}.
+\end{align}
+Note that \(m(k) = |X|^{-1}\dim d_0V = |X|^{-1}\).
+
+So \(k+1 \geq |X|\) or \(k = |X|-1\). Thus,
+\(xy\in E\) for every \(x,y\in X\), and \(D = 1\).
+\end{proof}
+
+\textbf{Note.}
+Lemma \ref{lem:sedond-and-largest-ev} does not require distance-regular assumption.
+
+\hypertarget{lec16}{%
+\chapter{Thin Modoles of a DRG}\label{lec16}}
+
+\textbf{Wednesday, February 24, 1993}
+
+Let \(\Gamma = (X, E)\) denote any graph of diameter \(D\).
+
+\begin{definition}
+\protect\hypertarget{def:ith-incidence}{}\label{def:ith-incidence}For all integer \(i\), the \(i\)-th incidence matrix \(A_i\in \mathrm{Mat}_X(\mathbb{C})\) satisfies
+\[(A_i)_{xy} = \begin{cases} 1 & \text{if $\partial(x,y) = i$,}\\
+0 & \text{if $\partial(x,y)\neq i$,}
+\end{cases} \quad (x,y\in X).\]
+Observe,
+\begin{align}
+A_0 & = I && (\text{identity})\\
+A_1 & = A && (\text{adjacency matrix})\\
+A_0 + A_1 + \cdots + A_D & = J && (\text{all 1's matrix}).
+\end{align}
+In general, \(A_i\) may not belong to Bose-Mesner algebra.
+\end{definition}
 
 \hypertarget{lec55}{%
 \chapter{Title of the Chapter}\label{lec55}}
