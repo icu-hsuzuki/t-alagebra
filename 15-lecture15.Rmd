@@ -3,7 +3,7 @@
 
 :::{.proof name="Proof of Lemma \@ref(lem:thin-endpoint1) Continued"}  
   
-We have $\deg f_W\leq 2$ by Lemma \@ref(lem:basic-data) $(ii)$.
+| We have $\deg f_W\leq 2$ by Lemma \@ref(lem:basic-data) $(ii)$.
 
 Also bt Lemma \@ref(lem:principal-module), $E_0W = 0$.
 

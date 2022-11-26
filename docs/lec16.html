@@ -154,6 +154,55 @@ A_0 + A_1 + \cdots + A_D &amp; = J &amp;&amp; (\text{all 1&#39;s matrix}).
 \end{align}\]</span>
 In general, <span class="math inline">\(A_i\)</span> may not belong to Bose-Mesner algebra.</p>
 </div>
+<div class="lemma">
+<p><span id="lem:incidence-matrices" class="lemma"><strong>Lemma 16.1  </strong></span>Assume <span class="math inline">\(\Gamma = (X, E)\)</span> is distance-regular with diameter <span class="math inline">\(D\geq 1\)</span> and intersection numbers <span class="math inline">\(c_i, a_i, b_i\)</span>.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math display">\[AA_i = c_{i+1}A_{i+1} + a_iA_i + b_{i-1}A_{i-1}, \quad (0\leq i\leq D, \; A_{-1} = A_{D+1} = O).\]</span></div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\({\displaystyle A_i = \frac{p_i(A)}{c_1c_2\cdots c_i}, \quad (0\leq i\leq D)}\)</span>, where <span class="math inline">\(p_0, p_1, \ldots, p_D\)</span> are polynomials for the trivial module from Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(A_0, A_1, \ldots, A_D\)</span> form a bais for Bose-Mesner algebra <span class="math inline">\(M\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> For all distances <span class="math inline">\(h, i, j \quad (0\leq, i, j, h\leq D)\)</span>, and for all vertices <span class="math inline">\(x, y\in X\)</span> with <span class="math inline">\(\partial(x,y) = h\)</span>, the constant</div>
+<p><span class="math display">\[p^h_{i,j} = |\{z\in X\mid \partial(x,z) = i, \; \partial(y,z) = j\}|\]</span>
+depends only on <span class="math inline">\(h, i, j\)</span> and not on <span class="math inline">\(x, y\)</span>.</p>
+<div class="line-block"><span class="math inline">\((v)\)</span> <span class="math inline">\({\displaystyle E_0 = \frac{1}{|X|}J.}\)</span></div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-76" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> Pick <span class="math inline">\(x\in X\)</span>. Apply each side to <span class="math inline">\(\hat{x}\)</span>, we want to show that</div>
+<p><span class="math display">\[AA_i \hat{x} = c_{i+1}A_{i+1}\hat{x} + a_iA_i\hat{x} + b_{i-1}A_{i-1}\hat{x}.\]</span>
+<span class="math display">\[\begin{align}
+\mathrm{LHS} &amp; = A\left(\sum_{y\in X, \partial(x,y) = i}\hat{y}\right)\\
+&amp; = c_{i+1}\left(\sum_{z\in X, \partial(x,z) = i+1}\hat{z}\right) + a_i\left(\sum_{z\in X, \partial(x,z) = i}\hat{z}\right) + b_{i-1}\left(\sum_{z\in X, \partial(x,z) = i-1}\hat{z}\right)\\
+&amp; = \mathrm{RHS}.
+\end{align}\]</span></p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Recall (Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>)</div>
+<p><span class="math display">\[Ap_i(A) = p_{i+1}(A) + a_ip_i(A) + b_{i-1}c_ip_{i-1}(A) \quad (0\leq i\leq D).\]</span>
+Dividing by <span class="math inline">\(c_1c_2\cdots c_i\)</span>, we have
+<span class="math display">\[A\frac{p_i(A)}{c_1c_2\cdots c_i} = c_{i+1}\frac{p_{i+1}(A)}{c_1c_2\cdots c_{i+1}} + a_i\frac{p_i(A)}{c_1c_2\cdots c_i} + b_{i-1}\frac{p_{i-1}(A)}{c_1c_2\cdots c_i}.\]</span>
+So, <span class="math inline">\(A_i\)</span>, <span class="math inline">\(p_i(A)/(c_1c_2\cdots c_i)\)</span> satisfy the same recurrence.</p>
+<p>Also boundary condition,
+<span class="math display">\[A_0 = p_0(A) = I.\]</span>
+Hence,
+<span class="math display">\[A_i = \frac{p_i(A)}{c_1c_2\cdots c_i}\quad (0\leq i\leq D).\]</span></p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> Since <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span> form a basis for <span class="math inline">\(M\)</span>, <span class="math inline">\(\dim M = D+1\)</span>.</div>
+<p>Observe <span class="math inline">\(A_0, A_1, \ldots, A_D\in M\)</span> by <span class="math inline">\((ii)\)</span>,
+<span class="math inline">\(A_0, A_1, \ldots, A_D\)</span> are linearly independent, since <span class="math inline">\(p_0, p_1, \ldots, p_D\)</span> are linearly independent.</p>
+<p>Thus, <span class="math inline">\(A_0, A_1, \ldots, A_D\)</span> form a basis for <span class="math inline">\(M\)</span>.</p>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(A_0, A_1, \ldots, A_D\)</span> form a basis for an algebra <span class="math inline">\(M\)</span>,</div>
+<p><span class="math display" id="eq:plij">\[\begin{equation}
+A_iA_j = \sum_{\ell = 0}^Dp^{\ell_{ij}}A_\ell \quad \text{for some }\; p^\ell_{ij}\in\mathbb{C}. \tag{16.1}
+\end{equation}\]</span>
+Fix <span class="math inline">\(h \quad (0\leq h\leq D)\)</span>. Pick <span class="math inline">\(x, y\in X\)</span> with <span class="math inline">\(\partial(x,y) = h\)</span>.</p>
+<p>Compute <span class="math inline">\(x, y\)</span> entry in <a href="lec16.html#eq:plij">(16.1)</a>,
+<span class="math display">\[\begin{align}
+(A_iA_j)_{xy} &amp; = \sum_{z\in X}(A_i)_{xz}(A_j)_{zy}\\
+&amp; = \sum_{z\in X, \partial(x,z)=i, \partial(y,z)=j} 1\cdot 1\\
+&amp; = |\{z\in X\mid \partial(x,z)=i, \partial(y,z)=j\}|.
+\end{align}\]</span>
+On the other hand,
+<span class="math display">\[\left(\sum_{\ell=0}^D p^\ell_{ij} A_\ell\right)_{xy} = p^h_{ij}(A_h)_{xy} = p^h_{ij}.\]</span></p>
+<div class="line-block"><span class="math inline">\((v)\)</span> <span class="math inline">\(\frac{1}{|X|}J\)</span> is the orthogonal projection onto <span class="math inline">\(\mathrm{Span}(\delta) = E_0V\)</span>. Hence,</div>
+<p><span class="math display">\[\frac{1}{|X|} = E_0.\]</span>
+This proves the assertions.</p>
+</div>
 
 </div>
             </section>

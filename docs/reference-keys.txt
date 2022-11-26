@@ -1,6 +1,7 @@
 eq:6-1
 eq:6-2
 eq:a0W
+eq:plij
 lec1
 lec2
 lec3

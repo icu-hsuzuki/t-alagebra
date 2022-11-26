@@ -18,4 +18,66 @@ In general, $A_i$ may not belong to Bose-Mesner algebra.
 :::
 
 
+:::{.lemma #incidence-matrices}
+Assume $\Gamma = (X, E)$ is distance-regular with diameter $D\geq 1$ and intersection numbers $c_i, a_i, b_i$.
 
+| $(i)$ $$AA_i = c_{i+1}A_{i+1} + a_iA_i + b_{i-1}A_{i-1}, \quad (0\leq i\leq D, \; A_{-1} = A_{D+1} = O).$$
+
+| $(ii)$ ${\displaystyle A_i = \frac{p_i(A)}{c_1c_2\cdots c_i}, \quad (0\leq i\leq D)}$, where $p_0, p_1, \ldots, p_D$ are polynomials for the trivial module from Lemma \@ref(lem:thin-module-structure).
+
+| $(iii)$ $A_0, A_1, \ldots, A_D$ form a bais for Bose-Mesner algebra $M$.
+
+| $(iv)$ For all distances $h, i, j \quad (0\leq, i, j, h\leq D)$, and for all vertices $x, y\in X$ with $\partial(x,y) = h$, the constant
+$$p^h_{i,j} = |\{z\in X\mid \partial(x,z) = i, \; \partial(y,z) = j\}|$$
+depends only on $h, i, j$ and not on $x, y$.
+
+| $(v)$ ${\displaystyle E_0 = \frac{1}{|X|}J.}$
+:::
+
+:::{.proof}
+| $(i)$ Pick $x\in X$. Apply each side to $\hat{x}$, we want to show that
+$$AA_i \hat{x} = c_{i+1}A_{i+1}\hat{x} + a_iA_i\hat{x} + b_{i-1}A_{i-1}\hat{x}.$$
+\begin{align}
+\mathrm{LHS} & = A\left(\sum_{y\in X, \partial(x,y) = i}\hat{y}\right)\\
+& = c_{i+1}\left(\sum_{z\in X, \partial(x,z) = i+1}\hat{z}\right) + a_i\left(\sum_{z\in X, \partial(x,z) = i}\hat{z}\right) + b_{i-1}\left(\sum_{z\in X, \partial(x,z) = i-1}\hat{z}\right)\\
+& = \mathrm{RHS}.
+\end{align}
+
+| $(ii)$ Recall (Lemma \@ref(lem:thin-module-structure))
+$$Ap_i(A) = p_{i+1}(A) + a_ip_i(A) + b_{i-1}c_ip_{i-1}(A) \quad (0\leq i\leq D).$$
+Dividing by $c_1c_2\cdots c_i$, we have
+$$A\frac{p_i(A)}{c_1c_2\cdots c_i} = c_{i+1}\frac{p_{i+1}(A)}{c_1c_2\cdots c_{i+1}} + a_i\frac{p_i(A)}{c_1c_2\cdots c_i} + b_{i-1}\frac{p_{i-1}(A)}{c_1c_2\cdots c_i}.$$
+So, $A_i$, $p_i(A)/(c_1c_2\cdots c_i)$ satisfy the same recurrence.
+
+Also boundary condition,
+$$A_0 = p_0(A) = I.$$
+Hence,
+$$A_i = \frac{p_i(A)}{c_1c_2\cdots c_i}\quad (0\leq i\leq D).$$
+
+| $(iii)$ Since $E_0, E_1, \ldots, E_D$ form a basis for $M$, $\dim M = D+1$.
+
+Observe $A_0, A_1, \ldots, A_D\in M$ by $(ii)$,
+$A_0, A_1, \ldots, A_D$ are linearly independent, since $p_0, p_1, \ldots, p_D$ are linearly independent. 
+
+Thus, $A_0, A_1, \ldots, A_D$ form a basis for $M$.
+
+
+| $(iv)$ $A_0, A_1, \ldots, A_D$ form a basis for an algebra $M$,
+\begin{equation}
+A_iA_j = \sum_{\ell = 0}^Dp^{\ell_{ij}}A_\ell \quad \text{for some }\; p^\ell_{ij}\in\mathbb{C}. (\#eq:plij)
+\end{equation}
+Fix $h \quad (0\leq h\leq D)$. Pick $x, y\in X$ with $\partial(x,y) = h$. 
+
+Compute $x, y$ entry in \@ref(eq:plij), 
+\begin{align}
+(A_iA_j)_{xy} & = \sum_{z\in X}(A_i)_{xz}(A_j)_{zy}\\
+& = \sum_{z\in X, \partial(x,z)=i, \partial(y,z)=j} 1\cdot 1\\
+& = |\{z\in X\mid \partial(x,z)=i, \partial(y,z)=j\}|.
+\end{align}
+On the other hand, 
+$$\left(\sum_{\ell=0}^D p^\ell_{ij} A_\ell\right)_{xy} = p^h_{ij}(A_h)_{xy} = p^h_{ij}.$$
+
+| $(v)$ $\frac{1}{|X|}J$ is the orthogonal projection onto $\mathrm{Span}(\delta) = E_0V$. Hence,
+$$\frac{1}{|X|} = E_0.$$
+This proves the assertions.
+:::
