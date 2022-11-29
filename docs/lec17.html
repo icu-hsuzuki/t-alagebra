@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 17 Association Scheme | Lecture Note on Terwilliger Algebra</title>
+  <title>Chapter 17 Association Schemes | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 17 Association Scheme | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:title" content="Chapter 17 Association Schemes | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 17 Association Scheme | Lecture Note on Terwilliger Algebra" />
+  <meta name="twitter:title" content="Chapter 17 Association Schemes | Lecture Note on Terwilliger Algebra" />
   
   <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-11-28" />
+<meta name="date" content="2022-11-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="lec16.html"/>
-<link rel="next" href="lec55.html"/>
+<link rel="next" href="lec18.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -115,8 +115,9 @@ div.csl-indent {
 <li class="chapter" data-level="14" data-path="lec14.html"><a href="lec14.html"><i class="fa fa-check"></i><b>14</b> Parameters of Thin Modules, I</a></li>
 <li class="chapter" data-level="15" data-path="lec15.html"><a href="lec15.html"><i class="fa fa-check"></i><b>15</b> Parameters of Thin Modules, II</a></li>
 <li class="chapter" data-level="16" data-path="lec16.html"><a href="lec16.html"><i class="fa fa-check"></i><b>16</b> Thin Modoles of a DRG</a></li>
-<li class="chapter" data-level="17" data-path="lec17.html"><a href="lec17.html"><i class="fa fa-check"></i><b>17</b> Association Scheme</a></li>
-<li class="chapter" data-level="18" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>18</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="17" data-path="lec17.html"><a href="lec17.html"><i class="fa fa-check"></i><b>17</b> Association Schemes</a></li>
+<li class="chapter" data-level="18" data-path="lec18.html"><a href="lec18.html"><i class="fa fa-check"></i><b>18</b> Polynomial Schemes</a></li>
+<li class="chapter" data-level="19" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>19</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -139,9 +140,127 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="lec17" class="section level1 hasAnchor" number="17">
-<h1><span class="header-section-number">Chapter 17</span> Association Scheme<a href="lec17.html#lec17" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapter 17</span> Association Schemes<a href="lec17.html#lec17" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Monday, March 1, 1993</strong></p>
 <p><strong>Review</strong></p>
+<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be a distance-regular graph of diameter <span class="math inline">\(D\geq 2\)</span>. Pick a vertex <span class="math inline">\(x\in X\)</span>.</p>
+<p>Let <span class="math inline">\(W\)</span> be a thin irreducible <span class="math inline">\(T(x)\)</span>-module with endpoint <span class="math inline">\(r = 1\)</span>, diameter <span class="math inline">\(d = D-1\)</span> or <span class="math inline">\(D-2\)</span>, and <span class="math inline">\(r_0 = a_(W) + 1\)</span>.</p>
+<p>Show
+<span class="math display">\[\gamma_i = \frac{c_2c_2\cdots c_{i+1}b_2b_3\cdots b_{i+1}\gamma_0}{x_1(W)\cdots x_i(W)},\]</span>
+<span class="math inline">\(a_i(W)\)</span> and <span class="math inline">\(x_i(W)\)</span> are all algebraic integers in <span class="math inline">\(\mathbb{Q}[\gamma_0]\)</span>, where
+<span class="math display">\[\begin{align}
+x_i(W) &amp; = c_ib_i + \gamma_{i-1}(a_i + c_i - c_{i+1}-a_{i-1}(W)) &amp;&amp; (1\leq i\leq d)\\
+a_i(W) &amp; = \gamma_i - \gamma_{i-1} + a_i + c_i - c_{i+1} &amp;&amp; (1\leq i\leq d)
+\end{align}\]</span></p>
+<p>Certainly, <span class="math inline">\(x_i(W)\)</span>, <span class="math inline">\(\gamma_i\)</span>, and <span class="math inline">\(a_i(W)\)</span> are in <span class="math inline">\(\mathbb{Q}[\gamma_0]\)</span> by the above lines and so on.
+<span class="math display">\[\gamma_0 \to a_0(W) \to x_1(W) \to \gamma_1 \to a_1(W)\to x_1(W) \to \cdots .\]</span>
+Recall some <span class="math inline">\(B\in \mathrm{Mat}_n(\mathbb{C})\)</span> is integral whenever
+<span class="math display">\[B\in \mathrm{Mat}_n(\mathbb{Z}).\]</span>
+In this case, the characteristic polynomial
+<span class="math display">\[\det(\lambda I - B) = \lambda^n + \alpha_{n-1}\lambda^{n-1} + \cdots + \alpha_0, \quad \text{some }\; \alpha_0, \ldots, \alpha_{n-1}\in \mathbb{Z}.\]</span>
+Hence, eigenvalues of <span class="math inline">\(B\)</span> are algebraic integers.
+But <span class="math inline">\(a_i(W)\)</span> is an eigenvalue of an integral matrices,
+<span class="math display">\[B = E^*_{i+1}(x)AE^*_{i+1}(x).\]</span>
+Hence, <span class="math inline">\(a_i(W)\)</span> is an algebraic integer.</p>
+<p>Also, <span class="math inline">\(x_i(W)\)</span> is an eigenvalue of an integral matrix
+<span class="math display">\[B = E^*_i(x)AE^*_{i+1}(x)AE^*_i(x).\]</span>
+So <span class="math inline">\(x_i(W)\)</span> is an algebraic integer.
+<span class="math display">\[\gamma_i - \gamma_{i-1} = a_i(W) - a_i - c_i + c_{i+1}\]</span>
+is an algebraic integer.</p>
+<p>Since <span class="math inline">\(\gamma_0 = a_0(W) + 1\)</span> is an algebraic integer, we find <span class="math inline">\(\gamma\)</span> is an algebraic integer for all <span class="math inline">\(i\)</span>.</p>
+<div class="definition">
+<p><span id="def:association-scheme" class="definition"><strong>Definition 17.1  </strong></span>A (commutative) association scheme is a configuration <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span>, where <span class="math inline">\(X\)</span> is a finite nonempty set (of vertices),
+<span class="math inline">\(R_0, R_1, \ldots, R_D\)</span> are nonempty subsets of <span class="math inline">\(X\times X\)</span> such that</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(R_0 = \{(x,x)\mid x\in X\}\)</span>,</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(R_0 \cup \cdots \cup R_D = X\times X \quad (\text{disjoint union})\)</span>,</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> for every <span class="math inline">\(i\)</span>, <span class="math inline">\(R_i^\top = \{(y,x)\mid xy\in R\} = R_{i&#39;}\)</span> some <span class="math inline">\(i&#39;\in \{0,1,\ldots, D\}\)</span>,</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> for every <span class="math inline">\(h, i, j\)</span> (<span class="math inline">\(0\leq h, i, j\leq D\)</span>), and every <span class="math inline">\(x,y\in X\)</span> such that <span class="math inline">\((x,y)\in R_h\)</span>,</div>
+<p><span class="math display">\[p^h_{ij} = |\{z\in X\mid (x,z)\in R_i, \; (z,y)\in R_j\}|\]</span>
+depends only on <span class="math inline">\(h, i, j\)</span> and not on <span class="math inline">\(x,y\)</span>; and</p>
+<div class="line-block"><span class="math inline">\((v)\)</span> <span class="math inline">\(p^h_{ij} = p^h_{ji}\)</span> for all <span class="math inline">\(h,i, j\)</span>.</div>
+<p>If <span class="math inline">\(i&#39; = i\)</span> for all <span class="math inline">\(i\)</span>, we say <span class="math inline">\(Y\)</span> is symmetric.
+We call <span class="math inline">\(D\)</span> the class of scheme and <span class="math inline">\(R_i\)</span>, the <span class="math inline">\(i\)</span>th relation of <span class="math inline">\(Y\)</span>. We say vertices <span class="math inline">\(x,y\in X\)</span> are <span class="math inline">\(i\)</span>-related, or ‘at distance <span class="math inline">\(i\)</span>’, whenever <span class="math inline">\((x,y)\in R_i\)</span>.</p>
+<p>We always assume that a ‘scheme’ is a commutative association scheme.</p>
+</div>
+<p>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> be an association scheme.</p>
+<div class="definition">
+<p><span id="def:incidencemat-of-as" class="definition"><strong>Definition 17.2  </strong></span>The <span class="math inline">\(i\)</span>-the association matrix <span class="math inline">\(A_i\in \mathbb{Mat}_X(\mathbb{C})\)</span>
+<span class="math display">\[\begin{align}
+(A_i)_{xy} &amp; = \begin{cases} 1 &amp; \text{if}\; (x,y)\in R_i\\
+0 &amp; \text{if}\; (x,y)\not\in R_i,\end{cases} &amp;&amp; (x,y\in X, 0\leq i\leq D)
+\end{align}\]</span>
+Then,</p>
+<div class="line-block"><span class="math inline">\((i&#39;)\)</span> <span class="math inline">\(A_0 = I\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii&#39;)\)</span> <span class="math inline">\(A_0 + A_1 + \cdots + A_D = J\)</span> (= all 1’s matrix).</div>
+<div class="line-block"><span class="math inline">\((iii&#39;)\)</span> <span class="math inline">\(A_i^\top = A_{i&#39;}\)</span> (<span class="math inline">\(0\leq i\leq D\)</span>).</div>
+<div class="line-block"><span class="math inline">\((iv&#39;)\)</span> <span class="math inline">\({\displaystyle A_iA_j = \sum_{h=0}^D p^h_{ij}A_h\quad }\)</span> <span class="math inline">\((0\leq i,j\leq D)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((v&#39;)\)</span> <span class="math inline">\(A_iA_j = A_jA_i\)</span>.</div>
+<div class="line-block"><span class="math inline">\(M := \mathrm{Span}_{\mathbb{C}}(A_0, \ldots, A_D)\)</span> (Bose-Mesner algebra of <span class="math inline">\(Y\)</span>) is a commutative <span class="math inline">\(\mathbb{C}\)</span>-algebra of dimension <span class="math inline">\(D+1\)</span>.</div>
+</div>
+<p>Observe:
+<span class="math display">\[Y \text{ is symmetric} \leftrightarrow A_i^\top = A_i \text{ for all } i \leftrightarrow M \text{ is symmetric}.\]</span></p>
+<div class="example">
+<p><span id="exm:dr" class="example"><strong>Example 17.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be distance-regular of diameter <span class="math inline">\(D\)</span>. Set
+<span class="math display">\[\begin{align}
+R_i &amp; = \{(x,y)\mid \partial(x,y) = i\} &amp;&amp; (0\leq i\leq D).
+\end{align}\]</span>
+Then,
+<span class="math display">\[Y = (X, \{R_i\}_{0\leq i\leq D})\]</span>
+is a symmetric scheme.
+<span class="math display">\[i\text{-th association matrix} = i\text{-th distance matrix} \quad \text{for all $i$.}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:gen-tr" class="example"><strong>Example 17.2  </strong></span>Suppose a group <span class="math inline">\(G\)</span> acts transitively on a seet <span class="math inline">\(X\)</span>. Assume <span class="math inline">\(G\)</span> is generously transitive, i.e.,
+<span class="math display">\[\text{for all }x,y\in X, \text{ there exists }g\in G \text{ such that }gx = y, gy = x.\]</span>
+Then <span class="math inline">\(G\)</span> acts on <span class="math inline">\(X\times X\)</span> by rule;
+<span class="math display">\[g(x,y) = (gx, gy), \quad \text{for all }\; g\in G, \text{ and for all }x,y\in X.\]</span>
+Let <span class="math inline">\(R_0, \ldots, R_D\)</span> denote orbits of <span class="math inline">\(G\)</span> on <span class="math inline">\(X\times X\)</span>.</p>
+<p>Observe that <span class="math inline">\(R_i^\top = R_i\)</span> for all <span class="math inline">\(i\)</span> by generously transitivity, and
+<span class="math display">\[Y = (X, \{R_i\}_{0\leq i\leq D})\]</span>
+is a symmetric scheme.</p>
+</div>
+<div class="exercise">
+<p><span id="exr:gen-tr-case" class="exercise"><strong>Exercise 17.1  </strong></span>In Example Example <a href="lec17.html#exm:gen-tr">17.2</a>, Bose-Mesner algebra
+<span class="math display">\[\begin{align}
+M &amp; = \{B\in \mathrm{Mat}_X(\mathbb{C}) \mid Bg = gB, \text{ for all }g\in G\}\\
+&amp; = \text{the commuting algebra of $G$ on $X$.}
+\end{align}\]</span>
+Here, we view each <span class="math inline">\(g\in G\)</span> as a permutation matrix in <span class="math inline">\(\mathrm{Mat}_X(\mathbb{C})\)</span> satisfying
+<span class="math display">\[g\hat{x} = \widehat{gx}, \quad \text{for all }x\in G.\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:centralizer-alg" class="example"><strong>Example 17.3  </strong></span>Let <span class="math inline">\(G\)</span> be any finite group. <span class="math inline">\(G\)</span> acts on <span class="math inline">\(X = G\)</span> by conjugation.
+<span class="math display">\[G\times X \to X, \quad (g,x)\mapsto gxg^{-1}.\]</span>
+Let <span class="math inline">\(C_0, C_1, \ldots, C_D\)</span> denote orbits (i.e., conjugacy classes), and let <span class="math inline">\(C_0 = \{1_G\}\)</span>.
+Claim that <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> is a commutative scheme (not symmetric in general).</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(R_0 = \{xx\mid x\in X\}\)</span> as <span class="math inline">\(C_0 = \{1_G\}\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(R_0, \ldots, R_D\)</span> is a partition of <span class="math inline">\(X\times X\)</span> since <span class="math inline">\(C_0, \ldots, C_D\)</span> is a partition of <span class="math inline">\(X = G\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(R_i^\top = R_{i&#39;}\)</span>, where <span class="math inline">\(C_{i&#39;} = \{g^{-1}\mid g\in C_i\}\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> Set <span class="math inline">\(H = G\oplus G\)</span>, the direct sum. Then <span class="math inline">\(H\)</span> acts on <span class="math inline">\(X = G\)</span>:</div>
+<p><span class="math display">\[\text{for all }h = (g,gz), \text{for all }x\in X, \quad h(x) = gx(gx)^{-1} = gxz^{-1}g^{-1}.\]</span>
+<span class="math display">\[R_i = \{(x,y)\mid x^{-1}y\in C_i\}, \; h_i\in C_i, \; x^{-1}y = gh_ig^{-1}.\]</span>
+<span class="math display">\[\begin{align}
+(x,y) &amp; = (x, xgh_ig^{-1})\\
+&amp; = (xgg^{-1}, xgh_ig^{-1})\\
+&amp; = (xg, g)(1,h_i).
+\end{align}\]</span>
+So, <span class="math inline">\(R_0, \ldots, R_D\)</span> are the orbits of <span class="math inline">\(H\)</span> on <span class="math inline">\(X\times X\)</span>.</p>
+<div class="line-block"><span class="math inline">\((v)\)</span> <span class="math inline">\(p^h_{ij} = p^h_{ji}\)</span>?</div>
+<p>Fix <span class="math inline">\(i,j, h\)</span> and <span class="math inline">\(x, y\in X\)</span> with <span class="math inline">\((x,y)\in R_h\)</span>. Set
+<span class="math display">\[\begin{align}
+S &amp; = \{z\in X\mid (x,z)\in R_i, \; (z,y)\in R_j\}\\
+T &amp; = \{z\in X\mid (x,z)\in R_j, \; (z,y)\in R_i\}.
+\end{align}\]</span>
+Show <span class="math inline">\(|S| = |T|\)</span>.
+<span class="math display">\[\text{For all }z\in S, \text{ set } \hat{z} = xz^{-1}y.\]</span>
+Observe, <span class="math inline">\(\hat{z}\in T\)</span>.
+<span class="math display">\[\begin{align}
+x^{-1}z\in C_i &amp; x^{-1}\hat{z} = x^{-1}xz^{-1}y\in C_j\\
+z^{-1}y\in C_j &amp; \hat{z}^{-1}y = y^{-1}zx^{-1}x^{-1}y = y^{-1}x(x^{-1}z)x^{-1}y \in C_i.
+\end{align}\]</span>
+Observe
+<span class="math display">\[S\to T \quad (z\mapsto z^{-1}) \quad \text{is one-to-one and onto.}\]</span></p>
+</div>
 
 </div>
             </section>
@@ -150,7 +269,7 @@ div.csl-indent {
         </div>
       </div>
 <a href="lec16.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lec55.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec18.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

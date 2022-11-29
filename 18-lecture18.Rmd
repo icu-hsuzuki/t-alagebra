@@ -1,0 +1,74 @@
+# Polynomial Schemes {#lec18}
+**Wednesday, March 3, 1993** 
+
+:::{.lemma #dr-scheme}
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ denote the symmetric scheme with associated matrices $A_0, A_1, \ldots, A_D$. Then the following are equivalent.
+
+| $(i)$ The graph $\Gamma = (X, R_1)$ is distance-regular, and $R_0, \ldots, R_D$ are labelled so that 
+$$R_i = \{xy\mid \partial(x,y) = i\}.$$
+
+| $(ii)$ There exists $f_i\in \mathbb{C}[\lambda]$, $\deg f_i = i$ such that $f_i(A_1) = A_i$ for all $i$ with $0\leq i\leq D$.
+
+| $(iii)$ The parameter $p^h_{ij}$
+$$\begin{cases} = 0 & \text{if one of $h, i, j$ is larger than the sum of the other two}\\
+\neq 0 & \text{if one of $h,i,j$ is equal to the sum of the other two.}\end{cases}$$
+:::
+
+:::{.proof}
+| $(i)\Rightarrow (ii)$: Lemma \@ref(lem:incidence-matrices).
+
+| $(ii)\Rightarrow (iii)$: Define
+$$k_i \equiv p^0_{ii} = |\{z\mid z]in X, \; \partial(x,z) = i \; ((x,z)\in R_i)\}|$$
+for any $x\in X$.
+Then $k_i \neq 0$ $(0\leq i\leq D)$, $k_0 = 1$.
+
+(By symmetricity, $(x,y)\in R_i$ if and only if $(y,x)\in R_i$.)
+
+Claim.
+\begin{align}
+k_hp^h_{ij} & = k_ip^i_{hj} = k_jp^j_{ih}\\
+& = |X|^{-1}|\{xyz\in X^3\mid \partial(x,y) = h, \partial(x,z) = i, \partial(y,z) = j\}|.
+\end{align}
+_Pf._ 
+The number of $xyz\in X^3$, $\partial(x,y) = h, \partial(x,z) = i, \partial(y,z) = j$ is equal to
+$$|X|k_hp^h_{ij} = |X|k_ip^i_{hj} = k_jp^j_{ih}.$$
+
+In particular, 
+$$p^h_{ij} = 0 \leftrightarrow p^i_{hj} =0 \leftrightarrow p^j_{ih} = 0.$$
+Hence, it suffices to show
+$$\begin{cases}
+p^h_{ij} = 0 & \text{if }\; h > i+j\\
+p^h_{ij} \neq 0 & \text{if }\; h = i+j.
+\end{cases}$$
+
+Fix $i,j$. Without loss of generality, we may assume that $i+j\leq D$ as trivial otherwise.
+$$f_i(A)f_j(A) = A_iA_j = \sum_{\ell = 0}^Dp^{\ell}_{ij}A_\ell = \sum_{\ell=0}^Dp^\ell_{ij}f_\ell(A).$$
+\begin{align}
+i + j & = \deg \mathrm{LHS}\\
+& = \deg \mathrm{RHS}\\
+& = \max\{\ell\mid p^\ell_{ij}\neq 0\}.
+\end{align}
+
+| $(iii)\Rightarrow (i)$
+Let $A = A_1$, and consider a graph $\Gamma$ with adjacency matrix $A$.
+\begin{align}
+AA_j & = \sum_{h}p^h_{1j}A_h\\
+& = p^{j+1}_{1j} A_{j+1} + p^j_{1j}A_j + p^{j-1}_{1j}A_{j-1}.
+\end{align}
+
+Then, $p^{j+1}_{1j} \neq 0 \neq p^{j-1}_{1j}$.
+
+Fix a vertex $x\in X$, and set $R_i(x) = \{y\mid (x,y)\in R_i\}$.
+
+Then each $y\in R_i(x)$ is adjacent in $\Gamma$ to exactly 
+\begin{align}
+p^i_{1,i+1} & \neq 0  \quad \text{vertices in }\; R_{i}(x),\\
+p^i_{1i} & \qquad \text{vertices in }\; R_{i+1}(x),\\
+p^i_{1,i-1} & \neq 0 \quad \text{vertices in }\; R_{i-1}(x).
+\end{align}
+Hence, by induction,
+\begin{align}
+R_i(x) & = \{y\mid \partial(x,y) = i \text{ in }\Gamma\} && (0\leq i\leq D),
+\end{align}
+and $\Gamma$ is distance regular.
+:::

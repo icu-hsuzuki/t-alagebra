@@ -152,7 +152,7 @@ k^--a_i(x)-c_i(x) \quad \text{$i$: odd}.
 This proves the assertions.
 :::
 
-:::{.proposition #dim-diamter}
+:::{.proposition #dim-diameter}
 Under the assumption of Theorem \@ref(thm:distance-regular-x), the following hold.
 
 | Case $\Gamma$: regular.

@@ -51,7 +51,7 @@ In particular, $2r-D+d\geq 0$.
 :::
 
 :::{.proof}
-Let $\theta_0, \ldots, \theta_D$ denote distinct eigenvalues of $\Gamma$. Then $m(\theta_i) \neq 0$ $(0\leq i\leq D)$ by Proposition \@ref(prop:dim-diamter).
+Let $\theta_0, \ldots, \theta_D$ denote distinct eigenvalues of $\Gamma$. Then $m(\theta_i) \neq 0$ $(0\leq i\leq D)$ by Proposition \@ref(prp:dim-diameter).
 
 There exists a unique $f_W\in \mathbb{C}[\lambda]$ with $\deg f_W\leq D$ such that
 $$f_W(\theta_i) = \frac{m_W(\theta_i)}{m(\theta_i)} \quad (0\leq i\leq D)$$
