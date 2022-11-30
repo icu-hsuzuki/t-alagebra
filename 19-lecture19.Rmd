@@ -18,4 +18,198 @@ Then there exists a basis $E_0, E_1, \ldots, E_D$ for $M$ such that
 :::{.proof}
 $M$ acts on Hermitean space $V = \mathbb{C}^n$ $(n = |X|)$. 
 
+If $W$ is an $M$-module, so is $W^\bot$.
+
+Each irreducible $M$-module is $1$ dimensional by commutativity of $M$. So $V$ is orthognal direct sum of $1$-dimensional $M$-modules. 
+
+Let $v_1, \ldots, v_n$ be an orthonormal basis for $V$ consisiting of eigenvectors for all $m\in M$.
+
+Set $P\in \mathrm{Mat}_X(\mathbb{C})$ so that the $i$-th column of $P$ is equal to $v_i$. So,
+$$\bar{P}^\top P = I = P\bar{P}^\top = \bar{P}P^\top,$$
+and $P$ is unitary. 
+
+Also, for all $m\in M$, 
+\begin{align}
+P^{-1}mP & = \text{diagonal}\\
+& = \mathrm{diag}(\theta_1(m), \ldots, \theta_n(m)).
+\end{align}
+for some functions
+$$\theta_i: M \longrightarrow \mathbb{C}.$$
+Observe: each $\theta = \theta_i$ is a character of $M$, i.e., 
+$$\theta: M\longrightarrow \mathbb{C}$$
+is a $\mathbb{C}$-algebra homomorphism.
+
+Observe: the $\theta_1, \ldots, \theta_n$ are not all distinct.
+
+Let $\sigma_0, \ldots, \sigma_r$ denote distinct elements of 
+$$\theta_1, \ldots, \theta_n.$$
+Say $\sigma_i$ appears $m_i$ times.
+Without loss of generality, we may assume that
+$$P^{-1}mP = \begin{pmatrix}\sigma_0(m)I_{m_0} & O & O &  O \\
+O & \sigma_1(m)I_{m_1} & O &  O\\
+O & O & \ddots & O \\
+O & O & O & \sigma_r(m)I_{m_r}
+\end{pmatrix}.$$
+Set 
+$$E_i = P\begin{pmatrix} O & O & O\\
+O & I_{m_i} & O\\
+O & O & O \end{pmatrix}P^{-1},$$
+where $I_{m_i}$ is in the $i$-th block.
+
+Then,
+$$E_iE_j = \delta_{ij}E_i \quad (0\leq i,j\leq r),$$
+$$E_0 + E_1 + \cdots + E_r = I.$$
+Hence for all $m\in M$,
+$$m = \sum_{i=0}^r \sigma_i(m)E_i \in \mathrm{Span}(E_0, \ldots, E_r).$$
+So, 
+$$M \subseteq \mathrm{Span}(E_0, \ldots, E_r).$$
+Since $E_0,\ldots, E_r$ are linearly independent, $r\geq D$.
+
+Show $E_i\in M$.
+
+Claim 1. For all distinct $i, j$ $\quad (0\leq i, j\leq D)$, there exists $m\in M$ such that $\sigma_i(m)\neq 0$, $\sigma_j(m)=0$.
+
+_Pf of Claim 1._
+$\sigma_i\neq \sigma_j$ implies that there exists $m'\in M$ such that $\sigma_i(m')\neq \sigma_j(m')$.
+
+Set $m = m'-\sigma_j(m')I$. Then,
+\begin{align}
+\sigma_j(m) & \sigma_j(m') - \sigma_j(m') & = 0,\\
+\sigma_i(m) & \sigma_i(m') - \sigma_j(m') & \neq 0.
+\end{align}
+
+Claim 2. $E_i\in M$ $\quad (0\leq i \leq D)$.
+
+_Pf of Claim 2._
+Fix a vertex $x\in X$. For all $j\neq i$, there exists $m_j\in M$ such that
+$\sigma_i(m_j)\neq 0, \quad \sigma_j(m_j) = 0, \quad i\neq j.$$
+Observe 
+$$s = \sigma_i\left(\prod_{\ell\neq i}m_\ell\right) \neq 0.$$
+Set 
+$$m^* = \sigma_i\left(\prod_{\ell\neq i}m_\ell\right) s^{-1}.$$
+Observe
+$$\sigma_i(m^*) =1, \quad \sigma_j(m^*) = 0, \quad \text{for all }j\neq i \quad (0\leq j\leq D).$$
+So
+$$P^{-1}m^*P = \begin{pmatrix} O & O & O\\
+O & I_{m_i} & O\\
+O & O & O \end{pmatrix}.$$
+We have 
+$$E_i = m^*\in M.$$
+Now $r = D$, $M = \mathrm{Span}(E_0, \ldots, E_D)$ and $E_0, \ldots, E_D$ is a basis for $M$.
+
+Observe
+$$P^{-1}E_iP = \begin{pmatrix} O & O & O\\
+O & I_{m_i} & O\\
+O & O & O \end{pmatrix}$$
+implies
+$$P^{-1}\overline{E_i}^\top P = \bar{P}^\top \overline{E_i}^\top \overline{P^{-1}}^\top = \begin{pmatrix} O & O & O\\
+O & I_{m_i} & O\\
+O & O & O \end{pmatrix}^\top = P^{-1}E_i P.$$
+Hence, 
+$$\overline{E_i}^\top = E_i.$$
+$E_0^\top, \ldots, E_D^\top$ are nonzero matrices satisfying 
+$$E_i^\top E_j^\top = \delta_{ij}E_i^\top,$$
+$$E_0^\top + E_1^\top + \cdots + E_D^\top = I.$$
+Each $E_i^\top$ is a linear combination of $E_0, \ldots, E_D$ with coefficientss that are $0$ or $1$, and for no two $E_i$'s are coefficients of any $E_j$ both $1$'s. 
+
+So, $E_0^\top, \ldots, E_D^\top$ is a permutation of $E_0, \ldots, E_D$.
+
+Observe $J = A_0 + \cdots + A_D\in M$.
+
+The matrix $|X|^{-1}J$ is an idempotent of rank $1$. 
+
+So, without loss of generality we may assume that
+$$E_0 = \frac{1}{|X|}J.$$
+We have the assertions.
 :::
+
+Define entry-wise product $\circ$ on $\mathrm{Mat}_X(\mathbb{C})$.
+$$A_i \circ A_j = \delta_{ij}A_i.$$
+So, $M$ is closed under $\circ$.
+$$E_i \circ E_j = \frac{1}{|X|}\sum_{h=0}^D q^h_{ij}E_h.$$
+The numbers $q^h_{ij}$ is called Krein parameters of $Y$.
+
+Claim. $q^h_{ij}\in \mathbb{R}$.
+
+_Pf._ 
+\begin{align}
+\frac{1}{|X|}\sum_{h=0}^D \overline{q^h_{ij}}E_h & = \frac{1}{|X|}\sum_{h=0}^D \overline{q^h_{ij}}\overline{E_h}^\top \\
+& = (\overline{E_i\circ E_j})^\top \\
+& = E_i\circ E_j \\
+& = \frac{1}{|X|}\sum_{h=0}^D q^h_{ij}E_h.
+\end{align}
+Hence, $q^h_{ij} = \overline{q^h_{ij}}$.
+
+Observe
+$A_0, \ldots, A_D$, $E_0, \ldots, E_D$ are bases for $M$. Hence, there exist $p_i(j)$, $q_i(j)\in \mathbb{C}$ such that
+\begin{align}
+A_i & = \sum_{j = 0}^D p_i(j)E_j\\
+E_i & = \frac{1}{|X|}\sum_{j=0}^D q_i(j)A_j.
+\end{align}
+Taking transpose and conjugate we find,
+\begin{align}
+\overline{p_i(j)} & =  p_i(j)  =  p_{i'}(\hat{j}) && (0\leq i,j\leq D)\\
+\overline{q_i(j)} & =  q_i(j)  =  q_{\hat{i}}({j}') && (0\leq i,j\leq D).
+\end{align}
+
+Fix a vertex $x\in X$. Define
+$$E^*_i \equiv E^*_i(x) \in \mathrm{Mat}_X(\mathbb{C})$$
+to be a diagonal matrix such that
+$$(E^*_i)_{xy} = \begin{cases} 1 & \text{if } (x,y)\in R_i\\ 0 & \text{if } (x,y)\not\in R_i
+\end{cases} \quad (0\leq i\leq D, y\in X.)$$
+Then,
+$$E^*_iE^*_j = \delta_{ij}E^*_i,$$
+$$E^*_0 + \cdots + E^*_D = I,$$
+$$(E^*_i)^\top = \overline{E^*_i} = E^*_i.$$
+
+:::{.definition #dual-bose-mesner}
+Dual Bose-Mesner algebra \index{dual Bose-Mesner algebra} $M^* \equiv M^*(x)$ with respect to $x$ is 
+$$\mathrm{Span}(E^*_0, \ldots, E^*_D).$$
+:::
+
+Define dual associate matrices\index{dual associate matrix} $A_0^*, \ldots, A^*_D$.
+Indeed $A^*_i \equiv A^*_i(x)\in \mathrm{Mat}_X(\mathbb{C})$ is a diagonal matrix with 
+$$(A_i^*)_{yy} = |X|(E_i)_{xy}\quad (y\in X).$$
+$A^*_i$ is a diagonal matrix having the row $x$ of $E_i^*$ on the diagonal.
+
+Observe
+\begin{align}
+A^*_i & = \sum_{j=0}^Dq_i(j)E^*_j \quad \left(E_i = \frac{1}{|X|}\sum_{j=0}^D q_i(j)A_j\right)\\
+E^*_i & = \frac{1}{|X|}\sum_{j=0}^D p_i(j)A^*_j \quad \left(A_i = \sum_{j=0}^D p_i(j)E_j\right).
+\end{align}
+So, $A^*_0, \ldots, A^*_D$ form a basis for $M^*$.
+
+Also,
+$$A^*_iE^*_j = q_i(j)E^*_j.$$
+$$\left(A^*_iE^*_j = \sum_{h=0}^D q_i(h)E^*_hE^*_j = q_i(j)E^*_j.\right)$$
+So, $q_i(j)$ are dual eigenvalues of $A^*_i$.
+
+Observe,
+$$A^*_0 = I, \quad A^*_0 + \cdots + A^*_D = |X|E^*_0, \quad \overline{A^*_i} = A^*_{\hat{i}},$$
+$$A^*_iA^*_j = \sum_{h=0}^D q^h_{ij}A^*_h \quad (0\leq i,j\leq D).$$
+
+:::{.remark}
+_Proof._
+$$(A^*_0)_{yy} = |X|(E_0)_{xy} = (J)_{xy} = 1.$$
+$$A^*_0 + \cdots + A^*_D = \sum_{i=0}^D\sum_{j=0}^D q_i(j)E^*_j = |X|E^*_0.$$
+Note that
+$$I = E_0 + \cdots + E_D = \frac{1}{|X|}\sum_{i=0}^D\sum_{j=0}^D q_i(j)A_j.$$
+$$\sum_{i=0}^D q_i(j) = \delta_{j0}|X|.$$
+$$\overline{A^*_i} = \sum_{j=0}^D\overline{q_i(j)}E^*_j = \sum_{j=0}^D q_{\hat{i}}(j)E^*_j = A^*_{\hat{i}}.$$
+\begin{align}
+(A^*_iA^*_j)_{yy} & = |X|^2 (E_i)_{xy}(E_j)_{xy}\\
+& = |X|^2(E_i\circ E_j)_{xy}\\
+& = |X|\sum_{h=0}^D q^h_{ij}(E_h)_{xy}\\
+& = \sum_{h=0}^D q^h_{ij}(A^*_h)_{yy}.
+\end{align}
+:::
+
+The following statements will be proved after a couple of lemmas in the next lecture.
+
+**Lemma.**
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme. Fix a vertex $x\in X$, and set $E^*\equiv E^*_i(x)$ and $A^*_i \equiv A^*(x)$.
+Then the following hold.
+
+| $(i)$ $E^*_iA_jE^*_k = O$ if and only if $p^k_{ij} = 0$ for $0\leq i,j,k\leq D$.
+
+| $(ii)$ $E_iA^*_jE_k = O$ if and only if $q^k_{ij} = 0$ for $0\leq i,j,k\leq D$.

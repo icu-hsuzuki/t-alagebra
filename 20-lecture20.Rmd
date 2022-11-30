@@ -1,0 +1,38 @@
+# Vanishing Conditions {#lec20}
+**Monday, March 15, 1993** (Monday after Spring break)
+
+:::{.lemma #pij-qij}
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme. 
+
+| $(i)$ $p_0(i) = 1$.
+
+| $(ii)$ $p_i(0) = k_i$, where 
+$$k_i = p^0_{ii'} = |\{y\in X\mid (x,y)\in R_i\}|.$$
+
+| $(iii)$ $q_0(i) = 1$.
+
+| $(iv)$ $q_i(0) = m_i$, where
+$$m_i = \mathrm{rank} E_i.$$
+:::
+
+:::{.proof}
+| $(i)$
+
+
+:::
+
+
+:::{.lemma #phijqhij}
+With the above notation
+
+| $(i)$ 
+:::
+
+:::{.lemma #vanishing-condition}
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme. Fix a vertex $x\in X$, and set $E^*\equiv E^*_i(x)$ and $A^*_i \equiv A^*(x)$.
+Then the following hold.
+
+| $(i)$ $E^*_iA_jE^*_k = O$ if and only if $p^k_{ij} = 0$ for $0\leq i,j,k\leq D$.
+
+| $(ii)$ $E_iA^*_jE_k = O$ if and only if $q^k_{ij} = 0$ for $0\leq i,j,k\leq D$.
+:::
