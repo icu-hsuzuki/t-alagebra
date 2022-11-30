@@ -1,0 +1,10 @@
+# Norton Algebras {#lec21}
+**Wednesday, March 17, 1993** 
+
+:::{.proof name="Proof of Lemma \@ref(lem:vector-function-product)"}
+| $(i)$ Suppose 
+$$v = \sum_{x\in X}\alpha_x \hat{x}.$$
+Pick a vertex $z\in X$ and compare $z$-coordinate of each side in $(i)$.
+
+:::
+
