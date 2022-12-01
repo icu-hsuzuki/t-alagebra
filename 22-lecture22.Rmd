@@ -1,0 +1,9 @@
+# $Q$-Polynomial Schemes {#lec22}
+**Friday, March 19, 1993** 
+
+:::{.lemma #phijqhij2}
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme.
+
+| $(i)$ 
+:::
+
