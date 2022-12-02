@@ -4,6 +4,154 @@
 :::{.lemma #phijqhij2}
 Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme.
 
-| $(i)$ 
+| $(i)$ $p^h_{0j} = p^h_{j0} = \delta_{jh}$..
+
+| $(ii)$ $p^0_{ij} = \delta_{ij'}k_i$.
+
+| $(iii)$ $q^h_{0j} = q^h_{j0} = \delta_{jh}$.
+
+| $(iv)$ $q^0_{ij} = \delta_{i\hat{j}}m_i$.
+
+| $(v)$ ${\displaystyle \sum_{j=0}^D p^h_{ij} = k_i}.$
+
+| $(vi)$ ${\displaystyle \sum_{j=0}^D q^h_{ij} = m_i}.$
 :::
 
+:::{.proof}
+| $(i)$, $(ii)$ These are trivial.
+
+| $(iii)$ We have
+$$|X|^{-1}\sum_{\ell = 0}^D q^\ell_{0j} E_\ell  = E_0 \circ E_j = |X|^{-1}J\circ E_j = |X|^{-1}E_j.$$
+
+| $(iv)$ Recall from Lemma \@ref(lem:phijqhij) 
+$$|X|^{-1}m_h q^h_{ij} = \tau(E_i\circ E_j \circ E_{\hat{h}}),$$
+(where $\tau(B)$ is the sum of entries in matrix $B$.)
+
+\begin{align}
+|X|^{-1}m_0q^0_{ij} & = \tau(E_i\circ E_j\circ E_0) \\
+& = |X|^{-1}\tau(E_i\circ E_j) && (E_0 = |X|^{-1}J)\\
+& = |X|^{-1}\mathrm{trace}(E_iE_{\hat{j}})\\
+& = |X|^{-1}\delta_{i\hat{j}}\mathrm{trace}E_i\\
+& = |X|^{-1}\delta_{i\hat{j}}m_i.
+\end{align}
+
+| $(v)$ Pick $x,y\in X$ with $(x,y)\in R_h$. Then,
+\sum_{j=0}^D p^h_{ij} & = |\{z\in X\mid (x,z)\in R_i, \; (z,y)\in R_j \; \text{for some $j$}\}\\
+& = |\{z\in X\mid (x,z)\in R_i\}|\\
+& k_i.
+\end{align}
+
+| $(vi)$ 
+$$E_i \circ E_j = |X|^{-1}\sum_{h=0}^D q^h_{ij}E_h.$$
+So,
+\begin{align}
+\sum_{j=0}^D E_i\circ E_j & = |X|^{-1}\sum_{h=0}^D \left(\sum_{j=0}^D q^h_{ij}\right) E_h\\
+& = E_i \circ \sum_{j=0}^D E_j\\
+& = E_i\circ I\\
+& = |X|^{-1}(q_i(0)A_0 + q_i(1)A_1 + \cdots + q_i(0)A_D)\circ I\\
+& = |X|^{-1}q_i(0)I\\
+& = |X|^{-1}m_i(E_0 + E_1 + \cdots + E_D).
+\end{align}
+This proves the assertions.
+:::
+
+
+:::{.definition #q-polynomial}
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme.
+
+$Y$ is $Q$-polynomial \index{$Q$-polynomial} with respect to ordering $E_0, E_1, \ldots, E_D$ of primitive idempotents, if
+$$q^h_{ij} \begin{cases} = 0 & \text{if one of $h, i, j$ is greater than the sum of the other two}\\
+\neq 0 & \text{if one of $h,i,j$ is equal to the sum of the other two.}\end{cases}$$
+In this case, set
+$$c^*_i = q^i_{1,i-1}, \; a^*_i = q^i_{1,i}, \; b^*_i = q^i_{1,i+1} \quad (0\leq i\leq D), \;(c^*_0= b^*_D = 0).$$
+:::
+
+
+Observe: $Q$-polynomial $\to$ $Y$ is symmetric.
+
+Suppose $i\neq \hat{i}$ for some $i$. Then, by the condition in Definition \@ref(def:q-polynomial),
+$$0 = q^0_{i\hat{i}} = m_i \; (\neq 0)$$
+by Lemma \@ref(lem:phijqhij2) $(iv)$.
+This is a contradiction.
+
+Hence, ${E_i}^\top = E_{\hat{i}} = E_i$ for all $i$.
+
+Therefore $M$ is symmetric and $Y$ is symmetric.
+
+Observe: If $Y$ is $Q$-polynomial,
+$$c^*_i + a^*_i + b^*_i = m_1 \quad (0\leq i\leq D)$$
+(just as $c_i + a_i + b_i = k$ for $P$-polynomial.)
+
+By Lemma \@ref(lem:phijqhij2) $(iv)$,
+$$m_1 = q^i_{10} + q^i_{11} + \cdots + q^i_{1,i-1} + q^i_{1i} + q^i_{1,i+1} + \cdots $$
+and $q^i_{10} = q^i_{11} = 0$, $q^i_{1,i-1} = c^*_i$, $q^i_{1i} = a^*_i$, and $q^i_{1,i+1} = b^*_i$.
+
+:::{.lemma #q-conditions}
+Assume $Y = (X, \{R_i\}_{0\leq i\leq D})$ is a symmetric scheme. Pick $x\in X$, and set $E^*_i\equiv E^*_i(x)$, $A^*\equiv A^*(x)$. Then the following are equivalent.
+
+| $(i)$ $\Gamma$ is $Q$-polynomial with respect to $E_0, \ldots, E_D$.
+
+| $(ii)$ $$q^h_{1j} \begin{cases} = 0 & \text{if $\; |h-j| > 0$} \\
+\neq 0 & \text{if $\; |h-j| = 1$}. \end{cases} \quad (0\leq h,j\leq D).$$
+
+| $(iii)$ There exists $f_i^*\in \mathbb{C}[\lambda]$, $\deg f^*_i = i$, and 
+$$A^*_i = f^*_i(A^*_1) \quad (0\leq i\leq D).$$
+
+| $(iv)$ $E^*_0V, \ldots, E^*_DV$ are maximal eigenspaces of $A^*_1$, and 
+$$E_iA^*_1E_j = O \quad \text{if }\; |i-j|>0, \quad (0\leq i,j\leq D).$$
+(Compare $(iv)$ with the definition of $Q$-polynomial in Definition \@ref(def:q-polynomial-graph).)
+:::
+
+:::{.proof}
+| $(i)\to (ii)$ Clear.
+
+| $(ii)\to(iii)$ $A^*_0 = I$, 
+\begin{align}
+A^*_iA^*_j & = \sum_{h=0}^D q^h_{ij} A^*_h\\
+A^*_1A^*_j & = q^{j-1}_{1j}A^*_{j-1} + q^j_{1j}A^*_j + q^{j+1}_{1j}A^*_{j+1} && (q^{j+1}_{1j}\neq 0, 1\leq j\leq D-1).
+\end{align}
+Hence $A^*_j$ is a polynomial of degree exactly $j$ in $A^*_1$ by induction on $j$.
+$$\lambda f^*_j(\lambda) = b^*_{j-1}f^*_{j-1}(\lambda) + a^*_jf^*_j(\lambda) + c^*_{j+1}f^*_{j+1}(\lambda) \quad \text{with $c^*_{j+1}\neq 0$,}$$
+and $f^*_{-1} = 0$, $f^*_0(\lambda) = 1$.
+
+| $(iii)\to(i)$ Pick $i, j, h$ with $0\leq i,j,h\leq D$ and $h\geq i+j$. Since
+$$m_hq^h_{ij} = m_jq^j_{ih} = m_iq^i_{hj}$$
+by Lemma \@ref(lem:phijqhij), it suffices to show that
+$$q^h_{ij} \; \begin{cases} = 0 & \text{if }\; h> i+j\\
+\neq 0 & \text{if }\; h = i+j.
+\end{cases}$$
+\begin{align}
+A^*_iA^*_j & = \sum_{h=0}^D q^h_{ij}A^*_h\\
+f^*_i(A_1)f^*_j(A_1) & = \sum_{h=0}^D q^h_{ij}f^*_h(A_1^*).
+\end{align}
+Hence,
+$$f^*_i(\lambda)f^*_j(\lambda) = \sum_{h=0}^Dq^h_{ij}f^*_h(\lambda).$$
+Note that since $A^*_0, A^*_1, \ldots, A^*_D$ are linearly independent, $f(A^*_1) = 0$ implies $\deg f > D$.
+$$\deg \mathrm{LHS} = i+j \to q^{i+j}_{ij}\neq 0, \; q^h_{ij} = 0, \text{ if } \; h> i+j.$$
+
+| $(iii)\to (iv)$ Recall
+$$A^*_1 = q_1(0)E^*_0 + q_1(1)E_1^* + \cdots .$$
+Each $A^*_i$ is a polynomial in $A^*_1$. Then $A^*_1$ generates the dual Bose-Mesner algebra. So,
+$q_1(0), q_1(1), \ldots, q_1(D)$ are distinct. 
+
+So, $E^*_0V, \ldots, E^*_DV$ are maximal eigenspaces.
+
+Also, $|i-j|>1$ implies $q^j_{11} = 0$.
+
+Thus, $E_iA^*_1E_j = 0$ by Lemma \@ref(lem:vanishing-condition) $(ii)$.
+
+
+| $(iv)\to (ii)$ $q^i_{1j} = 0$ if $|i-j| > 1$. since in this case,
+$E_iA^*_1E_j = O$ implies $q^i_{1j} = 0$ by Lemma \@ref(lem:vanishing-condition) $(ii)$.
+
+Suppose $q^{j+1}_{1j} = 0$ for some $j$ $(0\leq j\leq D-1)$.
+
+Without loss of generalith, choose $j$ minimum. Then
+$A^*_h$ is a polynomial of degree $h$ in $A^*_1$ $(0\leq h\leq j)$, and
+$$A^*_1A^*_j - q^{j-1}_{1j}A^*_{j-1} - q^j_{1j}A^*_j = O.$$
+the left hand side is a polynomial in $A^*_1$ of degree $j+1$. 
+
+Hence, the minimal polynomial of $A^*_1$ has degree less than or equal to $j+1 \leq D$. But %A^*_1$ has $D+1$ distince eigenvalues. 
+
+This is a contradiction.
+:::

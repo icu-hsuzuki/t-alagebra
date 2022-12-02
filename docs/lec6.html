@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-01" />
+<meta name="date" content="2022-12-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -121,7 +121,8 @@ div.csl-indent {
 <li class="chapter" data-level="20" data-path="lec20.html"><a href="lec20.html"><i class="fa fa-check"></i><b>20</b> Vanishing Conditions</a></li>
 <li class="chapter" data-level="21" data-path="lec21.html"><a href="lec21.html"><i class="fa fa-check"></i><b>21</b> Norton Algebras</a></li>
 <li class="chapter" data-level="22" data-path="lec22.html"><a href="lec22.html"><i class="fa fa-check"></i><b>22</b> <span class="math inline">\(Q\)</span>-Polynomial Schemes</a></li>
-<li class="chapter" data-level="23" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>23</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="23" data-path="lec23.html"><a href="lec23.html"><i class="fa fa-check"></i><b>23</b> Representation of a Scheme</a></li>
+<li class="chapter" data-level="24" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>24</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -318,15 +319,15 @@ Hence,
 So <span class="math inline">\(d = D-2t\)</span>.</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-43" class="definition"><strong>Definition 6.1  </strong></span>For any graph <span class="math inline">\(\Gamma = (X, E)\)</span>, pick a vertex <span class="math inline">\(x\in X\)</span> and set <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span> and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
+<p><span id="def:thin-dualthin" class="definition"><strong>Definition 6.1  </strong></span>For any graph <span class="math inline">\(\Gamma = (X, E)\)</span>, pick a vertex <span class="math inline">\(x\in X\)</span> and set <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span> and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> an irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is thin if <span class="math inline">\(\dim E_i^*W \leq 1\)</span> for every <span class="math inline">\(i\)</span>,</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> is thin with respet to <span class="math inline">\(x\)</span>, if every irreducible <span class="math inline">\(T(x)\)</span>-module is thin,</div>
 <div class="line-block"><span class="math inline">\((iii)\)</span> an irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is dual thin if <span class="math inline">\(\dim E_iW \leq 1\)</span> for every <span class="math inline">\(i\)</span>,</div>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(\Gamma\)</span> is dual thin with respect to <span class="math inline">\(x\)</span>, if every irreducible <span class="math inline">\(T(x)\)</span>-module is dual thin.</div>
 </div>
 <p>Observe: <span class="math inline">\(H(D,2)\)</span> is thin, dual thin with respect to each <span class="math inline">\(x\in X\)</span>.</p>
-<div class="defintion">
-<p>With above notation, write <span class="math inline">\(D \equiv D(x)\)</span>.</p>
+<div class="definition">
+<p><span id="def:q-polynomial-graph" class="definition"><strong>Definition 6.2  </strong></span>With above notation, write <span class="math inline">\(D \equiv D(x)\)</span>.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> an ordering <span class="math inline">\(E_0, E_1, \ldots, E_R\)</span> of primitive idempotents of <span class="math inline">\(\Gamma\)</span> is restricted if <span class="math inline">\(E_0\)</span> corresponds to the maximal eigenvalue.</div>
 <p>Fix a restricted ordering,</p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(x\)</span>, above ordering if there exists <span class="math inline">\(A^* \equiv A^*(x)\)</span> such that</div>

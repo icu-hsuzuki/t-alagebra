@@ -1,0 +1,7 @@
+# Representation of a Scheme {#lec23}
+**Monday, March 22, 1993** 
+
+:::{.theorem #q-polynomial-space}
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a symmetric scheme.
+:::
+

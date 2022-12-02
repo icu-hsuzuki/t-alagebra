@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-01" />
+<meta name="date" content="2022-12-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -121,7 +121,8 @@ div.csl-indent {
 <li class="chapter" data-level="20" data-path="lec20.html"><a href="lec20.html"><i class="fa fa-check"></i><b>20</b> Vanishing Conditions</a></li>
 <li class="chapter" data-level="21" data-path="lec21.html"><a href="lec21.html"><i class="fa fa-check"></i><b>21</b> Norton Algebras</a></li>
 <li class="chapter" data-level="22" data-path="lec22.html"><a href="lec22.html"><i class="fa fa-check"></i><b>22</b> <span class="math inline">\(Q\)</span>-Polynomial Schemes</a></li>
-<li class="chapter" data-level="23" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>23</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="23" data-path="lec23.html"><a href="lec23.html"><i class="fa fa-check"></i><b>23</b> Representation of a Scheme</a></li>
+<li class="chapter" data-level="24" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>24</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -244,7 +245,7 @@ The diameter <span class="math inline">\(d = d(W)\)</span> satisfied
 </div>
 <div class="lemma">
 <p><span id="lem:irreducible" class="lemma"><strong>Lemma 4.1  </strong></span>With the above notation, let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module. Then</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E_i^*AE_j^* = 0 \; \text{ if }\; |i-j|=1, \quad \neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d(x)\)</span>.<br />
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E_i^*AE_j^* = 0 \; \text{ if }\; |i-j|=1, \; E_i^*AE_j^*\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d(x)\)</span>.<br />
 <span class="math inline">\((ii)\)</span> <span class="math inline">\(AE_j^*W \subseteq E_{j-1}^*W + E_j^*W + E^*_{j+1}W\)</span>, <span class="math inline">\(0\leq j \leq d(x)\)</span>. <span class="math inline">\((E_i^*W = 0 \; \text{ if } i&lt;j\)</span> or <span class="math inline">\(i &gt; d(x)\)</span>.)<br />
 <span class="math inline">\((iii)\)</span> <span class="math inline">\(E^*_jW \neq 0\)</span> if <span class="math inline">\(r\leq j \leq r+d\)</span>, <span class="math inline">\(=0\)</span> if <span class="math inline">\(0\leq j\leq r\)</span> or <span class="math inline">\(r+d &lt; j \leq d(x)\)</span>.<br />
 <span class="math inline">\((iv)\)</span> <span class="math inline">\(E_i^*AE^*_jW \neq 0\)</span>, if <span class="math inline">\(|i-j| = 1\)</span> <span class="math inline">\((r \leq i,j \leq r+d)\)</span>.</div>
@@ -254,14 +255,14 @@ The diameter <span class="math inline">\(d = d(W)\)</span> satisfied
 <div class="line-block"><span class="math inline">\((i)\)</span> Pick <span class="math inline">\(y\in X\)</span> with <span class="math inline">\(\partial(x,y) = j\)</span>. We want to find <span class="math inline">\(E_i^*AE^*_j \hat{y}\)</span>. Note,</div>
 <p><span class="math display">\[E_j^*\hat{y} = \begin{cases} 0 &amp; \text{if }\; \partial(x.y)\neq j\\
 \hat{y} &amp; \text{if }\; \partial(x,y) = j.\end{cases}.\]</span>
-<span class="math display">\[\begin{align}
+<span class="math display" id="eq:eiaeejy">\[\begin{align}
 E_i^*AE_j^*\hat{y} &amp;= E_i^*A\hat{y} \\
 &amp; = E_i^*\sum_{z\in X, yz\in E}\hat{z}\\
-&amp; = \sum_{z\in X, yz\in E, \partial(x, z) = i}\hat{z} \qquad (*)\\
-&amp; = 0 \; \text{ if }\; |i-j|&gt;1 \; \text{by triangle inequality.}
+&amp; = \sum_{z\in X, yz\in E, \partial(x, z) = i}\hat{z}  \tag{4.1}\\
+&amp; = 0 \; \text{ if }\; |i-j|&gt;1 &amp;&amp; \text{by triangle inequality.}
 \end{align}\]</span>
 If <span class="math inline">\(|i-j| = 1\)</span>, there exist <span class="math inline">\(y, y&#39;\in X\)</span> such that <span class="math inline">\(\partial(x,y) = j\)</span>, <span class="math inline">\(\partial(x,y&#39;) = i\)</span>, <span class="math inline">\(yy&#39;\in E\)</span> by connectivity of <span class="math inline">\(\Gamma\)</span>. Hence
-(*) contains <span class="math inline">\(\widehat{y&#39;}\)</span> and <span class="math inline">\(* \neq 0\)</span></p>
+<a href="lec4.html#eq:eiaeejy">(4.1)</a> contains <span class="math inline">\(\widehat{y&#39;}\)</span> and <a href="lec4.html#eq:eiaeejy">(4.1)</a> is not equal to zero.</p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> We have</div>
 <p><span class="math display">\[\begin{align}
 AE_j^*W &amp; = \left(\sum_{i=0}^{d(x)}E_i^*\right)AE_j^*W\\
@@ -269,10 +270,10 @@ AE_j^*W &amp; = \left(\sum_{i=0}^{d(x)}E_i^*\right)AE_j^*W\\
 &amp; \subseteq E^*_{j-1}W + E^*_jW + E^*_{j+1}W.
 \end{align}\]</span></p>
 <div class="line-block"><span class="math inline">\((iii)\)</span> Suppose <span class="math inline">\(E_j^*W = 0\)</span> for some <span class="math inline">\(j\)</span> <span class="math inline">\((r\leq j \leq r+d)\)</span>. Then <span class="math inline">\(r &lt; j\)</span> by the definition of <span class="math inline">\(r\)</span>. Set</div>
-<p><span class="math display">\[\tilde{W} = E^*_rW + E^*_{r+1}W + \cdots + E^*_{j-1}W.\]</span>
-Observe <span class="math inline">\(0\subsetneq \tilde{W} \subsetneq W\)</span>.
-Also <span class="math inline">\(A\tilde{W} \subseteq \tilde{W}\)</span> by <span class="math inline">\((ii)\)</span> and <span class="math inline">\(E_i^*\tilde{W} \subseteq \tilde{W}\)</span> for every <span class="math inline">\(i\)</span> by construction.</p>
-<p>Thus <span class="math inline">\(T\tilde{W} \subseteq \tilde{W}\)</span>, contradicting <span class="math inline">\(W\)</span> beging irreducible.</p>
+<p><span class="math display">\[\widetilde{W} = E^*_rW + E^*_{r+1}W + \cdots + E^*_{j-1}W.\]</span>
+Observe <span class="math inline">\(0\subsetneq \widetilde{W} \subsetneq W\)</span>.
+Also <span class="math inline">\(A\widetilde{W} \subseteq \widetilde{W}\)</span> by <span class="math inline">\((ii)\)</span>, and <span class="math inline">\(E_i^*\widetilde{W} \subseteq \widetilde{W}\)</span> for every <span class="math inline">\(i\)</span> by construction.</p>
+<p>Thus, <span class="math inline">\(T\widetilde{W} \subseteq \widetilde{W}\)</span>, contradicting <span class="math inline">\(W\)</span> beging irreducible.</p>
 </div>
 
 </div>

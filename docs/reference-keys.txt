@@ -1,3 +1,4 @@
+eq:eiaeejy
 eq:6-1
 eq:6-2
 eq:a0W
@@ -30,4 +31,5 @@ lec19
 lec20
 lec21
 lec22
+lec23
 lec55

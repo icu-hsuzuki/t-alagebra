@@ -128,7 +128,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-12-01}
+\date{2022-12-02}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1015,7 +1015,7 @@ The diameter\index{diameter} \(d = d(W)\) satisfied
 
 With the above notation, let \(W\) be an irreducible \(T\)-module. Then
 
-\((i)\) \(E_i^*AE_j^* = 0 \; \text{ if }\; |i-j|=1, \quad \neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d(x)\).\\
+\((i)\) \(E_i^*AE_j^* = 0 \; \text{ if }\; |i-j|=1, \; E_i^*AE_j^*\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d(x)\).\\
 \((ii)\) \(AE_j^*W \subseteq E_{j-1}^*W + E_j^*W + E^*_{j+1}W\), \(0\leq j \leq d(x)\). \((E_i^*W = 0 \; \text{ if } i<j\) or \(i > d(x)\).)\\
 \((iii)\) \(E^*_jW \neq 0\) if \(r\leq j \leq r+d\), \(=0\) if \(0\leq j\leq r\) or \(r+d < j \leq d(x)\).\\
 \((iv)\) \(E_i^*AE^*_jW \neq 0\), if \(|i-j| = 1\) \((r \leq i,j \leq r+d)\).
@@ -1032,11 +1032,11 @@ With the above notation, let \(W\) be an irreducible \(T\)-module. Then
 \begin{align}
 E_i^*AE_j^*\hat{y} &= E_i^*A\hat{y} \\
 & = E_i^*\sum_{z\in X, yz\in E}\hat{z}\\
-& = \sum_{z\in X, yz\in E, \partial(x, z) = i}\hat{z} \qquad (*)\\
-& = 0 \; \text{ if }\; |i-j|>1 \; \text{by triangle inequality.}
+& = \sum_{z\in X, yz\in E, \partial(x, z) = i}\hat{z}  \label{eq:eiaeejy}\\
+& = 0 \; \text{ if }\; |i-j|>1 && \text{by triangle inequality.}
 \end{align}
 If \(|i-j| = 1\), there exist \(y, y'\in X\) such that \(\partial(x,y) = j\), \(\partial(x,y') = i\), \(yy'\in E\) by connectivity of \(\Gamma\). Hence
-(*) contains \(\widehat{y'}\) and \(* \neq 0\)
+\eqref{eq:eiaeejy} contains \(\widehat{y'}\) and \eqref{eq:eiaeejy} is not equal to zero.
 
 \((ii)\) We have
 
@@ -1048,11 +1048,11 @@ AE_j^*W & = \left(\sum_{i=0}^{d(x)}E_i^*\right)AE_j^*W\\
 
 \((iii)\) Suppose \(E_j^*W = 0\) for some \(j\) \((r\leq j \leq r+d)\). Then \(r < j\) by the definition of \(r\). Set
 
-\[\tilde{W} = E^*_rW + E^*_{r+1}W + \cdots + E^*_{j-1}W.\]
-Observe \(0\subsetneq \tilde{W} \subsetneq W\).
-Also \(A\tilde{W} \subseteq \tilde{W}\) by \((ii)\) and \(E_i^*\tilde{W} \subseteq \tilde{W}\) for every \(i\) by construction.
+\[\widetilde{W} = E^*_rW + E^*_{r+1}W + \cdots + E^*_{j-1}W.\]
+Observe \(0\subsetneq \widetilde{W} \subsetneq W\).
+Also \(A\widetilde{W} \subseteq \widetilde{W}\) by \((ii)\), and \(E_i^*\widetilde{W} \subseteq \widetilde{W}\) for every \(i\) by construction.
 
-Thus \(T\tilde{W} \subseteq \tilde{W}\), contradicting \(W\) beging irreducible.
+Thus, \(T\widetilde{W} \subseteq \widetilde{W}\), contradicting \(W\) beging irreducible.
 
 \end{proof}
 
@@ -1518,6 +1518,7 @@ So \(d = D-2t\).
 \end{proof}
 
 \begin{definition}
+\protect\hypertarget{def:thin-dualthin}{}\label{def:thin-dualthin}
 
 For any graph \(\Gamma = (X, E)\), pick a vertex \(x\in X\) and set \(E^*_i \equiv E^*_i(x)\) and \(T \equiv T(x)\).
 
@@ -1533,6 +1534,9 @@ For any graph \(\Gamma = (X, E)\), pick a vertex \(x\in X\) and set \(E^*_i \equ
 
 Observe: \(H(D,2)\) is thin, dual thin with respect to each \(x\in X\).
 
+\begin{definition}
+\protect\hypertarget{def:q-polynomial-graph}{}\label{def:q-polynomial-graph}
+
 With above notation, write \(D \equiv D(x)\).
 
 \((i)\) an ordering \(E_0, E_1, \ldots, E_R\) of primitive idempotents of \(\Gamma\) is restricted \index{restricted} if \(E_0\) corresponds to the maximal eigenvalue.
@@ -1544,6 +1548,8 @@ Fix a restricted ordering,
 \(\quad (a)\) \(E_0^*V, \ldots, E_D^*V\) are the maximal eigenspaces for \(A^*\).
 
 \(\quad (b)\) \(E_iA^*E_j = 0\) if \(|i-j| > 1\) for \(0\leq i,j\leq R\).
+
+\end{definition}
 
 Observe \(H(D,2)\) is \(Q\)-polynomial with respect to the natural ordering of the idempotents and every vetex.
 
@@ -4398,9 +4404,181 @@ Compute character table of \(G\),
 
 Let \(Y = (X, \{R_i\}_{0\leq i\leq D})\) be a commutative scheme.
 
-\((i)\)
+\((i)\) \(p^h_{0j} = p^h_{j0} = \delta_{jh}\)..
+
+\((ii)\) \(p^0_{ij} = \delta_{ij'}k_i\).
+
+\((iii)\) \(q^h_{0j} = q^h_{j0} = \delta_{jh}\).
+
+\((iv)\) \(q^0_{ij} = \delta_{i\hat{j}}m_i\).
+
+\((v)\) \({\displaystyle \sum_{j=0}^D p^h_{ij} = k_i}.\)
+
+\((vi)\) \({\displaystyle \sum_{j=0}^D q^h_{ij} = m_i}.\)
 
 \end{lemma}
+
+\begin{proof}
+\leavevmode
+
+\((i)\), \((ii)\) These are trivial.
+
+\((iii)\) We have
+
+\[|X|^{-1}\sum_{\ell = 0}^D q^\ell_{0j} E_\ell  = E_0 \circ E_j = |X|^{-1}J\circ E_j = |X|^{-1}E_j.\]
+
+\((iv)\) Recall from Lemma \ref{lem:phijqhij}
+
+\[|X|^{-1}m_h q^h_{ij} = \tau(E_i\circ E_j \circ E_{\hat{h}}),\]
+(where \(\tau(B)\) is the sum of entries in matrix \(B\).)
+
+\begin{align}
+|X|^{-1}m_0q^0_{ij} & = \tau(E_i\circ E_j\circ E_0) \\
+& = |X|^{-1}\tau(E_i\circ E_j) && (E_0 = |X|^{-1}J)\\
+& = |X|^{-1}\mathrm{trace}(E_iE_{\hat{j}})\\
+& = |X|^{-1}\delta_{i\hat{j}}\mathrm{trace}E_i\\
+& = |X|^{-1}\delta_{i\hat{j}}m_i.
+\end{align}
+
+\((v)\) Pick \(x,y\in X\) with \((x,y)\in R_h\). Then,
+
+\sum\emph{\{j=0\}\^{}D p\^{}h}\{ij\} \& = \textbar\{z\in X\mid (x,z)\in R\_i, ; (z,y)\in R\_j ; \text{for some $j$}\}\textbackslash{}
+\& = \textbar\{z\in X\mid (x,z)\in R\_i\}\textbar\textbackslash{}
+\& k\_i.
+\textbackslash end\{align\}
+
+\((vi)\)
+
+\[E_i \circ E_j = |X|^{-1}\sum_{h=0}^D q^h_{ij}E_h.\]
+So,
+\begin{align}
+\sum_{j=0}^D E_i\circ E_j & = |X|^{-1}\sum_{h=0}^D \left(\sum_{j=0}^D q^h_{ij}\right) E_h\\
+& = E_i \circ \sum_{j=0}^D E_j\\
+& = E_i\circ I\\
+& = |X|^{-1}(q_i(0)A_0 + q_i(1)A_1 + \cdots + q_i(0)A_D)\circ I\\
+& = |X|^{-1}q_i(0)I\\
+& = |X|^{-1}m_i(E_0 + E_1 + \cdots + E_D).
+\end{align}
+This proves the assertions.
+
+\end{proof}
+
+\begin{definition}
+\protect\hypertarget{def:q-polynomial}{}\label{def:q-polynomial}Let \(Y = (X, \{R_i\}_{0\leq i\leq D})\) be a commutative scheme.
+
+\(Y\) is \(Q\)-polynomial \index{$Q$-polynomial} with respect to ordering \(E_0, E_1, \ldots, E_D\) of primitive idempotents, if
+\[q^h_{ij} \begin{cases} = 0 & \text{if one of $h, i, j$ is greater than the sum of the other two}\\
+\neq 0 & \text{if one of $h,i,j$ is equal to the sum of the other two.}\end{cases}\]
+In this case, set
+\[c^*_i = q^i_{1,i-1}, \; a^*_i = q^i_{1,i}, \; b^*_i = q^i_{1,i+1} \quad (0\leq i\leq D), \;(c^*_0= b^*_D = 0).\]
+\end{definition}
+
+Observe: \(Q\)-polynomial \(\to\) \(Y\) is symmetric.
+
+Suppose \(i\neq \hat{i}\) for some \(i\). Then, by the condition in Definition \ref{def:q-polynomial},
+\[0 = q^0_{i\hat{i}} = m_i \; (\neq 0)\]
+by Lemma \ref{lem:phijqhij2} \((iv)\).
+This is a contradiction.
+
+Hence, \({E_i}^\top = E_{\hat{i}} = E_i\) for all \(i\).
+
+Therefore \(M\) is symmetric and \(Y\) is symmetric.
+
+Observe: If \(Y\) is \(Q\)-polynomial,
+\[c^*_i + a^*_i + b^*_i = m_1 \quad (0\leq i\leq D)\]
+(just as \(c_i + a_i + b_i = k\) for \(P\)-polynomial.)
+
+By Lemma \ref{lem:phijqhij2} \((iv)\),
+\[m_1 = q^i_{10} + q^i_{11} + \cdots + q^i_{1,i-1} + q^i_{1i} + q^i_{1,i+1} + \cdots \]
+and \(q^i_{10} = q^i_{11} = 0\), \(q^i_{1,i-1} = c^*_i\), \(q^i_{1i} = a^*_i\), and \(q^i_{1,i+1} = b^*_i\).
+
+\begin{lemma}
+\protect\hypertarget{lem:q-conditions}{}\label{lem:q-conditions}Assume \(Y = (X, \{R_i\}_{0\leq i\leq D})\) is a symmetric scheme. Pick \(x\in X\), and set \(E^*_i\equiv E^*_i(x)\), \(A^*\equiv A^*(x)\). Then the following are equivalent.
+
+\((i)\) \(\Gamma\) is \(Q\)-polynomial with respect to \(E_0, \ldots, E_D\).
+
+\((ii)\) \$\$q\^{}h\_\{1j\} \textbackslash begin\{cases\} = 0 \& \text{if $\; |h-j| > 0$} \textbackslash{}
+
+\neq 0 \& \text{if $\; |h-j| = 1$}. \textbackslash end\{cases\} \quad (0\leq h,j\leq D).\$\$
+
+\((iii)\) There exists \(f_i^*\in \mathbb{C}[\lambda]\), \(\deg f^*_i = i\), and
+
+\[A^*_i = f^*_i(A^*_1) \quad (0\leq i\leq D).\]
+
+\((iv)\) \(E^*_0V, \ldots, E^*_DV\) are maximal eigenspaces of \(A^*_1\), and
+
+\[E_iA^*_1E_j = O \quad \text{if }\; |i-j|>0, \quad (0\leq i,j\leq D).\]
+(Compare \((iv)\) with the definition of \(Q\)-polynomial in Definition \ref{def:q-polynomial-graph}.)
+\end{lemma}
+
+\begin{proof}
+\leavevmode
+
+\((i)\to (ii)\) Clear.
+
+\((ii)\to(iii)\) \(A^*_0 = I\),
+
+\begin{align}
+A^*_iA^*_j & = \sum_{h=0}^D q^h_{ij} A^*_h\\
+A^*_1A^*_j & = q^{j-1}_{1j}A^*_{j-1} + q^j_{1j}A^*_j + q^{j+1}_{1j}A^*_{j+1} && (q^{j+1}_{1j}\neq 0, 1\leq j\leq D-1).
+\end{align}
+Hence \(A^*_j\) is a polynomial of degree exactly \(j\) in \(A^*_1\) by induction on \(j\).
+\[\lambda f^*_j(\lambda) = b^*_{j-1}f^*_{j-1}(\lambda) + a^*_jf^*_j(\lambda) + c^*_{j+1}f^*_{j+1}(\lambda) \quad \text{with $c^*_{j+1}\neq 0$,}\]
+and \(f^*_{-1} = 0\), \(f^*_0(\lambda) = 1\).
+
+\((iii)\to(i)\) Pick \(i, j, h\) with \(0\leq i,j,h\leq D\) and \(h\geq i+j\). Since
+
+\[m_hq^h_{ij} = m_jq^j_{ih} = m_iq^i_{hj}\]
+by Lemma \ref{lem:phijqhij}, it suffices to show that
+\[q^h_{ij} \; \begin{cases} = 0 & \text{if }\; h> i+j\\
+\neq 0 & \text{if }\; h = i+j.
+\end{cases}\]
+\begin{align}
+A^*_iA^*_j & = \sum_{h=0}^D q^h_{ij}A^*_h\\
+f^*_i(A_1)f^*_j(A_1) & = \sum_{h=0}^D q^h_{ij}f^*_h(A_1^*).
+\end{align}
+Hence,
+\[f^*_i(\lambda)f^*_j(\lambda) = \sum_{h=0}^Dq^h_{ij}f^*_h(\lambda).\]
+Note that since \(A^*_0, A^*_1, \ldots, A^*_D\) are linearly independent, \(f(A^*_1) = 0\) implies \(\deg f > D\).
+\[\deg \mathrm{LHS} = i+j \to q^{i+j}_{ij}\neq 0, \; q^h_{ij} = 0, \text{ if } \; h> i+j.\]
+
+\((iii)\to (iv)\) Recall
+
+\[A^*_1 = q_1(0)E^*_0 + q_1(1)E_1^* + \cdots .\]
+Each \(A^*_i\) is a polynomial in \(A^*_1\). Then \(A^*_1\) generates the dual Bose-Mesner algebra. So,
+\(q_1(0), q_1(1), \ldots, q_1(D)\) are distinct.
+
+So, \(E^*_0V, \ldots, E^*_DV\) are maximal eigenspaces.
+
+Also, \(|i-j|>1\) implies \(q^j_{11} = 0\).
+
+Thus, \(E_iA^*_1E_j = 0\) by Lemma \ref{lem:vanishing-condition} \((ii)\).
+
+\((iv)\to (ii)\) \(q^i_{1j} = 0\) if \(|i-j| > 1\). since in this case,
+
+\(E_iA^*_1E_j = O\) implies \(q^i_{1j} = 0\) by Lemma \ref{lem:vanishing-condition} \((ii)\).
+
+Suppose \(q^{j+1}_{1j} = 0\) for some \(j\) \((0\leq j\leq D-1)\).
+
+Without loss of generalith, choose \(j\) minimum. Then
+\(A^*_h\) is a polynomial of degree \(h\) in \(A^*_1\) \((0\leq h\leq j)\), and
+\[A^*_1A^*_j - q^{j-1}_{1j}A^*_{j-1} - q^j_{1j}A^*_j = O.\]
+the left hand side is a polynomial in \(A^*_1\) of degree \(j+1\).
+
+Hence, the minimal polynomial of \(A^*_1\) has degree less than or equal to \(j+1 \leq D\). But \%A\^{}*\_1\$ has \(D+1\) distince eigenvalues.
+
+This is a contradiction.
+
+\end{proof}
+
+\hypertarget{lec23}{%
+\chapter{Representation of a Scheme}\label{lec23}}
+
+\textbf{Monday, March 22, 1993}
+
+\begin{theorem}
+\protect\hypertarget{thm:q-polynomial-space}{}\label{thm:q-polynomial-space}Let \(Y = (X, \{R_i\}_{0\leq i\leq D})\) be a symmetric scheme.
+\end{theorem}
 
 \hypertarget{lec55}{%
 \chapter{Title of the Chapter}\label{lec55}}

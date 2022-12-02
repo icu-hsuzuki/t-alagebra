@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-01" />
+<meta name="date" content="2022-12-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="lec21.html"/>
-<link rel="next" href="lec55.html"/>
+<link rel="next" href="lec23.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -121,7 +121,8 @@ div.csl-indent {
 <li class="chapter" data-level="20" data-path="lec20.html"><a href="lec20.html"><i class="fa fa-check"></i><b>20</b> Vanishing Conditions</a></li>
 <li class="chapter" data-level="21" data-path="lec21.html"><a href="lec21.html"><i class="fa fa-check"></i><b>21</b> Norton Algebras</a></li>
 <li class="chapter" data-level="22" data-path="lec22.html"><a href="lec22.html"><i class="fa fa-check"></i><b>22</b> <span class="math inline">\(Q\)</span>-Polynomial Schemes</a></li>
-<li class="chapter" data-level="23" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>23</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="23" data-path="lec23.html"><a href="lec23.html"><i class="fa fa-check"></i><b>23</b> Representation of a Scheme</a></li>
+<li class="chapter" data-level="24" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>24</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -148,7 +149,119 @@ div.csl-indent {
 <p><strong>Friday, March 19, 1993</strong></p>
 <div class="lemma">
 <p><span id="lem:phijqhij2" class="lemma"><strong>Lemma 22.1  </strong></span>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> be a commutative scheme.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span></div>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(p^h_{0j} = p^h_{j0} = \delta_{jh}\)</span>..</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(p^0_{ij} = \delta_{ij&#39;}k_i\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(q^h_{0j} = q^h_{j0} = \delta_{jh}\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(q^0_{ij} = \delta_{i\hat{j}}m_i\)</span>.</div>
+<div class="line-block"><span class="math inline">\((v)\)</span> <span class="math inline">\({\displaystyle \sum_{j=0}^D p^h_{ij} = k_i}.\)</span></div>
+<div class="line-block"><span class="math inline">\((vi)\)</span> <span class="math inline">\({\displaystyle \sum_{j=0}^D q^h_{ij} = m_i}.\)</span></div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-90" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span>, <span class="math inline">\((ii)\)</span> These are trivial.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> We have</div>
+<p><span class="math display">\[|X|^{-1}\sum_{\ell = 0}^D q^\ell_{0j} E_\ell  = E_0 \circ E_j = |X|^{-1}J\circ E_j = |X|^{-1}E_j.\]</span></p>
+<div class="line-block"><span class="math inline">\((iv)\)</span> Recall from Lemma <a href="lec20.html#lem:phijqhij">20.2</a></div>
+<p><span class="math display">\[|X|^{-1}m_h q^h_{ij} = \tau(E_i\circ E_j \circ E_{\hat{h}}),\]</span>
+(where <span class="math inline">\(\tau(B)\)</span> is the sum of entries in matrix <span class="math inline">\(B\)</span>.)</p>
+<p><span class="math display">\[\begin{align}
+|X|^{-1}m_0q^0_{ij} &amp; = \tau(E_i\circ E_j\circ E_0) \\
+&amp; = |X|^{-1}\tau(E_i\circ E_j) &amp;&amp; (E_0 = |X|^{-1}J)\\
+&amp; = |X|^{-1}\mathrm{trace}(E_iE_{\hat{j}})\\
+&amp; = |X|^{-1}\delta_{i\hat{j}}\mathrm{trace}E_i\\
+&amp; = |X|^{-1}\delta_{i\hat{j}}m_i.
+\end{align}\]</span></p>
+<div class="line-block"><span class="math inline">\((v)\)</span> Pick <span class="math inline">\(x,y\in X\)</span> with <span class="math inline">\((x,y)\in R_h\)</span>. Then,</div>
+<p><em>{j=0}^D p^h</em>{ij} &amp; = |{zX(x,z)R_i, ; (z,y)R_j ; }\
+&amp; = |{zX(x,z)R_i}|\
+&amp; k_i.
+\end{align}</p>
+<div class="line-block"><span class="math inline">\((vi)\)</span></div>
+<p><span class="math display">\[E_i \circ E_j = |X|^{-1}\sum_{h=0}^D q^h_{ij}E_h.\]</span>
+So,
+<span class="math display">\[\begin{align}
+\sum_{j=0}^D E_i\circ E_j &amp; = |X|^{-1}\sum_{h=0}^D \left(\sum_{j=0}^D q^h_{ij}\right) E_h\\
+&amp; = E_i \circ \sum_{j=0}^D E_j\\
+&amp; = E_i\circ I\\
+&amp; = |X|^{-1}(q_i(0)A_0 + q_i(1)A_1 + \cdots + q_i(0)A_D)\circ I\\
+&amp; = |X|^{-1}q_i(0)I\\
+&amp; = |X|^{-1}m_i(E_0 + E_1 + \cdots + E_D).
+\end{align}\]</span>
+This proves the assertions.</p>
+</div>
+<div class="definition">
+<p><span id="def:q-polynomial" class="definition"><strong>Definition 22.1  </strong></span>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> be a commutative scheme.</p>
+<p><span class="math inline">\(Y\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to ordering <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span> of primitive idempotents, if
+<span class="math display">\[q^h_{ij} \begin{cases} = 0 &amp; \text{if one of $h, i, j$ is greater than the sum of the other two}\\
+\neq 0 &amp; \text{if one of $h,i,j$ is equal to the sum of the other two.}\end{cases}\]</span>
+In this case, set
+<span class="math display">\[c^*_i = q^i_{1,i-1}, \; a^*_i = q^i_{1,i}, \; b^*_i = q^i_{1,i+1} \quad (0\leq i\leq D), \;(c^*_0= b^*_D = 0).\]</span></p>
+</div>
+<p>Observe: <span class="math inline">\(Q\)</span>-polynomial <span class="math inline">\(\to\)</span> <span class="math inline">\(Y\)</span> is symmetric.</p>
+<p>Suppose <span class="math inline">\(i\neq \hat{i}\)</span> for some <span class="math inline">\(i\)</span>. Then, by the condition in Definition <a href="lec22.html#def:q-polynomial">22.1</a>,
+<span class="math display">\[0 = q^0_{i\hat{i}} = m_i \; (\neq 0)\]</span>
+by Lemma <a href="lec22.html#lem:phijqhij2">22.1</a> <span class="math inline">\((iv)\)</span>.
+This is a contradiction.</p>
+<p>Hence, <span class="math inline">\({E_i}^\top = E_{\hat{i}} = E_i\)</span> for all <span class="math inline">\(i\)</span>.</p>
+<p>Therefore <span class="math inline">\(M\)</span> is symmetric and <span class="math inline">\(Y\)</span> is symmetric.</p>
+<p>Observe: If <span class="math inline">\(Y\)</span> is <span class="math inline">\(Q\)</span>-polynomial,
+<span class="math display">\[c^*_i + a^*_i + b^*_i = m_1 \quad (0\leq i\leq D)\]</span>
+(just as <span class="math inline">\(c_i + a_i + b_i = k\)</span> for <span class="math inline">\(P\)</span>-polynomial.)</p>
+<p>By Lemma <a href="lec22.html#lem:phijqhij2">22.1</a> <span class="math inline">\((iv)\)</span>,
+<span class="math display">\[m_1 = q^i_{10} + q^i_{11} + \cdots + q^i_{1,i-1} + q^i_{1i} + q^i_{1,i+1} + \cdots \]</span>
+and <span class="math inline">\(q^i_{10} = q^i_{11} = 0\)</span>, <span class="math inline">\(q^i_{1,i-1} = c^*_i\)</span>, <span class="math inline">\(q^i_{1i} = a^*_i\)</span>, and <span class="math inline">\(q^i_{1,i+1} = b^*_i\)</span>.</p>
+<div class="lemma">
+<p><span id="lem:q-conditions" class="lemma"><strong>Lemma 22.2  </strong></span>Assume <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> is a symmetric scheme. Pick <span class="math inline">\(x\in X\)</span>, and set <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(A^*\equiv A^*(x)\)</span>. Then the following are equivalent.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E_0, \ldots, E_D\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> $$q^h_{1j} \begin{cases} = 0 &amp; \</div>
+<p> &amp; . \end{cases} (0h,jD).$$</p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> There exists <span class="math inline">\(f_i^*\in \mathbb{C}[\lambda]\)</span>, <span class="math inline">\(\deg f^*_i = i\)</span>, and</div>
+<p><span class="math display">\[A^*_i = f^*_i(A^*_1) \quad (0\leq i\leq D).\]</span></p>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(E^*_0V, \ldots, E^*_DV\)</span> are maximal eigenspaces of <span class="math inline">\(A^*_1\)</span>, and</div>
+<p><span class="math display">\[E_iA^*_1E_j = O \quad \text{if }\; |i-j|&gt;0, \quad (0\leq i,j\leq D).\]</span>
+(Compare <span class="math inline">\((iv)\)</span> with the definition of <span class="math inline">\(Q\)</span>-polynomial in Definition <a href="lec6.html#def:q-polynomial-graph">6.2</a>.)</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-91" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\to (ii)\)</span> Clear.</div>
+<div class="line-block"><span class="math inline">\((ii)\to(iii)\)</span> <span class="math inline">\(A^*_0 = I\)</span>,</div>
+<p><span class="math display">\[\begin{align}
+A^*_iA^*_j &amp; = \sum_{h=0}^D q^h_{ij} A^*_h\\
+A^*_1A^*_j &amp; = q^{j-1}_{1j}A^*_{j-1} + q^j_{1j}A^*_j + q^{j+1}_{1j}A^*_{j+1} &amp;&amp; (q^{j+1}_{1j}\neq 0, 1\leq j\leq D-1).
+\end{align}\]</span>
+Hence <span class="math inline">\(A^*_j\)</span> is a polynomial of degree exactly <span class="math inline">\(j\)</span> in <span class="math inline">\(A^*_1\)</span> by induction on <span class="math inline">\(j\)</span>.
+<span class="math display">\[\lambda f^*_j(\lambda) = b^*_{j-1}f^*_{j-1}(\lambda) + a^*_jf^*_j(\lambda) + c^*_{j+1}f^*_{j+1}(\lambda) \quad \text{with $c^*_{j+1}\neq 0$,}\]</span>
+and <span class="math inline">\(f^*_{-1} = 0\)</span>, <span class="math inline">\(f^*_0(\lambda) = 1\)</span>.</p>
+<div class="line-block"><span class="math inline">\((iii)\to(i)\)</span> Pick <span class="math inline">\(i, j, h\)</span> with <span class="math inline">\(0\leq i,j,h\leq D\)</span> and <span class="math inline">\(h\geq i+j\)</span>. Since</div>
+<p><span class="math display">\[m_hq^h_{ij} = m_jq^j_{ih} = m_iq^i_{hj}\]</span>
+by Lemma <a href="lec20.html#lem:phijqhij">20.2</a>, it suffices to show that
+<span class="math display">\[q^h_{ij} \; \begin{cases} = 0 &amp; \text{if }\; h&gt; i+j\\
+\neq 0 &amp; \text{if }\; h = i+j.
+\end{cases}\]</span>
+<span class="math display">\[\begin{align}
+A^*_iA^*_j &amp; = \sum_{h=0}^D q^h_{ij}A^*_h\\
+f^*_i(A_1)f^*_j(A_1) &amp; = \sum_{h=0}^D q^h_{ij}f^*_h(A_1^*).
+\end{align}\]</span>
+Hence,
+<span class="math display">\[f^*_i(\lambda)f^*_j(\lambda) = \sum_{h=0}^Dq^h_{ij}f^*_h(\lambda).\]</span>
+Note that since <span class="math inline">\(A^*_0, A^*_1, \ldots, A^*_D\)</span> are linearly independent, <span class="math inline">\(f(A^*_1) = 0\)</span> implies <span class="math inline">\(\deg f &gt; D\)</span>.
+<span class="math display">\[\deg \mathrm{LHS} = i+j \to q^{i+j}_{ij}\neq 0, \; q^h_{ij} = 0, \text{ if } \; h&gt; i+j.\]</span></p>
+<div class="line-block"><span class="math inline">\((iii)\to (iv)\)</span> Recall</div>
+<p><span class="math display">\[A^*_1 = q_1(0)E^*_0 + q_1(1)E_1^* + \cdots .\]</span>
+Each <span class="math inline">\(A^*_i\)</span> is a polynomial in <span class="math inline">\(A^*_1\)</span>. Then <span class="math inline">\(A^*_1\)</span> generates the dual Bose-Mesner algebra. So,
+<span class="math inline">\(q_1(0), q_1(1), \ldots, q_1(D)\)</span> are distinct.</p>
+<p>So, <span class="math inline">\(E^*_0V, \ldots, E^*_DV\)</span> are maximal eigenspaces.</p>
+<p>Also, <span class="math inline">\(|i-j|&gt;1\)</span> implies <span class="math inline">\(q^j_{11} = 0\)</span>.</p>
+<p>Thus, <span class="math inline">\(E_iA^*_1E_j = 0\)</span> by Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a> <span class="math inline">\((ii)\)</span>.</p>
+<div class="line-block"><span class="math inline">\((iv)\to (ii)\)</span> <span class="math inline">\(q^i_{1j} = 0\)</span> if <span class="math inline">\(|i-j| &gt; 1\)</span>. since in this case,</div>
+<p><span class="math inline">\(E_iA^*_1E_j = O\)</span> implies <span class="math inline">\(q^i_{1j} = 0\)</span> by Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a> <span class="math inline">\((ii)\)</span>.</p>
+<p>Suppose <span class="math inline">\(q^{j+1}_{1j} = 0\)</span> for some <span class="math inline">\(j\)</span> <span class="math inline">\((0\leq j\leq D-1)\)</span>.</p>
+<p>Without loss of generalith, choose <span class="math inline">\(j\)</span> minimum. Then
+<span class="math inline">\(A^*_h\)</span> is a polynomial of degree <span class="math inline">\(h\)</span> in <span class="math inline">\(A^*_1\)</span> <span class="math inline">\((0\leq h\leq j)\)</span>, and
+<span class="math display">\[A^*_1A^*_j - q^{j-1}_{1j}A^*_{j-1} - q^j_{1j}A^*_j = O.\]</span>
+the left hand side is a polynomial in <span class="math inline">\(A^*_1\)</span> of degree <span class="math inline">\(j+1\)</span>.</p>
+<p>Hence, the minimal polynomial of <span class="math inline">\(A^*_1\)</span> has degree less than or equal to <span class="math inline">\(j+1 \leq D\)</span>. But %A^*_1$ has <span class="math inline">\(D+1\)</span> distince eigenvalues.</p>
+<p>This is a contradiction.</p>
 </div>
 
 </div>
@@ -158,7 +271,7 @@ div.csl-indent {
         </div>
       </div>
 <a href="lec21.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lec55.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec23.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

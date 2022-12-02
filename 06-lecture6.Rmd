@@ -202,7 +202,7 @@ So $d = D-2t$.
 :::
 
 
-:::{.definition}
+:::{.definition #thin-dualthin}
 For any graph $\Gamma = (X, E)$, pick a vertex $x\in X$ and set $E^*_i \equiv E^*_i(x)$ and $T \equiv T(x)$.
 
 | $(i)$ an irreducible $T$-module $W$ is thin \index{thin} if $\dim E_i^*W \leq 1$ for every $i$,
@@ -217,7 +217,7 @@ For any graph $\Gamma = (X, E)$, pick a vertex $x\in X$ and set $E^*_i \equiv E^
 Observe: $H(D,2)$ is thin, dual thin with respect to each $x\in X$.
 
 
-:::{.defintion}
+:::{.definition #q-polynomial-graph}
 With above notation, write $D \equiv D(x)$.
 
 | $(i)$ an ordering $E_0, E_1, \ldots, E_R$ of primitive idempotents of $\Gamma$ is restricted \index{restricted} if $E_0$ corresponds to the maximal eigenvalue.
