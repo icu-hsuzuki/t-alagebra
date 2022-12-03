@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 24 Balanced Conditions | Lecture Note on Terwilliger Algebra</title>
+  <title>Chapter 24 Balanced Conditions, I | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 24 Balanced Conditions | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:title" content="Chapter 24 Balanced Conditions, I | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 24 Balanced Conditions | Lecture Note on Terwilliger Algebra" />
+  <meta name="twitter:title" content="Chapter 24 Balanced Conditions, I | Lecture Note on Terwilliger Algebra" />
   
   <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="lec23.html"/>
-<link rel="next" href="lec55.html"/>
+<link rel="next" href="lec25.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -122,8 +122,9 @@ div.csl-indent {
 <li class="chapter" data-level="21" data-path="lec21.html"><a href="lec21.html"><i class="fa fa-check"></i><b>21</b> Norton Algebras</a></li>
 <li class="chapter" data-level="22" data-path="lec22.html"><a href="lec22.html"><i class="fa fa-check"></i><b>22</b> <span class="math inline">\(Q\)</span>-Polynomial Schemes</a></li>
 <li class="chapter" data-level="23" data-path="lec23.html"><a href="lec23.html"><i class="fa fa-check"></i><b>23</b> Representation of a Scheme</a></li>
-<li class="chapter" data-level="24" data-path="lec24.html"><a href="lec24.html"><i class="fa fa-check"></i><b>24</b> Balanced Conditions</a></li>
-<li class="chapter" data-level="25" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>25</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="24" data-path="lec24.html"><a href="lec24.html"><i class="fa fa-check"></i><b>24</b> Balanced Conditions, I</a></li>
+<li class="chapter" data-level="25" data-path="lec25.html"><a href="lec25.html"><i class="fa fa-check"></i><b>25</b> Balanced Conditions, II</a></li>
+<li class="chapter" data-level="26" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>26</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -146,15 +147,145 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="lec24" class="section level1 hasAnchor" number="24">
-<h1><span class="header-section-number">Chapter 24</span> Balanced Conditions<a href="lec24.html#lec24" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapter 24</span> Balanced Conditions, I<a href="lec24.html#lec24" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Wednesday, March 23, 1993</strong></p>
 <p>No Class on Friday (another conference).</p>
-<p>:::{.proof name=“Proof of Lemma <a href="lec23.html#lem:rep-of-scheme">23.1</a> continued}
-Let <span class="math inline">\(E_j\)</span> be a primitive idempotent, <span class="math inline">\(H = E_jV\)</span> and
+<div class="proof">
+<p><span id="unlabeled-div-97" class="proof"><em>Proof</em> (Proof of Lemma <a href="lec23.html#lem:rep-of-scheme">23.1</a> continued). </span>Let <span class="math inline">\(E_j\)</span> be a primitive idempotent, <span class="math inline">\(H = E_jV\)</span> and
 <span class="math display">\[\rho: X\to H \quad (x\mapsto E_j\hat{x}).\]</span></p>
 <div class="line-block"><span class="math inline">\((v)\)</span> Every representation <span class="math inline">\((\rho, H)\)</span> of <span class="math inline">\(Y\)</span> is equivalent to a representation of above type, for some <span class="math inline">\(j\)</span> <span class="math inline">\((0\leq j\leq D)\)</span> and <span class="math inline">\(j\)</span> is unique.</div>
-<p>Let <span class="math inline">\(E:=(\langle \rho(x), \rho(y))_{x,y\in X}\)</span>.
-:::</p>
+<p>Let <span class="math inline">\(E:=(\langle \rho(x), \rho(y))_{x,y\in X}\)</span>.</p>
+<p>By <span class="math inline">\(\mathrm{R2}\)</span>,
+<span class="math display">\[E = \sum_{i = 0}^D \sigma_i A_i, \quad \text{some}\; \sigma_0, \sigma_1, \ldots, \sigma_D\in \mathbb{C}.\]</span>
+Hence, <span class="math inline">\(E\)</span> belongs to the Bose-Mesner algebra $M of <span class="math inline">\(Y\)</span>.</p>
+<p>We want to show that <span class="math inline">\(E\)</span> is a scalar multiple of a primitive idempotent.</p>
+<p>Fix <span class="math inline">\(x\in X\)</span> and fix <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq D)\)</span>.</p>
+<p>By <span class="math inline">\(\mathrm{R3}\)</span>,
+<span class="math display" id="eq:sumrhoy">\[\begin{equation}
+\sum_{y\in X, (y,x)\in R_i}\rho(y) = \alpha \rho(x), \quad \text{some }\; \alpha\in \mathbb{C}. \tag{24.1}
+\end{equation}\]</span>
+So,
+<span class="math display">\[k_i\overline{\sigma_i} = \left\langle \sum_{y\in X, (y,x)\in R_i}\rho(y),\rho(x)\right\rangle = \bar{\alpha}\langle \rho(x), \rho(x)\rangle = \bar{\alpha}\sigma_0.\]</span>
+Hence, <span class="math inline">\(\alpha\)</span> is independent of <span class="math inline">\(x\)</span>. In maatrix form <a href="lec24.html#eq:sumrhoy">(24.1)</a> becomes
+<span class="math display">\[EA_i\hat{x} = \alpha E\hat{x}.\]</span></p>
+<div class="remark">
+<p><span id="unlabeled-div-96" class="remark"><em>Remark</em>. </span><span class="math display">\[Eu = Ev \Leftrightarrow \langle z, Eu\rangle = \langle z, Ev\rangle \text{ for all }z\in X \Leftrightarrow (Eu)_z = (Ev)_z \text{ for all }z\in X.\]</span>
+<span class="math display">\[\begin{align}
+(EA_i\hat{x})_z &amp; = \left\langle \rho(z), \sum_{y\in X, (y,x)\in R_i}\rho(y)\right\rangle\\
+&amp; = \alpha \langle \rho(z), \rho(x)\rangle\\
+&amp; = (\alpha E\hat{x})_z.
+\end{align}\]</span>
+Hence,
+<span class="math display">\[EA_i\hat{x} = \alpha E\hat{x}.\]</span></p>
+</div>
+<p>Since <span class="math inline">\(x\)</span> is arbitrary,
+<span class="math display">\[EA_i = \alpha E.\]</span>
+So,
+<span class="math display">\[EA_i \in \mathrm{Span} E\; \text{ and }\; EM = \mathrm{Span} E.\]</span>
+We have <span class="math inline">\(E\in \mathrm{E_j}\)</span> for unique <span class="math inline">\(j\)</span> <span class="math inline">\((0\leq j\leq D)\)</span>.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-98" class="remark"><em>Remark</em>. </span><span class="math display">\[E = \tau_0 E_0 + \cdots + \tau)D E_D, \; \tau_j\in \mathbb{C}\quad (0\leq j\leq D).\]</span>
+And, at least one of <span class="math inline">\(\tau_j\)</span> is nonzero, and
+<span class="math display">\[\tau_jE_j = EE_j \in \mathrm{Span}E.\]</span>
+So,
+<span class="math display">\[\tau_jE_j = E\]</span>
+as <span class="math inline">\(E_0, \ldots, E_D\)</span> are linearly independent.</p>
+</div>
+<p>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> be a symmetric scheme, and let <span class="math inline">\(E\)</span> be a primitive idempotent.</p>
+<div class="definition">
+<p><span id="def:q-poly-representation" class="definition"><strong>Definition 24.1  </strong></span><span class="math inline">\(Y\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E\)</span>, if and only if <span class="math inline">\(Y\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to some ordering <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span> of primitive idempotents, where <span class="math inline">\(E_0 = |X|^{-1}J\)</span>, and <span class="math inline">\(E_1 = E\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:balanced" class="theorem"><strong>Theorem 24.1  </strong></span>Assume <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> is <span class="math inline">\(P\)</span>-polynomial (i.e., <span class="math inline">\((X, R_1)\)</span> is distance-regular). Let <span class="math inline">\(E\)</span> be any primitive idempotent of <span class="math inline">\(Y\)</span>. Let <span class="math inline">\((\rho, H)\)</span> be the corresponding representation.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> The following are equivalent.</div>
+<div class="line-block"><span class="math inline">\(\quad (ia)\)</span> <span class="math inline">\(Y\)</span> is <span class="math inline">\(Q\)</span>-polyonimial with respect to <span class="math inline">\(E\)</span>.</div>
+<div class="line-block"><span class="math inline">\(\quad (ib)\)</span> <span class="math inline">\((\rho, H)\)</span> is nondegenerate and for all <span class="math inline">\(x,y\in X\)</span>, and for all <span class="math inline">\(i,j\)</span> <span class="math inline">\((0\leq i,j\leq D)\)</span>,</div>
+<p><span class="math display">\[\sum_{z\in X, (x,z)\in R_i, (y,z)\in R_j}\rho(z) - \sum_{z&#39;\in X, (x,z&#39;)\in R_j, (y,z&#39;)\in R_i}\rho(z&#39;)\in \mathrm{Span}(\rho(x)-\rho(y)).\]</span></p>
+<div class="line-block"><span class="math inline">\(\quad (ic)\)</span> <span class="math inline">\((\rho, H)\)</span> is nondegenerate and for all <span class="math inline">\(x,y\in X\)</span>,</div>
+<p><span class="math display">\[\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z&#39;\in X, (x,z&#39;)\in R_2, (y,z&#39;)\in R_1}\rho(z&#39;)\in \mathrm{Span}(\rho(x)-\rho(y)).\]</span></p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Wirte</div>
+<p><span class="math display">\[E = |X|^{-1}\sum_{j=0}^D \theta^*_j A_j,\]</span>
+and suppose <span class="math inline">\((ia)-(ic)\)</span> hold. Then the coefficient in <span class="math inline">\((ib)\)</span> is
+<span class="math display">\[p^h_{ij}\frac{\theta_i^*-\theta_j^*}{\theta^*_0-\theta^*_h} \quad (1\leq h\leq D, 0\leq i,j\leq D).\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-100" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((ia)\to(ib)\)</span> Without loss of generality, assume <span class="math inline">\(E \equiv E_1\)</span>, and <span class="math inline">\(Y\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E\)</span>.</div>
+<p>Then by Lemma <a href="lec22.html#lem:q-conditions">22.2</a>,
+<span class="math inline">\(\theta_0^*, \ldots, \theta^*_D\)</span> are distinct. So <span class="math inline">\(\theta^*_h\neq \theta^*_0\)</span> for all <span class="math inline">\(h\in \{1,2\ldots, D\}\)</span>, and <span class="math inline">\((\rho, H)\)</span> is nondegenerate.</p>
+<p>Fix <span class="math inline">\(x\in X\)</span>, write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(A^*_i \equiv A^*_i(x)\)</span>, <span class="math inline">\(A^* \equiv A_1^*\)</span>.</p>
+<p>Let <span class="math inline">\(M\)</span> be the Bose-Mesner algebra. Set
+<span class="math display">\[L = \{mA^*n - nA^*m\mid m, n\in M\}.\]</span></p>
+<p>Claim 1. <span class="math inline">\(\dim L \leq D\)</span>.</p>
+<p><em>Proof of Claim 1.</em>
+<span class="math display">\[\begin{align}
+L &amp; = \mathrm{Span}(E_iA^*E_j - E_jA^*E_i \mid 0\leq i&lt;j\leq D)\\
+&amp; = \mathrm{Span}(E_iA^*E_{i+1} - E_{i+1}A^*E_i \mid 0\leq i\leq D-1).
+\end{align}\]</span>
+Since <span class="math inline">\(E_iA^*E_j = O\)</span> if <span class="math inline">\(q^1_{ij} = 0\)</span> by Lemma <a href="lec20.html#lem:phijqhij">20.2</a> and Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a>,
+and this occurs if <span class="math inline">\(|i-j|&gt;1\)</span> by <span class="math inline">\(Q\)</span>-polynomial property.</p>
+<p>Hence, <span class="math inline">\(\dim L \leq D\)</span>.</p>
+<p>Claim 2. <span class="math inline">\((i)\)</span> <span class="math inline">\(\{A^*A_h - A_hA^*\mid 1\leq h\leq D\}\)</span> is a basis for <span class="math inline">\(L\)</span>. In particular,</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> there exist <span class="math inline">\(r^h_{ij}\in \mathbb{C}\)</span> <span class="math inline">\((1\leq h\leq D, 0\leq i,j\leq D)\)</span> such that</div>
+<p><span class="math display">\[A_iA^*A_j - A_jA^*A_i = \sum_{h=1}^D r^h_{ij}(A^*A_h - A_hA^*).\]</span></p>
+<p><em>Proof of Claim 2.</em></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> The column <span class="math inline">\(x\)</span> of <span class="math inline">\(A^*A_h - A_hA^*\)</span> is a nonzero scalar <span class="math inline">\(\theta^*_h - \theta^*_0\)</span> times the column <span class="math inline">\(x\)</span> of <span class="math inline">\(A_h\)</span>.</div>
+<div class="remark">
+<p><span id="unlabeled-div-99" class="remark"><em>Remark</em>. </span><span class="math display">\[ ((A^*A_h - A_hA^*)\hat{x})_y = E_{xy}(A_h)_{yx}- (A_h)_{yx}E_{xx} = (\theta^*_h-\theta^*_0)(A_h)_{yz}.\]</span></p>
+</div>
+<p>Also the column <span class="math inline">\(x\)</span> of <span class="math inline">\(A_0, A_1, \ldots, A_D\)</span> are linearly independent.</p>
+<p>Hence, the matrices given are linearly independent.</p>
+<p>They are in <span class="math inline">\(L\)</span> by construction, so they form a basis for <span class="math inline">\(L\)</span> by Claim 1.</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> This is immediate since</div>
+<p><span class="math display">\[A_iA^*A_j - A_jA^*A_i\in L, \quad \text{for all $i,j$}.\]</span></p>
+<p>Cloim 3.
+<span class="math display">\[r^\ell_{ij} = p^\ell_{ij}\left(\frac{\theta^*-\theta^*_j}{\theta^*_0 - \theta^*_\ell}\right)\quad (1\leq \ell\leq D, 0\leq i,j\leq D).\]</span></p>
+<p><em>Proof of Claim 3.</em>
+Fix <span class="math inline">\(i,j\)</span>,
+<span class="math display">\[A_iA^*A_j - A_jA^*A_i - \sum_{h=1}^D r^h_{ij}(A^*A_h - A_hA^*) = 0.\]</span>
+Pick <span class="math inline">\(\ell\)</span> <span class="math inline">\((1\leq \ell \leq D)\)</span>. Pick <span class="math inline">\(y\in X\)</span> such that <span class="math inline">\((x,y)\in R_\ell\)</span>.
+<span class="math display">\[\begin{align}
+(A_iA^*A_j)_{xy} &amp; = \sum_{z\in X}(A_i)_{xz}(A^*)_{zz}(A_j)_{zy}\\
+&amp; = \sum_{z\in X, (x,z)\in R_i, (y,z)\in R_j}(A^*)_{zz}\\
+&amp; = |X|^{-1}p^\ell_{ij}\theta^*_i.
+\end{align}\]</span>
+Similarly,
+<span class="math display">\[(A_jA^*A_i)_{xy} = |X|^{-1}p^\ell_{ij}\theta^*_j.\]</span>
+<span class="math display">\[\begin{align}
+(A^*A_h-A_hA^*)_{xy} &amp; = (A_0A^*A_h - A_hA^*A_0)_{xy}\\
+&amp; = |X|^{-1}p^\ell_{0h}(\theta^*_0 - \theta^*_h)\\
+&amp; = \begin{cases}
+0 &amp; \text{ if }\; \ell \neq h\\
+|X|^{-1}(\theta^*_0-\theta^*_h) &amp; \text{ if } \ell = h.
+\end{cases}
+\end{align}\]</span>
+Hence,
+<span class="math display">\[\sum_{h=1}^D r^h_{ij}(A^*A_h - A_hA^*)_{xy} = |X|^{-1}r^\ell_{ij}(\theta^*_0-\theta^*_\ell).\]</span>
+Comparing terms, we have
+<span class="math display">\[p^\ell_{ij}(\theta^*_i-\theta^*_j) - r^\ell_{ij}(\theta^*_0-\theta^*_\ell) = 0.\]</span></p>
+<p>Claim 4. For all <span class="math inline">\(h\)</span> <span class="math inline">\((1\leq h\leq D)\)</span>, for all <span class="math inline">\(i,j\)</span> <span class="math inline">\((0\leq i,j\leq D)\)</span>, for all <span class="math inline">\(w,y\in X\)</span>, <span class="math inline">\((w,y)\in R_h\)</span>,
+<span class="math display" id="eq:rhozrhoz">\[\begin{equation}
+\sum_{z\in X,(w,z)\in R_i, (y,z)\in R_j}\rho(z)-\sum_{z&#39;\in X, (w,z&#39;)\in R_j, (y,z)\in R_i}\rho(z&#39;) - r^h_{ij}(\rho(w)-\rho(y))=0. \tag{24.2}
+\end{equation}\]</span></p>
+<p><em>Proof of Claim 4.</em>
+Set <span class="math inline">\(L = \langle \mathrm{LHS}\)</span> of <a href="lec24.html#eq:rhozrhoz">(24.2)</a>, <span class="math inline">\(\rho(x)\rangle\)</span>
+It suffices to show that <span class="math inline">\(L = 0\)</span>.</p>
+<p>Note that since <span class="math inline">\(x\)</span> is arbitrary, if <span class="math inline">\(\mathrm{LHS}\)</span> of <a href="lec24.html#eq:rhozrhoz">(24.2)</a> is zero.
+<span class="math display">\[\begin{align}
+L &amp; = \sum_{z\in X,(w,z)\in R_i, (y,z)\in R_j}\langle \rho(z), \rho(x)\rangle -\sum_{z&#39;\in X, (w,z&#39;)\in R_j, (y,z)\in R_i}\langle\rho(z&#39;),\rho(x)\rangle \\
+&amp; \quad - r^h_{ij}\langle \rho(w)-\rho(y), \rho(x)\rangle\\
+&amp; = |X|^{-1}(A_iA^*A_j)_{wy} - |X|^{-1}(A_jA^*A_i)_{wy}-|X|^{-1}\sum_{\ell=1}^Dr^\ell_{ij}(A^*A_\ell - A_\ell A^*)_{wy}\\
+&amp; = |X|^{-1} \text{times $wy$ entry of a matrix known to be zero by Claim 2}\\
+&amp; = 0.
+\end{align}\]</span></p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-101" class="remark"><em>Remark</em>. </span><span class="math display">\[\begin{align}
+|X|^{-1}\sum_{\ell=1}^D r^\ell_{ij}(A^*A_\ell - A_\ell A^*)_{wy} &amp; = |X|^{-1}r^h_{ij}(A^*A_h- A_hA^*)_{wy}\\
+&amp; = r^h_{ij}(\langle \rho(x),\rho(w)\rangle - \langle \rho(x),\rho(y)\rangle)
+\end{align}\]</span></p>
+</div>
 
 </div>
             </section>
@@ -163,7 +294,7 @@ Let <span class="math inline">\(E_j\)</span> be a primitive idempotent, <span cl
         </div>
       </div>
 <a href="lec23.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lec55.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec25.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

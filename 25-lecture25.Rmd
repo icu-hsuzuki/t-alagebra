@@ -1,0 +1,8 @@
+# Balanced Conditions, II {#lec25}
+**Monday, March 29, 1993**
+
+:::{.proof name="Proof of Theorem \@ref(thm:balanced) continued"}
+| $(ib)\to(ic)$ Obvious.
+
+| $(ic)\to(ia)$ 
+:::
