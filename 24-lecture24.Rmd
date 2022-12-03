@@ -1,0 +1,13 @@
+# Balanced Conditions {#lec24}
+**Wednesday, March 23, 1993**
+
+No Class on Friday (another conference).
+
+:::{.proof name="Proof of Lemma \@ref(lem:rep-of-scheme) continued}
+Let $E_j$ be a primitive idempotent, $H = E_jV$ and 
+$$\rho: X\to H \quad (x\mapsto E_j\hat{x}).$$
+
+| $(v)$ Every representation $(\rho, H)$ of $Y$ is equivalent to a representation of above type, for some $j$ $(0\leq j\leq D)$ and $j$ is unique.
+
+Let $E:=(\langle \rho(x), \rho(y))_{x,y\in X}$.
+:::

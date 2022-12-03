@@ -9,6 +9,9 @@ eq:ai
 eq:wibj
 eq:wj-1bj
 eq:wjbj
+eq:e1vejv
+eq:ej1e1vejv
+eq:e0vejv
 lec1
 lec2
 lec3
@@ -32,4 +35,5 @@ lec20
 lec21
 lec22
 lec23
+lec24
 lec55
