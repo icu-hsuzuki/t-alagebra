@@ -4,5 +4,169 @@
 :::{.proof name="Proof of Theorem \@ref(thm:balanced) continued"}
 | $(ib)\to(ic)$ Obvious.
 
-| $(ic)\to(ia)$ 
+| $(ic)\to(ia)$ Without loss of generality, we may assume $D\geq 3$, else trivial.
+
+:::{.remark}
+The case $D = 2$ should be treated somewhere, but the assumption $D\geq 3$ is not used.
+:::
+
+Fix $w\in X$, and write $E^*_i \equiv E^*_i(w)$, $A^*_i\equiv A^*_i(w)$, $A^*\equiv A^*_1$, and $A_i$, $i$-th distance matrix. Set
+$$E \equiv E_1 = |X|^{-1}\sum_{i=0}^D \theta^*_i A_i.$$
+Since $(\rho, H)$ is nondegenerate,
+$$\theta^*_0 \neq \theta^*_h, \; \text{for all }h\in \{1,2,\ldots, D\}$$
+See Lemma \@ref(lem:rep-of-scheme) $(iv)$.
+
+Claim 1. Pick $h$ $(1\leq h\leq D)$, and $x,y$ with $(x,y)\in R_h$. Then
+$$\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z') = r^h_{12}(\rho(x)-\rho(y)),$$
+where
+$$r^h_{12} = p^h_{12}\frac{\theta_1^* - \theta^*_2}{\theta^*_0-\theta^*_h}.$$
+
+_Proof of Claim 1._
+By our assumption,
+$$\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z') = \alpha(\rho(x)-\rho(y)).$$
+Hence,
+\begin{align}
+|X|^{-1}p^h_{12}(\theta^*_1-\theta^*_2) & = \left\langle \sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z'), \rho(x)\right\rangle \\
+& = \alpha\langle \rho(x)-\rho(y), \rho(x)\\
+& = \alpha |X|^{-1}(\theta_0^*-\theta^*_h).
+\end{align}
+We have
+$$\alpha = p^h_{12}\frac{\theta_1^* - \theta^*_2}{\theta^*_0-\theta^*_h}.$$
+
+Claim 2. 
+${\displaystyle A_1A^*A_2 - A_2A^*A_1 = \sum_{h=1}^D r^h_{12}(A^*A_h - A_hA^*).}$
+
+_Proof of Claim 2._
+The $xy$ entry of the $\mathrm{LHS} - \mathrm{RHS}$ is
+$$|X|\left\langle \sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z') - r^h_{12}(\rho(x)-\rho(y)),\rho(w)\right\rangle,$$
+where $(x,y)\in R_h$, $h = 1, 2, \ldots, D$, and the $xy$ entry of the $\mathrm{LHS} - \mathrm{RHS}$ is $0$ if $x = y$.
+
+But the vector on the left in the above inner product is $0$ by Claim 1, so the inner product is $0$.
+
+Thus, the $xy$ entry of the $\mathrm{LHS} - \mathrm{RHS}$ is always $0$, and we have Claim 2.
+
+Claim 3. $A^*A_3 - A_3A^* \in \mathrm{Span}(AA^*A_2 - A_2A^*A, A^*A_2 - A_2A^*, A^*A-AA^*).$
+
+_Proof of Claim 3._
+Since $p^h_{12} = 0$, if $h>3$, and $p^h_{12} \neq 0$, if $h=3$, we have $r^h_{12} = 0$ if $h > 0$, and $r^h_{12} \neq 0$, if $h = 3$. Note that $\theta^*_1\neq \theta^*_2$.
+
+Now we are done by Claim 2.
+
+Claim 4. There exist $\beta, \gamma, \delta\in \mathbb{R}$ such that
+\begin{align}
+0 & = [A, A^2A^*-\beta AA^*A + A^*A^2 - \gamma(AA^*+A^*A) - \delta A^*]\\
+& = A^3A^* - A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A).
+\end{align}
+
+_Proof of Claim 4._
+There exists $f_i\in \mathbb{R}[\lambda]$, $\deg f_i = i$ such that $A_i = f_i(A_1)$.
+
+Writing $A_2$, $A_3$ as polynomials in $A$ in Claim 3 and simplifying, we find
+$$A^3A^*-A^*A^3 \in \mathrm{Span}(A^2A^*A-AA^*A^2, A^2A^*-A^*A^2, AA^*-A^*A).$$
+
+:::{.remark}
+Let $A_3 = \beta_3A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I$ with $\beta_3\neq 0$, and $A_2 = \gamma_2 A^2 + \gamma_1 A + \gamma_0 I$, with $\gamma_2\neq 0$. Then
+\begin{align}
+A^*A_3-A_3A^* & = A^*(\beta_3 A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I) - (\beta_3 A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I)A^*.\\
+A^3A^*-A^*A^3 & \in \mathrm{Span}(A^*A_3 - A_3A^*, A^2A^* - A^*A^2, AA^*-A^*A)\\
+& \subseteq \mathrm{Span}(AA^*A_2 - A_2A^*A, A^*A_2-A_2A^*, A^2A^*-A^*A^2, AA^*-A^*A)\\
+A^*A_2 - A_2A^* & = A^*(\gamma_2 A^2 + \gamma_1 A + \gamma_0 I) - (\gamma_2 A^2 + \gamma_1 A + \gamma_0 I)A^*\\
+AA^*A_2 - A_2A^*A & = AA^*(\gamma_2 A^2 + \gamma_1 A + \gamma_0 I) - (\gamma_2 A^2 + \gamma_1 A + \gamma_0 I)A^*A\\
+A^*A_2 - A_2A^* & \in \mathrm{Span}(A^2A^*-A^*A^2, AA^*-AA^*)\\
+AA^*A_2 - A_2A^*A & \in \mathrm{Span}(A^2A^*A-AA^*A^2, AA^*-AA^*)\\
+A^3A^*-A^*A^3 & \in \mathrm{Span}(A^2A^*A-AA^*A^2, A^2A^*-A^*A^2, AA^*-A^*A).
+\end{align}
+:::
+
+Hence, we can find $\delta, \gamma, \delta$ satisfying
+$$0 = A^3A^*-A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A).$$
+On the other hand,
+\begin{align}
+& [A, A^2A^*-\beta AA^*A+A^*A^2-\gamma(AA^*+A^*A)-\delta A^*]\\
+& \quad = A^3A^*-A^2A^*A-\beta A^2A^*A + \beta AA^*A^2 + AA^*A^2 - A^*A^3 \\
+& \quad\quad - \gamma A^2A^* - \gamma AA^*A + \gamma AA^*A + \gamma A^*A^2 - \delta AA^* + \delta A^*A\\
+& \quad = A^3A^* - A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta (AA^*-A^*A).
+\end{align}
+Thus we have $(i)$ and $(ii)$.
+
+Define a diagram $D_E$ on nodes $0, 1, \ldots, D$.
+
+Connect distinct nodes $,$ by undirected arc if $q^1_{ij}\neq 0$. (Note $q^1_{ij} = q^1_{ji}$).
+
+Since $q^1_{0j} = \delta_{1j}$, the $0$-node is adjacent to the $1$-node and no other node.
+
+$Y$ is $Q$-polynomial with respect to $E$ if and only if $E_E$ is a path.
+
+Claim 5.  $D_E$ is connected.
+
+_Proof of Claim 5._
+Suppose there exists $\Delta \subseteq \{0,1,\ldots, D\}$ such that $i,j$ not connected for every $i\in \Delta$ and $j\in \{0,1,\ldots, D\}\setminus D$.
+
+Set 
+$$f = \sum_{i\in \Delta}E_i.$$
+Observe
+\begin{align}
+fA^* & = \sum_{i\in \Delta} E_i A^* \left(\sum_{j=0}^D E_j\right)\\
+& = \sum_{i\in \Delta, j\in \Delta}E_iA^*E_j \quad \text{(since $E_iA^*E_j=O$ if $q^1_{ij}=0$)}\\
+& = fA^*f.
+\end{align}
+Also, $A^*f = fA^*f$.
+
+Hence, $f$ commutes with $A^*$.
+
+But $f$ is an element of the Bose-Mesner algebra
+$$f = \sum_{i=0}^D \alpha_i A_i \quad \text{for some $\alpha_0, \ldots, \alpha_D\in \mathbb{C}$}.$$
+We have
+$$0 = fA^*-A^*f = \sum_{i=1}^D \alpha_i(A_iA^*- A^*A_i).$$
+But $\{A_hA^* - A^*A_h \mid 1\leq h\leq D\}$ are linearly independent.
+(The column $w$ of $A_hA^*-A^*A_h$ is $\theta^*_h - \theta^*_0$ times the column $w$ of $A_h$.)
+
+Hence, $\alpha_1 = \cdots = \alpha_D = 0$, and $f = \alpha_0 I$. Since $f^2 = f$, $\alpha_0$ or $1$.
+
+If $\alpha_0 = 0$, $f=O$ and $\Delta = \emptyset$.
+
+If $\alpha_0 = 1$, $f=I$ and $\Delta = \{0, 1, \ldots, D\}$.
+
+This proves Claim 5.
+:::
+
+:::{.remark}
+Claim 5 proves the following in general.
+
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a symmetric association scheme. Fix a vertex $x\in X$, and let
+$$E = \frac{1}{|X|}\sum_{j=0}^D \theta^*_j A_j \quad (\theta^*_j = q_1(j) \; \text{ if $E = E_1$})$$
+be a primitive idempotent and $E^*_j\equiv E^*_j(x)$.
+$$A^* = \sum_{j=0}^D \theta_j^*E^*_j.$$
+If $\theta_0 = \theta^*_h$, $h=1, \ldots, D$, then the following hold.
+
+| $(i)$ $\{A_hA^* - A^*A_h \mid 1\leq h\leq D\}$ are linearly independent.
+
+| $(ii)$ The diagram $D_E$ on nodes $0, 1, \ldots, D$ defined by 
+$$i\sim j \Leftrightarrow E(E_i\circ E_j)\neq O$$
+is connected.
+
+| $(iii)$ $C_M(A^*) = \{L\in M\mid LA^* = A^*L\} = \mathrm{Span}(I).$
+
+_Proof._ 
+| $(i)$ The column $x$ of $A_hA^* - A^*(A_h)$ is $\theta^*_0-\theta^*_h$ times the column $x$ of $A_h$.
+
+| $(iii)$ ${\displaystyle 0 = [\sum_{h=0}^D\alpha_hA_h, A^*] = \sum_{h=1}^D\alpha_h(A_hA^*-A^*A_h)}$. Hence, $\alpha_0 = \cdots =\alpha_D = 0$.
+
+| $(ii)$ $\Delta$ is a connected component. Let $f = \sum_{i\in \Delta}E_i$, then $f\in C_M(A^*)$.
+
+Let $Y = (X, \{R_i\}_{0\leq i\leq 2})$ be a symmetric association scheme with $D = 2$. Let
+$$E = \frac{1}{|X|}\sum_{j=0}^2\theta^*_j A_j$$
+be a primitive idempotent. If $\theta^*_0, \theta_1^*, \theta^*_2$. 
+
+Then $Y$ us $Q$-polynomial with respect to $E$.
+
+_Proof._
+By the previous lemma, $D_E$ is connected.
+
+**Note.** 
+It seems $\theta^*_1 \neq \theta^*_2$ is necessary. Clarify the condition $\theta^*_1 = \theta^*_2$.
+
+Terwilliger claims that $\theta^*_1 = \theta^*_2$ does not occur under the assumption $(ic)$. (March 7, 1995)
+
+
 :::
