@@ -6,7 +6,7 @@
 ]{book}
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-12-04}
+\date{2022-12-06}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -5203,6 +5203,58 @@ It seems \(\theta^*_1 \neq \theta^*_2\) is necessary. Clarify the condition \(\t
 
 Terwilliger claims that \(\theta^*_1 = \theta^*_2\) does not occur under the assumption \((ic)\). (March 7, 1995)
 \end{remark}
+
+\hypertarget{lec26}{%
+\chapter{Representation Diagrams}\label{lec26}}
+
+\textbf{Wednesday, March 31, 1993}
+
+\begin{proof}[Proof of Theorem \ref{thm:balanced} continued]
+Assume \(Y = (X, \{R_i\}_{0\leq i\leq D})\) is \(P\)-polynomial.
+Let \(E\) be a primitive idempotent of \(Y\) such that the corresponding representation \((\rho, H)\) is nondegenerate.
+
+Show for all \(x, y\in X\),
+\[\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z') \in \mathrm{Span}(\rho(x)-\rho(y))\]
+implies that \(Y\) is \(Q\)-polynomial with respect to \(E\).
+
+Define a diagram \(D_E\) on nodes \(0, 1, \ldots, D\), for \(i\neq j\),
+\[i \frown j \leftrightarrow q^1_{ij}\neq 0\]
+by setting \(E = E_1\).
+
+We showed that \(0 \frown j \leftrightarrow j = 1\) \((1\leq j\leq D)\) and \(D_E\) is connected.
+
+Now it is sufficient to show the following.
+
+Claim 6. Let \(i\) be a node in \(D_E\). Then \(i\) is adjacent to at most \(2\) arcs.
+
+\emph{Proof of Claim 6.}
+Suppose the node \(j\) is adjacent to \(i\) in \(D_E\). By claim 4,
+\begin{align}
+0 & = E_i(A^3A^* - A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2) - \gamma(A^2A^*-A^*A) - \delta(AA^*-A^*A))E_j\\
+& = E_iA^*E_j(\theta^3_i-\theta^3_j-(\beta+1)(\theta^2\theta_j - \theta_i\theta_j^2)-\gamma(\theta_i^2-\theta_j^2)-\delta(\theta_i-\theta_j))\\
+& = E_iA^*A_j(\theta_i-\theta_j)p(\theta_i, \theta_j),
+\end{align}
+where
+\[p(s,t) = s^2 - \beta st + t^2 - \gamma(s+t) - \delta.\]
+
+\begin{remark}
+\begin{align}
+& (\theta_i-\theta_j)(\theta_i^2 - \beta \theta_i\theta_j + \theta_j^2 - \gamma(\theta_i + \theta_j) - \delta)\\
+& = \quad \theta^3_i-\theta^3_j-(\beta+1)(\theta^2\theta_j - \theta_i\theta_j^2)-\gamma(\theta_i^2-\theta_j^2)-\delta(\theta_i-\theta_j)
+\end{align}
+\end{remark}
+
+Since \(i\) is adjacent to \(j\), \(q^1_{ij}\neq 0\) and
+\[E_iA^*E_j\neq O\]
+by Lemma \ref{lem:vanishing-condition} \((ii)\).
+Since \(Y\) is \(P\)-polynomial,
+\[\theta_i \neq \theta_j \quad \text{ if }; i\neq j.\]
+Hence \(p(\theta_i,\theta_j) = 0\). But \(p\) is quadratic in \(t\). So \(p(\theta_i,t) = 0\) has at most two solutions for \(\theta_j\).
+
+Now \(D_E\) is a pth, and \(\Gamma\) is \(Q\)-polynomial with respect to \(E\).
+
+This proves Theorem \ref{thm:balanced}.
+\end{proof}
 
 \hypertarget{lec55}{%
 \chapter{Title of the Chapter}\label{lec55}}

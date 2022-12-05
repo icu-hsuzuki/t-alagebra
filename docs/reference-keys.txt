@@ -39,4 +39,5 @@ lec22
 lec23
 lec24
 lec25
+lec26
 lec55
