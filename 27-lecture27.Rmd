@@ -1,0 +1,60 @@
+# $P$-and $Q$-Polynomial Schemes {#lec27}
+**Friday, April 2, 1993** 
+
+:::{.theorem #p-and-q}
+Let $\Gamma = (X,E)$ be a distance-regular graph of diameter $D\geq 3$.
+
+Let $\theta$ denote an eigenvalue of $\Gamma$ with associated primitive idempotent
+$$E = \frac{1}{|X|}\sum_{i=0}^D \theta^*_iA_i.$$
+Then the following are equivalent.
+
+| $(i)$ $\Gamma$ is $Q$-polynomial with respect to $E$.
+
+| $(ii)$ $\theta^*_0\neq \theta^*_h$ for all $h\in \{1, 2, \ldots, D\}$ and for $i\in \{3, \ldots, D\}$, 
+\begin{align}
+& c_i\left(\theta^*_2 - \theta^*_i - \frac{(\theta^*_1-\theta^*_{i-1})^2}{\theta^*_0-\theta^*_i}\right) + b_{i-1}\left(\theta^*_2 - \theta^*_{i-1} - \frac{(\theta^*_1-\theta^*_{i})^2}{\theta^*_0-\theta^*_{i-1}}\right)\\
+& = (k-\theta)(\theta^*_1+\theta^*_2-\theta^*_{i-1}-\theta^*_i)-(\theta+1)(\theta^*_0-\theta^*_2) (\#eq:cibi1)
+\end{align}
+
+| $(iii)$ $\theta^*_0\neq \theta^*_h$ for all $h\in \{1, 2, \ldots, D\}$ and \@ref(eq:cibi1) holds for $i=3$.
+:::
+
+:::{.remark}
+Note \@ref(eq:cibi1) is trivial for $i = 1, 2$.
+
+$i=1$: 
+\begin{align}
+\mathrm{LHS} & = \left(\theta^*_2-\theta^*_1 - \frac{\theta^*_1-\theta^*_0)^2}{\theta^*-\theta^*_1}\right)+ k(\theta^*-\theta^*_0)\\
+& = \theta^*_2-\theta^*_1 - \theta^*_0 + \theta^*_1 + k(\theta_2^*-\theta^*_0)\\
+& = (k+1)(\theta^*_2-\theta^*_0)\\
+\mathrm{RHS} & = (k-\theta)(\theta^*_1+\theta^*_2-\theta^*_0-\theta^*_1)-(\theta+1)(\theta^*_0-\theta^*_2)\\
+& = (k+1)(\theta^*_2-\theta^*_0).
+\end{align}
+
+$i=2$:
+\begin{align}
+\mathrm{LHS} & = b_1\left(\theta^*_2-\theta^*_1 - \frac{\theta^*_1-\theta^*_0)^2}{\theta^*-\theta^*_1}\right)\\
+& = b_1\frac{(\theta^*_2-\theta^*_1)(\theta^*_0-\theta^*_1-\theta^*_2+\theta^*_1)}{\theta^*_0-\theta^*_1}\\
+& = b_1\frac{(\theta^*_2-\theta^*_1)(\theta^*_0-\theta^*_2)}{\theta^*_0-\theta^*_1}\\
+\mathrm{RHS} & = (\theta+1)(\theta^*_0-\theta^*_2).
+\end{align}
+Hence,
+\begin{align}
+\mathrm{LHS}=\mathrm{RHS} & \leftrightarrow b_1\frac{\theta^*_2-\theta^*_1}{\theta^*_0-\theta^*_1} + (\theta + 1) = 0\\
+& = b_1(\theta^*_2-\theta^*_1)+(\theta+1)(\theta^*_0-\theta^*_1) = 0.
+\end{align}
+On the other hand,
+\begin{align}
+b_1\theta^*_2 + a_1\theta^*_1 + c_1\theta^*_0 & = \theta \theta^*_1\\
+b_1\theta^*_1 + a_1\theta^*_1 + c_1\theta^*_1 & = k \theta^*_1,
+\end{align}
+as $\theta \theta^*_0 = k\theta^*_1$
+We have
+$$b_1(\theta^*_2 - \theta^*_1) + (\theta^*_0-\theta^*_1) = \theta(\theta^*_1-\theta^*_0).$$
+:::
+
+:::{.proof}
+Immediate from the proof of Theorem 2.1 in 'A new inequality for distance-regular graphs' [@terwilliger:1995] and Theorem \@ref(thm:balanced).
+
+:::
+

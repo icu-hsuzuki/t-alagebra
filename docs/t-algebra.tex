@@ -5256,6 +5256,186 @@ Now \(D_E\) is a pth, and \(\Gamma\) is \(Q\)-polynomial with respect to \(E\).
 This proves Theorem \ref{thm:balanced}.
 \end{proof}
 
+\begin{corollary}
+\protect\hypertarget{cor:beta}{}\label{cor:beta}Assume \(Y = (X, \{R_i\}_{0\leq i\leq D})\) is \(P\)-polynomial, and \(Q\)-polynomial with respect to a primitive idempotent
+\[E = \frac{1}{|X|}\sum_{i=0}^D \theta^*_i A_i.\]
+Then,
+\[\beta = \frac{\theta^*_i - \theta^*_{i+1} + \theta^*_{i+2}-\theta^*_{i+3}}{\theta^*_{i+1}-\theta^*_{i+2}}\]
+is independent of \(i\) \((0\leq i\leq D-3)\).
+\end{corollary}
+
+\begin{proof}
+Fix \(i\). Without loss of generality, \(D\geq 3\), else vacuous.
+
+Pick \(x,y\in X\) with \((x,y)\in R_3\).
+
+Let \((\rho, H)\) be the representation for \(E\).
+\begin{equation}
+\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z') = \frac{p^3_{12}(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3}(\rho(x)-\rho(y)), \label{eq:c3}
+\end{equation}
+and \(p^3_{12} = c_3\).
+
+Since \(p^3_{i,i+3} \neq 0\), there exists \(w\in X\) such that \((x,w)\in R_{i+3}\), \((y,w) \in R_i\).
+
+Take inner product of \eqref{eq:c3} with \(\rho(w)\). We have
+\begin{align}
+P^3_{12}(x,y) & \subseteq P^{i+3}_{1,i+2}(x,w)\cap P^i_{2,i+2}(y,w)\\
+P^3_{21}(x,y) & \subseteq P^{i+3}_{2,i+1}(x,w)\cap P^i_{2,i+1}(y,w).
+\end{align}
+Hence,
+\[\left\langle \sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z'), \rho(w)\right\rangle = |X|^{-1}c_3(\theta^*_{i+2}-\theta^*_{i+1}),\]
+\[\left\langle \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3}(\rho(x)-\rho(y)), \rho(w)\right\rangle = \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3}|X|^{-1}(\theta^*_{i+3}-\theta^*_{i+1}).\]
+We have,
+\[\sigma = \frac{\theta^*_{i+1}-\theta^*_{i+2}}{\theta^*_i-\theta^*_{i+3}} = \frac{\theta^*_1-\theta^*_2}{\theta^*_0-\theta^*_3}.\]
+
+\begin{remark}
+Note that since \(Y\) is \(P\) and \(Q\) with respect to \(A_1\) and \(E_1\), \(\theta^*_0, \theta^*_1, \ldots, \theta^*_D\), \(\theta_0, \theta_1, \ldots, \theta_D\) are all distinct.
+\end{remark}
+
+So
+\[\beta = \frac{1}{\sigma}-1 = \frac{\theta^*_i - \theta^*_{i+1} + \theta^*_{i+2}-\theta^*_{i+3}}{\theta^*_{i+1}-\theta^*_{i+2}} = \frac{\theta^*_0 - \theta^*_{1} + \theta^*_{2}-\theta^*_{3}}{\theta^*_{1}-\theta^*_{2}}.\]
+We have the assertion.
+\end{proof}
+
+Given the intersection number of a distance-regular graph \(\Gamma\). The following 2 lemmas give an efficient method to determine if \(\Gamma\) is \(Q\)-polynomial with respect to some primitive idempotent.
+
+\begin{lemma}
+\protect\hypertarget{lem:dual-eigenvalues}{}\label{lem:dual-eigenvalues}Let \(\Gamma\) be a distance-regular graph of diameter \(D\geq 1\).
+Pick \(\theta, \theta^*_0, \theta^*_1, \ldots, \theta^*_D\in \mathbb{R}\) such that \(\theta^*_0 \neq 0\), and set
+\[E = \frac{1}{|X|}\sum_{i=0}^D\theta^*_iA_i.\]
+
+\((i)\) The following are equivalent.
+
+\(\quad (ia)\) \(\theta\) is an eigenvalue of \(\Gamma\), and \(E\) is a corresponding primitive idempotent.
+
+\(\quad (ib)\)
+
+\[\begin{pmatrix} a_0 & b_0 & 0 & \cdots & \cdots & 0\\
+c_1 & a_1 & b_1 & 0 & \cdots & 0\\
+0 & c_2 & a_2 & b_2 & \ddots & \vdots\\
+\cdots & \ddots & \ddots & \ddots & \ddots & 0 \\
+0 & \cdots & 0 & c_{D-1} & a_{D-1} & b_{D-1}\\
+0 & \cdots & \cdots & 0 & c_D & a_D 
+\end{pmatrix} \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots \\\vdots \\\vdots\\ \theta^*_D\end{pmatrix} = \theta\cdots \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots\\\vdots\\ \vdots \\ \theta^*_D\end{pmatrix},
+\]
+and \(\theta^*_0 = \mathrm{rank}E\).
+
+\((ii)\) Suppose \((ia)\), \((ib)\) hold. Then,
+
+\[\frac{\theta^*_1}{\theta^*_0}, \ldots, \frac{\theta^*_D}{\theta^*_0}\]
+can be computed from \(\theta\) using
+\[\frac{\theta^*_i}{\theta^*_0} = \frac{p_i(\theta)}{kb_1\cdots b_{i-1}}, \quad (1\leq i\leq D),\]
+where \(p_0 = 1\), \(p_1(\lambda) = \lambda\), and
+\[\lambda p_i(\lambda) = p_{i+1}(\lambda) + a_ip_i(\lambda) + b_{i-1}c_ip_{i-1}(\lambda)\quad (0\leq i\leq D).\]
+\end{lemma}
+
+\begin{proof}
+\leavevmode
+
+\((i)\) We have
+
+\begin{align}
+(ia) & \leftrightarrow (A- \theta I)E = O \text{ and } E^2 = E\\
+& \leftrightarrow 0 = \sum_{i=0}^D(A-\theta I)\theta^*_i A_i \text{ and $\mathrm{rank}E = \mathrm{trace}E = \theta^*_0$}\\
+& \qquad = \sum_{i=0}^D\theta^*_i(c_{i+1}A_{i+1}+ a_iA_i + b_{i-1}A_{i-1}-\theta A_i)\\
+& \qquad = \sum_{j=0}^D A_j(c_j\theta^*_{j-1}+a_j\theta^*_j+b_j\theta^*_{j+1}-\theta \theta^*_j)\\
+& \leftrightarrow c_j \theta^*_{j-1} + a_j\theta^*_j + b_j\theta^*_{j+1} = \theta \theta^*_j \; (0\leq j \leq D) \text{ and }\mathrm{rank}E = \theta^*_0\\
+& \leftrightarrow (ib).
+\end{align}
+
+\begin{remark}
+The first \(\leftrightarrow\). \(\rightarrow\) is clear.
+
+\(\leftarrow\): By the first condition, \(AE = \theta E\). So \(E\) is a scalar multiple of the primitive idempotent corresponding to \(\theta\). Hence, \(\mathrm{rank}E = \mathrm{trace}E\) implies \(E\) is the primitive idempotent.
+\end{remark}
+
+\((ii)\) We prove by induction on \(i\).
+
+\(i = 0\) is trivial.
+
+\(i=1\): Set \(j = 0\) above \(c_0 = 0, a_0 = 0, b_0 = k\). We have
+\[k\theta^*_1 = \theta \theta^*_0.\]
+So
+\[\frac{\theta^*_1}{\theta^*_0} = \frac{\theta}{k} = \frac{p_1(\theta)}{k}.\]
+
+\(i\geq 2\): Set \(j=i-1\) above. We have
+\[c_{i-2}\theta^*_{i-2} + a_{i-1}\theta^*_{i-1} + b_{i-1}\theta^*_i = \theta \theta^*_{i-1}.\]
+So,
+\begin{align}
+\frac{\theta^*_i}{\theta^*_0} & = \frac{\theta\theta^*_{i-1}-a_{i-1}\theta^*_{i-1}-c_{i-1}\theta^*_{i-2}}{b_{i-1}\theta^*_0}\\
+& = \left((\theta-a_{i-1})\frac{\theta^*_{i-1}}{\theta^*_0}-c_{i-1}\frac{\theta^*_{i-2}}{\theta^*_0}\right)\frac{1}{b_{i-1}}\\
+& = \left((\theta-a_{i-1})\frac{p_{i-1}(\theta)}{kb_1\cdots b_{i-2}}-c_{i-1}\frac{p_{i-2}(\theta)}{kb_1\cdots b_{i-3}}\right)\frac{1}{b_{i-1}}\\
+& = \frac{p_i(\theta)}{kb_1\cdots b_{i-2}b_{i-1}},
+\end{align}
+as desired.
+
+\end{proof}
+
+\hypertarget{lec27}{%
+\chapter{\texorpdfstring{\(P\)-and \(Q\)-Polynomial Schemes}{P-and Q-Polynomial Schemes}}\label{lec27}}
+
+\textbf{Friday, April 2, 1993}
+
+\begin{theorem}
+\protect\hypertarget{thm:p-and-q}{}\label{thm:p-and-q}
+
+Let \(\Gamma = (X,E)\) be a distance-regular graph of diameter \(D\geq 3\).
+
+Let \(\theta\) denote an eigenvalue of \(\Gamma\) with associated primitive idempotent
+\[E = \frac{1}{|X|}\sum_{i=0}^D \theta^*_iA_i.\]
+Then the following are equivalent.
+
+\((i)\) \(\Gamma\) is \(Q\)-polynomial with respect to \(E\).
+
+\((ii)\) \(\theta^*_0\neq \theta^*_h\) for all \(h\in \{1, 2, \ldots, D\}\) and for \(i\in \{3, \ldots, D\}\),
+
+\begin{align}
+& c_i\left(\theta^*_2 - \theta^*_i - \frac{(\theta^*_1-\theta^*_{i-1})^2}{\theta^*_0-\theta^*_i}\right) + b_{i-1}\left(\theta^*_2 - \theta^*_{i-1} - \frac{(\theta^*_1-\theta^*_{i})^2}{\theta^*_0-\theta^*_{i-1}}\right)\\
+& = (k-\theta)(\theta^*_1+\theta^*_2-\theta^*_{i-1}-\theta^*_i)-(\theta+1)(\theta^*_0-\theta^*_2) \label{eq:cibi1}
+\end{align}
+
+\((iii)\) \(\theta^*_0\neq \theta^*_h\) for all \(h\in \{1, 2, \ldots, D\}\) and \eqref{eq:cibi1} holds for \(i=3\).
+
+\end{theorem}
+
+\begin{remark}
+Note \eqref{eq:cibi1} is trivial for \(i = 1, 2\).
+
+\(i=1\):
+\begin{align}
+\mathrm{LHS} & = \left(\theta^*_2-\theta^*_1 - \frac{\theta^*_1-\theta^*_0)^2}{\theta^*-\theta^*_1}\right)+ k(\theta^*-\theta^*_0)\\
+& = \theta^*_2-\theta^*_1 - \theta^*_0 + \theta^*_1 + k(\theta_2^*-\theta^*_0)\\
+& = (k+1)(\theta^*_2-\theta^*_0)\\
+\mathrm{RHS} & = (k-\theta)(\theta^*_1+\theta^*_2-\theta^*_0-\theta^*_1)-(\theta+1)(\theta^*_0-\theta^*_2)\\
+& = (k+1)(\theta^*_2-\theta^*_0).
+\end{align}
+
+\(i=2\):
+\begin{align}
+\mathrm{LHS} & = b_1\left(\theta^*_2-\theta^*_1 - \frac{\theta^*_1-\theta^*_0)^2}{\theta^*-\theta^*_1}\right)\\
+& = b_1\frac{(\theta^*_2-\theta^*_1)(\theta^*_0-\theta^*_1-\theta^*_2+\theta^*_1)}{\theta^*_0-\theta^*_1}\\
+& = b_1\frac{(\theta^*_2-\theta^*_1)(\theta^*_0-\theta^*_2)}{\theta^*_0-\theta^*_1}\\
+\mathrm{RHS} & = (\theta+1)(\theta^*_0-\theta^*_2).
+\end{align}
+Hence,
+\begin{align}
+\mathrm{LHS}=\mathrm{RHS} & \leftrightarrow b_1\frac{\theta^*_2-\theta^*_1}{\theta^*_0-\theta^*_1} + (\theta + 1) = 0\\
+& = b_1(\theta^*_2-\theta^*_1)+(\theta+1)(\theta^*_0-\theta^*_1) = 0.
+\end{align}
+On the other hand,
+\begin{align}
+b_1\theta^*_2 + a_1\theta^*_1 + c_1\theta^*_0 & = \theta \theta^*_1\\
+b_1\theta^*_1 + a_1\theta^*_1 + c_1\theta^*_1 & = k \theta^*_1,
+\end{align}
+as \(\theta \theta^*_0 = k\theta^*_1\)
+We have
+\[b_1(\theta^*_2 - \theta^*_1) + (\theta^*_0-\theta^*_1) = \theta(\theta^*_1-\theta^*_0).\]
+\end{remark}
+
+\begin{proof}
+Immediate from the proof of Theorem 2.1 in `A new inequality for distance-regular graphs' \citep{terwilliger:1995} and Theorem \ref{thm:balanced}.
+\end{proof}
+
 \hypertarget{lec55}{%
 \chapter{Title of the Chapter}\label{lec55}}
 

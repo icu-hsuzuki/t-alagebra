@@ -47,3 +47,113 @@ Now $D_E$ is a pth, and $\Gamma$ is $Q$-polynomial with respect to $E$.
 
 This proves Theorem \@ref(thm:balanced).
 :::
+
+:::{.corollary #beta}
+Assume $Y = (X, \{R_i\}_{0\leq i\leq D})$  is $P$-polynomial, and $Q$-polynomial with respect to a primitive idempotent
+$$E = \frac{1}{|X|}\sum_{i=0}^D \theta^*_i A_i.$$
+Then,
+$$\beta = \frac{\theta^*_i - \theta^*_{i+1} + \theta^*_{i+2}-\theta^*_{i+3}}{\theta^*_{i+1}-\theta^*_{i+2}}$$
+is independent of $i$ $(0\leq i\leq D-3)$.
+:::
+
+:::{.proof}
+Fix $i$. Without loss of generality, $D\geq 3$, else vacuous.
+
+Pick $x,y\in X$ with $(x,y)\in R_3$.
+
+Let $(\rho, H)$ be the representation for $E$.
+\begin{equation}
+\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z') = \frac{p^3_{12}(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3}(\rho(x)-\rho(y)), (\#eq:c3)
+\end{equation}
+and $p^3_{12} = c_3$.
+
+Since $p^3_{i,i+3} \neq 0$, there exists $w\in X$ such that $(x,w)\in R_{i+3}$, $(y,w) \in R_i$.
+
+Take inner product of \@ref(eq:c3) with $\rho(w)$. We have
+\begin{align}
+P^3_{12}(x,y) & \subseteq P^{i+3}_{1,i+2}(x,w)\cap P^i_{2,i+2}(y,w)\\
+P^3_{21}(x,y) & \subseteq P^{i+3}_{2,i+1}(x,w)\cap P^i_{2,i+1}(y,w).
+\end{align}
+Hence,
+$$\left\langle \sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z'), \rho(w)\right\rangle = |X|^{-1}c_3(\theta^*_{i+2}-\theta^*_{i+1}),$$
+$$\left\langle \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3}(\rho(x)-\rho(y)), \rho(w)\right\rangle = \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3}|X|^{-1}(\theta^*_{i+3}-\theta^*_{i+1}).$$
+We have,
+$$\sigma = \frac{\theta^*_{i+1}-\theta^*_{i+2}}{\theta^*_i-\theta^*_{i+3}} = \frac{\theta^*_1-\theta^*_2}{\theta^*_0-\theta^*_3}.$$
+
+:::{.remark}
+Note that since $Y$ is $P$ and $Q$ with respect to $A_1$ and $E_1$, $\theta^*_0, \theta^*_1, \ldots, \theta^*_D$, $\theta_0, \theta_1, \ldots, \theta_D$ are all distinct.
+:::
+
+So
+$$\beta = \frac{1}{\sigma}-1 = \frac{\theta^*_i - \theta^*_{i+1} + \theta^*_{i+2}-\theta^*_{i+3}}{\theta^*_{i+1}-\theta^*_{i+2}} = \frac{\theta^*_0 - \theta^*_{1} + \theta^*_{2}-\theta^*_{3}}{\theta^*_{1}-\theta^*_{2}}.$$
+We have the assertion.
+:::
+
+
+Given the intersection number of a distance-regular graph $\Gamma$. The following 2 lemmas give an efficient method to determine if $\Gamma$ is $Q$-polynomial with respect to some primitive idempotent.
+
+:::{.lemma #dual-eigenvalues}
+Let $\Gamma$ be a distance-regular graph of diameter $D\geq 1$.
+Pick $\theta, \theta^*_0, \theta^*_1, \ldots, \theta^*_D\in \mathbb{R}$ such that $\theta^*_0 \neq 0$, and set
+$$E = \frac{1}{|X|}\sum_{i=0}^D\theta^*_iA_i.$$
+
+| $(i)$ The following are equivalent.
+
+| $\quad (ia)$ $\theta$ is an eigenvalue of $\Gamma$, and $E$ is a corresponding primitive idempotent.
+
+| $\quad (ib)$
+$$\begin{pmatrix} a_0 & b_0 & 0 & \cdots & \cdots & 0\\
+c_1 & a_1 & b_1 & 0 & \cdots & 0\\
+0 & c_2 & a_2 & b_2 & \ddots & \vdots\\
+\cdots & \ddots & \ddots & \ddots & \ddots & 0 \\
+0 & \cdots & 0 & c_{D-1} & a_{D-1} & b_{D-1}\\
+0 & \cdots & \cdots & 0 & c_D & a_D 
+\end{pmatrix} \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots \\\vdots \\\vdots\\ \theta^*_D\end{pmatrix} = \theta\cdots \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots\\\vdots\\ \vdots \\ \theta^*_D\end{pmatrix},
+$$
+and $\theta^*_0 = \mathrm{rank}E$.
+
+| $(ii)$ Suppose $(ia)$, $(ib)$ hold. Then,
+$$\frac{\theta^*_1}{\theta^*_0}, \ldots, \frac{\theta^*_D}{\theta^*_0}$$
+can be computed from $\theta$ using
+$$\frac{\theta^*_i}{\theta^*_0} = \frac{p_i(\theta)}{kb_1\cdots b_{i-1}}, \quad (1\leq i\leq D),$$
+where $p_0 = 1$, $p_1(\lambda) = \lambda$, and 
+$$\lambda p_i(\lambda) = p_{i+1}(\lambda) + a_ip_i(\lambda) + b_{i-1}c_ip_{i-1}(\lambda)\quad (0\leq i\leq D).$$
+:::
+
+:::{.proof}
+| $(i)$ We have
+\begin{align}
+(ia) & \leftrightarrow (A- \theta I)E = O \text{ and } E^2 = E\\
+& \leftrightarrow 0 = \sum_{i=0}^D(A-\theta I)\theta^*_i A_i \text{ and $\mathrm{rank}E = \mathrm{trace}E = \theta^*_0$}\\
+& \qquad = \sum_{i=0}^D\theta^*_i(c_{i+1}A_{i+1}+ a_iA_i + b_{i-1}A_{i-1}-\theta A_i)\\
+& \qquad = \sum_{j=0}^D A_j(c_j\theta^*_{j-1}+a_j\theta^*_j+b_j\theta^*_{j+1}-\theta \theta^*_j)\\
+& \leftrightarrow c_j \theta^*_{j-1} + a_j\theta^*_j + b_j\theta^*_{j+1} = \theta \theta^*_j \; (0\leq j \leq D) \text{ and }\mathrm{rank}E = \theta^*_0\\
+& \leftrightarrow (ib).
+\end{align}
+
+:::{.remark}
+The first $\leftrightarrow$. $\rightarrow$ is clear. 
+
+$\leftarrow$: By the first condition, $AE = \theta E$. So $E$ is a scalar multiple of the primitive idempotent corresponding to $\theta$. Hence, $\mathrm{rank}E = \mathrm{trace}E$ implies $E$ is the primitive idempotent.
+:::
+
+| $(ii)$ We prove by induction on $i$.
+
+$i = 0$ is trivial.
+
+$i=1$: Set $j = 0$ above $c_0 = 0, a_0 = 0, b_0 = k$. We have
+$$k\theta^*_1 = \theta \theta^*_0.$$
+So
+$$\frac{\theta^*_1}{\theta^*_0} = \frac{\theta}{k} = \frac{p_1(\theta)}{k}.$$
+
+$i\geq 2$: Set $j=i-1$ above. We have
+$$c_{i-2}\theta^*_{i-2} + a_{i-1}\theta^*_{i-1} + b_{i-1}\theta^*_i = \theta \theta^*_{i-1}.$$
+So,
+\begin{align}
+\frac{\theta^*_i}{\theta^*_0} & = \frac{\theta\theta^*_{i-1}-a_{i-1}\theta^*_{i-1}-c_{i-1}\theta^*_{i-2}}{b_{i-1}\theta^*_0}\\
+& = \left((\theta-a_{i-1})\frac{\theta^*_{i-1}}{\theta^*_0}-c_{i-1}\frac{\theta^*_{i-2}}{\theta^*_0}\right)\frac{1}{b_{i-1}}\\
+& = \left((\theta-a_{i-1})\frac{p_{i-1}(\theta)}{kb_1\cdots b_{i-2}}-c_{i-1}\frac{p_{i-2}(\theta)}{kb_1\cdots b_{i-3}}\right)\frac{1}{b_{i-1}}\\
+& = \frac{p_i(\theta)}{kb_1\cdots b_{i-2}b_{i-1}},
+\end{align}
+as desired.
+:::

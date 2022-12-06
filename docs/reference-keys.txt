@@ -14,6 +14,8 @@ eq:ej1e1vejv
 eq:e0vejv
 eq:sumrhoy
 eq:rhozrhoz
+eq:c3
+eq:cibi1
 lec1
 lec2
 lec3
@@ -40,4 +42,5 @@ lec23
 lec24
 lec25
 lec26
+lec27
 lec55
