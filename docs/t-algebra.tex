@@ -5563,12 +5563,55 @@ If \(i = D\), \(qc_D = -q^Dk\), \(c_D = -q^{D-1}k < 0\), a contradiction.
 
 \((iii)\) Check the equation \((ii)\) of Theorem \ref{thm:p-and-q} holds for \(i=3\).
 
+\end{proof}
+
 \begin{remark}
 \(\theta^*_0\neq \theta^*_h\) for all \(h\in \{1,2,\ldots, D\}\) and
 \[c_3\left(\theta^*_2 - \theta^*_3 - \frac{(\theta^*_1-\theta^*_{2})^2}{\theta^*_0-\theta^*_3}\right) - b_{2} \frac{(\theta^*_1-\theta^*_{3})^2}{\theta^*_0-\theta^*_{2}} = (k-\theta)(\theta^*_1-\theta^*_3)-(\theta+1)(\theta^*_0-\theta^*_2).\]
+\emph{Pf.}
+\begin{align}
+\frac{\mathrm{LHS}}{\theta^*_0} & = \begin{bmatrix}{3}\\{1}\end{bmatrix}\left(1+\alpha \begin{bmatrix}{2}\\{1}\end{bmatrix}\right)\left(1-\frac{\theta}{k}\right)\left(q^{-2} - \frac{q^{-2}}{\begin{bmatrix}{3}\\{1}\end{bmatrix}q^{-2}}\right)\\
+& \qquad -\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{2}\\{1}\end{bmatrix}\right)\left(\sigma-\alpha \begin{bmatrix}{2}\\{1}\end{bmatrix}\right)\left(1-\frac{\theta}{k}\right)\frac{\left(\begin{bmatrix}{3}\\{1}\end{bmatrix}q^{1-3}-1\right)^2}{\begin{bmatrix}{2}\\{1}\end{bmatrix}q^{-1}}\\
+& = \left(1-\frac{\theta}{k}\right)\left(\left(1+\alpha\begin{bmatrix}{2}\\{1}\end{bmatrix}\right)q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}-\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{2}\\{1}\end{bmatrix}\right)\left(\sigma-\alpha\begin{bmatrix}{2}\\{1}\end{bmatrix}\right)\begin{bmatrix}{2}\\{1}\end{bmatrix}q^{-3}\right)\\
+& = \left(1-\frac{\theta}{k}\right)\left(q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}+\alpha\left(q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{2}\\{1}\end{bmatrix}+q^{-1}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{D-2}\\{1}\end{bmatrix}\right)\right.\\
+& \qquad \left.-q^{-1}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{D-2}\\{1}\end{bmatrix}\sigma\right)\\
+\frac{\mathrm{RHS}}{\theta^*_0} & = \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma-\begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)+1\right)\left(1-\frac{\theta}{k}\right)\left(\begin{bmatrix}{3}\\{1}\end{bmatrix}q^{-2}-1\right)\\
+& \qquad \begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)\left(1-\frac{\theta}{k}\right)\begin{bmatrix}{2}\\{1}\end{bmatrix}q^{-1}\\
+& = \left(1-\frac{\theta}{k}\right)\left(q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}+\begin{bmatrix}{2}\\{1}\end{bmatrix}q^{-1}\sigma\left(q^{D-2}-\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\right)\right.\\
+& \qquad \left. +\begin{bmatrix}{2}\\{1}\end{bmatrix}q^{-2}\alpha\left(\begin{bmatrix}{D-1}\\{1}\end{bmatrix}+q\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\right)\right)\\
+& = \left(1-\frac{\theta}{k}\right)\left(q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}-\sigma q^{-1}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{D-2}\\{1}\end{bmatrix}+\alpha q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\right)
+\end{align}
 \end{remark}
 
-\end{proof}
+\begin{example}
+\protect\hypertarget{exm:classical-parameters}{}\label{exm:classical-parameters}
+
+\(Q\)-polynomial distance-regular graphs with classical parameters.
+
+\(D\)-cube: \(c_i = i\), \(b_i = D-i\)
+
+has classical parameters: \((q,\alpha, \sigma) = (1, 0, 1)\).
+
+Johnson graph \(J(D,N)\) \((N\geq 2D)\):
+
+\(c_i = i^2\), \(b_i = (D-i)(N-D-i)\)
+has classical parameters \((q,\alpha, \sigma) = (1, 1, N-D)\).
+
+\(q\)-analogue of Johnson graph \(J_q(D,N)\) \((D\geq 2D)\):
+
+\[c_i = \left(\frac{q^i-1}{q-1}\right)^2 = \begin{bmatrix}{i}\\{1}\end{bmatrix}^2, \quad b_i = \frac{q(q^D-q^i)(q^{N-D}-q^i)}{(q-1)^2}\]
+has classical parameters
+\[(q,\alpha, \sigma) = \left(q, q, \left(\frac{q^{N-D+1}-1}{q-1}\right)-1\right) = \left(q, q, \begin{bmatrix}{N-D+1}\\{1}\end{bmatrix}-1\right).\]
+
+\begin{remark}
+\begin{align}
+b_i & = \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\begin{bmatrix}{N-D+1}\\{1}\end{bmatrix}-1-q\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\\
+& = \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\begin{bmatrix}{N-D+1}\\{1}\end{bmatrix}-\begin{bmatrix}{i+1}\\{1}\end{bmatrix}\right)\\
+& = \frac{q(q^D-q^i)(q^{N-D}-q^i)}{(q-1)^2}.
+\end{align}
+\end{remark}
+
+\end{example}
 
 \hypertarget{lec55}{%
 \chapter{Title of the Chapter}\label{lec55}}
