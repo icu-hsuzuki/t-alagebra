@@ -16,6 +16,9 @@ eq:sumrhoy
 eq:rhozrhoz
 eq:c3
 eq:cibi1
+eq:ci
+eq:bi
+eq:cibithetak
 lec1
 lec2
 lec3

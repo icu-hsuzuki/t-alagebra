@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-06" />
+<meta name="date" content="2022-12-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -198,12 +198,128 @@ We have
 <div class="proof">
 <p><span id="unlabeled-div-113" class="proof"><em>Proof</em>. </span>Immediate from the proof of Theorem 2.1 in ‘A new inequality for distance-regular graphs’ <span class="citation">(<a href="#ref-terwilliger:1995" role="doc-biblioref">Terwilliger 1995</a>)</span> and Theorem <a href="lec24.html#thm:balanced">24.1</a>.</p>
 </div>
+<p><strong>Note.</strong> Suppose <span class="math inline">\((i)-(iii)\)</span> hold. In particular, <span class="math inline">\(\theta^*_0, \theta^*_1, \ldots, \theta^*_D\)</span> are distinct. Then,
+<span class="math display">\[c_i + a_i + b_i = k\quad (0\leq i\leq D).\]</span>
+<span class="math display">\[c_i\theta^*_{i-1} + a_i\theta^*_i + b_i\theta^*_{i+1} = \theta \theta^*_j \quad (0\leq i\leq D).\]</span>
+<span class="math display">\[\frac{\theta^*_i-\theta^*_{i+1}+\theta^*_{i+2}-\theta^*_{i-3}}{\theta^*_{i+1}-\theta^*_{i+2}}\quad \text{is independent of $i$}\quad (0\leq i\leq D-3).\]</span>
+<span class="math display">\[\begin{align}
+&amp; c_i\left(\theta^*_2 - \theta^*_i - \frac{(\theta^*_1-\theta^*_{i-1})^2}{\theta^*_0-\theta^*_i}\right) + b_{i-1}\left(\theta^*_2 - \theta^*_{i-1} - \frac{(\theta^*_1-\theta^*_{i})^2}{\theta^*_0-\theta^*_{i-1}}\right)\\
+&amp; = (k-\theta)(\theta^*_1+\theta^*_2-\theta^*_{i-1}-\theta^*_i)-(\theta+1)(\theta^*_0-\theta^*_2).
+\end{align}\]</span></p>
+<p>Furthermore, we can show for <span class="math inline">\(c_1, \ldots, c_D\)</span>, <span class="math inline">\(a_1, \ldots, a_D\)</span>, <span class="math inline">\(b_0, b_1, \ldots, b_{D-1}\)</span> in terms of <span class="math inline">\(5\)</span> parameters.</p>
+<p>In general, we can take the <span class="math inline">\(5\)</span> parameters to be
+<span class="math display">\[D, q, s^*, r_1, r_2\]</span>
+and get
+<span class="math display">\[\begin{align}
+b_i &amp; = \frac{h(1-q^{i-D})(1-s^*q^{i+1})(1-r_1q^{i+1})(1-r_2q^{i+1})}{(1-s^*q^{2i+1})(1-s^*q^{2i+2})} \quad (0\leq i\leq D),\\
+c_i &amp; = \frac{h(1-q^{i})(1-s^*q^{D+i+1})(r_1-s^*q^{i})(r_2-s^*q^{i})}{s^*q^D(1-s^*q^{2i})(1-s^*q^{2i+1})} \quad (0\leq i\leq D),\\
+a_i &amp; = b_0 - c_i - b_i \quad (0\leq i\leq D),
+\end{align}\]</span>
+where <span class="math inline">\(h\)</span> variable is chosen so that <span class="math inline">\(c_1 = 1\)</span>.</p>
+<p>(We must also consider limiting cases <span class="math inline">\(h\to 0\)</span>, <span class="math inline">\(s^*\to 0\)</span>, <span class="math inline">\(q^*\to \pm 1\)</span>.)</p>
+<p>See Theorem 2.1 in “The subconstituent algebra of an association scheme, I, II, III, <span class="citation">(<a href="#ref-terwilliger:1992" role="doc-biblioref">Terwilliger 1992</a>)</span>, <span class="citation">(<a href="#ref-terwilliger:1993-1" role="doc-biblioref">Terwilliger 1993a</a>)</span>, <span class="citation">(<a href="#ref-terwilliger:1993-2" role="doc-biblioref">Terwilliger 1993b</a>)</span>.</p>
+<div class="definition">
+<p><span id="def:qbinomial" class="definition"><strong>Definition 27.1  </strong></span>Let <span class="math inline">\(\Gamma = (X,E)\)</span> be a distance-regular graph of diameter <span class="math inline">\(D\geq 3\)</span>. Choose <span class="math inline">\(q \in \mathbb{R}\setminus \{0,-1\}\)</span>, set
+<span class="math display">\[\begin{bmatrix}{i}\\{1}\end{bmatrix} = 1 + q + \cdots + q^{i-1} = \begin{cases} \frac{q^i-1}{q-1} &amp; q\neq 1\\
+i &amp; q = 1.\end{cases}\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:classical" class="definition"><strong>Definition 27.2  </strong></span><span class="math inline">\(\Gamma\)</span> has classical parameters if
+<span class="math display" id="eq:bi" id="eq:ci">\[\begin{align}
+c_i &amp; = \begin{bmatrix}{i}\\{1}\end{bmatrix}\left(1+ \alpha \begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right) \tag{27.2}\\
+b_i &amp; = \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\sigma- \alpha \begin{bmatrix}{i}\\{1}\end{bmatrix}\right) \tag{27.3}
+\end{align}\]</span>
+for some <span class="math inline">\(\sigma, \alpha\in \mathbb{R}\)</span>.</p>
+<p>(This happens for essentially all known families of distance-regular graphs with unbounded diameter, and is essentially equivalent to <span class="math inline">\(s^*=0\)</span>.)</p>
+</div>
+<div class="lemma">
+<p><span id="lem:classical-parameters" class="lemma"><strong>Lemma 27.1  </strong></span>With above notation, suppose <a href="lec27.html#eq:ci">(27.2)</a>, <a href="lec27.html#eq:bi">(27.3)</a> hold.
+Then,</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\theta = \frac{b_1}{q}-1\)</span> is an eigenvalue of <span class="math inline">\(\Gamma\)</span> with <span class="math inline">\(\theta\neq k\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Let <span class="math inline">\(E = |X|^{-1}\sum_{i=0}^D \theta^*_i A_i\)</span> be associated primitive idempotent. Then</div>
+<p><span class="math display">\[\frac{\theta^*_i}{\theta^*_0} = 1 + \left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix} q^{1-i} \quad (0\leq i\leq D).\]</span>
+In particular, <span class="math inline">\(\theta^*_i \neq \theta^*_0\)</span> for all <span class="math inline">\(i\in \{1, 2 \ldots, D\}\)</span>.</p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E\)</span>.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-117" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i), (ii)\)</span>. Need to check</div>
+<p><span class="math display">\[c_i\theta^*_{i-1} + a_i\theta^*_i + b_i\theta^*_{i+1} = \theta \theta^*_i \quad (0\leq i\leq D),\]</span>
+where <span class="math inline">\(a_i = k-c_i - b_i\)</span> <span class="math inline">\(\quad (0\leq i \leq D)\)</span>.</p>
+<p>(equivalently: check
+<span class="math display" id="eq:cibithetak">\[\begin{equation}
+c_i(\theta^*_{i-1}-\theta^*_i) + b_i(\theta^*_i -\theta^*_{i+1}) = (\theta-k) \theta^*_i \quad (0\leq i\leq D),\tag{27.4}
+\end{equation}\]</span>
+where <span class="math inline">\(c_i, b_i, \theta^*_i, \theta\)</span> are as given.)</p>
+<div class="remark">
+<p><span id="unlabeled-div-114" class="remark"><em>Remark</em>. </span><span class="math display">\[\theta = \frac{b_1}{q}-1, \; \frac{\theta^*_i}{\theta^*_0} = 1 + \left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix} q^{1-i}, \; b_0 = \begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma.\]</span>
+<span class="math inline">\(i=0\)</span>.
+<span class="math display">\[\frac{\theta^*_i}{\theta^*_0} = \frac{\theta}{k}, \quad - k\left(1-\frac{\theta^*_1}{\theta^*_0}\right)= -k(1-\frac{\theta}{k}) = \theta -k.\]</span>
+<span class="math display">\[\frac{\theta^*_{i-1}-\theta^*_i}{\theta^*_0} = \left(\frac{\theta}{k}-1\right)\left(\begin{bmatrix}{i-1}\\{1}\end{bmatrix}q^{2-i}-\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)=-\left(\frac{\theta}{k}-1\right)q^{1-i}.\]</span>
+<span class="math display">\[\theta-k=\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-1\right)(\sigma-\alpha)/q-1 \begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma = \begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)-1-\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma.\]</span>
+<span class="math display">\[\begin{align}
+&amp; (c_i(\theta^*_{i-1}-\theta^*_i) + b_i(\theta^*_i -\theta^*_{i+1}) - (\theta-k) \theta^*_i)/\theta^*_0\\
+&amp; \quad = -\begin{bmatrix}{i}\\{1}\end{bmatrix}\left(1+\alpha \begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\left(\frac{\theta}{k}-1\right)q^{1-i} + \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\sigma- \alpha \begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\frac{\theta}{k}-1\right)q^{-i}\\
+&amp; \qquad\qquad -(\theta-k)\left(1+\left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)\\
+&amp; \quad = \left(\frac{\theta}{k}-1\right)\left(-\begin{bmatrix}{i}\\{1}\end{bmatrix}\left(1+
+\alpha\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)q^{1-i}+\begin{bmatrix}{D-i}\\{1}\end{bmatrix}\left(\sigma-\alpha \begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\right.\\
+&amp; \qquad\qquad\left.-\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma +  \left(\begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)-1-\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma\right)\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)\right)\\
+&amp; \quad = \left(\frac{\theta}{k}-1\right)\left(-\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}-\alpha\left(\begin{bmatrix}{i}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}q^{1-i}+\begin{bmatrix}{D-i}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}-\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)\right.\\
+&amp;  \qquad\qquad \left.+\sigma\left(\begin{bmatrix}{D-i}\\{1}\end{bmatrix}-\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}+\begin{bmatrix}{D}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)+\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)
+\end{align}\]</span></p>
+</div>
+<p>Check <span class="math inline">\(\theta\neq k\)</span>. Suppose <span class="math inline">\(\theta = k\)</span>. Then
+<span class="math display">\[\frac{b_1}{q}-1 = k, \; \text{ and }\; q&gt;0.\]</span>
+By <a href="lec27.html#eq:ci">(27.2)</a>, <a href="lec27.html#eq:bi">(27.3)</a>,
+<span class="math display">\[\begin{align}
+qc_i - b_i - q(qc_{i-1}-b_{i-1}) &amp; = (k-\theta)q \quad (1\leq i\leq D)\\
+&amp; = 0.
+\end{align}\]</span></p>
+<div class="remark">
+<p><span id="unlabeled-div-115" class="remark"><em>Remark</em>. </span>With the notation of Lemma <a href="lec27.html#lem:classical-parameters">27.1</a>, we have the above equality in general.
+<span class="math display">\[\begin{align}
+&amp; qc_i-b_i - q(qc_{i-1}-b_{i-1})\\
+&amp; \quad = q\begin{bmatrix}{i}\\{1}\end{bmatrix}\left(1+\alpha \begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)-\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\sigma-\alpha\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\\
+&amp; \qquad\qquad -q\left(q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\left(1+\alpha\begin{bmatrix}{i-2}\\{1}\end{bmatrix}\right)-\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\left(\sigma-\alpha\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\right)\\
+&amp; \quad = \left(q\begin{bmatrix}{i}\\{1}\end{bmatrix}-q^2\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right) \\
+&amp; \qquad\qquad + \alpha\left(q\begin{bmatrix}{i}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}+\begin{bmatrix}{D}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}\right.\\
+&amp; \qquad\qquad \left.-q^2\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\begin{bmatrix}{i-2}\\{1}\end{bmatrix}-q\begin{bmatrix}{D}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}+q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\\
+&amp; \qquad\qquad + \sigma\left(-\begin{bmatrix}{D}\\{1}\end{bmatrix}+\begin{bmatrix}{i}\\{1}\end{bmatrix} + q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\\
+&amp; \quad = q+\alpha\left(-\begin{bmatrix}{i}\\{1}\end{bmatrix}+\begin{bmatrix}{D}\\{1}\end{bmatrix}+q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)+\sigma(q^D-1+1)\\
+&amp; \quad = q\left(1 + \begin{bmatrix}{D-1}\\{1}\end{bmatrix}\alpha + q^{D-1}\sigma\right)\\
+&amp; \quad = q\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma - \begin{bmatrix}{D-1}\\{1}\end{bmatrix}\sigma + \begin{bmatrix}{D-1}\\{1}\end{bmatrix}\alpha + 1\right)\\
+&amp; \quad = q\left(k-\frac{\begin{bmatrix}{D}\\{1}\end{bmatrix}-1}{q}(\sigma-\alpha)+1\right)\\
+&amp; \quad = q(k-\theta).
+\end{align}\]</span></p>
+</div>
+<p>Hence,
+<span class="math display">\[\begin{align}
+qc_i - b_i &amp; = q(qc_{i-1}-b_{i-1})\quad (1\leq i\leq D)\\
+&amp; = q^i(qc_0 - b_0)\\
+&amp; = -q^ik.
+\end{align}\]</span>
+If <span class="math inline">\(i = D\)</span>, <span class="math inline">\(qc_D = -q^Dk\)</span>, <span class="math inline">\(c_D = -q^{D-1}k &lt; 0\)</span>, a contradiction.</p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> Check the equation <span class="math inline">\((ii)\)</span> of Theorem <a href="lec27.html#thm:p-and-q">27.1</a> holds for <span class="math inline">\(i=3\)</span>.</div>
+<div class="remark">
+<p><span id="unlabeled-div-116" class="remark"><em>Remark</em>. </span><span class="math inline">\(\theta^*_0\neq \theta^*_h\)</span> for all <span class="math inline">\(h\in \{1,2,\ldots, D\}\)</span> and
+<span class="math display">\[c_3\left(\theta^*_2 - \theta^*_3 - \frac{(\theta^*_1-\theta^*_{2})^2}{\theta^*_0-\theta^*_3}\right) - b_{2} \frac{(\theta^*_1-\theta^*_{3})^2}{\theta^*_0-\theta^*_{2}} = (k-\theta)(\theta^*_1-\theta^*_3)-(\theta+1)(\theta^*_0-\theta^*_2).\]</span></p>
+</div>
+</div>
 
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-terwilliger:1992" class="csl-entry">
+Terwilliger, Paul. 1992. <span>“The Subconstituent Algebra of an Association Scheme. i.”</span> <em>J. Algebraic Combin.</em> 1 (4): 363–88.
+</div>
+<div id="ref-terwilliger:1993-1" class="csl-entry">
+———. 1993a. <span>“The Subconstituent Algebra of an Association Scheme. II.”</span> <em>J. Algebraic Combin.</em> 2 (1): 73–103.
+</div>
+<div id="ref-terwilliger:1993-2" class="csl-entry">
+———. 1993b. <span>“The Subconstituent Algebra of an Association Scheme. III.”</span> <em>J. Algebraic Combin.</em> 2 (2): 177–210.
+</div>
 <div id="ref-terwilliger:1995" class="csl-entry">
-Terwilliger, Paul. 1995. <span>“A New Inequality for Distance-Regular Graphs.”</span> <em>Discrete Math.</em> 137 (1-3): 319–32.
+———. 1995. <span>“A New Inequality for Distance-Regular Graphs.”</span> <em>Discrete Math.</em> 137 (1-3): 319–32.
 </div>
 </div>
             </section>

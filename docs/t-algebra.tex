@@ -4,10 +4,6 @@
 %
 \documentclass[
 ]{book}
-\title{Lecture Note on Terwilliger Algebra}
-\author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-12-06}
-
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -37,14 +33,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Lecture Note on Terwilliger Algebra},
-  pdfauthor={P. Terwilliger, edited by H. Suzuki},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -129,6 +117,18 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Lecture Note on Terwilliger Algebra},
+  pdfauthor={P. Terwilliger, edited by H. Suzuki},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Lecture Note on Terwilliger Algebra}
+\author{P. Terwilliger, edited by H. Suzuki}
+\date{2022-12-08}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -5434,6 +5434,140 @@ We have
 
 \begin{proof}
 Immediate from the proof of Theorem 2.1 in `A new inequality for distance-regular graphs' \citep{terwilliger:1995} and Theorem \ref{thm:balanced}.
+\end{proof}
+
+\textbf{Note.} Suppose \((i)-(iii)\) hold. In particular, \(\theta^*_0, \theta^*_1, \ldots, \theta^*_D\) are distinct. Then,
+\[c_i + a_i + b_i = k\quad (0\leq i\leq D).\]
+\[c_i\theta^*_{i-1} + a_i\theta^*_i + b_i\theta^*_{i+1} = \theta \theta^*_j \quad (0\leq i\leq D).\]
+\[\frac{\theta^*_i-\theta^*_{i+1}+\theta^*_{i+2}-\theta^*_{i-3}}{\theta^*_{i+1}-\theta^*_{i+2}}\quad \text{is independent of $i$}\quad (0\leq i\leq D-3).\]
+\begin{align}
+& c_i\left(\theta^*_2 - \theta^*_i - \frac{(\theta^*_1-\theta^*_{i-1})^2}{\theta^*_0-\theta^*_i}\right) + b_{i-1}\left(\theta^*_2 - \theta^*_{i-1} - \frac{(\theta^*_1-\theta^*_{i})^2}{\theta^*_0-\theta^*_{i-1}}\right)\\
+& = (k-\theta)(\theta^*_1+\theta^*_2-\theta^*_{i-1}-\theta^*_i)-(\theta+1)(\theta^*_0-\theta^*_2).
+\end{align}
+
+Furthermore, we can show for \(c_1, \ldots, c_D\), \(a_1, \ldots, a_D\), \(b_0, b_1, \ldots, b_{D-1}\) in terms of \(5\) parameters.
+
+In general, we can take the \(5\) parameters to be
+\[D, q, s^*, r_1, r_2\]
+and get
+\begin{align}
+b_i & = \frac{h(1-q^{i-D})(1-s^*q^{i+1})(1-r_1q^{i+1})(1-r_2q^{i+1})}{(1-s^*q^{2i+1})(1-s^*q^{2i+2})} \quad (0\leq i\leq D),\\
+c_i & = \frac{h(1-q^{i})(1-s^*q^{D+i+1})(r_1-s^*q^{i})(r_2-s^*q^{i})}{s^*q^D(1-s^*q^{2i})(1-s^*q^{2i+1})} \quad (0\leq i\leq D),\\
+a_i & = b_0 - c_i - b_i \quad (0\leq i\leq D),
+\end{align}
+where \(h\) variable is chosen so that \(c_1 = 1\).
+
+(We must also consider limiting cases \(h\to 0\), \(s^*\to 0\), \(q^*\to \pm 1\).)
+
+See Theorem 2.1 in ``The subconstituent algebra of an association scheme, I, II, III, \citep{terwilliger:1992}, \citep{terwilliger:1993-1}, \citep{terwilliger:1993-2}.
+
+\begin{definition}
+\protect\hypertarget{def:qbinomial}{}\label{def:qbinomial}Let \(\Gamma = (X,E)\) be a distance-regular graph of diameter \(D\geq 3\). Choose \(q \in \mathbb{R}\setminus \{0,-1\}\), set
+\[\begin{bmatrix}{i}\\{1}\end{bmatrix} = 1 + q + \cdots + q^{i-1} = \begin{cases} \frac{q^i-1}{q-1} & q\neq 1\\
+i & q = 1.\end{cases}\]
+\end{definition}
+
+\begin{definition}
+\protect\hypertarget{def:classical}{}\label{def:classical}\(\Gamma\) has classical parameters if
+\begin{align}
+c_i & = \begin{bmatrix}{i}\\{1}\end{bmatrix}\left(1+ \alpha \begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right) \label{eq:ci}\\
+b_i & = \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\sigma- \alpha \begin{bmatrix}{i}\\{1}\end{bmatrix}\right) \label{eq:bi}
+\end{align}
+for some \(\sigma, \alpha\in \mathbb{R}\).
+
+(This happens for essentially all known families of distance-regular graphs with unbounded diameter, and is essentially equivalent to \(s^*=0\).)
+\end{definition}
+
+\begin{lemma}
+\protect\hypertarget{lem:classical-parameters}{}\label{lem:classical-parameters}
+
+With above notation, suppose \eqref{eq:ci}, \eqref{eq:bi} hold.
+Then,
+
+\((i)\) \(\theta = \frac{b_1}{q}-1\) is an eigenvalue of \(\Gamma\) with \(\theta\neq k\).
+
+\((ii)\) Let \(E = |X|^{-1}\sum_{i=0}^D \theta^*_i A_i\) be associated primitive idempotent. Then
+
+\[\frac{\theta^*_i}{\theta^*_0} = 1 + \left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix} q^{1-i} \quad (0\leq i\leq D).\]
+In particular, \(\theta^*_i \neq \theta^*_0\) for all \(i\in \{1, 2 \ldots, D\}\).
+
+\((iii)\) \(\Gamma\) is \(Q\)-polynomial with respect to \(E\).
+
+\end{lemma}
+
+\begin{proof}
+\leavevmode
+
+\((i), (ii)\). Need to check
+
+\[c_i\theta^*_{i-1} + a_i\theta^*_i + b_i\theta^*_{i+1} = \theta \theta^*_i \quad (0\leq i\leq D),\]
+where \(a_i = k-c_i - b_i\) \(\quad (0\leq i \leq D)\).
+
+(equivalently: check
+\begin{equation}
+c_i(\theta^*_{i-1}-\theta^*_i) + b_i(\theta^*_i -\theta^*_{i+1}) = (\theta-k) \theta^*_i \quad (0\leq i\leq D),\label{eq:cibithetak}
+\end{equation}
+where \(c_i, b_i, \theta^*_i, \theta\) are as given.)
+
+\begin{remark}
+\[\theta = \frac{b_1}{q}-1, \; \frac{\theta^*_i}{\theta^*_0} = 1 + \left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix} q^{1-i}, \; b_0 = \begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma.\]
+\(i=0\).
+\[\frac{\theta^*_i}{\theta^*_0} = \frac{\theta}{k}, \quad - k\left(1-\frac{\theta^*_1}{\theta^*_0}\right)= -k(1-\frac{\theta}{k}) = \theta -k.\]
+\[\frac{\theta^*_{i-1}-\theta^*_i}{\theta^*_0} = \left(\frac{\theta}{k}-1\right)\left(\begin{bmatrix}{i-1}\\{1}\end{bmatrix}q^{2-i}-\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)=-\left(\frac{\theta}{k}-1\right)q^{1-i}.\]
+\[\theta-k=\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-1\right)(\sigma-\alpha)/q-1 \begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma = \begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)-1-\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma.\]
+\begin{align}
+& (c_i(\theta^*_{i-1}-\theta^*_i) + b_i(\theta^*_i -\theta^*_{i+1}) - (\theta-k) \theta^*_i)/\theta^*_0\\
+& \quad = -\begin{bmatrix}{i}\\{1}\end{bmatrix}\left(1+\alpha \begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\left(\frac{\theta}{k}-1\right)q^{1-i} + \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\sigma- \alpha \begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\frac{\theta}{k}-1\right)q^{-i}\\
+& \qquad\qquad -(\theta-k)\left(1+\left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)\\
+& \quad = \left(\frac{\theta}{k}-1\right)\left(-\begin{bmatrix}{i}\\{1}\end{bmatrix}\left(1+
+\alpha\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)q^{1-i}+\begin{bmatrix}{D-i}\\{1}\end{bmatrix}\left(\sigma-\alpha \begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\right.\\
+& \qquad\qquad\left.-\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma +  \left(\begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)-1-\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma\right)\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)\right)\\
+& \quad = \left(\frac{\theta}{k}-1\right)\left(-\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}-\alpha\left(\begin{bmatrix}{i}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}q^{1-i}+\begin{bmatrix}{D-i}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}-\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)\right.\\
+&  \qquad\qquad \left.+\sigma\left(\begin{bmatrix}{D-i}\\{1}\end{bmatrix}-\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}+\begin{bmatrix}{D}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)+\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)
+\end{align}
+\end{remark}
+
+Check \(\theta\neq k\). Suppose \(\theta = k\). Then
+\[\frac{b_1}{q}-1 = k, \; \text{ and }\; q>0.\]
+By \eqref{eq:ci}, \eqref{eq:bi},
+\begin{align}
+qc_i - b_i - q(qc_{i-1}-b_{i-1}) & = (k-\theta)q \quad (1\leq i\leq D)\\
+& = 0.
+\end{align}
+
+\begin{remark}
+With the notation of Lemma \ref{lem:classical-parameters}, we have the above equality in general.
+\begin{align}
+& qc_i-b_i - q(qc_{i-1}-b_{i-1})\\
+& \quad = q\begin{bmatrix}{i}\\{1}\end{bmatrix}\left(1+\alpha \begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)-\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\sigma-\alpha\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\\
+& \qquad\qquad -q\left(q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\left(1+\alpha\begin{bmatrix}{i-2}\\{1}\end{bmatrix}\right)-\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\left(\sigma-\alpha\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\right)\\
+& \quad = \left(q\begin{bmatrix}{i}\\{1}\end{bmatrix}-q^2\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right) \\
+& \qquad\qquad + \alpha\left(q\begin{bmatrix}{i}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}+\begin{bmatrix}{D}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}\right.\\
+& \qquad\qquad \left.-q^2\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\begin{bmatrix}{i-2}\\{1}\end{bmatrix}-q\begin{bmatrix}{D}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}+q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\\
+& \qquad\qquad + \sigma\left(-\begin{bmatrix}{D}\\{1}\end{bmatrix}+\begin{bmatrix}{i}\\{1}\end{bmatrix} + q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\\
+& \quad = q+\alpha\left(-\begin{bmatrix}{i}\\{1}\end{bmatrix}+\begin{bmatrix}{D}\\{1}\end{bmatrix}+q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)+\sigma(q^D-1+1)\\
+& \quad = q\left(1 + \begin{bmatrix}{D-1}\\{1}\end{bmatrix}\alpha + q^{D-1}\sigma\right)\\
+& \quad = q\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma - \begin{bmatrix}{D-1}\\{1}\end{bmatrix}\sigma + \begin{bmatrix}{D-1}\\{1}\end{bmatrix}\alpha + 1\right)\\
+& \quad = q\left(k-\frac{\begin{bmatrix}{D}\\{1}\end{bmatrix}-1}{q}(\sigma-\alpha)+1\right)\\
+& \quad = q(k-\theta).
+\end{align}
+\end{remark}
+
+Hence,
+\begin{align}
+qc_i - b_i & = q(qc_{i-1}-b_{i-1})\quad (1\leq i\leq D)\\
+& = q^i(qc_0 - b_0)\\
+& = -q^ik.
+\end{align}
+If \(i = D\), \(qc_D = -q^Dk\), \(c_D = -q^{D-1}k < 0\), a contradiction.
+
+\((iii)\) Check the equation \((ii)\) of Theorem \ref{thm:p-and-q} holds for \(i=3\).
+
+\begin{remark}
+\(\theta^*_0\neq \theta^*_h\) for all \(h\in \{1,2,\ldots, D\}\) and
+\[c_3\left(\theta^*_2 - \theta^*_3 - \frac{(\theta^*_1-\theta^*_{2})^2}{\theta^*_0-\theta^*_3}\right) - b_{2} \frac{(\theta^*_1-\theta^*_{3})^2}{\theta^*_0-\theta^*_{2}} = (k-\theta)(\theta^*_1-\theta^*_3)-(\theta+1)(\theta^*_0-\theta^*_2).\]
+\end{remark}
+
 \end{proof}
 
 \hypertarget{lec55}{%
