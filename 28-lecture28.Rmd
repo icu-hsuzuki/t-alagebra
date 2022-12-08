@@ -1,0 +1,82 @@
+# The First Eigenspace of a $Q$-DRG {#lec28}
+**Monday, April 5, 1993**
+
+:::{.lemma #EV}
+Let $\Gamma = (X,E)$ be distance-regular of diameter $D\geq 3$ with standard module $V$. Suppose $\Gamma$ is $Q$-polynomial with respect to a primitive idempotent $E_1$. Pick a vertex $x\in X$. Then
+$$E_1V = \mathrm{Span}\{E_1\hat{y}\mid \partial(x,y)\leq 2\}.$$
+In particular, 
+$$\dim E_1V \leq 1 + k_1 + k_2.$$
+:::
+
+:::{.proof}
+Let $\Delta = \{E_1\hat{y}\mid \partial(x,y)\leq 2\}$.
+
+| $E_1V \supseteq \mathrm{Span}\Delta$: clear.
+
+| $E_1V \subseteq \mathrm{Span}\Delta$: Pick a vertex $y\in X$. Show that $E_1\hat{y}\in \mathrm{Span}\Delta$.
+
+Induction on $h = \partial(x,y)$.
+
+Case $h\leq 2$.
+
+$E_1\hat{y} \in \mathrm{Span}\Delta$ follows from construction.
+
+Case $h\geq 3$. 
+
+Pick a vertex $x'\in X$ such that 
+$$\partial(x,x') = h-3, \quad \partial(x',y) = 3.$$
+By Theorem \@ref(thm:balanced). 
+$$\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}E_1\hat{z} - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}E_1\hat{z'} = r^3_{12}(E_1\hat{x}-E_1\hat{y}),$$
+$$r^3_{12} = \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3} \neq 0.$$
+So, $E_1\hat{y}in \mathrm{Span}\{f, g, E_1\hat{x'}\}$, where
+$$f = \sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}E_1\hat{z}, \quad g = \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}E_1\hat{z'}.$$
+Observe that each $z$ in the $f$-sum satisfies $\partial(x,z)=h-2$.
+
+So, by induction hypothesis 
+$$E_1\hat{z}\in \mathrm{Span}\Delta, \quad \text{or }\; f\in \mathrm{Span}\Delta.$$
+
+Observe that each $z'$ in the $g$-sum satisfies $\partial(x,z')=h-1$.
+
+
+So by induction hypothesis 
+$$E_1\hat{z'}\in \mathrm{Span}\Delta, \quad \text{or }\; g\in \mathrm{Span}\Delta.$$
+Also $\partial(x,x') = h-3$ implies $E_1\hat{x'}\in \mathrm{Span}\Delta$.
+
+Therefore $E_1\hat{y} \in \mathrm{Span}\Delta$.
+:::
+
+**Note.** 
+Let $\Gamma$, $E_1$, $x$ be as in Lemma \@ref(lem:EV).
+
+Assume $D\geq 4$.
+
+Observe that there are many linear dependences among
+$$\{E\hat{y}\mid y\in \Delta\},$$
+where $\Delta = \{y\in X\mid \partial(x,y)\leq 2\}$.
+
+Take any $y\in X$ such that $\partial(x,y)\geq 4$.
+
+More than one choice for $x'$ in the proof of Lemma \@ref(lem:EV) implies
+
+"more than one way to put $E_1\hat{y}\in \mathrm{Span} E_1\Delta$."
+
+**Open Problem:**
+
+| $(i)$ Give a precise description of the linear dependences among 
+$$\{E_1\hat{y}\mid y\in \Delta\}.$$
+
+| $(ii)$ Find a subset $\Delta'\subseteq \Delta$ such that 
+$$\{E_1\hat{y}\mid y\in \Delta'\}$$
+is a basis for $E_1V$, (or find some other 'nice' basis for $E_1V$).
+
+
+:::{.conjecture #EV}
+Let $\Gamma$, $E_1$, $x$ be as in Lemma \@ref(lem:EV). Set
+\begin{align}
+\widetilde{X} & = \{y\in X\mid \partial(x,y)\leq 2\},\\
+\tilde{\partial} & = \text{the restriction of the distance function $\partial$ to $\widetilde{X}$}.
+\end{align}
+Then $\Gamma$ is determined by $\widetilde{X}$ and $\tilde{\partial}$.
+
+(There should be some canonical way to reconstruct $\Gamma$ from $\widetilde{X}$ and $\tilde{\partial}$.)
+:::

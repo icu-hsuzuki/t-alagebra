@@ -5613,6 +5613,177 @@ b_i & = \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{b
 
 \end{example}
 
+\hypertarget{lec28}{%
+\chapter{\texorpdfstring{The First Eigenspace of a \(Q\)-DRG}{The First Eigenspace of a Q-DRG}}\label{lec28}}
+
+\textbf{Monday, April 5, 1993}
+
+\begin{lemma}
+\protect\hypertarget{lem:EV}{}\label{lem:EV}Let \(\Gamma = (X,E)\) be distance-regular of diameter \(D\geq 3\) with standard module \(V\). Suppose \(\Gamma\) is \(Q\)-polynomial with respect to a primitive idempotent \(E_1\). Pick a vertex \(x\in X\). Then
+\[E_1V = \mathrm{Span}\{E_1\hat{y}\mid \partial(x,y)\leq 2\}.\]
+In particular,
+\[\dim E_1V \leq 1 + k_1 + k_2.\]
+\end{lemma}
+
+\begin{proof}
+Let \(\Delta = \{E_1\hat{y}\mid \partial(x,y)\leq 2\}\).
+
+\(E_1V \supseteq \mathrm{Span}\Delta\): clear.
+
+\(E_1V \subseteq \mathrm{Span}\Delta\): Pick a vertex \(y\in X\). Show that \(E_1\hat{y}\in \mathrm{Span}\Delta\).
+
+Induction on \(h = \partial(x,y)\).
+
+Case \(h\leq 2\).
+
+\(E_1\hat{y} \in \mathrm{Span}\Delta\) follows from construction.
+
+Case \(h\geq 3\).
+
+Pick a vertex \(x'\in X\) such that
+\[\partial(x,x') = h-3, \quad \partial(x',y) = 3.\]
+By Theorem \ref{thm:balanced}.
+\[\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}E_1\hat{z} - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}E_1\hat{z'} = r^3_{12}(E_1\hat{x}-E_1\hat{y}),\]
+\[r^3_{12} = \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3} \neq 0.\]
+So, \(E_1\hat{y}in \mathrm{Span}\{f, g, E_1\hat{x'}\}\), where
+\[f = \sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}E_1\hat{z}, \quad g = \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}E_1\hat{z'}.\]
+Observe that each \(z\) in the \(f\)-sum satisfies \(\partial(x,z)=h-2\).
+
+So, by induction hypothesis
+\[E_1\hat{z}\in \mathrm{Span}\Delta, \quad \text{or }\; f\in \mathrm{Span}\Delta.\]
+
+Observe that each \(z'\) in the \(g\)-sum satisfies \(\partial(x,z')=h-1\).
+
+So by induction hypothesis
+\[E_1\hat{z'}\in \mathrm{Span}\Delta, \quad \text{or }\; g\in \mathrm{Span}\Delta.\]
+Also \(\partial(x,x') = h-3\) implies \(E_1\hat{x'}\in \mathrm{Span}\Delta\).
+
+Therefore \(E_1\hat{y} \in \mathrm{Span}\Delta\).
+\end{proof}
+
+\textbf{Note.}
+Let \(\Gamma\), \(E_1\), \(x\) be as in Lemma \ref{lem:EV}.
+
+Assume \(D\geq 4\).
+
+Observe that there are many linear dependences among
+\[\{E\hat{y}\mid y\in \Delta\},\]
+where \(\Delta = \{y\in X\mid \partial(x,y)\leq 2\}\).
+
+Take any \(y\in X\) such that \(\partial(x,y)\geq 4\).
+
+More than one choice for \(x'\) in the proof of Lemma \ref{lem:EV} implies
+
+``more than one way to put \(E_1\hat{y}\in \mathrm{Span} E_1\Delta\).''
+
+\textbf{Open Problem:}
+
+\((i)\) Give a precise description of the linear dependences among
+
+\[\{E_1\hat{y}\mid y\in \Delta\}.\]
+
+\((ii)\) Find a subset \(\Delta'\subseteq \Delta\) such that
+
+\[\{E_1\hat{y}\mid y\in \Delta'\}\]
+is a basis for \(E_1V\), (or find some other `nice' basis for \(E_1V\)).
+
+\begin{conjecture}
+\protect\hypertarget{cnj:EV}{}\label{cnj:EV}Let \(\Gamma\), \(E_1\), \(x\) be as in Lemma \ref{lem:EV}. Set
+\begin{align}
+\widetilde{X} & = \{y\in X\mid \partial(x,y)\leq 2\},\\
+\tilde{\partial} & = \text{the restriction of the distance function $\partial$ to $\widetilde{X}$}.
+\end{align}
+Then \(\Gamma\) is determined by \(\widetilde{X}\) and \(\tilde{\partial}\).
+
+(There should be some canonical way to reconstruct \(\Gamma\) from \(\widetilde{X}\) and \(\tilde{\partial}\).)
+\end{conjecture}
+
+\hypertarget{lec29}{%
+\chapter{\texorpdfstring{Relations of \(A, A^*\)}{Relations of A, A\^{}*}}\label{lec29}}
+
+\textbf{Wednesday, April 7, 1993}
+
+\textbf{Introduction to Theorem \ref{thm:aastar}}
+
+Let \(\Gamma = (X,E)\) be distance-regular with diameter \(D\geq 3\).
+
+Assume \(\Gamma\) is \(Q\)-polynomial with respect to \(E_1\).
+
+Fix a vertex \(x\in X\). Write \(E^*_i \equiv E^*_i(x)\), \(A^*_i \equiv A^*_i(x)\), \(A^* = A^*_1\).
+
+We know for \(h, i, j\) \((0\leq h, i, j\leq D)\),
+\begin{align}
+E^*_iA_hE^*_j = O & \leftrightarrow p^h_{ij} = 0\\
+E_iA_h^*E_j = O & \leftrightarrow q^h_{ij} = 0.
+\end{align}
+Also, for \(h, i, j\) \((0\leq h, i, j\leq D)\),
+\begin{align}
+h < |i-j| & \rightarrow p^h_{ij} = 0, \; q^h_{ij} = 0\\
+h = |i-j| & \rightarrow p^h_{ij} \neq 0, \; q^h_{ij} \neq 0.
+\end{align}
+
+Some \(A_h\) (resp. \(A^*_h\)) is a polynomial of degree exactly \(h\) in \(A\) (resp. \(A^*\)), it follows, for \(h, i, j\) \((0\leq h, i, j\leq D)\),
+\[E^*_iA^hE^*_j, \; E_i{A^*}^hE_j \quad \begin{cases} = 0 & \text{if } h < |i-j|\\
+\neq 0 & \text{if } h = |i-j|.\end{cases}\]
+
+We saw that there exist \(\beta, \gamma, \delta\in \mathbb{R}\) such that
+\[0 = [A, A^2A^*-\beta AA^*A + A^*A^2 - \gamma(AA^*+A^*A) - \delta A^*].\]
+In fact, there exist \(\beta, \gamma^*, \delta^*\in \mathbb{R}\) such that
+\[0 = [A^*, {A^*}^2A-\beta A^*AA^* + A{A^*}^2 - \gamma^*(A^*A+AA^*) - \delta^* A]\]
+as well as will will now show.
+
+Let \(K\) denote any field. Let \(V\) denote any vector space over \(K\) of finite positive dimension. Let \(\mathrm{End}_K(V)\) denote the \(K\)-algebra of all \(K\)-linear transformations \(V\to V\).
+
+\begin{theorem}
+\protect\hypertarget{thm:aastar}{}\label{thm:aastar}Given semi-simple elements \(A, A^*\in \mathrm{End}_K(V)\), suppose
+\begin{align}
+E_i(A^*)^hE_j: & \begin{cases} = 0 & \text{if } h < |i-j|\\
+\neq 0 & \text{if } h = |i-j|.\end{cases} \quad (0\leq h,i,j\leq D) \label{eq:eastare}\\
+E^*_iA^hE^*_j: & \begin{cases} = 0 & \text{if } h < |i-j|\\
+\neq 0 & \text{if } h = |i-j|.\end{cases} \quad (0\leq h,i,j\leq R) \label{eq:estaraestar}
+\end{align}
+for some ordering \(E_0, E_1, \ldots, E_D\) of the primitive idempotents for \(A\), and some ordering \(E^*_0, E^*_1, \ldots, E^*_R\) of primitive idempotents for \(A^*\). Then
+
+\((i)\) \(R = D\).
+
+\((ii)\) There exist \(\beta, \gamma, \gamma^*, \delta, \delta^*\in \mathbb{K}\) such that
+
+\begin{align}
+0 & = [A, A^2A^*-\beta AA^*A + A^*A^2 - \gamma(AA^*+A^*A) - \delta A^*] \label{eq:abracket}\\
+& = A^3A^*-A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A)\label{eq:aastar}\\
+0 & = [A^*, {A^*}^2A-\beta^* A^*AA^* + A{A^*}^2 - \gamma^*(A^*A+AA^*) - \delta^* A]\label{eq:astarbracket}\\
+& = {A^*}^3A - A{A^*}^3 - (\beta+1)({A^*}^2AA^*-A^*A{A^*}^2)-\gamma^*({A^*}^2A-A{A^*}^2)-\delta^*(A^*A-AA^*).\label{eq:astara}
+\end{align}
+
+\((iii)\) Let \(\theta_i\) (resp. \(\theta^*_i\)) denote the eigenvalue of \(A\) (resp. \(A^*\)) associated with \(E_i\) (resp. \(E^*_i\)). Then,
+
+\begin{align}
+\beta & = \frac{\theta_i-\theta_{i+1}+\theta_{i+2}-\theta_{i+3}}{\theta_{i+1}-\theta_{i+2}} \quad (0\leq i\leq D-3) \label{eq:beta}\\
+& = \frac{\theta^*_i-\theta^*_{i+1}+\theta^*_{i+2}-\theta^*_{i+3}}{\theta^*_{i+1}-\theta^*_{i+2}} \quad (0\leq i\leq D-3) \label{eq:betastar}\\
+\gamma & = \theta_i - \beta \theta_{i+1} + \theta_{i+2} \quad (0\leq i\leq D-2) \label{eq:gamma1}\\
+\gamma^* & = \theta^*_i - \beta \theta^*_{i+1} + \theta^*_{i+2} \quad (0\leq i\leq D-2) \label{eq:gammastar}\\
+\delta & = \theta^2_i - \beta \theta_i\theta_{i+1} + \theta^2_{i+1} - \gamma(\theta_i + \theta_{i+1}) \quad (0\leq i\leq D-1) \label{eq:delta}\\
+\delta^* & = {\theta^*}^2_i - \beta {\theta^*}_i{\theta^*}_{i+1} + {\theta^*}^2_{i+1} - \gamma^*({\theta^*}_i + {\theta^*}_{i+1}) \quad (0\leq i\leq D-1) \label{eq:deltastar}
+\end{align}
+In particular, \(\beta, \gamma, \gamma^*, \delta, \delta^*\) are uniquely determined by \(A\), \(A^*\) and the above ordering of ther primitive idempotents, whenever \(D\geq 3\).
+\end{theorem}
+
+:::\{.proof\}
+
+\((i)\) By symmetry, it suffices to show \(D\geq R\). Suppose \(R > D\).
+
+Since \(A\) is semisimple with exactly \(D+1\) distinct eigenvalues, the minimal polynomial of \(A\) has degree \(D+1\).
+
+Since \(R \geq D+1\),
+\[A^R \in \mathrm{Span}\{A^j\mid 0\leq j\leq D\}.\]
+Multiplying each term on the left by \(E^*_R\) and on the right by \(E^*_0\), we find
+\begin{equation}
+E^*_RA^RE_0^* \in \mathrm{Span}\{E^*_RA^jE^*_0\mid 0\leq j\leq D\}. \label{eq:erstarare0}
+\end{equation}
+But by \eqref{eq:estaraestar}, the left side of \eqref{eq:erstarare0} is nonzero and the right side of \eqref{eq:erstarare0} is \(0\), a contradiction.
+
+Hence \(D\geq R\).
+
 \hypertarget{lec55}{%
 \chapter{Title of the Chapter}\label{lec55}}
 

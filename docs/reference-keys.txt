@@ -19,6 +19,19 @@ eq:cibi1
 eq:ci
 eq:bi
 eq:cibithetak
+eq:eastare
+eq:estaraestar
+eq:abracket
+eq:aastar
+eq:astarbracket
+eq:astara
+eq:beta
+eq:betastar
+eq:gamma1
+eq:gammastar
+eq:delta
+eq:deltastar
+eq:erstarare0
 lec1
 lec2
 lec3
@@ -46,4 +59,6 @@ lec24
 lec25
 lec26
 lec27
+lec28
+lec29
 lec55
