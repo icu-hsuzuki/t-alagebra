@@ -32,6 +32,9 @@ eq:gammastar
 eq:delta
 eq:deltastar
 eq:erstarare0
+eq:eistarajastarakestarell
+eq:aiastarminusastarai
+eq:eistaraiestar0
 lec1
 lec2
 lec3

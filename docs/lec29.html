@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 29 Relations of \(A, A^*\) | Lecture Note on Terwilliger Algebra</title>
+  <title>Chapter 29 Tridiagonal Pair \(A, A^*\) | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 29 Relations of \(A, A^*\) | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:title" content="Chapter 29 Tridiagonal Pair \(A, A^*\) | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 29 Relations of \(A, A^*\) | Lecture Note on Terwilliger Algebra" />
+  <meta name="twitter:title" content="Chapter 29 Tridiagonal Pair \(A, A^*\) | Lecture Note on Terwilliger Algebra" />
   
   <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-08" />
+<meta name="date" content="2022-12-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -127,7 +127,7 @@ div.csl-indent {
 <li class="chapter" data-level="26" data-path="lec26.html"><a href="lec26.html"><i class="fa fa-check"></i><b>26</b> Representation Diagrams</a></li>
 <li class="chapter" data-level="27" data-path="lec27.html"><a href="lec27.html"><i class="fa fa-check"></i><b>27</b> <span class="math inline">\(P\)</span>-and <span class="math inline">\(Q\)</span>-Polynomial Schemes</a></li>
 <li class="chapter" data-level="28" data-path="lec28.html"><a href="lec28.html"><i class="fa fa-check"></i><b>28</b> The First Eigenspace of a <span class="math inline">\(Q\)</span>-DRG</a></li>
-<li class="chapter" data-level="29" data-path="lec29.html"><a href="lec29.html"><i class="fa fa-check"></i><b>29</b> Relations of <span class="math inline">\(A, A^*\)</span></a></li>
+<li class="chapter" data-level="29" data-path="lec29.html"><a href="lec29.html"><i class="fa fa-check"></i><b>29</b> Tridiagonal Pair <span class="math inline">\(A, A^*\)</span></a></li>
 <li class="chapter" data-level="30" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>30</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -151,7 +151,7 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="lec29" class="section level1 hasAnchor" number="29">
-<h1><span class="header-section-number">Chapter 29</span> Relations of <span class="math inline">\(A, A^*\)</span><a href="lec29.html#lec29" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapter 29</span> Tridiagonal Pair <span class="math inline">\(A, A^*\)</span><a href="lec29.html#lec29" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Wednesday, April 7, 1993</strong></p>
 <p><strong>Introduction to Theorem <a href="lec29.html#thm:aastar">29.1</a></strong></p>
 <p>Let <span class="math inline">\(\Gamma = (X,E)\)</span> be distance-regular with diameter <span class="math inline">\(D\geq 3\)</span>.</p>
@@ -215,6 +215,62 @@ E^*_RA^RE_0^* \in \mathrm{Span}\{E^*_RA^jE^*_0\mid 0\leq j\leq D\}. \tag{29.13}
 \end{equation}\]</span>
 But by <a href="lec29.html#eq:estaraestar">(29.2)</a>, the left side of <a href="lec29.html#eq:erstarare0">(29.13)</a> is nonzero and the right side of <a href="lec29.html#eq:erstarare0">(29.13)</a> is <span class="math inline">\(0\)</span>, a contradiction.</p>
 <p>Hence <span class="math inline">\(D\geq R\)</span>.</p>
+<div class="line-block"><span class="math inline">\((ii), (iii)\)</span></div>
+<p>Recalling the definitions, we have
+<span class="math display">\[\begin{align}
+A &amp; = \sum_{i=0}^D \theta_i E_i,\\
+A^* &amp; = \sum_{i=0}^D \theta_i^* E_i^*,\\
+AE_i &amp; = E_iA = \theta_iE_i \quad (0\leq i\leq D),\\
+A^*E_i^* &amp; = E_i^*A^* = \theta_i^*E_i^* \quad (0\leq i\leq D).
+\end{align}\]</span></p>
+<p>Claim 1. For all integers <span class="math inline">\(i,j,k,\ell\)</span> <span class="math inline">\((0\leq i, j, k, \ell\leq D)\)</span> such that <span class="math inline">\(j+k \leq i-\ell\)</span>,
+<span class="math display" id="eq:eistarajastarakestarell">\[\begin{equation}
+E^*_iA^jA^*A^kE^*_\ell = \begin{cases} \theta^*_{\ell+k}E^*_iA^{j+k}E^*_\ell &amp; \text{if } j+k = i-l,\\
+0 &amp; \text{if } j+k &lt; i-\ell.\end{cases} \tag{29.14}
+\end{equation}\]</span></p>
+<p><em>Proof of Claim 1.</em>
+The product <a href="lec29.html#eq:eistarajastarakestarell">(29.14)</a> eqia;s
+<span class="math display">\[E^*_iA^j\left(\sum_{h=0}^D \theta_h^* E_h^*\right)A^kE^*_\ell = \sum_{h=0}^D \theta^*_h E^*_iA^jE^*_hA^kE^*_\ell.\]</span>
+Now pick any <span class="math inline">\(h\)</span> <span class="math inline">\((0\leq h\leq D)\)</span>, where
+<span class="math display">\[E^*_iA^jE^*_hA^kE^*_\ell \neq O.\]</span>
+Tehn by <a href="lec29.html#eq:estaraestar">(29.2)</a>, <span class="math inline">\(j\geq |i-h|\)</span>, otherwise
+<span class="math display">\[E^*_iA^jE^*_h = O\]</span>
+and by <a href="lec29.html#eq:eastare">(29.1)</a>, <span class="math inline">\(k\geq |h-\ell|\)</span> otherwise
+<span class="math display">\[E^*_hA^kE^*_\ell = O.\]</span>
+Hence
+<span class="math display">\[j+k \geq |i-h|+|h-\ell| \geq |i-\ell| \geq i-\ell.\]</span>
+Now if <span class="math inline">\(j+k &lt; i-\ell\)</span>, we see there is no such <span class="math inline">\(h\)</span>, so <a href="lec29.html#eq:eistarajastarakestarell">(29.14)</a> holds.</p>
+<p>(<em>Pf.</em> Suppose <span class="math inline">\(i=j+k+\ell\)</span> with <span class="math inline">\(0\leq i, j, k,\ell, h\leq D\)</span>.</p>
+<p>Then <span class="math inline">\(i \geq j, k, \ell\)</span>. Since <span class="math inline">\(k = |h-\ell|\)</span>, if <span class="math inline">\(h\neq \ell+k\)</span>, <span class="math inline">\(h = \ell-k\)</span> and <span class="math inline">\(j - i-h\)</span>,
+<span class="math inline">\(\ell-h+i-h = i-\ell\)</span> implies <span class="math inline">\(h=\ell\)</span>, <span class="math inline">\(k = 0\)</span> and <span class="math inline">\(h = \ell + k\)</span>.)</p>
+<p>This proves Claim 1.</p>
+<p>Let <span class="math inline">\(M\)</span> denote the subalgebra of <span class="math inline">\(\mathrm{End}_K(V)\)</span> generated by <span class="math inline">\(A\)</span>. Observe that <span class="math inline">\(M\)</span> has a basis <span class="math inline">\(E_0, \ldots, E_D\)</span> as a vector space over <span class="math inline">\(K\)</span>. Set
+<span class="math display">\[L:= \mathrm{Span}\{mA^*m-nA^*m \mid m, n\in M\}.\]</span></p>
+<p>Claim 2. <span class="math inline">\(\dim L \leq D\)</span>.</p>
+<p><em>Proof of Claim 2.</em>
+Since <span class="math inline">\(E_0, \ldots, E_D\)</span> span <span class="math inline">\(M\)</span>,
+<span class="math display">\[\begin{align}
+L &amp; = \mathrm{Span}\{E_iA^*E_j - E_jA^*E_i \mid 0\leq i &lt; j \leq D\}\\
+&amp; = \mathrm{Span}\{E_{j-1}A^*E_j - E_jA^*E_{j-1} \mid 1\leq j \leq D\}
+\end{align}\]</span>
+by <a href="lec29.html#eq:eastare">(29.1)</a>.</p>
+<p>In particular, <span class="math inline">\(L\)</span> has a spanning set of order <span class="math inline">\(D\)</span>.</p>
+<p>So, Claim 2 holds.</p>
+<p>Claim 3. <span class="math inline">\(\{A^iA^* - A^*A^i\mid 1\leq i\leq D\}\)</span> is a basis for <span class="math inline">\(L\)</span>.</p>
+<p><em>Proof of Claim 3.</em>
+Since
+<span class="math display">\[A^iA^*-A^*A^i = A^iA^*I - iA^*A^i\]</span>
+is contained in <span class="math inline">\(L\)</span> <span class="math inline">\((1\leq i\leq D)\)</span>, and since <span class="math inline">\(\dim L \leq D\)</span>, it suffices to show the given elements are linearly independent.</p>
+<p>Suppose they are dependent. Then there exists an integer <span class="math inline">\(i\)</span> <span class="math inline">\((1\leq i\leq D)\)</span> such that
+<span class="math display" id="eq:aiastarminusastarai">\[\begin{equation}
+A^iA^*-A^*A^i \in \mathrm{Span}(A^jA^*-A^*A^j\mid 1\leq j &lt; i). \tag{29.15}
+\end{equation}\]</span>
+Multiplying each term in <a href="lec29.html#eq:aiastarminusastarai">(29.15)</a> on the left by <span class="math inline">\(E^*_i\)</span>, and on the left by <span class="math inline">\(E^*_0\)</span>, and simplifying using
+<span class="math display">\[E^*_i(A^\ell A^*-A^*A^\ell)E^*_0 = (\theta^*_0-\theta^*_i)E^*_iA^\ell E^*_0,\]</span>
+we find
+<span class="math display" id="eq:eistaraiestar0">\[\begin{equation}
+E^*_iA^\ell E^*_0 \in \mathrm{Span}(E^*_iA^jE^*_0\mid 1\leq j &lt; i). \tag{29.16}
+\end{equation}\]</span></p>
 
 </div>
             </section>
