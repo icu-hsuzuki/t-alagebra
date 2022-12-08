@@ -65,3 +65,4 @@ lec27
 lec28
 lec29
 lec55
+thm:aastar
