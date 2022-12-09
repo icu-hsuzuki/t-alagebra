@@ -169,8 +169,8 @@ The symmetric group <span class="math inline">\(S_N\)</span> acts on <span class
 <p><strong>Note 2.</strong>
 <span class="math inline">\(\Gamma = J(D,N)\)</span> is isomorphic to <span class="math inline">\(\Gamma&#39; = J(N-D,N)\)</span>.
 <span class="math display">\[\begin{align}
-\Gamma = (X, E) &amp; &amp; \Gamma&#39; = (X&#39;, E&#39;)\\
-X\ni S &amp; \qquad \longrightarrow &amp; \bar{S} = \Omega\setminus S \in X&#39;
+\Gamma = (X, E) &amp; \qquad \longrightarrow &amp; \Gamma&#39; = (X&#39;, E&#39;)\\
+X\ni S &amp; \qquad \longmapsto &amp; \bar{S} = \Omega\setminus S \in X&#39;
 \end{align}\]</span>
 This correspondence induces an isomorphism of graphs.</p>
 <p><em>Pf.</em>
@@ -181,13 +181,13 @@ ST\in E &amp; \Leftrightarrow  |S\cap T| = D-1\\
   &amp; \Leftrightarrow  \bar{S}\bar{T} \in E&#39;
 \end{align}\]</span></p>
 <p>Hence, without loss of generality, assume
-<span class="math display">\[D\leq N/2 \quad \text{for } J(D,N).\]</span></p>
+<span class="math display">\[D\leq N/2 \quad \text{for} \quad J(D,N).\]</span></p>
 <p>We sill need the eigenvalues of <span class="math inline">\(J(D,N)\)</span> for certain problem later in the course. We can get these eigenvalues from our study of <span class="math inline">\(H(D,2)\)</span>.</p>
 <div class="lemma">
 <p><span id="lem:unlabeled-div-45" class="lemma"><strong>Lemma 7.1  </strong></span>The eigenvalues for <span class="math inline">\(J(D,N)\)</span> with <span class="math inline">\(1\leq D \leq N/2\)</span> are give by
 <span class="math display">\[\begin{align}
-\theta_i &amp; = (N-D-i)(D-i) - i \quad (0\leq i\leq D)\\
-m_i &amp; = \binom{D}{i} - \binom{N}{i-1}.
+\theta_i &amp; = (N-D-i)(D-i) - i \quad (0\leq i\leq D),\\
+m_i &amp; = \binom{N}{i} - \binom{N}{i-1}.
 \end{align}\]</span></p>
 </div>
 <div class="proof">
@@ -204,8 +204,8 @@ Set <span class="math inline">\(x \equiv 11\cdots 1 \in X_H\)</span>.</p>
 \end{align}\]</span>
 Observe
 <span class="math display">\[\begin{align}
-X_J &amp; \to &amp; \tilde{X}\\
-S &amp; \mapsto &amp; \hat{S},
+X_J &amp; \quad \to &amp; \tilde{X}\\
+S &amp; \quad \mapsto &amp; \hat{S},
 \end{align}\]</span>
 where
 <span class="math display">\[\hat{S} = a_1\cdots a_N, \quad a_i = \begin{cases} -1 &amp; \text{if }i\in S\\ 1 &amp; \text{if }i\not\in S \end{cases}\]</span>
@@ -223,7 +223,7 @@ ST \in E_J &amp;\Leftrightarrow |S\cap T| = D-1\\
 <span class="math display">\[(RL - DE^*_D) |_{\tilde{V}}\]</span>
 is the adjacency map in <span class="math inline">\(\tilde{\Gamma}\)</span>.</p>
 <p>To find eigenvalues of <span class="math inline">\(\tilde{A}\)</span>, pick any irreducible <span class="math inline">\(T(x)\)</span>-module <span class="math inline">\(W\)</span> with the endpoint <span class="math inline">\(r\leq D\)</span>. Then by Theorem <a href="lec5.html#thm:hd2-modules">5.1</a>
-<span class="math display">\[\text{diam}(W) = N-2r+1.\]</span>
+<span class="math display">\[\text{diam}(W) = N-2r.\]</span>
 Let <span class="math inline">\(w_0, w_1, \ldots, w_{N-2r}\)</span> denote a basis for <span class="math inline">\(W\)</span> as in Theorem <a href="lec5.html#thm:hd2-modules">5.1</a>. Then,
 <span class="math display">\[w_{D-r} \in E^*_DW \subseteq \tilde{V}.\]</span></p>
 <p>Observe:
@@ -236,7 +236,7 @@ Note that this is valid for <span class="math inline">\(D = r\)</span> as well.<
 <p>Hence,
 <span class="math display">\[\tilde{A}w_{D-r}  = ((N-D-r)(D-r)-r)w_{D-r}.\]</span>
 Let
-<span class="math display">\[V_H = \sum W \quad (\text{direct sum of irreducible }T(x)-\text{modules}.)\]</span>
+<span class="math display">\[V_H = \sum W \quad (\text{direct sum of irreducible }T(x)\text{-modules}.)\]</span>
 Then,
 <span class="math display">\[\begin{align}
 V_J &amp; = E_D^*V_H\\

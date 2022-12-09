@@ -1596,8 +1596,8 @@ The symmetric group \(S_N\) acts on \(\Omega\). \(S_N \subseteq \mathrm{Aut}(\Ga
 \textbf{Note 2.}
 \(\Gamma = J(D,N)\) is isomorphic to \(\Gamma' = J(N-D,N)\).
 \begin{align}
-\Gamma = (X, E) & & \Gamma' = (X', E')\\
-X\ni S & \qquad \longrightarrow & \bar{S} = \Omega\setminus S \in X'
+\Gamma = (X, E) & \qquad \longrightarrow & \Gamma' = (X', E')\\
+X\ni S & \qquad \longmapsto & \bar{S} = \Omega\setminus S \in X'
 \end{align}
 This correspondence induces an isomorphism of graphs.
 
@@ -1610,15 +1610,15 @@ ST\in E & \Leftrightarrow  |S\cap T| = D-1\\
 \end{align}
 
 Hence, without loss of generality, assume
-\[D\leq N/2 \quad \text{for } J(D,N).\]
+\[D\leq N/2 \quad \text{for} \quad J(D,N).\]
 
 We sill need the eigenvalues of \(J(D,N)\) for certain problem later in the course. We can get these eigenvalues from our study of \(H(D,2)\).
 
 \begin{lemma}
 The eigenvalues for \(J(D,N)\) with \(1\leq D \leq N/2\) are give by
 \begin{align}
-\theta_i & = (N-D-i)(D-i) - i \quad (0\leq i\leq D)\\
-m_i & = \binom{D}{i} - \binom{N}{i-1}.
+\theta_i & = (N-D-i)(D-i) - i \quad (0\leq i\leq D),\\
+m_i & = \binom{N}{i} - \binom{N}{i-1}.
 \end{align}
 \end{lemma}
 
@@ -1637,8 +1637,8 @@ Define \(\tilde{\Gamma} \equiv (\tilde{X}, \tilde{E})\), where
 \end{align}
 Observe
 \begin{align}
-X_J & \to & \tilde{X}\\
-S & \mapsto & \hat{S},
+X_J & \quad \to & \tilde{X}\\
+S & \quad \mapsto & \hat{S},
 \end{align}
 where
 \[\hat{S} = a_1\cdots a_N, \quad a_i = \begin{cases} -1 & \text{if }i\in S\\ 1 & \text{if }i\not\in S \end{cases}\]
@@ -1662,7 +1662,7 @@ Recall
 is the adjacency map in \(\tilde{\Gamma}\).
 
 To find eigenvalues of \(\tilde{A}\), pick any irreducible \(T(x)\)-module \(W\) with the endpoint \(r\leq D\). Then by Theorem \ref{thm:hd2-modules}
-\[\text{diam}(W) = N-2r+1.\]
+\[\text{diam}(W) = N-2r.\]
 Let \(w_0, w_1, \ldots, w_{N-2r}\) denote a basis for \(W\) as in Theorem \ref{thm:hd2-modules}. Then,
 \[w_{D-r} \in E^*_DW \subseteq \tilde{V}.\]
 
@@ -1677,7 +1677,7 @@ Note that this is valid for \(D = r\) as well.
 Hence,
 \[\tilde{A}w_{D-r}  = ((N-D-r)(D-r)-r)w_{D-r}.\]
 Let
-\[V_H = \sum W \quad (\text{direct sum of irreducible }T(x)-\text{modules}.)\]
+\[V_H = \sum W \quad (\text{direct sum of irreducible }T(x)\text{-modules}.)\]
 Then,
 \begin{align}
 V_J & = E_D^*V_H\\
