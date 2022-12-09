@@ -4,6 +4,10 @@
 %
 \documentclass[
 ]{book}
+\title{Lecture Note on Terwilliger Algebra}
+\author{P. Terwilliger, edited by H. Suzuki}
+\date{2022-12-09}
+
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -33,6 +37,14 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Lecture Note on Terwilliger Algebra},
+  pdfauthor={P. Terwilliger, edited by H. Suzuki},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -117,18 +129,6 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
-\hypersetup{
-  pdftitle={Lecture Note on Terwilliger Algebra},
-  pdfauthor={P. Terwilliger, edited by H. Suzuki},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-
-\title{Lecture Note on Terwilliger Algebra}
-\author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-12-09}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1329,7 +1329,7 @@ If \(r\neq r'\), then
 \[d = D-2r \neq D-2r' = d',\]
 hence, \(\dim W \neq \dim W'\).
 
-\((iv)\) Let \(W_i\) be the irreducible \(T\)-module with endpoint \(i\). Then
+\((iv)\) Let \(W_i\) be an irreducible \(T\)-module with endpoint \(i\). Then
 
 \[\dim E_r^*V = \binom{D}{r} = \sum_{i=0}^r \mathrm{mult}(W_i).\]
 Hence, we have that
@@ -1340,7 +1340,7 @@ by induction on \(r\).
 
 \begin{theorem}
 \protect\hypertarget{thm:hd2-modules2}{}\label{thm:hd2-modules2}Let \(\Gamma = H(D,2)\) with \(D\geq 1\). Fix a vertex \(x\in X\) and write
-\[E^*_i \equiv E^*_i(x), \quad T = T(x), and A^* \equiv \sum_{i=0}^D(D-2i)E^*_i.\]
+\[E^*_i \equiv E^*_i(x), \quad T = T(x), \text{ and } A^* \equiv \sum_{i=0}^D(D-2i)E^*_i.\]
 Let \(W\) be an irreducible \(T\)-module with endpoint \(r\) with \(0\leq r\leq D/2\). Then,
 
 \((i)\) \(W\) has a basis
@@ -1366,8 +1366,10 @@ We use the notation,
 
 Recall that
 
-\((a)\) \([L, R] = A^*\),\\
-\((b)\) \([A^*, L] = wL\),\\
+\((a)\) \([L, R] = A^*\),
+
+\((b)\) \([A^*, L] = wL\),
+
 \((c)\) \([A^*, R] = -2R\),
 
 and \(A = L + R\).
@@ -1437,9 +1439,12 @@ Observe that
 by Claim 1.
 
 Claim 2. We have
-\textbar{} \((a)\) \([L^*, R^*] = A\),
-\textbar{} \((b)\) \([A, L^*] = 2L^*\),
-\textbar{} \((c)\) \([A, R^*] = -2R^*\).
+
+\((a)\) \([L^*, R^*] = A\),
+
+\((b)\) \([A, L^*] = 2L^*\),
+
+\((c)\) \([A, R^*] = -2R^*\).
 
 \emph{Pf.}
 \((b)\)
@@ -1520,26 +1525,29 @@ So \(d = D-2t\).
 \begin{definition}
 \protect\hypertarget{def:thin-dualthin}{}\label{def:thin-dualthin}
 
-For any graph \(\Gamma = (X, E)\), pick a vertex \(x\in X\) and set \(E^*_i \equiv E^*_i(x)\) and \(T \equiv T(x)\).
+For any graph \(\Gamma = (X, E)\), pick a vertex \(x\in X\), and set \(E^*_i \equiv E^*_i(x)\) and \(T \equiv T(x)\).
 
-\((i)\) an irreducible \(T\)-module \(W\) is thin \index{thin} if \(\dim E_i^*W \leq 1\) for every \(i\),
+\((i)\) An irreducible \(T\)-module \(W\) is thin \index{thin} if \(\dim E_i^*W \leq 1\) for every \(i\).
 
 \((ii)\) \(\Gamma\) is thin with respet to \(x\), if every irreducible \(T(x)\)-module is thin,
 
-\((iii)\) an irreducible \(T\)-module \(W\) is dual thin \index{dual thin} if \(\dim E_iW \leq 1\) for every \(i\),
+\((iii)\) An irreducible \(T\)-module \(W\) is dual thin \index{dual thin} if \(\dim E_iW \leq 1\) for every \(i\).
 
 \((iv)\) \(\Gamma\) is dual thin with respect to \(x\), if every irreducible \(T(x)\)-module is dual thin.
 
 \end{definition}
 
+\hfill\break
 Observe: \(H(D,2)\) is thin, dual thin with respect to each \(x\in X\).
+
+\hfill\break
 
 \begin{definition}
 \protect\hypertarget{def:q-polynomial-graph}{}\label{def:q-polynomial-graph}
 
 With above notation, write \(D \equiv D(x)\).
 
-\((i)\) an ordering \(E_0, E_1, \ldots, E_R\) of primitive idempotents of \(\Gamma\) is restricted \index{restricted} if \(E_0\) corresponds to the maximal eigenvalue.
+\((i)\) An ordering \(E_0, E_1, \ldots, E_R\) of primitive idempotents of \(\Gamma\) is restricted \index{restricted} if \(E_0\) corresponds to the maximal eigenvalue.
 
 Fix a restricted ordering,
 
@@ -1551,13 +1559,15 @@ Fix a restricted ordering,
 
 \end{definition}
 
-Observe \(H(D,2)\) is \(Q\)-polynomial with respect to the natural ordering of the idempotents and every vetex.
+\hfill\break
+Observe \(H(D,2)\) is \(Q\)-polynomial with respect to the natural ordering of the idempotents and every vetex.\\
+\strut \\
 
 \textbf{Program.} Study graphs that are thin and \(Q\)-polynomial with respect to each vertex.
 
 (In fact, thin with respect to \(x\) implies dual thin with respect to \(x\).)
 
-Get a situation like \(H(D,2)\), where \(T\) is generated by \(A\), \(A^*\). Except \(\mathrm{sl}_s(\mathbb{C})\) is repalaced by a quantum Lie algebra.
+Get a situation like \(H(D,2)\), where \(T\) is generated by \(A\), \(A^*\). Except \(\mathrm{sl}_2(\mathbb{C})\) is replaced by a quantum Lie algebra.
 
 \hypertarget{lec7}{%
 \chapter{\texorpdfstring{The Johnson Graph \(J(D,N)\)}{The Johnson Graph J(D,N)}}\label{lec7}}

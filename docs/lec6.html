@@ -164,7 +164,7 @@ is an isomorsphism of <span class="math inline">\(T\)</span>-modules by <span cl
 <p>If <span class="math inline">\(r\neq r&#39;\)</span>, then
 <span class="math display">\[d = D-2r \neq D-2r&#39; = d&#39;,\]</span>
 hence, <span class="math inline">\(\dim W \neq \dim W&#39;\)</span>.</p>
-<div class="line-block"><span class="math inline">\((iv)\)</span> Let <span class="math inline">\(W_i\)</span> be the irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(i\)</span>. Then</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> Let <span class="math inline">\(W_i\)</span> be an irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(i\)</span>. Then</div>
 <p><span class="math display">\[\dim E_r^*V = \binom{D}{r} = \sum_{i=0}^r \mathrm{mult}(W_i).\]</span>
 Hence, we have that
 <span class="math display">\[\mathrm{mult}(W_r) = \binom{D}{r} - \binom{D}{r-1}\]</span>
@@ -172,12 +172,12 @@ by induction on <span class="math inline">\(r\)</span>.</p>
 </div>
 <div class="theorem">
 <p><span id="thm:hd2-modules2" class="theorem"><strong>Theorem 6.1  </strong></span>Let <span class="math inline">\(\Gamma = H(D,2)\)</span> with <span class="math inline">\(D\geq 1\)</span>. Fix a vertex <span class="math inline">\(x\in X\)</span> and write
-<span class="math display">\[E^*_i \equiv E^*_i(x), \quad T = T(x), and A^* \equiv \sum_{i=0}^D(D-2i)E^*_i.\]</span>
+<span class="math display">\[E^*_i \equiv E^*_i(x), \quad T = T(x), \text{ and } A^* \equiv \sum_{i=0}^D(D-2i)E^*_i.\]</span>
 Let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r\)</span> with <span class="math inline">\(0\leq r\leq D/2\)</span>. Then,</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(W\)</span> has a basis</div>
 <p><span class="math display">\[w_0^*, w_1^*, \ldots, w_d^* \quad(d = D-2r), \; \text{ such that }\; w_i^*\in E_{i+r}W\; (0\leq i \leq d)\]</span>
 with respect to which the matrix corresponding to <span class="math inline">\(A^*\)</span> is
-<span class="math display">\[\begin{pmatrix}
+<span class="math display">\[\begin{pmatrix} 
 0 &amp; d &amp; 0   &amp;  &amp; &amp; &amp;  \\
 1 &amp; 0 &amp; d-1 &amp;  &amp; &amp; &amp; \\
 0 &amp; 2 &amp; 0   &amp;  &amp; &amp; &amp; \\
@@ -193,9 +193,9 @@ In particular,
 <p><span id="unlabeled-div-42" class="proof"><em>Proof</em>. </span>We use the notation,
 <span class="math display">\[[\alpha, \beta] = \alpha\beta - \beta\alpha \; (=-[\beta, \alpha]).\]</span></p>
 <p>Recall that</p>
-<div class="line-block"><span class="math inline">\((a)\)</span> <span class="math inline">\([L, R] = A^*\)</span>,<br />
-<span class="math inline">\((b)\)</span> <span class="math inline">\([A^*, L] = wL\)</span>,<br />
-<span class="math inline">\((c)\)</span> <span class="math inline">\([A^*, R] = -2R\)</span>,</div>
+<div class="line-block"><span class="math inline">\((a)\)</span> <span class="math inline">\([L, R] = A^*\)</span>,</div>
+<div class="line-block"><span class="math inline">\((b)\)</span> <span class="math inline">\([A^*, L] = wL\)</span>,</div>
+<div class="line-block"><span class="math inline">\((c)\)</span> <span class="math inline">\([A^*, R] = -2R\)</span>,</div>
 <p>and <span class="math inline">\(A = L + R\)</span>.</p>
 <p>Write <span class="math inline">\((a) - (c)\)</span> in terms of <span class="math inline">\(A\)</span> and <span class="math inline">\(A^*\)</span>, we have,
 <span class="math display">\[[A, A^*] = [L, A^*]+ [R, A^*] = 2(R-L).\]</span>
@@ -244,7 +244,7 @@ So,
 \end{align}\]</span>
 and <span class="math inline">\(i-j+1 \neq 0\)</span>, <span class="math inline">\(i-j-1\neq 0\)</span>.
 Hence, <span class="math inline">\(E_i^*A^*E_j = 0\)</span>.</p>
-<p>Now define “dual raising matrix”,
+<p>Now define “dual raising matrix,”
 <span class="math display">\[R^* = \sum_{i=0}^D E_{i+1}A^*E_i.\]</span>
 So,
 <span class="math display">\[R^*E_iV \subseteq E_{i+1}V, \quad (0\leq i\leq D, \; E_{D+1}V = 0).\]</span>
@@ -255,10 +255,10 @@ Then
 Observe that
 <span class="math display">\[A^* = \left(\sum_{i=0}^DE_i\right)A^*\left(\sum_{j=0}^DE_j\right) = L^* + R^*\]</span>
 by Claim 1.</p>
-<p>Claim 2. We have
-| <span class="math inline">\((a)\)</span> <span class="math inline">\([L^*, R^*] = A\)</span>,
-| <span class="math inline">\((b)\)</span> <span class="math inline">\([A, L^*] = 2L^*\)</span>,
-| <span class="math inline">\((c)\)</span> <span class="math inline">\([A, R^*] = -2R^*\)</span>.</p>
+<p>Claim 2. We have</p>
+<div class="line-block"><span class="math inline">\((a)\)</span> <span class="math inline">\([L^*, R^*] = A\)</span>,</div>
+<div class="line-block"><span class="math inline">\((b)\)</span> <span class="math inline">\([A, L^*] = 2L^*\)</span>,</div>
+<div class="line-block"><span class="math inline">\((c)\)</span> <span class="math inline">\([A, R^*] = -2R^*\)</span>.</div>
 <p><em>Pf.</em>
 <span class="math inline">\((b)\)</span>
 <span class="math display">\[\begin{align}
@@ -325,25 +325,31 @@ Hence,
 So <span class="math inline">\(d = D-2t\)</span>.</p>
 </div>
 <div class="definition">
-<p><span id="def:thin-dualthin" class="definition"><strong>Definition 6.1  </strong></span>For any graph <span class="math inline">\(\Gamma = (X, E)\)</span>, pick a vertex <span class="math inline">\(x\in X\)</span> and set <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span> and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> an irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is thin if <span class="math inline">\(\dim E_i^*W \leq 1\)</span> for every <span class="math inline">\(i\)</span>,</div>
+<p><span id="def:thin-dualthin" class="definition"><strong>Definition 6.1  </strong></span>For any graph <span class="math inline">\(\Gamma = (X, E)\)</span>, pick a vertex <span class="math inline">\(x\in X\)</span>, and set <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span> and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> An irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is thin  if <span class="math inline">\(\dim E_i^*W \leq 1\)</span> for every <span class="math inline">\(i\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> is thin with respet to <span class="math inline">\(x\)</span>, if every irreducible <span class="math inline">\(T(x)\)</span>-module is thin,</div>
-<div class="line-block"><span class="math inline">\((iii)\)</span> an irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is dual thin if <span class="math inline">\(\dim E_iW \leq 1\)</span> for every <span class="math inline">\(i\)</span>,</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> An irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is dual thin  if <span class="math inline">\(\dim E_iW \leq 1\)</span> for every <span class="math inline">\(i\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(\Gamma\)</span> is dual thin with respect to <span class="math inline">\(x\)</span>, if every irreducible <span class="math inline">\(T(x)\)</span>-module is dual thin.</div>
 </div>
-<p>Observe: <span class="math inline">\(H(D,2)\)</span> is thin, dual thin with respect to each <span class="math inline">\(x\in X\)</span>.</p>
+<div class="line-block"><br />
+Observe: <span class="math inline">\(H(D,2)\)</span> is thin, dual thin with respect to each <span class="math inline">\(x\in X\)</span>.</div>
+<div class="line-block"><br />
+</div>
 <div class="definition">
 <p><span id="def:q-polynomial-graph" class="definition"><strong>Definition 6.2  </strong></span>With above notation, write <span class="math inline">\(D \equiv D(x)\)</span>.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> an ordering <span class="math inline">\(E_0, E_1, \ldots, E_R\)</span> of primitive idempotents of <span class="math inline">\(\Gamma\)</span> is restricted if <span class="math inline">\(E_0\)</span> corresponds to the maximal eigenvalue.</div>
+<div class="line-block"><span class="math inline">\((i)\)</span> An ordering <span class="math inline">\(E_0, E_1, \ldots, E_R\)</span> of primitive idempotents of <span class="math inline">\(\Gamma\)</span> is restricted  if <span class="math inline">\(E_0\)</span> corresponds to the maximal eigenvalue.</div>
 <p>Fix a restricted ordering,</p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(x\)</span>, above ordering if there exists <span class="math inline">\(A^* \equiv A^*(x)\)</span> such that</div>
 <div class="line-block"><span class="math inline">\(\quad (a)\)</span> <span class="math inline">\(E_0^*V, \ldots, E_D^*V\)</span> are the maximal eigenspaces for <span class="math inline">\(A^*\)</span>.</div>
 <div class="line-block"><span class="math inline">\(\quad (b)\)</span> <span class="math inline">\(E_iA^*E_j = 0\)</span> if <span class="math inline">\(|i-j| &gt; 1\)</span> for <span class="math inline">\(0\leq i,j\leq R\)</span>.</div>
 </div>
-<p>Observe <span class="math inline">\(H(D,2)\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to the natural ordering of the idempotents and every vetex.</p>
+<div class="line-block"><br />
+Observe <span class="math inline">\(H(D,2)\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to the natural ordering of the idempotents and every vetex.<br />
+<br />
+</div>
 <p><strong>Program.</strong> Study graphs that are thin and <span class="math inline">\(Q\)</span>-polynomial with respect to each vertex.</p>
 <p>(In fact, thin with respect to <span class="math inline">\(x\)</span> implies dual thin with respect to <span class="math inline">\(x\)</span>.)</p>
-<p>Get a situation like <span class="math inline">\(H(D,2)\)</span>, where <span class="math inline">\(T\)</span> is generated by <span class="math inline">\(A\)</span>, <span class="math inline">\(A^*\)</span>. Except <span class="math inline">\(\mathrm{sl}_s(\mathbb{C})\)</span> is repalaced by a quantum Lie algebra.</p>
+<p>Get a situation like <span class="math inline">\(H(D,2)\)</span>, where <span class="math inline">\(T\)</span> is generated by <span class="math inline">\(A\)</span>, <span class="math inline">\(A^*\)</span>. Except <span class="math inline">\(\mathrm{sl}_2(\mathbb{C})\)</span> is replaced by a quantum Lie algebra.</p>
 
 </div>
             </section>
