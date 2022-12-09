@@ -159,6 +159,29 @@ div.csl-indent {
 <span class="math display">\[E_0, E_1, \ldots, E_D\]</span>
 of primitive idempotents. Let <span class="math inline">\(A_i\)</span> be an <span class="math inline">\(i\)</span>-th adjacency matrix, and <span class="math inline">\(A = A_1\)</span>.
 <span class="math display">\[A = \sum_{i=0}^D\theta_i A_i, \quad E_i = |X|^{-1}\sum_{i=0}^D\theta^*_i A_i.\]</span></p>
+<p>Fix a vertex <span class="math inline">\(x\in X\)</span>, write
+<span class="math display">\[E^*_i \equiv E^*_i(x), \quad A^*\equiv A^*(x), \quad A^* \equiv A^*_1, \quad T\equiv T(x).\]</span>
+Then
+<span class="math display">\[A^* = \sum_{i=0}^D \theta^*_i E^*_i.\]</span></p>
+<p>By Theorem <a href="lec29.html#thm:aastar">29.1</a>, there exist <span class="math inline">\(\beta, \gamma, \gamma^*, \delta, \delta^*\in \mathbb{R}\)</span> such that
+<span class="math display">\[\begin{align}
+0 &amp; = [A, A^2A^*-\beta AA^*A + A^*A^2 - \gamma(AA^*+A^*A) - \delta A^*]\\
+0 &amp; = [A^*, {A^*}^2A-\beta^* A^*AA^* + A{A^*}^2 - \gamma^*(A^*A+AA^*) - \delta^* A]
+\end{align}\]</span></p>
+<p>Recall raising matrix
+<span class="math display">\[R = \sum_{i=0}^D E^*_{i+1}AE^*_i\]</span>
+satisfies
+<span class="math display">\[R(E^*_iV) \subseteq E^*_{i+1}V \quad (0\leq i\leq D), \quad E^*_{D+1}V = 0,\]</span>
+lowering matrix
+<span class="math display">\[L = \sum_{i=0}^D E^*_{i-1}AE^*_i\]</span>
+satisfies
+<span class="math display">\[L(E^*_iV) \subseteq E^*_{i-1}V \quad (0\leq i\leq D), \quad E^*_{-1}V = 0,\]</span>
+and flat matrix
+<span class="math display">\[F = \sum_{i=0}^D E^*_{i}AE^*_i\]</span>
+satisfies
+<span class="math display">\[F(E^*_iV) \subseteq E^*_{i}V \quad (0\leq i\leq D).\]</span>
+Also,
+<span class="math display">\[A = R + F + L.\]</span></p>
 
 </div>
             </section>

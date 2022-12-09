@@ -6003,6 +6003,32 @@ Assume \(\Gamma\) is \(Q\)-polynomial with respect to the ordering
 of primitive idempotents. Let \(A_i\) be an \(i\)-th adjacency matrix, and \(A = A_1\).
 \[A = \sum_{i=0}^D\theta_i A_i, \quad E_i = |X|^{-1}\sum_{i=0}^D\theta^*_i A_i.\]
 
+Fix a vertex \(x\in X\), write
+\[E^*_i \equiv E^*_i(x), \quad A^*\equiv A^*(x), \quad A^* \equiv A^*_1, \quad T\equiv T(x).\]
+Then
+\[A^* = \sum_{i=0}^D \theta^*_i E^*_i.\]
+
+By Theorem \ref{thm:aastar}, there exist \(\beta, \gamma, \gamma^*, \delta, \delta^*\in \mathbb{R}\) such that
+\begin{align}
+0 & = [A, A^2A^*-\beta AA^*A + A^*A^2 - \gamma(AA^*+A^*A) - \delta A^*]\\
+0 & = [A^*, {A^*}^2A-\beta^* A^*AA^* + A{A^*}^2 - \gamma^*(A^*A+AA^*) - \delta^* A]
+\end{align}
+
+Recall raising matrix
+\[R = \sum_{i=0}^D E^*_{i+1}AE^*_i\]
+satisfies
+\[R(E^*_iV) \subseteq E^*_{i+1}V \quad (0\leq i\leq D), \quad E^*_{D+1}V = 0,\]
+lowering matrix
+\[L = \sum_{i=0}^D E^*_{i-1}AE^*_i\]
+satisfies
+\[L(E^*_iV) \subseteq E^*_{i-1}V \quad (0\leq i\leq D), \quad E^*_{-1}V = 0,\]
+and flat matrix
+\[F = \sum_{i=0}^D E^*_{i}AE^*_i\]
+satisfies
+\[F(E^*_iV) \subseteq E^*_{i}V \quad (0\leq i\leq D).\]
+Also,
+\[A = R + F + L.\]
+
 \hypertarget{lec55}{%
 \chapter{Title of the Chapter}\label{lec55}}
 
