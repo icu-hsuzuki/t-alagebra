@@ -128,7 +128,8 @@ div.csl-indent {
 <li class="chapter" data-level="27" data-path="lec27.html"><a href="lec27.html"><i class="fa fa-check"></i><b>27</b> <span class="math inline">\(P\)</span>-and <span class="math inline">\(Q\)</span>-Polynomial Schemes</a></li>
 <li class="chapter" data-level="28" data-path="lec28.html"><a href="lec28.html"><i class="fa fa-check"></i><b>28</b> The First Eigenspace of a <span class="math inline">\(Q\)</span>-DRG</a></li>
 <li class="chapter" data-level="29" data-path="lec29.html"><a href="lec29.html"><i class="fa fa-check"></i><b>29</b> Tridiagonal Pair <span class="math inline">\(A, A^*\)</span></a></li>
-<li class="chapter" data-level="30" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>30</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="30" data-path="lec30.html"><a href="lec30.html"><i class="fa fa-check"></i><b>30</b> <span class="math inline">\(R, F, L\)</span> Matrices</a></li>
+<li class="chapter" data-level="31" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>31</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -201,20 +202,20 @@ Hence, we have all formulas.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> We have</div>
 <p><span class="math display">\[\begin{align}
 \sum_{h = 0}^D p^h_{ij} A_{h&#39;} &amp; \left(\sum_{h=0}^D p^h_{ij}A_h\right)^\top \\
- &amp; = (A_iA_j)^\top  \\
+&amp; = (A_iA_j)^\top  \\
 &amp; = A_j^\top A_i^\top\\
 &amp; = A_{j&#39;}A_{i&#39;} \\
 &amp; = \sum_{h=0}^D p^{h&#39;}_{j&#39;i&#39;}A_h&#39;.
 \end{align}\]</span></p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> Count the following number,</div>
-<p><span class="math display">\[\begin{align} 
+<p><span class="math display">\[\begin{align}
 &amp; |\{xyz\in X^3 \mid (x,y)\in R_h, (x,z)\in R_i, (z,y)\in R_j\}| \\
 &amp; \quad =  |X|k_hp^h_{ij} = |X|k_jp^j_{i&#39;h} = |X|k^i_{hj&#39;}.
 \end{align}\]</span></p>
 <div class="line-block"><span class="math inline">\((iii)\)</span></div>
 <p><span class="math display">\[\begin{align}
 \frac{1}{|X|}\sum_{h = 0}^D q^h_{ij} E_{\hat{h}} &amp; = \left(\frac{1}{|X|}\sum_{h=0}^D q^h_{ij}E_h\right)^\top \\
- &amp; = (E_i\circ E_j)^\top  \\
+&amp; = (E_i\circ E_j)^\top  \\
 &amp; = E_j^\top \circ E_i^\top\\
 &amp; = E_{\hat{j}}E_{\hat{i}} \\
 &amp; = \frac{1}{|X|}\sum_{h=0}^D q^{\hat{h}}_{\hat{j}\hat{i}}E_{\hat{h}}.

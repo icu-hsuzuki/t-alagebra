@@ -128,7 +128,8 @@ div.csl-indent {
 <li class="chapter" data-level="27" data-path="lec27.html"><a href="lec27.html"><i class="fa fa-check"></i><b>27</b> <span class="math inline">\(P\)</span>-and <span class="math inline">\(Q\)</span>-Polynomial Schemes</a></li>
 <li class="chapter" data-level="28" data-path="lec28.html"><a href="lec28.html"><i class="fa fa-check"></i><b>28</b> The First Eigenspace of a <span class="math inline">\(Q\)</span>-DRG</a></li>
 <li class="chapter" data-level="29" data-path="lec29.html"><a href="lec29.html"><i class="fa fa-check"></i><b>29</b> Tridiagonal Pair <span class="math inline">\(A, A^*\)</span></a></li>
-<li class="chapter" data-level="30" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>30</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="30" data-path="lec30.html"><a href="lec30.html"><i class="fa fa-check"></i><b>30</b> <span class="math inline">\(R, F, L\)</span> Matrices</a></li>
+<li class="chapter" data-level="31" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>31</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -177,7 +178,7 @@ Let <span class="math inline">\(W\)</span> be an irreducible <span class="math i
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(W\)</span> has a basis</div>
 <p><span class="math display">\[w_0^*, w_1^*, \ldots, w_d^* \quad(d = D-2r), \; \text{ such that }\; w_i^*\in E_{i+r}W\; (0\leq i \leq d)\]</span>
 with respect to which the matrix corresponding to <span class="math inline">\(A^*\)</span> is
-<span class="math display">\[\begin{pmatrix} 
+<span class="math display">\[\begin{pmatrix}
 0 &amp; d &amp; 0   &amp;  &amp; &amp; &amp;  \\
 1 &amp; 0 &amp; d-1 &amp;  &amp; &amp; &amp; \\
 0 &amp; 2 &amp; 0   &amp;  &amp; &amp; &amp; \\
@@ -244,7 +245,7 @@ So,
 \end{align}\]</span>
 and <span class="math inline">\(i-j+1 \neq 0\)</span>, <span class="math inline">\(i-j-1\neq 0\)</span>.
 Hence, <span class="math inline">\(E_i^*A^*E_j = 0\)</span>.</p>
-<p>Now define “dual raising matrix,”
+<p>Now define “dual raising matrix”,
 <span class="math display">\[R^* = \sum_{i=0}^D E_{i+1}A^*E_i.\]</span>
 So,
 <span class="math display">\[R^*E_iV \subseteq E_{i+1}V, \quad (0\leq i\leq D, \; E_{D+1}V = 0).\]</span>
@@ -326,9 +327,9 @@ So <span class="math inline">\(d = D-2t\)</span>.</p>
 </div>
 <div class="definition">
 <p><span id="def:thin-dualthin" class="definition"><strong>Definition 6.1  </strong></span>For any graph <span class="math inline">\(\Gamma = (X, E)\)</span>, pick a vertex <span class="math inline">\(x\in X\)</span>, and set <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span> and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> An irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is thin  if <span class="math inline">\(\dim E_i^*W \leq 1\)</span> for every <span class="math inline">\(i\)</span>.</div>
+<div class="line-block"><span class="math inline">\((i)\)</span> An irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is thin if <span class="math inline">\(\dim E_i^*W \leq 1\)</span> for every <span class="math inline">\(i\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> is thin with respet to <span class="math inline">\(x\)</span>, if every irreducible <span class="math inline">\(T(x)\)</span>-module is thin,</div>
-<div class="line-block"><span class="math inline">\((iii)\)</span> An irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is dual thin  if <span class="math inline">\(\dim E_iW \leq 1\)</span> for every <span class="math inline">\(i\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> An irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is dual thin if <span class="math inline">\(\dim E_iW \leq 1\)</span> for every <span class="math inline">\(i\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(\Gamma\)</span> is dual thin with respect to <span class="math inline">\(x\)</span>, if every irreducible <span class="math inline">\(T(x)\)</span>-module is dual thin.</div>
 </div>
 <div class="line-block"><br />
@@ -337,7 +338,7 @@ Observe: <span class="math inline">\(H(D,2)\)</span> is thin, dual thin with res
 </div>
 <div class="definition">
 <p><span id="def:q-polynomial-graph" class="definition"><strong>Definition 6.2  </strong></span>With above notation, write <span class="math inline">\(D \equiv D(x)\)</span>.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> An ordering <span class="math inline">\(E_0, E_1, \ldots, E_R\)</span> of primitive idempotents of <span class="math inline">\(\Gamma\)</span> is restricted  if <span class="math inline">\(E_0\)</span> corresponds to the maximal eigenvalue.</div>
+<div class="line-block"><span class="math inline">\((i)\)</span> An ordering <span class="math inline">\(E_0, E_1, \ldots, E_R\)</span> of primitive idempotents of <span class="math inline">\(\Gamma\)</span> is restricted if <span class="math inline">\(E_0\)</span> corresponds to the maximal eigenvalue.</div>
 <p>Fix a restricted ordering,</p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(x\)</span>, above ordering if there exists <span class="math inline">\(A^* \equiv A^*(x)\)</span> such that</div>
 <div class="line-block"><span class="math inline">\(\quad (a)\)</span> <span class="math inline">\(E_0^*V, \ldots, E_D^*V\)</span> are the maximal eigenspaces for <span class="math inline">\(A^*\)</span>.</div>

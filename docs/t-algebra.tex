@@ -4,10 +4,6 @@
 %
 \documentclass[
 ]{book}
-\title{Lecture Note on Terwilliger Algebra}
-\author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-12-09}
-
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -37,14 +33,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Lecture Note on Terwilliger Algebra},
-  pdfauthor={P. Terwilliger, edited by H. Suzuki},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -129,6 +117,18 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Lecture Note on Terwilliger Algebra},
+  pdfauthor={P. Terwilliger, edited by H. Suzuki},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Lecture Note on Terwilliger Algebra}
+\author{P. Terwilliger, edited by H. Suzuki}
+\date{2022-12-09}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -5866,6 +5866,142 @@ we find
 \begin{equation}
 E^*_iA^\ell E^*_0 \in \mathrm{Span}(E^*_iA^jE^*_0\mid 1\leq j < i). \label{eq:eistaraiestar0}
 \end{equation}
+But the left side of \eqref{eq:eistaraiestar0} is nonzero.
+
+A contradiction.
+
+Since \(a^2A^*A-AA^*A^2\) is contained in \(L\), we find by Claim 2,
+\begin{equation}
+A^2A^*A - AA^*A^2 = \sum_{i=1}^D\alpha_i(A^iA^*-A^*A^i) \label{eq:a2astara}
+\end{equation}
+for some \(\alpha_0, \ldots, \alpha_D\in K\).
+
+Claim 4. \(\alpha_i = 0 \quad (3<i\leq D)\).
+
+\emph{Proof of Claim 4.}
+Suppose not, and set
+\[t = \max\{i\mid 3<i\leq D, \; \alpha_i\neq 0\}.\]
+Then by \eqref{eq:a2astara}, and Claim 1,
+\begin{align}
+0 & = E^*_t\left(A^2A^*A - AA^*A^2 - \sum_{i=1}^D\alpha_i(A^iA^*-A^*A^i)\right)E^*_0\\
+& = \alpha_t(\theta^*_t-\theta^*_0)E^*_tA^tE^*_0\\
+& \neq O.
+\end{align}
+
+(Since \(\alpha_i=\) if \(i>t\),
+\begin{align}
+E^*_tA^2A^*AE^*_0 & = E^*_tAA^*A^2E^*_0 = O \quad (\text{as} 2+1 < t-0)\\
+E^*_tA^iA^*E^*_0 & = E^*_tA^*A^iE^*_0 = O\\
+E^*_tA^tA^*E^*_0 & = \theta^*_0 E^*_tA^tE^*_0,\\
+E^*_tA^*A^tE^*_0 & = \theta^*_tE^*_tA^*A^tE^*_0.)\\
+\end{align}
+
+A contradiction. This proves Claim 4.
+
+Claim 5. Suppose \(D\geq 3\). Then
+\begin{equation}
+\alpha_3 = \frac{\theta^*_{i+1}-\theta^*_{i+2}}{\theta^*_i - \theta^*_{i+3}} \quad \text{for all }i, \; (0\leq i\leq D-3). \label{eq:alpha3}
+\end{equation}
+In particular, \(\alpha\neq 0\).
+
+\emph{Proof of Claim 5.}
+Fix and integer \(i\) \((0\leq i\leq D-3\)). Then
+by \eqref{eq:eistarajastarakestarell} and \eqref{eq:a2astara},
+\begin{align}
+O & = E^*_{i+3}\left(A^2A^*A - AA^*A^2 - \sum_{j=1}^3\alpha_j(A^iA^*-A^*A^i)\right)E^*_i\\
+& = (\theta^*_{i+1}-\theta^*_{i+2}-\alpha_3(\theta^*_i-\theta^*_{i+3}))E^*_{i+3}A^3E^*_i.
+\end{align}
+But \(E^*_{i+3}A^3E^*_i\neq O\) by \eqref{eq:estaraestar}, so \eqref{eq:alpha3} holds.
+
+This proves Claim 5.
+
+Claim 6. Lines \eqref{eq:abracket}, \eqref{eq:aastar}, \eqref{eq:betastar} hold.
+
+\emph{Proof of Claim 6.}
+First suppose \(D\geq 3\). Then by \eqref{eq:a2astara}, Claims 4, and 5,
+\begin{equation}
+A^22A^*A-AA^*A^2 = \alpha_3(A^3A^*-A^*A^3)+\alpha_2(A^2A^*-A^*A^2) + \alpha_1(AA^*-A^*A), \label{eq:a2astara3}
+\end{equation}
+where \(\alpha_3\neq 0\). Hence
+\[A^3A^*-A^*A^3-\frac{1}{\alpha_3}(A^2A^*A-AA^*A^2)+\frac{\alpha_2}{\alpha_3}(A^2A^*-A^*A^2)+
+\frac{\alpha_1}{\alpha_3}(AA^*-A^*A)=O.\]
+Now \eqref{eq:aastar} is immediate, where
+\begin{align}
+\beta & = \frac{1}{\alpha_3}-1, \label{eq:beta3}\\
+\gamma & = -\frac{\alpha_2}{\alpha_3}, \label{eq:gamma3}\\
+\delta & = -\frac{\alpha_1}{\alpha_3}. \label{eq:delta3}
+\end{align}
+The line \eqref{eq:abracket} follows from the definition of \([\text{ }, \text{ }]\).
+
+The line \eqref{eq:betastar} is immediate from \eqref{eq:alpha3} and \eqref{eq:beta3}.
+
+Now suppose \(D < 3\). Then the line \eqref{eq:betastar} is vacuously true, so consider \eqref{eq:aastar}.
+
+Let \(\alpha_3\) denote any nonzoro element of \(K\).
+
+Then \(A^2A^*-A^*A^2, AA^*-A^*A\) certainly span \(L\) by Claim 3.
+
+So, \eqref{eq:a2astara3} holds for appropriate \(\alpha_1\) and \(\alpha_2\in K\).
+
+Now, \eqref{eq:aastar} holds, where \(\beta\), \(\gamma\), \(\delta\) are given by \eqref{eq:beta3}, \eqref{eq:gamma3}, \eqref{eq:delta3}.
+
+Claim 7. Lines \eqref{eq:beta}, \eqref{eq:gamma}, \eqref{eq:delta} hold.
+
+\emph{Proof of Claim 7.}
+Pick an integer \(i\) \((0\leq i\leq D-1)\).
+
+By \eqref{eq:aastar}, we have
+\begin{align}
+O & = E_i(A^3A^*-A^*A^3-(\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A))E_{i+1}\\
+& = E_iA^*E_{i+1}(\theta^3_i-\theta^3-(\beta+1)(\theta^*_i\theta_{i+1}-\theta_i\theta^2)-\gamma(\theta^2_i-\theta^2_{i+1})-\delta(\theta_i-\theta_{i+1}))\\
+& = E_iA^*E_{i+1}(\theta_i-\theta_{i+1})(\theta^2_i+\theta_i\theta_{i+1}+\theta_{i+1}^2-(\beta+1)\theta_i\theta_{i+1}-\gamma(\theta_i+\theta_{i+1})-\delta)\\
+& = E_iA^*E_{i+1}(\theta_i-\theta_{i+1})(\theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta).
+\end{align}
+
+But \(E_iA^*E_{i+1} \neq O\) by \eqref{eq:eastare}, and of course, \(\theta_i\neq \theta_{i+1}\), so
+\[0 = \theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta.\]
+This proves \eqref{eq:delta}.
+
+To obtain \eqref{eq:gamma}, pick any integer \(i\) \((0\leq i\leq D-2)\).
+Then by \eqref{eq:delta},
+\begin{align}
+0 & = \theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta\\
+& \qquad -(\theta^2_{i+1}-\beta\theta_{i+1}\theta_{i+2}+\theta_{i+2}^2-\gamma(\theta_{i+1}+\theta_{i+2})-\delta)\\
+& = \theta_i^2 - \beta\theta_i\theta_{i+1}-\gamma\theta_i + \beta\theta_{i+1}\theta_{i+2}-{\theta^*_{i+2}}^2 + \gamma\theta_{i+2}\\
+& = (\theta_i-\theta_{i+2})(\theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma).
+\end{align}
+So \(0 = \theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma\).
+
+This gives \eqref{eq:gamma}.
+
+To see \eqref{eq:beta}, pick an integer \(i\) \((0\leq i\leq D-3)\).
+
+Then by \eqref{eq:gamma},
+\begin{align}
+0 & = (\theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma) - (\theta_{i+1} - \beta\theta_{i+2} + \theta_{i+3} - \gamma) \\
+& = \theta_i-(\beta+1)\theta_{i+1} + (\beta+1)\theta_{i+2} - \theta_{i+3}.
+\end{align}
+We have
+\[\beta = \frac{\theta_i-\theta_{i+3}}{\theta_{i+1}-\theta_{i+2}} - 1 = \frac{\theta_i-\theta_{i+1}+\theta_{i+2}-\theta_{i+3}}{\theta_{i+1}-\theta_{i+2}},\]
+as desired.
+
+This proves Claim 7.
+
+We have now proved \eqref{eq:abracket}, \eqref{eq:aastar}, \eqref{eq:beta}, \eqref{eq:betastar}, \eqref{eq:gamma1}, \eqref{eq:delta}.
+
+Interchanging the roles of \(A\) and \(A^*\), we obtain \eqref{eq:astarbracket}, \eqref{eq:astara}, \eqref{eq:gammastar}, \eqref{eq:deltastar}.
+
+\hypertarget{lec30}{%
+\chapter{\texorpdfstring{\(R, F, L\) Matrices}{R, F, L Matrices}}\label{lec30}}
+
+\textbf{Monday, April 12, 1993} \# Edit Date
+
+Let \(\Gamma = (X, E)\) be distance regular of diameter \(D\geq 3\) with standard module \(V\).
+
+Assume \(\Gamma\) is \(Q\)-polynomial with respect to the ordering
+\[E_0, E_1, \ldots, E_D\]
+of primitive idempotents. Let \(A_i\) be an \(i\)-th adjacency matrix, and \(A = A_1\).
+\[A = \sum_{i=0}^D\theta_i A_i, \quad E_i = |X|^{-1}\sum_{i=0}^D\theta^*_i A_i.\]
 
 \hypertarget{lec55}{%
 \chapter{Title of the Chapter}\label{lec55}}

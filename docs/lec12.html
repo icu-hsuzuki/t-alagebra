@@ -128,7 +128,8 @@ div.csl-indent {
 <li class="chapter" data-level="27" data-path="lec27.html"><a href="lec27.html"><i class="fa fa-check"></i><b>27</b> <span class="math inline">\(P\)</span>-and <span class="math inline">\(Q\)</span>-Polynomial Schemes</a></li>
 <li class="chapter" data-level="28" data-path="lec28.html"><a href="lec28.html"><i class="fa fa-check"></i><b>28</b> The First Eigenspace of a <span class="math inline">\(Q\)</span>-DRG</a></li>
 <li class="chapter" data-level="29" data-path="lec29.html"><a href="lec29.html"><i class="fa fa-check"></i><b>29</b> Tridiagonal Pair <span class="math inline">\(A, A^*\)</span></a></li>
-<li class="chapter" data-level="30" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>30</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="30" data-path="lec30.html"><a href="lec30.html"><i class="fa fa-check"></i><b>30</b> <span class="math inline">\(R, F, L\)</span> Matrices</a></li>
+<li class="chapter" data-level="31" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>31</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -199,7 +200,7 @@ Therefore, <span class="math inline">\(\Gamma\)</span> is distance-regular with 
 Fix <span class="math inline">\(x\in X\)</span>, and let <span class="math inline">\(T \equiv T(x)\)</span>, <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, and <span class="math inline">\(d \equiv d(x)\)</span>.
 By defintion of distance-regularity, for every <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq d)\)</span>,
 <span class="math display">\[\begin{align}
-A\left(\sum_{y\in X, \partial(x,y)=i}\hat{y}\right) &amp; = 
+A\left(\sum_{y\in X, \partial(x,y)=i}\hat{y}\right) &amp; =
 b_{i-1}(x)\sum_{y\in X, \partial(x,y) = i-1}\hat{y} \\
 &amp; \qquad + a_{i}(x)\sum_{y\in X, \partial(x,y) = i}\hat{y}\\
 &amp; \qquad + c_{i+1}(x)\sum_{y\in X, \partial(x,y) = i+1}\hat{y}.
@@ -210,7 +211,7 @@ is <span class="math inline">\(A\)</span>-invariant and so <span class="math inl
 </div>
 <p>Next, we show more is true if <span class="math inline">\((i)-(iii)\)</span> hold in Lemma <a href="lec12.html#lem:distance-reguarity">12.1</a>.</p>
 <p>In fact, <span class="math inline">\(d(x)\)</span>, <span class="math inline">\(a_i(x)\)</span>, <span class="math inline">\(c_i(x)\)</span>, and <span class="math inline">\(b_i(x)\)</span> are
-<span class="math display">\[\begin{cases} 
+<span class="math display">\[\begin{cases}
 \text{independent of $X$} &amp; \text{if $\Gamma$ is regular; or}\\
 \text{constant over $X^+$ and $X^-$} &amp; \text{if $\Gamma$ is biregular.}
 \end{cases}\]</span></p>
@@ -308,8 +309,8 @@ Thus,
 \end{align}\]</span>
 Moreover, as <span class="math inline">\(m(\theta_i)\)</span>, <span class="math inline">\(m&#39;(\theta_i)\in \mathbb{R}\)</span>,
 <span class="math display">\[\frac{\langle E_iw, E_iw&#39;\rangle}{\|w\|\|w&#39;\|}  = \frac{\overline{\langle E_iw, E_iw&#39;\rangle}}{\|w&#39;\|\|w\|}
- = \overline{\overline{p(\theta_i)}m&#39;(\theta_i)} 
- = p(\theta_i)m&#39;(\theta_i).\]</span></p>
+= \overline{\overline{p(\theta_i)}m&#39;(\theta_i)}
+= p(\theta_i)m&#39;(\theta_i).\]</span></p>
 <p><span class="math inline">\((iii)\)</span> Sicne,
 <span class="math display">\[\frac{|\langle E_iw, E_iw&#39;\rangle\|^2}{\|w\|^2\|w&#39;\|^2} = p(\theta_i)p&#39;(\theta_i)m(\theta_i)m&#39;(\theta_i),\]</span>
 <span class="math display">\[\begin{align}

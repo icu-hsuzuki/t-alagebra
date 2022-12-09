@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lecture Note on Terwilliger Algebra</title>
+  <title>Chapter 30 \(R, F, L\) Matrices | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lecture Note on Terwilliger Algebra" />
+  <meta property="og:title" content="Chapter 30 \(R, F, L\) Matrices | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lecture Note on Terwilliger Algebra" />
+  <meta name="twitter:title" content="Chapter 30 \(R, F, L\) Matrices | Lecture Note on Terwilliger Algebra" />
   
   <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="lec1.html"/>
+<link rel="prev" href="lec29.html"/>
+<link rel="next" href="lec55.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -151,83 +151,23 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Lecture Note on Terwilliger Algebra</h1>
-<p class="author"><em>P. Terwilliger, edited by H. Suzuki</em></p>
-<p class="date"><em>2022-12-09</em></p>
-</div>
-<div id="about-this-lecturenote" class="section level1 unnumbered hasAnchor">
-<h1>About this lecturenote<a href="index.html#about-this-lecturenote" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="setting" class="section level2 unnumbered hasAnchor">
-<h2>Setting<a href="index.html#setting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>sudo
-This note is created by <code>bookdown</code> package on RStudio.</p>
-<p>For <code>bookdown</code> See <span class="citation">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>, <span class="citation">(<a href="#ref-xie2017" role="doc-biblioref">Xie 2017</a>)</span>, <span class="citation">(<a href="#ref-xie2018" role="doc-biblioref">Yihui Xie 2018</a>)</span>.</p>
-<ol style="list-style-type: decimal">
-<li>Log-in to my GitHub Account</li>
-<li>Go to RStudio/bookdown-demo repository: <a href="https://github.com/rstudio/bookdown-demo" class="uri">https://github.com/rstudio/bookdown-demo</a></li>
-<li>Use This Template</li>
-<li>Input Repository Name</li>
-<li>Select Public - default</li>
-<li>Create repository from template</li>
-<li>From Code download ZIP</li>
-<li>Move the extracted folder into a favorite directory</li>
-<li>Open RStudio Project in the folder</li>
-<li>Use Terminal in the buttom left pane
-<ul>
-<li>confirm that the current directory is the home directry of the project by pwd</li>
-</ul></li>
-<li>(failed to proceed by ssh)</li>
-<li>Use Console
-<ol style="list-style-type: decimal">
-<li>library(usethis)</li>
-<li>use_git()</li>
-<li>use_github() — Error</li>
-<li>gh_token_help()</li>
-<li>create_github_token(): create a token in the github page. Copy the token</li>
-<li>gitcreds::gitcreds_set(): paste the token, the token is to be expired in 30 days</li>
-</ol></li>
-<li>Use Terminal
-<ol style="list-style-type: decimal">
-<li>git remote add origin <a href="https://github.com/icu-hsuzuki/t-alagebra.git" class="uri">https://github.com/icu-hsuzuki/t-alagebra.git</a></li>
-<li>git push -u origin main</li>
-<li>type in the password of the computer</li>
-</ol></li>
-<li>Use GIT in R Studio</li>
-</ol>
-</div>
-<div id="another-host" class="section level2 unnumbered hasAnchor">
-<h2>Another Host<a href="index.html#another-host" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li>create a project by version control git</li>
-<li>git init</li>
-<li>git remote add origin <a href="mailto:git@github.com" class="email">git@github.com</a>:<account>/<repository>.git</li>
-<li>git branch -r</li>
-<li>git fetch</li>
-<li>git pull origin main</li>
-</ol>
+<div id="lec30" class="section level1 hasAnchor" number="30">
+<h1><span class="header-section-number">Chapter 30</span> <span class="math inline">\(R, F, L\)</span> Matrices<a href="lec30.html#lec30" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Monday, April 12, 1993</strong> # Edit Date</p>
+<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be distance regular of diameter <span class="math inline">\(D\geq 3\)</span> with standard module <span class="math inline">\(V\)</span>.</p>
+<p>Assume <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to the ordering
+<span class="math display">\[E_0, E_1, \ldots, E_D\]</span>
+of primitive idempotents. Let <span class="math inline">\(A_i\)</span> be an <span class="math inline">\(i\)</span>-th adjacency matrix, and <span class="math inline">\(A = A_1\)</span>.
+<span class="math display">\[A = \sum_{i=0}^D\theta_i A_i, \quad E_i = |X|^{-1}\sum_{i=0}^D\theta^*_i A_i.\]</span></p>
 
-</div>
-</div>
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-xie2015" class="csl-entry">
-Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://duhi23.github.io/Analisis-de-datos/Yihue.pdf">https://duhi23.github.io/Analisis-de-datos/Yihue.pdf</a>.
-</div>
-<div id="ref-xie2017" class="csl-entry">
-———. 2017. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. 1st ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/bookdown/">https://bookdown.org/yihui/bookdown/</a>.
-</div>
-<div id="ref-xie2018" class="csl-entry">
-Yihui Xie, Garret Grolemund, J. J Allaire. 2018. <em>R Markdown: The Definitive Guide</em>. 1st ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown/">https://bookdown.org/yihui/rmarkdown/</a>.
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="lec1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec29.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lec55.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -258,7 +198,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/30-lecture30.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -266,7 +206,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/icu-hsuzuki/t-algebra/master/index.Rmd",
+"link": "https://github.com/icu-hsuzuki/t-algebra/master/30-lecture30.Rmd",
 "text": null
 },
 "download": ["t-algebra.pdf", "t-algebra.epub"],

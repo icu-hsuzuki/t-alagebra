@@ -152,3 +152,129 @@ we find
 \begin{equation}
 E^*_iA^\ell E^*_0 \in \mathrm{Span}(E^*_iA^jE^*_0\mid 1\leq j < i). (\#eq:eistaraiestar0)
 \end{equation}
+But the left side of \@ref(eq:eistaraiestar0) is nonzero. 
+
+A contradiction.
+
+
+Since $a^2A^*A-AA^*A^2$ is contained in $L$, we find by Claim 2,
+\begin{equation}
+A^2A^*A - AA^*A^2 = \sum_{i=1}^D\alpha_i(A^iA^*-A^*A^i) (\#eq:a2astara)
+\end{equation}
+for some $\alpha_0, \ldots, \alpha_D\in K$.
+
+Claim 4. $\alpha_i = 0 \quad (3<i\leq D)$.
+
+_Proof of Claim 4._
+Suppose not, and set
+$$t = \max\{i\mid 3<i\leq D, \; \alpha_i\neq 0\}.$$
+Then by \@ref(eq:a2astara), and Claim 1,
+\begin{align}
+0 & = E^*_t\left(A^2A^*A - AA^*A^2 - \sum_{i=1}^D\alpha_i(A^iA^*-A^*A^i)\right)E^*_0\\
+& = \alpha_t(\theta^*_t-\theta^*_0)E^*_tA^tE^*_0\\
+& \neq O.
+\end{align}
+
+(Since $\alpha_i=$ if $i>t$,
+\begin{align}
+E^*_tA^2A^*AE^*_0 & = E^*_tAA^*A^2E^*_0 = O \quad (\text{as} 2+1 < t-0)\\
+E^*_tA^iA^*E^*_0 & = E^*_tA^*A^iE^*_0 = O\\
+E^*_tA^tA^*E^*_0 & = \theta^*_0 E^*_tA^tE^*_0,\\
+E^*_tA^*A^tE^*_0 & = \theta^*_tE^*_tA^*A^tE^*_0.)\\
+\end{align}
+
+A contradiction. This proves Claim 4.
+
+Claim 5.  Suppose $D\geq 3$. Then
+\begin{equation}
+\alpha_3 = \frac{\theta^*_{i+1}-\theta^*_{i+2}}{\theta^*_i - \theta^*_{i+3}} \quad \text{for all }i, \; (0\leq i\leq D-3). (\#eq:alpha3)
+\end{equation}
+In particular, $\alpha\neq 0$.
+
+_Proof of Claim 5._
+Fix and integer $i$ $(0\leq i\leq D-3$). Then 
+by \@ref(eq:eistarajastarakestarell) and \@ref(eq:a2astara),
+\begin{align}
+O & = E^*_{i+3}\left(A^2A^*A - AA^*A^2 - \sum_{j=1}^3\alpha_j(A^iA^*-A^*A^i)\right)E^*_i\\
+& = (\theta^*_{i+1}-\theta^*_{i+2}-\alpha_3(\theta^*_i-\theta^*_{i+3}))E^*_{i+3}A^3E^*_i.
+\end{align}
+But $E^*_{i+3}A^3E^*_i\neq O$ by \@ref(eq:estaraestar), so \@ref(eq:alpha3) holds.
+
+This proves Claim 5.
+
+Claim 6. Lines \@ref(eq:abracket), \@ref(eq:aastar), \@ref(eq:betastar) hold.
+
+_Proof of Claim 6._
+First suppose $D\geq 3$. Then by \@ref(eq:a2astara), Claims 4, and 5,
+\begin{equation}
+A^22A^*A-AA^*A^2 = \alpha_3(A^3A^*-A^*A^3)+\alpha_2(A^2A^*-A^*A^2) + \alpha_1(AA^*-A^*A), (\#eq:a2astara3)
+\end{equation}
+where $\alpha_3\neq 0$. Hence
+$$A^3A^*-A^*A^3-\frac{1}{\alpha_3}(A^2A^*A-AA^*A^2)+\frac{\alpha_2}{\alpha_3}(A^2A^*-A^*A^2)+
+\frac{\alpha_1}{\alpha_3}(AA^*-A^*A)=O.$$
+Now \@ref(eq:aastar) is immediate, where
+\begin{align}
+\beta & = \frac{1}{\alpha_3}-1, (\#eq:beta3)\\
+\gamma & = -\frac{\alpha_2}{\alpha_3}, (\#eq:gamma3)\\
+\delta & = -\frac{\alpha_1}{\alpha_3}. (\#eq:delta3)
+\end{align}
+The line \@ref(eq:abracket) follows from the definition of $[\text{ }, \text{ }]$. 
+
+The line \@ref(eq:betastar) is immediate from \@ref(eq:alpha3) and \@ref(eq:beta3).
+
+Now suppose $D < 3$. Then the line \@ref(eq:betastar) is vacuously true, so consider  \@ref(eq:aastar).
+
+Let $\alpha_3$ denote any nonzoro element of $K$.
+
+Then $A^2A^*-A^*A^2, AA^*-A^*A$ certainly span $L$ by Claim 3.
+
+So, \@ref(eq:a2astara3) holds for appropriate $\alpha_1$ and $\alpha_2\in K$.
+
+Now, \@ref(eq:aastar) holds, where $\beta$, $\gamma$, $\delta$ are given by \@ref(eq:beta3), \@ref(eq:gamma3), \@ref(eq:delta3).
+
+
+Claim 7. Lines \@ref(eq:beta), \@ref(eq:gamma), \@ref(eq:delta) hold.
+
+_Proof of Claim 7._
+Pick an integer $i$ $(0\leq i\leq D-1)$.
+
+By \@ref(eq:aastar), we have
+\begin{align}
+O & = E_i(A^3A^*-A^*A^3-(\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A))E_{i+1}\\
+& = E_iA^*E_{i+1}(\theta^3_i-\theta^3-(\beta+1)(\theta^*_i\theta_{i+1}-\theta_i\theta^2)-\gamma(\theta^2_i-\theta^2_{i+1})-\delta(\theta_i-\theta_{i+1}))\\
+& = E_iA^*E_{i+1}(\theta_i-\theta_{i+1})(\theta^2_i+\theta_i\theta_{i+1}+\theta_{i+1}^2-(\beta+1)\theta_i\theta_{i+1}-\gamma(\theta_i+\theta_{i+1})-\delta)\\
+& = E_iA^*E_{i+1}(\theta_i-\theta_{i+1})(\theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta).
+\end{align}
+
+But $E_iA^*E_{i+1} \neq O$ by \@ref(eq:eastare), and of course, $\theta_i\neq \theta_{i+1}$, so
+$$0 = \theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta.$$
+This proves \@ref(eq:delta).
+
+To obtain \@ref(eq:gamma), pick any integer $i$ $(0\leq i\leq D-2)$.
+Then by \@ref(eq:delta),
+\begin{align}
+0 & = \theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta\\
+& \qquad -(\theta^2_{i+1}-\beta\theta_{i+1}\theta_{i+2}+\theta_{i+2}^2-\gamma(\theta_{i+1}+\theta_{i+2})-\delta)\\
+& = \theta_i^2 - \beta\theta_i\theta_{i+1}-\gamma\theta_i + \beta\theta_{i+1}\theta_{i+2}-{\theta^*_{i+2}}^2 + \gamma\theta_{i+2}\\
+& = (\theta_i-\theta_{i+2})(\theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma).
+\end{align}
+So $0 = \theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma$. 
+
+This gives \@ref(eq:gamma).
+
+To see \@ref(eq:beta), pick an integer $i$ $(0\leq i\leq D-3)$.
+
+Then by \@ref(eq:gamma),
+\begin{align}
+0 & = (\theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma) - (\theta_{i+1} - \beta\theta_{i+2} + \theta_{i+3} - \gamma) \\
+& = \theta_i-(\beta+1)\theta_{i+1} + (\beta+1)\theta_{i+2} - \theta_{i+3}.
+\end{align}
+We have
+$$\beta = \frac{\theta_i-\theta_{i+3}}{\theta_{i+1}-\theta_{i+2}} - 1 = \frac{\theta_i-\theta_{i+1}+\theta_{i+2}-\theta_{i+3}}{\theta_{i+1}-\theta_{i+2}},$$
+as desired.
+
+This proves Claim 7.
+
+We have now proved \@ref(eq:abracket), \@ref(eq:aastar), \@ref(eq:beta), \@ref(eq:betastar), \@ref(eq:gamma1), \@ref(eq:delta).
+
+Interchanging the roles of $A$ and $A^*$, we obtain \@ref(eq:astarbracket), \@ref(eq:astara),  \@ref(eq:gammastar), \@ref(eq:deltastar).

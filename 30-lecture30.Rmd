@@ -1,0 +1,9 @@
+# $R, F, L$ Matrices {#lec30}
+**Monday, April 12, 1993** # Edit Date
+
+Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$ with standard module $V$.
+
+Assume $\Gamma$ is $Q$-polynomial with respect to the ordering
+$$E_0, E_1, \ldots, E_D$$
+of primitive idempotents. Let $A_i$ be an $i$-th adjacency matrix, and $A = A_1$.
+$$A = \sum_{i=0}^D\theta_i A_i, \quad E_i = |X|^{-1}\sum_{i=0}^D\theta^*_i A_i.$$

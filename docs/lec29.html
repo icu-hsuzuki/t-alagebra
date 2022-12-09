@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="lec28.html"/>
-<link rel="next" href="lec55.html"/>
+<link rel="next" href="lec30.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -128,7 +128,8 @@ div.csl-indent {
 <li class="chapter" data-level="27" data-path="lec27.html"><a href="lec27.html"><i class="fa fa-check"></i><b>27</b> <span class="math inline">\(P\)</span>-and <span class="math inline">\(Q\)</span>-Polynomial Schemes</a></li>
 <li class="chapter" data-level="28" data-path="lec28.html"><a href="lec28.html"><i class="fa fa-check"></i><b>28</b> The First Eigenspace of a <span class="math inline">\(Q\)</span>-DRG</a></li>
 <li class="chapter" data-level="29" data-path="lec29.html"><a href="lec29.html"><i class="fa fa-check"></i><b>29</b> Tridiagonal Pair <span class="math inline">\(A, A^*\)</span></a></li>
-<li class="chapter" data-level="30" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>30</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="30" data-path="lec30.html"><a href="lec30.html"><i class="fa fa-check"></i><b>30</b> <span class="math inline">\(R, F, L\)</span> Matrices</a></li>
+<li class="chapter" data-level="31" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>31</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -272,7 +273,103 @@ Multiplying each term in <a href="lec29.html#eq:aiastarminusastarai">(29.15)</a>
 we find
 <span class="math display" id="eq:eistaraiestar0">\[\begin{equation}
 E^*_iA^\ell E^*_0 \in \mathrm{Span}(E^*_iA^jE^*_0\mid 1\leq j &lt; i). \tag{29.16}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
+But the left side of <a href="lec29.html#eq:eistaraiestar0">(29.16)</a> is nonzero.</p>
+<p>A contradiction.</p>
+<p>Since <span class="math inline">\(a^2A^*A-AA^*A^2\)</span> is contained in <span class="math inline">\(L\)</span>, we find by Claim 2,
+<span class="math display" id="eq:a2astara">\[\begin{equation}
+A^2A^*A - AA^*A^2 = \sum_{i=1}^D\alpha_i(A^iA^*-A^*A^i) \tag{29.17}
+\end{equation}\]</span>
+for some <span class="math inline">\(\alpha_0, \ldots, \alpha_D\in K\)</span>.</p>
+<p>Claim 4. <span class="math inline">\(\alpha_i = 0 \quad (3&lt;i\leq D)\)</span>.</p>
+<p><em>Proof of Claim 4.</em>
+Suppose not, and set
+<span class="math display">\[t = \max\{i\mid 3&lt;i\leq D, \; \alpha_i\neq 0\}.\]</span>
+Then by <a href="lec29.html#eq:a2astara">(29.17)</a>, and Claim 1,
+<span class="math display">\[\begin{align}
+0 &amp; = E^*_t\left(A^2A^*A - AA^*A^2 - \sum_{i=1}^D\alpha_i(A^iA^*-A^*A^i)\right)E^*_0\\
+&amp; = \alpha_t(\theta^*_t-\theta^*_0)E^*_tA^tE^*_0\\
+&amp; \neq O.
+\end{align}\]</span></p>
+<p>(Since <span class="math inline">\(\alpha_i=\)</span> if <span class="math inline">\(i&gt;t\)</span>,
+<span class="math display">\[\begin{align}
+E^*_tA^2A^*AE^*_0 &amp; = E^*_tAA^*A^2E^*_0 = O \quad (\text{as} 2+1 &lt; t-0)\\
+E^*_tA^iA^*E^*_0 &amp; = E^*_tA^*A^iE^*_0 = O\\
+E^*_tA^tA^*E^*_0 &amp; = \theta^*_0 E^*_tA^tE^*_0,\\
+E^*_tA^*A^tE^*_0 &amp; = \theta^*_tE^*_tA^*A^tE^*_0.)\\
+\end{align}\]</span></p>
+<p>A contradiction. This proves Claim 4.</p>
+<p>Claim 5. Suppose <span class="math inline">\(D\geq 3\)</span>. Then
+<span class="math display" id="eq:alpha3">\[\begin{equation}
+\alpha_3 = \frac{\theta^*_{i+1}-\theta^*_{i+2}}{\theta^*_i - \theta^*_{i+3}} \quad \text{for all }i, \; (0\leq i\leq D-3). \tag{29.18}
+\end{equation}\]</span>
+In particular, <span class="math inline">\(\alpha\neq 0\)</span>.</p>
+<p><em>Proof of Claim 5.</em>
+Fix and integer <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq D-3\)</span>). Then
+by <a href="lec29.html#eq:eistarajastarakestarell">(29.14)</a> and <a href="lec29.html#eq:a2astara">(29.17)</a>,
+<span class="math display">\[\begin{align}
+O &amp; = E^*_{i+3}\left(A^2A^*A - AA^*A^2 - \sum_{j=1}^3\alpha_j(A^iA^*-A^*A^i)\right)E^*_i\\
+&amp; = (\theta^*_{i+1}-\theta^*_{i+2}-\alpha_3(\theta^*_i-\theta^*_{i+3}))E^*_{i+3}A^3E^*_i.
+\end{align}\]</span>
+But <span class="math inline">\(E^*_{i+3}A^3E^*_i\neq O\)</span> by <a href="lec29.html#eq:estaraestar">(29.2)</a>, so <a href="lec29.html#eq:alpha3">(29.18)</a> holds.</p>
+<p>This proves Claim 5.</p>
+<p>Claim 6. Lines <a href="lec29.html#eq:abracket">(29.3)</a>, <a href="lec29.html#eq:aastar">(29.4)</a>, <a href="lec29.html#eq:betastar">(29.8)</a> hold.</p>
+<p><em>Proof of Claim 6.</em>
+First suppose <span class="math inline">\(D\geq 3\)</span>. Then by <a href="lec29.html#eq:a2astara">(29.17)</a>, Claims 4, and 5,
+<span class="math display" id="eq:a2astara3">\[\begin{equation}
+A^22A^*A-AA^*A^2 = \alpha_3(A^3A^*-A^*A^3)+\alpha_2(A^2A^*-A^*A^2) + \alpha_1(AA^*-A^*A), \tag{29.19}
+\end{equation}\]</span>
+where <span class="math inline">\(\alpha_3\neq 0\)</span>. Hence
+<span class="math display">\[A^3A^*-A^*A^3-\frac{1}{\alpha_3}(A^2A^*A-AA^*A^2)+\frac{\alpha_2}{\alpha_3}(A^2A^*-A^*A^2)+
+\frac{\alpha_1}{\alpha_3}(AA^*-A^*A)=O.\]</span>
+Now <a href="lec29.html#eq:aastar">(29.4)</a> is immediate, where
+<span class="math display" id="eq:delta3" id="eq:gamma3" id="eq:beta3">\[\begin{align}
+\beta &amp; = \frac{1}{\alpha_3}-1, \tag{29.20}\\
+\gamma &amp; = -\frac{\alpha_2}{\alpha_3}, \tag{29.21}\\
+\delta &amp; = -\frac{\alpha_1}{\alpha_3}. \tag{29.22}
+\end{align}\]</span>
+The line <a href="lec29.html#eq:abracket">(29.3)</a> follows from the definition of <span class="math inline">\([\text{ }, \text{ }]\)</span>.</p>
+<p>The line <a href="lec29.html#eq:betastar">(29.8)</a> is immediate from <a href="lec29.html#eq:alpha3">(29.18)</a> and <a href="lec29.html#eq:beta3">(29.20)</a>.</p>
+<p>Now suppose <span class="math inline">\(D &lt; 3\)</span>. Then the line <a href="lec29.html#eq:betastar">(29.8)</a> is vacuously true, so consider <a href="lec29.html#eq:aastar">(29.4)</a>.</p>
+<p>Let <span class="math inline">\(\alpha_3\)</span> denote any nonzoro element of <span class="math inline">\(K\)</span>.</p>
+<p>Then <span class="math inline">\(A^2A^*-A^*A^2, AA^*-A^*A\)</span> certainly span <span class="math inline">\(L\)</span> by Claim 3.</p>
+<p>So, <a href="lec29.html#eq:a2astara3">(29.19)</a> holds for appropriate <span class="math inline">\(\alpha_1\)</span> and <span class="math inline">\(\alpha_2\in K\)</span>.</p>
+<p>Now, <a href="lec29.html#eq:aastar">(29.4)</a> holds, where <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\delta\)</span> are given by <a href="lec29.html#eq:beta3">(29.20)</a>, <a href="lec29.html#eq:gamma3">(29.21)</a>, <a href="lec29.html#eq:delta3">(29.22)</a>.</p>
+<p>Claim 7. Lines <a href="lec29.html#eq:beta">(29.7)</a>, <a href="lec16.html#eq:gamma">(16.2)</a>, <a href="lec29.html#eq:delta">(29.11)</a> hold.</p>
+<p><em>Proof of Claim 7.</em>
+Pick an integer <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq D-1)\)</span>.</p>
+<p>By <a href="lec29.html#eq:aastar">(29.4)</a>, we have
+<span class="math display">\[\begin{align}
+O &amp; = E_i(A^3A^*-A^*A^3-(\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A))E_{i+1}\\
+&amp; = E_iA^*E_{i+1}(\theta^3_i-\theta^3-(\beta+1)(\theta^*_i\theta_{i+1}-\theta_i\theta^2)-\gamma(\theta^2_i-\theta^2_{i+1})-\delta(\theta_i-\theta_{i+1}))\\
+&amp; = E_iA^*E_{i+1}(\theta_i-\theta_{i+1})(\theta^2_i+\theta_i\theta_{i+1}+\theta_{i+1}^2-(\beta+1)\theta_i\theta_{i+1}-\gamma(\theta_i+\theta_{i+1})-\delta)\\
+&amp; = E_iA^*E_{i+1}(\theta_i-\theta_{i+1})(\theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta).
+\end{align}\]</span></p>
+<p>But <span class="math inline">\(E_iA^*E_{i+1} \neq O\)</span> by <a href="lec29.html#eq:eastare">(29.1)</a>, and of course, <span class="math inline">\(\theta_i\neq \theta_{i+1}\)</span>, so
+<span class="math display">\[0 = \theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta.\]</span>
+This proves <a href="lec29.html#eq:delta">(29.11)</a>.</p>
+<p>To obtain <a href="lec16.html#eq:gamma">(16.2)</a>, pick any integer <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq D-2)\)</span>.
+Then by <a href="lec29.html#eq:delta">(29.11)</a>,
+<span class="math display">\[\begin{align}
+0 &amp; = \theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta\\
+&amp; \qquad -(\theta^2_{i+1}-\beta\theta_{i+1}\theta_{i+2}+\theta_{i+2}^2-\gamma(\theta_{i+1}+\theta_{i+2})-\delta)\\
+&amp; = \theta_i^2 - \beta\theta_i\theta_{i+1}-\gamma\theta_i + \beta\theta_{i+1}\theta_{i+2}-{\theta^*_{i+2}}^2 + \gamma\theta_{i+2}\\
+&amp; = (\theta_i-\theta_{i+2})(\theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma).
+\end{align}\]</span>
+So <span class="math inline">\(0 = \theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma\)</span>.</p>
+<p>This gives <a href="lec16.html#eq:gamma">(16.2)</a>.</p>
+<p>To see <a href="lec29.html#eq:beta">(29.7)</a>, pick an integer <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq D-3)\)</span>.</p>
+<p>Then by <a href="lec16.html#eq:gamma">(16.2)</a>,
+<span class="math display">\[\begin{align}
+0 &amp; = (\theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma) - (\theta_{i+1} - \beta\theta_{i+2} + \theta_{i+3} - \gamma) \\
+&amp; = \theta_i-(\beta+1)\theta_{i+1} + (\beta+1)\theta_{i+2} - \theta_{i+3}.
+\end{align}\]</span>
+We have
+<span class="math display">\[\beta = \frac{\theta_i-\theta_{i+3}}{\theta_{i+1}-\theta_{i+2}} - 1 = \frac{\theta_i-\theta_{i+1}+\theta_{i+2}-\theta_{i+3}}{\theta_{i+1}-\theta_{i+2}},\]</span>
+as desired.</p>
+<p>This proves Claim 7.</p>
+<p>We have now proved <a href="lec29.html#eq:abracket">(29.3)</a>, <a href="lec29.html#eq:aastar">(29.4)</a>, <a href="lec29.html#eq:beta">(29.7)</a>, <a href="lec29.html#eq:betastar">(29.8)</a>, <a href="lec29.html#eq:gamma1">(29.9)</a>, <a href="lec29.html#eq:delta">(29.11)</a>.</p>
+<p>Interchanging the roles of <span class="math inline">\(A\)</span> and <span class="math inline">\(A^*\)</span>, we obtain <a href="lec29.html#eq:astarbracket">(29.5)</a>, <a href="lec29.html#eq:astara">(29.6)</a>, <a href="lec29.html#eq:gammastar">(29.10)</a>, <a href="lec29.html#eq:deltastar">(29.12)</a>.</p>
 
 </div>
             </section>
@@ -281,7 +378,7 @@ E^*_iA^\ell E^*_0 \in \mathrm{Span}(E^*_iA^jE^*_0\mid 1\leq j &lt; i). \tag{29.1
         </div>
       </div>
 <a href="lec28.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lec55.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec30.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

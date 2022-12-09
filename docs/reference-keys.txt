@@ -35,6 +35,12 @@ eq:erstarare0
 eq:eistarajastarakestarell
 eq:aiastarminusastarai
 eq:eistaraiestar0
+eq:a2astara
+eq:alpha3
+eq:a2astara3
+eq:beta3
+eq:gamma3
+eq:delta3
 lec1
 lec2
 lec3
@@ -64,4 +70,5 @@ lec26
 lec27
 lec28
 lec29
+lec30
 lec55
