@@ -34,3 +34,181 @@ $$F(E^*_iV) \subseteq E^*_{i}V \quad (0\leq i\leq D).$$
 Also, 
 $$A = R + F + L.$$
 
+:::{.theorem #rfl-relations}
+With the above notation and assumptions,
+
+| $(i)$ For all $i$ $(2\leq i\leq D)$,
+$$g^-_iFL^2 + LFL + g^+_iL^2F - \gamma L^2)E^*_i = O,$$
+where
+\begin{align}
+g^+_i & = \frac{\theta^*_{i-2}-(\beta+1)\theta^*_{i-1}+\beta\theta^*_i}{\theta^*_{i-2}-\theta^*_i}\\
+g^-_i & = \frac{\theta^*_{i-2}+(\beta+1)\theta^*_{i-1}-\theta^*_i}{\theta^*_{i-2}-\theta^*_i}.
+\end{align}
+
+| $(ii)$ For all $i$ $(0\leq i\leq D)$,
+$$[F, LR - h_iRL]E^*_i = O,$$ 
+where
+\begin{align}
+h_i & = \frac{\theta^*_{i-1}-\theta^*_i}{\theta^*_i-\theta^*_{i+1}} \quad (1\leq i\leq D-1),
+\end{align}
+and $h_0, h_D$ are indeterminants.
+
+| $(iii)$ For all $i$ $(1\leq i\leq D)$, 
+$$(e^-e_iRL^2 + (\beta+2)LRL + e^+_iL^2R + LF^2 - \beta FLF + F^2L - \gamma(LF+FL) - \delta L)E^*_i = O,$$
+where
+\begin{align}
+e^+_i & = \frac{\theta^*_{i-1}-(\beta+2)\theta^*_{i}+(\beta+1)\theta^*_{i+1}}{\theta^*_{i-1}-\theta^*_i} \quad (1\leq i\leq D)\\
+e^-_i & = \frac{-(\beta+1)\theta^*_{i-2}+(\beta+2)\theta^*_{i-1}-\theta^*_i}{\theta^*_{i-1}-\theta^*_i} \quad (2\leq i\leq D),
+\end{align}
+and $e^+_0, e^-_1$ are indeterminants.
+:::
+
+:::{.proof}
+WE have
+$$O = A^3A^*-A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2)\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A).$$
+
+| $(i)$ Fix $i$ $(2\leq i\leq D)$, and multply above on the left by $E^*_{i-2}$, and on the right by $E^*_i$. Now reduce.
+
+For example,
+$$E^*_{i-2}A^3A^*E^*_i = \theta^*_i E^*_{i-2}A^3 E^*_i,$$
+where
+\begin{align}
+E^*_{i-2}A^3 E^*_i & = E^*_{i-2}A\left(\sum_{r=0}^D E^*_r\right)A\left(\sum_{s=0}^D E^*_s\right)AE^*_i\\
+& = \sum_{r,s}E^*_{i-2}AE^*_r AE^*_s AE^*_i\\
+& = \sum_{r,s, |i-2-r|\leq 1, |r-s|\leq 1, |s-i|\leq 1}E^*_{i-2}AE^*_r AE^*_s AE^*_i\\
+& = E^*_{i-2}AE^*_{i-2}AE^*_{i-1}AE^*_i + E^*_{i-2}AE^*_{i-1}AE^*_{i-1}AE^*_i + E^*_{i-2}AE^*_{i-1}AE^*_{i}AE^*_i\\
+& = (FL^2 + LFL + L^2F)E^*_i.
+\end{align}
+Reducing the other terms in a similar manner, and simplifying, we obtain $(i)$.
+
+:::{.remark}
+\begin{align}
+E^*_{i-2}A^*A^3E^*_i & = \theta^*_{i-2}E^*_{i-2}A^3E^*_i\\
+& = \theta^*_{i-2}(FL^2+LFL + L^2F)E^*_i\\
+E^*_{i-2}A^2A^*AE^*_i & = (\theta^*_{i-1}(FL^2+LFL) + \theta^*_iL^2F)E^*_i\\
+E^*_{i-2}AA^*A^2E^*_i & = (\theta^*_{i-2}FL^2 + \theta^*_{i-1}(LFL+L^2F))E^*_i\\
+E^*_{i-2}(A^2A^*-A^*A^2)E^*_i & = (\theta^*_i-\theta^*_{i-2})L^2E^*_i\\
+E^*_{i-2}(AA^*-A^*A)E^*_i & = O.
+\end{align}
+Then we have
+\begin{align}
+O &= ((\theta^*_i-\theta^*_{i-2})(FL^2+LFL+L^2F)\\
+& \quad -(\beta+1)(\theta^*_{i-1}(FL^2+LFL) + \theta^* L^2F - \theta^*_{i-2}FL^2 - \theta^*_{i-1}(LFL+L^2F)) \\
+& \quad -\gamma(\theta^*_i-\theta^*_{i-2})L^2)E^*_i\\
+& = ((\theta^*_i-\theta^*_{i-2}-(\beta+1)(\theta^*_{i-1}-\theta^*_{i-2}))FL^2 + (\theta^*_i-\theta^*_{i-2})LFL\\
+& \quad + (\theta^*_i-\theta^*_{i-2}-(\beta+1)(\theta^*_i-\theta^*_{i-1}))L^2F - \gamma(\theta^*_i-\theta^*_{i-2})L^2)E^*_1\\
+& = -(\theta^*_{i-2}-\theta^*_i)\left(\left(\frac{-\beta \theta^*_{i-2}+(\beta+1)\theta^*_{i-1}-\theta^*_i}{\theta^*_{i-2}-\theta^*_i}\right)FL^2+LFL\right.\\
+& \quad + \left. \left(\frac{\theta^*_{i-2}-(\beta+1)\theta^*_{i-1}+\beta \theta^*_i}{\theta^*_{i-2}-\theta^*_i}\right)L^2F - \gamma L^2\right)E^*_i\\
+& = (\theta^*_i-\theta^*_{i-2})(g^-_iFL^2 + LFL + g^+_iL^2F - \gamma L^2)E^*_i.
+\end{align}
+:::
+
+| $(ii)$, $(iii)$ are obtained in a similar manner replacing $i-2$ by $i$ (resp. $i-1$).
+:::
+
+| 
+| 
+
+:::{.remark}
+| $(ii)$ We have
+$$O = E^*_i(A^3A^*-A^*A^3-(\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*E))E^*_i.$$
+Since $\beta+1\neq 0$, by \@ref(eq:beta3) if $D\geq 3$,
+\begin{align}
+O &= E^*_i(A^2A^*A - AA^*A^2)E^*_i\\
+& = ((\theta^*_i-\theta^*_{i-1})RLF + (\theta^*_i-\theta^*_{i+1})LRF)+(\theta^*_{i-1}-\theta^*_i)FRL+(\theta^*_{i+1}-\theta^*_i)FLR)E^*_i\\
+& = [F, (\theta^*_{i-1}-\theta^*_i)RL - (\theta^*_i-\theta^*_{i+1})LR]E^*_i\\
+& = (\theta^*_{i+1}-\theta^*_i)\left[F, LR - \frac{\theta^*_{i-1}-\theta^*_i}{\theta^*_i-\theta^*_{i+1}}RL\right]E^*_i\\
+& = (\theta^*_{i+1}-\theta^*_i)[F, LR - h_i RL]E^*_i.
+\end{align}
+
+| $(iii)$ We have
+\begin{align}
+O & = E^*_{i-1}(A^3A^*-A^*A^3-(\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*E))E^*_i\\
+& = ((\theta^*_i-\theta^*_{i-1})(RL^2+ LRL + L^2R + LF^2 + FLF + F^2L))\\
+& \quad -(\beta+1)((\theta^*_{i-1}-\theta^*_{i-2})RL^2 + (\theta^*_{i-1}-\theta^*_i)LRL + (\theta^*_{i+1}-\theta^*_i)L^2R\\
+& \quad + (\theta^*_i-\theta^*_{i-1})FLF\\
+& \quad - \gamma(\theta^*-\theta^*_{i-1})(LF+FL)\\
+& \quad - \delta(\theta^*_i-\theta^*_{i-1}L)E^*_i\\
+& = ((\theta^*_i-\theta^*_{i-1})-(\beta+1)(\theta^*_{i-1}-\theta^*_{i-2}))RL^2 \\
+& \quad + (\theta^*_i-\theta^*_{i-1})-(\beta+1)(\theta^*_{i-1}-\theta^*_{i}))LRL\\
+& \quad + (\theta^*_i-\theta^*_{i-1})-(\beta+1)(\theta^*_{i+1}-\theta^*_{i}))L^2R\\
+& \quad + (\theta^*_{i}-\theta^*_{i-1})LF^2 + (\theta^*_i-\theta^*_{i-1})F^2L\\
+& \quad + (\theta^*_i - \theta^*_{i-1}-(\beta+1)(\theta^*_i-\theta^*_{i-1}))FLF\\
+& \quad - \gamma(\theta^*_i-\theta^*_{i-1})(LF+FL)\\
+& \quad - \delta (\theta^*_i-\theta^*_{i-1}L)E^*_i\\
+& = (\theta^*_i-\theta^*_{i-1})\biggl(\frac{-(\beta+1)\theta^*_{i-2}+(\beta+2)\theta^*_{i-2}-\theta^*_i}{\theta^*_{i-1}-\theta^*_i}RL^2+(\beta+2)LRL\\
+& \qquad + \frac{\theta^*_{i-1}-(\beta+2)\theta^*_i+(\beta+1)\theta^*_{i+1}}{\theta^*_{i-1}-\theta^*_i}L^2R + LF^2 - \beta FLF + F^2L\\
+& \qquad -\gamma(LF+FL) - \delta L\biggr)E^*_i\\
+& = (e^-_iRL^2 + (\beta+2)LRL + e^+_iL^2R + LF^2 - \beta FLF + F^2L-\gamma(LF+FL)-\delta L)E^*_i.
+\end{align}
+:::
+
+:::{.lemma #epm-gpm}
+With the notation of Theorem \@ref(thm:rfl-relations),
+\begin{align}
+e^+_i & = \frac{\theta^*_i-\theta^*_{i+2}}{\theta^*_i-\theta^*_{i-1}} \quad (1\leq i\leq D-2)\\
+e^-_i & = \frac{\theta^*_{i-1}-\theta^*_{i-3}}{\theta^*_{i-1}-\theta^*_{i}} \quad (3\leq i\leq D)\\
+g^+_i & = \frac{\theta^*_i-\theta^*_{i+1}}{\theta^*_i-\theta^*_{i-2}} \quad (2\leq i\leq D-1)\\
+g^-_i & = \frac{\theta^*_{i-2}-\theta^*_{i-3}}{\theta^*_{i-2}-\theta^*_{i}} \quad (3\leq i\leq D).
+\end{align}
+In particular, $e^\pm_i$, $g^\pm_i$ are non-zero for the range of $i$ given above.
+:::
+
+:::{.proof}
+In each case, equate the above expression with the corresponding expression in Theorem \@ref(thm:rfl-relations).
+The resulting equation is equal to \@ref(eq:beta).
+:::
+
+
+:::{.remark}
+By Corollary \@ref(cor:beta) and Therem \@ref(thm:aastar),
+$$e^+_i = \frac{\theta^*_{i-1}-(\beta+2)\theta^*_i + (\beta+1)\theta^*_{i+1}}{\beta^*_{i-1}-\theta^*_i},$$
+and
+$$\beta + 1 = \frac{\theta^*_{j-1}-\theta^*_j+\theta^*_{j+1}-\theta^*_{j+2}}{\theta^*_j-\theta^*_{j+1}}+1 = \frac{\theta^*_{j-1}-\theta^*_{j+2}}{\theta^*_j-\theta^*_{j+1}}.$$
+Hence,
+\begin{align}
+e^+_i & = \frac{1}{\theta^*_{i-1}-\theta^*_i}(\theta^*_{i-1}-\theta^*_i-(\beta+1)(\theta^*_i-\theta^*_{i+1}))\\
+& = \frac{1}{\theta^*_{i-1}-\theta^*_i}(\theta^*_{i-1}-\theta^*_i - (\beta+1)(\theta^*_i-\theta^*_{i+2})\\
+& = \frac{\theta^*_i-\theta^*_{i+2}}{\theta^*_{i}-\theta^*_{i-1}},\\
+e^-_i & = \frac{1}{\theta^*_{i-1}-\theta^*_i}(-(\beta+1)\theta^*_{i-2}+(\beta+2)\theta^*_{i-1}-\theta^*_i)\\
+& = \frac{1}{\theta^*_{i-1}-\theta^*_i}(\theta^*_{i-1}-\theta^*_i - \theta^*_{i-3}+\theta^*_{i})\\
+& = \frac{\theta^*_{i-1}-\theta^*_{i-3}}{\theta^*_{i-1}-\theta^*_{i}},\\
+g^+_i & = \frac{1}{\theta^*_{i-2}-\theta^*_i}(\theta^*_{i-2}-(\beta+1)\theta^*_{i-1}+\beta\theta^*_{i})\\
+& = \frac{1}{\theta^*_{i}-\theta^*_{i-2}}(\theta^*_{i}-\theta^*_{i-2} + \theta^*_{i-2}-\theta^*_{i+1})\\
+& = \frac{\theta^*_i-\theta^*_{i+1}}{\theta^*_{i}-\theta^*_{i-3}},\\
+g^-_i & = \frac{1}{\theta^*_{i-2}-\theta^*_i}(-\beta\theta^*_{i-2}+(\beta+1)\theta^*_{i-1}-\theta^*_i)\\
+& = \frac{1}{\theta^*_{i-2}-\theta^*_i}(\theta^*_{i-2}-\theta^*_i + \theta^*_{i}-\theta^*_{i-3})\\
+& = \frac{\theta^*_{i-2}-\theta^*_{i-3}}{\theta^*_{i-2}-\theta^*_{i}}.
+\end{align}
+:::
+
+:::{.corollary #fr2lr2r2l}
+Let $\Gamma = (X, E)$ be dostance-regular of diameter $D\geq 3$, $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$. Fix a vertex $x\in X$, write $E^*_i \equiv E^*_i(x), R\equiv R(x), L\equiv L(x), F\equiv F(x)$.
+Then the following hold.
+
+| $(i)$ $FR^2E^*_j \in \mathrm{Span}(RFRE^*_j, R^2FE^*_j, R^2E^*_j)$, $(0\leq j\leq D-3)$.
+
+| $(ii)$ $R^2FE^*_j \in \mathrm{Span}(RFRE^*_j, FR^2E^*_j, R^2E^*_j)$, $(1\leq j\leq D-2)$.
+
+| $(iii)$ $LR^2E^*_j \in \mathrm{Span}(RLRE^*_j, R^2LE^*_j, F^2RE^*_j, FRFE^*_j, RF^2E^*j, RFE^*_j, FRE^*_j, RE^*_j)$, $(0\leq j\leq D-3)$.
+
+| $(iv)$ $R^2LE^*_j \in \mathrm{Span}(RLRE^*_j, LR^2E^*_j, F^2RE^*_j, FRFE^*_j, RF^2E^*j, RFE^*_j, FRE^*_j, RE^*_j)$,  $(1\leq j\leq D)$.
+:::
+
+:::{.proof}
+Immediate from Theorem \@ref(thm:rfl-relations), and Lemma \@ref(lem:epm-gpm).
+:::
+
+
+:::{.remark}
+By Theorem \@ref(thm:rfl-relations), and Lemma \@ref(lem:epm-gpm), we have the following, but similarly we can obtain above.
+
+| $(i)$ $FL^2E^*_j \in \mathrm{Span}(LFLE^*_j, L^2FE^*_j, L^2E^*_j)$, $(3\leq j\leq D)$.
+
+| $(ii)$ $L^2FE^*_j \in \mathrm{Span}(LFLE^*_j, FL^2E^*_j, L^2E^*_j)$, $(2\leq j\leq D-1)$.
+
+| $(iii)$ $RL^2E^*_j \in \mathrm{Span}(LRLE^*_j, L^2RE^*_j, F^2LE^*_j, FLFE^*_j, LF^2E^*j, LFE^*_j, FLE^*_j, LE^*_j)$, $(3\leq j\leq D)$.
+
+| $(iv)$ $L^2RE^*_j \in \mathrm{Span}(LRLE^*_j, RL^2E^*_j, F^2LE^*_j, FLFE^*_j, LF^2E^*j, LFE^*_j, FLE^*_j, LE^*_j)$,  $(2\leq j\leq D)$.
+:::
+

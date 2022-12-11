@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-09" />
+<meta name="date" content="2022-12-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -182,6 +182,157 @@ satisfies
 <span class="math display">\[F(E^*_iV) \subseteq E^*_{i}V \quad (0\leq i\leq D).\]</span>
 Also,
 <span class="math display">\[A = R + F + L.\]</span></p>
+<div class="theorem">
+<p><span id="thm:rfl-relations" class="theorem"><strong>Theorem 30.1  </strong></span>With the above notation and assumptions,</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> For all <span class="math inline">\(i\)</span> <span class="math inline">\((2\leq i\leq D)\)</span>,</div>
+<p><span class="math display">\[g^-_iFL^2 + LFL + g^+_iL^2F - \gamma L^2)E^*_i = O,\]</span>
+where
+<span class="math display">\[\begin{align}
+g^+_i &amp; = \frac{\theta^*_{i-2}-(\beta+1)\theta^*_{i-1}+\beta\theta^*_i}{\theta^*_{i-2}-\theta^*_i}\\
+g^-_i &amp; = \frac{\theta^*_{i-2}+(\beta+1)\theta^*_{i-1}-\theta^*_i}{\theta^*_{i-2}-\theta^*_i}.
+\end{align}\]</span></p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> For all <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq D)\)</span>,</div>
+<p><span class="math display">\[[F, LR - h_iRL]E^*_i = O,\]</span>
+where
+<span class="math display">\[\begin{align}
+h_i &amp; = \frac{\theta^*_{i-1}-\theta^*_i}{\theta^*_i-\theta^*_{i+1}} \quad (1\leq i\leq D-1),
+\end{align}\]</span>
+and <span class="math inline">\(h_0, h_D\)</span> are indeterminants.</p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> For all <span class="math inline">\(i\)</span> <span class="math inline">\((1\leq i\leq D)\)</span>,</div>
+<p><span class="math display">\[(e^-e_iRL^2 + (\beta+2)LRL + e^+_iL^2R + LF^2 - \beta FLF + F^2L - \gamma(LF+FL) - \delta L)E^*_i = O,\]</span>
+where
+<span class="math display">\[\begin{align}
+e^+_i &amp; = \frac{\theta^*_{i-1}-(\beta+2)\theta^*_{i}+(\beta+1)\theta^*_{i+1}}{\theta^*_{i-1}-\theta^*_i} \quad (1\leq i\leq D)\\
+e^-_i &amp; = \frac{-(\beta+1)\theta^*_{i-2}+(\beta+2)\theta^*_{i-1}-\theta^*_i}{\theta^*_{i-1}-\theta^*_i} \quad (2\leq i\leq D),
+\end{align}\]</span>
+and <span class="math inline">\(e^+_0, e^-_1\)</span> are indeterminants.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-121" class="proof"><em>Proof</em>. </span>WE have
+<span class="math display">\[O = A^3A^*-A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2)\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A).\]</span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> Fix <span class="math inline">\(i\)</span> <span class="math inline">\((2\leq i\leq D)\)</span>, and multply above on the left by <span class="math inline">\(E^*_{i-2}\)</span>, and on the right by <span class="math inline">\(E^*_i\)</span>. Now reduce.</div>
+<p>For example,
+<span class="math display">\[E^*_{i-2}A^3A^*E^*_i = \theta^*_i E^*_{i-2}A^3 E^*_i,\]</span>
+where
+<span class="math display">\[\begin{align}
+E^*_{i-2}A^3 E^*_i &amp; = E^*_{i-2}A\left(\sum_{r=0}^D E^*_r\right)A\left(\sum_{s=0}^D E^*_s\right)AE^*_i\\
+&amp; = \sum_{r,s}E^*_{i-2}AE^*_r AE^*_s AE^*_i\\
+&amp; = \sum_{r,s, |i-2-r|\leq 1, |r-s|\leq 1, |s-i|\leq 1}E^*_{i-2}AE^*_r AE^*_s AE^*_i\\
+&amp; = E^*_{i-2}AE^*_{i-2}AE^*_{i-1}AE^*_i + E^*_{i-2}AE^*_{i-1}AE^*_{i-1}AE^*_i + E^*_{i-2}AE^*_{i-1}AE^*_{i}AE^*_i\\
+&amp; = (FL^2 + LFL + L^2F)E^*_i.
+\end{align}\]</span>
+Reducing the other terms in a similar manner, and simplifying, we obtain <span class="math inline">\((i)\)</span>.</p>
+<div class="remark">
+<p><span id="unlabeled-div-120" class="remark"><em>Remark</em>. </span><span class="math display">\[\begin{align}
+E^*_{i-2}A^*A^3E^*_i &amp; = \theta^*_{i-2}E^*_{i-2}A^3E^*_i\\
+&amp; = \theta^*_{i-2}(FL^2+LFL + L^2F)E^*_i\\
+E^*_{i-2}A^2A^*AE^*_i &amp; = (\theta^*_{i-1}(FL^2+LFL) + \theta^*_iL^2F)E^*_i\\
+E^*_{i-2}AA^*A^2E^*_i &amp; = (\theta^*_{i-2}FL^2 + \theta^*_{i-1}(LFL+L^2F))E^*_i\\
+E^*_{i-2}(A^2A^*-A^*A^2)E^*_i &amp; = (\theta^*_i-\theta^*_{i-2})L^2E^*_i\\
+E^*_{i-2}(AA^*-A^*A)E^*_i &amp; = O.
+\end{align}\]</span>
+Then we have
+<span class="math display">\[\begin{align}
+O &amp;= ((\theta^*_i-\theta^*_{i-2})(FL^2+LFL+L^2F)\\
+&amp; \quad -(\beta+1)(\theta^*_{i-1}(FL^2+LFL) + \theta^* L^2F - \theta^*_{i-2}FL^2 - \theta^*_{i-1}(LFL+L^2F)) \\
+&amp; \quad -\gamma(\theta^*_i-\theta^*_{i-2})L^2)E^*_i\\
+&amp; = ((\theta^*_i-\theta^*_{i-2}-(\beta+1)(\theta^*_{i-1}-\theta^*_{i-2}))FL^2 + (\theta^*_i-\theta^*_{i-2})LFL\\
+&amp; \quad + (\theta^*_i-\theta^*_{i-2}-(\beta+1)(\theta^*_i-\theta^*_{i-1}))L^2F - \gamma(\theta^*_i-\theta^*_{i-2})L^2)E^*_1\\
+&amp; = -(\theta^*_{i-2}-\theta^*_i)\left(\left(\frac{-\beta \theta^*_{i-2}+(\beta+1)\theta^*_{i-1}-\theta^*_i}{\theta^*_{i-2}-\theta^*_i}\right)FL^2+LFL\right.\\
+&amp; \quad + \left. \left(\frac{\theta^*_{i-2}-(\beta+1)\theta^*_{i-1}+\beta \theta^*_i}{\theta^*_{i-2}-\theta^*_i}\right)L^2F - \gamma L^2\right)E^*_i\\
+&amp; = (\theta^*_i-\theta^*_{i-2})(g^-_iFL^2 + LFL + g^+_iL^2F - \gamma L^2)E^*_i.
+\end{align}\]</span></p>
+</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span>, <span class="math inline">\((iii)\)</span> are obtained in a similar manner replacing <span class="math inline">\(i-2\)</span> by <span class="math inline">\(i\)</span> (resp. <span class="math inline">\(i-1\)</span>).</div>
+</div>
+<div class="line-block"><br />
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-122" class="remark"><em>Remark</em>. </span></p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> We have</div>
+<p><span class="math display">\[O = E^*_i(A^3A^*-A^*A^3-(\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*E))E^*_i.\]</span>
+Since <span class="math inline">\(\beta+1\neq 0\)</span>, by <a href="lec29.html#eq:beta3">(29.20)</a> if <span class="math inline">\(D\geq 3\)</span>,
+<span class="math display">\[\begin{align}
+O &amp;= E^*_i(A^2A^*A - AA^*A^2)E^*_i\\
+&amp; = ((\theta^*_i-\theta^*_{i-1})RLF + (\theta^*_i-\theta^*_{i+1})LRF)+(\theta^*_{i-1}-\theta^*_i)FRL+(\theta^*_{i+1}-\theta^*_i)FLR)E^*_i\\
+&amp; = [F, (\theta^*_{i-1}-\theta^*_i)RL - (\theta^*_i-\theta^*_{i+1})LR]E^*_i\\
+&amp; = (\theta^*_{i+1}-\theta^*_i)\left[F, LR - \frac{\theta^*_{i-1}-\theta^*_i}{\theta^*_i-\theta^*_{i+1}}RL\right]E^*_i\\
+&amp; = (\theta^*_{i+1}-\theta^*_i)[F, LR - h_i RL]E^*_i.
+\end{align}\]</span></p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> We have</div>
+<p><span class="math display">\[\begin{align}
+O &amp; = E^*_{i-1}(A^3A^*-A^*A^3-(\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*E))E^*_i\\
+&amp; = ((\theta^*_i-\theta^*_{i-1})(RL^2+ LRL + L^2R + LF^2 + FLF + F^2L))\\
+&amp; \quad -(\beta+1)((\theta^*_{i-1}-\theta^*_{i-2})RL^2 + (\theta^*_{i-1}-\theta^*_i)LRL + (\theta^*_{i+1}-\theta^*_i)L^2R\\
+&amp; \quad + (\theta^*_i-\theta^*_{i-1})FLF\\
+&amp; \quad - \gamma(\theta^*-\theta^*_{i-1})(LF+FL)\\
+&amp; \quad - \delta(\theta^*_i-\theta^*_{i-1}L)E^*_i\\
+&amp; = ((\theta^*_i-\theta^*_{i-1})-(\beta+1)(\theta^*_{i-1}-\theta^*_{i-2}))RL^2 \\
+&amp; \quad + (\theta^*_i-\theta^*_{i-1})-(\beta+1)(\theta^*_{i-1}-\theta^*_{i}))LRL\\
+&amp; \quad + (\theta^*_i-\theta^*_{i-1})-(\beta+1)(\theta^*_{i+1}-\theta^*_{i}))L^2R\\
+&amp; \quad + (\theta^*_{i}-\theta^*_{i-1})LF^2 + (\theta^*_i-\theta^*_{i-1})F^2L\\
+&amp; \quad + (\theta^*_i - \theta^*_{i-1}-(\beta+1)(\theta^*_i-\theta^*_{i-1}))FLF\\
+&amp; \quad - \gamma(\theta^*_i-\theta^*_{i-1})(LF+FL)\\
+&amp; \quad - \delta (\theta^*_i-\theta^*_{i-1}L)E^*_i\\
+&amp; = (\theta^*_i-\theta^*_{i-1})\biggl(\frac{-(\beta+1)\theta^*_{i-2}+(\beta+2)\theta^*_{i-2}-\theta^*_i}{\theta^*_{i-1}-\theta^*_i}RL^2+(\beta+2)LRL\\
+&amp; \qquad + \frac{\theta^*_{i-1}-(\beta+2)\theta^*_i+(\beta+1)\theta^*_{i+1}}{\theta^*_{i-1}-\theta^*_i}L^2R + LF^2 - \beta FLF + F^2L\\
+&amp; \qquad -\gamma(LF+FL) - \delta L\biggr)E^*_i\\
+&amp; = (e^-_iRL^2 + (\beta+2)LRL + e^+_iL^2R + LF^2 - \beta FLF + F^2L-\gamma(LF+FL)-\delta L)E^*_i.
+\end{align}\]</span></p>
+</div>
+<div class="lemma">
+<p><span id="lem:epm-gpm" class="lemma"><strong>Lemma 30.1  </strong></span>With the notation of Theorem <a href="lec30.html#thm:rfl-relations">30.1</a>,
+<span class="math display">\[\begin{align}
+e^+_i &amp; = \frac{\theta^*_i-\theta^*_{i+2}}{\theta^*_i-\theta^*_{i-1}} \quad (1\leq i\leq D-2)\\
+e^-_i &amp; = \frac{\theta^*_{i-1}-\theta^*_{i-3}}{\theta^*_{i-1}-\theta^*_{i}} \quad (3\leq i\leq D)\\
+g^+_i &amp; = \frac{\theta^*_i-\theta^*_{i+1}}{\theta^*_i-\theta^*_{i-2}} \quad (2\leq i\leq D-1)\\
+g^-_i &amp; = \frac{\theta^*_{i-2}-\theta^*_{i-3}}{\theta^*_{i-2}-\theta^*_{i}} \quad (3\leq i\leq D).
+\end{align}\]</span>
+In particular, <span class="math inline">\(e^\pm_i\)</span>, <span class="math inline">\(g^\pm_i\)</span> are non-zero for the range of <span class="math inline">\(i\)</span> given above.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-123" class="proof"><em>Proof</em>. </span>In each case, equate the above expression with the corresponding expression in Theorem <a href="lec30.html#thm:rfl-relations">30.1</a>.
+The resulting equation is equal to <a href="lec29.html#eq:beta">(29.7)</a>.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-124" class="remark"><em>Remark</em>. </span>By Corollary <a href="lec26.html#cor:beta">26.1</a> and Therem <a href="lec29.html#thm:aastar">29.1</a>,
+<span class="math display">\[e^+_i = \frac{\theta^*_{i-1}-(\beta+2)\theta^*_i + (\beta+1)\theta^*_{i+1}}{\beta^*_{i-1}-\theta^*_i},\]</span>
+and
+<span class="math display">\[\beta + 1 = \frac{\theta^*_{j-1}-\theta^*_j+\theta^*_{j+1}-\theta^*_{j+2}}{\theta^*_j-\theta^*_{j+1}}+1 = \frac{\theta^*_{j-1}-\theta^*_{j+2}}{\theta^*_j-\theta^*_{j+1}}.\]</span>
+Hence,
+<span class="math display">\[\begin{align}
+e^+_i &amp; = \frac{1}{\theta^*_{i-1}-\theta^*_i}(\theta^*_{i-1}-\theta^*_i-(\beta+1)(\theta^*_i-\theta^*_{i+1}))\\
+&amp; = \frac{1}{\theta^*_{i-1}-\theta^*_i}(\theta^*_{i-1}-\theta^*_i - (\beta+1)(\theta^*_i-\theta^*_{i+2})\\
+&amp; = \frac{\theta^*_i-\theta^*_{i+2}}{\theta^*_{i}-\theta^*_{i-1}},\\
+e^-_i &amp; = \frac{1}{\theta^*_{i-1}-\theta^*_i}(-(\beta+1)\theta^*_{i-2}+(\beta+2)\theta^*_{i-1}-\theta^*_i)\\
+&amp; = \frac{1}{\theta^*_{i-1}-\theta^*_i}(\theta^*_{i-1}-\theta^*_i - \theta^*_{i-3}+\theta^*_{i})\\
+&amp; = \frac{\theta^*_{i-1}-\theta^*_{i-3}}{\theta^*_{i-1}-\theta^*_{i}},\\
+g^+_i &amp; = \frac{1}{\theta^*_{i-2}-\theta^*_i}(\theta^*_{i-2}-(\beta+1)\theta^*_{i-1}+\beta\theta^*_{i})\\
+&amp; = \frac{1}{\theta^*_{i}-\theta^*_{i-2}}(\theta^*_{i}-\theta^*_{i-2} + \theta^*_{i-2}-\theta^*_{i+1})\\
+&amp; = \frac{\theta^*_i-\theta^*_{i+1}}{\theta^*_{i}-\theta^*_{i-3}},\\
+g^-_i &amp; = \frac{1}{\theta^*_{i-2}-\theta^*_i}(-\beta\theta^*_{i-2}+(\beta+1)\theta^*_{i-1}-\theta^*_i)\\
+&amp; = \frac{1}{\theta^*_{i-2}-\theta^*_i}(\theta^*_{i-2}-\theta^*_i + \theta^*_{i}-\theta^*_{i-3})\\
+&amp; = \frac{\theta^*_{i-2}-\theta^*_{i-3}}{\theta^*_{i-2}-\theta^*_{i}}.
+\end{align}\]</span></p>
+</div>
+<div class="corollary">
+<p><span id="cor:fr2lr2r2l" class="corollary"><strong>Corollary 30.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be dostance-regular of diameter <span class="math inline">\(D\geq 3\)</span>, <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>. Fix a vertex <span class="math inline">\(x\in X\)</span>, write <span class="math inline">\(E^*_i \equiv E^*_i(x), R\equiv R(x), L\equiv L(x), F\equiv F(x)\)</span>.
+Then the following hold.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(FR^2E^*_j \in \mathrm{Span}(RFRE^*_j, R^2FE^*_j, R^2E^*_j)\)</span>, <span class="math inline">\((0\leq j\leq D-3)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(R^2FE^*_j \in \mathrm{Span}(RFRE^*_j, FR^2E^*_j, R^2E^*_j)\)</span>, <span class="math inline">\((1\leq j\leq D-2)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(LR^2E^*_j \in \mathrm{Span}(RLRE^*_j, R^2LE^*_j, F^2RE^*_j, FRFE^*_j, RF^2E^*j, RFE^*_j, FRE^*_j, RE^*_j)\)</span>, <span class="math inline">\((0\leq j\leq D-3)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(R^2LE^*_j \in \mathrm{Span}(RLRE^*_j, LR^2E^*_j, F^2RE^*_j, FRFE^*_j, RF^2E^*j, RFE^*_j, FRE^*_j, RE^*_j)\)</span>, <span class="math inline">\((1\leq j\leq D)\)</span>.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-125" class="proof"><em>Proof</em>. </span>Immediate from Theorem <a href="lec30.html#thm:rfl-relations">30.1</a>, and Lemma <a href="lec30.html#lem:epm-gpm">30.1</a>.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-126" class="remark"><em>Remark</em>. </span>By Theorem <a href="lec30.html#thm:rfl-relations">30.1</a>, and Lemma <a href="lec30.html#lem:epm-gpm">30.1</a>, we have the following, but similarly we can obtain above.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(FL^2E^*_j \in \mathrm{Span}(LFLE^*_j, L^2FE^*_j, L^2E^*_j)\)</span>, <span class="math inline">\((3\leq j\leq D)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(L^2FE^*_j \in \mathrm{Span}(LFLE^*_j, FL^2E^*_j, L^2E^*_j)\)</span>, <span class="math inline">\((2\leq j\leq D-1)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(RL^2E^*_j \in \mathrm{Span}(LRLE^*_j, L^2RE^*_j, F^2LE^*_j, FLFE^*_j, LF^2E^*j, LFE^*_j, FLE^*_j, LE^*_j)\)</span>, <span class="math inline">\((3\leq j\leq D)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(L^2RE^*_j \in \mathrm{Span}(LRLE^*_j, RL^2E^*_j, F^2LE^*_j, FLFE^*_j, LF^2E^*j, LFE^*_j, FLE^*_j, LE^*_j)\)</span>, <span class="math inline">\((2\leq j\leq D)\)</span>.</div>
+</div>
 
 </div>
             </section>
