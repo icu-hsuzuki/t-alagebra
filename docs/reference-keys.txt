@@ -41,6 +41,8 @@ eq:a2astara3
 eq:beta3
 eq:gamma3
 eq:delta3
+eq:rinversev
+eq:rinverse
 lec1
 lec2
 lec3

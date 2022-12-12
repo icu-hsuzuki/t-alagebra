@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 31 The Inverse of \(R\) | Lecture Note on Terwilliger Algebra</title>
+  <title>Chapter 31 The “Inverse” of \(R\) | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 31 The Inverse of \(R\) | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:title" content="Chapter 31 The “Inverse” of \(R\) | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 31 The Inverse of \(R\) | Lecture Note on Terwilliger Algebra" />
+  <meta name="twitter:title" content="Chapter 31 The “Inverse” of \(R\) | Lecture Note on Terwilliger Algebra" />
   
   <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-11" />
+<meta name="date" content="2022-12-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -129,7 +129,7 @@ div.csl-indent {
 <li class="chapter" data-level="28" data-path="lec28.html"><a href="lec28.html"><i class="fa fa-check"></i><b>28</b> The First Eigenspace of a <span class="math inline">\(Q\)</span>-DRG</a></li>
 <li class="chapter" data-level="29" data-path="lec29.html"><a href="lec29.html"><i class="fa fa-check"></i><b>29</b> Tridiagonal Pair <span class="math inline">\(A, A^*\)</span></a></li>
 <li class="chapter" data-level="30" data-path="lec30.html"><a href="lec30.html"><i class="fa fa-check"></i><b>30</b> <span class="math inline">\(R, F, L\)</span> Matrices</a></li>
-<li class="chapter" data-level="31" data-path="lec31.html"><a href="lec31.html"><i class="fa fa-check"></i><b>31</b> The Inverse of <span class="math inline">\(R\)</span></a></li>
+<li class="chapter" data-level="31" data-path="lec31.html"><a href="lec31.html"><i class="fa fa-check"></i><b>31</b> The “Inverse” of <span class="math inline">\(R\)</span></a></li>
 <li class="chapter" data-level="32" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>32</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -153,8 +153,120 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="lec31" class="section level1 hasAnchor" number="31">
-<h1><span class="header-section-number">Chapter 31</span> The Inverse of <span class="math inline">\(R\)</span><a href="lec31.html#lec31" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapter 31</span> The “Inverse” of <span class="math inline">\(R\)</span><a href="lec31.html#lec31" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Wednesday, April 14, 1993</strong></p>
+<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any graph of diameter <span class="math inline">\(D\geq 2\)</span>. Fix a vertex <span class="math inline">\(x\in X\)</span>. Let <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, and <span class="math inline">\(T \equiv T(x)\)</span>.</p>
+<p>Recall adjacency matrix
+<span class="math display">\[\begin{align}
+A &amp; = R + L + F\\
+R &amp; = \sum_{i=0}^D E^*_{i+1}AE^*_i,\\
+L &amp; = \sum_{i=0}^D E^*_{i-1}AE^*_i,\\
+F &amp; = \sum_{i=0}^D E^*_{i}AE^*_i.
+\end{align}\]</span></p>
+<p>Observe <span class="math inline">\(R\)</span> is not invertible (indeed <span class="math inline">\(RE%*_D = O\)</span>.)
+So, <span class="math inline">\(R^{-1}\)</span> does not exist.</p>
+<p>Below we find a matrix “<span class="math inline">\(R^{-1}\)</span>”<span class="math inline">\(\in T(x)\)</span> such that <span class="math inline">\(R^{-1}Rv = v\)</span> for “almost all” <span class="math inline">\(v\in V\)</span>.</p>
+<div class="lemma">
+<p><span id="lem:inverse-of-r" class="lemma"><strong>Lemma 31.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> denote any graph, and the standard module <span class="math inline">\(V\)</span> over <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<p>Fix a vertex <span class="math inline">\(x\in X\)</span>, write
+<span class="math display">\[R\equiv R(x), \quad L \equiv L(x), \quad E^*_i\equiv E^*_i(x) \quad \text{for all }i.\]</span>
+Then,</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> There exists unique “<span class="math inline">\(R^{_1}\)</span>”<span class="math inline">\(\in \mathrm{Mat}_X(\mathbb{C})\)</span> such that;</div>
+<div class="line-block"><span class="math inline">\(\quad (ia)\)</span> <span class="math inline">\(R^{-1}v = 0\)</span> if <span class="math inline">\(Lv = 0\)</span> for <span class="math inline">\(v\in V\)</span>.</div>
+<div class="line-block"><span class="math inline">\(\quad (ib)\)</span> <span class="math inline">\(R^{-1}RLv = Lv\)</span> for all <span class="math inline">\(v\in V\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(R^{-1}(E^*_iV)\subseteq E^*_{i-1}V\)</span> <span class="math inline">\((0\leq i\leq D)\)</span>, <span class="math inline">\(E^*_{-1}V = 0\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(R^{-1}\in \mathrm{Mat}_X(\mathbb{Q})\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(R^{-1}\in T(x)\)</span>.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-127" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> Consider the orthogonal direct sum.</div>
+<p><span class="math display">\[V = (\mathrm{Ker}L) + (\mathrm{Ker}L)^\bot.\]</span></p>
+<p>Claim 1. <span class="math inline">\(RL(\mathrm{Ker}L)^\bot \subseteq (\mathrm{Ker}L)^\bot\)</span>.</p>
+<p><em>Proof of Claim 1.</em>
+Pick <span class="math inline">\(v\in (\mathrm{Ker}L)^\bot\)</span>, and <span class="math inline">\(w\in \mathrm{Ker}L\)</span>. Show
+<span class="math display">\[\langle RLv, w\rangle = 0.\]</span>
+But
+<span class="math display">\[\bar{R}^\top = R^\top = \left(\sum_{i=0}^D E^*_{i+1}AE^*_i\right)^\top = \sum_{i=0}^D E^*_iAE^*_{i+1} = L.\]</span>
+So,
+<span class="math display">\[\langle RLv, w\rangle = \langle Lv, \bar{R}^\top w\rangle = \langle Lv, Lw\rangle = 0.\]</span></p>
+<div class="line-block"><br />
+Claim 2. <span class="math inline">\(RL: (\mathrm{Ker}L)^\bot \to (\mathrm{Ker}L)^\bot\)</span> is an isomorphism of vector spaces.</div>
+<p><em>Proof of Claim 2.</em>
+It suffices to show above map is one-to-one.</p>
+<p>Suppose there is a vector <span class="math inline">\(v\in (\mathrm{Ker}L)^\bot\)</span> such that <span class="math inline">\(RLv = 0\)</span>.</p>
+<p>Then,
+<span class="math display">\[0 = \langle RLv , v\rangle = \langle Lv, \bar{R}^\top v\rangle = \|Lv\|^2.\]</span>
+So <span class="math inline">\(Lv = 0\)</span>.</p>
+<p>Hence <span class="math inline">\(v\in \mathrm{Ker}L \cap (\mathrm{Ker}L)^\bot = 0\)</span>.</p>
+<p>This proves Claim 2.</p>
+<p>Now “<span class="math inline">\(R^{-1}\)</span> denote the unique matrix in <span class="math inline">\(\mathrm{Mat}(\mathbb{C})\)</span> such that
+<span class="math display" id="eq:rinversev">\[\begin{equation}
+R^{-1}v = \begin{cases}
+0 &amp; \text{if } v\in \mathrm{Ker}L \\
+L(RL)^{-1}v &amp; \text{if } v\in (\mathrm{Ker}L)^\bot.
+\end{cases}\tag{31.1}
+\end{equation}\]</span>
+Observe that <span class="math inline">\((RL)^{-1}:(\mathrm{Ker}L)^\bot \to (\mathrm{Ker}L)^\bot\)</span> exists by Claim 2.</p>
+<p>Observe <span class="math inline">\(R^{-1}\)</span> satisfies <span class="math inline">\((ia)\)</span> by <a href="lec31.html#eq:rinversev">(31.1)</a>.</p>
+<p>Claim 3. <span class="math inline">\(R^{-1}\)</span> satisfies <span class="math inline">\((ib)\)</span>.</p>
+<p><em>Proof of Claim 3.</em>
+It suffices to check
+<span class="math display">\[R^{-1}RLv = Lv\]</span>
+for <span class="math inline">\(v\in \mathrm{Ker}L\)</span> and <span class="math inline">\(v\in (\mathrm{Ker}L)^\bot\)</span>.</p>
+<p>The case <span class="math inline">\(v\in \mathrm{Ker}L\)</span> is clear. So assume <span class="math inline">\(v\in (\mathrm{Ker}L)^\bot\)</span> by Claim 1.
+So,
+<span class="math display">\[R^{-1}(RLv) = L(RL)^{-1}RLv = Lv\]</span>
+as desired.</p>
+<p>Uniqueness:
+Suppose a matrix <span class="math inline">\(\hat{R}^{-1}\in \mathrm{Mat}_X(\mathbb{C})\)</span> satisfies <span class="math inline">\((ia), (ib)\)</span>. Then, <span class="math inline">\(\hat{R}^{-1}\)</span> satisfies <a href="lec31.html#eq:rinversev">(31.1)</a> atove.</p>
+<p>(<em>Pf.</em> The first part is clear. Let <span class="math inline">\(v\in (\mathrm{Ker}L)^\bot\)</span>. By Claim 2, there exists <span class="math inline">\(w\in (\mathrm{Ker}L)^\bot\)</span> such that <span class="math inline">\(v\in RLw\)</span>. So <span class="math inline">\(\hat{R}^{-1}v = \hat{R}^{-1}RLw = Lw = L(RL)^{-1}v\)</span>.)</p>
+<p>Therefore, <span class="math inline">\(\hat{R}^{-1}\)</span> agrees with <span class="math inline">\(R^{-1}\)</span> on a basis for <span class="math inline">\(V\)</span>, and <span class="math inline">\(\hat{R}^{-1} = R^{-1}\)</span>.</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Pick <span class="math inline">\(v\in E^*_iV\)</span>. Show <span class="math inline">\(R^{-1}v\in E^*_{i-1}V\)</span>.</div>
+<p>Without loss of generality we may assume that <span class="math inline">\(v\in \mathrm{Ker}L\)</span> or <span class="math inline">\(v\in (\mathrm{Ker}L)^\bot\)</span>.</p>
+<p>If <span class="math inline">\(v\in \mathrm{Ker}L\)</span>, then <span class="math inline">\(R^{-1}v = 0\in E^*_{i-1}V\)</span>.</p>
+<p>If <span class="math inline">\(v\in (\mathrm{Ker}L)^\bot\)</span>, then
+<span class="math display">\[R^{-1}v = L(RL)^{-1}v \in LE^*_iV \subseteq E^*_{i-1}V.\]</span></p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> Observe <span class="math inline">\(R, L\in \mathrm(Mat)_X(\mathbb{Q})\)</span>.</div>
+<p>So <span class="math inline">\(V\)</span>, <span class="math inline">\(\mathrm{Ker}L\)</span>, each has basis consisting of vectors in <span class="math inline">\(\mathbb{Q}^{|X|}\)</span>.</p>
+<p>Replacing the construction of <span class="math inline">\(R^{-1}\)</span> with the base field replaced by <span class="math inline">\(\mathbb{Q}\)</span>, we find a matrix <span class="math inline">\(\tilde{R}^{-1}\in \mathrm{Mat}_X(\mathbb{Q})\)</span> satisfying <span class="math inline">\((ia)\)</span>, <span class="math inline">\((ib)\)</span>.</p>
+<p>Now <span class="math inline">\(R^{-1}\)</span> and <span class="math inline">\(\tilde{R}^{-1}\)</span> agree on a basis, and hence <span class="math inline">\(R^{-1} = \tilde{R}^{-1}\)</span>.</p>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(RL = \bar{L}^\top L\)</span> is a real symmetric matrix. So it is diagonalizable.</div>
+<p>Let <span class="math inline">\(\theta\)</span> be any eigenvalue of <span class="math inline">\(RL\)</span>. Let <span class="math inline">\(V_\theta\)</span> denote the corresponding maximal eigenspace in <span class="math inline">\(V\)</span>.
+Then
+<span class="math display">\[V = \sum_{\theta:\text{eigenvalue for }RL}V_\theta \quad (\text{orthogonal direct sum}).\]</span>
+Let <span class="math inline">\(E_\theta: V\to V_\theta\)</span> denote the orthogonal projection. Then <span class="math inline">\(E_\theta\)</span> is a complex polynomial in <span class="math inline">\(RL\)</span>.</p>
+<p>Thus <span class="math inline">\(E_\theta\in T(x)\)</span>.</p>
+<div class="{remark}">
+<p><span class="math inline">\(E_\theta\)</span> is real. Since <span class="math inline">\(RL\)</span> is an integral matrix, every eigenvalue of <span class="math inline">\(RL\)</span> is an algebraic integer.</p>
+</div>
+<p>Claim 4. We have
+<span class="math display" id="eq:rinverse">\[\begin{equation}
+R^{-1} = \sum_{\theta: \text{eigenvalue of }RL}\theta^{-1}LE_\theta. \tag{31.2}
+\end{equation}\]</span>
+In particular, <span class="math inline">\(R^{-1}\in T(x)\)</span>.</p>
+<p><em>Proof of Claim 4.</em>
+Show two sides of <a href="lec31.html#eq:rinverse">(31.2)</a> agree, when applied to arbitrary <span class="math inline">\(v\in V\)</span>.</p>
+<p>Without loss of generality, we may assume that <span class="math inline">\(v\in V_\theta\)</span> for some eigenvalue <span class="math inline">\(\theta\)</span> of <span class="math inline">\(RL\)</span>.</p>
+<p>Let <span class="math inline">\(\theta&#39;\)</span> denote any eigenvalue of <span class="math inline">\(RL\)</span>.
+<span class="math display">\[E_{\theta&#39;}v = \begin{cases} 0 &amp; \text{if } \theta&#39;\neq \theta,\\
+v &amp; \text{if } \theta&#39; = \theta.
+\end{cases}\]</span>
+<span class="math inline">\(\mathrm{RHS}\)</span> of <a href="lec31.html#eq:rinverse">(31.2)</a> applied to <span class="math inline">\(v\)</span> equals
+<span class="math display">\[\begin{cases} 0 &amp; \text{if } \theta = 0,\\
+\theta^{-1}Lv &amp; \text{if } \theta \neq 0.
+\end{cases}\]</span></p>
+<p>Show this equals <span class="math inline">\(R^{-1}v\)</span>.</p>
+<p>Case <span class="math inline">\(\theta = 0\)</span>:
+Since <span class="math inline">\(RLv = 0\)</span>,
+<span class="math display">\[0 = \langle v, RLv\rangle = \|Lv\|^2.\]</span></p>
+<p>Hence <span class="math inline">\(Lv = 0\)</span>, or <span class="math inline">\(v\in \mathrm{Ker}L\)</span>.
+By <span class="math inline">\((ia)\)</span>, <span class="math inline">\(R^{-1}v = 0\)</span>.</p>
+<p>Case <span class="math inline">\(\theta \neq 0\)</span>:
+Since <span class="math inline">\(RLv = \theta v\)</span>, <span class="math inline">\(v = \theta^{-1}RLv\)</span>. Hence,
+<span class="math display">\[R^{-1}v = \theta^{-1}R^{-1}RLv = \theta^{-1}Lv\]</span>
+by <span class="math inline">\((ib)\)</span>.</p>
+</div>
 
 </div>
             </section>
