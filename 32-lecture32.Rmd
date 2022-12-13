@@ -30,6 +30,98 @@ We want to find $R^{-1}Rw_i$.
 
 If $i=d$, $R^{-1}Rw_d = 0$.
 
+If $0\leq i<d$,
+\begin{align}
+R^{-1}Rw_i & = R^{-1}w_{i+1}\\
+& = x_{i+1}(W)^{-1}R^{-1}RLw_{i+1}\\
+& = x_{i+1}(W)^{-1}Lw_{i+1}\\
+& = x_{i+1}(W)^{-1}x_{i+1}(W)w_i\\
+& = w_i.
+\end{align}
+Thus, we have $(i)$.
 
-
+:::{remark}
+\begin{align}
+RLw_i & = Rx_i(W)w_{i-1} = x_i(W)w_i,
+LRw_i & = Lw_{i+1} = x_{i+1}(W)w_i\\
+[L,R]w_i & = (x_{i+1}(W)-x_i(W))w_i, \quad (0leq i\leq d),\\
+& \qquad x_0(W) = 0, \quad x_{d+1}(W) = 0, \\
+[L,R]|_W & = \sum_{i=0}^d(x_{i+1}-x_i(W))E^*_{r+i}|W.
+\end{align}
 :::
+
+| $(ii)$ Let 
+$$V = \sum W \quad \text{orthogonal direct sum of thin irreducible $T$-modules.}$$
+Then, 
+$$E^*_tV = \sum_{r(W)\leq t}E^*_tW\quad (\text{orthognal direct sum}).$$
+Without loss of generality, we may assume 
+$$v\in E^*_t W$$
+for some thin irreducible $T$-module with endpoint at most $t$.
+
+Now if $i\leq D-2t$, then
+\begin{align}
+t+i & \leq D-t \\
+& \leq D-r(W)\\
+& \leq r(W) + d(W) \quad (D\leq 2r+d),
+\end{align}
+by Lemma \@ref(lem:basic-data) $(iii)$.
+
+
+So 
+$$t+i-1\leq r(W) + d(W) -1.$$
+Hence,
+\begin{align}
+R^{-1}R^iv & = R^{-1}R(R^{i-1}v) \quad (R^{i-1}v\in E^*_{t+i-1}W)\\
+& = R^{i-1}v \quad \text{by $(i)$.}
+\end{align}
+
+
+| $(iii)$ Suppose $Rv = 0$ for some $v\in E^*_iV$ $(0\leq i< D/2)$. Then
+$$0 = R^{-1}Rv = v,$$
+by $(ii)$ with $t = i$ and $i=1$.
+:::
+
+:::{.definition #vix}
+Let $\Gamma = (X, E)$ denote any graph with the standard module $V$. Fix a vertex $x\in X$. Write $E^*_i \equiv E^*_i(x)$, $T \equiv T(x)$, $L\equiv L(x)$.
+
+1. For every $i$ $(0\leq i\leq D)$, define subspace $V_i := V_i(x) \subseteq V$ by
+$$V_i = \sum W,$$
+where the sum begin over irreducible $T$-modules $W$ with endpoint $i$.
+
+Observe:
+$$V = V_0 + V_1 + \cdots + V_D \quad (\text{orthogonal direct sum.})$$
+$V_0$ is the trivial $T$-module. 
+
+2. $(E^*_iV)_{new} \equiv E^*_iV_i \quad (0\leq i\leq D).$
+
+In general, 
+$$(E^*_iV)_{new} \subseteq \mathrm{Ker}L \cap E^*iV \subseteq \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}(LE^*_i).$$
+
+If each irreducible $T$-module with endpoint strictly less than $i$ is thin,
+$$(E^*_iV)_{new} = \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}(L\cdot E^*_i).$$
+We have the assertion.
+:::
+
+:::{.remark}
+$$E^*_iV = \sum_{j<i} V_j + V_i.$$
+For $V_j$ part, take $w_{i-j}\in W$ irreducible with endpoint $j<i$. Then,
+$$Lw_{i-j} = x_{i-j}(W)w_{i-j-1}\neq 0,$$
+and 
+$$L|_{\sum_{j<i}E^*_iV_j}: \sum_{j<i}E^*_iV_j \to V$$
+is one to one.
+:::
+
+:::{.lemma #action-on-estar1v-new}
+Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$. Fix a vertex $x\in X$, $R\equiv R(x)$. $L\equiv L(x)$, $F \equiv F(x)$. Pick $v\in (E^*_1V)_{new}$. Then,
+
+| $(i)$ $RE^*_iA_{i-1}v = c_iE^*_{i+1}A_iv\quad (1\leq i\leq D)$.
+
+| $(ii)$ $FE^*_iA_{i-1}v = RE^*_{i-1}A_iV + (a_{i-1}-c_i+c_{i-1})E^*_iA_{i-1}v + c_{i}E^*_{i}A_{i+1}v$ $(1\leq i\leq D)$.
+
+| $(iii)$ $LE^*_iA_{i-1}v = FE^*_{i-1}A_iV + (a_{i-1}-c_i+c_{i-1})E^*_{i-1}A_{i}v + b_{i-1}E^*_{i-1}A_{i-2}v$ $(2\leq i\leq D)$.
+
+| $(iv)$ $LE^*_iA_{i+1}v = b_iE^*_{i-1}A_iv \quad (1\leq i\leq D-1)$.
+:::
+
+
+

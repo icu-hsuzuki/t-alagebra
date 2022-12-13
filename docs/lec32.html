@@ -178,6 +178,82 @@ So,
 (See Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>.)</p>
 <p>We want to find <span class="math inline">\(R^{-1}Rw_i\)</span>.</p>
 <p>If <span class="math inline">\(i=d\)</span>, <span class="math inline">\(R^{-1}Rw_d = 0\)</span>.</p>
+<p>If <span class="math inline">\(0\leq i&lt;d\)</span>,
+<span class="math display">\[\begin{align}
+R^{-1}Rw_i &amp; = R^{-1}w_{i+1}\\
+&amp; = x_{i+1}(W)^{-1}R^{-1}RLw_{i+1}\\
+&amp; = x_{i+1}(W)^{-1}Lw_{i+1}\\
+&amp; = x_{i+1}(W)^{-1}x_{i+1}(W)w_i\\
+&amp; = w_i.
+\end{align}\]</span>
+Thus, we have <span class="math inline">\((i)\)</span>.</p>
+<div class="{remark}">
+<p><span class="math display">\[\begin{align}
+RLw_i &amp; = Rx_i(W)w_{i-1} = x_i(W)w_i,
+LRw_i &amp; = Lw_{i+1} = x_{i+1}(W)w_i\\
+[L,R]w_i &amp; = (x_{i+1}(W)-x_i(W))w_i, \quad (0leq i\leq d),\\
+&amp; \qquad x_0(W) = 0, \quad x_{d+1}(W) = 0, \\
+[L,R]|_W &amp; = \sum_{i=0}^d(x_{i+1}-x_i(W))E^*_{r+i}|W.
+\end{align}\]</span></p>
+</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Let</div>
+<p><span class="math display">\[V = \sum W \quad \text{orthogonal direct sum of thin irreducible $T$-modules.}\]</span>
+Then,
+<span class="math display">\[E^*_tV = \sum_{r(W)\leq t}E^*_tW\quad (\text{orthognal direct sum}).\]</span>
+Without loss of generality, we may assume
+<span class="math display">\[v\in E^*_t W\]</span>
+for some thin irreducible <span class="math inline">\(T\)</span>-module with endpoint at most <span class="math inline">\(t\)</span>.</p>
+<p>Now if <span class="math inline">\(i\leq D-2t\)</span>, then
+<span class="math display">\[\begin{align}
+t+i &amp; \leq D-t \\
+&amp; \leq D-r(W)\\
+&amp; \leq r(W) + d(W) \quad (D\leq 2r+d),
+\end{align}\]</span>
+by Lemma <a href="lec14.html#lem:basic-data">14.1</a> <span class="math inline">\((iii)\)</span>.</p>
+<p>So
+<span class="math display">\[t+i-1\leq r(W) + d(W) -1.\]</span>
+Hence,
+<span class="math display">\[\begin{align}
+R^{-1}R^iv &amp; = R^{-1}R(R^{i-1}v) \quad (R^{i-1}v\in E^*_{t+i-1}W)\\
+&amp; = R^{i-1}v \quad \text{by $(i)$.}
+\end{align}\]</span></p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> Suppose <span class="math inline">\(Rv = 0\)</span> for some <span class="math inline">\(v\in E^*_iV\)</span> <span class="math inline">\((0\leq i&lt; D/2)\)</span>. Then</div>
+<p><span class="math display">\[0 = R^{-1}Rv = v,\]</span>
+by <span class="math inline">\((ii)\)</span> with <span class="math inline">\(t = i\)</span> and <span class="math inline">\(i=1\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:vix" class="definition"><strong>Definition 32.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> denote any graph with the standard module <span class="math inline">\(V\)</span>. Fix a vertex <span class="math inline">\(x\in X\)</span>. Write <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span>, <span class="math inline">\(T \equiv T(x)\)</span>, <span class="math inline">\(L\equiv L(x)\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>For every <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq D)\)</span>, define subspace <span class="math inline">\(V_i := V_i(x) \subseteq V\)</span> by
+<span class="math display">\[V_i = \sum W,\]</span>
+where the sum begin over irreducible <span class="math inline">\(T\)</span>-modules <span class="math inline">\(W\)</span> with endpoint <span class="math inline">\(i\)</span>.</li>
+</ol>
+<p>Observe:
+<span class="math display">\[V = V_0 + V_1 + \cdots + V_D \quad (\text{orthogonal direct sum.})\]</span>
+<span class="math inline">\(V_0\)</span> is the trivial <span class="math inline">\(T\)</span>-module.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><span class="math inline">\((E^*_iV)_{new} \equiv E^*_iV_i \quad (0\leq i\leq D).\)</span></li>
+</ol>
+<p>In general,
+<span class="math display">\[(E^*_iV)_{new} \subseteq \mathrm{Ker}L \cap E^*iV \subseteq \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}(LE^*_i).\]</span></p>
+<p>If each irreducible <span class="math inline">\(T\)</span>-module with endpoint strictly less than <span class="math inline">\(i\)</span> is thin,
+<span class="math display">\[(E^*_iV)_{new} = \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}(L\cdot E^*_i).\]</span>
+We have the assertion.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-129" class="remark"><em>Remark</em>. </span><span class="math display">\[E^*_iV = \sum_{j&lt;i} V_j + V_i.\]</span>
+For <span class="math inline">\(V_j\)</span> part, take <span class="math inline">\(w_{i-j}\in W\)</span> irreducible with endpoint <span class="math inline">\(j&lt;i\)</span>. Then,
+<span class="math display">\[Lw_{i-j} = x_{i-j}(W)w_{i-j-1}\neq 0,\]</span>
+and
+<span class="math display">\[L|_{\sum_{j&lt;i}E^*_iV_j}: \sum_{j&lt;i}E^*_iV_j \to V\]</span>
+is one to one.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:action-on-estar1v-new" class="lemma"><strong>Lemma 32.2  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be distance regular of diameter <span class="math inline">\(D\geq 3\)</span>. Fix a vertex <span class="math inline">\(x\in X\)</span>, <span class="math inline">\(R\equiv R(x)\)</span>. <span class="math inline">\(L\equiv L(x)\)</span>, <span class="math inline">\(F \equiv F(x)\)</span>. Pick <span class="math inline">\(v\in (E^*_1V)_{new}\)</span>. Then,</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(RE^*_iA_{i-1}v = c_iE^*_{i+1}A_iv\quad (1\leq i\leq D)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(FE^*_iA_{i-1}v = RE^*_{i-1}A_iV + (a_{i-1}-c_i+c_{i-1})E^*_iA_{i-1}v + c_{i}E^*_{i}A_{i+1}v\)</span> <span class="math inline">\((1\leq i\leq D)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(LE^*_iA_{i-1}v = FE^*_{i-1}A_iV + (a_{i-1}-c_i+c_{i-1})E^*_{i-1}A_{i}v + b_{i-1}E^*_{i-1}A_{i-2}v\)</span> <span class="math inline">\((2\leq i\leq D)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(LE^*_iA_{i+1}v = b_iE^*_{i-1}A_iv \quad (1\leq i\leq D-1)\)</span>.</div>
 </div>
 
 </div>
