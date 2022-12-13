@@ -1,0 +1,35 @@
+# Irreducible Modules of Endpoint $i$ {#lec32}
+**Monday, April 19, 1993** 
+
+:::{.lemma #action-of-r}
+Let $\Gamma = (X, E)$ be any graph. With the notation of Lemma \@ref(lem:inverse-of-r), the following hold.
+
+| $(i)$ Let $W$ denote a thin irreducible $T$-module with endpoint $r$, diameter $d$. Pick $i$ $(0\leq i\leq d)$, and pick $v\in E^*_{r+i}W$. Then,
+$$R^{-1}R v = \begin{cases} v & \text{if } i<d,\\
+0 & \text{if } i = d.
+\end{cases}$$
+
+| $(ii)$ Assume $\Gamma$ is distance regular and thin with respect to $x$. Pick $t$ $(0\leq < D/2)$, and pick $v\in E^*_tV$. Then
+$$R^{-1}R^iv = R^{i-1}v\quad (1\leq i\leq D-2t).$$
+In particular, $R^{-1}R v = v$.
+
+| $(iii)$ Assume $\Gamma$ is distance regulaar and thin with respect to $x$. Then
+$$R: E^*_iV \to E^*_{i+1}V \quad (0\leq i< D/2)$$
+is one-to-one.
+:::
+
+
+:::{.proof}
+| $(i)$ Let $w_0, w_1, \ldots, w_d$ be a basis for $W$ and $w_i\in E^*_{r+i}W$, 
+$$Rw_i = w_{i+1} \quad (0\leq i< d), \quad Lw_i = x_i(W)w_{i-1}\quad (1\leq i\leq d).$$
+So, 
+$$RLw_i = x_i(W)w_i \quad (1\leq i\leq d).$$
+(See Lemma \@ref(lem:thin-module-structure).)
+
+We want to find $R^{-1}Rw_i$.
+
+If $i=d$, $R^{-1}Rw_d = 0$.
+
+
+
+:::
