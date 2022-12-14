@@ -44,7 +44,7 @@ Thus, we have $(i)$.
 \begin{align}
 RLw_i & = Rx_i(W)w_{i-1} = x_i(W)w_i,
 LRw_i & = Lw_{i+1} = x_{i+1}(W)w_i\\
-[L,R]w_i & = (x_{i+1}(W)-x_i(W))w_i, \quad (0leq i\leq d),\\
+[L,R]w_i & = (x_{i+1}(W)-x_i(W))w_i, \quad (0\leq i\leq d),\\
 & \qquad x_0(W) = 0, \quad x_{d+1}(W) = 0, \\
 [L,R]|_W & = \sum_{i=0}^d(x_{i+1}-x_i(W))E^*_{r+i}|W.
 \end{align}
@@ -123,5 +123,114 @@ Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$. Fix a vertex $x
 | $(iv)$ $LE^*_iA_{i+1}v = b_iE^*_{i-1}A_iv \quad (1\leq i\leq D-1)$.
 :::
 
+:::{.proof}
+| $(i)$ Let
+$$v = \sum_{y\in X, \partial(x,y)=1}\alpha_y \hat{y} \quad \text{for some }\{\alpha_g\}\subseteq \mathbb{C}.$$
+Then 
+$$Lv = \left(\sum_{y\in X, \partial(x,y)=1}\alpha_y\right)\hat{x} = .$$
+So,
+$$\sum_{y\in X, \partial(x,y)=1}\alpha_y = 0.$$
+Thus,
+$$v = \sum_{y\in X, \partial(x,y)=1}\alpha_y(\hat{y}-\hat{x}).$$
+Let 
+$$\tilde{A}_i = A_0 + A_1 + \cdots + A_i \quad (0\leq i\leq D).$$
+Then
+\begin{align}
+\tilde{A}_iv & = \sum_{y\in X, \partial(x,y)=1}\alpha_y \tilde{A}_i(\hat{y}-\hat{x})\\
+& = \sum_{y\in X, \partial(x,y)=1}\alpha_y\left(\sum_{z\in X, \partial(y,z)=i, \partial(x,z)=i+1}\hat{z}-\sum_{z'\in X, \partial(y,z')=i+1, \partial(x,z')=i}\hat{z}'\right)\\
+& = \sum_{y\in X, \partial(x,y)=1}\alpha_y(E^*_{i+1}A_i\hat{y}- E^*_iA_{i+1}\hat{y})\\
+& = E^*_{i+1}A_iv - E^*_{i+1}A_{i+1}v.
+\end{align}
+
+Recall (Claim 1 in the proof of Theorem \@ref(thm:endpoint1).)
+$$A\tilde{A}_i = c_{i+1}\tilde{A}_{i+1}+ (a_i-c_{i+1}+c_i)\tilde{A}_i + b_i\tilde{A}_{i-1}\quad (0\leq i\leq D-1).$$
+(This is valid for $i=0$ as $A\tilde{A}_0 = AI = c_1\tilde{A}- \tilde{A}_0 = A$ by setting $\tilde{A}_{i-1} = O$.)
+
+Now $(i)-(iv)$ are obtained by applying this to $v$ on the right and multiplied by $E^*_j$ $(0\leq j\leq D)$ on the left.
+:::
+
+:::{.remark}
+$A\tilde{A}_{i-1}v = AE^*_iA_{i-1}v - AE^*_{i-1}A_iv$. For $1\leq i\leq D$,
+\begin{align}
+& (c_i\tilde{A}_i + (a_{i-1}-c_i+c_{i-1})\tilde{A}_{i-1}+b_{i-1}\tilde{A}_{i-2})v\\
+& \quad = c_i E^*_{i+1}A_iv - c_iE^*_iA_{i+1}v\\
+& \qquad + (a_{i-1}-c_i+c_{i-1})E^*_iA_{i-1}v - (a_{i-1}-c_i+c_{i-1})E^*_{i-1}A_iv\\
+& \qquad + b_{i-1}E^*_{i-1}A_{i-2}v - b_{i-1}E^*_{i-2}A_{i-1}v.
+\end{align}
+
+| $(i)$ $RE^*_iA_{i-1}v = E^*_{i+1}AE^*_iA_{i-1}v = c_iE^*_{i+1}A_iv$ $(1\leq i\leq D)$.
+
+| $(ii)$ For $1\leq i\leq D$,
+\begin{align}
+FE^*_iA_{i-1}v & = E^*_{i}AE^*_iA_{i-1}v\\
+& = RE^*_{i-1}A_iv - c_iE^*_iA_{i+1}v + (a_{i-1}-c_i+c_{i-1})E^*_iA_{i-1}v.
+\end{align}
+
+| $(iii)$ For $2\leq i\leq D$,
+\begin{align}
+LE^*_iA_{i-1}v & = E^*_{i-1}AE^*_{i}A_{i-1}v\\
+& = FE^*_{i-1}A_iv - (a_{i-1}-c_i+c_{i-1})E^*_{i-1}A_i v + b_{i-1}E^*_{i-1}A_{i-2}v.
+\end{align}
+(Even if $i=1$, this is valid by setting $A_{i-2}=O$.)
+
+| $(iv)$ For $1\leq i\leq D-1$, $LE^*_iA_{i+1}v = E^*_{i-1}AE^*_i A_{i+1} = b_iE^*_{i-1}A_iv$.
+:::
+
+:::{.lemma #generator-endpoint1-mod}
+Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$. Fix a vertex $x\in X$, $T\equiv T(x)$, $E^*_i\equiv E^*_i(x)$, $R = R(x)$, $F = F(x)$, $L = L(x)$.
+
+For every $v\in (E^*_1V)_{new}$, the following are equivalent.
+
+| $(i)$ $E^*_iA_{i-1}v$, $E^*_{i}A_{i+1}v$ are linearly dependent for every $i$ $(1\leq i\leq D-1)$.
+
+| $(ii)$ There exists a thin irreducible $T$-module $W$ with endpoint $1$ that contains $v$.
+
+If $(i)$, $(ii)$ hold then 
+$$W = \mathrm{Span}(E^*_1, E^*_2A_1v, \ldots, E^*_DA_{i-1}v).$$
+:::
 
 
+:::{.proof}
+$(ii)\to(i)$. Clear as 
+$$E^*_iA_{i-1}v, \; E^*_iA_{i+1}v \in E^*_iW = \mathrm{Span}(w_{i-1}).$$
+
+| $(i)\to(ii)$ Consider the sequence
+$$E^*_1A_{i-1}v, E^*_2A_1v, E^*_3A_2v, \ldots, E^*_{D+1}A_Dv.$$
+The first term is nonzero and the last term is $0$. 
+So there exists
+$$n := \mathrm{min}\{i\mid 1\leq i\leq D, \; E^*_{i+1}A_iv = 0\}.$$
+Now 
+\begin{equation}
+E^*_{j+1}A_jv = 0 \quad (n\leq j\leq D). (\#eq:n)
+\end{equation}
+
+:::{.remark}
+Use induction and Lemma \@ref(lem:action-on-estar1v-new) $(i)$, 
+$$E^*_{j+1}A_jv \in \mathrm{Span}(RE^*_jA_{j-1}v) \quad (j\geq 1).$$
+:::
+
+By our assumption $(i)$, and the definition of $n$,
+$$E^*_jA_{j+1}v \in \mathrm{Span}(E^*_jA_{j-1}v)\neq 0 \quad (1\leq j\leq n).$$
+
+By Lemma \@ref(lem:action-on-estar1v-new) $(i)$,
+$$RE^*_jA_{j-1}v \in \mathrm{Span}(E^*_{j+1}A_jv) \quad (1\leq j\leq n).$$
+
+By Lemma \@ref(lem:action-on-estar1v-new) $(ii)$,
+\begin{align}
+FE^*_jA_{j-1}v & \in \mathrm{Span}(RE^*_{j-1}A_jv, E^*_jA_{j-1}v, E^*_jA_{j+1}v)\\
+& \subseteq \mathrm{Span}(RE^*_{j-1}A_{j-2}v, E^*_jA_{j-1}v)\\
+& \mathrm{Span}(E^*_{j-1}A_{j-1}v) \quad (1\leq j\leq n).
+\end{align}
+
+By Lemma \@ref(lem:action-on-estar1v-new) $(iii)$,
+\begin{align}
+FE^*_jA_{j-1}v & \in \mathrm{Span}(FE^*_{j-1}A_j v, E^*_{j-1}A_{j}v, E^*_{j-1}A_{j-2}v)\\
+& \subseteq \mathrm{Span}(FE^*_{j-1}A_{j-2}v, E^*_{j-1}A_{j-2}v)\\
+& \mathrm{Span}(E^*_{j-1}A_{j-2}v) \quad (2\leq j\leq n).
+\end{align}
+
+Hence, 
+$$W = \mathrm{Span}(E^*_1A_0v, E^*_2A_1v, \ldots, E^*_nA_{n-1}v).$$
+is $R$, $F$, $L$ invariant. 
+
+Therefore $W$ is a thin $T$-module with endpoint $1$ that contains $v$.

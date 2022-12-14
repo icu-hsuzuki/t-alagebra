@@ -43,6 +43,7 @@ eq:gamma3
 eq:delta3
 eq:rinversev
 eq:rinverse
+eq:n
 lec1
 lec2
 lec3

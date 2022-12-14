@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-13" />
+<meta name="date" content="2022-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -191,7 +191,7 @@ Thus, we have <span class="math inline">\((i)\)</span>.</p>
 <p><span class="math display">\[\begin{align}
 RLw_i &amp; = Rx_i(W)w_{i-1} = x_i(W)w_i,
 LRw_i &amp; = Lw_{i+1} = x_{i+1}(W)w_i\\
-[L,R]w_i &amp; = (x_{i+1}(W)-x_i(W))w_i, \quad (0leq i\leq d),\\
+[L,R]w_i &amp; = (x_{i+1}(W)-x_i(W))w_i, \quad (0\leq i\leq d),\\
 &amp; \qquad x_0(W) = 0, \quad x_{d+1}(W) = 0, \\
 [L,R]|_W &amp; = \sum_{i=0}^d(x_{i+1}-x_i(W))E^*_{r+i}|W.
 \end{align}\]</span></p>
@@ -255,6 +255,96 @@ is one to one.</p>
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(LE^*_iA_{i-1}v = FE^*_{i-1}A_iV + (a_{i-1}-c_i+c_{i-1})E^*_{i-1}A_{i}v + b_{i-1}E^*_{i-1}A_{i-2}v\)</span> <span class="math inline">\((2\leq i\leq D)\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(LE^*_iA_{i+1}v = b_iE^*_{i-1}A_iv \quad (1\leq i\leq D-1)\)</span>.</div>
 </div>
+<div class="proof">
+<p><span id="unlabeled-div-130" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> Let</div>
+<p><span class="math display">\[v = \sum_{y\in X, \partial(x,y)=1}\alpha_y \hat{y} \quad \text{for some }\{\alpha_g\}\subseteq \mathbb{C}.\]</span>
+Then
+<span class="math display">\[Lv = \left(\sum_{y\in X, \partial(x,y)=1}\alpha_y\right)\hat{x} = .\]</span>
+So,
+<span class="math display">\[\sum_{y\in X, \partial(x,y)=1}\alpha_y = 0.\]</span>
+Thus,
+<span class="math display">\[v = \sum_{y\in X, \partial(x,y)=1}\alpha_y(\hat{y}-\hat{x}).\]</span>
+Let
+<span class="math display">\[\tilde{A}_i = A_0 + A_1 + \cdots + A_i \quad (0\leq i\leq D).\]</span>
+Then
+<span class="math display">\[\begin{align}
+\tilde{A}_iv &amp; = \sum_{y\in X, \partial(x,y)=1}\alpha_y \tilde{A}_i(\hat{y}-\hat{x})\\
+&amp; = \sum_{y\in X, \partial(x,y)=1}\alpha_y\left(\sum_{z\in X, \partial(y,z)=i, \partial(x,z)=i+1}\hat{z}-\sum_{z&#39;\in X, \partial(y,z&#39;)=i+1, \partial(x,z&#39;)=i}\hat{z}&#39;\right)\\
+&amp; = \sum_{y\in X, \partial(x,y)=1}\alpha_y(E^*_{i+1}A_i\hat{y}- E^*_iA_{i+1}\hat{y})\\
+&amp; = E^*_{i+1}A_iv - E^*_{i+1}A_{i+1}v.
+\end{align}\]</span></p>
+<p>Recall (Claim 1 in the proof of Theorem <a href="lec16.html#thm:endpoint1">16.1</a>.)
+<span class="math display">\[A\tilde{A}_i = c_{i+1}\tilde{A}_{i+1}+ (a_i-c_{i+1}+c_i)\tilde{A}_i + b_i\tilde{A}_{i-1}\quad (0\leq i\leq D-1).\]</span>
+(This is valid for <span class="math inline">\(i=0\)</span> as <span class="math inline">\(A\tilde{A}_0 = AI = c_1\tilde{A}- \tilde{A}_0 = A\)</span> by setting <span class="math inline">\(\tilde{A}_{i-1} = O\)</span>.)</p>
+<p>Now <span class="math inline">\((i)-(iv)\)</span> are obtained by applying this to <span class="math inline">\(v\)</span> on the right and multiplied by <span class="math inline">\(E^*_j\)</span> <span class="math inline">\((0\leq j\leq D)\)</span> on the left.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-131" class="remark"><em>Remark</em>. </span><span class="math inline">\(A\tilde{A}_{i-1}v = AE^*_iA_{i-1}v - AE^*_{i-1}A_iv\)</span>. For <span class="math inline">\(1\leq i\leq D\)</span>,
+<span class="math display">\[\begin{align}
+&amp; (c_i\tilde{A}_i + (a_{i-1}-c_i+c_{i-1})\tilde{A}_{i-1}+b_{i-1}\tilde{A}_{i-2})v\\
+&amp; \quad = c_i E^*_{i+1}A_iv - c_iE^*_iA_{i+1}v\\
+&amp; \qquad + (a_{i-1}-c_i+c_{i-1})E^*_iA_{i-1}v - (a_{i-1}-c_i+c_{i-1})E^*_{i-1}A_iv\\
+&amp; \qquad + b_{i-1}E^*_{i-1}A_{i-2}v - b_{i-1}E^*_{i-2}A_{i-1}v.
+\end{align}\]</span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(RE^*_iA_{i-1}v = E^*_{i+1}AE^*_iA_{i-1}v = c_iE^*_{i+1}A_iv\)</span> <span class="math inline">\((1\leq i\leq D)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> For <span class="math inline">\(1\leq i\leq D\)</span>,</div>
+<p><span class="math display">\[\begin{align}
+FE^*_iA_{i-1}v &amp; = E^*_{i}AE^*_iA_{i-1}v\\
+&amp; = RE^*_{i-1}A_iv - c_iE^*_iA_{i+1}v + (a_{i-1}-c_i+c_{i-1})E^*_iA_{i-1}v.
+\end{align}\]</span></p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> For <span class="math inline">\(2\leq i\leq D\)</span>,</div>
+<p><span class="math display">\[\begin{align}
+LE^*_iA_{i-1}v &amp; = E^*_{i-1}AE^*_{i}A_{i-1}v\\
+&amp; = FE^*_{i-1}A_iv - (a_{i-1}-c_i+c_{i-1})E^*_{i-1}A_i v + b_{i-1}E^*_{i-1}A_{i-2}v.
+\end{align}\]</span>
+(Even if <span class="math inline">\(i=1\)</span>, this is valid by setting <span class="math inline">\(A_{i-2}=O\)</span>.)</p>
+<div class="line-block"><span class="math inline">\((iv)\)</span> For <span class="math inline">\(1\leq i\leq D-1\)</span>, <span class="math inline">\(LE^*_iA_{i+1}v = E^*_{i-1}AE^*_i A_{i+1} = b_iE^*_{i-1}A_iv\)</span>.</div>
+</div>
+<div class="lemma">
+<p><span id="lem:generator-endpoint1-mod" class="lemma"><strong>Lemma 32.3  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be distance regular of diameter <span class="math inline">\(D\geq 3\)</span>. Fix a vertex <span class="math inline">\(x\in X\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>, <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(R = R(x)\)</span>, <span class="math inline">\(F = F(x)\)</span>, <span class="math inline">\(L = L(x)\)</span>.</p>
+<p>For every <span class="math inline">\(v\in (E^*_1V)_{new}\)</span>, the following are equivalent.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E^*_iA_{i-1}v\)</span>, <span class="math inline">\(E^*_{i}A_{i+1}v\)</span> are linearly dependent for every <span class="math inline">\(i\)</span> <span class="math inline">\((1\leq i\leq D-1)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> There exists a thin irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> with endpoint <span class="math inline">\(1\)</span> that contains <span class="math inline">\(v\)</span>.</div>
+<p>If <span class="math inline">\((i)\)</span>, <span class="math inline">\((ii)\)</span> hold then
+<span class="math display">\[W = \mathrm{Span}(E^*_1, E^*_2A_1v, \ldots, E^*_DA_{i-1}v).\]</span></p>
+</div>
+<p>:::{.proof}
+<span class="math inline">\((ii)\to(i)\)</span>. Clear as
+<span class="math display">\[E^*_iA_{i-1}v, \; E^*_iA_{i+1}v \in E^*_iW = \mathrm{Span}(w_{i-1}).\]</span></p>
+<div class="line-block"><span class="math inline">\((i)\to(ii)\)</span> Consider the sequence</div>
+<p><span class="math display">\[E^*_1A_{i-1}v, E^*_2A_1v, E^*_3A_2v, \ldots, E^*_{D+1}A_Dv.\]</span>
+The first term is nonzero and the last term is <span class="math inline">\(0\)</span>.
+So there exists
+<span class="math display">\[n := \mathrm{min}\{i\mid 1\leq i\leq D, \; E^*_{i+1}A_iv = 0\}.\]</span>
+Now
+<span class="math display" id="eq:n">\[\begin{equation}
+E^*_{j+1}A_jv = 0 \quad (n\leq j\leq D). \tag{32.1}
+\end{equation}\]</span></p>
+<div class="remark">
+<p><span id="unlabeled-div-132" class="remark"><em>Remark</em>. </span>Use induction and Lemma <a href="lec32.html#lem:action-on-estar1v-new">32.2</a> <span class="math inline">\((i)\)</span>,
+<span class="math display">\[E^*_{j+1}A_jv \in \mathrm{Span}(RE^*_jA_{j-1}v) \quad (j\geq 1).\]</span></p>
+</div>
+<p>By our assumption <span class="math inline">\((i)\)</span>, and the definition of <span class="math inline">\(n\)</span>,
+<span class="math display">\[E^*_jA_{j+1}v \in \mathrm{Span}(E^*_jA_{j-1}v)\neq 0 \quad (1\leq j\leq n).\]</span></p>
+<p>By Lemma <a href="lec32.html#lem:action-on-estar1v-new">32.2</a> <span class="math inline">\((i)\)</span>,
+<span class="math display">\[RE^*_jA_{j-1}v \in \mathrm{Span}(E^*_{j+1}A_jv) \quad (1\leq j\leq n).\]</span></p>
+<p>By Lemma <a href="lec32.html#lem:action-on-estar1v-new">32.2</a> <span class="math inline">\((ii)\)</span>,
+<span class="math display">\[\begin{align}
+FE^*_jA_{j-1}v &amp; \in \mathrm{Span}(RE^*_{j-1}A_jv, E^*_jA_{j-1}v, E^*_jA_{j+1}v)\\
+&amp; \subseteq \mathrm{Span}(RE^*_{j-1}A_{j-2}v, E^*_jA_{j-1}v)\\
+&amp; \mathrm{Span}(E^*_{j-1}A_{j-1}v) \quad (1\leq j\leq n).
+\end{align}\]</span></p>
+<p>By Lemma <a href="lec32.html#lem:action-on-estar1v-new">32.2</a> <span class="math inline">\((iii)\)</span>,
+<span class="math display">\[\begin{align}
+FE^*_jA_{j-1}v &amp; \in \mathrm{Span}(FE^*_{j-1}A_j v, E^*_{j-1}A_{j}v, E^*_{j-1}A_{j-2}v)\\
+&amp; \subseteq \mathrm{Span}(FE^*_{j-1}A_{j-2}v, E^*_{j-1}A_{j-2}v)\\
+&amp; \mathrm{Span}(E^*_{j-1}A_{j-2}v) \quad (2\leq j\leq n).
+\end{align}\]</span></p>
+<p>Hence,
+<span class="math display">\[W = \mathrm{Span}(E^*_1A_0v, E^*_2A_1v, \ldots, E^*_nA_{n-1}v).\]</span>
+is <span class="math inline">\(R\)</span>, <span class="math inline">\(F\)</span>, <span class="math inline">\(L\)</span> invariant.</p>
+<p>Therefore <span class="math inline">\(W\)</span> is a thin <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(1\)</span> that contains <span class="math inline">\(v\)</span>.</p>
 
 </div>
             </section>
