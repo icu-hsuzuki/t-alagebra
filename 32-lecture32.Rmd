@@ -234,3 +234,4 @@ $$W = \mathrm{Span}(E^*_1A_0v, E^*_2A_1v, \ldots, E^*_nA_{n-1}v).$$
 is $R$, $F$, $L$ invariant. 
 
 Therefore $W$ is a thin $T$-module with endpoint $1$ that contains $v$.
+:::
