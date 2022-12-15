@@ -154,18 +154,18 @@ Since $\dim E_i^*W = 1$, for $a, b\in E_i^*TE_i^*$, ${ab - ba}_{| E_i^*W} = 0$. 
 | (C) $\Rightarrow$ (TH)
 Suppose $\dim E_i^*W \geq 2$ for some irreducible $T$-module $W$ with some $i$ with $1\leq i\leq D$.
 
-Claim: $E_i^*W$ is an irreducible $E_i^*TE_i^*$-module.
+Claim 1. $E_i^*W$ is an irreducible $E_i^*TE_i^*$-module.
 
 _Pf._ 
 Suppose 
 $$0 \subsetneq U \subsetneq E_i^*W,$$
 where $U$ is an $E_i^*TE_i^*$-module. Then by the irreducibility,
 $$TU = W.$$
-So 
+So, 
 $$U \supseteq E_i^*TE_i^*U = E_i^*TU = E^*_iW.$$
 This is a contradiction.
 
-Claim 2: Each irreducible $S = E_i^*TE_i^*$-module $U$ has dimension $1$. In particular, $\Gamma$ is thin with respect to $x$.
+Claim 2. Each irreducible $S = E_i^*TE_i^*$-module $U$ has dimension $1$. In particular, $\Gamma$ is thin with respect to $x$.
 
 _Pf._
 Pick
