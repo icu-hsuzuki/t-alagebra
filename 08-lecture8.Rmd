@@ -28,7 +28,7 @@ Also, we have
 $$\hat{g}E_j^* = E^*_j\hat{g} \quad (0\leq j\leq D),$$
 since 
 $$\partial(x,y) = \partial(g(x), g(y)) = \partial(x, g(y)).$$
-Hence $\hat{g}$ commutes with each element of $T$. We have
+Hence, $\hat{g}$ commutes with each element of $T$. We have
 \begin{align}
 a_{yz} & = (\hat{g}^{-1}a\hat{g})_{yz}, \quad (\hat{g})_{yz} = \begin{cases} 1 & g(z) = y\\ 0 & \text{else.}\end{cases}\\
 & = \sum_{y', z'}(\hat{g}^{-1})_{yy'}a_{y'z'}\hat{g}_{z'z}\\
@@ -70,21 +70,21 @@ Suppose a graph $\Gamma = (X, E)$ satisfies the property \textrm{(G) = (G($x$))}
 $(i)$
 Claim. Suppose $y, z\in X$ are conneced by a path of even length. Then $y, z$ are in the same orbit of $\mathrm{Aut}(\Gamma)$.
 
-_Pf._ 
+_Pf of Claim._ 
 It suffices to assume that the path has lenght $2$, $y \sim w\sim z$. 
 
 Now $\partial(y,w) = \partial(w,z) = 1$. So there exits $g\in \mathrm{Aut}(\Gamma)$ such that 
-$$gw = w, \quad gy = z, \quad gz = y.$
+$$gw = w, \quad gy = z, \quad gz = y.$$
 This proves Claim.
 
 Fix $x\in X$. Now suppose that $\Gamma$ is not vertex transitive, and we shall show $(ib)$.
 
 Observe that $X = X^+ \cup X^-$, where
 \begin{align}
-X^+ & = \{y\in X\mid \text{there exists a path of even length connecting $x$ and $y$}\}\\
-X^- & = \{y\in X\mid \text{there exists a path of odd length connecting $x$ and $y$}\}
+X^+ & = \{y\in X\mid \text{there exists a path of even length connecting $x$ and $y$}\},\\
+X^- & = \{y\in X\mid \text{there exists a path of odd length connecting $x$ and $y$}\}.
 \end{align}
-Asi $X^+$ is contained in an orbit $O^+$ of $\mathrm{Aut}(\Gamma)$, and $X^-$ is contained in an orbit $O^-$ of $\mathrm{Aut}(\Gamma)$.
+Also, $X^+$ is contained in an orbit $O^+$ of $\mathrm{Aut}(\Gamma)$, and $X^-$ is contained in an orbit $O^-$ of $\mathrm{Aut}(\Gamma)$.
 
 Now $O^+\cap O^- = \emptyset$ (else $O^+ = O^- = X$ and vertex transitive).
 So,
