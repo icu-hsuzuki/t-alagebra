@@ -131,7 +131,9 @@ div.csl-indent {
 <li class="chapter" data-level="30" data-path="lec30.html"><a href="lec30.html"><i class="fa fa-check"></i><b>30</b> <span class="math inline">\(R, F, L\)</span> Matrices</a></li>
 <li class="chapter" data-level="31" data-path="lec31.html"><a href="lec31.html"><i class="fa fa-check"></i><b>31</b> The “Inverse” of <span class="math inline">\(R\)</span></a></li>
 <li class="chapter" data-level="32" data-path="lec32.html"><a href="lec32.html"><i class="fa fa-check"></i><b>32</b> Irreducible Modules of Endpoint <span class="math inline">\(i\)</span></a></li>
-<li class="chapter" data-level="33" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>33</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="33" data-path="lec33.html"><a href="lec33.html"><i class="fa fa-check"></i><b>33</b> Algebra on First Subconstitutent</a></li>
+<li class="chapter" data-level="34" data-path="lec34.html"><a href="lec34.html"><i class="fa fa-check"></i><b>34</b> Modules of Endpoint One</a></li>
+<li class="chapter" data-level="35" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>35</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -181,7 +183,7 @@ Also, we have
 <span class="math display">\[\hat{g}E_j^* = E^*_j\hat{g} \quad (0\leq j\leq D),\]</span>
 since
 <span class="math display">\[\partial(x,y) = \partial(g(x), g(y)) = \partial(x, g(y)).\]</span>
-Hence <span class="math inline">\(\hat{g}\)</span> commutes with each element of <span class="math inline">\(T\)</span>. We have
+Hence, <span class="math inline">\(\hat{g}\)</span> commutes with each element of <span class="math inline">\(T\)</span>. We have
 <span class="math display">\[\begin{align}
 a_{yz} &amp; = (\hat{g}^{-1}a\hat{g})_{yz}, \quad (\hat{g})_{yz} = \begin{cases} 1 &amp; g(z) = y\\ 0 &amp; \text{else.}\end{cases}\\
 &amp; = \sum_{y&#39;, z&#39;}(\hat{g}^{-1})_{yy&#39;}a_{y&#39;z&#39;}\hat{g}_{z&#39;z}\\
@@ -213,18 +215,18 @@ there exists <span class="math inline">\(g\in G\)</span> such that
 <div class="proof">
 <p><span id="unlabeled-div-51" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span>
 Claim. Suppose <span class="math inline">\(y, z\in X\)</span> are conneced by a path of even length. Then <span class="math inline">\(y, z\)</span> are in the same orbit of <span class="math inline">\(\mathrm{Aut}(\Gamma)\)</span>.</p>
-<p><em>Pf.</em>
+<p><em>Pf of Claim.</em>
 It suffices to assume that the path has lenght <span class="math inline">\(2\)</span>, <span class="math inline">\(y \sim w\sim z\)</span>.</p>
 <p>Now <span class="math inline">\(\partial(y,w) = \partial(w,z) = 1\)</span>. So there exits <span class="math inline">\(g\in \mathrm{Aut}(\Gamma)\)</span> such that
-$<span class="math inline">\(gw = w, \quad gy = z, \quad gz = y.\)</span>
+<span class="math display">\[gw = w, \quad gy = z, \quad gz = y.\]</span>
 This proves Claim.</p>
 <p>Fix <span class="math inline">\(x\in X\)</span>. Now suppose that <span class="math inline">\(\Gamma\)</span> is not vertex transitive, and we shall show <span class="math inline">\((ib)\)</span>.</p>
 <p>Observe that <span class="math inline">\(X = X^+ \cup X^-\)</span>, where
 <span class="math display">\[\begin{align}
-X^+ &amp; = \{y\in X\mid \text{there exists a path of even length connecting $x$ and $y$}\}\\
-X^- &amp; = \{y\in X\mid \text{there exists a path of odd length connecting $x$ and $y$}\}
+X^+ &amp; = \{y\in X\mid \text{there exists a path of even length connecting $x$ and $y$}\},\\
+X^- &amp; = \{y\in X\mid \text{there exists a path of odd length connecting $x$ and $y$}\}.
 \end{align}\]</span>
-Asi <span class="math inline">\(X^+\)</span> is contained in an orbit <span class="math inline">\(O^+\)</span> of <span class="math inline">\(\mathrm{Aut}(\Gamma)\)</span>, and <span class="math inline">\(X^-\)</span> is contained in an orbit <span class="math inline">\(O^-\)</span> of <span class="math inline">\(\mathrm{Aut}(\Gamma)\)</span>.</p>
+Also, <span class="math inline">\(X^+\)</span> is contained in an orbit <span class="math inline">\(O^+\)</span> of <span class="math inline">\(\mathrm{Aut}(\Gamma)\)</span>, and <span class="math inline">\(X^-\)</span> is contained in an orbit <span class="math inline">\(O^-\)</span> of <span class="math inline">\(\mathrm{Aut}(\Gamma)\)</span>.</p>
 <p>Now <span class="math inline">\(O^+\cap O^- = \emptyset\)</span> (else <span class="math inline">\(O^+ = O^- = X\)</span> and vertex transitive).
 So,
 <span class="math inline">\(X = O^+\)</span>, and <span class="math inline">\(X^- = O^-\)</span>.</p>

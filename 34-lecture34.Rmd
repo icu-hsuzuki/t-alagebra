@@ -1,0 +1,5 @@
+# Modules of Endpoint One {#lec34}
+**Friday, April 23, 1993** 
+
+Let $\Gamma = (X,E)$ be distance-regular of diameter $D\geq 3$.
+

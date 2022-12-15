@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 33 Algebra on First Subconstitutent | Lecture Note on Terwilliger Algebra</title>
+  <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 33 Algebra on First Subconstitutent | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 33 Algebra on First Subconstitutent | Lecture Note on Terwilliger Algebra" />
+  
+  <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
+
+
+<meta name="date" content="2022-12-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="lec32.html"/>
+<link rel="next" href="lec34.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Lecture Note on Terwilliger Algebra</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#setting"><i class="fa fa-check"></i>Setting</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Subconstituent Algebra of a Graph</a></li>
+<li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
+<li class="chapter" data-level="3" data-path="lec3.html"><a href="lec3.html"><i class="fa fa-check"></i><b>3</b> Cayley Graphs</a></li>
+<li class="chapter" data-level="4" data-path="lec4.html"><a href="lec4.html"><i class="fa fa-check"></i><b>4</b> Examples</a></li>
+<li class="chapter" data-level="5" data-path="lec5.html"><a href="lec5.html"><i class="fa fa-check"></i><b>5</b> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, I</a></li>
+<li class="chapter" data-level="6" data-path="lec6.html"><a href="lec6.html"><i class="fa fa-check"></i><b>6</b> <span class="math inline">\(T\)</span>-Modules of <span class="math inline">\(H(D,2)\)</span>, II</a></li>
+<li class="chapter" data-level="7" data-path="lec7.html"><a href="lec7.html"><i class="fa fa-check"></i><b>7</b> The Johnson Graph <span class="math inline">\(J(D,N)\)</span></a></li>
+<li class="chapter" data-level="8" data-path="lec8.html"><a href="lec8.html"><i class="fa fa-check"></i><b>8</b> Thin Graphs</a></li>
+<li class="chapter" data-level="9" data-path="lec9.html"><a href="lec9.html"><i class="fa fa-check"></i><b>9</b> Thin <span class="math inline">\(T\)</span>-Module, I</a></li>
+<li class="chapter" data-level="10" data-path="lec10.html"><a href="lec10.html"><i class="fa fa-check"></i><b>10</b> Thin <span class="math inline">\(T\)</span>-Module, II</a></li>
+<li class="chapter" data-level="11" data-path="lec11.html"><a href="lec11.html"><i class="fa fa-check"></i><b>11</b> Examples of <span class="math inline">\(T\)</span>-Module</a></li>
+<li class="chapter" data-level="12" data-path="lec12.html"><a href="lec12.html"><i class="fa fa-check"></i><b>12</b> Distance-Regular</a></li>
+<li class="chapter" data-level="13" data-path="lec13.html"><a href="lec13.html"><i class="fa fa-check"></i><b>13</b> Modules of a DRG</a></li>
+<li class="chapter" data-level="14" data-path="lec14.html"><a href="lec14.html"><i class="fa fa-check"></i><b>14</b> Parameters of Thin Modules, I</a></li>
+<li class="chapter" data-level="15" data-path="lec15.html"><a href="lec15.html"><i class="fa fa-check"></i><b>15</b> Parameters of Thin Modules, II</a></li>
+<li class="chapter" data-level="16" data-path="lec16.html"><a href="lec16.html"><i class="fa fa-check"></i><b>16</b> Thin Modoles of a DRG</a></li>
+<li class="chapter" data-level="17" data-path="lec17.html"><a href="lec17.html"><i class="fa fa-check"></i><b>17</b> Association Schemes</a></li>
+<li class="chapter" data-level="18" data-path="lec18.html"><a href="lec18.html"><i class="fa fa-check"></i><b>18</b> Polynomial Schemes</a></li>
+<li class="chapter" data-level="19" data-path="lec19.html"><a href="lec19.html"><i class="fa fa-check"></i><b>19</b> Commutative Association Schemes</a></li>
+<li class="chapter" data-level="20" data-path="lec20.html"><a href="lec20.html"><i class="fa fa-check"></i><b>20</b> Vanishing Conditions</a></li>
+<li class="chapter" data-level="21" data-path="lec21.html"><a href="lec21.html"><i class="fa fa-check"></i><b>21</b> Norton Algebras</a></li>
+<li class="chapter" data-level="22" data-path="lec22.html"><a href="lec22.html"><i class="fa fa-check"></i><b>22</b> <span class="math inline">\(Q\)</span>-Polynomial Schemes</a></li>
+<li class="chapter" data-level="23" data-path="lec23.html"><a href="lec23.html"><i class="fa fa-check"></i><b>23</b> Representation of a Scheme</a></li>
+<li class="chapter" data-level="24" data-path="lec24.html"><a href="lec24.html"><i class="fa fa-check"></i><b>24</b> Balanced Conditions, I</a></li>
+<li class="chapter" data-level="25" data-path="lec25.html"><a href="lec25.html"><i class="fa fa-check"></i><b>25</b> Balanced Conditions, II</a></li>
+<li class="chapter" data-level="26" data-path="lec26.html"><a href="lec26.html"><i class="fa fa-check"></i><b>26</b> Representation Diagrams</a></li>
+<li class="chapter" data-level="27" data-path="lec27.html"><a href="lec27.html"><i class="fa fa-check"></i><b>27</b> <span class="math inline">\(P\)</span>-and <span class="math inline">\(Q\)</span>-Polynomial Schemes</a></li>
+<li class="chapter" data-level="28" data-path="lec28.html"><a href="lec28.html"><i class="fa fa-check"></i><b>28</b> The First Eigenspace of a <span class="math inline">\(Q\)</span>-DRG</a></li>
+<li class="chapter" data-level="29" data-path="lec29.html"><a href="lec29.html"><i class="fa fa-check"></i><b>29</b> Tridiagonal Pair <span class="math inline">\(A, A^*\)</span></a></li>
+<li class="chapter" data-level="30" data-path="lec30.html"><a href="lec30.html"><i class="fa fa-check"></i><b>30</b> <span class="math inline">\(R, F, L\)</span> Matrices</a></li>
+<li class="chapter" data-level="31" data-path="lec31.html"><a href="lec31.html"><i class="fa fa-check"></i><b>31</b> The “Inverse” of <span class="math inline">\(R\)</span></a></li>
+<li class="chapter" data-level="32" data-path="lec32.html"><a href="lec32.html"><i class="fa fa-check"></i><b>32</b> Irreducible Modules of Endpoint <span class="math inline">\(i\)</span></a></li>
+<li class="chapter" data-level="33" data-path="lec33.html"><a href="lec33.html"><i class="fa fa-check"></i><b>33</b> Algebra on First Subconstitutent</a></li>
+<li class="chapter" data-level="34" data-path="lec34.html"><a href="lec34.html"><i class="fa fa-check"></i><b>34</b> Modules of Endpoint One</a></li>
+<li class="chapter" data-level="35" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>35</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Lecture Note on Terwilliger Algebra</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lec33" class="section level1 hasAnchor" number="33">
+<h1><span class="header-section-number">Chapter 33</span> Algebra on First Subconstitutent<a href="lec33.html#lec33" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Wednesday, April 21, 1993</strong></p>
+<div class="lemma">
+<p><span id="lem:mezerostarm" class="lemma"><strong>Lemma 33.1  </strong></span>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> be a commutative scheme. Fix a vertex <span class="math inline">\(x\in X\)</span>, write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(M^* \equiv M^*(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>. Then the following hold.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E^*_0MM^* = E^*_0M\)</span></div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(E^*_0T = E^*_0M\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(TE^*_0T = ME^*_0M\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(E^*_0E_0E^*_0 = |X|^{-1}E^*_0\)</span>.</div>
+<div class="line-block"><span class="math inline">\((v)\)</span> <span class="math inline">\(E^*_0E_0E^*_0 = |X|^{-1}E^*_0\)</span>.</div>
+<div class="line-block"><span class="math inline">\((vi)\)</span> Lines <span class="math inline">\((i)\)</span>-<span class="math inline">\((iv)\)</span> hold if we interchange <span class="math inline">\((E_0, E^*_0)\)</span>, <span class="math inline">\((M, M^*)\)</span>.</div>
+<p>Moreover, <span class="math inline">\(ME^*_0M = M^*E_0M^*\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-135" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\supseteq\)</span>: <span class="math inline">\(1\in M^*\)</span> implies <span class="math inline">\(M\subseteq MM^*\)</span>.</div>
+<p><span class="math inline">\(\subseteq\)</span>: Pick <span class="math inline">\(\alpha\in E^*_0MM^*\)</span>. Show <span class="math inline">\(\alpha\in E^*_0M\)</span>. Since <span class="math inline">\(A_0, A_1, \ldots, A_D\)</span> span <span class="math inline">\(M\)</span>, and since <span class="math inline">\(E^*_0, E^*_1, \ldots, E^*_D\)</span> span <span class="math inline">\(M^*\)</span>, without loss of generality we may assume that
+<span class="math display">\[\alpha = E^*_0A_iE^*_j\]</span>
+for some <span class="math inline">\(i,j\in \{0, \ldots, D\}\)</span>.</p>
+<p>Without loss of generality we may assume taht <span class="math inline">\(i = j\)</span>, else <span class="math inline">\(\alpha = 0\)</span> by Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a>.</p>
+<p><span class="math display">\[(E^*_hA_iE^*_j \neq O \Leftrightarrow p^j_{hi}\neq 0.)\]</span></p>
+<p>Now
+<span class="math display">\[\alpha = E^*_0A_i\left(\sum_{h=0}^D E^*_h\right) = E^*_0A_i \in E^*_0M.\]</span></p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\supseteq\)</span>: This is clear.</div>
+<p><span class="math inline">\(\subseteq\)</span>: <span class="math inline">\(E^*_0T\)</span> is the minimal right ideal of <span class="math inline">\(T\)</span> containing <span class="math inline">\(E^*_0\)</span>.</p>
+<p>So, we just have to show that <span class="math inline">\(E^*_0M\)</span> is a right ideal of <span class="math inline">\(T\)</span> containing <span class="math inline">\(E^*_0\)</span>.</p>
+<p>It clearly contains <span class="math inline">\(E^*_0\)</span> since <span class="math inline">\(I\in M\)</span>, and is a right ideal of <span class="math inline">\(T\)</span> by <span class="math inline">\((i)\)</span>, and the fact that <span class="math inline">\(T\)</span> is generated by <span class="math inline">\(M\)</span> abd <span class="math inline">\(M^*\)</span>.</p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> By the transpose of <span class="math inline">\((ii)\)</span>,</div>
+<p><span class="math display">\[TE^*_0 = ME^*_0,\]</span>
+so,
+<span class="math display">\[TE^*_0T = (TE^*_0)(E^*_0T) = ME^*_0E^*_0M = ME^*_0M.\]</span></p>
+<div class="line-block"><span class="math inline">\((iv)\)</span> We have</div>
+<p><span class="math display">\[E^*_0E_0E^*_0 = \frac{1}{|X|}E^*_0\left(\sum_{h=-}^D A_h\right)E^*_0 = \frac{1}{|X|}E^*_0A_0E^*_0 = |X|^{-1}E^*_0.\]</span></p>
+<div class="line-block"><span class="math inline">\((v)\)</span> The first part is clear by using Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a> <span class="math inline">\((ii)\)</span>,</div>
+<p><span class="math display">\[E_hA^*_iE_j\neq O \Leftrightarrow q^j_{hi} \neq 0,\]</span>
+and Lemma <a href="lec22.html#lem:phijqhij2">22.1</a> <span class="math inline">\((iii)\)</span>,
+<span class="math display">\[q^j_{0i} = \delta_{ij}.\]</span></p>
+<p>Also,
+<span class="math display">\[ME^*_0M = TE^*_0T = TE^*_0E_0E^*_0T \subseteq TE_0T = M^*E_0M^*,\]</span>
+and
+<span class="math display">\[M^*E_0M^* \subseteq ME^*_0M\]</span>
+by dual argument.
+So,
+<span class="math display">\[M^*E_0M^* = ME^*_0M.\]</span></p>
+<p>This proves the lemma.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:eonemmstar" class="lemma"><strong>Lemma 33.2  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be distance regular of diameter <span class="math inline">\(D\leq 3\)</span>, <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>. Pick a vertex <span class="math inline">\(x\in X\)</span>,
+write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(M^* \equiv M^*(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E^*_1MM^* = E^*M + E^*_1E_0M^* + E^*_1E_1M^*\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(E_1M^*M = E_1M^* + E_1E^*_0M + E_1E^*_1M\)</span>.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-136" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> View <span class="math inline">\(E^*_{-1}\)</span>, <span class="math inline">\(E^*_{D+1}\)</span> as <span class="math inline">\(O\)</span>.</div>
+<p>View <span class="math inline">\(\theta^*_{-1}\)</span>, <span class="math inline">\(\theta^*_{D+1}\)</span> as indeterminates.</p>
+<p>Let <span class="math inline">\(\Delta\)</span> denote <span class="math inline">\(\mathrm{RHS}\)</span> in <span class="math inline">\((i)\)</span>.</p>
+<p><span class="math inline">\(\supseteq\)</span>: <span class="math inline">\(I\in M^*\)</span> implies <span class="math inline">\(M\subseteq MM^*\)</span>.</p>
+<p><span class="math inline">\(\subseteq\)</span>: Suppose not. Then there exists
+<span class="math display" id="eq:alpha">\[\begin{equation}
+\alpha\in E^*_1MM^*\setminus \Delta. \tag{33.1}
+\end{equation}\]</span></p>
+<p>Since <span class="math inline">\(A_0, A_1, \ldots, A_D\)</span> span <span class="math inline">\(M\)</span>, since <span class="math inline">\(E^*_0, E^*_1, \ldots, E^*_D\)</span> span <span class="math inline">\(M^*\)</span>, without loss of generality we may assume that
+<span class="math display">\[\alpha = E^*_1A_iE^*_j\]</span>
+for some <span class="math inline">\(i,j\in \{0, \ldots, D\}\)</span>.</p>
+<p>Observe <span class="math inline">\(|i-j|\leq 1\)</span>, else <span class="math inline">\(\alpha =0\)</span> by Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a>.</p>
+<p>Without loss of generality, assume <span class="math inline">\(i+j\)</span> is minimal subject to the above constraints.</p>
+<p>First assume
+<span class="math display" id="eq:j">\[\begin{equation}
+j = i+1. \tag{33.2}
+\end{equation}\]</span>
+Observe
+<span class="math display" id="eq:icase">\[\begin{align}
+&amp; E^*_1A_iE^*_{i+1} + E^*_1A_iE^*_i + E^*_1A_iE^*_{i-1}\\
+&amp; \qquad = E^*_1A_i\left(\sum_{h=0}^D E^*_h\right)\\
+&amp; \qquad = E^*_1A_i\\
+&amp; \qquad \in \Delta. \tag{33.3}
+\end{align}\]</span></p>
+<p>Also, observe
+<span class="math display">\[E^*_1A_iE^*_i, \; E^*_1A_iE^*_{i-1}\in \Delta\]</span>
+by the minimality of <span class="math inline">\(i+j\)</span>, so
+<span class="math display">\[\alpha = E^*_1A_iE^*_{i+1}\in \Delta\]</span>
+by <a href="lec33.html#eq:icase">(33.3)</a>. Hence, <a href="lec33.html#eq:j">(33.2)</a> cannot occur.</p>
+<p>Since <span class="math inline">\(|i-j|\leq 1\)</span>,
+<span class="math display" id="eq:i">\[\begin{equation}
+i\in \{j, j+1\}. \tag{33.4}
+\end{equation}\]</span></p>
+<p>Observe
+<span class="math display" id="eq:jplus1">\[\begin{align}
+&amp; E^*_1A_{j+1}E^*_{j} + E^*_1A_jE^*_j + E^*_1A_{j-1}E^*_{j}\\
+&amp; \qquad = E^*_1\left(\sum_{h=0}^D A_h\right)E^*_j\\
+&amp; \qquad = |X|E^*_1E_0E^*_j\\
+&amp; \qquad \in \Delta, \tag{33.5}
+\end{align}\]</span>
+and
+<span class="math display" id="eq:thetajplus1">\[\begin{align}
+&amp; \theta^*_{j+1}E^*_1A_{j+1}E^*_{j} + \theta^*_j E^*_1A_jE^*_j + \theta^*_{j-1}E^*_1A_{j-1}E^*_{j}\\
+&amp; \qquad = E^*_1\left(\sum_{h=0}^D \theta^*_h A_h\right)E^*_j\\
+&amp; \qquad = |X|E^*_1E_1E^*_j\\
+&amp; \qquad \in \Delta. \tag{33.6}
+\end{align}\]</span></p>
+<p>Since <span class="math inline">\(E^*_1A_{j-1}E^*_j\in \Delta\)</span> by the minimality of <span class="math inline">\(i+j\)</span>, so
+<span class="math display">\[E_1A_{j+1}E^*_j + E^*_1A_jE^*_j \in \Delta,\]</span>
+<span class="math display">\[\theta^*_{j+1}E^*_1A_{j+1}E^*_{j+1} + \theta^*_jE^*_1A_jE^*_j \in \Delta.\]</span></p>
+<p>But, <span class="math inline">\(\theta^*_0, \theta^*_1, \ldots, \theta^*_D\)</span> are distinct by Lemma <a href="lec22.html#lem:q-conditions">22.2</a> <span class="math inline">\((iv)\)</span>,
+so
+<span class="math display">\[E^*_1A_{j+1}E^*_j, \; E^*_1A_jE^*_j\in \Delta.\]</span>
+But <span class="math inline">\(\alpha\)</span> is one of these two matrices, so
+<span class="math display">\[\alpha \in \Delta.\]</span>
+Hence, <a href="lec33.html#eq:i">(33.4)</a> cannot occur either, and we have a contradiction.</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Dual argument.</div>
+</div>
+<div class="lemma">
+<p><span id="lem:tildej-tildea" class="lemma"><strong>Lemma 33.3  </strong></span>With the above notation, set
+<span class="math display">\[\tilde{J}:= E^*_1JE^*_1, \quad \tilde{A}:= E^*_1AE^*_1.\]</span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\tilde{J}^2 = k\tilde{J}\)</span>. <span class="math inline">\((k = \text{valency of $\Gamma$})\)</span></div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\tilde{J}\tilde{A} = \tilde{A}\tilde{J} = a_1\tilde{J}\)</span>. <span class="math inline">\((a_1 = p^{1}_{11} \text{ for } \Gamma)\)</span></div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(E_1^*E_0E^*_1 = |X|^{-1}\tilde{J}\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(E^*_1E_1E^*_1 = |X|^{-1}(E^*_1(\theta^*_0-\theta^*_2)+\tilde{A}(\theta^*_{1}-\theta^*_2)+\tilde{J}(\theta^*_2))\)</span>.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-137" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> The first subconstituent has <span class="math inline">\(k\)</span> vertices.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> The first subconstituent is regular of valency <span class="math inline">\(a_1\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> Since <span class="math inline">\(E_0 = |X|^{-1}J\)</span>,</div>
+<p><span class="math display">\[E^*_1E_0E^*_1 = |X|^{-1}\tilde{J}.\]</span></p>
+<div class="line-block"><span class="math inline">\((iv)\)</span> We have</div>
+<p><span class="math display" id="eq:e1stare1e1star">\[\begin{align}
+E^*_1E_1E^*_1 &amp; = E^*_1\left(|X|^{-1}\sum_{h=0}^D\theta^*_h A_h\right)E^*_1\\
+&amp; = |X|^{-1}(\theta^*_0E^*_1A_0E^*_1 + \theta^*_1E^*_1A_1E^*_1 + \theta^*_2E^*_1A_2E^*_1)\\
+&amp; = |X|^{-1}(\theta^*_0E^*_1 + \theta^*_1\tilde{A} + \theta^*_2E^*_1A_2E^*_1). \tag{33.7}
+\end{align}\]</span>
+Also,
+<span class="math display" id="eq:tildej">\[\begin{align}
+\tilde{J} &amp; = E^*_1JE^*_1\\
+&amp; = E^*A_0E^*_1 + E^*A_1E^*_1 + E^*_1A_2E^*_1\\
+&amp; = E^*_1 + \tilde{A} + E^*_1A_2E^*_1. \tag{33.8}
+\end{align}\]</span>
+Eliminating the <span class="math inline">\(E^*_1A_2E^*_1\)</span> term in <a href="lec33.html#eq:e1stare1e1star">(33.7)</a> using equation <a href="lec33.html#eq:tildej">(33.8)</a>, we get <span class="math inline">\((iv)\)</span>.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:e1starte1star" class="lemma"><strong>Lemma 33.4  </strong></span>With the above notation,</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E^*_1T = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*_1E_1E^*_1M + \cdots\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(E^*_1TE^*_1 = \mathrm{Span}(E^*_1E_0E^*_1, E^*_1, E^*_1E_1E^*_1, (E^*_1E_1E^*_1)^2, \ldots)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(E^*_1TE^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2, \ldots )\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(E^*_1TE^*_1\)</span> is symmetric (in particular, commutative).</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-139" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\supseteq\)</span>: Clear.</div>
+<p><span class="math inline">\(\subseteq\)</span>: <span class="math inline">\(E^*_1T\)</span> is the minimal right ideal of <span class="math inline">\(\Gamma\)</span> that contains <span class="math inline">\(E^*_1\)</span>.</p>
+<p><span class="math inline">\(\mathrm{RHS}\)</span> contains <span class="math inline">\(E^*_1\)</span>, so show <span class="math inline">\(\mathrm{RHS}\)</span> is a right ideal of <span class="math inline">\(T\)</span>.</p>
+<p>Show <span class="math inline">\(\mathrm{RHS}\)</span> is closed with respect to multiplication on right by <span class="math inline">\(M\)</span>, <span class="math inline">\(M^*\)</span>.</p>
+<p>We have
+<span class="math display">\[E^*_1E_0M^*(M) = E^*_1E_0M^*, \; E^*_1E_0M^*(M^*) = E^*_1E_0M^*\]</span>
+by dual of Lemma <a href="lec33.html#lem:mezerostarm">33.1</a> <span class="math inline">\((i)\)</span>.</p>
+<p>By Lemma <a href="lec33.html#lem:eonemmstar">33.2</a>,
+<span class="math display">\[\begin{align}
+&amp; E^*_1E_1E^*_1\cdots E^*_1M(M^*)\\
+&amp; \qquad = E^*_1E_1E^*_1\cdots E_1(E^*_1MM^*)\\
+&amp; \qquad = E^*_1E_1E^*_1\cdots E_1(E^*_1M+E^*_1E_0M^* + E^*_1E_1M^*)\\
+&amp; \qquad \in \mathrm{RHS},
+\end{align}\]</span>
+because
+<span class="math display">\[E^*_1E_1E^*_1\cdots E_1E^*_1E_0M^* \subseteq E^*_1TE_0T = E^*_1M^*E_0M^* = E^*_1E_0M^*.\]</span></p>
+<p>By Lemma <a href="lec33.html#lem:eonemmstar">33.2</a>,
+<span class="math display">\[\begin{align}
+&amp; E^*_1E_1E^*_1\cdots E_1M^*(M)\\
+&amp; \qquad = E^*_1E_1E^*_1\cdots E^*_1(_1M^*M)\\
+&amp; \qquad = E^*_1E_1E^*_1\cdots E^*_1(E_1M^*+E_1E^*_0M^* + E_1E^*_1M)\\
+&amp; \qquad \in \mathrm{RHS},
+\end{align}\]</span>
+because by the last part of Lemma <a href="lec33.html#lem:mezerostarm">33.1</a>,
+<span class="math display">\[E^*_1E_1E^*_1\cdots E^*_1E_1E^*_0M \subseteq E^*_1TE^*_0T = E^*_1ME^*_0M = E^*_1E_0M^*.\]</span></p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Multiply <span class="math inline">\((i)\)</span> on the right by <span class="math inline">\(E^*_1\)</span>, we have</div>
+<p><span class="math display">\[\begin{align}
+E^*_1TE^*_1 &amp; = E^*_1E_0M^*E^*_1 + E^*_1ME^*_1 + E^*_1E_1M^*E^*_1\\
+&amp; \quad + \cdots + E^*_1E_1\cdots E_1M^*E^*_1 + E^*_1E_1\cdots E^*_1ME^*_1\\
+&amp; = \mathrm{Span}(E^*_1E_0E^*_1, E^*_1, E^*_1E_1E^*_1, (E^*_1E_1E^*_1)^2, \ldots).
+\end{align}\]</span></p>
+<div class="remark">
+<p><span id="unlabeled-div-138" class="remark"><em>Remark</em>. </span>Note that by Lemma <a href="lec29.html#thm:aastar">29.1</a>,
+<span class="math display">\[\begin{align}
+E^*_1ME^*_1 &amp; = \mathrm{Span}(E^*_1A_0E^*_1, E^*_1A_1E^*_1, E^*_1A_2E^*_1)\\
+&amp; = \mathrm{Span}(E^*_1, E^*_1E_1E^*_1, E^*_1E_0E^*_1).
+\end{align}\]</span>
+Moreover,
+<span class="math display">\[E^*_1\cdots E^*_1E_0E^*_1 \subseteq E^*_1TE_0TE^*_1 = E^*_1M^*E_0M^*E^*_1 \in \mathrm{Span}(E^*_1E_0E^*_1).\]</span></p>
+</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> By <span class="math inline">\((ii)\)</span>, <span class="math inline">\(E^*_1TE^*_1\)</span> is generated by <span class="math inline">\(\tilde{J} = |X|E^*_1E_0E^*_1\)</span> and <span class="math inline">\(E^*_1E_1E^*_1\)</span>.</div>
+<p>By Lemma <a href="lec33.html#lem:tildej-tildea">33.3</a> <span class="math inline">\((iv)\)</span>, <span class="math inline">\(E^*_1TE^*_1\)</span> is generated by <span class="math inline">\(\tilde{J}, \tilde{A}\)</span>.</p>
+<p>But, <span class="math inline">\(\mathrm{Span}{\tilde{J}}\)</span> is a <span class="math inline">\(2\)</span>-sided ideal by Lemma <a href="lec33.html#lem:tildej-tildea">33.3</a> <span class="math inline">\((i)\)</span>, <span class="math inline">\((ii)\)</span>.</p>
+<p>Hence, we have <span class="math inline">\((iii)\)</span>.</p>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(\tilde{A}\)</span>, <span class="math inline">\(\tilde{J}\)</span> are symmetric commuting matrices, we have the claim.</div>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lec32.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lec34.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/33-lecture33.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/icu-hsuzuki/t-algebra/master/33-lecture33.Rmd",
+"text": null
+},
+"download": ["t-algebra.pdf", "t-algebra.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
