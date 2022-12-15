@@ -23,8 +23,8 @@ $$g(y) = z, \quad g(z) = y, \quad g(x) = x.$$
 Let $\hat{g}$ denote the permutation matrix representing $g$, i.e., 
 $$\hat{g}\hat{y} =\widehat{g(y)} \quad \text{for all }\ y\in X, \quad \hat{y} = \begin{pmatrix}0\\\vdots \\ 1 \\\vdots \\0\end{pmatrix}\begin{matrix} \\ \\ \leftarrow y \\ \\ \text{ } \end{matrix}.$$
 If $g\in \mathrm{Aut}(\Gamma)$, then
-$$\hat{g}A = A\hat{g} \quad \text{Exercise}.$$
-Also we have 
+$$\hat{g}A = A\hat{g} \quad \text{(Exercise)}.$$
+Also, we have 
 $$\hat{g}E_j^* = E^*_j\hat{g} \quad (0\leq j\leq D),$$
 since 
 $$\partial(x,y) = \partial(g(x), g(y)) = \partial(x, g(y)).$$
@@ -34,7 +34,7 @@ a_{yz} & = (\hat{g}^{-1}a\hat{g})_{yz}, \quad (\hat{g})_{yz} = \begin{cases} 1 &
 & = \sum_{y', z'}(\hat{g}^{-1})_{yy'}a_{y'z'}\hat{g}_{z'z}\\
 & \quad (\text{zero except for $g^{-1}(y') = y, \; g(z) = z'$}.)\\
 & = a_{g(y)g(z)}\\
-& a_{zy}.
+& = a_{zy}.
 \end{align}
 This proves Theorem  \@ref(thm:thin-condition).
 :::
@@ -44,8 +44,7 @@ This proves Theorem  \@ref(thm:thin-condition).
 Find all the graphs that satisfy the condition (G) for every vertex $x$.
 
 $H(N, 2)$ is one example, because
-$$\mathrm{Aut}\Gamma_{1\cdots 1} \simeq S_\Omega, \quad x = (1\cdots 1), \Gamma_i(x)
- = \{\hat{S} \mid |S| = i\}.$$
+$$\mathrm{Aut}\Gamma_{1\cdots 1} \simeq S_\Omega, \quad x = (1\cdots 1), \quad \Gamma_i(x) = \{\hat{S} \mid |S| = i\}.$$
 
 Property (G) is clearly related to the distance-transitive property.
 
@@ -53,7 +52,7 @@ Property (G) is clearly related to the distance-transitive property.
 Let $\Gamma = (X, E)$ be any graph. $\Gamma$ with $G\subseteq \mathrm{Aut}(\Gamma)$ is said to be distance-transitive \index{distance-transitive} (or two-point homogeneous), whenever 
 $$\text{for all } x, x', y, y'\in X \; \text{ with } \partial(x,y) = \partial(x',y'),$$ 
 there exists $g\in G$ such that
-$$g(x) = y,\quad g(x') = y'.$$
+$$g(x) = x',\quad g(y) = y'.$$
 (This means $G$ is as close to being doubly transitive as possible.)
 :::
 

@@ -176,8 +176,8 @@ By our assumption, there exists <span class="math inline">\(g\in G\)</span> such
 Let <span class="math inline">\(\hat{g}\)</span> denote the permutation matrix representing <span class="math inline">\(g\)</span>, i.e.,
 <span class="math display">\[\hat{g}\hat{y} =\widehat{g(y)} \quad \text{for all }\ y\in X, \quad \hat{y} = \begin{pmatrix}0\\\vdots \\ 1 \\\vdots \\0\end{pmatrix}\begin{matrix} \\ \\ \leftarrow y \\ \\ \text{ } \end{matrix}.\]</span>
 If <span class="math inline">\(g\in \mathrm{Aut}(\Gamma)\)</span>, then
-<span class="math display">\[\hat{g}A = A\hat{g} \quad \text{Exercise}.\]</span>
-Also we have
+<span class="math display">\[\hat{g}A = A\hat{g} \quad \text{(Exercise)}.\]</span>
+Also, we have
 <span class="math display">\[\hat{g}E_j^* = E^*_j\hat{g} \quad (0\leq j\leq D),\]</span>
 since
 <span class="math display">\[\partial(x,y) = \partial(g(x), g(y)) = \partial(x, g(y)).\]</span>
@@ -187,21 +187,20 @@ a_{yz} &amp; = (\hat{g}^{-1}a\hat{g})_{yz}, \quad (\hat{g})_{yz} = \begin{cases}
 &amp; = \sum_{y&#39;, z&#39;}(\hat{g}^{-1})_{yy&#39;}a_{y&#39;z&#39;}\hat{g}_{z&#39;z}\\
 &amp; \quad (\text{zero except for $g^{-1}(y&#39;) = y, \; g(z) = z&#39;$}.)\\
 &amp; = a_{g(y)g(z)}\\
-&amp; a_{zy}.
+&amp; = a_{zy}.
 \end{align}\]</span>
 This proves Theorem <a href="lec7.html#thm:thin-condition">7.1</a>.</p>
 </div>
 <p><strong>Open Problem:</strong>
 Find all the graphs that satisfy the condition (G) for every vertex <span class="math inline">\(x\)</span>.</p>
 <p><span class="math inline">\(H(N, 2)\)</span> is one example, because
-<span class="math display">\[\mathrm{Aut}\Gamma_{1\cdots 1} \simeq S_\Omega, \quad x = (1\cdots 1), \Gamma_i(x)
-= \{\hat{S} \mid |S| = i\}.\]</span></p>
+<span class="math display">\[\mathrm{Aut}\Gamma_{1\cdots 1} \simeq S_\Omega, \quad x = (1\cdots 1), \quad \Gamma_i(x) = \{\hat{S} \mid |S| = i\}.\]</span></p>
 <p>Property (G) is clearly related to the distance-transitive property.</p>
 <div class="definition">
 <p><span id="def:unlabeled-div-50" class="definition"><strong>Definition 8.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any graph. <span class="math inline">\(\Gamma\)</span> with <span class="math inline">\(G\subseteq \mathrm{Aut}(\Gamma)\)</span> is said to be distance-transitive (or two-point homogeneous), whenever
 <span class="math display">\[\text{for all } x, x&#39;, y, y&#39;\in X \; \text{ with } \partial(x,y) = \partial(x&#39;,y&#39;),\]</span>
 there exists <span class="math inline">\(g\in G\)</span> such that
-<span class="math display">\[g(x) = y,\quad g(x&#39;) = y&#39;.\]</span>
+<span class="math display">\[g(x) = x&#39;,\quad g(y) = y&#39;.\]</span>
 (This means <span class="math inline">\(G\)</span> is as close to being doubly transitive as possible.)</p>
 </div>
 <div class="lemma">
