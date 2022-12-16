@@ -1,5 +1,173 @@
 # Modules of Endpoint One {#lec34}
 **Friday, April 23, 1993** 
 
-Let $\Gamma = (X,E)$ be distance-regular of diameter $D\geq 3$.
+Let $\Gamma = (X,E)$ be distance-regular of diameter $D\geq 3$. 
 
+Assume $\Gamma$ is $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$. Write
+$$\tilde{A}_i = A_0 + A_1 + \cdots + A_i \quad i\in \{0, 1\ldots, D\}.$$
+Fix a vertex $x\in X$, write $E^*_i \equiv E^*_i(x)$, $M^* \equiv M^*(x)$, $T\equiv T(x)$.
+
+Pick $0\neq v\in (E^*_1V)_{new}$. Set $v^* = |X|E_1v$. We will show that
+$$Tv = Mv + M^*v^*.$$
+We need preliminary lemma.
+
+:::{.lemma #mvplusmstarvstar}
+With the atove notation, we have the following.
+
+| $(i)$ $\tilde{A}_hv = E^*_{h+1}A_hv - E^*_hA_{h+1}v$, $h\in \{0, 1, \ldots, D\}$. 
+$(E^*_{D+1} = A_{D+1} = O)$.
+
+| $(ii)$ $E^*_hv^* = (\theta^*_{h-1}-\theta^*_h)E^*_hA_{h-1}v - (\theta^*_h-\theta^*_{h+1})E^*_hA_{h+1}v$, $h\in \{0, 1, \ldots, D\}$. $(A_{-1} = A_{D+1} = O)$.
+
+| $(iii)$ ${\displaystyle (\theta^*_i-\theta^*_{i+1})E^*_{i+1}A_iv = \left(\sum_{h=0}^i (\theta^*_h-\theta^*_{i+1})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^*}$, $i\in \{0,1, \ldots, D-1\}$.
+
+| $(iv)$ ${\displaystyle (\theta^*_i-\theta^*_{i+1})E^*_{i}A_{i+1}v = \left(\sum_{h=0}^{i-1}(\theta^*_h-\theta^*_{i})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^*}$, $i\in \{0,1, \ldots, D-1\}$.
+
+| $(v)$ $Mv + M^*v^* = \mathrm{Span}\{E^*_iA_{i-1}v, E^*_{i-1}A_iv \mid 1\leq i\leq D\}$. 
+:::
+
+:::{.proof}
+| $(i)$ It is already done in Lemma \@ref(lem:action-on-estar1v-new).
+
+| $(ii)$
+\begin{align}
+E^*_hv^* & = |X|E^*_hE_1v\\
+& = E^*_h\left(\sum_{i=0}^D\theta^*A_i\right)v\\
+& = E^*_h\left(\sum_{i=0}^D\theta^*_i(\tilde{A}_i-\tilde{A}_{i-1})\right)v\\
+& = E^*_h\left(\sum_{i=0}^{D-1}(\theta^*_i-\theta^*_{i+1})\tilde{A}_i\right)v + E^*_h\theta^*_D\tilde{A}_D v\\
+& = E^*_h\left(\sum_{i=0}^{D-1}(\theta^*_i-\theta^*_{i+1})(E^*_{i+1}A_iv - E^*_iA_{i+1}v)\right)\\
+& = (\theta^*_{h-1}-\theta^*_h)E^*_hA_{h-1}v - (\theta^*_h-\theta^*_{h+1})E^*_hA_{h+1}v.
+\end{align}
+
+| $(iii)$, $(iv)$ Call the equation in $(iii)$, $i^+$ and call the equation in $(iv)$ $i^-$. Prove in order,
+$$0^-, 0^+, 1^-, 1^+, 2^-, 2^+, \ldots .$$
+$0^-$: Trivial.
+
+:::{.remark}
+\begin{align}
+\mathrm{LHS} & = (\theta^*_0 - \theta^*_1)E^*_0A_1v \\
+& = (\theta^*_{-1}-\theta^*_1)E^*_0A_{-1}v - E^*_hv^* \quad \text{(by $(ii)$)}\\
+& = -E^*_0v^*\\
+& = \mathrm{RHS}.
+\end{align}
+:::
+
+$i^+$: using $(i)$ and $i^-$.
+\begin{align}
+\mathrm{LHS} & = (\theta^*_i - \theta^*_{i+1})E^*_{i+1}A_iv \\
+& = (\theta^*_{i}-\theta^*_{i+1})E^*_{i+1}A_{i+1}v + (\theta^*_i-\theta^*_{i+1})\tilde{A}_iv \quad \text{(by $(i)$)}\\
+& = \left(\sum_{h=0}^{i-1}(\theta^*_h-\theta^*_{i})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^* + (\theta^*_i-\theta^*_{i+1})\left(\sum_{h=0}^i A_h\right)v \quad \text{(by $i^-$)}\\
+& = \left(\sum_{h=0}^i (\theta^*_h-\theta^*_{i+1})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^*.
+\end{align}
+
+$i^-$: using $(ii)$ and $(i-1)^+$.
+\begin{align}
+\mathrm{LHS} & = (\theta^*_i - \theta^*_{i+1})E^*_{i}A_{i+1}v \\
+& = (\theta^*_{i-1}-\theta^*_{i})E^*_{i}A_{i-1}v - E^*_iv^* \quad \text{(by $(ii)$)}\\
+& = \left(\sum_{h=0}^{i-1}(\theta^*_h-\theta^*_{i})A_h\right)v - \left(\sum_{h=0}^{i-1} E^*_h\right)v^* - E^*_iv^*\\ 
+& = \left(\sum_{h=0}^{i-1} (\theta^*_h-\theta^*_{i})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^*.
+\end{align}
+
+| $(v)$ Immediate from $(i)-(iv)$.
+:::
+
+:::{.remark}
+\begin{align}
+Mv + M^*v^* & \subseteq \mathrm{Span}\{\tilde{A}_hv, E^*_hv^*\mid 0\leq h\leq D\}\\
+& \subseteq \mathrm{Span}\{E^*_hA_{h-1}v, E^*_{h-1}A_hv\mid 1\leq h\leq D\}
+\end{align}
+by $(i)$ and $(ii)$.
+
+On the other hand, 
+$$E^*hA_{h-1}v, E^*_{h-1}A_hv\in Mv + M^*v^* \quad i\in \{1, 2, \ldots, D\}$$
+by $(iii)$ and $(iv)$.
+:::
+
+:::{.lemma #tv}
+With the notation of Lemma \@ref(lem:mvplusmstarvstar), assume $0\neq v\in (E^*_1V)_{new}$ is an eigenvector for $\tilde{A}:=E^*_1AE^*_1$. Then
+
+| $(i)$ $Tv = Mv + M^*v$, where $v^* = |X|E_1v$.
+
+| $(ii)$ $Tv = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^+_D, v^-_2, v^-_3, \ldots, v^-_{D-1}\}$, where $v^+_i = E^*_iA_{i-1}v$, $v^-_i = E^*_iA_{i+1}v$.
+
+| $(iii)$ $\dim E^*_1Tv = 1$, $\dim E^*_iTv \leq 2$ for $i\in \{2, \ldots, D-1\}$, and $\dim E^*_DTv \leq 1$.
+
+| $(iv)$ $Tv$ is an irreducible $T$-module.
+:::
+
+:::{.proof}
+| $(i)$ $\supseteq$: $v\in Tv$. So $Mv \subseteq Tv$, and
+$$v^* \in Mv \subseteq Tv.$$
+Hence, $M^*v^* \subseteq Tv$.
+
+$\subseteq$: It suffices to show that $Mv + M^*v^*$ is a $T$-module (since it clearly contains $v$).
+
+Show:
+
+| $(a)$ $M^*Mv \subseteq Mv + M^*v^*$.
+
+| $(b)$ $MM^*v \subseteq Mv + M^*v^*$.
+
+_Proof of $(a)$._
+By the transpose of $(i)$ in Lemma \@ref(lem:eonemmstar),
+$$M^*ME^*_1 = ME^*_1 + M^*E_0E^*_1 + M^*E_1E^*_1.$$
+Since $v\in E^*_1V$, $E^*_1v = v$ and
+$$M^*Mv = Mv + M^*E_0v + M^*E_1v.$$
+But also $E_0v = 0$ since $v$ is orthogonal to the trivial $T$-module.
+Since $E_1v = |X|^{-1}v^*$, 
+$$M^*Mv = Mv + M^*v^*$$
+as desired.
+
+| $(b)$ is obtained from the traspose of $(ii)$ in Lemma  \@ref(lem:eonemmstar).
+
+:::{.remark}
+\begin{align}
+MM^*v & = MM^*E_1v^*\\
+& = M^*E_1v^* + ME^*_0E_1v^* + ME^*_1E_1v^*\\
+& = M^*v^* + ME^*_0v^* + ME^*_1v^*.
+\end{align}
+$E^*_0v^*\in Tv$ and $E^*_0Tv = 0$ as $v\in (E^*_1V)_{new}$. So, $E^*_0v^* = 0$.
+\begin{align}
+E^*_1v^* & = |X|E^*_1E_1v \\
+& = |X|E^*_1E_1E^*_1v\\
+& = ((\theta^*_0-\theta^*_2)E^*_1 + (\theta^*_1-\theta^*_2)E^*_1AE^*_1 + \theta^*_2|X|E^*_1E_0E^*_1)v\\
+& = (\theta^*_0-\theta^*_2)v + (\theta^*_1-\theta^*_2)E^*_1AE^*_1v + \theta^*_2|X|E^*_1E_0v\\
+& \in \mathrm{Span}\{v\},
+\end{align}
+as $E_0v = 0$, and $v$ is an eigenvector of $E^*_1AE^*_1$.
+
+$\ast$ $v\in (E^*_1V)_{new}$. If $v$ is an eigenvector of $E^*_1AE^*_1$,
+$$E^*_1v^* \in \mathrm{Span}\{v\}.$$
+:::
+
+| $(ii)$ We have
+\begin{align}
+Tv & = Mv + M^*v^*\\
+& = \mathrm{Span}\{E^*_iA_{i-1}v, E^*_{i-1}A_iv\mid 1\leq i\leq D\}\\
+& = \mathrm{Span}\{v^+_i, v^-_{i-1}\mid 1\leq i\leq D\}\\
+& = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^*_D, v_0^-, \ldots, v^-_{D-1}\}
+\end{align}
+by Lemma \@ref(lem:mvplusmstarvstar) $(v)$.
+
+But $v^-_0 = E^*_0A_1v = 0$ sing $v\in (E^*_1V)_{new}$, and $v^-_1\in \mathrm{Span}\{v^+_1\}$. 
+
+Indeed,
+$$v^-_1 = E^*_1A_2v = (-1-a_0(Tv))v^+_1.$$
+where $a_0(Tv)$ is the eigenvalue of $v$ associated with $\tilde{A}$.
+
+To see this, observe
+\begin{align}
+0 & = \tilde{J}v\\
+& = E^*_1\left(\sum_{i=0}^DA_i\right)E^*_1v\\
+& = E^*_1\left(\sum_{i=0}^2A_i\right)E^*_1v\\
+& = v + a_0(Tv)v + v^-_1.
+\end{align}
+Therefore, 
+$$Tv = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^*_D, v_0^-, \ldots, v^-_{D-1}\}.$$
+
+| $(iii)$ $v^+_i, v^-_i\in E^*_iV$.
+
+| $(iv)$ Suppose $Tv$ is reducible, i.e., $Tv = W_1 + W_2$. (orthogonal direct sum of nonzero $T$-modules)
+$$E^*_1Tv = E^*W_1 + E^*_1W_2$$
+has dimension $1$ by $(iii)$. Assume $v\in E^*_1W_1$. Then $Tv \subseteq W_1$, a contradiction.
+:::

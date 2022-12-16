@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-15" />
+<meta name="date" content="2022-12-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -159,6 +159,140 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 34</span> Modules of Endpoint One<a href="lec34.html#lec34" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Friday, April 23, 1993</strong></p>
 <p>Let <span class="math inline">\(\Gamma = (X,E)\)</span> be distance-regular of diameter <span class="math inline">\(D\geq 3\)</span>.</p>
+<p>Assume <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>. Write
+<span class="math display">\[\tilde{A}_i = A_0 + A_1 + \cdots + A_i \quad i\in \{0, 1\ldots, D\}.\]</span>
+Fix a vertex <span class="math inline">\(x\in X\)</span>, write <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span>, <span class="math inline">\(M^* \equiv M^*(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>.</p>
+<p>Pick <span class="math inline">\(0\neq v\in (E^*_1V)_{new}\)</span>. Set <span class="math inline">\(v^* = |X|E_1v\)</span>. We will show that
+<span class="math display">\[Tv = Mv + M^*v^*.\]</span>
+We need preliminary lemma.</p>
+<div class="lemma">
+<p><span id="lem:mvplusmstarvstar" class="lemma"><strong>Lemma 34.1  </strong></span>With the atove notation, we have the following.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\tilde{A}_hv = E^*_{h+1}A_hv - E^*_hA_{h+1}v\)</span>, <span class="math inline">\(h\in \{0, 1, \ldots, D\}\)</span>.</div>
+<p><span class="math inline">\((E^*_{D+1} = A_{D+1} = O)\)</span>.</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(E^*_hv^* = (\theta^*_{h-1}-\theta^*_h)E^*_hA_{h-1}v - (\theta^*_h-\theta^*_{h+1})E^*_hA_{h+1}v\)</span>, <span class="math inline">\(h\in \{0, 1, \ldots, D\}\)</span>. <span class="math inline">\((A_{-1} = A_{D+1} = O)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\({\displaystyle (\theta^*_i-\theta^*_{i+1})E^*_{i+1}A_iv = \left(\sum_{h=0}^i (\theta^*_h-\theta^*_{i+1})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^*}\)</span>, <span class="math inline">\(i\in \{0,1, \ldots, D-1\}\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\({\displaystyle (\theta^*_i-\theta^*_{i+1})E^*_{i}A_{i+1}v = \left(\sum_{h=0}^{i-1}(\theta^*_h-\theta^*_{i})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^*}\)</span>, <span class="math inline">\(i\in \{0,1, \ldots, D-1\}\)</span>.</div>
+<div class="line-block"><span class="math inline">\((v)\)</span> <span class="math inline">\(Mv + M^*v^* = \mathrm{Span}\{E^*_iA_{i-1}v, E^*_{i-1}A_iv \mid 1\leq i\leq D\}\)</span>.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-141" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> It is already done in Lemma <a href="lec32.html#lem:action-on-estar1v-new">32.2</a>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span></div>
+<p><span class="math display">\[\begin{align}
+E^*_hv^* &amp; = |X|E^*_hE_1v\\
+&amp; = E^*_h\left(\sum_{i=0}^D\theta^*A_i\right)v\\
+&amp; = E^*_h\left(\sum_{i=0}^D\theta^*_i(\tilde{A}_i-\tilde{A}_{i-1})\right)v\\
+&amp; = E^*_h\left(\sum_{i=0}^{D-1}(\theta^*_i-\theta^*_{i+1})\tilde{A}_i\right)v + E^*_h\theta^*_D\tilde{A}_D v\\
+&amp; = E^*_h\left(\sum_{i=0}^{D-1}(\theta^*_i-\theta^*_{i+1})(E^*_{i+1}A_iv - E^*_iA_{i+1}v)\right)\\
+&amp; = (\theta^*_{h-1}-\theta^*_h)E^*_hA_{h-1}v - (\theta^*_h-\theta^*_{h+1})E^*_hA_{h+1}v.
+\end{align}\]</span></p>
+<div class="line-block"><span class="math inline">\((iii)\)</span>, <span class="math inline">\((iv)\)</span> Call the equation in <span class="math inline">\((iii)\)</span>, <span class="math inline">\(i^+\)</span> and call the equation in <span class="math inline">\((iv)\)</span> <span class="math inline">\(i^-\)</span>. Prove in order,</div>
+<p><span class="math display">\[0^-, 0^+, 1^-, 1^+, 2^-, 2^+, \ldots .\]</span>
+<span class="math inline">\(0^-\)</span>: Trivial.</p>
+<div class="remark">
+<p><span id="unlabeled-div-140" class="remark"><em>Remark</em>. </span><span class="math display">\[\begin{align}
+\mathrm{LHS} &amp; = (\theta^*_0 - \theta^*_1)E^*_0A_1v \\
+&amp; = (\theta^*_{-1}-\theta^*_1)E^*_0A_{-1}v - E^*_hv^* \quad \text{(by $(ii)$)}\\
+&amp; = -E^*_0v^*\\
+&amp; = \mathrm{RHS}.
+\end{align}\]</span></p>
+</div>
+<p><span class="math inline">\(i^+\)</span>: using <span class="math inline">\((i)\)</span> and <span class="math inline">\(i^-\)</span>.
+<span class="math display">\[\begin{align}
+\mathrm{LHS} &amp; = (\theta^*_i - \theta^*_{i+1})E^*_{i+1}A_iv \\
+&amp; = (\theta^*_{i}-\theta^*_{i+1})E^*_{i+1}A_{i+1}v + (\theta^*_i-\theta^*_{i+1})\tilde{A}_iv \quad \text{(by $(i)$)}\\
+&amp; = \left(\sum_{h=0}^{i-1}(\theta^*_h-\theta^*_{i})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^* + (\theta^*_i-\theta^*_{i+1})\left(\sum_{h=0}^i A_h\right)v \quad \text{(by $i^-$)}\\
+&amp; = \left(\sum_{h=0}^i (\theta^*_h-\theta^*_{i+1})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^*.
+\end{align}\]</span></p>
+<p><span class="math inline">\(i^-\)</span>: using <span class="math inline">\((ii)\)</span> and <span class="math inline">\((i-1)^+\)</span>.
+<span class="math display">\[\begin{align}
+\mathrm{LHS} &amp; = (\theta^*_i - \theta^*_{i+1})E^*_{i}A_{i+1}v \\
+&amp; = (\theta^*_{i-1}-\theta^*_{i})E^*_{i}A_{i-1}v - E^*_iv^* \quad \text{(by $(ii)$)}\\
+&amp; = \left(\sum_{h=0}^{i-1}(\theta^*_h-\theta^*_{i})A_h\right)v - \left(\sum_{h=0}^{i-1} E^*_h\right)v^* - E^*_iv^*\\
+&amp; = \left(\sum_{h=0}^{i-1} (\theta^*_h-\theta^*_{i})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^*.
+\end{align}\]</span></p>
+<div class="line-block"><span class="math inline">\((v)\)</span> Immediate from <span class="math inline">\((i)-(iv)\)</span>.</div>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-142" class="remark"><em>Remark</em>. </span><span class="math display">\[\begin{align}
+Mv + M^*v^* &amp; \subseteq \mathrm{Span}\{\tilde{A}_hv, E^*_hv^*\mid 0\leq h\leq D\}\\
+&amp; \subseteq \mathrm{Span}\{E^*_hA_{h-1}v, E^*_{h-1}A_hv\mid 1\leq h\leq D\}
+\end{align}\]</span>
+by <span class="math inline">\((i)\)</span> and <span class="math inline">\((ii)\)</span>.</p>
+<p>On the other hand,
+<span class="math display">\[E^*hA_{h-1}v, E^*_{h-1}A_hv\in Mv + M^*v^* \quad i\in \{1, 2, \ldots, D\}\]</span>
+by <span class="math inline">\((iii)\)</span> and <span class="math inline">\((iv)\)</span>.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:tv" class="lemma"><strong>Lemma 34.2  </strong></span>With the notation of Lemma <a href="lec34.html#lem:mvplusmstarvstar">34.1</a>, assume <span class="math inline">\(0\neq v\in (E^*_1V)_{new}\)</span> is an eigenvector for <span class="math inline">\(\tilde{A}:=E^*_1AE^*_1\)</span>. Then</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(Tv = Mv + M^*v\)</span>, where <span class="math inline">\(v^* = |X|E_1v\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(Tv = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^+_D, v^-_2, v^-_3, \ldots, v^-_{D-1}\}\)</span>, where <span class="math inline">\(v^+_i = E^*_iA_{i-1}v\)</span>, <span class="math inline">\(v^-_i = E^*_iA_{i+1}v\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(\dim E^*_1Tv = 1\)</span>, <span class="math inline">\(\dim E^*_iTv \leq 2\)</span> for <span class="math inline">\(i\in \{2, \ldots, D-1\}\)</span>, and <span class="math inline">\(\dim E^*_DTv \leq 1\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(Tv\)</span> is an irreducible <span class="math inline">\(T\)</span>-module.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-144" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\supseteq\)</span>: <span class="math inline">\(v\in Tv\)</span>. So <span class="math inline">\(Mv \subseteq Tv\)</span>, and</div>
+<p><span class="math display">\[v^* \in Mv \subseteq Tv.\]</span>
+Hence, <span class="math inline">\(M^*v^* \subseteq Tv\)</span>.</p>
+<p><span class="math inline">\(\subseteq\)</span>: It suffices to show that <span class="math inline">\(Mv + M^*v^*\)</span> is a <span class="math inline">\(T\)</span>-module (since it clearly contains <span class="math inline">\(v\)</span>).</p>
+<p>Show:</p>
+<div class="line-block"><span class="math inline">\((a)\)</span> <span class="math inline">\(M^*Mv \subseteq Mv + M^*v^*\)</span>.</div>
+<div class="line-block"><span class="math inline">\((b)\)</span> <span class="math inline">\(MM^*v \subseteq Mv + M^*v^*\)</span>.</div>
+<p><em>Proof of <span class="math inline">\((a)\)</span>.</em>
+By the transpose of <span class="math inline">\((i)\)</span> in Lemma <a href="lec33.html#lem:eonemmstar">33.2</a>,
+<span class="math display">\[M^*ME^*_1 = ME^*_1 + M^*E_0E^*_1 + M^*E_1E^*_1.\]</span>
+Since <span class="math inline">\(v\in E^*_1V\)</span>, <span class="math inline">\(E^*_1v = v\)</span> and
+<span class="math display">\[M^*Mv = Mv + M^*E_0v + M^*E_1v.\]</span>
+But also <span class="math inline">\(E_0v = 0\)</span> since <span class="math inline">\(v\)</span> is orthogonal to the trivial <span class="math inline">\(T\)</span>-module.
+Since <span class="math inline">\(E_1v = |X|^{-1}v^*\)</span>,
+<span class="math display">\[M^*Mv = Mv + M^*v^*\]</span>
+as desired.</p>
+<div class="line-block"><span class="math inline">\((b)\)</span> is obtained from the traspose of <span class="math inline">\((ii)\)</span> in Lemma <a href="lec33.html#lem:eonemmstar">33.2</a>.</div>
+<div class="remark">
+<p><span id="unlabeled-div-143" class="remark"><em>Remark</em>. </span><span class="math display">\[\begin{align}
+MM^*v &amp; = MM^*E_1v^*\\
+&amp; = M^*E_1v^* + ME^*_0E_1v^* + ME^*_1E_1v^*\\
+&amp; = M^*v^* + ME^*_0v^* + ME^*_1v^*.
+\end{align}\]</span>
+<span class="math inline">\(E^*_0v^*\in Tv\)</span> and <span class="math inline">\(E^*_0Tv = 0\)</span> as <span class="math inline">\(v\in (E^*_1V)_{new}\)</span>. So, <span class="math inline">\(E^*_0v^* = 0\)</span>.
+<span class="math display">\[\begin{align}
+E^*_1v^* &amp; = |X|E^*_1E_1v \\
+&amp; = |X|E^*_1E_1E^*_1v\\
+&amp; = ((\theta^*_0-\theta^*_2)E^*_1 + (\theta^*_1-\theta^*_2)E^*_1AE^*_1 + \theta^*_2|X|E^*_1E_0E^*_1)v\\
+&amp; = (\theta^*_0-\theta^*_2)v + (\theta^*_1-\theta^*_2)E^*_1AE^*_1v + \theta^*_2|X|E^*_1E_0v\\
+&amp; \in \mathrm{Span}\{v\},
+\end{align}\]</span>
+as <span class="math inline">\(E_0v = 0\)</span>, and <span class="math inline">\(v\)</span> is an eigenvector of <span class="math inline">\(E^*_1AE^*_1\)</span>.</p>
+<p><span class="math inline">\(\ast\)</span> <span class="math inline">\(v\in (E^*_1V)_{new}\)</span>. If <span class="math inline">\(v\)</span> is an eigenvector of <span class="math inline">\(E^*_1AE^*_1\)</span>,
+<span class="math display">\[E^*_1v^* \in \mathrm{Span}\{v\}.\]</span></p>
+</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> We have</div>
+<p><span class="math display">\[\begin{align}
+Tv &amp; = Mv + M^*v^*\\
+&amp; = \mathrm{Span}\{E^*_iA_{i-1}v, E^*_{i-1}A_iv\mid 1\leq i\leq D\}\\
+&amp; = \mathrm{Span}\{v^+_i, v^-_{i-1}\mid 1\leq i\leq D\}\\
+&amp; = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^*_D, v_0^-, \ldots, v^-_{D-1}\}
+\end{align}\]</span>
+by Lemma <a href="lec34.html#lem:mvplusmstarvstar">34.1</a> <span class="math inline">\((v)\)</span>.</p>
+<p>But <span class="math inline">\(v^-_0 = E^*_0A_1v = 0\)</span> sing <span class="math inline">\(v\in (E^*_1V)_{new}\)</span>, and <span class="math inline">\(v^-_1\in \mathrm{Span}\{v^+_1\}\)</span>.</p>
+<p>Indeed,
+<span class="math display">\[v^-_1 = E^*_1A_2v = (-1-a_0(Tv))v^+_1.\]</span>
+where <span class="math inline">\(a_0(Tv)\)</span> is the eigenvalue of <span class="math inline">\(v\)</span> associated with <span class="math inline">\(\tilde{A}\)</span>.</p>
+<p>To see this, observe
+<span class="math display">\[\begin{align}
+0 &amp; = \tilde{J}v\\
+&amp; = E^*_1\left(\sum_{i=0}^DA_i\right)E^*_1v\\
+&amp; = E^*_1\left(\sum_{i=0}^2A_i\right)E^*_1v\\
+&amp; = v + a_0(Tv)v + v^-_1.
+\end{align}\]</span>
+Therefore,
+<span class="math display">\[Tv = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^*_D, v_0^-, \ldots, v^-_{D-1}\}.\]</span></p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(v^+_i, v^-_i\in E^*_iV\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> Suppose <span class="math inline">\(Tv\)</span> is reducible, i.e., <span class="math inline">\(Tv = W_1 + W_2\)</span>. (orthogonal direct sum of nonzero <span class="math inline">\(T\)</span>-modules)</div>
+<p><span class="math display">\[E^*_1Tv = E^*W_1 + E^*_1W_2\]</span>
+has dimension <span class="math inline">\(1\)</span> by <span class="math inline">\((iii)\)</span>. Assume <span class="math inline">\(v\in E^*_1W_1\)</span>. Then <span class="math inline">\(Tv \subseteq W_1\)</span>, a contradiction.</p>
+</div>
 
 </div>
             </section>
