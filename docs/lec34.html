@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="lec33.html"/>
-<link rel="next" href="lec55.html"/>
+<link rel="next" href="lec35.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -133,7 +133,8 @@ div.csl-indent {
 <li class="chapter" data-level="32" data-path="lec32.html"><a href="lec32.html"><i class="fa fa-check"></i><b>32</b> Irreducible Modules of Endpoint <span class="math inline">\(i\)</span></a></li>
 <li class="chapter" data-level="33" data-path="lec33.html"><a href="lec33.html"><i class="fa fa-check"></i><b>33</b> Algebra on First Subconstitutent</a></li>
 <li class="chapter" data-level="34" data-path="lec34.html"><a href="lec34.html"><i class="fa fa-check"></i><b>34</b> Modules of Endpoint One</a></li>
-<li class="chapter" data-level="35" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>35</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="35" data-path="lec35.html"><a href="lec35.html"><i class="fa fa-check"></i><b>35</b> <span class="math inline">\(\dim E^*_1TE^*_1 \leq 5\)</span></a></li>
+<li class="chapter" data-level="36" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>36</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -293,7 +294,125 @@ Therefore,
 <p><span class="math display">\[E^*_1Tv = E^*W_1 + E^*_1W_2\]</span>
 has dimension <span class="math inline">\(1\)</span> by <span class="math inline">\((iii)\)</span>. Assume <span class="math inline">\(v\in E^*_1W_1\)</span>. Then <span class="math inline">\(Tv \subseteq W_1\)</span>, a contradiction.</p>
 </div>
+<div class="lemma">
+<p><span id="lem:tv-thin" class="lemma"><strong>Lemma 34.3  </strong></span>With the notation of Lemma <a href="lec34.html#lem:mvplusmstarvstar">34.1</a>, assume <span class="math inline">\(0\neq v\in (E^*_1V)_{new}\)</span> is an eigenvector for <span class="math inline">\(\tilde{A}:=E^*_1AE^*_1\)</span>.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(Tv\)</span> is thin if and only if <span class="math inline">\(M^*v \subseteq Mv\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Let <span class="math inline">\(W\)</span> denote any irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(1\)</span>. Then</div>
+<p><span class="math display">\[W = Tv&#39;\]</span>
+for some <span class="math inline">\(0\neq v&#39;\in (E^*_1V)_{new}\)</span> that is an eigenvector of <span class="math inline">\(\tilde{A}\)</span>.</p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> Denote eigenvalue of <span class="math inline">\(\tilde{A}\)</span> associated to <span class="math inline">\(v\)</span> (resp. <span class="math inline">\(v&#39;\)</span>) by <span class="math inline">\(a_0(Tv)\)</span> (resp. <span class="math inline">\(a_0(Tv&#39;)\)</span>).</div>
+<p>Then <span class="math inline">\(Tv\)</span>, <span class="math inline">\(Tv&#39;\)</span> are isomorphic <span class="math inline">\(T\)</span>-module if and only if <span class="math inline">\(a_0(Tv) = a_1(Tv&#39;)\)</span>.</p>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(E^*_1TE^*_1\)</span> has basis</div>
+<p><span class="math display">\[\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2, \ldots, \tilde{A}^{\ell-1},\]</span>
+where <span class="math inline">\(\ell\)</span> is the number of mutually nonisomorphic <span class="math inline">\(T\)</span>-modules with endpoint <span class="math inline">\(1\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-147" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> If <span class="math inline">\(Tv\)</span> is thin, then by Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>, <span class="math inline">\(Tv = Mv\)</span>. Hence <span class="math inline">\(M^*v^* \subseteq Mv\)</span>.</div>
+<div class="remark">
+<p><span id="unlabeled-div-145" class="remark"><em>Remark</em>. </span>Originally, the statement was <span class="math inline">\(Tv\)</span> is thin if and only if <span class="math inline">\(M^*v = Mv\)</span>. This is not the case in general. Suppose <span class="math inline">\(\Gamma\)</span> is thin. Let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module of endpoint <span class="math inline">\(1\)</span>. Then, that <span class="math inline">\(W \cap E^*_1V \ni v \neq 0\)</span> implies <span class="math inline">\(v^*\in W\cap E_1V\)</span> gives one to one and <span class="math inline">\(k\leq m\)</span>.</p>
+<p>However, by ‘Distance-Regular Graphs’ <span class="citation">(<a href="#ref-bcn" role="doc-biblioref">A. E. Brouwer 1989</a>)</span>,</p>
+<p><span class="math inline">\(J(v,d)\)</span>: <span class="math inline">\(v\geq 2d\)</span>
+<span class="math display">\[\begin{align}
+b_j = (d-j)(v-d-j) &amp; c_j = j^2\\
+\theta_j = (d-j)(v-d-j)-j &amp; m_j = \binom{v}{j}-\binom{v}{j-1}
+\end{align}\]</span>
+In particular,
+<span class="math display">\[k = b_0 = d(v-d) &gt; m_1 = v-1 \quad \text{ if }d\geq 2,\]</span>
+and <span class="math inline">\(J(v,d)\)</span> is thin.</p>
+<p>So <span class="math inline">\(|X|E_1v = v^*\)</span> may be <span class="math inline">\(0\)</span> sometimes. But as <span class="math inline">\(Tv\)</span> is dual thin of diameter at least <span class="math inline">\(D-2\)</span>. The dual endpint <span class="math inline">\(r^*\leq 2\)</span>, so in that case, <span class="math inline">\(E_2v \neq 0\)</span>. Hence, if <span class="math inline">\(D\geq 3\)</span>, <span class="math inline">\(E_2v\neq 0\)</span> always.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-146" class="remark"><em>Remark</em>. </span>Now assume <span class="math inline">\(M^*v\subseteq Mv = Tv\)</span>. Then
+<span class="math display">\[Mv = \{f(A)v\mid f(\lambda)\in \mathbb{C}[\lambda]\}.\]</span>
+So,
+<span class="math display">\[E_iTv = E_iMv \in \mathrm{Span}(E_iv).\]</span>
+Hence, <span class="math inline">\(Tv\)</span> is dual thin.</p>
+<p>Now we can construct a basis,
+<span class="math inline">\(0\neq w^*_0\in E_{r^*}W\)</span>, where <span class="math inline">\(r^*\)</span> is the dual endpoint, and
+<span class="math display">\[w^*_0, w^*_1, \ldots, w^*_d\in W = Tv,\]</span>
+where <span class="math inline">\(w^*_i = E^*_{r^*+i}{A^*_1}^iw^*_0\)</span>.
+<span class="math display">\[A^*_1w^*_i = w^*_{i+1}+ a_i^*w^*_i + x^*_iw^*_{i-1},\]</span>
+and <span class="math inline">\(w^*_i = p^*_i(A^*)w^*_0\)</span>.
+<span class="math display">\[E^*_{r^*+i}A^*_1E_{r^*+i}|_{E_{r^*+i}W} = a^*_i\cdot 1|_{E_{r^*+i}W},\]</span>
+<span class="math display">\[E^*_{r^*+i-1}A^*_1E_{r^*+i}A^*E_{r^*+i-1}|_{E_{r^*+i-1}W} = x^*_i\cdot 1|_{E_{r^*+i-1}W}.\]</span>
+See Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>, and Lemma <a href="lec22.html#lem:q-conditions">22.2</a>.</p>
+<p>From above, <span class="math inline">\(Tv = M^*w^*_0\)</span>. So,
+<span class="math display">\[E^*_iTv = E^*_iM^*w^*_0 \in \mathrm{Span}\{E^*_iw^*_0\}.\]</span>
+Thus, <span class="math inline">\(Tv\)</span> is thin.</p>
+<p>Need to write down the dual at least for Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>, Corollary <a href="lec9.html#cor:thin-is-dualthin">9.1</a>.</p>
+</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(E^*_1W\)</span> is an <span class="math inline">\(\tilde{A}\)</span>-module. So, there exists <span class="math inline">\(0\neq v&#39;\in E^*_1W\)</span> that is an eigenvalue for <span class="math inline">\(\tilde{A}\)</span>. Also <span class="math inline">\(Tv&#39; \subseteq W\)</span>.</div>
+<p>Since <span class="math inline">\(W\)</span> is irreducible, <span class="math inline">\(Tv&#39; = W\)</span>.</p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> Suppose <span class="math inline">\(Tv \to Tv&#39;\)</span> is an isomorsphism of <span class="math inline">\(T\)</span>-modules.</div>
+<p>Recall <span class="math inline">\(\sigma s = s\sigma\)</span> for all <span class="math inline">\(s\in T\)</span>.
+<span class="math display">\[\mathrm{Span}\{\sigma v\} = \sigma E^*_1Tv = E^*_1\sigma Tv = E^*_1Tv&#39; = \mathrm{Span}\{v&#39;\}.\]</span>
+Hence
+<span class="math display">\[a_0(Tv)\sigma v = \sigma(a_0(Tv)v) = \sigma \tilde{A}v = \tilde{A}\sigma v = a_0(Tv&#39;)\sigma v.\]</span>
+Since <span class="math inline">\(\sigma v \neq 0\)</span>, <span class="math inline">\(a_0(Tv) = a_0(Tv)\)</span>.</p>
+<p>Now suppose <span class="math inline">\(a_0(Tv)=a_0(Tv&#39;)\)</span>. Show
+<span class="math display">\[\sigma: Tv \to Tv&#39; \quad (sv \mapsto sv&#39;) \quad (s\in T)\]</span>
+is an isomorphism of <span class="math inline">\(T\)</span>-modules.</p>
+<p>Pick <span class="math inline">\(s\in T\)</span>. Require
+<span class="math inline">\(sv = 0\)</span> if and only if <span class="math inline">\(sv&#39; = 0\)</span>.</p>
+<p>Without loss of generality , <span class="math inline">\(s\in TE^*_1\)</span>, since <span class="math inline">\(v, v&#39;\in E^*_1V\)</span>.</p>
+<p>Now <span class="math inline">\(0 = sv\)</span> if and only if
+<span class="math display">\[0 = \|sv\|^2 = \bar{v}^\top \bar{s}^\top sv.\]</span>
+But, <span class="math inline">\(\bar{s}^\top s\in E^*_1TE^*_1\)</span>.</p>
+<p>Hence, by Lemma <a href="lec33.html#lem:e1starte1star">33.4</a> <span class="math inline">\((iii)\)</span>,
+<span class="math display">\[\bar{s}^\top s = \alpha \tilde{J} + p(\tilde{A})\]</span>
+for some <span class="math inline">\(\alpha\in \mathbb{C}\)</span> and <span class="math inline">\(p(\lambda)\in \mathbb{C}[\lambda]\)</span>.</p>
+<p>Thus, using the fact that <span class="math inline">\(\tilde{J}v = 0\)</span>,
+<span class="math display">\[0 = \|sv\|^2 = \bar{v}^\top (\alpha\tilde{J}+p(\tilde{A}))v = \|v\|^2 p(a_0(Tv))\]</span>
+if and only if <span class="math inline">\(0 = p(a_0(Tv))\)</span>.</p>
+<p>Replacing <span class="math inline">\(v\)</span> by <span class="math inline">\(v&#39;\)</span>, we have
+<span class="math display">\[\begin{align}
+0 = sv&#39; &amp; \leftrightarrow 0 = p(a_0(Tv&#39;))\\
+&amp; \leftrightarrow 0 = p(a_0(Tv))\\
+&amp; \leftrightarrow 0 = sv
+\end{align}\]</span>
+as desired.</p>
+<div class="line-block"><span class="math inline">\((iv)\)</span> The following hold.</div>
+<p><span class="math display">\[\begin{align}
+\ell &amp; = \text{the number of mutually nonisomorphic $T$-modules with endpoint $1$}\\
+&amp; = \text{the number of distinct eigenvalues of $\tilde{A}:(E^*_1V)_{new}\to (E^*_1V)_{new}$}\\
+&amp; = \text{the degree of minimal polynomial of $\tilde{A}:(E^*_1V)_{new}\to (E^*_1V)_{new}$.}
+\end{align}\]</span></p>
+<p>Claim 1. <span class="math inline">\(\tilde{J}. E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell-1}\)</span> are linearly independent.</p>
+<p><em>Proof of Claim 1.</em>
+Suppose not. Then
+<span class="math display">\[\alpha \tilde{J} + p(\tilde{A}) = O\]</span>
+for some <span class="math inline">\(\alpha\in \mathrm{C}\)</span> and <span class="math inline">\(p(\lambda)\in \mathbb{C}[\lambda]\)</span> with <span class="math inline">\(\deg p \leq \ell -1\)</span>.</p>
+<p>But <span class="math inline">\(\tilde{J}|_{(E^*_1V)_{new}} = O\)</span> impiles <span class="math inline">\(p(\tilde{A})|_{(E^*_1V)_{new}}=O\)</span>.</p>
+<p>Since
+<span class="math display">\[\deg p &lt; \text{the degree of minimal polynomial of $\tilde{A}|_{(E^*_1V)_{new}}$},\]</span>
+we find <span class="math inline">\(p\)</span> is identically <span class="math inline">\(0\)</span>.</p>
+<p>Then <span class="math inline">\(\alpha\)</span> is identically <span class="math inline">\(0\)</span> also.</p>
+<p>Claim 2. <span class="math inline">\(\tilde{J}. E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell-1}\)</span> span <span class="math inline">\(E^*_iTE^*_i\)</span>.</p>
+<p><em>Proof of Claim 2.</em>
+It needs to show
+<span class="math display" id="eq:dependent">\[\begin{equation}
+\tilde{J}. E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell} \; \text{are linearly dependent}.\tag{34.1}
+\end{equation}\]</span>
+Let <span class="math inline">\(m\)</span> denote the minimal polynomial of <span class="math inline">\(\tilde{A}|_{(E^*_1V)_{new}}\)</span>. So,
+<span class="math display">\[m(\tilde{A}|_{(E^*_1V)_{new}}) = 0.\]</span></p>
+<p>Observe that
+<span class="math display">\[E^*_1V = (E^*_1V)_{new} + \mathrm{Span}\{A\hat{x}\}.\]</span>
+(direct sum of <span class="math inline">\(E^*_1TE^*_1\)</span>-modules.)
+<span class="math display">\[m(\tilde{A})A\hat{x} = f\cdot A\hat{x}\quad \text{for some }f\in \mathbb{C}.\]</span></p>
+<p>On the other hand,
+<span class="math display">\[\tilde{J}A\hat{x} = kA\hat{x} \quad (k: \text{valency of }\Gamma).\]</span>
+Therefore,
+<span class="math display">\[m(\tilde{A}) - \frac{f}{k}\tilde{J} = O,\]</span>
+and <a href="lec34.html#eq:dependent">(34.1)</a> holds.</p>
+</div>
 
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-bcn" class="csl-entry">
+A. E. Brouwer, A. Neumaier, A. M. Cohen. 1989. <em>Distance-Regular Graphs</em>. Berlin Heidelberg: Springer-Verlag.
+</div>
 </div>
             </section>
 
@@ -301,7 +420,7 @@ has dimension <span class="math inline">\(1\)</span> by <span class="math inline
         </div>
       </div>
 <a href="lec33.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lec55.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec35.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

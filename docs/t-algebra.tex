@@ -7141,6 +7141,203 @@ has dimension \(1\) by \((iii)\). Assume \(v\in E^*_1W_1\). Then \(Tv \subseteq 
 
 \end{proof}
 
+\begin{lemma}
+\protect\hypertarget{lem:tv-thin}{}\label{lem:tv-thin}With the notation of Lemma \ref{lem:mvplusmstarvstar}, assume \(0\neq v\in (E^*_1V)_{new}\) is an eigenvector for \(\tilde{A}:=E^*_1AE^*_1\).
+
+\((i)\) \(Tv\) is thin if and only if \(M^*v \subseteq Mv\).
+
+\((ii)\) Let \(W\) denote any irreducible \(T\)-module with endpoint \(1\). Then
+
+\[W = Tv'\]
+for some \(0\neq v'\in (E^*_1V)_{new}\) that is an eigenvector of \(\tilde{A}\).
+
+\((iii)\) Denote eigenvalue of \(\tilde{A}\) associated to \(v\) (resp. \(v'\)) by \(a_0(Tv)\) (resp. \(a_0(Tv')\)).
+
+Then \(Tv\), \(Tv'\) are isomorphic \(T\)-module if and only if \(a_0(Tv) = a_1(Tv')\).
+
+\((iv)\) \(E^*_1TE^*_1\) has basis
+
+\[\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2, \ldots, \tilde{A}^{\ell-1},\]
+where \(\ell\) is the number of mutually nonisomorphic \(T\)-modules with endpoint \(1\).
+\end{lemma}
+
+\begin{proof}
+\leavevmode
+
+\((i)\) If \(Tv\) is thin, then by Lemma \ref{lem:thin-module-structure}, \(Tv = Mv\). Hence \(M^*v^* \subseteq Mv\).
+
+\begin{remark}
+Originally, the statement was \(Tv\) is thin if and only if \(M^*v = Mv\). This is not the case in general. Suppose \(\Gamma\) is thin. Let \(W\) be an irreducible \(T\)-module of endpoint \(1\). Then, that \(W \cap E^*_1V \ni v \neq 0\) implies \(v^*\in W\cap E_1V\) gives one to one and \(k\leq m\).
+
+However, by `Distance-Regular Graphs' \citep{bcn},
+
+\(J(v,d)\): \(v\geq 2d\)
+\begin{align}
+b_j = (d-j)(v-d-j) & c_j = j^2\\
+\theta_j = (d-j)(v-d-j)-j & m_j = \binom{v}{j}-\binom{v}{j-1}
+\end{align}
+In particular,
+\[k = b_0 = d(v-d) > m_1 = v-1 \quad \text{ if }d\geq 2,\]
+and \(J(v,d)\) is thin.
+
+So \(|X|E_1v = v^*\) may be \(0\) sometimes. But as \(Tv\) is dual thin of diameter at least \(D-2\). The dual endpint \(r^*\leq 2\), so in that case, \(E_2v \neq 0\). Hence, if \(D\geq 3\), \(E_2v\neq 0\) always.
+\end{remark}
+
+\begin{remark}
+Now assume \(M^*v\subseteq Mv = Tv\). Then
+\[Mv = \{f(A)v\mid f(\lambda)\in \mathbb{C}[\lambda]\}.\]
+So,
+\[E_iTv = E_iMv \in \mathrm{Span}(E_iv).\]
+Hence, \(Tv\) is dual thin.
+
+Now we can construct a basis,
+\(0\neq w^*_0\in E_{r^*}W\), where \(r^*\) is the dual endpoint, and
+\[w^*_0, w^*_1, \ldots, w^*_d\in W = Tv,\]
+where \(w^*_i = E^*_{r^*+i}{A^*_1}^iw^*_0\).
+\[A^*_1w^*_i = w^*_{i+1}+ a_i^*w^*_i + x^*_iw^*_{i-1},\]
+and \(w^*_i = p^*_i(A^*)w^*_0\).
+\[E^*_{r^*+i}A^*_1E_{r^*+i}|_{E_{r^*+i}W} = a^*_i\cdot 1|_{E_{r^*+i}W},\]
+\[E^*_{r^*+i-1}A^*_1E_{r^*+i}A^*E_{r^*+i-1}|_{E_{r^*+i-1}W} = x^*_i\cdot 1|_{E_{r^*+i-1}W}.\]
+See Lemma \ref{lem:thin-module-structure}, and Lemma \ref{lem:q-conditions}.
+
+From above, \(Tv = M^*w^*_0\). So,
+\[E^*_iTv = E^*_iM^*w^*_0 \in \mathrm{Span}\{E^*_iw^*_0\}.\]
+Thus, \(Tv\) is thin.
+
+\ast Need to write down the dual at least for Lemma \ref{lem:thin-module-structure}, Corollary \ref{cor:thin-is-dualthin}.
+\end{remark}
+
+\((iii)\) \(E^*_1W\) is an \(\tilde{A}\)-module. So, there exists \(0\neq v'\in E^*_1W\) that is an eigenvalue for \(\tilde{A}\). Also \(Tv' \subseteq W\).
+
+Since \(W\) is irreducible, \(Tv' = W\).
+
+\((iii)\) Suppose \(Tv \to Tv'\) is an isomorsphism of \(T\)-modules.
+
+Recall \(\sigma s = s\sigma\) for all \(s\in T\).
+\[\mathrm{Span}\{\sigma v\} = \sigma E^*_1Tv = E^*_1\sigma Tv = E^*_1Tv' = \mathrm{Span}\{v'\}.\]
+Hence
+\[a_0(Tv)\sigma v = \sigma(a_0(Tv)v) = \sigma \tilde{A}v = \tilde{A}\sigma v = a_0(Tv')\sigma v.\]
+Since \(\sigma v \neq 0\), \(a_0(Tv) = a_0(Tv)\).
+
+Now suppose \(a_0(Tv)=a_0(Tv')\). Show
+\[\sigma: Tv \to Tv' \quad (sv \mapsto sv') \quad (s\in T)\]
+is an isomorphism of \(T\)-modules.
+
+Pick \(s\in T\). Require
+\(sv = 0\) if and only if \(sv' = 0\).
+
+Without loss of generality , \(s\in TE^*_1\), since \(v, v'\in E^*_1V\).
+
+Now \(0 = sv\) if and only if
+\[0 = \|sv\|^2 = \bar{v}^\top \bar{s}^\top sv.\]
+But, \(\bar{s}^\top s\in E^*_1TE^*_1\).
+
+Hence, by Lemma \ref{lem:e1starte1star} \((iii)\),
+\[\bar{s}^\top s = \alpha \tilde{J} + p(\tilde{A})\]
+for some \(\alpha\in \mathbb{C}\) and \(p(\lambda)\in \mathbb{C}[\lambda]\).
+
+Thus, using the fact that \(\tilde{J}v = 0\),
+\[0 = \|sv\|^2 = \bar{v}^\top (\alpha\tilde{J}+p(\tilde{A}))v = \|v\|^2 p(a_0(Tv))\]
+if and only if \(0 = p(a_0(Tv))\).
+
+Replacing \(v\) by \(v'\), we have
+\begin{align}
+0 = sv' & \leftrightarrow 0 = p(a_0(Tv'))\\
+& \leftrightarrow 0 = p(a_0(Tv))\\
+& \leftrightarrow 0 = sv
+\end{align}
+as desired.
+
+\((iv)\) The following hold.
+
+\begin{align}
+\ell & = \text{the number of mutually nonisomorphic $T$-modules with endpoint $1$}\\
+& = \text{the number of distinct eigenvalues of $\tilde{A}:(E^*_1V)_{new}\to (E^*_1V)_{new}$}\\
+& = \text{the degree of minimal polynomial of $\tilde{A}:(E^*_1V)_{new}\to (E^*_1V)_{new}$.}
+\end{align}
+
+Claim 1. \(\tilde{J}. E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell-1}\) are linearly independent.
+
+\emph{Proof of Claim 1.}
+Suppose not. Then
+\[\alpha \tilde{J} + p(\tilde{A}) = O\]
+for some \(\alpha\in \mathrm{C}\) and \(p(\lambda)\in \mathbb{C}[\lambda]\) with \(\deg p \leq \ell -1\).
+
+But \(\tilde{J}|_{(E^*_1V)_{new}} = O\) impiles \(p(\tilde{A})|_{(E^*_1V)_{new}}=O\).
+
+Since
+\[\deg p < \text{the degree of minimal polynomial of $\tilde{A}|_{(E^*_1V)_{new}}$},\]
+we find \(p\) is identically \(0\).
+
+Then \(\alpha\) is identically \(0\) also.
+
+Claim 2. \(\tilde{J}. E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell-1}\) span \(E^*_iTE^*_i\).
+
+\emph{Proof of Claim 2.}
+It needs to show
+\begin{equation}
+\tilde{J}. E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell} \; \text{are linearly dependent}.\label{eq:dependent}
+\end{equation}
+Let \(m\) denote the minimal polynomial of \(\tilde{A}|_{(E^*_1V)_{new}}\). So,
+\[m(\tilde{A}|_{(E^*_1V)_{new}}) = 0.\]
+
+Observe that
+\[E^*_1V = (E^*_1V)_{new} + \mathrm{Span}\{A\hat{x}\}.\]
+(direct sum of \(E^*_1TE^*_1\)-modules.)
+\[m(\tilde{A})A\hat{x} = f\cdot A\hat{x}\quad \text{for some }f\in \mathbb{C}.\]
+
+On the other hand,
+\[\tilde{J}A\hat{x} = kA\hat{x} \quad (k: \text{valency of }\Gamma).\]
+Therefore,
+\[m(\tilde{A}) - \frac{f}{k}\tilde{J} = O,\]
+and \eqref{eq:dependent} holds.
+
+\end{proof}
+
+\hypertarget{lec35}{%
+\chapter{\texorpdfstring{\(\dim E^*_1TE^*_1 \leq 5\)}{\textbackslash dim E\^{}*\_1TE\^{}*\_1 \textbackslash leq 5}}\label{lec35}}
+
+\textbf{Monday, April 26, 1993}
+
+\begin{theorem}
+\protect\hypertarget{thm:dim5}{}\label{thm:dim5}Let \(\Gamma = (X, E)\) be distance regular of diameter \(D\geq 3\).
+Assume \(\Gamma\) is \(Q\)-polynomial with respect to
+\$\(E_0, E_1, \ldots, E_D\).
+Fix a vertex \(x\in X\), and write \(E^*_i\equiv E^*_i(x)\), \(T\equiv T(x)\).
+
+\((i)\) Up to isomorphism, there are at most \(4\) thin irreducible \(T\)-modules with endpoint \(1\).
+
+\((ii)\) Suppose \(\Gamma\) is thin with respect to \(x\). Then
+
+\[\dim E^*_1TE^*_1 \leq 5.\]
+\end{theorem}
+
+\begin{proof}
+\leavevmode
+
+\((ii)\) is immediate from \((i)\) and part \((iv)\) of Lemma \ref{lem:tv-thin}.
+
+\((i)\)
+
+Claim 1. \(E^*_1ME^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A})\).
+
+\emph{Proof of Claim 1.}
+\[E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, E^*_1A_2E^*_1, E^*_1A_3E^*_1, \ldots\}.\]
+But \(E^*_1A_hE^*_h = O\) if \(h >2\) (by Lemma \ref{def:ith-incidence}).
+So,
+\[E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, E^*_1A_2E^*_1\}.\]
+Also,
+\begin{align}
+\tilde{J} & = E^*_1JE^*_1 \\
+& = E^*_1\left(\sum_{h=0}^DA_h\right)E^*_1\\
+& = E^*_1 + E^*_1AE^*_1 + E^*_1A_2E^*_1.
+\end{align}
+So,
+\[E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, \tilde{J}\}.\]
+We are done, since \(\tilde{A} = E^*_1AE^*_1\).
+
+\end{proof}
+
 \hypertarget{lec55}{%
 \chapter{Title of the Chapter}\label{lec55}}
 

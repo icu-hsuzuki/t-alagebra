@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 Examples of \(T\)-Module | Lecture Note on Terwilliger Algebra</title>
+  <title>Chapter 35 \(\dim E^*_1TE^*_1 \leq 5\) | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 Examples of \(T\)-Module | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:title" content="Chapter 35 \(\dim E^*_1TE^*_1 \leq 5\) | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 Examples of \(T\)-Module | Lecture Note on Terwilliger Algebra" />
+  <meta name="twitter:title" content="Chapter 35 \(\dim E^*_1TE^*_1 \leq 5\) | Lecture Note on Terwilliger Algebra" />
   
   <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="lec10.html"/>
-<link rel="next" href="lec12.html"/>
+<link rel="prev" href="lec34.html"/>
+<link rel="next" href="lec55.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -156,101 +156,37 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lec11" class="section level1 hasAnchor" number="11">
-<h1><span class="header-section-number">Chapter 11</span> Examples of <span class="math inline">\(T\)</span>-Module<a href="lec11.html#lec11" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><strong>Friday, February 12, 1993</strong></p>
-<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be a connected graph.</p>
-<p>Let <span class="math inline">\(\theta_0\)</span> be the maximal eigenvalue of <span class="math inline">\(\Gamma\)</span>, and <span class="math inline">\(\delta\)</span> its corresponding eigenvector.
-<span class="math display">\[\delta = \sum_{y\in X}\delta_y \hat{y}.\]</span>
-Without loss of generality, we may assume that <span class="math inline">\(\delta_y\in \mathbb{R}^*\)</span> for all <span class="math inline">\(y\in X\)</span>.</p>
-<div class="lemma">
-<p><span id="lem:principal-module" class="lemma"><strong>Lemma 11.1  </strong></span>Fix a vertex <span class="math inline">\(x\in X\)</span>. Write <span class="math inline">\(T \equiv T(x)\)</span>, <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(T\delta = T\hat{x}\)</span> is an irreducible <span class="math inline">\(T\)</span>-module.</div>
-<div class="line-block"><span class="math inline">\((ii)\)</span> Given any irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span>, the following are equivalent:<br />
-<span class="math inline">\(\quad (iia)\)</span> <span class="math inline">\(W = T\delta\)</span>.<br />
-<span class="math inline">\(\quad (iib)\)</span> The diameter <span class="math inline">\(d(W) = d(x)\)</span>.<br />
-<span class="math inline">\(\quad (iic)\)</span> The endpoint <span class="math inline">\(r(W) = 0\)</span>.</div>
+<div id="lec35" class="section level1 hasAnchor" number="35">
+<h1><span class="header-section-number">Chapter 35</span> <span class="math inline">\(\dim E^*_1TE^*_1 \leq 5\)</span><a href="lec35.html#lec35" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Monday, April 26, 1993</strong></p>
+<div class="theorem">
+<p><span id="thm:dim5" class="theorem"><strong>Theorem 35.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be distance regular of diameter <span class="math inline">\(D\geq 3\)</span>.
+Assume <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to
+$<span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>.
+Fix a vertex <span class="math inline">\(x\in X\)</span>, and write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> Up to isomorphism, there are at most <span class="math inline">\(4\)</span> thin irreducible <span class="math inline">\(T\)</span>-modules with endpoint <span class="math inline">\(1\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Suppose <span class="math inline">\(\Gamma\)</span> is thin with respect to <span class="math inline">\(x\)</span>. Then</div>
+<p><span class="math display">\[\dim E^*_1TE^*_1 \leq 5.\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-62" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\)</span> Observe: there exists an irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> that contains <span class="math inline">\(\delta\)</span>.</p>
-<p>Let <span class="math inline">\(V = \sum_{i}W_i\)</span> be a direct sum decomposition of the standard module. Then
-<span class="math display">\[\mathrm{Span}(\delta) = E_0V = \sum_{i}E_0W_i.\]</span>
-So, <span class="math inline">\(E_0W_i \neq 0\)</span> for some <span class="math inline">\(i\)</span>. Then,
-<span class="math display">\[\delta \in E_0W_i \subseteq W_i.\]</span>
-Observe: <span class="math inline">\(T\delta\)</span> is an irreducible <span class="math inline">\(T\)</span>-module.</p>
-<p>Since <span class="math inline">\(\delta\in W\)</span>, where <span class="math inline">\(W\)</span> is a <span class="math inline">\(T\)</span>-module. As <span class="math inline">\(T\delta \subseteq W\)</span> and <span class="math inline">\(W\)</span> is irreducible, <span class="math inline">\(T\delta = W\)</span>.</p>
-<p>Observe: <span class="math inline">\(T\delta = T\hat{x}\)</span>.</p>
-<p>Since <span class="math inline">\(\hat{x} = \delta_x^{-1}E^*_0\delta \in T\delta\)</span>, <span class="math inline">\(T\hat{x} \subseteq T\delta\)</span>. Since <span class="math inline">\(T\delta\)</span> is irreducible, <span class="math inline">\(T\hat{x} = T\delta\)</span>.</p>
-<p><span class="math inline">\((ii)\)</span> <span class="math inline">\((a)\to (b)\)</span>:
-<span class="math display">\[E^*_i\delta = \sum_{y\in X, \partial(x,y) = i}\delta_y\hat{y} \neq 0, \quad (0\leq i\leq d(x)), \]</span>
-because <span class="math inline">\(\delta_y &gt;0\)</span> for every <span class="math inline">\(y\in X\)</span>.</p>
-<p>Hence,
-<span class="math display">\[E^*_iT\delta \neq 0, \quad (0\leq i\leq d(x)).\]</span>
-Thus, <span class="math inline">\(d(x) = d(W)\)</span>.</p>
-<p><span class="math inline">\((b)\to (c)\)</span>: Immediate.</p>
-<p><span class="math inline">\((c)\to (a)\)</span>:
-Since <span class="math inline">\(r(W) = 0\)</span>, <span class="math inline">\(E^*_0W \neq 0\)</span>.
-Hence, <span class="math inline">\(\hat{x}\in W\)</span> and <span class="math inline">\(T\hat{x} \subseteq W\)</span>.</p>
-<p>By the irreduciblity, we have <span class="math inline">\(T\hat{x} = W\)</span>.</p>
-</div>
-<div class="lemma">
-<p><span id="lem:baiparite-principal" class="lemma"><strong>Lemma 11.2  </strong></span>Assume <span class="math inline">\(\Gamma\)</span> is bipartite <span class="math inline">\((X = X^+ \cup X^-)\)</span> (<span class="math inline">\(X^+\)</span> and <span class="math inline">\(X^-\)</span> are nonempty). Then the following are equivalent.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> There exist <span class="math inline">\(\alpha^+\)</span> and <span class="math inline">\(\alpha^-\in \mathbb{R}\)</span> such that</div>
-<p><span class="math display">\[\delta_x = \begin{cases} \alpha^+ &amp; \text{if }\: x\in X^+\\
-\alpha^- &amp; \text{if } x\in X^-.
-\end{cases}\]</span>
-| <span class="math inline">\((ii)\)</span> There exist <span class="math inline">\(k+\)</span> and <span class="math inline">\(k^-\in \mathbb{Z}^{&gt;0}\)</span> such that
-<span class="math display">\[k(x) = \begin{cases} k^+ &amp; \text{if }\: x\in X^+\\
-k^- &amp; \text{if } x\in X^-.
-\end{cases}\]</span>
-In this xase, <span class="math inline">\(k^+k^- = \theta_0^2\)</span>, and <span class="math inline">\(\Gamma\)</span> is called bi-regular.</p>
-</div>
-<div class="proof">
-<p><span id="unlabeled-div-63" class="proof"><em>Proof</em>. </span><span class="math inline">\((i)\to(ii)\)</span>
-<img src="t-algebra_files/figure-html/unnamed-chunk-7-1.png" width="192" style="display: block; margin: auto;" />
+<p><span id="unlabeled-div-148" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> is immediate from <span class="math inline">\((i)\)</span> and part <span class="math inline">\((iv)\)</span> of Lemma <a href="lec34.html#lem:tv-thin">34.3</a>.</div>
+<div class="line-block"><span class="math inline">\((i)\)</span></div>
+<p>Claim 1. <span class="math inline">\(E^*_1ME^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A})\)</span>.</p>
+<p><em>Proof of Claim 1.</em>
+<span class="math display">\[E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, E^*_1A_2E^*_1, E^*_1A_3E^*_1, \ldots\}.\]</span>
+But <span class="math inline">\(E^*_1A_hE^*_h = O\)</span> if <span class="math inline">\(h &gt;2\)</span> (by Lemma <a href="lec16.html#def:ith-incidence">16.1</a>).
+So,
+<span class="math display">\[E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, E^*_1A_2E^*_1\}.\]</span>
+Also,
 <span class="math display">\[\begin{align}
-A\delta &amp; = A\left(\alpha^+\sum_{x\in X^+}\hat{x} + \alpha^-\sum_{y\in X^-}\hat{y}\right)\\
-&amp; = \alpha^+\sum_{y\in X^-}k(y)\hat{y} + \alpha^-\sum_{x\in X^+}k(x)\hat{x}\\
-&amp; = \theta_0\delta.
+\tilde{J} &amp; = E^*_1JE^*_1 \\
+&amp; = E^*_1\left(\sum_{h=0}^DA_h\right)E^*_1\\
+&amp; = E^*_1 + E^*_1AE^*_1 + E^*_1A_2E^*_1.
 \end{align}\]</span>
 So,
-<span class="math display">\[k(x)\alpha^- = \theta_0\alpha^+, \quad k(y)\alpha^+ = \theta_0\alpha^-.\]</span>
-As <span class="math inline">\(\alpha^+\neq =\)</span> and <span class="math inline">\(\alpha^- \neq 0\)</span>,
-<span class="math display">\[\begin{align}
-k^+ &amp; := k(x) \; \text{ is independent of the choice of $x\in X^+$, and}\\
-k^- &amp; := k(y) \; \text{ is independent of the choice of $y\in X^-$.}
-\end{align}\]</span>
-Moreover, <span class="math inline">\(k^+k^- = \theta_0^2\)</span>.</p>
-<p><span class="math inline">\((ii)\to(i)\)</span>
-Set
-<span class="math display">\[\delta&#39; = \sum_{y\in X}\alpha_y\hat{y} \quad \text{where}\; \alpha = \begin{cases} 1/\sqrt{k^-} &amp; \text{if }\; y\in X^+\\ 1/\sqrt{k^+} &amp; \text{if }\; y\in X^-.\end{cases}\]</span>
-Then one checks
-<span class="math display">\[\begin{align}
-A\delta&#39; &amp; = A\left(\frac{1}{\sqrt{k^-}}\sum_{y\in X^+}\hat{y} + \frac{1}{\sqrt{k^+}}\sum_{y\in X^-}\hat{y}\right)\\
-&amp; =  \frac{k^-}{\sqrt{k^-}}\sum_{y\in X^-}\hat{y} + \frac{k^+}{\sqrt{k^+}}\sum_{y\in X^+}\hat{y}\\
-&amp; = \sqrt{k^+k^-}\delta&#39;
-\end{align}\]</span>
-Since <span class="math inline">\(\delta&#39; &gt;0\)</span>, <span class="math inline">\(\delta&#39;\in \mathrm{Span}(\delta)\)</span>, and <span class="math inline">\(\theta_0 = \sqrt{k^+k^-}\)</span>.</p>
-</div>
-<div class="definition">
-<p><span id="def:distance-regular" class="definition"><strong>Definition 11.1  </strong></span>For any graph <span class="math inline">\(\Gamma = (X, E)\)</span>, fix a vertex <span class="math inline">\(x\in X\)</span>. Set <span class="math inline">\(d = d(x)\)</span>.</p>
-<p><span class="math inline">\(\Gamma\)</span> is distance-regular with respect to <span class="math inline">\(x\)</span>, if for all <span class="math inline">\(i\)</span> : (0id), and all <span class="math inline">\(y\in X\)</span> such that <span class="math inline">\(\partial(x,y) = i\)</span>:
-<span class="math display">\[\begin{align}
-c_i(x) &amp; := |\{z\in X \mid \partial(x,z) = i-1, \; \partial(y,z) = 1\}|\\
-a_i(x) &amp; := |\{z\in X \mid \partial(x,z) = i, \; \partial(y,z) = 1\}|\\
-b_i(x) &amp; := |\{z\in X \mid \partial(x,z) = i+1, \; \partial(y,z) = 1\}|
-\end{align}\]</span>
-depends only on <span class="math inline">\(i\)</span>, <span class="math inline">\(x\)</span>, and not on <span class="math inline">\(y\)</span>.</p>
-<p>(In this case, <span class="math inline">\(c_0(x) = a_0(x) = b_d(x) = 0\)</span>, <span class="math inline">\(c_1(x) = 1\)</span>, <span class="math inline">\(b_0(x) = k(x)\)</span> is the valency of <span class="math inline">\(x\)</span>.)</p>
-<p>We call <span class="math inline">\(c_i(x)\)</span>, <span class="math inline">\(a_i(x)\)</span> and <span class="math inline">\(b_i(x)\)</span> the intersection numbers with respect to <span class="math inline">\(x\)</span>.</p>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-64" class="example"><strong>Example 11.1  </strong></span><img src="t-algebra_files/figure-html/unnamed-chunk-8-1.png" width="144" style="display: block; margin: auto;" />
-<span class="math display">\[\begin{align}
-c_0 &amp;= 1 &amp; c_1 &amp;= 1 &amp; c_2 &amp;= 1\\
-a_0 &amp;= 0 &amp; a_1 &amp;= 1 &amp; a_2 &amp;= 1\\
-b_0 &amp;= 2 &amp; b_1 &amp;= 1 &amp; b_2 &amp;= 0
-\end{align}\]</span></p>
+<span class="math display">\[E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, \tilde{J}\}.\]</span>
+We are done, since <span class="math inline">\(\tilde{A} = E^*_1AE^*_1\)</span>.</p>
 </div>
 
 </div>
@@ -259,8 +195,8 @@ b_0 &amp;= 2 &amp; b_1 &amp;= 1 &amp; b_2 &amp;= 0
           </div>
         </div>
       </div>
-<a href="lec10.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lec12.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec34.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lec55.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -291,7 +227,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/11-lecture11.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/35-lecture35.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -299,7 +235,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/icu-hsuzuki/t-algebra/master/11-lecture11.Rmd",
+"link": "https://github.com/icu-hsuzuki/t-algebra/master/35-lecture35.Rmd",
 "text": null
 },
 "download": ["t-algebra.pdf", "t-algebra.epub"],

@@ -1,0 +1,37 @@
+# $\dim E^*_1TE^*_1 \leq 5$ {#lec35}
+**Monday, April 26, 1993** 
+
+:::{.theorem #dim5}
+Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$.
+Assume $\Gamma$ is $Q$-polynomial with respect to 
+$$E_0, E_1, \ldots, E_D$.
+Fix a vertex $x\in X$, and write $E^*_i\equiv E^*_i(x)$, $T\equiv T(x)$.
+
+| $(i)$ Up to isomorphism, there are at most $4$ thin irreducible $T$-modules with endpoint $1$.
+
+| $(ii)$ Suppose $\Gamma$ is thin with respect to $x$. Then 
+$$\dim E^*_1TE^*_1 \leq 5.$$
+:::
+
+:::{.proof}
+| $(ii)$ is immediate from $(i)$ and part $(iv)$ of Lemma \@ref(lem:tv-thin).
+
+| $(i)$ 
+
+Claim 1. $E^*_1ME^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A})$.
+
+_Proof of Claim 1._
+$$E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, E^*_1A_2E^*_1, E^*_1A_3E^*_1, \ldots\}.$$
+But $E^*_1A_hE^*_h = O$ if $h >2$ (by Lemma \@ref(def:ith-incidence)).
+So,
+$$E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, E^*_1A_2E^*_1\}.$$
+Also, 
+\begin{align}
+\tilde{J} & = E^*_1JE^*_1 \\
+& = E^*_1\left(\sum_{h=0}^DA_h\right)E^*_1\\
+& = E^*_1 + E^*_1AE^*_1 + E^*_1A_2E^*_1.
+\end{align}
+So, 
+$$E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, \tilde{J}\}.$$
+We are done, since $\tilde{A} = E^*_1AE^*_1$.
+:::
