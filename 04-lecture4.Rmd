@@ -127,7 +127,7 @@ $$d = |\{i\mid E_i^*W \neq 0\}| - 1.$$
 :::{.lemma #irreducible}
 With the above notation, let $W$ be an irreducible $T$-module. Then
 
-| $(i)$ $E_i^*AE_j^* = 0 \; \text{ if }\; |i-j|=1, \; E_i^*AE_j^*\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d(x)$.
+| $(i)$ $E_i^*AE_j^* = 0 \; \text{ if }\; |i-j|>1, \; E_i^*AE_j^*\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d(x)$.
 | $(ii)$ $AE_j^*W \subseteq E_{j-1}^*W + E_j^*W + E^*_{j+1}W$, $0\leq j \leq d(x)$. $(E_i^*W = 0 \; \text{ if } i<j$ or $i > d(x)$.)
 | $(iii)$ $E^*_jW \neq 0$ if $r\leq j \leq r+d$, $=0$ if $0\leq j\leq r$ or $r+d < j \leq d(x)$.
 | $(iv)$ $E_i^*AE^*_jW \neq 0$, if $|i-j| = 1$ $(r \leq i,j \leq r+d)$.

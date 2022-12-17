@@ -1,0 +1,33 @@
+# Dual Endpoint {#lec36}
+**Wednesday, April 28, 1993** 
+
+Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$, $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$. Fix a vertex $x\in X$, write $E^*_i\equiv E^*_i(x)$, $T\equiv T(x)$. 
+
+Let $W$ be an irreducible $T$-module of diameter $d$. 
+
+Recall that the endpoint
+$$r(W) = \min\{i\mid 0\leq i\leq D, E^*_iW \neq 0\}.$$
+
+:::{.definition #dual-endpoint}
+The dual endpoint \index{dual endpoint} (with respect to above ordering $E_0, E_1, \ldots, E_D$),
+$$r^*(W) = \min\{i\mid 0\leq i\leq D, E_iW \neq 0\}.$$
+$$r(W) = 0 \leftrightarrow r^*(W) = 0 \leftrightarrow W: \text{ trivial $T$-module},$$
+(by Lemma \@ref(lem:orthogonality)).
+:::
+
+Suppose $W$ is thin. Then $W$ is dual thin.
+(See Corollary \@ref(cor:thin-is-dualthin).)
+
+Moreover, $\{i\mid E_iW \neq 0\}$ is a subinterval of $\{0, 1, \ldots, D\}$. (same proof as for distance regular)
+
+:::{.remark}
+Dual version of Lemma \@ref(lem:irreducible).
+
+**Lemma 9'.** 
+Let $A^* \equiv A^*_1(x)$, $W$ an irreducible $T$-moduoe, and $d^* = \{i\mid E_iW\neq 0\}|-1$.
+
+| $(i)$ $E_iA^*E_j = 0 \; \text{ if }\; |i-j|>1, \; E_iA^*E_j\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d^*(x)$.
+| $(ii)$ $A^*E_jW \subseteq E_{j-1}W + E_jW + E_{j+1}W$, $0\leq j \leq d^*(x)$. $(E_iW = 0 \; \text{ if } i<j$ or $i > d^*(x)$.)
+| $(iii)$ $E_jW \neq 0$ if $r\leq j \leq r+d$, $=0$ if $0\leq j\leq r$ or $r+d < j \leq d^*(x)$.
+| $(iv)$ $E_iA^*E_jW \neq 0$, if $|i-j| = 1$ $(r^* \leq i,j \leq r^*+d^*)$.
+:::

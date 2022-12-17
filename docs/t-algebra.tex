@@ -128,7 +128,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-12-16}
+\date{2022-12-17}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1015,7 +1015,7 @@ The diameter\index{diameter} \(d = d(W)\) satisfied
 
 With the above notation, let \(W\) be an irreducible \(T\)-module. Then
 
-\((i)\) \(E_i^*AE_j^* = 0 \; \text{ if }\; |i-j|=1, \; E_i^*AE_j^*\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d(x)\).\\
+\((i)\) \(E_i^*AE_j^* = 0 \; \text{ if }\; |i-j|>1, \; E_i^*AE_j^*\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d(x)\).\\
 \((ii)\) \(AE_j^*W \subseteq E_{j-1}^*W + E_j^*W + E^*_{j+1}W\), \(0\leq j \leq d(x)\). \((E_i^*W = 0 \; \text{ if } i<j\) or \(i > d(x)\).)\\
 \((iii)\) \(E^*_jW \neq 0\) if \(r\leq j \leq r+d\), \(=0\) if \(0\leq j\leq r\) or \(r+d < j \leq d(x)\).\\
 \((iv)\) \(E_i^*AE^*_jW \neq 0\), if \(|i-j| = 1\) \((r \leq i,j \leq r+d)\).
@@ -7336,7 +7336,155 @@ So,
 \[E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, \tilde{J}\}.\]
 We are done, since \(\tilde{A} = E^*_1AE^*_1\).
 
+Claim 2. \(E^*_1MM^*ME^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2)\).
+
+\emph{Proof of Claim 2.}
+\(\supseteq\): Clear.
+
+\(\subseteq\): In Lemma \ref{lem:e1starte1star} \((i)\), we say
+\[E^*_1T = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*E_1E^*_1M + \cdots.\]
+In fact, the proof of that lemma gives a sequence;
+\begin{align}
+E^*_1MM^* & = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^*,\\
+E^*_1MM^*M & = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*E_1E^*_1M, \label{eq:e1starmmstarm}\\
+E^*_1MM^*MM^* & = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*E_1E^*_1M + E^*E_1E^*_1MM^*,\\
+& \qquad \vdots
+\end{align}
+Multiply \eqref{eq:e1starmmstarm} through on the right by \(E^*_1\) to get
+\[E^*_1MM^*ME^*_1 = E^*_1ME^*_1 + E^*E_1E^*_1ME^*_1 = \mathrm{Span}\{\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2\},\]
+since \(\tilde{J}^2, \tilde{A}\tilde{J} = \tilde{J}\tilde{A}\in \mathrm{Span}\{\tilde{J}\}\).
+
+This proves Claim 2.
+
+Now, let \(W\) denote any irreducible \(T\)-module with endpoint \(1\), and pick \(0\neq v\in E^*_1W\). Set
+\[v^+_i = E^*_iA_{i-1}E^*_1v, \quad v^-_i = E^*_iA_{i+1}E^*_1v, \; i\in \{1, \ldots, D\}.\]
+We know by Lemma \ref{lem:tv} \((ii)\) that \(W\) is thin if and only if \(v^+_i, v^-_i\) are linearly dependent for all \(i\in \{2, \ldots, D-1\}\).
+
+In general,
+\[\Phi_i = \det \begin{pmatrix}\|v^+_i\|^2 & \langle v^*+_i, v^-_i\rangle\\
+\langle v^+_i,v^-_i\rangle & \|v^-_i\|^2 \end{pmatrix} \geq 0\]
+with equality if and only if \(v^+_i, v^-_i\) are linearly dependent,
+(becase \(\Phi_i\) is the determinant of a Gram matrix).
+
+Let \(i\) be an integer in \(\{2, \ldots, D-1\}\).
+
+Claim 3. There exists \(p^{++}\in \mathrm{C}[\lambda]\), \(\deg p^{++}\leq 2\) (that depends only on the intersection numbers)
+such that
+\[\|v^+_i\|^2 = \|v\|^2 p^{++}(a_0(W)).\]
+
+\emph{Proof of Claim 3.}
+\[\|v^+_i\|^2  = \bar{v}^\top E^*1A_{i-1}E^*_iE^*_iA_{i-1}E^*_1v = \bar{v}^\top E^*1A_{i-1}E^*_iA_{i-1}E^*_1v.\]
+But,
+\[E^*1A_{i-1}E^*_iA_{i-1}E^*_1 \in E^*1MM^*ME^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2)\]
+by Claim 2.
+
+So, there exists \(\alpha \in \mathbb{C}\), and \(p^{++}\in \mathbb{C}[\lambda]\) with \(\deg p^{++}\leq 2\) such that
+\[E^*1A_{i-1}E^*_iA_{i-1}E^*_1 = \alpha \tilde{J} + p^{++}(\tilde{A}), \quad (\tilde{A}^0 = E^*_1).\]
+Now,
+\[\|v^+_i\|^2 = \bar{v}^\top (\alpha \tilde{J} = p^{++}(\tilde{A}))v = \|v\|^2 p^{++}(a_0(W)),\]
+since \(\tilde{J}v = 0\), and \(\tilde{A}v = a_0(W)v\).
+
+This proves Claim 3.
+
+Similarly, there exist \(p^{--}, p^{+-}\in \mathbb{C}[\lambda]\) with \(\deg p^{--}, \deg p^{+-}\leq 2\) such that
+\[\|v^-_i\|^2 = \|v\|^2p^{--}p(a_0(W)), \; \langle v^+_i, v^-_i\rangle = \|v\|^2 p^{+-}(a_0(W)).\]
+
+Claim 4. \(E^*1A_{i-1}E^*_iA_{i+1}E^*_1 = (\tilde{J}-\tilde{A}-E^*_1)p^2_{i-1,i+1}\). In particular,
+\[p^{+-}(\lambda) = -p^2_{i-1,i+1}(\lambda +1).\]
+
+\emph{Proof of Claim 4.}
+Pick vertices \(y,z\in X\) such that \(\partial(x,y) = \partial(x,z) = 1\).
+
+\begin{align}
+(\mathrm{LHS})_{yz} & = \sum_{w\in X}(E^*_1A_{i-1}E^*_i)_{yw}(E^*_iA_{i+1}E^*_1)_{wz}\\
+& = \sum_{w\in X, \partial(y,w)=i-1,\partial(x,w)=i, \partial(w,z)=i+1}1\\
+& = \begin{cases}
+0 & \text{if } \partial(y,z) =0,\\
+0 & \text{if } \partial(y,z) = 1, \\
+p^2_{i-1,i+1} & \text{if }\partial(y,z)=2,
+\end{cases}\\
+& = \mathrm{RHS}_{yz}
+\end{align}
+Note that \(E^*_1A_2E^*_1 = \tilde{J}- \tilde{A} - E^*_1\).
+
+Now,
+\begin{align}
+\langle v^+_i, v^-i\rangle & = \bar{v}^\top E^*_1A_{i-1}E^*_iA_{i+1}E^*_1v\\
+& = p^2_{i-1,i+1}(\bar{v}^\top (\tilde{J}-\tilde{A}-E^*_1)v)\\
+& = (a_0(W)+1)p^2_{i-1,i+1}\|v\|^2.
+\end{align}
+
+Claim 5. \(\deg p^{++} = \deg p^{--} = 2\). (only need for some \(i\))
+
+\emph{Proof of Claim 5.}
+We need to calculate \(p^{++}\), \(p^{--}\).
+
+\begin{remark}
+Pick vertices \(y,z\in X\) such that \(\partial(x,y) = \partial(x,z) =1\). Then
+\[(E^*_1A_{i-1}E^*_iA_{i-1}E^*_1)_{yz} = |\gamma_{i-1}(y)\cap \Gamma_i(x)\cap \Gamma_{i-1}(z)|,\]
+which is equal to \(p^{1}_{i-1,i}\) if \(\partial(y,z)=0\), but \ldots.
+\[(E^*_1A_{i+1}E^*_iA_{i+1}E^*_1)_{yz} = |\gamma_{i+1}(y)\cap \Gamma_i(x)\cap \Gamma_{i+1}(z)|,\]
+which is equal to \(p^{1}_{i+1,i}\) if \(\partial(y,z)=0\), but \ldots.
+\end{remark}
+
+Conclusion.
+\begin{align}
+\Phi_i & = \det \begin{pmatrix}\|v^+_i\|^2 & \langle v^*+_i, v^-_i\rangle\\
+\langle v^+_i,v^-_i\rangle & \|v^-_i\|^2 \end{pmatrix} \geq 0\\
+& = \|v\|^4(p^{++}(\lambda)p^{--}(\lambda) - (p^2_{i-1,i+1})^2(\lambda+1)^2\\
+& \geq 0,
+\end{align}
+where \$\(\lambda = a_0(W)\).
+
+\(W\) is thin if and only if \(\Phi_i(\lambda) = 0\) for all \(i\in \{2, \ldots, D-1\}\).
+
+Each \(\Phi_i\) is degree \(4\), so at most \(4\) different thin irreducible modules \(W\) of endpoint \(1\) up to isomorphism.
+
 \end{proof}
+
+\textbf{Note.}
+In fact \(\Phi_i(\lambda)\) is independent of \(i\) up to scalar multiple for \(i\in \{2,\ldots, D-1\}\).
+
+If \(\Gamma\) has classical parameters \((q,D, \alpha, \beta)\), the roots are;
+\[\beta-\alpha-1, -1, -q-1, dq\frac{q^{D-1}-1}{q-1}-1.\]
+
+\hypertarget{lec36}{%
+\chapter{Dual Endpoint}\label{lec36}}
+
+\textbf{Wednesday, April 28, 1993}
+
+Let \(\Gamma = (X, E)\) be distance regular of diameter \(D\geq 3\), \(Q\)-polynomial with respect to \(E_0, E_1, \ldots, E_D\). Fix a vertex \(x\in X\), write \(E^*_i\equiv E^*_i(x)\), \(T\equiv T(x)\).
+
+Let \(W\) be an irreducible \(T\)-module of diameter \(d\).
+
+Recall that the endpoint
+\[r(W) = \min\{i\mid 0\leq i\leq D, E^*_iW \neq 0\}.\]
+
+\begin{definition}
+\protect\hypertarget{def:dual-endpoint}{}\label{def:dual-endpoint}The dual endpoint \index{dual endpoint} (with respect to above ordering \(E_0, E_1, \ldots, E_D\)),
+\[r^*(W) = \min\{i\mid 0\leq i\leq D, E_iW \neq 0\}.\]
+\[r(W) = 0 \leftrightarrow r^*(W) = 0 \leftrightarrow W: \text{ trivial $T$-module},\]
+(by Lemma \ref{lem:orthogonality}).
+\end{definition}
+
+Suppose \(W\) is thin. Then \(W\) is dual thin.
+(See Corollary \ref{cor:thin-is-dualthin}.)
+
+Moreover, \(\{i\mid E_iW \neq 0\}\) is a subinterval of \(\{0, 1, \ldots, D\}\). (same proof as for distance regular)
+
+\begin{remark}
+
+Dual version of Lemma \ref{lem:irreducible}.
+
+\textbf{Lemma 9'.}
+Let \(A^* \equiv A^*_1(x)\), \(W\) an irreducible \(T\)-moduoe, and \(d^* = \{i\mid E_iW\neq 0\}|-1\).
+
+\((i)\) \(E_iA^*E_j = 0 \; \text{ if }\; |i-j|>1, \; E_iA^*E_j\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d^*(x)\).\\
+\((ii)\) \(A^*E_jW \subseteq E_{j-1}W + E_jW + E_{j+1}W\), \(0\leq j \leq d^*(x)\). \((E_iW = 0 \; \text{ if } i<j\) or \(i > d^*(x)\).)\\
+\((iii)\) \(E_jW \neq 0\) if \(r\leq j \leq r+d\), \(=0\) if \(0\leq j\leq r\) or \(r+d < j \leq d^*(x)\).\\
+\((iv)\) \(E_iA^*E_jW \neq 0\), if \(|i-j| = 1\) \((r^* \leq i,j \leq r^*+d^*)\).
+
+\end{remark}
 
 \hypertarget{lec55}{%
 \chapter{Title of the Chapter}\label{lec55}}

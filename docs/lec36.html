@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 37 Title of the Chapter | Lecture Note on Terwilliger Algebra</title>
+  <title>Chapter 36 Dual Endpoint | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 37 Title of the Chapter | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:title" content="Chapter 36 Dual Endpoint | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 37 Title of the Chapter | Lecture Note on Terwilliger Algebra" />
+  <meta name="twitter:title" content="Chapter 36 Dual Endpoint | Lecture Note on Terwilliger Algebra" />
   
   <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="lec36.html"/>
-<link rel="next" href="references.html"/>
+<link rel="prev" href="lec35.html"/>
+<link rel="next" href="lec55.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -157,9 +157,31 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lec55" class="section level1 hasAnchor" number="37">
-<h1><span class="header-section-number">Chapter 37</span> Title of the Chapter<a href="lec55.html#lec55" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><strong>Wednesday, February 17, 1993</strong> # Edit Date</p>
+<div id="lec36" class="section level1 hasAnchor" number="36">
+<h1><span class="header-section-number">Chapter 36</span> Dual Endpoint<a href="lec36.html#lec36" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Wednesday, April 28, 1993</strong></p>
+<p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be distance regular of diameter <span class="math inline">\(D\geq 3\)</span>, <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>. Fix a vertex <span class="math inline">\(x\in X\)</span>, write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>.</p>
+<p>Let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module of diameter <span class="math inline">\(d\)</span>.</p>
+<p>Recall that the endpoint
+<span class="math display">\[r(W) = \min\{i\mid 0\leq i\leq D, E^*_iW \neq 0\}.\]</span></p>
+<div class="definition">
+<p><span id="def:dual-endpoint" class="definition"><strong>Definition 36.1  </strong></span>The dual endpoint (with respect to above ordering <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>),
+<span class="math display">\[r^*(W) = \min\{i\mid 0\leq i\leq D, E_iW \neq 0\}.\]</span>
+<span class="math display">\[r(W) = 0 \leftrightarrow r^*(W) = 0 \leftrightarrow W: \text{ trivial $T$-module},\]</span>
+(by Lemma <a href="lec10.html#lem:orthogonality">10.1</a>).</p>
+</div>
+<p>Suppose <span class="math inline">\(W\)</span> is thin. Then <span class="math inline">\(W\)</span> is dual thin.
+(See Corollary <a href="lec9.html#cor:thin-is-dualthin">9.1</a>.)</p>
+<p>Moreover, <span class="math inline">\(\{i\mid E_iW \neq 0\}\)</span> is a subinterval of <span class="math inline">\(\{0, 1, \ldots, D\}\)</span>. (same proof as for distance regular)</p>
+<div class="remark">
+<p><span id="unlabeled-div-150" class="remark"><em>Remark</em>. </span>Dual version of Lemma <a href="lec4.html#lem:irreducible">4.1</a>.</p>
+<p><strong>Lemma 9’.</strong>
+Let <span class="math inline">\(A^* \equiv A^*_1(x)\)</span>, <span class="math inline">\(W\)</span> an irreducible <span class="math inline">\(T\)</span>-moduoe, and <span class="math inline">\(d^* = \{i\mid E_iW\neq 0\}|-1\)</span>.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E_iA^*E_j = 0 \; \text{ if }\; |i-j|&gt;1, \; E_iA^*E_j\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d^*(x)\)</span>.<br />
+<span class="math inline">\((ii)\)</span> <span class="math inline">\(A^*E_jW \subseteq E_{j-1}W + E_jW + E_{j+1}W\)</span>, <span class="math inline">\(0\leq j \leq d^*(x)\)</span>. <span class="math inline">\((E_iW = 0 \; \text{ if } i&lt;j\)</span> or <span class="math inline">\(i &gt; d^*(x)\)</span>.)<br />
+<span class="math inline">\((iii)\)</span> <span class="math inline">\(E_jW \neq 0\)</span> if <span class="math inline">\(r\leq j \leq r+d\)</span>, <span class="math inline">\(=0\)</span> if <span class="math inline">\(0\leq j\leq r\)</span> or <span class="math inline">\(r+d &lt; j \leq d^*(x)\)</span>.<br />
+<span class="math inline">\((iv)\)</span> <span class="math inline">\(E_iA^*E_jW \neq 0\)</span>, if <span class="math inline">\(|i-j| = 1\)</span> <span class="math inline">\((r^* \leq i,j \leq r^*+d^*)\)</span>.</div>
+</div>
 
 </div>
             </section>
@@ -167,8 +189,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="lec36.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec35.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lec55.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -199,7 +221,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/55-lecture55.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/36-lecture36.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -207,7 +229,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/icu-hsuzuki/t-algebra/master/55-lecture55.Rmd",
+"link": "https://github.com/icu-hsuzuki/t-algebra/master/36-lecture36.Rmd",
 "text": null
 },
 "download": ["t-algebra.pdf", "t-algebra.epub"],
