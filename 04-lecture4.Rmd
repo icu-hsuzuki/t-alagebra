@@ -158,5 +158,5 @@ $$\widetilde{W} = E^*_rW + E^*_{r+1}W + \cdots + E^*_{j-1}W.$$
 Observe $0\subsetneq \widetilde{W} \subsetneq W$. 
 Also $A\widetilde{W} \subseteq \widetilde{W}$ by $(ii)$, and $E_i^*\widetilde{W} \subseteq \widetilde{W}$ for every $i$ by construction.
 
-Thus, $T\widetilde{W} \subseteq \widetilde{W}$, contradicting $W$ beging irreducible.
+Thus, $T\widetilde{W} \subseteq \widetilde{W}$, contradicting $W$ being irreducible.
 :::
