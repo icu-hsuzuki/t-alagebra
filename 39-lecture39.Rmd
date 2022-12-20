@@ -1,0 +1,49 @@
+# $A^+$ and $A^-$ {#lec39}
+**Wednesday, May 5, 1993** 
+
+Assume $\Gamma = (X, E)$ is thin, distance regular of diameter $D\geq 5$, and $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$.
+
+Fix a vertex $x\in X$, write $E^*\equiv E^*_i(x)$, $R\equiv R(x)$, $T\equiv T(x)$. 
+
+Pick $y\in X$ with $\partial(x,y) = 1$. Write $E^*_{i,j} \equiv E^*(x)E^*(y)$, $\delta_{ij} = E^*_{ij}\delta$, and $\tilde{A} = E^*_1AE^*_1$.
+
+Recall that $\delta^+_{11}\in E^*_{11}V$ and
+$$R^{-1}E^*_2A_2E^*_1\hat{y} = \delta^+_{11} + \Psi(x,y)\hat{y}.$$
+We saw $\Psi(x,y) = \Psi(y,x)$. We shall show below that $\Psi(x,y)$ is independent of edge $xy$.
+
+:::{.lemma #delta-minus11}
+With the above notation, set $\Psi:=\Psi(x,y)$. Then the following hold.
+
+| $(i)$ $\delta^-_{11} = \tilde{A}\delta^+_{11} - \left( \frac{a_2}{c_2} - \Psi\right)\hat{y} + \Psi \delta_{12}\in E^*_{11}V$.
+
+| $(ii)$ $\delta^-_{11}(x,y) = \delta^{-1}_{11}(y,x)$.
+:::
+
+:::{.proof}
+| $(i)$ $\delta^-_{12}\in E^*_{12}$, $\delta^-_{11}\in E^*_{11}V$ and $\delta^-_{10}\in E^*_{10}V$, and
+\begin{equation}
+\tilde{A}\delta^+_{11} = \delta^-_{12} + \delta^-_{11} + \delta^-_{10}, (\#eq:tildea-deltaplus11)
+\end{equation}
+\begin{equation}
+\delta^-{12} = E^*_{12}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{12} (\#eq:delta-minus12),
+\end{equation}
+by Lemma \@ref(lem:map-e11star-to-e22star) $(v)$.
+
+Also, $\delta^-_{10} = \sigma\hat{y}$ for some $\sigma\in \mathbb{C}$, where
+\begin{align}
+\sigma & = \langle \tilde{A}\delta^+_{11}, \hat{y}\rangle \\
+& = \langle \delta^+_{11}, \tilde{A}\hat{y}y\rangle\\
+& = \langle \delta^+_{11}, \delta_{11}\rangle \\
+& = \frac{a_2}{c_2}-\Psi. (\#eq:sigma)
+\end{align}
+
+Solving for $\delta^-_{11}$ in \@ref(eq:tildea-deltaplus11), using \@ref(eq:delta-minus12) and \@ref(eq:sigma), we have
+\begin{align}
+\delta^-_{11} & = \tilde{A}\delta^+_{11} - \delta^-_{12} - \delta^-_{10}\\
+& = A\delta^+_{11} + \Psi \delta_{12} - \left(\frac{a_2}{c_2} - \Psi\right)\hat{y}.
+\end{align}
+
+| $(ii)$ Since
+$$\delta^-_{11} = E^*_{11}AE^*_{11}\delta^+_{11},$$
+we have $\delta^+_{11}(x,y) = \delta^+_{11}(y,x)$.
+:::

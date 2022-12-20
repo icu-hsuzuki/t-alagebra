@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-19" />
+<meta name="date" content="2022-12-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="lec37.html"/>
-<link rel="next" href="lec55.html"/>
+<link rel="next" href="lec39.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -137,7 +137,8 @@ div.csl-indent {
 <li class="chapter" data-level="36" data-path="lec36.html"><a href="lec36.html"><i class="fa fa-check"></i><b>36</b> Dual Endpoint</a></li>
 <li class="chapter" data-level="37" data-path="lec37.html"><a href="lec37.html"><i class="fa fa-check"></i><b>37</b> Generalized Adjacency Matrix</a></li>
 <li class="chapter" data-level="38" data-path="lec38.html"><a href="lec38.html"><i class="fa fa-check"></i><b>38</b> An Injection from <span class="math inline">\(E^*_{11}\)</span> to <span class="math inline">\(E^*_{22}\)</span></a></li>
-<li class="chapter" data-level="39" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>39</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="39" data-path="lec39.html"><a href="lec39.html"><i class="fa fa-check"></i><b>39</b> <span class="math inline">\(A^+\)</span> and <span class="math inline">\(A^-\)</span></a></li>
+<li class="chapter" data-level="40" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>40</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -162,6 +163,133 @@ div.csl-indent {
 <div id="lec38" class="section level1 hasAnchor" number="38">
 <h1><span class="header-section-number">Chapter 38</span> An Injection from <span class="math inline">\(E^*_{11}\)</span> to <span class="math inline">\(E^*_{22}\)</span><a href="lec38.html#lec38" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Monday, May 3, 1993</strong></p>
+<div class="lemma">
+<p><span id="lem:e11star-to-e22star" class="lemma"><strong>Lemma 38.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be a thin distance-regular graph of diameter <span class="math inline">\(D\geq 5\)</span>, and <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>.
+Pick vertices <span class="math inline">\(x,y\in X\)</span> such that <span class="math inline">\(\partial(x,y) = 1\)</span>, and write <span class="math inline">\(E^*_{ij}:=E^*_i(x)E^*_j(y)\)</span> for <span class="math inline">\(i,j\in \{0, 1, \ldots, D\}\)</span>. Then the following hold.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E^*_{22}AE^*_{11}: E^*_{11}V \to E^*_{22}V\)</span> is one-to-one.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> For every <span class="math inline">\(z\in X\)</span> such that <span class="math inline">\(\partial(x,z) = \partial(y,z) = 1\)</span>, there is <span class="math inline">\(w\in X\)</span> such that</div>
+<p><span class="math display">\[\partial(w,x) = \partial(w,y) = 2, \; \partial(w,z)=1.\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-156" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> Write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(R \equiv R(x)\)</span>, <span class="math inline">\(F \equiv F(x)\)</span>, <span class="math inline">\(L \equiv L(x)\)</span>, and <span class="math inline">\(T \equiv T(x)\)</span>.</div>
+<p>Suppose there exists
+<span class="math display" id="eq:existence-of-v">\[\begin{equation}
+0\neq v\in E^*_{11}V \; \text{ such that }\; E^*_{22}AE^*_{11}v = 0. \tag{38.1},
+\end{equation}\]</span></p>
+<p>Claim 1. <span class="math inline">\(E^*_{34}A^2E^*_{12}AE^*_{11}v \neq 0\)</span>.</p>
+<p><em>Proof of Claim 1.</em>
+Recall by Lemma <a href="lec32.html#lem:action-of-r">32.1</a> <span class="math inline">\((ii)\)</span>, <span class="math inline">\((3 \leq 5-2 \leq D-2t)\)</span>,
+<span class="math display">\[R(y)^3: E^*_1(y)V \to E^*_4(y)V\]</span>
+is one-to-one.</p>
+<p>Since <span class="math inline">\(v\in E^*_1(y)V\)</span>, we find
+<span class="math display">\[\begin{align}
+0 &amp; \neq R^4(y)v\\
+&amp; = E^*_4(y)A^3E^*_1(y)v\\
+&amp; = E^*_4(y)A^2E^*_2(y)AE^*_{11}v\\
+&amp; = E^*_4(y)A^2\left(\sum_{h=0}^D E^*_{h,2}\right)AE^*_{11}v\\
+&amp; = E^*_4(y)A^2(E^*_{12} + E^*_{22})AE^*_{11}v\\
+&amp; = E^*_4(y)A^2E^*_{12}AE^*_{11}v \\
+&amp; = E^*_{34}(y)A^2E^*_{12}AE^*_{11}v,
+\end{align}\]</span>
+by <a href="lec38.html#eq:existence-of-v">(38.1)</a>.
+This proves the claim.</p>
+<p>By Theorem <a href="lec30.html#thm:rfl-relations">30.1</a> <span class="math inline">\((i)\)</span>,
+<span class="math display" id="eq:g3plus-minus">\[\begin{equation}
+0 = (g_3^-R^2F + RFR + g^+_3FR^2 - \gamma R^2)E^*_1.  \tag{38.2}
+\end{equation}\]</span></p>
+<div class="remark">
+<p><span id="unlabeled-div-155" class="remark"><em>Remark</em>. </span>Theorem <a href="lec30.html#thm:rfl-relations">30.1</a> <span class="math inline">\((i)\)</span> states
+<span class="math display">\[(g_i^-FL^2 + LFL + g^+_iL^2F - \gamma L^2)E^*_i = O \;\text{ for }i\in \{2, \ldots, D\}.\]</span>
+For <span class="math inline">\(i = 3\)</span>,
+<span class="math display">\[E^*_1(g^-_3 FL^2 + LFL + g^+_3 L^2F - \gamma L^2)E^*_3 = O.\]</span>
+Taking the transpose, we have</p>
+<p><span class="math display">\[(g^{-}_3 R^2 F + RFR + g^{+}_3 FR^2 - \gamma R^2) E^*_1 = O.\]</span>
+Hence, we have <a href="lec38.html#eq:g3plus-minus">(38.2)</a>.</p>
+</div>
+<p>Multiplying each term on the left by E^*_4(y)$, on the right by <span class="math inline">\(E^*_1(y)\)</span>, we find
+<span class="math display" id="eq:g3plus-minus-zero">\[\begin{align}
+O &amp; = g^-_3E^*_{34}R^2FE^*_{11} + E^*_{34}RFRE^*_{11} + g^+_3E^*_{34}FR^2E^*_{11}-\gamma E^*_{34}R^2E^*_{11}\\
+&amp; = g^-_3E^*_{34}A^2E^*_{12}AE^*_{11} + E^*_{34}AE^*_{23}AE^*_{22}AE^*_{11} + g^+_3E^*_{34}AE^*_{33}AE^*_{22}AE^*_{11}. \tag{38.3}
+\end{align}\]</span>
+Applying this to <span class="math inline">\(v\)</span>, we find by <a href="lec38.html#eq:existence-of-v">(38.1)</a> that
+<span class="math display">\[0 = g^-_3E^*_{34}A^2E^*_{12}AE^*_{11}v.\]</span>
+So, <span class="math inline">\(g^-_3 = 0\)</span> by Claim 1. But by Lemma <a href="lec30.html#lem:epm-gpm">30.1</a>,
+<span class="math display">\[g^-_3 = \frac{\theta^*_1-\theta^*_0}{\theta^*_1-\theta^*_3} \neq 0,\]</span>
+a contradiction.</p>
+</div>
+<p>Let <span class="math inline">\(\Gamma\)</span>, <span class="math inline">\(x, y\)</span> be as in Lemma <a href="lec38.html#lem:e11star-to-e22star">38.1</a>.
+We saw in Lemma <a href="lec37.html#lem:generalized-adjacecy-matrix">37.2</a>,
+<span class="math display">\[R^{-1}E^*_2A_2E^*_1\hat{y} = \delta^+_{10} + \delta^+_{11},\]</span>
+where
+<span class="math display">\[\delta^+_{10}\in E^*_{10}V = \mathrm{Span}(\hat{y}), \quad \delta^+_{11}\in E^*_{11}V.\]</span></p>
+<div class="definition">
+<p><span id="def:Psi" class="definition"><strong>Definition 38.1  </strong></span>Define <span class="math inline">\(\Psi = \Psi(x,y) \in \mathbb{C}\)</span> by <span class="math inline">\(\delta^+_{10} = \Psi\hat{y}\)</span>.</p>
+</div>
+<p>We will show that <span class="math inline">\(\Psi(x,y)\)</span> is independent of <span class="math inline">\(x, y\)</span>.</p>
+<p>Observe <span class="math inline">\(R^{-1}, A_i, E^*_i\in \mathrm{Mat}_X(\mathbb{Q})\)</span>. So <span class="math inline">\(\Psi\in \mathbb{Q}\)</span>.</p>
+<p>Firstly, show
+<span class="math display">\[\Psi(x,y) = \Psi(y,x).\]</span></p>
+<div class="lemma">
+<p><span id="lem:map-e11star-to-e22star" class="lemma"><strong>Lemma 38.2  </strong></span>With the notation of Lemma <a href="lec38.html#lem:e11star-to-e22star">38.1</a>, the following hold.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E^*_{22}AE^*_{11}\delta^+_{11} = \delta_{22}\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> $E^*_{21}AE^*<em>{11}^+</em>{11} = -(x,y)_{21}.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(\langle \delta^+_{11}, \delta_{11}\rangle = \frac{a_2}{c_2} - \Psi(x,y)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(\Psi(x,y) = \Psi(y,x)\)</span>.</div>
+<div class="line-block"><span class="math inline">\((v)\)</span> <span class="math inline">\(E^*_{12}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{12}\)</span>.</div>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-158" class="proof"><em>Proof</em>. </span>Write <span class="math inline">\(\Psi \equiv \Psi(x,y)\)</span>, <span class="math inline">\(R \equiv R(x)\)</span>, <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span>, etc.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> We have</div>
+<p><span class="math display">\[\begin{align}
+R(\delta^+_{11} + \Psi \hat{y}) &amp; = R(\delta^+_{11} + \delta^+_{10})\\
+&amp; = R(R^{-1}(E^*_2A_2E^*_1))\hat{y}\\
+&amp; = E^*_2A_2E^*_1\hat{y}\\
+&amp; = \delta_{22}.
+\end{align}\]</span>
+So,
+<span class="math display">\[\begin{align}
+\delta_{22} &amp; = R(\delta^+_{11} + \Psi \hat{y})\\
+&amp; = E^*_2AE^*_1(\delta^+_{11} + \Psi \hat{y})\\
+&amp; = E^*_{22}AE^*_{11}\delta^+_{11} + \Psi E^*_{22}A E^*_{10}\hat{y}.
+\end{align}\]</span>
+The second term is zero.</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> We have</div>
+<p><span class="math display">\[\begin{align}
+0 &amp; = E^*_{21}\delta_{22}\\
+&amp; = E^*_{21}R(\delta^+_{11} + \Psi \hat{y})\\
+&amp; = E^*_{21}AE^*_{11}\delta^+_{11} + \Psi E^*_{21}AE^*_{10}\hat{y}\\
+&amp; = E^*_{21}AE^*_{11} + \Psi \delta_{21}.
+\end{align}\]</span></p>
+<div class="line-block"><span class="math inline">\((iii)\)</span> We have</div>
+<p><span class="math display">\[\begin{align}
+p^{1}_{22} &amp; = \delta_{22}\|^2 \\
+&amp; = \langle \delta_{22}, \delta_{21}+\delta_{22}+\delta_{23}\rangle\\
+&amp; = \langle R(\delta^+_{11} + \Psi \hat{y}), \delta_{21}+\delta_{22}+\delta_{23}\rangle\\
+&amp; = \langle \delta^+_{11} + \Psi \hat{y}, L(\delta_{21}+\delta_{22}+\delta_{23})\rangle\\
+&amp; = b_1\langle \delta^+_{11} + \Psi \hat{y}, \delta_{10}+\delta_{11}+\delta_{12})\rangle\\
+&amp; = b_1(\langle \delta^+_{11}, \delta_{11}\rangle + \Psi).
+\end{align}\]</span>
+So,
+<span class="math display">\[\langle \delta^+_{11}, \delta_{11}\rangle = b_1^{-1}p^{1}_{22}- \Psi = \frac{a_2}{c_2}-\Psi.\]</span></p>
+<div class="remark">
+<p><span id="unlabeled-div-157" class="remark"><em>Remark</em>. </span><span class="math display">\[b^{-1}_1p^1_{22} = b^{-1}_1\frac{k_1}{k_1}p^1_{22} = b^{-1}_1\frac{1}{k_1}k_2p^{2}_{12} = b^{-1}_1\frac{b_1}{c_2}a_2 = \frac{a_2}{c_2}.\]</span></p>
+</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> Interchanging roles of <span class="math inline">\(x, y\)</span> above, we find there exists <span class="math inline">\(\delta^{+&#39;}_{11}\in E^*_{11}V\)</span> such that</div>
+<p><span class="math display">\[R(y)^{-1}E^*_2(y)A_2E^*_1(y)\hat{x} = \delta^{+&#39;}_{11} + \Psi(y,x)\hat{y}.\]</span></p>
+<p>Then,
+<span class="math display">\[E^*_{22}AE^*_{11}(\delta^{+&#39;}_{11}) = \delta_{22}.\]</span>
+So,
+<span class="math display">\[E^*_{22}AE^*_{11}(\delta^{+}_{11}-\delta^{+&#39;}_{11}) = 0.\]</span>
+Hence, <span class="math inline">\(\delta^+_{11} = \delta^{+&#39;}_{11}\)</span> since
+<span class="math display">\[E^*_{22}AE^*_{11}: E^*_{11}V \to E^*_{22}V\]</span>
+is one-to-one.</p>
+<p>Now,
+<span class="math display">\[\frac{a_2}{c_2}-\Psi(x,y) = \langle \delta^+_{11}, \delta_{11}\rangle = \langle \delta^{+&#39;}_{11}, \delta_{11}\rangle = \frac{a_2}{c_2}-\Psi(y,x).\]</span>
+Thus,
+<span class="math display">\[\Psi(x,y) = \Psi(y,x).\]</span></p>
+<div class="line-block"><span class="math inline">\((v)\)</span> Immediate from <span class="math inline">\((ii)\)</span>, <span class="math inline">\((iv)\)</span>.</div>
+</div>
 
 </div>
             </section>
@@ -170,7 +298,7 @@ div.csl-indent {
         </div>
       </div>
 <a href="lec37.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lec55.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec39.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

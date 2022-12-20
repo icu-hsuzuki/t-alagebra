@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 18 Polynomial Schemes | Lecture Note on Terwilliger Algebra</title>
+  <title>Chapter 39 \(A^+\) and \(A^-\) | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 18 Polynomial Schemes | Lecture Note on Terwilliger Algebra" />
+  <meta property="og:title" content="Chapter 39 \(A^+\) and \(A^-\) | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 18 Polynomial Schemes | Lecture Note on Terwilliger Algebra" />
+  <meta name="twitter:title" content="Chapter 39 \(A^+\) and \(A^-\) | Lecture Note on Terwilliger Algebra" />
   
   <meta name="twitter:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="lec17.html"/>
-<link rel="next" href="lec19.html"/>
+<link rel="prev" href="lec38.html"/>
+<link rel="next" href="lec55.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -160,67 +160,45 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lec18" class="section level1 hasAnchor" number="18">
-<h1><span class="header-section-number">Chapter 18</span> Polynomial Schemes<a href="lec18.html#lec18" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><strong>Wednesday, March 3, 1993</strong></p>
+<div id="lec39" class="section level1 hasAnchor" number="39">
+<h1><span class="header-section-number">Chapter 39</span> <span class="math inline">\(A^+\)</span> and <span class="math inline">\(A^-\)</span><a href="lec39.html#lec39" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Wednesday, May 5, 1993</strong></p>
+<p>Assume <span class="math inline">\(\Gamma = (X, E)\)</span> is thin, distance regular of diameter <span class="math inline">\(D\geq 5\)</span>, and <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>.</p>
+<p>Fix a vertex <span class="math inline">\(x\in X\)</span>, write <span class="math inline">\(E^*\equiv E^*_i(x)\)</span>, <span class="math inline">\(R\equiv R(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>.</p>
+<p>Pick <span class="math inline">\(y\in X\)</span> with <span class="math inline">\(\partial(x,y) = 1\)</span>. Write <span class="math inline">\(E^*_{i,j} \equiv E^*(x)E^*(y)\)</span>, <span class="math inline">\(\delta_{ij} = E^*_{ij}\delta\)</span>, and <span class="math inline">\(\tilde{A} = E^*_1AE^*_1\)</span>.</p>
+<p>Recall that <span class="math inline">\(\delta^+_{11}\in E^*_{11}V\)</span> and
+<span class="math display">\[R^{-1}E^*_2A_2E^*_1\hat{y} = \delta^+_{11} + \Psi(x,y)\hat{y}.\]</span>
+We saw <span class="math inline">\(\Psi(x,y) = \Psi(y,x)\)</span>. We shall show below that <span class="math inline">\(\Psi(x,y)\)</span> is independent of edge <span class="math inline">\(xy\)</span>.</p>
 <div class="lemma">
-<p><span id="lem:dr-scheme" class="lemma"><strong>Lemma 18.1  </strong></span>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> denote the symmetric scheme with associated matrices <span class="math inline">\(A_0, A_1, \ldots, A_D\)</span>. Then the following are equivalent.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> The graph <span class="math inline">\(\Gamma = (X, R_1)\)</span> is distance-regular, and <span class="math inline">\(R_0, \ldots, R_D\)</span> are labelled so that</div>
-<p><span class="math display">\[R_i = \{xy\mid \partial(x,y) = i\}.\]</span></p>
-<div class="line-block"><span class="math inline">\((ii)\)</span> There exists <span class="math inline">\(f_i\in \mathbb{C}[\lambda]\)</span>, <span class="math inline">\(\deg f_i = i\)</span> such that <span class="math inline">\(f_i(A_1) = A_i\)</span> for all <span class="math inline">\(i\)</span> with <span class="math inline">\(0\leq i\leq D\)</span>.</div>
-<div class="line-block"><span class="math inline">\((iii)\)</span> The parameter <span class="math inline">\(p^h_{ij}\)</span></div>
-<p><span class="math display">\[\begin{cases} = 0 &amp; \text{if one of $h, i, j$ is larger than the sum of the other two}\\
-\neq 0 &amp; \text{if one of $h,i,j$ is equal to the sum of the other two.}\end{cases}\]</span></p>
+<p><span id="lem:delta-minus11" class="lemma"><strong>Lemma 39.1  </strong></span>With the above notation, set <span class="math inline">\(\Psi:=\Psi(x,y)\)</span>. Then the following hold.</p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\delta^-_{11} = \tilde{A}\delta^+_{11} - \left( \frac{a_2}{c_2} - \Psi\right)\hat{y} + \Psi \delta_{12}\in E^*_{11}V\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\delta^-_{11}(x,y) = \delta^{-1}_{11}(y,x)\)</span>.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-81" class="proof"><em>Proof</em>. </span></p>
-<div class="line-block"><span class="math inline">\((i)\Rightarrow (ii)\)</span>: Lemma <a href="lec16.html#lem:incidence-matrices">16.1</a>.</div>
-<div class="line-block"><span class="math inline">\((ii)\Rightarrow (iii)\)</span>: Define</div>
-<p><span class="math display">\[k_i \equiv p^0_{ii} = |\{z\mid z]in X, \; \partial(x,z) = i \; ((x,z)\in R_i)\}|\]</span>
-for any <span class="math inline">\(x\in X\)</span>.
-Then <span class="math inline">\(k_i \neq 0\)</span> <span class="math inline">\((0\leq i\leq D)\)</span>, <span class="math inline">\(k_0 = 1\)</span>.</p>
-<p>(By symmetricity, <span class="math inline">\((x,y)\in R_i\)</span> if and only if <span class="math inline">\((y,x)\in R_i\)</span>.)</p>
-<p>Claim.
-<span class="math display">\[\begin{align}
-k_hp^h_{ij} &amp; = k_ip^i_{hj} = k_jp^j_{ih}\\
-&amp; = |X|^{-1}|\{xyz\in X^3\mid \partial(x,y) = h, \partial(x,z) = i, \partial(y,z) = j\}|.
-\end{align}\]</span>
-<em>Pf.</em>
-The number of <span class="math inline">\(xyz\in X^3\)</span>, <span class="math inline">\(\partial(x,y) = h, \partial(x,z) = i, \partial(y,z) = j\)</span> is equal to
-<span class="math display">\[|X|k_hp^h_{ij} = |X|k_ip^i_{hj} = k_jp^j_{ih}.\]</span></p>
-<p>In particular,
-<span class="math display">\[p^h_{ij} = 0 \leftrightarrow p^i_{hj} =0 \leftrightarrow p^j_{ih} = 0.\]</span>
-Hence, it suffices to show
-<span class="math display">\[\begin{cases}
-p^h_{ij} = 0 &amp; \text{if }\; h &gt; i+j\\
-p^h_{ij} \neq 0 &amp; \text{if }\; h = i+j.
-\end{cases}\]</span></p>
-<p>Fix <span class="math inline">\(i,j\)</span>. Without loss of generality, we may assume that <span class="math inline">\(i+j\leq D\)</span> as trivial otherwise.
-<span class="math display">\[f_i(A)f_j(A) = A_iA_j = \sum_{\ell = 0}^Dp^{\ell}_{ij}A_\ell = \sum_{\ell=0}^Dp^\ell_{ij}f_\ell(A).\]</span>
-<span class="math display">\[\begin{align}
-i + j &amp; = \deg \mathrm{LHS}\\
-&amp; = \deg \mathrm{RHS}\\
-&amp; = \max\{\ell\mid p^\ell_{ij}\neq 0\}.
+<p><span id="unlabeled-div-159" class="proof"><em>Proof</em>. </span></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\delta^-_{12}\in E^*_{12}\)</span>, <span class="math inline">\(\delta^-_{11}\in E^*_{11}V\)</span> and <span class="math inline">\(\delta^-_{10}\in E^*_{10}V\)</span>, and</div>
+<p><span class="math display" id="eq:tildea-deltaplus11">\[\begin{equation}
+\tilde{A}\delta^+_{11} = \delta^-_{12} + \delta^-_{11} + \delta^-_{10}, \tag{39.1}
+\end{equation}\]</span>
+<span class="math display" id="eq:delta-minus12">\[\begin{equation}
+\delta^-{12} = E^*_{12}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{12} \tag{39.2},
+\end{equation}\]</span>
+by Lemma <a href="lec38.html#lem:map-e11star-to-e22star">38.2</a> <span class="math inline">\((v)\)</span>.</p>
+<p>Also, <span class="math inline">\(\delta^-_{10} = \sigma\hat{y}\)</span> for some <span class="math inline">\(\sigma\in \mathbb{C}\)</span>, where
+<span class="math display" id="eq:sigma">\[\begin{align}
+\sigma &amp; = \langle \tilde{A}\delta^+_{11}, \hat{y}\rangle \\
+&amp; = \langle \delta^+_{11}, \tilde{A}\hat{y}y\rangle\\
+&amp; = \langle \delta^+_{11}, \delta_{11}\rangle \\
+&amp; = \frac{a_2}{c_2}-\Psi. \tag{39.3}
 \end{align}\]</span></p>
-<div class="line-block"><span class="math inline">\((iii)\Rightarrow (i)\)</span></div>
-<p>Let <span class="math inline">\(A = A_1\)</span>, and consider a graph <span class="math inline">\(\Gamma\)</span> with adjacency matrix <span class="math inline">\(A\)</span>.
+<p>Solving for <span class="math inline">\(\delta^-_{11}\)</span> in <a href="lec39.html#eq:tildea-deltaplus11">(39.1)</a>, using <a href="lec39.html#eq:delta-minus12">(39.2)</a> and <a href="lec39.html#eq:sigma">(39.3)</a>, we have
 <span class="math display">\[\begin{align}
-AA_j &amp; = \sum_{h}p^h_{1j}A_h\\
-&amp; = p^{j+1}_{1j} A_{j+1} + p^j_{1j}A_j + p^{j-1}_{1j}A_{j-1}.
+\delta^-_{11} &amp; = \tilde{A}\delta^+_{11} - \delta^-_{12} - \delta^-_{10}\\
+&amp; = A\delta^+_{11} + \Psi \delta_{12} - \left(\frac{a_2}{c_2} - \Psi\right)\hat{y}.
 \end{align}\]</span></p>
-<p>Then, <span class="math inline">\(p^{j+1}_{1j} \neq 0 \neq p^{j-1}_{1j}\)</span>.</p>
-<p>Fix a vertex <span class="math inline">\(x\in X\)</span>, and set <span class="math inline">\(R_i(x) = \{y\mid (x,y)\in R_i\}\)</span>.</p>
-<p>Then each <span class="math inline">\(y\in R_i(x)\)</span> is adjacent in <span class="math inline">\(\Gamma\)</span> to exactly
-<span class="math display">\[\begin{align}
-p^i_{1,i+1} &amp; \neq 0  \quad \text{vertices in }\; R_{i}(x),\\
-p^i_{1i} &amp; \qquad \text{vertices in }\; R_{i+1}(x),\\
-p^i_{1,i-1} &amp; \neq 0 \quad \text{vertices in }\; R_{i-1}(x).
-\end{align}\]</span>
-Hence, by induction,
-<span class="math display">\[\begin{align}
-R_i(x) &amp; = \{y\mid \partial(x,y) = i \text{ in }\Gamma\} &amp;&amp; (0\leq i\leq D),
-\end{align}\]</span>
-and <span class="math inline">\(\Gamma\)</span> is distance regular.</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Since</div>
+<p><span class="math display">\[\delta^-_{11} = E^*_{11}AE^*_{11}\delta^+_{11},\]</span>
+we have <span class="math inline">\(\delta^+_{11}(x,y) = \delta^+_{11}(y,x)\)</span>.</p>
 </div>
 
 </div>
@@ -229,8 +207,8 @@ and <span class="math inline">\(\Gamma\)</span> is distance regular.</p>
           </div>
         </div>
       </div>
-<a href="lec17.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lec19.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lec38.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lec55.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -261,7 +239,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/18-lecture18.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/39-lecture39.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -269,7 +247,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/icu-hsuzuki/t-algebra/master/18-lecture18.Rmd",
+"link": "https://github.com/icu-hsuzuki/t-algebra/master/39-lecture39.Rmd",
 "text": null
 },
 "download": ["t-algebra.pdf", "t-algebra.epub"],

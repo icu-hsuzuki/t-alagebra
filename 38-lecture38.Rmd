@@ -1,3 +1,161 @@
 # An Injection from $E^*_{11}$ to $E^*_{22}$ {#lec38}
 **Monday, May 3, 1993** 
 
+:::{.lemma #e11star-to-e22star}
+Let $\Gamma = (X, E)$ be a thin distance-regular graph of diameter $D\geq 5$, and $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$. 
+Pick vertices $x,y\in X$ such that $\partial(x,y) = 1$, and write $E^*_{ij}:=E^*_i(x)E^*_j(y)$ for $i,j\in \{0, 1, \ldots, D\}$. Then the following hold.
+
+| $(i)$ $E^*_{22}AE^*_{11}: E^*_{11}V \to E^*_{22}V$ is one-to-one.
+
+| $(ii)$ For every $z\in X$ such that $\partial(x,z) = \partial(y,z) = 1$, there is $w\in X$ such that
+$$\partial(w,x) = \partial(w,y) = 2, \; \partial(w,z)=1.$$
+:::
+
+:::{.proof}
+| $(i)$ Write $E^*_i\equiv E^*_i(x)$, $R \equiv R(x)$, $F \equiv F(x)$, $L \equiv L(x)$, and $T \equiv T(x)$.
+Suppose there exists
+\begin{equation}
+0\neq v\in E^*_{11}V \; \text{ such that }\; E^*_{22}AE^*_{11}v = 0. (\#eq:existence-of-v),
+\end{equation}
+
+Claim 1. $E^*_{34}A^2E^*_{12}AE^*_{11}v \neq 0$.
+
+_Proof of Claim 1._
+Recall by Lemma \@ref(lem:action-of-r) $(ii)$, $(3 \leq 5-2 \leq D-2t)$, 
+$$R(y)^3: E^*_1(y)V \to E^*_4(y)V$$
+is one-to-one.
+
+Since $v\in E^*_1(y)V$, we find
+\begin{align}
+0 & \neq R^4(y)v\\
+& = E^*_4(y)A^3E^*_1(y)v\\
+& = E^*_4(y)A^2E^*_2(y)AE^*_{11}v\\
+& = E^*_4(y)A^2\left(\sum_{h=0}^D E^*_{h,2}\right)AE^*_{11}v\\
+& = E^*_4(y)A^2(E^*_{12} + E^*_{22})AE^*_{11}v\\
+& = E^*_4(y)A^2E^*_{12}AE^*_{11}v \\
+& = E^*_{34}(y)A^2E^*_{12}AE^*_{11}v,
+\end{align}
+by \@ref(eq:existence-of-v). 
+This proves the claim.
+
+By Theorem \@ref(thm:rfl-relations) $(i)$,
+\begin{equation}
+0 = (g_3^-R^2F + RFR + g^+_3FR^2 - \gamma R^2)E^*_1.  (\#eq:g3plus-minus)
+\end{equation}
+
+:::{.remark}
+Theorem \@ref(thm:rfl-relations) $(i)$ states
+$$(g_i^-FL^2 + LFL + g^+_iL^2F - \gamma L^2)E^*_i = O \;\text{ for }i\in \{2, \ldots, D\}.$$
+For $i = 3$, 
+$$E^*_1(g^-_3 FL^2 + LFL + g^+_3 L^2F - \gamma L^2)E^*_3 = O.$$
+Taking the transpose, we have
+
+$$(g^{-}_3 R^2 F + RFR + g^{+}_3 FR^2 - \gamma R^2) E^*_1 = O.$$
+Hence, we have \@ref(eq:g3plus-minus).
+:::
+
+Multiplying each term on the left by E^*_4(y)$, on the right by $E^*_1(y)$, we find
+\begin{align}
+O & = g^-_3E^*_{34}R^2FE^*_{11} + E^*_{34}RFRE^*_{11} + g^+_3E^*_{34}FR^2E^*_{11}-\gamma E^*_{34}R^2E^*_{11}\\
+& = g^-_3E^*_{34}A^2E^*_{12}AE^*_{11} + E^*_{34}AE^*_{23}AE^*_{22}AE^*_{11} + g^+_3E^*_{34}AE^*_{33}AE^*_{22}AE^*_{11}. (\#eq:g3plus-minus-zero)
+\end{align}
+Applying this to $v$, we find by \@ref(eq:existence-of-v) that
+$$0 = g^-_3E^*_{34}A^2E^*_{12}AE^*_{11}v.$$
+So, $g^-_3 = 0$ by Claim 1. But by Lemma \@ref(lem:epm-gpm),
+$$g^-_3 = \frac{\theta^*_1-\theta^*_0}{\theta^*_1-\theta^*_3} \neq 0,$$
+a contradiction.
+:::
+
+Let $\Gamma$, $x, y$ be as in Lemma \@ref(lem:e11star-to-e22star). 
+We saw in Lemma \@ref(lem:generalized-adjacecy-matrix),
+$$R^{-1}E^*_2A_2E^*_1\hat{y} = \delta^+_{10} + \delta^+_{11},$$
+where
+$$\delta^+_{10}\in E^*_{10}V = \mathrm{Span}(\hat{y}), \quad \delta^+_{11}\in E^*_{11}V.$$
+
+:::{.definition #Psi}
+Define $\Psi = \Psi(x,y) \in \mathbb{C}$ by $\delta^+_{10} = \Psi\hat{y}$.
+:::
+
+We will show that $\Psi(x,y)$ is independent of $x, y$.
+
+Observe $R^{-1}, A_i, E^*_i\in \mathrm{Mat}_X(\mathbb{Q})$. So $\Psi\in \mathbb{Q}$.
+
+Firstly, show
+$$\Psi(x,y) = \Psi(y,x).$$
+
+:::{.lemma #map-e11star-to-e22star}
+With the notation of Lemma \@ref(lem:e11star-to-e22star), the following hold.
+
+| $(i)$ $E^*_{22}AE^*_{11}\delta^+_{11} = \delta_{22}$.
+
+| $(ii)$ $E^*_{21}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{21}.
+
+| $(iii)$ $\langle \delta^+_{11}, \delta_{11}\rangle = \frac{a_2}{c_2} - \Psi(x,y)$.
+
+| $(iv)$ $\Psi(x,y) = \Psi(y,x)$.
+
+| $(v)$ $E^*_{12}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{12}$.
+:::
+
+:::{.proof}
+Write $\Psi \equiv \Psi(x,y)$, $R \equiv R(x)$, $E^*_i \equiv E^*_i(x)$, etc.
+
+| $(i)$ We have
+\begin{align}
+R(\delta^+_{11} + \Psi \hat{y}) & = R(\delta^+_{11} + \delta^+_{10})\\
+& = R(R^{-1}(E^*_2A_2E^*_1))\hat{y}\\
+& = E^*_2A_2E^*_1\hat{y}\\
+& = \delta_{22}.
+\end{align}
+So,
+\begin{align}
+\delta_{22} & = R(\delta^+_{11} + \Psi \hat{y})\\
+& = E^*_2AE^*_1(\delta^+_{11} + \Psi \hat{y})\\
+& = E^*_{22}AE^*_{11}\delta^+_{11} + \Psi E^*_{22}A E^*_{10}\hat{y}.
+\end{align}
+The second term is zero.
+
+| $(ii)$ We have
+\begin{align}
+0 & = E^*_{21}\delta_{22}\\
+& = E^*_{21}R(\delta^+_{11} + \Psi \hat{y})\\
+& = E^*_{21}AE^*_{11}\delta^+_{11} + \Psi E^*_{21}AE^*_{10}\hat{y}\\
+& = E^*_{21}AE^*_{11} + \Psi \delta_{21}.
+\end{align}
+
+| $(iii)$ We have
+\begin{align}
+p^{1}_{22} & = \delta_{22}\|^2 \\
+& = \langle \delta_{22}, \delta_{21}+\delta_{22}+\delta_{23}\rangle\\
+& = \langle R(\delta^+_{11} + \Psi \hat{y}), \delta_{21}+\delta_{22}+\delta_{23}\rangle\\
+& = \langle \delta^+_{11} + \Psi \hat{y}, L(\delta_{21}+\delta_{22}+\delta_{23})\rangle\\
+& = b_1\langle \delta^+_{11} + \Psi \hat{y}, \delta_{10}+\delta_{11}+\delta_{12})\rangle\\
+& = b_1(\langle \delta^+_{11}, \delta_{11}\rangle + \Psi).
+\end{align}
+So,
+$$\langle \delta^+_{11}, \delta_{11}\rangle = b_1^{-1}p^{1}_{22}- \Psi = \frac{a_2}{c_2}-\Psi.$$
+
+:::{.remark}
+$$b^{-1}_1p^1_{22} = b^{-1}_1\frac{k_1}{k_1}p^1_{22} = b^{-1}_1\frac{1}{k_1}k_2p^{2}_{12} = b^{-1}_1\frac{b_1}{c_2}a_2 = \frac{a_2}{c_2}.$$
+:::
+
+| $(iv)$ Interchanging roles of $x, y$ above, we find there exists $\delta^{+'}_{11}\in E^*_{11}V$ such that
+$$R(y)^{-1}E^*_2(y)A_2E^*_1(y)\hat{x} = \delta^{+'}_{11} + \Psi(y,x)\hat{y}.$$
+
+Then,
+$$E^*_{22}AE^*_{11}(\delta^{+'}_{11}) = \delta_{22}.$$
+So, 
+$$E^*_{22}AE^*_{11}(\delta^{+}_{11}-\delta^{+'}_{11}) = 0.$$
+Hence, $\delta^+_{11} = \delta^{+'}_{11}$ since
+$$E^*_{22}AE^*_{11}: E^*_{11}V \to E^*_{22}V$$
+is one-to-one.
+
+Now,
+$$\frac{a_2}{c_2}-\Psi(x,y) = \langle \delta^+_{11}, \delta_{11}\rangle = \langle \delta^{+'}_{11}, \delta_{11}\rangle = \frac{a_2}{c_2}-\Psi(y,x).$$
+Thus, 
+$$\Psi(x,y) = \Psi(y,x).$$
+
+| $(v)$ Immediate from $(ii)$, $(iv)$.
+:::
+
+
