@@ -128,7 +128,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-12-20}
+\date{2022-12-21}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1902,7 +1902,7 @@ The following graph is distance-transitive but does not satisify (G(\(x\))) for 
 
 \begin{align}
 X & = \text{the set of all $D\times N$ matrices with entries in $GF(q)$}.\\
-E & = \{xy\mid y, x\in X, \; \mathrm{rank}(x-y) = 1.\}.
+E & = \{xy\mid y, x\in X, \; \mathrm{rank}(x-y) = 1\}.
 \end{align}
 
 \begin{remark}
@@ -2018,7 +2018,7 @@ by Lemma \ref{lem:irreducible}. \((iii)\).
 \begin{align}
 Aw_i & = E^*_{r+i+1}Aw_i + E_{r+i}^*Aw_i + E^*_{r+i-1}Aw_i\\
 & = w_{i+1} + E^*_{r+i}AE^*_{r+i}w_i + E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}w_{i-1}\\
-& = w_{i+1} + a_iw_{i} + x_iw_{i-1}
+& = w_{i+1} + a_iw_{i} + x_iw_{i-1}.
 \end{align}
 
 \((iva)\) Clear for \(i=0\). Assume it is valid for \(0, \ldots, i\).
@@ -2026,7 +2026,9 @@ Aw_i & = E^*_{r+i+1}Aw_i + E_{r+i}^*Aw_i + E^*_{r+i-1}Aw_i\\
 
 \((ivb)\) By definition,
 \[p_{d+1}(A)w_0 = 0.\]
-Moreover, \(p_{d+1}(A)W = 0\). For every \(w\in W\), write
+Moreover, \(p_{d+1}(A)W = 0\) because of the following.
+
+For every \(w\in W\), write
 \begin{align}
 w & = \sum_{i=0}^d \alpha_i w_i \\
 & = \sum_{i=0}^d \alpha_i p_i(A)w_0 && \text{for some }\alpha_i\in\mathbb{C}\\

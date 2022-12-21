@@ -32,8 +32,8 @@ With above notation, the following hold.
 
 | $(iii)$ Pick $0\neq w_0\in E^*_rW$. Set $w_i = E^*_{r+i}A^iw_0$ for all $i$. Then  
 
- $\quad (iiia)$ $w_0, w_1, \ldots, w_d$ is a basis for $W$, $w_{-1} = w_{d+1} = 0$.  
- $\quad (iiib)$ $Aw_i = w_{i+1} + a_iw_{i} + x_iw_{i-1} \quad (0\leq i\leq d)$.
+$\quad (iiia)$ $w_0, w_1, \ldots, w_d$ is a basis for $W$, $w_{-1} = w_{d+1} = 0$.  
+$\quad (iiib)$ $Aw_i = w_{i+1} + a_iw_{i} + x_iw_{i-1} \quad (0\leq i\leq d)$.
 
 | $(iv)$ Define $p_0, p_1, \ldots, p_{d+1}\in \mathbb{R}[\lambda]$ by
 $$p_0 = 1, \quad \lambda p_i = p_{i+1} + a_i p_i + x_i p_{i-1} \quad (0\leq i\leq d),\quad p_{-1} = 0.$$
@@ -69,7 +69,7 @@ $(iiib)$ We have that
 \begin{align}
 Aw_i & = E^*_{r+i+1}Aw_i + E_{r+i}^*Aw_i + E^*_{r+i-1}Aw_i\\
 & = w_{i+1} + E^*_{r+i}AE^*_{r+i}w_i + E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}w_{i-1}\\
-& = w_{i+1} + a_iw_{i} + x_iw_{i-1}
+& = w_{i+1} + a_iw_{i} + x_iw_{i-1}.
 \end{align}
 
 $(iva)$ Clear for $i=0$. Assume it is valid for $0, \ldots, i$.
@@ -77,7 +77,9 @@ $$p_{i+1}(A)w_0 = (A-a_iI)w_i - x_iw_{i-1} = w_{i+1}.$$
 
 $(ivb)$ By definition,
 $$p_{d+1}(A)w_0 = 0.$$
-Moreover, $p_{d+1}(A)W = 0$. For every $w\in W$, write
+Moreover, $p_{d+1}(A)W = 0$ because of the following. 
+
+For every $w\in W$, write
 \begin{align}
 w & = \sum_{i=0}^d \alpha_i w_i \\
 & = \sum_{i=0}^d \alpha_i p_i(A)w_0 && \text{for some }\alpha_i\in\mathbb{C}\\

@@ -130,7 +130,7 @@ The following graph is distance-transitive but does not satisify (G($x$)) for an
 | $H_q(D,N)$: 
 \begin{align}
 X & = \text{the set of all $D\times N$ matrices with entries in $GF(q)$}.\\
-E & = \{xy\mid y, x\in X, \; \mathrm{rank}(x-y) = 1.\}.
+E & = \{xy\mid y, x\in X, \; \mathrm{rank}(x-y) = 1\}.
 \end{align}
 
 :::{.remark}

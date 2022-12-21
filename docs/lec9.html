@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-20" />
+<meta name="date" content="2022-12-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -210,13 +210,14 @@ by Lemma <a href="lec4.html#lem:irreducible">4.1</a>. <span class="math inline">
 <span class="math display">\[\begin{align}
 Aw_i &amp; = E^*_{r+i+1}Aw_i + E_{r+i}^*Aw_i + E^*_{r+i-1}Aw_i\\
 &amp; = w_{i+1} + E^*_{r+i}AE^*_{r+i}w_i + E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}w_{i-1}\\
-&amp; = w_{i+1} + a_iw_{i} + x_iw_{i-1}
+&amp; = w_{i+1} + a_iw_{i} + x_iw_{i-1}.
 \end{align}\]</span></p>
 <p><span class="math inline">\((iva)\)</span> Clear for <span class="math inline">\(i=0\)</span>. Assume it is valid for <span class="math inline">\(0, \ldots, i\)</span>.
 <span class="math display">\[p_{i+1}(A)w_0 = (A-a_iI)w_i - x_iw_{i-1} = w_{i+1}.\]</span></p>
 <p><span class="math inline">\((ivb)\)</span> By definition,
 <span class="math display">\[p_{d+1}(A)w_0 = 0.\]</span>
-Moreover, <span class="math inline">\(p_{d+1}(A)W = 0\)</span>. For every <span class="math inline">\(w\in W\)</span>, write
+Moreover, <span class="math inline">\(p_{d+1}(A)W = 0\)</span> because of the following.</p>
+<p>For every <span class="math inline">\(w\in W\)</span>, write
 <span class="math display">\[\begin{align}
 w &amp; = \sum_{i=0}^d \alpha_i w_i \\
 &amp; = \sum_{i=0}^d \alpha_i p_i(A)w_0 &amp;&amp; \text{for some }\alpha_i\in\mathbb{C}\\
