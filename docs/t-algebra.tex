@@ -5785,7 +5785,8 @@ for some ordering \(E_0, E_1, \ldots, E_D\) of the primitive idempotents for \(A
 In particular, \(\beta, \gamma, \gamma^*, \delta, \delta^*\) are uniquely determined by \(A\), \(A^*\) and the above ordering of ther primitive idempotents, whenever \(D\geq 3\).
 \end{theorem}
 
-:::\{.proof\}
+\begin{proof}
+\leavevmode
 
 \((i)\) By symmetry, it suffices to show \(D\geq R\). Suppose \(R > D\).
 
@@ -8128,6 +8129,124 @@ Solving for \(\delta^-_{11}\) in \eqref{eq:tildea-deltaplus11}, using \eqref{eq:
 we have \(\delta^+_{11}(x,y) = \delta^+_{11}(y,x)\).
 
 \end{proof}
+
+\begin{lemma}
+\protect\hypertarget{lem:psi}{}\label{lem:psi}With the above noation, \(\Psi = \Psi(u,v)\) is independent of \(u, v\), where
+\(u,v\in X\), with \(\partial(u,v)=1\).
+\end{lemma}
+
+\begin{proof}
+Let \(x,y\) be as above (\(x\sim y\)), and pick \(z\in X\) such that \(\partial(x,z) = 1\), but \(z\neq y\). Then it suffices to show:
+\[\Psi(x,y) = \Psi(x,z).\]
+
+Case: \(\partial(y,z) = 2\).
+
+Set \(\Delta: = \tilde{A}R^{-1}E^*_2A_2E^*_1\).
+
+Observe: \(\Delta \in E^*_1TE^*_1\) and \(E^*_1TE^*_1\) is symmetrix by Lemma \ref{lem:e1starte1star}.
+
+Hence, \(\Delta_{yz} = \Delta_{zy}\).
+
+Since \(\Delta\in \mathrm{Mat}_X(\mathbb{R})\),
+\[\langle \Delta\hat{y}, \hat{z}\langle = \langle \Delta \hat{z}, \hat{y}\rangle.\]
+But,
+\begin{align}
+\langle \Delta\hat{y}, \hat{z}\langle & = \langle \tilde{A}\delta^+_{11} + \Psi(x,y)\hat{y}, \hat{z}\rangle \\
+& = \langle \tilde{A}\delta^+_{11}, \hat{z}\rangle\\
+& = \langle \delta^-_{11} + \left(\frac{a_2}{c_2}-\Psi\right)\hat{y} - \Psi(x,y)\delta_{12}, \hat{z}\rangle\\
+& = -\Psi(x,y).
+\end{align}
+Note that \(\partial(x,y) = 2\) by Lemma \ref{lem:delta-minus11} \((i)\).
+
+Similarly,
+\[\Delta\hat{z}, \hat{y}\rangle = -\Psi(x,z).\]
+Hence, \(\Psi(x,y) = \Psi(x,z)\).
+
+Case: \(\partial(y,z) = 1\).
+
+By Lemma \ref{lem:e11star-to-e22star} \((ii)\), there exists \(w\in X\) such that
+\[\partial(x,z) = 1, \; \partial(w,y)=2, \; \partial(w,z)=2.\]
+
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-13-1} \end{center}
+
+Now,
+\[\Psi(x,y) = \Psi(x,w) = \Psi(x,z)\]
+from the first case.
+\end{proof}
+
+\begin{lemma}
+\protect\hypertarget{lem:aplus-aminus}{}\label{lem:aplus-aminus}With the above notation, the following hold.
+
+\((i)\) \(A^+: = R^{-1}E^*_2A_2E^*_1 - \Psi E^*_1\).
+
+\((ii)\) \(A^- = \tilde{A}A^+ - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1 + \Psi(\tilde{J} - \tilde{A} - E^*_1)\) are both generalized adjacency matrices for the subgraph induced on the first subconstituent with respect to \(x\).
+
+Moreover, \(A^+\), \(A^-\) have \(0\) diagonal.
+\end{lemma}
+
+\begin{proof}
+Pick vertices \(y,z\in X\) such that \(\partial(x,y) = \partial(x,z) = 1\).
+
+Show that \(A^+_{yz}\), \(A^-_{yz}\) are both \(0\) if \(\partial(y,z) = 0\) or \(2\).
+
+Since \(A^+_{yz} = R^{-1}E^*_2A_2E^*_1\hat{y} - \Psi E^*_1\hat{y} = \delta^+_{11}\),
+\[A^+_{yz} = \langle A^+\hat{y}, \hat{z}\rangle = \langle \delta^+_{11},\hat{z}\rangle = 0,\]
+if \(\partial(y,z) = 0\) or \(2\).
+
+Since
+\begin{align}
+A^-\hat{y} & = \tilde{A}A^+\hat{y} - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1\hat{y} + \Psi(\tilde{J} - \tilde{A} - E^*_1)\hat{y}\\
+& = \tilde{A}\delta^+_{11} - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1\hat{y} + \Psi\delta_{12}\\
+& = \delta^-_{11},
+\end{align}
+\[A^-_{yz} = \langle A^-\hat{y}, \hat{z}\rangle = \langle \delta^-_{11}, \hat{z}\rangle = 0,\]
+if \(\partial(y,z) = 0\) or \(2\).
+
+Since \(E^*_1TE^*_1 = \mathrm{Span}(\tilde{J},E^*_1, \tilde{A}, \tilde{A}^2, \ldots)\) by Lemma \ref{lem:e1starte1star}.
+
+\(A^+, A^-\) are both generalized matricxes for adjacency subgraph induced on the first subconstituent with respect to \(x\).
+\end{proof}
+
+Similarly,
+\[E^*_1TE^*_1 \ni \tilde{J}, E^*_1, \tilde{A}, A^+, A^-,\]
+and \(\dim E^*_1TE^*_1 \leq 5\).
+
+Fact: With the above assumption,
+\[E^*_1TE^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, A^+, A^-)\]
+(may not be independent).
+
+\begin{lemma}
+\protect\hypertarget{lem:tyx-equals-txy}{}\label{lem:tyx-equals-txy}If \(\partial(x,y) = 1\), then
+\[T(y)\hat{y} = T(x)\hat{y}.\]
+\end{lemma}
+
+\begin{proof}
+\begin{align}
+T(x)\hat{x} & = T(x)E^*_1\hat{y}\\
+& = M(E^*_0+E^*_1)T(x)E^*_1\hat{y} \quad (\text{as $\Gamma$ is thin})\\
+& = M\hat{x} + ME^*_1TE^*_1\hat{y}\\
+& = M\hat{x} + M\mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, A^+, A^-)\hat{y}\\
+& = M\hat{x} + M\mathrm{Span}(\delta_{12}+\delta_{11}+\delta_{10}, \delta_{10}, \delta_{11}, \delta^+_{11}, \delta^-_{11})\\
+& = M\mathrm{Span}(\delta_{01}, \delta_{10}, \delta_{11}, \delta^+_{11}, \delta^-_{11}).
+\end{align}
+
+But the identity of these conditions does not change if we interchange \(x\) and \(y\).
+
+Hence,
+\[T(y)\hat{y} = T(x)\hat{y}.\]
+This proves the lemma.
+\end{proof}
+
+\end{proof}
+
+\hypertarget{lec40}{%
+\chapter{Structure of 1-Thin DRG}\label{lec40}}
+
+\textbf{Friday, May 7, 1993}
+
+\begin{lemma}
+\protect\hypertarget{lem:endpoint-at-most-one}{}\label{lem:endpoint-at-most-one}With the above notation, let \(W\) denota a thin irreducible \(T\)-module of endpoint \(0\) or \(1\). Pick \(0\neq v\in E^*_1V\). Then the following hold.
+\end{lemma}
 
 \hypertarget{lec55}{%
 \chapter{Title of the Chapter}\label{lec55}}

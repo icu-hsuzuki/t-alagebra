@@ -1,0 +1,9 @@
+# Structure of 1-Thin DRG  {#lec40}
+**Friday, May 7, 1993** 
+
+:::{.lemma #endpoint-at-most-one}
+With the above notation, let $W$ denota a thin irreducible $T$-module of endpoint $0$ or $1$. Pick $0\neq v\in E^*_1V$. Then the following hold.
+
+
+:::
+
