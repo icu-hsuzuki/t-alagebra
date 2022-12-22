@@ -14,6 +14,25 @@ description: "This is a lecture note using the bookdown package. The output form
 
 # About this lecturenote {-}
 
+## MEMO {-}
+**April 4, 1995.**
+
+This is a lecture note based on a series of lectures give by Paul Terwilliger in 1993. The original is a hand written manuscript written by Paul Terwilliger. 
+
+This note was rewritten by Hirosh Suzuki when he studies the lecture note during the forlling period.
+
+Jan. 13, 1995 -- March 4, 1995.
+
+He had chance to mee the author for a week right after he had read through the lecture note. The aurhor clarified almost everything he asked about. So even the part where he put "?", there seems to be no mathematical gap. But sometimes requires lenthy calculation. 
+
+In the last part each result has two numbers bacause the original lecture note has duplications. This lecture note is already two years old, so some parts are improved essentially, he supposes.
+
+Hiroshi Suzuki
+
+hsuzuki@icu.a.jp
+
+
+
 ## Setting {-}
 sudo 
 This note is created by `bookdown` package on RStudio.

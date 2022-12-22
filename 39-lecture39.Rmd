@@ -162,5 +162,3 @@ $$T(y)\hat{y} = T(x)\hat{y}.$$
 This proves the lemma.
 :::
 
-
-:::
