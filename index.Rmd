@@ -22,15 +22,15 @@ description: "This is a lecture note using the bookdown package. The output form
 ## MEMO {-}
 **April 4, 1995.**
 
-This is a lecture note based on a series of lectures give by Paul Terwilliger in 1993. The original is a hand written manuscript written by Paul Terwilliger. 
+This is a lecture note based on a series of lectures by Paul Terwilliger in 1993. The original is a manuscript written by Paul Terwilliger. 
 
-This note was rewritten by Hirosh Suzuki when he studies the lecture note during the forlling period.
+This note was rewritten by Hirosh Suzuki when he studied the lecture note during the following period.
 
-Jan. 13, 1995 -- March 4, 1995.
+January 13, 1995 -- March 4, 1995.
 
-He had chance to mee the author for a week right after he had read through the lecture note. The aurhor clarified almost everything he asked about. So even the part where he put "?", there seems to be no mathematical gap. But sometimes requires lenthy calculation. 
+He had a chance to meet the author for a week after reading through the lecture note. The author clarified almost everything he asked about. So even in the part where he put "?", there seems to be no mathematical gap. But sometimes, it requires lengthy calculations. 
 
-In the last part each result has two numbers bacause the original lecture note has duplications. This lecture note is already two years old, so some parts are improved essentially, he supposes.
+In the last part, each result has two numbers because the original lecture note has duplications. He supposes that this lecture note is already two years old, so some parts are improved essentially.
 
 Hiroshi Suzuki
 
