@@ -91,7 +91,8 @@ Assume $Y = (X, \{R_i\}_{0\leq i\leq D})$ is a symmetric scheme. Pick $x\in X$, 
 
 | $(i)$ $\Gamma$ is $Q$-polynomial with respect to $E_0, \ldots, E_D$.
 
-| $(ii)$ $$q^h_{1j} \begin{cases} = 0 & \text{if $\; |h-j| > 0$} \\
+| $(ii)$ The condition
+$$q^h_{1j} \begin{cases} = 0 & \text{if $\; |h-j| > 0$} \\
 \neq 0 & \text{if $\; |h-j| = 1$}. \end{cases} \quad (0\leq h,j\leq D).$$
 
 | $(iii)$ There exists $f_i^*\in \mathbb{C}[\lambda]$, $\deg f^*_i = i$, and 

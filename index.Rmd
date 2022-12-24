@@ -22,21 +22,188 @@ description: "This is a lecture note using the bookdown package. The output form
 ## MEMO {-}
 **April 4, 1995.**
 
-This is a lecture note based on a series of lectures by Paul Terwilliger in 1993. The original is a manuscript written by Paul Terwilliger. 
+This book is a lecture note based on a series of lectures by Paul Terwilliger in 1993. The original is a manuscript written by Paul Terwilliger. 
 
 This note was rewritten by Hirosh Suzuki when he studied the lecture note during the following period.
 
 January 13, 1995 -- March 4, 1995.
 
-He had a chance to meet the author for a week after reading through the lecture note. The author clarified almost everything he asked about. So even in the part where he put "?", there seems to be no mathematical gap. But sometimes, it requires lengthy calculations. 
+He had a chance to meet the author for a week after reading through the lecture note. The author clarified almost everything he asked. So even in the part where he put "?", there seems to be no mathematical gap. But sometimes, it requires lengthy calculations. 
 
-In the last part, each result has two numbers because the original lecture note has duplications. He supposes that this lecture note is already two years old, so some parts are improved essentially.
+In the last part, each result has two numbers because the original lecture note has duplications. He supposes that this lecture note is already two years old, so some statements are improved essentially.
 
 Hiroshi Suzuki
 
 hsuzuki@icu.a.jp
 
+## Preface by P. Terwilliger {-}
 
+This book attempts to prepare the way for an eventual classification of the graphs that are both thin and $Q$-polynomial. These graphs are distance-regular or bi-distance-regular, and since the distance-regular case is somewhat easier to handle, the focus will be on that case. (It is assumed the bi-distance-regular case is not too different). In the core of this book, we take a vertex $x$ in a distance-regular graph, and study the irreducible modules for the subconstituent algebra $T(x)$ that have endpoint at most $2$. (The modules with endpoint at most $3$ seems too complicated to consider, and do not seem to play much of a role anyway). The thin condition and the $Q$-polynomial property each affect the structure of these momdules, so these assumptions are first considered separately, and then jointly.
+
+1. Introduction (Chapters \@ref(lec1) - \@ref(lec8))
+
+$\quad$ 1a. The subconstituent algebra $T(x)$ associated with any vertex $x$ in a graph
+
+$\quad$ 1b. Example: The D-dimensional cube and the Lie algebra $sl_2(\mathbb{C})$
+
+$\quad$ 1c. The graphs of thin type: definition and characterizations
+
+|
+2. The structure of a thin $T(x)$-module $W$ in an arbitrary graph (Chapters \@ref(lec9) - \@ref(lec11))
+
+$\quad$ 2a. The constants $a_i(W)$, $x_i(W)$
+
+$\quad$ 2b. The measure $m(W)$
+
+$\quad$ 2c. The isomorphism class of $W$ determines and is determined by $m(W)$
+
+$\quad$ 2d. How non-orthogonal thin irreducible $T(x)$-modules and thin, irreducible $T(y)$-modules are related
+
+$\quad$ 2e. The matrices $R$, $F$, $L$, and $R^{-1}$, $L^{-1}$
+
+|
+3. Distance-regularity (Chapters \@ref(lec12) - \@ref(lec13))
+
+$\quad$ 3a. Distance-regularity with respect to a vertex
+
+$\quad$ 3b. The trivial $T(x)$ modules
+
+$\quad$ 3c. A graph is distance-regular with respect to each vertex if and only if the trivial $T(x)$-module is thin if and only if the graph is distance-regular or bi-distance-regular
+
+|
+4. The structure of a thin irreducible $T(x)$-module $W$ with endpoint $1$ in a distance-regular graph (Chapters \@ref(lec14) - \@ref(lec17))
+
+$\quad$ 4a. The isomorphism class of $W$ is determined by the intersection numbers and $a_(W)$
+
+$\quad$ 4b. $\mathrm{Span}(\{v_1^+, v_2^+, \ldots, v^+_D\})$ is thin irreducible $T(x)$-module if and only if $v^+_i, v^-_i$ are dependent, for all $i$
+
+$\quad$ 4c. Id $m_1 < k_1$, there exist at least one thin, irreducible $T(x)$-module with endpoint $1$
+
+$\quad$ 4d. Formula for $a_i(W)$, $x_i(W)$, $\gamma_i(W)$
+
+$\quad$ 4e. Feasibility conditions arising from the above constants being algebraic integers
+
+$\quad$ 4f. Feasibility conditions arising from $|a_i(W)|\leq a_{i+1}$ (?)
+
+$\quad$ 4g. A combinatorial characterization of the distance-regular graphs where every irreducible $T(x)$-module with endpoint $1$ is thin
+
+|
+5. Distance-regular graphs were each irreducible $T(x)$-module with endpoint $1$ is thin
+
+$\quad$ 5a. Formulae for the multiplicities of the isomorphism class of $T(x)$-modules with endpoint $1$
+
+$\quad$ 5b. The $b_i$'s are determined by $c_i$'s and the structure of the first subconstituent
+
+$\quad$ 5c. $a_0 = 0$ implies $a_i = 0$ $(1\leq i\leq D-1)$
+
+$\quad$ 5d. Distance-regular graphs where the first subconstituent is strongly regular: restrictions on the parameters and possible classification (?)
+
+$\quad$ 5e. Distance-regular graphs where the first subconstituent has $4$ distinct eigenvalues: restrictions on the parameters (?)
+
+$\quad$ 5f. Distance-regular graphs where the first subconstituent has $5$ distinct eigenvalues: restrictions on the parameters (?)
+
+$\quad$ 5g. What minimal assumption (weker than _Q_) implies _Z_ (?)
+
+|
+6. Structure of a thin, irreducible $T(x)$-module with endpoint $2$ in a distance-regular graph
+
+$\quad$ 6a. Similar to $4$ (?)
+
+|
+7. The distance-regular graphs where each irreducible $T(x)$-module with endpoint at most $2$ is thin
+
+$\quad$ 7a. The intersection numbers are determined by the structure of the first and the second subconstituents
+
+$\quad$ 7b. The bipartite case
+
+$\quad$ 7c. Classification of the examples where there are sufficiently few isomorphism classes of irreducible $T(x)$-modules with endpoint $1$ or $2$ (?)
+
+$\quad$ 7d. Classification of the almost-triply-regular graphs
+
+|
+8. The $Q$-polynomial property (Chapter \@ref(lec28))
+
+$\quad$ 8a. Graphs that are $Q$-polynomial with respect to each vertex (?)
+
+|
+9. Commutative association schemes (Chapters \@ref(lec17) - \@ref(lec27))
+
+$\quad$ 9a. The Bose-Mesner algebra $M$ and the dual Bose-Mesner algebra $M^*$
+
+$\quad$ 9b. The Krein parameters
+
+$\quad$ 9c. The fundamental relations between $M$, $M^*$
+
+$\quad$ 9d. An algebraic characterization of the $Q$-polynomial schemes
+
+$\quad$ 9e. The representation of a commutative association scheme
+
+$\quad$ 9f. A representation-theoretic characterization of the $P$- and $Q$-polynomial schemes
+
+|
+10. Quantum Lie algebras (Chapter \@ref(lec29))
+ 
+$\quad$ 10a. The generators $A$, $A^*$ satisfy two cubic polynomial equations
+
+$\quad$ 10b. How these equations simplify in the thin case
+
+$\quad$ 10c. Complete classification in the thin case
+
+|
+11. $Q$-polynomial distance-regular graphs (Chapters \@ref(lec30) - \@ref(lec31))
+
+$\quad$ 11a. Formulae for the intersection numbers
+
+$\quad$ 11b. A combinatorial characterization of the $Q$-polynomial distance-regular graphs that involves $R$, $L$, $F$
+
+$\quad$ 11c. Formulae for the $z_i$ constants
+
+|
+12. $Q$-polynomial distance-regular graphs, continued: The structure of an arbitrary irreducible $T(x)$-module with endpoint $1$ (Chapters \@ref(lec32) - \@ref(lec37))
+
+$\quad$ 12a. $E^*_1TE^*_1$ is commutative and has essentially one generator
+
+$\quad$ 12b. Description of the irreducible $T(x)$-modules with endpoint $1$
+
+$\quad$ 12c. There are at most $4$ mutually non-isomorphic thin, irreducible $T(x)$-modules with endpoint $1$
+
+|
+13. The $Q$-polynomial distance-regular graphs of thin type: The ideal $T(x)E^*_1$ (Chapters \@ref(lec38) - \@ref(lec40))
+
+$\quad$ 13a. The constant $\psi = \psi(x,y)$ is independent of the edge $xy$
+
+$\quad$ 13b. $E^*_1TE^*_1$ is spanned by the all $1$'s matrix and $4$ generalized adjacency matrices
+
+$\quad$ 13c. $T(x)\hat{y} = T(y)\hat{x}$ if $\partial(x.y)=1$. Complete description of this $T(x,y)$-module in terms of $\psi$ and the intersection numbers (?)
+
+$\quad$ 13d. The $z_i$ are constatn functions
+
+$\quad$ 13e. Feasibility conditions forced by the integrality and non-negativity of the $z_i$ (?)
+
+$\quad$ 13f. Feasibility conditions forced by the integrality and non-negativity of the multiplicities of the irreducible $T(x)$-modules with endpoint $1$ (?)
+|
+14. The $Q$-polynomial distance-regular graphs, continued: The structure of an arbitrary irreducible $T(x)$-module with endpoint $2$
+
+$\quad$ 14a. Similar to 12 (?)
+
+|
+15. The $Q$-polynomial distance-regular graphs of thin type: the ideal $T(x)E^*_2$
+
+$\quad$ 15a. Similar to 13 (?)
+|
+16. The classification of the thin $Q$-polynomial distance-regular graphs with diameter at least (?)
+
+|
+17. Bi-distance-regular graphs
+
+$\quad$ 17a. If a bipartite graphs is thin then so are the halved graphs
+
+$\quad$ 17b. For any thin $T(x)$-module $W$, $m_W(\theta) = m_W(-\theta)$
+
+$\quad$ 17c. Mimic the above sections 4-14 (?) (I desperately hope that $Q$-polynomial bi-distance-regular graphs that are not already distance-regular do not exist)
+
+|
+|
 
 ## Technical Memo {-}
 

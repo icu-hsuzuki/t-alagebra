@@ -1,4 +1,4 @@
-# $\dim E^*_1TE^*_1 \leq 5$ {#lec35}
+# $\dim E$~1~^\*^$TE$~1~^\*^ $\leq 5$ {#lec35}
 **Monday, April 26, 1993** 
 
 :::{.theorem #dim5}

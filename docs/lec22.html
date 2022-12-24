@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-23" />
+<meta name="date" content="2022-12-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -97,6 +97,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#memo"><i class="fa fa-check"></i>MEMO</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface-by-p.-terwilliger"><i class="fa fa-check"></i>Preface by P. Terwilliger</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical-memo"><i class="fa fa-check"></i>Technical Memo</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
 </ul></li>
@@ -134,17 +135,15 @@ div.csl-indent {
 <li class="chapter" data-level="32" data-path="lec32.html"><a href="lec32.html"><i class="fa fa-check"></i><b>32</b> Irreducible Modules of Endpoint <span class="math inline">\(i\)</span></a></li>
 <li class="chapter" data-level="33" data-path="lec33.html"><a href="lec33.html"><i class="fa fa-check"></i><b>33</b> Algebra on First Subconstitutent</a></li>
 <li class="chapter" data-level="34" data-path="lec34.html"><a href="lec34.html"><i class="fa fa-check"></i><b>34</b> Modules of Endpoint One</a></li>
-<li class="chapter" data-level="35" data-path="lec35.html"><a href="lec35.html"><i class="fa fa-check"></i><b>35</b> <span class="math inline">\(\dim E^*_1TE^*_1 \leq 5\)</span></a></li>
+<li class="chapter" data-level="35" data-path="lec35.html"><a href="lec35.html"><i class="fa fa-check"></i><b>35</b> <span class="math inline">\(\dim E\)</span><sub>1</sub><sup>*</sup><span class="math inline">\(TE\)</span><sub>1</sub><sup>*</sup> <span class="math inline">\(\leq 5\)</span></a></li>
 <li class="chapter" data-level="36" data-path="lec36.html"><a href="lec36.html"><i class="fa fa-check"></i><b>36</b> Dual Endpoint</a></li>
 <li class="chapter" data-level="37" data-path="lec37.html"><a href="lec37.html"><i class="fa fa-check"></i><b>37</b> Generalized Adjacency Matrix</a></li>
-<li class="chapter" data-level="38" data-path="lec38.html"><a href="lec38.html"><i class="fa fa-check"></i><b>38</b> An Injection from <span class="math inline">\(E^*_{11}\)</span> to <span class="math inline">\(E^*_{22}\)</span></a></li>
+<li class="chapter" data-level="38" data-path="lec38.html"><a href="lec38.html"><i class="fa fa-check"></i><b>38</b> An Injection from E<sub>11</sub><sup>*</sup> to E<sub>22</sub><sup>*</sup></a></li>
 <li class="chapter" data-level="39" data-path="lec39.html"><a href="lec39.html"><i class="fa fa-check"></i><b>39</b> <span class="math inline">\(A^+\)</span> and <span class="math inline">\(A^-\)</span></a></li>
 <li class="chapter" data-level="40" data-path="lec40.html"><a href="lec40.html"><i class="fa fa-check"></i><b>40</b> Structure of 1-Thin DRG</a></li>
-<li class="chapter" data-level="41" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>41</b> Open Problems</a>
-<ul>
-<li class="chapter" data-level="" data-path="prob.html"><a href="prob.html#some-open-problems-concerning-distance-regular-graphs-the-thin-condition-and-the-q-polynomial-property"><i class="fa fa-check"></i>Some Open Problems Concerning Distance-Regular Graphs, the Thin Condition, and the <span class="math inline">\(Q\)</span>-Polynomial Property</a></li>
-</ul></li>
-<li class="chapter" data-level="42" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>42</b> Title of the Chapter</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>A</b> Open Problems</a></li>
+<li class="chapter" data-level="B" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>B</b> Title of the Chapter</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -235,8 +234,9 @@ and <span class="math inline">\(q^i_{10} = q^i_{11} = 0\)</span>, <span class="m
 <div class="lemma">
 <p><span id="lem:q-conditions" class="lemma"><strong>Lemma 22.2  </strong></span>Assume <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> is a symmetric scheme. Pick <span class="math inline">\(x\in X\)</span>, and set <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(A^*\equiv A^*(x)\)</span>. Then the following are equivalent.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E_0, \ldots, E_D\)</span>.</div>
-<div class="line-block"><span class="math inline">\((ii)\)</span> $$q^h_{1j} \begin{cases} = 0 &amp; \</div>
-<p> &amp; . \end{cases} (0h,jD).$$</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> The condition</div>
+<p><span class="math display">\[q^h_{1j} \begin{cases} = 0 &amp; \text{if $\; |h-j| &gt; 0$} \\
+\neq 0 &amp; \text{if $\; |h-j| = 1$}. \end{cases} \quad (0\leq h,j\leq D).\]</span></p>
 <div class="line-block"><span class="math inline">\((iii)\)</span> There exists <span class="math inline">\(f_i^*\in \mathbb{C}[\lambda]\)</span>, <span class="math inline">\(\deg f^*_i = i\)</span>, and</div>
 <p><span class="math display">\[A^*_i = f^*_i(A^*_1) \quad (0\leq i\leq D).\]</span></p>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(E^*_0V, \ldots, E^*_DV\)</span> are maximal eigenspaces of <span class="math inline">\(A^*_1\)</span>, and</div>

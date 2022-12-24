@@ -1,6 +1,7 @@
-# Open Problems {#prob}
+# (APPENDIX) Appendix {-}
+# Open Problems  {#prob}
 
-## Some Open Problems Concerning Distance-Regular Graphs, the Thin Condition, and the $Q$-Polynomial Property {-}
+**Some Open Problems Concerning Distance-Regular Graphs, the Thin Condition, and the $Q$-Polynomial Property**
 
 Paul Terwilliger
 

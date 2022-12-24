@@ -1,4 +1,4 @@
-# An Injection from $E^*_{11}$ to $E^*_{22}$ {#lec38}
+# An Injection from E~11~^\*^  to E~22~^\*^ {#lec38}
 **Monday, May 3, 1993** 
 
 :::{.lemma #e11star-to-e22star}

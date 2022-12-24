@@ -278,3 +278,4 @@ This proves Claim 7.
 We have now proved \@ref(eq:abracket), \@ref(eq:aastar), \@ref(eq:beta), \@ref(eq:betastar), \@ref(eq:gamma1), \@ref(eq:delta).
 
 Interchanging the roles of $A$ and $A^*$, we obtain \@ref(eq:astarbracket), \@ref(eq:astara),  \@ref(eq:gammastar), \@ref(eq:deltastar).
+:::

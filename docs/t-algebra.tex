@@ -128,7 +128,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-12-23}
+\date{2022-12-24}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -180,19 +180,264 @@
 
 \textbf{April 4, 1995.}
 
-This is a lecture note based on a series of lectures give by Paul Terwilliger in 1993. The original is a hand written manuscript written by Paul Terwilliger.
+This book is a lecture note based on a series of lectures by Paul Terwilliger in 1993. The original is a manuscript written by Paul Terwilliger.
 
-This note was rewritten by Hirosh Suzuki when he studies the lecture note during the forlling period.
+This note was rewritten by Hirosh Suzuki when he studied the lecture note during the following period.
 
-Jan.~13, 1995 -- March 4, 1995.
+January 13, 1995 -- March 4, 1995.
 
-He had chance to mee the author for a week right after he had read through the lecture note. The aurhor clarified almost everything he asked about. So even the part where he put ``?'', there seems to be no mathematical gap. But sometimes requires lenthy calculation.
+He had a chance to meet the author for a week after reading through the lecture note. The author clarified almost everything he asked. So even in the part where he put ``?'', there seems to be no mathematical gap. But sometimes, it requires lengthy calculations.
 
-In the last part each result has two numbers bacause the original lecture note has duplications. This lecture note is already two years old, so some parts are improved essentially, he supposes.
+In the last part, each result has two numbers because the original lecture note has duplications. He supposes that this lecture note is already two years old, so some statements are improved essentially.
 
 Hiroshi Suzuki
 
 \href{mailto:hsuzuki@icu.a.jp}{\nolinkurl{hsuzuki@icu.a.jp}}
+
+\hypertarget{preface-by-p.-terwilliger}{%
+\section*{Preface by P. Terwilliger}\label{preface-by-p.-terwilliger}}
+\addcontentsline{toc}{section}{Preface by P. Terwilliger}
+
+This book attempts to prepare the way for an eventual classification of the graphs that are both thin and \(Q\)-polynomial. These graphs are distance-regular or bi-distance-regular, and since the distance-regular case is somewhat easier to handle, the focus will be on that case. (It is assumed the bi-distance-regular case is not too different). In the core of this book, we take a vertex \(x\) in a distance-regular graph, and study the irreducible modules for the subconstituent algebra \(T(x)\) that have endpoint at most \(2\). (The modules with endpoint at most \(3\) seems too complicated to consider, and do not seem to play much of a role anyway). The thin condition and the \(Q\)-polynomial property each affect the structure of these momdules, so these assumptions are first considered separately, and then jointly.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Introduction (Chapters \ref{lec1} - \ref{lec8})
+\end{enumerate}
+
+\(\quad\) 1a. The subconstituent algebra \(T(x)\) associated with any vertex \(x\) in a graph
+
+\(\quad\) 1b. Example: The D-dimensional cube and the Lie algebra \(sl_2(\mathbb{C})\)
+
+\(\quad\) 1c. The graphs of thin type: definition and characterizations
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  The structure of a thin \(T(x)\)-module \(W\) in an arbitrary graph (Chapters \ref{lec9} - \ref{lec11})
+\end{enumerate}
+
+\(\quad\) 2a. The constants \(a_i(W)\), \(x_i(W)\)
+
+\(\quad\) 2b. The measure \(m(W)\)
+
+\(\quad\) 2c. The isomorphism class of \(W\) determines and is determined by \(m(W)\)
+
+\(\quad\) 2d. How non-orthogonal thin irreducible \(T(x)\)-modules and thin, irreducible \(T(y)\)-modules are related
+
+\(\quad\) 2e. The matrices \(R\), \(F\), \(L\), and \(R^{-1}\), \(L^{-1}\)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Distance-regularity (Chapters \ref{lec12} - \ref{lec13})
+\end{enumerate}
+
+\(\quad\) 3a. Distance-regularity with respect to a vertex
+
+\(\quad\) 3b. The trivial \(T(x)\) modules
+
+\(\quad\) 3c. A graph is distance-regular with respect to each vertex if and only if the trivial \(T(x)\)-module is thin if and only if the graph is distance-regular or bi-distance-regular
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  The structure of a thin irreducible \(T(x)\)-module \(W\) with endpoint \(1\) in a distance-regular graph (Chapters \ref{lec14} - \ref{lec17})
+\end{enumerate}
+
+\(\quad\) 4a. The isomorphism class of \(W\) is determined by the intersection numbers and \(a_(W)\)
+
+\(\quad\) 4b. \(\mathrm{Span}(\{v_1^+, v_2^+, \ldots, v^+_D\})\) is thin irreducible \(T(x)\)-module if and only if \(v^+_i, v^-_i\) are dependent, for all \(i\)
+
+\(\quad\) 4c. Id \(m_1 < k_1\), there exist at least one thin, irreducible \(T(x)\)-module with endpoint \(1\)
+
+\(\quad\) 4d. Formula for \(a_i(W)\), \(x_i(W)\), \(\gamma_i(W)\)
+
+\(\quad\) 4e. Feasibility conditions arising from the above constants being algebraic integers
+
+\(\quad\) 4f. Feasibility conditions arising from \(|a_i(W)|\leq a_{i+1}\) (?)
+
+\(\quad\) 4g. A combinatorial characterization of the distance-regular graphs where every irreducible \(T(x)\)-module with endpoint \(1\) is thin
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Distance-regular graphs were each irreducible \(T(x)\)-module with endpoint \(1\) is thin
+\end{enumerate}
+
+\(\quad\) 5a. Formulae for the multiplicities of the isomorphism class of \(T(x)\)-modules with endpoint \(1\)
+
+\(\quad\) 5b. The \(b_i\)'s are determined by \(c_i\)'s and the structure of the first subconstituent
+
+\(\quad\) 5c. \(a_0 = 0\) implies \(a_i = 0\) \((1\leq i\leq D-1)\)
+
+\(\quad\) 5d. Distance-regular graphs where the first subconstituent is strongly regular: restrictions on the parameters and possible classification (?)
+
+\(\quad\) 5e. Distance-regular graphs where the first subconstituent has \(4\) distinct eigenvalues: restrictions on the parameters (?)
+
+\(\quad\) 5f. Distance-regular graphs where the first subconstituent has \(5\) distinct eigenvalues: restrictions on the parameters (?)
+
+\(\quad\) 5g. What minimal assumption (weker than \emph{Q}) implies \emph{Z} (?)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Structure of a thin, irreducible \(T(x)\)-module with endpoint \(2\) in a distance-regular graph
+\end{enumerate}
+
+\(\quad\) 6a. Similar to \(4\) (?)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  The distance-regular graphs where each irreducible \(T(x)\)-module with endpoint at most \(2\) is thin
+\end{enumerate}
+
+\(\quad\) 7a. The intersection numbers are determined by the structure of the first and the second subconstituents
+
+\(\quad\) 7b. The bipartite case
+
+\(\quad\) 7c. Classification of the examples where there are sufficiently few isomorphism classes of irreducible \(T(x)\)-modules with endpoint \(1\) or \(2\) (?)
+
+\(\quad\) 7d. Classification of the almost-triply-regular graphs
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  The \(Q\)-polynomial property (Chapter \ref{lec28})
+\end{enumerate}
+
+\(\quad\) 8a. Graphs that are \(Q\)-polynomial with respect to each vertex (?)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Commutative association schemes (Chapters \ref{lec17} - \ref{lec27})
+\end{enumerate}
+
+\(\quad\) 9a. The Bose-Mesner algebra \(M\) and the dual Bose-Mesner algebra \(M^*\)
+
+\(\quad\) 9b. The Krein parameters
+
+\(\quad\) 9c. The fundamental relations between \(M\), \(M^*\)
+
+\(\quad\) 9d. An algebraic characterization of the \(Q\)-polynomial schemes
+
+\(\quad\) 9e. The representation of a commutative association scheme
+
+\(\quad\) 9f. A representation-theoretic characterization of the \(P\)- and \(Q\)-polynomial schemes
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Quantum Lie algebras (Chapter \ref{lec29})
+\end{enumerate}
+
+\(\quad\) 10a. The generators \(A\), \(A^*\) satisfy two cubic polynomial equations
+
+\(\quad\) 10b. How these equations simplify in the thin case
+
+\(\quad\) 10c. Complete classification in the thin case
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  \(Q\)-polynomial distance-regular graphs (Chapters \ref{lec30} - \ref{lec31})
+\end{enumerate}
+
+\(\quad\) 11a. Formulae for the intersection numbers
+
+\(\quad\) 11b. A combinatorial characterization of the \(Q\)-polynomial distance-regular graphs that involves \(R\), \(L\), \(F\)
+
+\(\quad\) 11c. Formulae for the \(z_i\) constants
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  \(Q\)-polynomial distance-regular graphs, continued: The structure of an arbitrary irreducible \(T(x)\)-module with endpoint \(1\) (Chapters \ref{lec32} - \ref{lec37})
+\end{enumerate}
+
+\(\quad\) 12a. \(E^*_1TE^*_1\) is commutative and has essentially one generator
+
+\(\quad\) 12b. Description of the irreducible \(T(x)\)-modules with endpoint \(1\)
+
+\(\quad\) 12c. There are at most \(4\) mutually non-isomorphic thin, irreducible \(T(x)\)-modules with endpoint \(1\)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  The \(Q\)-polynomial distance-regular graphs of thin type: The ideal \(T(x)E^*_1\) (Chapters \ref{lec38} - \ref{lec40})
+\end{enumerate}
+
+\(\quad\) 13a. The constant \(\psi = \psi(x,y)\) is independent of the edge \(xy\)
+
+\(\quad\) 13b. \(E^*_1TE^*_1\) is spanned by the all \(1\)'s matrix and \(4\) generalized adjacency matrices
+
+\(\quad\) 13c. \(T(x)\hat{y} = T(y)\hat{x}\) if \(\partial(x.y)=1\). Complete description of this \(T(x,y)\)-module in terms of \(\psi\) and the intersection numbers (?)
+
+\(\quad\) 13d. The \(z_i\) are constatn functions
+
+\(\quad\) 13e. Feasibility conditions forced by the integrality and non-negativity of the \(z_i\) (?)
+
+\(\quad\) 13f. Feasibility conditions forced by the integrality and non-negativity of the multiplicities of the irreducible \(T(x)\)-modules with endpoint \(1\) (?)
+\textbar{}
+14. The \(Q\)-polynomial distance-regular graphs, continued: The structure of an arbitrary irreducible \(T(x)\)-module with endpoint \(2\)
+
+\(\quad\) 14a. Similar to 12 (?)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{14}
+\tightlist
+\item
+  The \(Q\)-polynomial distance-regular graphs of thin type: the ideal \(T(x)E^*_2\)
+\end{enumerate}
+
+\(\quad\) 15a. Similar to 13 (?)
+\textbar{}
+16. The classification of the thin \(Q\)-polynomial distance-regular graphs with diameter at least (?)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{16}
+\tightlist
+\item
+  Bi-distance-regular graphs
+\end{enumerate}
+
+\(\quad\) 17a. If a bipartite graphs is thin then so are the halved graphs
+
+\(\quad\) 17b. For any thin \(T(x)\)-module \(W\), \(m_W(\theta) = m_W(-\theta)\)
+
+\(\quad\) 17c. Mimic the above sections 4-14 (?) (I desperately hope that \(Q\)-polynomial bi-distance-regular graphs that are not already distance-regular do not exist)
+
+\hfill\break
 
 \hypertarget{technical-memo}{%
 \section*{Technical Memo}\label{technical-memo}}
@@ -4547,9 +4792,10 @@ and \(q^i_{10} = q^i_{11} = 0\), \(q^i_{1,i-1} = c^*_i\), \(q^i_{1i} = a^*_i\), 
 
 \((i)\) \(\Gamma\) is \(Q\)-polynomial with respect to \(E_0, \ldots, E_D\).
 
-\((ii)\) \$\$q\^{}h\_\{1j\} \textbackslash begin\{cases\} = 0 \& \text{if $\; |h-j| > 0$} \textbackslash{}
+\((ii)\) The condition
 
-\neq 0 \& \text{if $\; |h-j| = 1$}. \textbackslash end\{cases\} \quad (0\leq h,j\leq D).\$\$
+\[q^h_{1j} \begin{cases} = 0 & \text{if $\; |h-j| > 0$} \\
+\neq 0 & \text{if $\; |h-j| = 1$}. \end{cases} \quad (0\leq h,j\leq D).\]
 
 \((iii)\) There exists \(f_i^*\in \mathbb{C}[\lambda]\), \(\deg f^*_i = i\), and
 
@@ -5820,7 +6066,8 @@ for some ordering \(E_0, E_1, \ldots, E_D\) of the primitive idempotents for \(A
 In particular, \(\beta, \gamma, \gamma^*, \delta, \delta^*\) are uniquely determined by \(A\), \(A^*\) and the above ordering of ther primitive idempotents, whenever \(D\geq 3\).
 \end{theorem}
 
-:::\{.proof\}
+\begin{proof}
+\leavevmode
 
 \((i)\) By symmetry, it suffices to show \(D\geq R\). Suppose \(R > D\).
 
@@ -6030,6 +6277,8 @@ This proves Claim 7.
 We have now proved \eqref{eq:abracket}, \eqref{eq:aastar}, \eqref{eq:beta}, \eqref{eq:betastar}, \eqref{eq:gamma1}, \eqref{eq:delta}.
 
 Interchanging the roles of \(A\) and \(A^*\), we obtain \eqref{eq:astarbracket}, \eqref{eq:astara}, \eqref{eq:gammastar}, \eqref{eq:deltastar}.
+
+\end{proof}
 
 \hypertarget{lec30}{%
 \chapter{\texorpdfstring{\(R, F, L\) Matrices}{R, F, L Matrices}}\label{lec30}}
@@ -7332,7 +7581,7 @@ and \eqref{eq:dependent} holds.
 \end{proof}
 
 \hypertarget{lec35}{%
-\chapter{\texorpdfstring{\(\dim E^*_1TE^*_1 \leq 5\)}{\textbackslash dim E\^{}*\_1TE\^{}*\_1 \textbackslash leq 5}}\label{lec35}}
+\chapter{\texorpdfstring{\(\dim E\)\textsubscript{1}\textsuperscript{*}\(TE\)\textsubscript{1}\textsuperscript{*} \(\leq 5\)}{\textbackslash dim E1*TE1* \textbackslash leq 5}}\label{lec35}}
 
 \textbf{Monday, April 26, 1993}
 
@@ -7929,7 +8178,7 @@ This proves the lemma.
 \end{proof}
 
 \hypertarget{lec38}{%
-\chapter{\texorpdfstring{An Injection from \(E^*_{11}\) to \(E^*_{22}\)}{An Injection from E\^{}*\_\{11\} to E\^{}*\_\{22\}}}\label{lec38}}
+\chapter{\texorpdfstring{An Injection from E\textsubscript{11}\textsuperscript{*} to E\textsubscript{22}\textsuperscript{*}}{An Injection from E11* to E22*}}\label{lec38}}
 
 \textbf{Monday, May 3, 1993}
 
@@ -8511,12 +8760,14 @@ Hence, \(z_i(x,y,z)\) is independent of \(z\).
 So, \(z_i(x,y,z)\) is determined by intersection numbers and \(\Psi = \Psi(x,y)\), which is independent of \(x, y\) as well.
 \end{proof}
 
+\hypertarget{appendix-appendix}{%
+\appendix}
+
+
 \hypertarget{prob}{%
 \chapter{Open Problems}\label{prob}}
 
-\hypertarget{some-open-problems-concerning-distance-regular-graphs-the-thin-condition-and-the-q-polynomial-property}{%
-\section*{\texorpdfstring{Some Open Problems Concerning Distance-Regular Graphs, the Thin Condition, and the \(Q\)-Polynomial Property}{Some Open Problems Concerning Distance-Regular Graphs, the Thin Condition, and the Q-Polynomial Property}}\label{some-open-problems-concerning-distance-regular-graphs-the-thin-condition-and-the-q-polynomial-property}}
-\addcontentsline{toc}{section}{Some Open Problems Concerning Distance-Regular Graphs, the Thin Condition, and the \(Q\)-Polynomial Property}
+\textbf{Some Open Problems Concerning Distance-Regular Graphs, the Thin Condition, and the \(Q\)-Polynomial Property}
 
 Paul Terwilliger
 
