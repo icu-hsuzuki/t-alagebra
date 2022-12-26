@@ -12,14 +12,18 @@ github-repo: rstudio/bookdown-demo
 description: "This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook."
 ---
 
-# About this lecturenote {-}
+# About {-}
 
 * Original Hand Written Note Edited by Hiroshi Suzuki: https://icu-hsuzuki.github.io/lecturenote/
 * PDF of this lecturenote: https://icu-hsuzuki.github.io/t-algebra/t-algebra.pdf
   - You can download from the download icon on the top menu.
   - The style is a bit different from this HTML version
+* This digital book is created by `bookdown` package on RStudio.  
+  - For `bookdown` See [@xie2015], [@xie2017], [@xie2018].
+  - See [technical memo](#memo)
 
-## MEMO {-}
+
+## Foreword {-}
 **April 4, 1995.**
 
 This book is a lecture note based on a series of lectures by Paul Terwilliger in 1993. The original is a manuscript written by Paul Terwilliger. 
@@ -204,44 +208,4 @@ $\quad$ 17c. Mimic the above sections 4-14 (?) (I desperately hope that $Q$-poly
 
 |
 |
-
-## Technical Memo {-}
-
-This note is created by `bookdown` package on RStudio.
-
-For `bookdown` See [@xie2015], [@xie2017], [@xie2018].
-
-1. Log-in to my GitHub Account
-2. Go to RStudio/bookdown-demo repository: https://github.com/rstudio/bookdown-demo
-3. Use This Template
-4. Input Repository Name
-5. Select Public - default
-6. Create repository from template
-7. From Code download ZIP
-8. Move the extracted folder into a favorite directory
-9. Open RStudio Project in the folder
-10. Use Terminal in the buttom left pane
-	- confirm that the current directory is the home directry of the project by pwd
-11. (failed to proceed by ssh)
-12. Use Console
-	1. library(usethis)
-	2. use_git()
-	3. use_github() --- Error
-	4. gh_token_help()
-	5. create_github_token(): create a token in the github page. Copy the token
-	6. gitcreds::gitcreds_set(): paste the token, the token is to be expired in 30 days
-13. Use Terminal
-	1. git remote add origin https://github.com/icu-hsuzuki/t-alagebra.git
-	2. git push -u origin main
-	3. type in the password of the computer
-14. Use GIT in R Studio
-
-## Another Host {-}
-
-1. create a project by version control git
-2. git init
-3. git remote add origin git@github.com:<account>/<repository>.git
-4. git branch -r
-5. git fetch
-6. git pull origin main
 

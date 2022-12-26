@@ -1,7 +1,7 @@
 # The Johnson Graph $J(D,N)$ {#lec7}
 **Wednesday, February 3, 1993**
 
-:::{.definition}
+:::{.definition #johnson}
 The Johnson graph, $\Gamma = J(D,N)$ $(1\leq D\leq N-1)$ satisfies
 \begin{align}
 X & = \{S\mid S\subset \Omega, \; |S| = D\} \quad\text{where }\; \Omega = \{1, 2, \ldots, N\}\\
@@ -9,7 +9,7 @@ E & = \{ST\mid S, T\in X, \quad |S\cap T| = D-1\}.
 \end{align}
 :::
 
-:::{.example}
+:::{.example #j42}
 $J(2,4)$
 ```{r echo=FALSE, fig.width=3, fig.height=3, message=FALSE, fig.align="center"}
 library(tidyverse)
@@ -49,7 +49,7 @@ $$D\leq N/2 \quad \text{for} \quad J(D,N).$$
 
 We sill need the eigenvalues of $J(D,N)$ for certain problem later in the course. We can get these eigenvalues from our study of $H(D,2)$.
 
-:::{.lemma}
+:::{.lemma #ev-johnson}
 The eigenvalues for $J(D,N)$ with $1\leq D \leq N/2$ are give by
 \begin{align}
 \theta_i & = (N-D-i)(D-i) - i \quad (0\leq i\leq D),\\

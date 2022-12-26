@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-24" />
+<meta name="date" content="2022-12-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,12 +94,10 @@ div.csl-indent {
 <li><a href="./">Lecture Note on Terwilliger Algebra</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#memo"><i class="fa fa-check"></i>MEMO</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#foreword"><i class="fa fa-check"></i>Foreword</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface-by-p.-terwilliger"><i class="fa fa-check"></i>Preface by P. Terwilliger</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical-memo"><i class="fa fa-check"></i>Technical Memo</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Subconstituent Algebra of a Graph</a></li>
 <li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
@@ -143,7 +141,8 @@ div.csl-indent {
 <li class="chapter" data-level="40" data-path="lec40.html"><a href="lec40.html"><i class="fa fa-check"></i><b>40</b> Structure of 1-Thin DRG</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>A</b> Open Problems</a></li>
-<li class="chapter" data-level="B" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>B</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="B" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>B</b> Comparison Table</a></li>
+<li class="chapter" data-level="C" data-path="memo.html"><a href="memo.html"><i class="fa fa-check"></i><b>C</b> Technical Memo</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -179,7 +178,7 @@ div.csl-indent {
 <p>Moreover, <span class="math inline">\(ME^*_0M = M^*E_0M^*\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-136" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-110" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\supseteq\)</span>: <span class="math inline">\(1\in M^*\)</span> implies <span class="math inline">\(M\subseteq MM^*\)</span>.</div>
 <p><span class="math inline">\(\subseteq\)</span>: Pick <span class="math inline">\(\alpha\in E^*_0MM^*\)</span>. Show <span class="math inline">\(\alpha\in E^*_0M\)</span>. Since <span class="math inline">\(A_0, A_1, \ldots, A_D\)</span> span <span class="math inline">\(M\)</span>, and since <span class="math inline">\(E^*_0, E^*_1, \ldots, E^*_D\)</span> span <span class="math inline">\(M^*\)</span>, without loss of generality we may assume that
 <span class="math display">\[\alpha = E^*_0A_iE^*_j\]</span>
@@ -218,7 +217,7 @@ write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="ma
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(E_1M^*M = E_1M^* + E_1E^*_0M + E_1E^*_1M\)</span>.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-137" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-111" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> View <span class="math inline">\(E^*_{-1}\)</span>, <span class="math inline">\(E^*_{D+1}\)</span> as <span class="math inline">\(O\)</span>.</div>
 <p>View <span class="math inline">\(\theta^*_{-1}\)</span>, <span class="math inline">\(\theta^*_{D+1}\)</span> as indeterminates.</p>
 <p>Let <span class="math inline">\(\Delta\)</span> denote <span class="math inline">\(\mathrm{RHS}\)</span> in <span class="math inline">\((i)\)</span>.</p>
@@ -286,7 +285,7 @@ Hence, <a href="lec33.html#eq:i">(33.4)</a> cannot occur either, and we have a c
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(E^*_1E_1E^*_1 = |X|^{-1}(E^*_1(\theta^*_0-\theta^*_2)+\tilde{A}(\theta^*_{1}-\theta^*_2)+\tilde{J}(\theta^*_2))\)</span>.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-138" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-112" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> The first subconstituent has <span class="math inline">\(k\)</span> vertices.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> The first subconstituent is regular of valency <span class="math inline">\(a_1\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iii)\)</span> Since <span class="math inline">\(E_0 = |X|^{-1}J\)</span>,</div>
@@ -313,7 +312,7 @@ Eliminating the <span class="math inline">\(E^*_1A_2E^*_1\)</span> term in <a hr
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(E^*_1TE^*_1\)</span> is symmetric (in particular, commutative).</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-140" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-114" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\supseteq\)</span>: Clear.</div>
 <p><span class="math inline">\(\subseteq\)</span>: <span class="math inline">\(E^*_1T\)</span> is the minimal right ideal of <span class="math inline">\(\Gamma\)</span> that contains <span class="math inline">\(E^*_1\)</span>.</p>
 <p><span class="math inline">\(\mathrm{RHS}\)</span> contains <span class="math inline">\(E^*_1\)</span>, so show <span class="math inline">\(\mathrm{RHS}\)</span> is a right ideal of <span class="math inline">\(T\)</span>.</p>
@@ -346,7 +345,7 @@ E^*_1TE^*_1 &amp; = E^*_1E_0M^*E^*_1 + E^*_1ME^*_1 + E^*_1E_1M^*E^*_1\\
 &amp; = \mathrm{Span}(E^*_1E_0E^*_1, E^*_1, E^*_1E_1E^*_1, (E^*_1E_1E^*_1)^2, \ldots).
 \end{align}\]</span></p>
 <div class="remark">
-<p><span id="unlabeled-div-139" class="remark"><em>Remark</em>. </span>Note that by Lemma <a href="lec29.html#thm:aastar">29.1</a>,
+<p><span id="unlabeled-div-113" class="remark"><em>Remark</em>. </span>Note that by Lemma <a href="lec29.html#thm:aastar">29.1</a>,
 <span class="math display">\[\begin{align}
 E^*_1ME^*_1 &amp; = \mathrm{Span}(E^*_1A_0E^*_1, E^*_1A_1E^*_1, E^*_1A_2E^*_1)\\
 &amp; = \mathrm{Span}(E^*_1, E^*_1E_1E^*_1, E^*_1E_0E^*_1).

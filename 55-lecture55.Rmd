@@ -1,3 +1,39 @@
-# Title of the Chapter {#lec55}
-**Wednesday, February 17, 1993** # Edit Date
+# Technical Memo {#memo}
+
+This note is created by `bookdown` package on RStudio.
+
+For `bookdown` See [@xie2015], [@xie2017], [@xie2018].
+
+**The following is a memo.**
+
+A. Install R and R Studio with necessary packages if needed
+
+B. Create and setup ssh key by `ssh-keygen`
+
+C. Setup Git-GitHub connection
+
+1. Create a GitHub Account if needed  
+2. Set ssh key by copying the value of the public SSH key to the clipboard using `pbcopy` and paste it into SSH Keys in the GitHub Account
+
+D. Remote Repository
+
+1. Log-in to the GitHub Account
+2. Go to RStudio/bookdown-demo repository: https://github.com/rstudio/bookdown-demo
+3. Use This Template
+4. Input Repository Name
+5. Select Public - default
+6. Create repository from template
+7. Set Pages: Branch main, docs
+
+E. Local Repository
+
+1. copy: Code > Clone > SSH
+2. create a new project by version control git
+3. Change directory name `_book` to `docs`
+4. Edit YAMLs
+
+All source files are in the 
+[GitHub Repository](https://github.com/icu-hsuzuki/t-algebra).
+
+
 

@@ -5,12 +5,12 @@ In this lecture we use the Perron Frobenius theory of nonnegative matrices to ob
 
 Let $K = \mathbb{R}$. For $n\in \mathbb{Z}^{> 0}$, pick a symmetrix matrix $C\in \mathrm{Mat}_n(\mathbb{R})$.
 
-:::{.definition}
+:::{.definition #reducible}
 The matrix $C$ is _reducible_\index{reducible} if and only if there is a bipartition $\{1, 2, \ldots, n\} = X^+ \cup X^-$ (disjoint union of nonempty sets) such that $C_{ij} = 0$ for all $i\in X^+$, and for all $j\in X^-$, and for all $i\in X^-$, and for all $j\in X^+$,i.e.,
 $$ C \sim \begin{pmatrix} \ast & O \\ O & \ast \end{pmatrix}.$$
 :::
 
-:::{.definition}
+:::{.definition #bipartite-mat}
 The matrix $C$ is _bipartite_\index{bipartite} if and only if there is a bipartition $\{1, 2, \ldots, n\} = X^+ \cup X^-$ (disjoint union of nonempty sets) such that $C_{ij} = 0$ for all $i,j\in X^+$, and for all $i,j\in X^-$, i.e.,
 $$ C \sim \begin{pmatrix} O & \ast \\ \ast  & O \end{pmatrix}.$$
 :::
@@ -163,7 +163,7 @@ $\Box$
 
 Let $\Gamma = (X, E)$ be any graph.
 
-:::{.definition}
+:::{.definition #bipartite}
 $\Gamma$ is said to be _bipartite_\index{bipartite} if the adjacency matrix $A$ is bipartite. That is, $X$ can be written as a disjoint union of $X^+$ and $X^-$ such that $X^+, X^-$ contain no edges of $\Gamma$. 
 :::
 

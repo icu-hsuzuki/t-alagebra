@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-24" />
+<meta name="date" content="2022-12-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,12 +94,10 @@ div.csl-indent {
 <li><a href="./">Lecture Note on Terwilliger Algebra</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#memo"><i class="fa fa-check"></i>MEMO</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#foreword"><i class="fa fa-check"></i>Foreword</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface-by-p.-terwilliger"><i class="fa fa-check"></i>Preface by P. Terwilliger</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical-memo"><i class="fa fa-check"></i>Technical Memo</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Subconstituent Algebra of a Graph</a></li>
 <li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
@@ -143,7 +141,8 @@ div.csl-indent {
 <li class="chapter" data-level="40" data-path="lec40.html"><a href="lec40.html"><i class="fa fa-check"></i><b>40</b> Structure of 1-Thin DRG</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>A</b> Open Problems</a></li>
-<li class="chapter" data-level="B" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>B</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="B" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>B</b> Comparison Table</a></li>
+<li class="chapter" data-level="C" data-path="memo.html"><a href="memo.html"><i class="fa fa-check"></i><b>C</b> Technical Memo</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -175,8 +174,8 @@ E &amp; = \textrm{set of (distinct) 2-element subsets of }X \textrm{ (= edges of
 \end{align}\]</span>
 vertices <span class="math inline">\(x\)</span> and <span class="math inline">\(y\in X\)</span> are adjacent if and only if <span class="math inline">\(xy\in E\)</span>.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-1" class="example"><strong>Example 1.1  </strong></span>Let <span class="math inline">\(\Gamma\)</span> be a graph. <span class="math inline">\(X = \{a, b, c, d\}\)</span>, <span class="math inline">\(E = \{ab, ac, bc, bd\}\)</span>.</p>
-<p><img src="t-algebra_files/figure-html/unnamed-chunk-1-1.png" width="144" style="display: block; margin: auto;" /></p>
+<p><span id="exm:four-vertex-graph" class="example"><strong>Example 1.1  </strong></span>Let <span class="math inline">\(\Gamma\)</span> be a graph. <span class="math inline">\(X = \{a, b, c, d\}\)</span>, <span class="math inline">\(E = \{ab, ac, bc, bd\}\)</span>.</p>
+<p><img src="t-algebra_files/figure-html/four-vertex-group-1.png" width="144" style="display: block; margin: auto;" /></p>
 </div>
 <p>Set <span class="math inline">\(n = |X|\)</span>, the order of <span class="math inline">\(\Gamma\)</span>.</p>
 <p>Pick a field <span class="math inline">\(K\)</span> (<span class="math inline">\(=\mathbb{R}\)</span> or <span class="math inline">\(\mathbb{C}\)</span>). Then <span class="math inline">\(\mathrm{Mat}_X(K)\)</span> denotes the <span class="math inline">\(K\)</span> algebra of all <span class="math inline">\(n\times n\)</span> matrices with entries in <span class="math inline">\(K\)</span>. (rows and columns are indexed by <span class="math inline">\(X\)</span>)</p>
@@ -186,7 +185,7 @@ A_{xy} &amp; = \left\{\begin{array}{cl} 1 &amp; \textrm{ if } \; xy\in E\\
 0 &amp; \textrm{ else } . \end{array}\right.
 \end{align}\]</span></p>
 <div class="example">
-<p><span id="exm:unlabeled-div-2" class="example"><strong>Example 1.2  </strong></span>Let <span class="math inline">\(a, b, c, d\)</span> be labels of rows and columns. Then
+<p><span id="exm:adjacency-matrix" class="example"><strong>Example 1.2  </strong></span>Let <span class="math inline">\(a, b, c, d\)</span> be labels of rows and columns. Then
 <span class="math display">\[A = \begin{matrix} \\ a\\ b\\c\\d\end{matrix}\begin{matrix}\begin{matrix} a &amp; b &amp; c &amp; d \end{matrix}\\\begin{pmatrix} 0 &amp; 1 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 1 &amp; 1 \\
 1 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \end{pmatrix}\end{matrix}\]</span></p>
 </div>
@@ -228,7 +227,7 @@ What can we say about <span class="math inline">\(\Gamma\)</span> when <span cla
 <span class="math inline">\((ii)\)</span> If <span class="math inline">\(\Gamma\)</span> is regular of valency <span class="math inline">\(k\)</span>, then <span class="math inline">\(\theta_0 = k\)</span>.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-3" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-1" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> Without loss of generality we may assume that <span class="math inline">\(\theta_0&gt;0\)</span>, else done. Let <span class="math inline">\(v:=\sum_{x\in X}\alpha_x\hat{x}\)</span> denote the eivenvector for <span class="math inline">\(\theta_0\)</span>.</div>
 <p>Pick <span class="math inline">\(x\in X\)</span> with <span class="math inline">\(|\alpha_x|\)</span> maximal. Then <span class="math inline">\(|\alpha_x|\neq 0\)</span>.</p>
 <p>Since <span class="math inline">\(Av = \theta_0v\)</span>,
@@ -240,23 +239,23 @@ So,
 <p><strong>Subconstituent Algebra</strong></p>
 <p>Let <span class="math inline">\(x, y\in X\)</span> and <span class="math inline">\(\ell \in \mathbb{Z}^{\geq 0}\)</span>.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-4" class="definition"><strong>Definition 1.2  </strong></span>A path of length <span class="math inline">\(\ell\)</span> connecting <span class="math inline">\(x, y\)</span> is a sequence
+<p><span id="def:path" class="definition"><strong>Definition 1.2  </strong></span>A path of length <span class="math inline">\(\ell\)</span> connecting <span class="math inline">\(x, y\)</span> is a sequence
 <span class="math display">\[x = x_0, x_1, \ldots, x_{\ell} = y, \quad x_i\in X, \; 0\leq i\leq \ell\]</span>
 such that <span class="math inline">\(x_ix_{i+1}\in E\)</span> for <span class="math inline">\(0\leq i \leq \ell-1\)</span>.</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-5" class="definition"><strong>Definition 1.3  </strong></span>The distance <span class="math inline">\(\partial(x,y)\)</span> is the length of a shortest path connecting <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.
+<p><span id="def:distance" class="definition"><strong>Definition 1.3  </strong></span>The distance <span class="math inline">\(\partial(x,y)\)</span> is the length of a shortest path connecting <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.
 <span class="math display">\[\partial(x,y) \in \mathbb{Z}^{\geq 0} \cup \{\infty\}.\]</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-6" class="definition"><strong>Definition 1.4  </strong></span>The graph <span class="math inline">\(\Gamma\)</span> is connected if and only if <span class="math inline">\(\partial(x,y) &lt; \infty\)</span> for all <span class="math inline">\(x, y\in X\)</span>.</p>
+<p><span id="def:connected" class="definition"><strong>Definition 1.4  </strong></span>The graph <span class="math inline">\(\Gamma\)</span> is connected if and only if <span class="math inline">\(\partial(x,y) &lt; \infty\)</span> for all <span class="math inline">\(x, y\in X\)</span>.</p>
 </div>
 <p>From now on, assume that <span class="math inline">\(\Gamma\)</span> is connected with <span class="math inline">\(|X|\geq 2\)</span>.</p>
 <p>Set
 <span class="math display">\[d_\Gamma = d = \max\{\partial(x,y)\mid x, y\in X\} \equiv \textrm{the diameter of }\Gamma.\]</span>
 Fix a ‘base’ vertex <span class="math inline">\(x\in X\)</span>.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-7" class="definition"><strong>Definition 1.5  </strong></span>
+<p><span id="def:diameter" class="definition"><strong>Definition 1.5  </strong></span>
 <span class="math display">\[d(x) = \textrm{the diameter with respect to }x = \max\{\partial(x,y)\mid y\in X\} \leq d.\]</span></p>
 </div>
 <p>Observe that
@@ -271,11 +270,11 @@ View <span class="math inline">\(E_i^*(x) \in \mathrm{Mat}_X(K)\)</span>. So, <s
 Set
 <span class="math display">\[M^* = M^*(x) \equiv \textrm{Span}_K(E_0^*(x), \ldots, E_{d(x)}^*(x)).\]</span>
 Then <span class="math inline">\(M^*(x)\)</span> is a commutative subalgebra of <span class="math inline">\(\mathrm{Mat}_X(K)\)</span> and is calle the <em>dual Bose-Mesner algbara with respect to <span class="math inline">\(x\)</span></em>.</p>
+<p>::: {.definition #t-algebra, name=“Subconstituent Algebra”}
+Let <span class="math inline">\(\Gamma = (X, E)\)</span>, <span class="math inline">\(x\)</span>, <span class="math inline">\(M\)</span>, <span class="math inline">\(M^*(x)\)</span> be as above. Let <span class="math inline">\(T = T(x)\)</span> denote the subalgebra of <span class="math inline">\(\mathrm{Mat}_X(K)\)</span> generated by <span class="math inline">\(M\)</span> and <span class="math inline">\(M^*(x)\)</span>. <span class="math inline">\(T\)</span> is the <em>subconstituent algebra</em> of <span class="math inline">\(\Gamma\)</span> with respect to <span class="math inline">\(x\)</span>.
+:::</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-8" class="definition"><strong>Definition 1.6  (Subconstituent Algebra) </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span>, <span class="math inline">\(x\)</span>, <span class="math inline">\(M\)</span>, <span class="math inline">\(M^*(x)\)</span> be as above. Let <span class="math inline">\(T = T(x)\)</span> denote the subalgebra of <span class="math inline">\(\mathrm{Mat}_X(K)\)</span> generated by <span class="math inline">\(M\)</span> and <span class="math inline">\(M^*(x)\)</span>. <span class="math inline">\(T\)</span> is the <em>subconstituent algebra</em> of <span class="math inline">\(\Gamma\)</span> with respect to <span class="math inline">\(x\)</span>.</p>
-</div>
-<div class="definition">
-<p><span id="def:unlabeled-div-9" class="definition"><strong>Definition 1.7  </strong></span>A <span class="math inline">\(T\)</span>-module is any subspace <span class="math inline">\(W\subset V\)</span> such that <span class="math inline">\(aw\in W\)</span> for all <span class="math inline">\(a\in T\)</span> and <span class="math inline">\(w\in W\)</span>.</p>
+<p><span id="def:module" class="definition"><strong>Definition 1.6  </strong></span>A <span class="math inline">\(T\)</span>-module is any subspace <span class="math inline">\(W\subset V\)</span> such that <span class="math inline">\(aw\in W\)</span> for all <span class="math inline">\(a\in T\)</span> and <span class="math inline">\(w\in W\)</span>.</p>
 <p><span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> is <em>irreducible</em> if and only if <span class="math inline">\(W\neq 0\)</span> and <span class="math inline">\(W\)</span> does not properly contain a nonzero <span class="math inline">\(T\)</span>-module.</p>
 </div>
 <p>For any <span class="math inline">\(a\in \mathrm{Mat}_X(K)\)</span>, let <span class="math inline">\(a^*\)</span> denbote the conjugate transpose of <span class="math inline">\(a\)</span>.</p>
@@ -290,7 +289,7 @@ is a <span class="math inline">\(T\)</span>-module.</p>
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(V\)</span> decomposes as an orthogonal direct sum of irreducible <span class="math inline">\(T\)</span>-modules.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-10" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> It is becase <span class="math inline">\(T\)</span> is generated by symmetric real matrices</div>
 <p><span class="math display">\[A, E^*_0(x), E^*_1(x), \ldots, E^*_{d(x)(x)}.\]</span></p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> Pick <span class="math inline">\(v\in W^\bot\)</span> and <span class="math inline">\(a\in T\)</span>, it suffices to show that <span class="math inline">\(av\in W^\bot\)</span>. For all <span class="math inline">\(w\in W\)</span>,</div>
@@ -303,7 +302,7 @@ as <span class="math inline">\(a^*\in T\)</span>.</p>
 What does the structure of the <span class="math inline">\(T(x)\)</span>-module tell us about <span class="math inline">\(\Gamma\)</span>?</p>
 <p>Study those <span class="math inline">\(\Gamma\)</span> whose modules take ‘simple’ form. The <span class="math inline">\(\Gamma\)</span>’s involved are highly regular.</p>
 <div class="remark">
-<p><span id="unlabeled-div-11" class="remark"><em>Remark</em>. </span></p>
+<p><span id="unlabeled-div-3" class="remark"><em>Remark</em>. </span></p>
 <ol style="list-style-type: decimal">
 <li>The subconstituent algebra <span class="math inline">\(T\)</span> is semisimple as the left regular representation of <span class="math inline">\(T\)</span> is completely reducible. See Curtis-Reiner 25.2 <span class="citation">(<a href="#ref-cr" role="doc-biblioref">Charles W. Curtis 2006</a>)</span>.</li>
 <li>The inner product <span class="math inline">\(\langle a, b\rangle_T = \mathrm{tr}(a^\top\bar{b})\)</span> is nondegenerate on <span class="math inline">\(T\)</span>.</li>

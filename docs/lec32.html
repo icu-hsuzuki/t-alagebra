@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-24" />
+<meta name="date" content="2022-12-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,12 +94,10 @@ div.csl-indent {
 <li><a href="./">Lecture Note on Terwilliger Algebra</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#memo"><i class="fa fa-check"></i>MEMO</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#foreword"><i class="fa fa-check"></i>Foreword</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface-by-p.-terwilliger"><i class="fa fa-check"></i>Preface by P. Terwilliger</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical-memo"><i class="fa fa-check"></i>Technical Memo</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Subconstituent Algebra of a Graph</a></li>
 <li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
@@ -143,7 +141,8 @@ div.csl-indent {
 <li class="chapter" data-level="40" data-path="lec40.html"><a href="lec40.html"><i class="fa fa-check"></i><b>40</b> Structure of 1-Thin DRG</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>A</b> Open Problems</a></li>
-<li class="chapter" data-level="B" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>B</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="B" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>B</b> Comparison Table</a></li>
+<li class="chapter" data-level="C" data-path="memo.html"><a href="memo.html"><i class="fa fa-check"></i><b>C</b> Technical Memo</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -182,7 +181,7 @@ In particular, <span class="math inline">\(R^{-1}R v = v\)</span>.</p>
 is one-to-one.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-130" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-104" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> Let <span class="math inline">\(w_0, w_1, \ldots, w_d\)</span> be a basis for <span class="math inline">\(W\)</span> and <span class="math inline">\(w_i\in E^*_{r+i}W\)</span>,</div>
 <p><span class="math display">\[Rw_i = w_{i+1} \quad (0\leq i&lt; d), \quad Lw_i = x_i(W)w_{i-1}\quad (1\leq i\leq d).\]</span>
 So,
@@ -253,7 +252,7 @@ where the sum begin over irreducible <span class="math inline">\(T\)</span>-modu
 We have the assertion.</p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-131" class="remark"><em>Remark</em>. </span><span class="math display">\[E^*_iV = \sum_{j&lt;i} V_j + V_i.\]</span>
+<p><span id="unlabeled-div-105" class="remark"><em>Remark</em>. </span><span class="math display">\[E^*_iV = \sum_{j&lt;i} V_j + V_i.\]</span>
 For <span class="math inline">\(V_j\)</span> part, take <span class="math inline">\(w_{i-j}\in W\)</span> irreducible with endpoint <span class="math inline">\(j&lt;i\)</span>. Then,
 <span class="math display">\[Lw_{i-j} = x_{i-j}(W)w_{i-j-1}\neq 0,\]</span>
 and
@@ -268,7 +267,7 @@ is one to one.</p>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(LE^*_iA_{i+1}v = b_iE^*_{i-1}A_iv \quad (1\leq i\leq D-1)\)</span>.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-132" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-106" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> Let</div>
 <p><span class="math display">\[v = \sum_{y\in X, \partial(x,y)=1}\alpha_y \hat{y} \quad \text{for some }\{\alpha_g\}\subseteq \mathbb{C}.\]</span>
 Then
@@ -292,7 +291,7 @@ Then
 <p>Now <span class="math inline">\((i)-(iv)\)</span> are obtained by applying this to <span class="math inline">\(v\)</span> on the right and multiplied by <span class="math inline">\(E^*_j\)</span> <span class="math inline">\((0\leq j\leq D)\)</span> on the left.</p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-133" class="remark"><em>Remark</em>. </span><span class="math inline">\(A\tilde{A}_{i-1}v = AE^*_iA_{i-1}v - AE^*_{i-1}A_iv\)</span>. For <span class="math inline">\(1\leq i\leq D\)</span>,
+<p><span id="unlabeled-div-107" class="remark"><em>Remark</em>. </span><span class="math inline">\(A\tilde{A}_{i-1}v = AE^*_iA_{i-1}v - AE^*_{i-1}A_iv\)</span>. For <span class="math inline">\(1\leq i\leq D\)</span>,
 <span class="math display">\[\begin{align}
 &amp; (c_i\tilde{A}_i + (a_{i-1}-c_i+c_{i-1})\tilde{A}_{i-1}+b_{i-1}\tilde{A}_{i-2})v\\
 &amp; \quad = c_i E^*_{i+1}A_iv - c_iE^*_iA_{i+1}v\\
@@ -322,7 +321,7 @@ LE^*_iA_{i-1}v &amp; = E^*_{i-1}AE^*_{i}A_{i-1}v\\
 <span class="math display">\[W = \mathrm{Span}(E^*_1, E^*_2A_1v, \ldots, E^*_DA_{i-1}v).\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-135" class="proof"><em>Proof</em>. </span><span class="math inline">\((ii)\to(i)\)</span>. Clear as
+<p><span id="unlabeled-div-109" class="proof"><em>Proof</em>. </span><span class="math inline">\((ii)\to(i)\)</span>. Clear as
 <span class="math display">\[E^*_iA_{i-1}v, \; E^*_iA_{i+1}v \in E^*_iW = \mathrm{Span}(w_{i-1}).\]</span></p>
 <div class="line-block"><span class="math inline">\((i)\to(ii)\)</span> Consider the sequence</div>
 <p><span class="math display">\[E^*_1A_{i-1}v, E^*_2A_1v, E^*_3A_2v, \ldots, E^*_{D+1}A_Dv.\]</span>
@@ -334,7 +333,7 @@ Now
 E^*_{j+1}A_jv = 0 \quad (n\leq j\leq D). \tag{32.1}
 \end{equation}\]</span></p>
 <div class="remark">
-<p><span id="unlabeled-div-134" class="remark"><em>Remark</em>. </span>Use induction and Lemma <a href="lec32.html#lem:action-on-estar1v-new">32.2</a> <span class="math inline">\((i)\)</span>,
+<p><span id="unlabeled-div-108" class="remark"><em>Remark</em>. </span>Use induction and Lemma <a href="lec32.html#lem:action-on-estar1v-new">32.2</a> <span class="math inline">\((i)\)</span>,
 <span class="math display">\[E^*_{j+1}A_jv \in \mathrm{Span}(RE^*_jA_{j-1}v) \quad (j\geq 1).\]</span></p>
 </div>
 <p>By our assumption <span class="math inline">\((i)\)</span>, and the definition of <span class="math inline">\(n\)</span>,

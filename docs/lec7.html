@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-24" />
+<meta name="date" content="2022-12-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,12 +94,10 @@ div.csl-indent {
 <li><a href="./">Lecture Note on Terwilliger Algebra</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#memo"><i class="fa fa-check"></i>MEMO</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#foreword"><i class="fa fa-check"></i>Foreword</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface-by-p.-terwilliger"><i class="fa fa-check"></i>Preface by P. Terwilliger</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical-memo"><i class="fa fa-check"></i>Technical Memo</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Subconstituent Algebra of a Graph</a></li>
 <li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
@@ -143,7 +141,8 @@ div.csl-indent {
 <li class="chapter" data-level="40" data-path="lec40.html"><a href="lec40.html"><i class="fa fa-check"></i><b>40</b> Structure of 1-Thin DRG</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>A</b> Open Problems</a></li>
-<li class="chapter" data-level="B" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>B</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="B" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>B</b> Comparison Table</a></li>
+<li class="chapter" data-level="C" data-path="memo.html"><a href="memo.html"><i class="fa fa-check"></i><b>C</b> Technical Memo</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -169,15 +168,15 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 7</span> The Johnson Graph <span class="math inline">\(J(D,N)\)</span><a href="lec7.html#lec7" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Wednesday, February 3, 1993</strong></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-43" class="definition"><strong>Definition 7.1  </strong></span>The Johnson graph, <span class="math inline">\(\Gamma = J(D,N)\)</span> <span class="math inline">\((1\leq D\leq N-1)\)</span> satisfies
+<p><span id="def:johnson" class="definition"><strong>Definition 7.1  </strong></span>The Johnson graph, <span class="math inline">\(\Gamma = J(D,N)\)</span> <span class="math inline">\((1\leq D\leq N-1)\)</span> satisfies
 <span class="math display">\[\begin{align}
 X &amp; = \{S\mid S\subset \Omega, \; |S| = D\} \quad\text{where }\; \Omega = \{1, 2, \ldots, N\}\\
 E &amp; = \{ST\mid S, T\in X, \quad |S\cap T| = D-1\}.
 \end{align}\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-44" class="example"><strong>Example 7.1  </strong></span><span class="math inline">\(J(2,4)\)</span>
-<img src="t-algebra_files/figure-html/unnamed-chunk-6-1.png" width="288" style="display: block; margin: auto;" /></p>
+<p><span id="exm:j42" class="example"><strong>Example 7.1  </strong></span><span class="math inline">\(J(2,4)\)</span>
+<img src="t-algebra_files/figure-html/unnamed-chunk-5-1.png" width="288" style="display: block; margin: auto;" /></p>
 </div>
 <p><strong>Note 1.</strong>
 The symmetric group <span class="math inline">\(S_N\)</span> acts on <span class="math inline">\(\Omega\)</span>. <span class="math inline">\(S_N \subseteq \mathrm{Aut}(\Gamma)\)</span> acts vertex transitively on <span class="math inline">\(\Gamma\)</span>.</p>
@@ -199,14 +198,14 @@ ST\in E &amp; \Leftrightarrow  |S\cap T| = D-1\\
 <span class="math display">\[D\leq N/2 \quad \text{for} \quad J(D,N).\]</span></p>
 <p>We sill need the eigenvalues of <span class="math inline">\(J(D,N)\)</span> for certain problem later in the course. We can get these eigenvalues from our study of <span class="math inline">\(H(D,2)\)</span>.</p>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-45" class="lemma"><strong>Lemma 7.1  </strong></span>The eigenvalues for <span class="math inline">\(J(D,N)\)</span> with <span class="math inline">\(1\leq D \leq N/2\)</span> are give by
+<p><span id="lem:ev-johnson" class="lemma"><strong>Lemma 7.1  </strong></span>The eigenvalues for <span class="math inline">\(J(D,N)\)</span> with <span class="math inline">\(1\leq D \leq N/2\)</span> are give by
 <span class="math display">\[\begin{align}
 \theta_i &amp; = (N-D-i)(D-i) - i \quad (0\leq i\leq D),\\
 m_i &amp; = \binom{N}{i} - \binom{N}{i-1}.
 \end{align}\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-46" class="proof"><em>Proof</em>. </span>Let
+<p><span id="unlabeled-div-20" class="proof"><em>Proof</em>. </span>Let
 <span class="math display">\[\begin{align}
 \Gamma_J &amp; \equiv J(D,N) = (X_J, E_J)\\
 \Gamma_H &amp; \equiv H(N,2) = (X_H, E_H).
@@ -277,7 +276,7 @@ where</p>
 <p><span class="math display">\[gx = x, \; gy = z, \; gz = y.\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-47" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-21" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block">(TH) <span class="math inline">\(\Rightarrow\)</span> (C)</div>
 <p>Fix <span class="math inline">\(i\)</span> with <span class="math inline">\(0\leq i\leq D\)</span>. Let
 <span class="math display">\[V = \sum W. \; \text{The standard module written as a direct sum of irreducible $T$-modules}.\]</span>
@@ -312,7 +311,7 @@ Thus each <span class="math inline">\(1\)</span> dimensional subspace of <span c
 By Claim 1 and Claim 2, we have (TH).</p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-48" class="remark"><em>Remark</em>. </span>Claim 1 shows the following: <em>If <span class="math inline">\(W\)</span> is an irreducible <span class="math inline">\(T\)</span>-module, then <span class="math inline">\(E^*_iW\)</span> is either <span class="math inline">\(0\)</span> or an irreducible <span class="math inline">\(E^*_iTE^*_i\)</span>-module.</em></p>
+<p><span id="unlabeled-div-22" class="remark"><em>Remark</em>. </span>Claim 1 shows the following: <em>If <span class="math inline">\(W\)</span> is an irreducible <span class="math inline">\(T\)</span>-module, then <span class="math inline">\(E^*_iW\)</span> is either <span class="math inline">\(0\)</span> or an irreducible <span class="math inline">\(E^*_iTE^*_i\)</span>-module.</em></p>
 </div>
 
 </div>

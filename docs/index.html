@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-24" />
+<meta name="date" content="2022-12-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,12 +94,10 @@ div.csl-indent {
 <li><a href="./">Lecture Note on Terwilliger Algebra</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#memo"><i class="fa fa-check"></i>MEMO</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#foreword"><i class="fa fa-check"></i>Foreword</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface-by-p.-terwilliger"><i class="fa fa-check"></i>Preface by P. Terwilliger</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical-memo"><i class="fa fa-check"></i>Technical Memo</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Subconstituent Algebra of a Graph</a></li>
 <li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
@@ -143,7 +141,8 @@ div.csl-indent {
 <li class="chapter" data-level="40" data-path="lec40.html"><a href="lec40.html"><i class="fa fa-check"></i><b>40</b> Structure of 1-Thin DRG</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>A</b> Open Problems</a></li>
-<li class="chapter" data-level="B" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>B</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="B" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>B</b> Comparison Table</a></li>
+<li class="chapter" data-level="C" data-path="memo.html"><a href="memo.html"><i class="fa fa-check"></i><b>C</b> Technical Memo</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -168,10 +167,10 @@ div.csl-indent {
 <div id="header">
 <h1 class="title">Lecture Note on Terwilliger Algebra</h1>
 <p class="author"><em>P. Terwilliger, edited by H. Suzuki</em></p>
-<p class="date"><em>2022-12-24</em></p>
+<p class="date"><em>2022-12-26</em></p>
 </div>
-<div id="about-this-lecturenote" class="section level1 unnumbered hasAnchor">
-<h1>About this lecturenote<a href="index.html#about-this-lecturenote" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="about" class="section level1 unnumbered hasAnchor">
+<h1>About<a href="index.html#about" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ul>
 <li>Original Hand Written Note Edited by Hiroshi Suzuki: <a href="https://icu-hsuzuki.github.io/lecturenote/" class="uri">https://icu-hsuzuki.github.io/lecturenote/</a></li>
 <li>PDF of this lecturenote: <a href="https://icu-hsuzuki.github.io/t-algebra/t-algebra.pdf" class="uri">https://icu-hsuzuki.github.io/t-algebra/t-algebra.pdf</a>
@@ -179,9 +178,14 @@ div.csl-indent {
 <li>You can download from the download icon on the top menu.</li>
 <li>The style is a bit different from this HTML version</li>
 </ul></li>
+<li>This digital book is created by <code>bookdown</code> package on RStudio.
+<ul>
+<li>For <code>bookdown</code> See <span class="citation">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>, <span class="citation">(<a href="#ref-xie2017" role="doc-biblioref">Xie 2017</a>)</span>, <span class="citation">(<a href="#ref-xie2018" role="doc-biblioref">Yihui Xie 2018</a>)</span>.</li>
+<li>See <a href="memo.html#memo">technical memo</a></li>
+</ul></li>
 </ul>
-<div id="memo" class="section level2 unnumbered hasAnchor">
-<h2>MEMO<a href="index.html#memo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="foreword" class="section level2 unnumbered hasAnchor">
+<h2>Foreword<a href="index.html#foreword" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>April 4, 1995.</strong></p>
 <p>This book is a lecture note based on a series of lectures by Paul Terwilliger in 1993. The original is a manuscript written by Paul Terwilliger.</p>
 <p>This note was rewritten by Hirosh Suzuki when he studied the lecture note during the following period.</p>
@@ -316,54 +320,6 @@ div.csl-indent {
 <p><span class="math inline">\(\quad\)</span> 17c. Mimic the above sections 4-14 (?) (I desperately hope that <span class="math inline">\(Q\)</span>-polynomial bi-distance-regular graphs that are not already distance-regular do not exist)</p>
 <div class="line-block"><br />
 </div>
-</div>
-<div id="technical-memo" class="section level2 unnumbered hasAnchor">
-<h2>Technical Memo<a href="index.html#technical-memo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This note is created by <code>bookdown</code> package on RStudio.</p>
-<p>For <code>bookdown</code> See <span class="citation">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>, <span class="citation">(<a href="#ref-xie2017" role="doc-biblioref">Xie 2017</a>)</span>, <span class="citation">(<a href="#ref-xie2018" role="doc-biblioref">Yihui Xie 2018</a>)</span>.</p>
-<ol style="list-style-type: decimal">
-<li>Log-in to my GitHub Account</li>
-<li>Go to RStudio/bookdown-demo repository: <a href="https://github.com/rstudio/bookdown-demo" class="uri">https://github.com/rstudio/bookdown-demo</a></li>
-<li>Use This Template</li>
-<li>Input Repository Name</li>
-<li>Select Public - default</li>
-<li>Create repository from template</li>
-<li>From Code download ZIP</li>
-<li>Move the extracted folder into a favorite directory</li>
-<li>Open RStudio Project in the folder</li>
-<li>Use Terminal in the buttom left pane
-<ul>
-<li>confirm that the current directory is the home directry of the project by pwd</li>
-</ul></li>
-<li>(failed to proceed by ssh)</li>
-<li>Use Console
-<ol style="list-style-type: decimal">
-<li>library(usethis)</li>
-<li>use_git()</li>
-<li>use_github() — Error</li>
-<li>gh_token_help()</li>
-<li>create_github_token(): create a token in the github page. Copy the token</li>
-<li>gitcreds::gitcreds_set(): paste the token, the token is to be expired in 30 days</li>
-</ol></li>
-<li>Use Terminal
-<ol style="list-style-type: decimal">
-<li>git remote add origin <a href="https://github.com/icu-hsuzuki/t-alagebra.git" class="uri">https://github.com/icu-hsuzuki/t-alagebra.git</a></li>
-<li>git push -u origin main</li>
-<li>type in the password of the computer</li>
-</ol></li>
-<li>Use GIT in R Studio</li>
-</ol>
-</div>
-<div id="another-host" class="section level2 unnumbered hasAnchor">
-<h2>Another Host<a href="index.html#another-host" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li>create a project by version control git</li>
-<li>git init</li>
-<li>git remote add origin <a href="mailto:git@github.com" class="email">git@github.com</a>:<account>/<repository>.git</li>
-<li>git branch -r</li>
-<li>git fetch</li>
-<li>git pull origin main</li>
-</ol>
 
 </div>
 </div>

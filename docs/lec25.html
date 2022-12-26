@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-24" />
+<meta name="date" content="2022-12-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,12 +94,10 @@ div.csl-indent {
 <li><a href="./">Lecture Note on Terwilliger Algebra</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#memo"><i class="fa fa-check"></i>MEMO</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#foreword"><i class="fa fa-check"></i>Foreword</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface-by-p.-terwilliger"><i class="fa fa-check"></i>Preface by P. Terwilliger</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical-memo"><i class="fa fa-check"></i>Technical Memo</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Subconstituent Algebra of a Graph</a></li>
 <li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
@@ -143,7 +141,8 @@ div.csl-indent {
 <li class="chapter" data-level="40" data-path="lec40.html"><a href="lec40.html"><i class="fa fa-check"></i><b>40</b> Structure of 1-Thin DRG</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>A</b> Open Problems</a></li>
-<li class="chapter" data-level="B" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>B</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="B" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>B</b> Comparison Table</a></li>
+<li class="chapter" data-level="C" data-path="memo.html"><a href="memo.html"><i class="fa fa-check"></i><b>C</b> Technical Memo</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -169,11 +168,11 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 25</span> Balanced Conditions, II<a href="lec25.html#lec25" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Monday, March 29, 1993</strong></p>
 <div class="proof">
-<p><span id="unlabeled-div-105" class="proof"><em>Proof</em> (Proof of Theorem <a href="lec24.html#thm:balanced">24.1</a> continued). </span></p>
+<p><span id="unlabeled-div-79" class="proof"><em>Proof</em> (Proof of Theorem <a href="lec24.html#thm:balanced">24.1</a> continued). </span></p>
 <div class="line-block"><span class="math inline">\((ib)\to(ic)\)</span> Obvious.</div>
 <div class="line-block"><span class="math inline">\((ic)\to(ia)\)</span> Without loss of generality, we may assume <span class="math inline">\(D\geq 3\)</span>, else trivial.</div>
 <div class="remark">
-<p><span id="unlabeled-div-103" class="remark"><em>Remark</em>. </span>The case <span class="math inline">\(D = 2\)</span> should be treated somewhere, but the assumption <span class="math inline">\(D\geq 3\)</span> is not used.</p>
+<p><span id="unlabeled-div-77" class="remark"><em>Remark</em>. </span>The case <span class="math inline">\(D = 2\)</span> should be treated somewhere, but the assumption <span class="math inline">\(D\geq 3\)</span> is not used.</p>
 </div>
 <p>Fix <span class="math inline">\(w\in X\)</span>, and write <span class="math inline">\(E^*_i \equiv E^*_i(w)\)</span>, <span class="math inline">\(A^*_i\equiv A^*_i(w)\)</span>, <span class="math inline">\(A^*\equiv A^*_1\)</span>, and <span class="math inline">\(A_i\)</span>, <span class="math inline">\(i\)</span>-th distance matrix. Set
 <span class="math display">\[E \equiv E_1 = |X|^{-1}\sum_{i=0}^D \theta^*_i A_i.\]</span>
@@ -217,7 +216,7 @@ There exists <span class="math inline">\(f_i\in \mathbb{R}[\lambda]\)</span>, <s
 <p>Writing <span class="math inline">\(A_2\)</span>, <span class="math inline">\(A_3\)</span> as polynomials in <span class="math inline">\(A\)</span> in Claim 3 and simplifying, we find
 <span class="math display">\[A^3A^*-A^*A^3 \in \mathrm{Span}(A^2A^*A-AA^*A^2, A^2A^*-A^*A^2, AA^*-A^*A).\]</span></p>
 <div class="remark">
-<p><span id="unlabeled-div-104" class="remark"><em>Remark</em>. </span>Let <span class="math inline">\(A_3 = \beta_3A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I\)</span> with <span class="math inline">\(\beta_3\neq 0\)</span>, and <span class="math inline">\(A_2 = \gamma_2 A^2 + \gamma_1 A + \gamma_0 I\)</span>, with <span class="math inline">\(\gamma_2\neq 0\)</span>. Then
+<p><span id="unlabeled-div-78" class="remark"><em>Remark</em>. </span>Let <span class="math inline">\(A_3 = \beta_3A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I\)</span> with <span class="math inline">\(\beta_3\neq 0\)</span>, and <span class="math inline">\(A_2 = \gamma_2 A^2 + \gamma_1 A + \gamma_0 I\)</span>, with <span class="math inline">\(\gamma_2\neq 0\)</span>. Then
 <span class="math display">\[\begin{align}
 A^*A_3-A_3A^* &amp; = A^*(\beta_3 A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I) - (\beta_3 A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I)A^*.\\
 A^3A^*-A^*A^3 &amp; \in \mathrm{Span}(A^*A_3 - A_3A^*, A^2A^* - A^*A^2, AA^*-A^*A)\\
@@ -268,7 +267,7 @@ But <span class="math inline">\(\{A_hA^* - A^*A_h \mid 1\leq h\leq D\}\)</span> 
 <p>This proves Claim 5.</p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-106" class="remark"><em>Remark</em>. </span>Claim 5 proves the following in general.</p>
+<p><span id="unlabeled-div-80" class="remark"><em>Remark</em>. </span>Claim 5 proves the following in general.</p>
 <p>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> be a symmetric association scheme. Fix a vertex <span class="math inline">\(x\in X\)</span>, and let
 <span class="math display">\[E = \frac{1}{|X|}\sum_{j=0}^D \theta^*_j A_j \quad (\theta^*_j = q_1(j) \; \text{ if $E = E_1$})\]</span>
 be a primitive idempotent and <span class="math inline">\(E^*_j\equiv E^*_j(x)\)</span>.

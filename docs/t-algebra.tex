@@ -128,7 +128,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-12-24}
+\date{2022-12-26}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -154,9 +154,9 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{about-this-lecturenote}{%
-\chapter*{About this lecturenote}\label{about-this-lecturenote}}
-\addcontentsline{toc}{chapter}{About this lecturenote}
+\hypertarget{about}{%
+\chapter*{About}\label{about}}
+\addcontentsline{toc}{chapter}{About}
 
 \begin{itemize}
 \tightlist
@@ -172,11 +172,21 @@
   \item
     The style is a bit different from this HTML version
   \end{itemize}
+\item
+  This digital book is created by \texttt{bookdown} package on RStudio.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For \texttt{bookdown} See \citep{xie2015}, \citep{xie2017}, \citep{xie2018}.
+  \item
+    See \protect\hyperlink{memo}{technical memo}
+  \end{itemize}
 \end{itemize}
 
-\hypertarget{memo}{%
-\section*{MEMO}\label{memo}}
-\addcontentsline{toc}{section}{MEMO}
+\hypertarget{foreword}{%
+\section*{Foreword}\label{foreword}}
+\addcontentsline{toc}{section}{Foreword}
 
 \textbf{April 4, 1995.}
 
@@ -439,102 +449,6 @@ This book attempts to prepare the way for an eventual classification of the grap
 
 \hfill\break
 
-\hypertarget{technical-memo}{%
-\section*{Technical Memo}\label{technical-memo}}
-\addcontentsline{toc}{section}{Technical Memo}
-
-This note is created by \texttt{bookdown} package on RStudio.
-
-For \texttt{bookdown} See \citep{xie2015}, \citep{xie2017}, \citep{xie2018}.
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Log-in to my GitHub Account
-\item
-  Go to RStudio/bookdown-demo repository: \url{https://github.com/rstudio/bookdown-demo}
-\item
-  Use This Template
-\item
-  Input Repository Name
-\item
-  Select Public - default
-\item
-  Create repository from template
-\item
-  From Code download ZIP
-\item
-  Move the extracted folder into a favorite directory
-\item
-  Open RStudio Project in the folder
-\item
-  Use Terminal in the buttom left pane
-
-  \begin{itemize}
-  \tightlist
-  \item
-    confirm that the current directory is the home directry of the project by pwd
-  \end{itemize}
-\item
-  (failed to proceed by ssh)
-\item
-  Use Console
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \tightlist
-  \item
-    library(usethis)
-  \item
-    use\_git()
-  \item
-    use\_github() --- Error
-  \item
-    gh\_token\_help()
-  \item
-    create\_github\_token(): create a token in the github page. Copy the token
-  \item
-    gitcreds::gitcreds\_set(): paste the token, the token is to be expired in 30 days
-  \end{enumerate}
-\item
-  Use Terminal
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \tightlist
-  \item
-    git remote add origin \url{https://github.com/icu-hsuzuki/t-alagebra.git}
-  \item
-    git push -u origin main
-  \item
-    type in the password of the computer
-  \end{enumerate}
-\item
-  Use GIT in R Studio
-\end{enumerate}
-
-\hypertarget{another-host}{%
-\section*{Another Host}\label{another-host}}
-\addcontentsline{toc}{section}{Another Host}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  create a project by version control git
-\item
-  git init
-\item
-  git remote add origin \href{mailto:git@github.com}{\nolinkurl{git@github.com}}:/.git
-\item
-  git branch -r
-\item
-  git fetch
-\item
-  git pull origin main
-\end{enumerate}
-
 \hypertarget{lec1}{%
 \chapter{Subconstituent Algebra of a Graph}\label{lec1}}
 
@@ -548,10 +462,11 @@ E & = \textrm{set of (distinct) 2-element subsets of }X \textrm{ (= edges of ) }
 vertices \(x\) and \(y\in X\) are adjacent if and only if \(xy\in E\).
 
 \begin{example}
+\protect\hypertarget{exm:four-vertex-graph}{}\label{exm:four-vertex-graph}
 
 Let \(\Gamma\) be a graph. \(X = \{a, b, c, d\}\), \(E = \{ab, ac, bc, bd\}\).
 
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-1-1} \end{center}
+\begin{center}\includegraphics{t-algebra_files/figure-latex/four-vertex-group-1} \end{center}
 
 \end{example}
 
@@ -566,7 +481,7 @@ A_{xy} & = \left\{\begin{array}{cl} 1 & \textrm{ if } \; xy\in E\\
 \end{align}
 
 \begin{example}
-Let \(a, b, c, d\) be labels of rows and columns. Then
+\protect\hypertarget{exm:adjacency-matrix}{}\label{exm:adjacency-matrix}Let \(a, b, c, d\) be labels of rows and columns. Then
 \[A = \begin{matrix} \\ a\\ b\\c\\d\end{matrix}\begin{matrix}\begin{matrix} a & b & c & d \end{matrix}\\\begin{pmatrix} 0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 1 \\
 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{pmatrix}\end{matrix}\]
 \end{example}
@@ -643,18 +558,18 @@ So,
 Let \(x, y\in X\) and \(\ell \in \mathbb{Z}^{\geq 0}\).
 
 \begin{definition}
-A path\index{path} of length \(\ell\) connecting \(x, y\) is a sequence
+\protect\hypertarget{def:path}{}\label{def:path}A path\index{path} of length \(\ell\) connecting \(x, y\) is a sequence
 \[x = x_0, x_1, \ldots, x_{\ell} = y, \quad x_i\in X, \; 0\leq i\leq \ell\]
 such that \(x_ix_{i+1}\in E\) for \(0\leq i \leq \ell-1\).
 \end{definition}
 
 \begin{definition}
-The distance\index{distance} \(\partial(x,y)\) is the length of a shortest path connecting \(x\) and \(y\).
+\protect\hypertarget{def:distance}{}\label{def:distance}The distance\index{distance} \(\partial(x,y)\) is the length of a shortest path connecting \(x\) and \(y\).
 \[\partial(x,y) \in \mathbb{Z}^{\geq 0} \cup \{\infty\}.\]
 \end{definition}
 
 \begin{definition}
-The graph \(\Gamma\) is connected\index{connected} if and only if \(\partial(x,y) < \infty\) for all \(x, y\in X\).
+\protect\hypertarget{def:connected}{}\label{def:connected}The graph \(\Gamma\) is connected\index{connected} if and only if \(\partial(x,y) < \infty\) for all \(x, y\in X\).
 \end{definition}
 
 From now on, assume that \(\Gamma\) is connected with \(|X|\geq 2\).
@@ -664,7 +579,7 @@ Set
 Fix a `base' vertex \(x\in X\).
 
 \begin{definition}
-\index{distance}
+\protect\hypertarget{def:diameter}{}\label{def:diameter}\index{diameter}
 \[d(x) = \textrm{the diameter with respect to }x = \max\{\partial(x,y)\mid y\in X\} \leq d.\]
 \end{definition}
 
@@ -682,14 +597,14 @@ Set
 \[M^* = M^*(x) \equiv \textrm{Span}_K(E_0^*(x), \ldots, E_{d(x)}^*(x)).\]
 Then \(M^*(x)\) is a commutative subalgebra of \(\mathrm{Mat}_X(K)\) and is calle the \emph{dual Bose-Mesner algbara with respect to \(x\)}.
 
-\begin{definition}[Subconstituent Algebra]
+::: \{.definition \#t-algebra, name=``Subconstituent Algebra''\}
 Let \(\Gamma = (X, E)\), \(x\), \(M\), \(M^*(x)\) be as above. Let \(T = T(x)\) denote the subalgebra of \(\mathrm{Mat}_X(K)\) generated by \(M\) and \(M^*(x)\). \(T\) is the \emph{subconstituent algebra}\index{subconstituent algebra} of \(\Gamma\) with respect to \(x\).
-\end{definition}
+:::
 
 \begin{definition}
-A \(T\)-module \index{module} is any subspace \(W\subset V\) such that \(aw\in W\) for all \(a\in T\) and \(w\in W\).
+\protect\hypertarget{def:module}{}\label{def:module}A \(T\)-module \index{module} is any subspace \(W\subset V\) such that \(aw\in W\) for all \(a\in T\) and \(w\in W\).
 
-\(T\)-module \(W\) is \emph{irreducible} if and only if \(W\neq 0\) and \(W\) does not properly contain a nonzero \(T\)-module.
+\(T\)-module \(W\) is \emph{irreducible} \index{irreducible} if and only if \(W\neq 0\) and \(W\) does not properly contain a nonzero \(T\)-module.
 \end{definition}
 
 For any \(a\in \mathrm{Mat}_X(K)\), let \(a^*\) denbote the conjugate transpose of \(a\).
@@ -767,12 +682,12 @@ In this lecture we use the Perron Frobenius theory of nonnegative matrices to ob
 Let \(K = \mathbb{R}\). For \(n\in \mathbb{Z}^{> 0}\), pick a symmetrix matrix \(C\in \mathrm{Mat}_n(\mathbb{R})\).
 
 \begin{definition}
-The matrix \(C\) is \emph{reducible}\index{reducible} if and only if there is a bipartition \(\{1, 2, \ldots, n\} = X^+ \cup X^-\) (disjoint union of nonempty sets) such that \(C_{ij} = 0\) for all \(i\in X^+\), and for all \(j\in X^-\), and for all \(i\in X^-\), and for all \(j\in X^+\),i.e.,
+\protect\hypertarget{def:reducible}{}\label{def:reducible}The matrix \(C\) is \emph{reducible}\index{reducible} if and only if there is a bipartition \(\{1, 2, \ldots, n\} = X^+ \cup X^-\) (disjoint union of nonempty sets) such that \(C_{ij} = 0\) for all \(i\in X^+\), and for all \(j\in X^-\), and for all \(i\in X^-\), and for all \(j\in X^+\),i.e.,
 \[ C \sim \begin{pmatrix} \ast & O \\ O & \ast \end{pmatrix}.\]
 \end{definition}
 
 \begin{definition}
-The matrix \(C\) is \emph{bipartite}\index{bipartite} if and only if there is a bipartition \(\{1, 2, \ldots, n\} = X^+ \cup X^-\) (disjoint union of nonempty sets) such that \(C_{ij} = 0\) for all \(i,j\in X^+\), and for all \(i,j\in X^-\), i.e.,
+\protect\hypertarget{def:bipartite-mat}{}\label{def:bipartite-mat}The matrix \(C\) is \emph{bipartite}\index{bipartite} if and only if there is a bipartition \(\{1, 2, \ldots, n\} = X^+ \cup X^-\) (disjoint union of nonempty sets) such that \(C_{ij} = 0\) for all \(i,j\in X^+\), and for all \(i,j\in X^-\), i.e.,
 \[ C \sim \begin{pmatrix} O & \ast \\ \ast  & O \end{pmatrix}.\]
 \end{definition}
 
@@ -938,7 +853,7 @@ Thus by 2, \(C^2\) must be reducible. Therefore, \(C\) is bipartite by Note 3.
 Let \(\Gamma = (X, E)\) be any graph.
 
 \begin{definition}
-\(\Gamma\) is said to be \emph{bipartite}\index{bipartite} if the adjacency matrix \(A\) is bipartite. That is, \(X\) can be written as a disjoint union of \(X^+\) and \(X^-\) such that \(X^+, X^-\) contain no edges of \(\Gamma\).
+\protect\hypertarget{def:bipartite}{}\label{def:bipartite}\(\Gamma\) is said to be \emph{bipartite}\index{bipartite} if the adjacency matrix \(A\) is bipartite. That is, \(X\) can be written as a disjoint union of \(X^+\) and \(X^-\) such that \(X^+, X^-\) contain no edges of \(\Gamma\).
 \end{definition}
 
 \begin{corollary}
@@ -973,8 +888,9 @@ This is a direct consequences of Theorem \ref{thm:pf} and Note 3.
 Given graphs \(\Gamma = (X, E)\) and \(\Gamma' = (X', E')\).
 
 \begin{definition}
+\protect\hypertarget{def:isom}{}\label{def:isom}
 
-A map \(\sigma: X \to X'\) is an \emph{isomorphism}\textbackslash index\{isomorophism of graphs whenever;
+A map \(\sigma: X \to X'\) is an \emph{isomorphism}\index{isomorophism} of graphs whenever;
 
 \begin{enumerate}
 \def\labelenumi{\roman{enumi}.}
@@ -990,16 +906,12 @@ A map \(\sigma: X \to X'\) is an \emph{isomorphism}\textbackslash index\{isomoro
 We do not distinguish between isomorphic graphs.
 
 \begin{definition}
-Suppose \(\Gamma = \Gamma'\). Above isomorphism \(\sigma\) is called an \emph{automorphism}\index{automorphism} of \(\Gamma\). Then set \(\mathrm{Aut}(\Gamma)\) of all automorphisms of \(\Gamma\) becomes a finite group under composition.
+\protect\hypertarget{def:auto}{}\label{def:auto}Suppose \(\Gamma = \Gamma'\). Above isomorphism \(\sigma\) is called an \emph{automorphism}\index{automorphism} of \(\Gamma\). Then set \(\mathrm{Aut}(\Gamma)\) of all automorphisms of \(\Gamma\) becomes a finite group under composition.
 \end{definition}
 
 \begin{definition}
-If \(\mathrm{Aut}(\Gamma)\) acts transitive on \(X\), \(\Gamma\) is called \emph{vertex transitive}\index{vertex transitive}.
+\protect\hypertarget{def:transitive}{}\label{def:transitive}If \(\mathrm{Aut}(\Gamma)\) acts transitive on \(X\), \(\Gamma\) is called \emph{vertex transitive}\index{vertex transitive}.
 \end{definition}
-
-\begin{example}
-A Cayley graphs:
-\end{example}
 
 \begin{definition}[Cayley Graphs]
 \protect\hypertarget{def:cayley}{}\label{def:cayley}Let \(G\) be any finite group, and \(\Delta\) any generating set for \(G\) such that \(1_G \not\in \Delta\) and \(g\in \Delta \to g^{-1}\in \Delta\).
@@ -1009,26 +921,29 @@ Then Cayley graph \(\Gamma = \Gamma(G, \Delta)\) is defined on the vetex set \(X
 \end{definition}
 
 \begin{example}
+\protect\hypertarget{exm:cyclic6}{}\label{exm:cyclic6}
 
 \(G = \langle a \mid a^6 = 1\rangle\), \(\Delta = \{a, a^{-1}\}\).
+
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-1-1} \end{center}
+
+\end{example}
+
+\begin{example}
+\protect\hypertarget{exm:k6minus1}{}\label{exm:k6minus1}
+
+\(G = \langle a \mid a^6 = 1\rangle\), \(\Delta = \{a, a^{-1}, a^2, a^{-2}\}\).
 
 \begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-2-1} \end{center}
 
 \end{example}
 
 \begin{example}
-
-\(G = \langle a \mid a^6 = 1\rangle\), \(\Delta = \{a, a^{-1}, a^2, a^{-2}\}\).
-
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-3-1} \end{center}
-
-\end{example}
-
-\begin{example}
+\protect\hypertarget{exm:d6}{}\label{exm:d6}
 
 \(G = \langle a, b \mid a^6 = 1, b^2, ab = ba\rangle\), \(\Delta = \{a, a^{-1}, b\}\).
 
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-4-1} \end{center}
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-3-1} \end{center}
 
 \end{example}
 
@@ -1106,11 +1021,11 @@ How to compute the eigenvalues of the Cayley graph of and abelian group.
 Let \(G\) be any finite abelian group. Let \(\mathbb{C}^*\) be the multiplicative group on \(\mathbb{C}\setminus \{0\}\).
 
 \begin{definition}
-A (linear) \(G\)-character\index{character} is any group homomorphism \(\theta: G \to \mathbb{C}^*\).
+\protect\hypertarget{def:character}{}\label{def:character}A (linear) \(G\)-character\index{character} is any group homomorphism \(\theta: G \to \mathbb{C}^*\).
 \end{definition}
 
 \begin{example}
-\(G = \langle a\mid a^3 =1\rangle\) has three characters, \(\theta_0, \theta_1, \theta_2\).
+\protect\hypertarget{exm:cyclic3}{}\label{exm:cyclic3}\(G = \langle a\mid a^3 =1\rangle\) has three characters, \(\theta_0, \theta_1, \theta_2\).
 \[
 \begin{array}{c|ccc}
 \theta_i(a^j) & 1 & a & a^2 \\
@@ -1237,10 +1152,10 @@ This completes the proof.
 \end{proof}
 
 \begin{example}
-Let \(G = \langle a\mid a^6 = 1\rangle\), and \(\Delta = \{a, a^{-1}\}\). Pick a primitive 6-th root of 1, \(\omega\). Then
+\protect\hypertarget{exm:character-cyclic6}{}\label{exm:character-cyclic6}Let \(G = \langle a\mid a^6 = 1\rangle\), and \(\Delta = \{a, a^{-1}\}\). Pick a primitive 6-th root of 1, \(\omega\). Then
 \[X(G) = \{\theta^i\mid 0\leq i\leq 5\} \quad \text{such that }\quad \theta(a) = \omega, \; \omega + \omega^{-1} = 1.\]
 
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-5-1} \end{center}
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \[\begin{array}{c | c | c}
 \varphi\in X(G) & \varphi(a) & \Delta_\varphi = \theta(a) + \theta(a)^{-1}\\
@@ -1256,7 +1171,7 @@ Let \(G = \langle a\mid a^6 = 1\rangle\), and \(\Delta = \{a, a^{-1}\}\). Pick a
 \end{example}
 
 \begin{example}
-\(D\)-cube, \(H(D,2)\). Let
+\protect\hypertarget{exm:hd2}{}\label{exm:hd2}\(D\)-cube, \(H(D,2)\). Let
 \[X = \{(a_1, \ldots, a_D)\mid a_i\in \{1,-1\}, \; 1\leq i\leq D\},\]
 \[E = \{xy\mid x, y\in X, \; x, y \text{: different in exactly one coordinate}\}.\]
 Also \(H(D,2)\) is a Cayley graph \(\Gamma(G, \Delta)\), where
@@ -1284,7 +1199,7 @@ Fix a base \(x\in X\). Write \(E_i^* = E_i^*(x)\), and
 \[T \equiv T(x) = \text{the algebra generated by}\; A, E_0^*, E_1^*, \ldots .\]
 
 \begin{definition}
-Let \(W\) be any orreducible \(T\)-module (\(\subseteq V\)). Then the endpoint\index{endpoint} \(r \equiv r(W)\) satisfied
+\protect\hypertarget{def:rd}{}\label{def:rd}Let \(W\) be any irreducible \(T\)-module (\(\subseteq V\)). Then the endpoint\index{endpoint} \(r \equiv r(W)\) satisfied
 \[r = \min\{i\mid E_i^*W \neq 0\}.\]
 The diameter\index{diameter} \(d = d(W)\) satisfied
 \[d = |\{i\mid E_i^*W \neq 0\}| - 1.\]
@@ -1855,7 +1770,7 @@ Get a situation like \(H(D,2)\), where \(T\) is generated by \(A\), \(A^*\). Exc
 \textbf{Wednesday, February 3, 1993}
 
 \begin{definition}
-The Johnson graph, \(\Gamma = J(D,N)\) \((1\leq D\leq N-1)\) satisfies
+\protect\hypertarget{def:johnson}{}\label{def:johnson}The Johnson graph, \(\Gamma = J(D,N)\) \((1\leq D\leq N-1)\) satisfies
 \begin{align}
 X & = \{S\mid S\subset \Omega, \; |S| = D\} \quad\text{where }\; \Omega = \{1, 2, \ldots, N\}\\
 E & = \{ST\mid S, T\in X, \quad |S\cap T| = D-1\}.
@@ -1863,10 +1778,11 @@ E & = \{ST\mid S, T\in X, \quad |S\cap T| = D-1\}.
 \end{definition}
 
 \begin{example}
+\protect\hypertarget{exm:j42}{}\label{exm:j42}
 
 \(J(2,4)\)
 
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-6-1} \end{center}
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-5-1} \end{center}
 
 \end{example}
 
@@ -1895,7 +1811,7 @@ Hence, without loss of generality, assume
 We sill need the eigenvalues of \(J(D,N)\) for certain problem later in the course. We can get these eigenvalues from our study of \(H(D,2)\).
 
 \begin{lemma}
-The eigenvalues for \(J(D,N)\) with \(1\leq D \leq N/2\) are give by
+\protect\hypertarget{lem:ev-johnson}{}\label{lem:ev-johnson}The eigenvalues for \(J(D,N)\) with \(1\leq D \leq N/2\) are give by
 \begin{align}
 \theta_i & = (N-D-i)(D-i) - i \quad (0\leq i\leq D),\\
 m_i & = \binom{N}{i} - \binom{N}{i-1}.
@@ -2698,7 +2614,7 @@ In this xase, \(k^+k^- = \theta_0^2\), and \(\Gamma\) is called bi-regular.
 \begin{proof}
 \((i)\to(ii)\)
 
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-7-1} \end{center}
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-6-1} \end{center}
 
 \begin{align}
 A\delta & = A\left(\alpha^+\sum_{x\in X^+}\hat{x} + \alpha^-\sum_{y\in X^-}\hat{y}\right)\\
@@ -2745,7 +2661,7 @@ We call \(c_i(x)\), \(a_i(x)\) and \(b_i(x)\) the intersection numbers with resp
 \begin{example}
 \leavevmode
 
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-8-1} \end{center}
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-7-1} \end{center}
 
 \begin{align}
 c_0 &= 1 & c_1 &= 1 & c_2 &= 1\\
@@ -2776,7 +2692,7 @@ For any connected graph \(\Gamma = (X, E)\), the following are equivalent.
 \textbf{Note.}
 Let \(\Gamma = (X, E)\) be a graph, with \(X = \{x, y_1, y_2, y_3, z_1, z_2, z_3\}\), \(E = \{xy_1, xy_2, xy_3, y_1z_1, y_1z_2, y_2z_3, y_3z_3\}\).
 
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-9-1} \end{center}
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-8-1} \end{center}
 
 Then \((i)\), \((ii)\) are not equivalent for a single vertex \(x\).
 \begin{align}
@@ -2937,7 +2853,7 @@ by triangle inequality.
 
 (\(\Delta = \partial(x,y) < r+i - r'\) or \(\Delta + r' < r + i\) by our choice of \(i\).)
 
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-10-1} \end{center}
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-9-1} \end{center}
 
 Hence,
 \[E^*_{r'}(y)V \bot E^*_{r+i}(x)V,\]
@@ -3706,7 +3622,7 @@ Claim 2. \(\langle w_i, B_j \rangle = 0\) if \(j\not\in \{i, i+1\}\), \((0\leq i
 \emph{Proof of Claim 2.}
 \[w_i\in E^*_{1+i}W, \quad B_j\in E^*_j(x)W + E^*_{j+1}(x)W.\]
 
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-11-1} \end{center}
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-10-1} \end{center}
 
 Vertical lines indicate possible non-orthogonality.
 
@@ -3722,7 +3638,7 @@ Evaluate for \(i = j-2, j-1, j, j+1\).
 
 Set \(i = j-2\).
 
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-12-1} \end{center}
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-11-1} \end{center}
 
 Then \eqref{eq:wibj} becomes
 \[\langle w_{j-1}, B_j\rangle = b_j\langle w_{j-2},B_{j-1}\rangle \quad (2\leq j\leq D-1).\]
@@ -8450,7 +8366,7 @@ Case: \(\partial(y,z) = 1\).
 By Lemma \ref{lem:e11star-to-e22star} \((ii)\), there exists \(w\in X\) such that
 \[\partial(x,z) = 1, \; \partial(w,y)=2, \; \partial(w,z)=2.\]
 
-\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-13-1} \end{center}
+\begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-12-1} \end{center}
 
 Now,
 \[\Psi(x,y) = \Psi(x,w) = \Psi(x,z)\]
@@ -8857,10 +8773,225 @@ There are a number of additional problems in section 7 of the thick paper I hand
 
 For each of the above problems, I have a good ideal of background information to communicate, but unfortunately in most cases it is not in published form! If you tell me what problem you want to focus on, I can tailor a series of lectures this summer towards communicating what I know on the subject. But one key point: Often ``I don't know ahta I know''. If you are constantly asking probing questions of me it makes my job a lot easier: it often reminds me of information that is relevant that I had forgotten, or that I had forgotten was relevant.
 
-\hypertarget{lec55}{%
-\chapter{Title of the Chapter}\label{lec55}}
+\hypertarget{table}{%
+\chapter{Comparison Table}\label{table}}
 
-\textbf{Wednesday, February 17, 1993} \# Edit Date
+We list Definitions, Theorems, Lemmas, etc. with the numbers in the original handwritten note.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4722}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2639}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2639}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Chapter
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+New Numbering
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Old Numbering
+\end{minipage} \\
+\midrule()
+\endhead
+1 & Example \ref{exm:four-vertex-graph} & Example \\
+& Example \ref{exm:adjacency-matrix} & Example \\
+& Definition \ref{def:regular} & Definition \\
+& Lemma \ref{lem:largestev} & Lemma 1 \\
+& Definition \ref{def:path} & Definition \\
+& Definition \ref{def:distance} & Definition \\
+& Definition \ref{def:connected} & Definition \\
+& Definition \ref{def:diameter} & Definition \\
+& Definition \ref{def:t-algebra} & Definition \\
+& Definition \ref{def:module} & Definition \\
+& Lemma \ref{lem:complete-reducibility} & Lemma 2 \\
+2 & Definition \ref{def:reducible} & Definition \\
+& Definition \ref{def:bipartite-mat} & Definition \\
+& Theorem \ref{thm:pf} & Theorem 3 \\
+& Lemma \ref{lem:pfl} & Lemma 4 \\
+& Definition \ref{def:bipartite} & Definition \\
+& Corollary \ref{cor:spec} & Corollary 5 \\
+3 & Definition \ref{def:isom} & Definition \\
+& Definition \ref{def:auto} & Definition \\
+& Definition \ref{def:transitive} & Definition \\
+& Definition \ref{def:cayley} & Definition \\
+& Example \ref{exm:cyclic6} & Example \\
+& Example \ref{exm:k6minus1} & Example \\
+& Example \ref{exm:d6} & Example \\
+& Theorem \ref{thm:cayley-graph} & Theorem 6 \\
+& Definition \ref{def:character} & Definition \\
+& Example \ref{exm:cyclic3} & Example \\
+& Lemma \ref{lem:charactergroup} & Lemma 7 \\
+4 & Theorem \ref{thm:charcter-group} & Theorem 8 \\
+& Example \ref{exm:character-cyclic6} & Example \\
+& Example \ref{exm:hd2} & Example \\
+& Definition \ref{def:rd} & Definition \\
+& Lemma \ref{lem:irreducible} & Lemma 9 \\
+5 & Definition \ref{def:isomorphic-modules} & Definition \\
+& Theorem \ref{thm:hd2-modules} & Theorem 10 \\
+6 & Theorem \ref{thm:hd2-modules2} & Theorem 11 \\
+& Definition \ref{def:thin-dualthin} & Definition \\
+& Definition \ref{def:q-polynomial-graph} & Definition \\
+7 & Definition \ref{def:johnson} & Definition \\
+& Example \ref{exm:j42} & Example \\
+& Lemma \ref{lem:ev-johnson} & Lemma 12 \\
+& Theorem \ref{thm:thin-condition} & Theorem 13 \\
+8 & Lemma \ref{lem:property-g} & Lemma 14 \\
+9 & Lemma \ref{lem:thin-module-structure} & Lemma 15 \\
+& Corollary \ref{cor:thin-is-dualthin} & Corollary 16 \\
+& Lemma \ref{lem:measure-wi} & Lemma 17 \\
+& Definiton \ref{def:measure} & Definition \\
+10 & Lemma \ref{lem:orthogonality} & Lemma 18 \\
+& Lemma \ref{lem:determined-by-m} & Lemma 19 \\
+& Corollary \ref{cor:isomorphic} & Corollary 20 \\
+11 & Lemma \ref{lem:principal-module} & Lemma 21 \\
+& Lemma \ref{lem:baiparite-principal} & Lemma 22 \\
+12 & Lemma \ref{lem:distance-reguarity} & Lemma 23 \\
+& Theorem \ref{thm:two-thin-modules} & Theorem 24 \\
+13 & Lemma \ref{lem:two-principal-modules} & Lemma 25 \\
+& Theorem \ref{thm:distance-regular-x} & Theorem 26 \\
+& Proposition \ref{prp:dim-diameter} & Proposition 27 \\
+14 & Lemma \ref{lem:basic-data} & Lemma 28 \\
+& Lemma \ref{lem:thin-endpoint1} & Lemma 29 \\
+15 & Definition \ref{def:complete-graph} & Definition \\
+& Lemma \ref{lem:sedond-and-largest-ev} & Lemma 30 \\
+16 & Definition \ref{def:ith-incidence} & Definition \\
+& Lemma \ref{lem:incidence-matrices} & Lemma 31 \\
+& Theorem \ref{thm:endpoint1} & Theorem 32 \\
+& Lemma \ref{lem:aixigi} & Lemma 33* \\
+17 & Definition \ref{def:association-scheme} & Definition \\
+& Definition \ref{def:incidencemat-of-as} & Definition \\
+& Example \ref{exm:dr} & Example 1 \\
+& Example \ref{exm:gen-tr} & Example 2 \\
+& Exercise \ref{exr:gen-tr-case} & Exercise \\
+& Example \ref{exm:centralizer-alg} & Example 3 \\
+18 & Lemma \ref{lem:dr-scheme} & Lemma 33 \\
+19 & Lemma \ref{lem:ei} & Lemma 34 \\
+& Definition \ref{def:dual-bose-mesner} & Definition: \\
+20 & Lemma \ref{lem:pij-qij} & Lemma 34-a \\
+& Lemma \ref{lem:phijqhij} & Lemma 34-b \\
+& Lemma \ref{lem:vanishing-condition} & Lemma 35 \\
+& Corollary \ref{cor:qhij} & Corollary 36 \\
+& Lemma \ref{lem:vector-function-product} & Lemma 37 \\
+21 & Lemma \ref{lem:norton-algebra} & Lemma 38 \\
+& Lemma \ref{lem:autom-of-norton-algebra} & Lemma 39 \\
+22 & Lemma \ref{lem:phijqhij2} & Lemma 40 \\
+& Definition \ref{def:q-polynomial} & Definition \\
+& Lemma \ref{lem:q-conditions} & Lemma 41 \\
+23 & Theorem \ref{thm:q-polynomial-space} & Theorem 42 \\
+& Definition \ref{def:representation-of-y} & Definition \\
+& Example \ref{exm:representation-of-hd2} & Example \\
+24 & Definition \ref{def:equivalence-of-representation} & Definition \\
+& Lemma \ref{lem:rep-of-scheme} & Lemma 43 \\
+& Definition \ref{def:q-poly-representation} & Definition \\
+& Theorem \ref{thm:balanced} & Theorem 44 \\
+26 & Corollary \ref{cor:beta} & Corollary 45 \\
+& Lemma \ref{lem:dual-eigenvalues} & Lemma 46 \\
+27 & Theorem \ref{thm:p-and-q} & Theorem 47 \\
+& Definition \ref{def:qbinomial} & Definition \\
+& Definition \ref{def:classical} & Definition \\
+& Lemma \ref{lem:classical-parameters} & Lemma 48 \\
+& Example \ref{exm:classical-parameters} & Example \\
+28 & Lemma \ref{lem:EV} & Lemma 49 \\
+& Conjecture \ref{cnj:EV} & Conjecture \\
+29 & Theorem \ref{thm:aastar} & Theorem 50 \\
+30 & Theorem \ref{thm:rfl-relations} & Theorem 51 \\
+& Lemma \ref{lem:epm-gpm} & Lemma 52 \\
+& Corollary \ref{cor:fr2lr2r2l} & Corollary 53 \\
+31 & Lemma \ref{lem:inverse-of-r} & Lemma 54 \\
+32 & Lemma \ref{lem:action-of-r} & Lemma 55 \\
+& Lemma \ref{lem:action-on-estar1v-new} & Lemma 56 \\
+& Lemma \ref{lem:generator-endpoint1-mod} & Lemma 57 \\
+33 & Lemma \ref{lem:mezerostarm} & Lemma 58 \\
+& Lemma \ref{lem:eonemmstar} & Lemma 59 \\
+& Lemma \ref{lem:tildej-tildea} & Lemma 60 \\
+& Lemma \ref{lem:e1starte1star} & Lemma 61 \\
+34 & Lemma \ref{lem:mvplusmstarvstar} & Lemma 62 \\
+& Lemma \ref{lem:tv} & Lemma 63 \\
+& Lemma \ref{lem:tv-thin} & Lemma 64 \\
+35 & Theorem \ref{thm:dim5} & Theorem 65 \\
+36 & Conjecture \ref{cnj:q-polynomial} & Conjecture \\
+& Conjecture \ref{cnj:unimodality} & Conjecture \\
+& Conjecture \ref{cnj:not-thin} & Conjecture \\
+37 & Lemma \ref{lem:1-thin-condition} & Lemma 66 \\
+& Definition \ref{def:generalized-adjacency-matrix} & Definition \\
+& Example \ref{exm:generalized-adjacecy-matrix} & Example \\
+& Lemma \ref{lem:generalized-adjacecy-matrix} & Lemma 67 \\
+38 & Lemma \ref{lem:e11star-to-e22star} & Lemma 68 \\
+& Definition \ref{def:Psi} & Definition \\
+& Lemma \ref{lem:map-e11star-to-e22star} & Lemma 69 \\
+39 & Lemma \ref{lem:delta-minus11} & Lemma 70 \\
+& Lemma \ref{lem:psi} & Lemma 71 \\
+& Lemma \ref{lem:aplus-aminus} & Lemma 72 \\
+& Lemma \ref{lem:tyx-equals-txy} & Lemma 73 \\
+40 & Lemma \ref{lem:endpoint-at-most-one} & Lemma 74 \\
+& Lemma \ref{lem:tilde-mi} & Lemma 75 \\
+& Lemma \ref{lem:h} & Lemma 76 \\
+& Theorem \ref{thm:zi} & Theorem 77 \\
+& & \\
+\bottomrule()
+\end{longtable}
+
+\hypertarget{memo}{%
+\chapter{Technical Memo}\label{memo}}
+
+This note is created by \texttt{bookdown} package on RStudio.
+
+For \texttt{bookdown} See \citep{xie2015}, \citep{xie2017}, \citep{xie2018}.
+
+\textbf{The following is a memo.}
+
+A. Install R and R Studio with necessary packages if needed
+
+B. Create and setup ssh key by \texttt{ssh-keygen}
+
+C. Setup Git-GitHub connection
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a GitHub Account if needed\\
+\item
+  Set ssh key by copying the value of the public SSH key to the clipboard using \texttt{pbcopy} and paste it into SSH Keys in the GitHub Account
+\end{enumerate}
+
+D. Remote Repository
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Log-in to the GitHub Account
+\item
+  Go to RStudio/bookdown-demo repository: \url{https://github.com/rstudio/bookdown-demo}
+\item
+  Use This Template
+\item
+  Input Repository Name
+\item
+  Select Public - default
+\item
+  Create repository from template
+\item
+  Set Pages: Branch main, docs
+\end{enumerate}
+
+E. Local Repository
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  copy: Code \textgreater{} Clone \textgreater{} SSH
+\item
+  create a new project by version control git
+\item
+  Change directory name \texttt{\_book} to \texttt{docs}
+\item
+  Edit YAMLs
+\end{enumerate}
+
+All source files are in the
+\href{https://github.com/icu-hsuzuki/t-algebra}{GitHub Repository}.
 
   \bibliography{book.bib,packages.bib}
 

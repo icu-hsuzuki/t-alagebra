@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-24" />
+<meta name="date" content="2022-12-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,12 +94,10 @@ div.csl-indent {
 <li><a href="./">Lecture Note on Terwilliger Algebra</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this lecturenote</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#memo"><i class="fa fa-check"></i>MEMO</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#foreword"><i class="fa fa-check"></i>Foreword</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface-by-p.-terwilliger"><i class="fa fa-check"></i>Preface by P. Terwilliger</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical-memo"><i class="fa fa-check"></i>Technical Memo</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#another-host"><i class="fa fa-check"></i>Another Host</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="lec1.html"><a href="lec1.html"><i class="fa fa-check"></i><b>1</b> Subconstituent Algebra of a Graph</a></li>
 <li class="chapter" data-level="2" data-path="lec2.html"><a href="lec2.html"><i class="fa fa-check"></i><b>2</b> Perron-Frobenius Theorem</a></li>
@@ -143,7 +141,8 @@ div.csl-indent {
 <li class="chapter" data-level="40" data-path="lec40.html"><a href="lec40.html"><i class="fa fa-check"></i><b>40</b> Structure of 1-Thin DRG</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>A</b> Open Problems</a></li>
-<li class="chapter" data-level="B" data-path="lec55.html"><a href="lec55.html"><i class="fa fa-check"></i><b>B</b> Title of the Chapter</a></li>
+<li class="chapter" data-level="B" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>B</b> Comparison Table</a></li>
+<li class="chapter" data-level="C" data-path="memo.html"><a href="memo.html"><i class="fa fa-check"></i><b>C</b> Technical Memo</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -222,7 +221,7 @@ e^-_i &amp; = \frac{-(\beta+1)\theta^*_{i-2}+(\beta+2)\theta^*_{i-1}-\theta^*_i}
 and <span class="math inline">\(e^+_0, e^-_1\)</span> are indeterminants.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-123" class="proof"><em>Proof</em>. </span>WE have
+<p><span id="unlabeled-div-97" class="proof"><em>Proof</em>. </span>WE have
 <span class="math display">\[O = A^3A^*-A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2)\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A).\]</span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> Fix <span class="math inline">\(i\)</span> <span class="math inline">\((2\leq i\leq D)\)</span>, and multply above on the left by <span class="math inline">\(E^*_{i-2}\)</span>, and on the right by <span class="math inline">\(E^*_i\)</span>. Now reduce.</div>
 <p>For example,
@@ -237,7 +236,7 @@ E^*_{i-2}A^3 E^*_i &amp; = E^*_{i-2}A\left(\sum_{r=0}^D E^*_r\right)A\left(\sum_
 \end{align}\]</span>
 Reducing the other terms in a similar manner, and simplifying, we obtain <span class="math inline">\((i)\)</span>.</p>
 <div class="remark">
-<p><span id="unlabeled-div-122" class="remark"><em>Remark</em>. </span><span class="math display">\[\begin{align}
+<p><span id="unlabeled-div-96" class="remark"><em>Remark</em>. </span><span class="math display">\[\begin{align}
 E^*_{i-2}A^*A^3E^*_i &amp; = \theta^*_{i-2}E^*_{i-2}A^3E^*_i\\
 &amp; = \theta^*_{i-2}(FL^2+LFL + L^2F)E^*_i\\
 E^*_{i-2}A^2A^*AE^*_i &amp; = (\theta^*_{i-1}(FL^2+LFL) + \theta^*_iL^2F)E^*_i\\
@@ -262,7 +261,7 @@ O &amp;= ((\theta^*_i-\theta^*_{i-2})(FL^2+LFL+L^2F)\\
 <div class="line-block"><br />
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-124" class="remark"><em>Remark</em>. </span></p>
+<p><span id="unlabeled-div-98" class="remark"><em>Remark</em>. </span></p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> We have</div>
 <p><span class="math display">\[O = E^*_i(A^3A^*-A^*A^3-(\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*E))E^*_i.\]</span>
 Since <span class="math inline">\(\beta+1\neq 0\)</span>, by <a href="lec29.html#eq:beta3">(29.20)</a> if <span class="math inline">\(D\geq 3\)</span>,
@@ -305,11 +304,11 @@ g^-_i &amp; = \frac{\theta^*_{i-2}-\theta^*_{i-3}}{\theta^*_{i-2}-\theta^*_{i}} 
 In particular, <span class="math inline">\(e^\pm_i\)</span>, <span class="math inline">\(g^\pm_i\)</span> are non-zero for the range of <span class="math inline">\(i\)</span> given above.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-125" class="proof"><em>Proof</em>. </span>In each case, equate the above expression with the corresponding expression in Theorem <a href="lec30.html#thm:rfl-relations">30.1</a>.
+<p><span id="unlabeled-div-99" class="proof"><em>Proof</em>. </span>In each case, equate the above expression with the corresponding expression in Theorem <a href="lec30.html#thm:rfl-relations">30.1</a>.
 The resulting equation is equal to <a href="lec29.html#eq:beta">(29.7)</a>.</p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-126" class="remark"><em>Remark</em>. </span>By Corollary <a href="lec26.html#cor:beta">26.1</a> and Therem <a href="lec29.html#thm:aastar">29.1</a>,
+<p><span id="unlabeled-div-100" class="remark"><em>Remark</em>. </span>By Corollary <a href="lec26.html#cor:beta">26.1</a> and Therem <a href="lec29.html#thm:aastar">29.1</a>,
 <span class="math display">\[e^+_i = \frac{\theta^*_{i-1}-(\beta+2)\theta^*_i + (\beta+1)\theta^*_{i+1}}{\beta^*_{i-1}-\theta^*_i},\]</span>
 and
 <span class="math display">\[\beta + 1 = \frac{\theta^*_{j-1}-\theta^*_j+\theta^*_{j+1}-\theta^*_{j+2}}{\theta^*_j-\theta^*_{j+1}}+1 = \frac{\theta^*_{j-1}-\theta^*_{j+2}}{\theta^*_j-\theta^*_{j+1}}.\]</span>
@@ -338,10 +337,10 @@ Then the following hold.</p>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(R^2LE^*_j \in \mathrm{Span}(RLRE^*_j, LR^2E^*_j, F^2RE^*_j, FRFE^*_j, RF^2E^*j, RFE^*_j, FRE^*_j, RE^*_j)\)</span>, <span class="math inline">\((1\leq j\leq D)\)</span>.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-127" class="proof"><em>Proof</em>. </span>Immediate from Theorem <a href="lec30.html#thm:rfl-relations">30.1</a>, and Lemma <a href="lec30.html#lem:epm-gpm">30.1</a>.</p>
+<p><span id="unlabeled-div-101" class="proof"><em>Proof</em>. </span>Immediate from Theorem <a href="lec30.html#thm:rfl-relations">30.1</a>, and Lemma <a href="lec30.html#lem:epm-gpm">30.1</a>.</p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-128" class="remark"><em>Remark</em>. </span>By Theorem <a href="lec30.html#thm:rfl-relations">30.1</a>, and Lemma <a href="lec30.html#lem:epm-gpm">30.1</a>, we have the following, but similarly we can obtain above.</p>
+<p><span id="unlabeled-div-102" class="remark"><em>Remark</em>. </span>By Theorem <a href="lec30.html#thm:rfl-relations">30.1</a>, and Lemma <a href="lec30.html#lem:epm-gpm">30.1</a>, we have the following, but similarly we can obtain above.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(FL^2E^*_j \in \mathrm{Span}(LFLE^*_j, L^2FE^*_j, L^2E^*_j)\)</span>, <span class="math inline">\((3\leq j\leq D)\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(L^2FE^*_j \in \mathrm{Span}(LFLE^*_j, FL^2E^*_j, L^2E^*_j)\)</span>, <span class="math inline">\((2\leq j\leq D-1)\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(RL^2E^*_j \in \mathrm{Span}(LRLE^*_j, L^2RE^*_j, F^2LE^*_j, FLFE^*_j, LF^2E^*j, LFE^*_j, FLE^*_j, LE^*_j)\)</span>, <span class="math inline">\((3\leq j\leq D)\)</span>.</div>

@@ -3,8 +3,8 @@
 
 Given graphs $\Gamma = (X, E)$ and $\Gamma' = (X', E')$.
 
-:::{.definition}
-A map $\sigma: X \to X'$ is an _isomorphism_\index{isomorophism of graphs whenever;
+:::{.definition #isom}
+A map $\sigma: X \to X'$ is an _isomorphism_\index{isomorophism} of graphs whenever;
 
 i. $\sigma$ is one-to-one and onto,
 ii. $xy\in E$ if and only if $\sigma x \sigma y \in E'$ for all $x, y\in X$.
@@ -12,19 +12,14 @@ ii. $xy\in E$ if and only if $\sigma x \sigma y \in E'$ for all $x, y\in X$.
 
 We do not distinguish between isomorphic graphs.
 
-:::{.definition}
+:::{.definition #auto}
 Suppose $\Gamma = \Gamma'$. Above isomorphism $\sigma$ is called an _automorphism_\index{automorphism} of $\Gamma$. Then set $\mathrm{Aut}(\Gamma)$ of all automorphisms of $\Gamma$ becomes a finite group under composition.
 :::
 
-:::{.definition}
+:::{.definition #transitive}
 If $\mathrm{Aut}(\Gamma)$ acts transitive on $X$, $\Gamma$ is called _vertex transitive_\index{vertex transitive}.
 :::
 
-:::{.example}
-A Cayley graphs:
-
-
-:::
 
 :::{.definition #cayley name="Cayley Graphs"}
 Let $G$ be any finite group, and $\Delta$ any generating set for $G$ such that $1_G \not\in \Delta$ and $g\in \Delta \to g^{-1}\in \Delta$.
@@ -33,7 +28,7 @@ Then Cayley graph $\Gamma = \Gamma(G, \Delta)$ is defined on the vetex set $X = 
 $$E = \{(h_1,h_2)\mid h_1, h_2\in G, h_1^{-1}h_2\in \Delta\} = \{(h, hg) \mid h\in G, g\in \Delta\}$$
 :::
 
-:::{.example}
+:::{.example #cyclic6}
 $G = \langle a \mid a^6 = 1\rangle$, $\Delta = \{a, a^{-1}\}$.
 
 ```{r echo=FALSE, fig.width=2, fig.height=1.5, message=FALSE, fig.align="center"}
@@ -49,7 +44,7 @@ ggplot(df_eg31, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(pan
 :::
 
 
-:::{.example}
+:::{.example #k6minus1}
 $G = \langle a \mid a^6 = 1\rangle$, $\Delta = \{a, a^{-1}, a^2, a^{-2}\}$.
 
 ```{r echo=FALSE, fig.width=2, fig.height=1.5, message=FALSE, fig.align="center"}
@@ -64,7 +59,7 @@ ggplot(df_eg32, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(pan
 ```
 :::
 
-:::{.example}
+:::{.example #d6}
 $G = \langle a, b \mid a^6 = 1, b^2, ab = ba\rangle$, $\Delta = \{a, a^{-1}, b\}$.
 ```{r echo=FALSE, fig.width=3.5, fig.height=2.5, message=FALSE, fig.align="center", warning = FALSE}
 library(tidyverse)
@@ -157,11 +152,11 @@ How to compute the eigenvalues of the Cayley graph of and abelian group.
 
 Let $G$ be any finite abelian group. Let $\mathbb{C}^*$ be the multiplicative group on $\mathbb{C}\setminus \{0\}$.
 
-:::{.definition}
+:::{.definition #character}
 A (linear) $G$-character\index{character} is any group homomorphism $\theta: G \to \mathbb{C}^*$.
 :::
 
-:::{.example}
+:::{.example #cyclic3}
 $G = \langle a\mid a^3 =1\rangle$ has three characters, $\theta_0, \theta_1, \theta_2$.
 $$
 \begin{array}{c|ccc}
