@@ -62,7 +62,7 @@
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
 
-\usepackage{amsthm, amsmath, amssymb, amsbsy, amsopn, amsxtra, amscd, amstext}
+%\usepackage{amsthm, amsmath, amssymb, amsbsy, amsopn, amsxtra, amscd, amstext}
 \usepackage{makeidx}
 \makeindex
 \makeatletter
@@ -72,7 +72,7 @@
 }
 
 %%% HS MEMO BOX - does not work
-\usepackage{color}
+% \usepackage{color}
 \usepackage{framed}
 \setlength{\fboxsep}{.8em}
 
@@ -84,46 +84,46 @@
 %%%
 
 
-
-\newcommand{\bN}{\mathbb{N}}
-\newcommand{\bZ}{\mathbb{Z}}
-\newcommand{\bR}{\mathbb{R}}
-\newcommand{\bC}{\mathbb{C}}
-\newcommand{\bQ}{\mathbb{Q}}
-\newcommand{\cA}{\mathcal{A}}
-\newcommand{\cB}{\mathcal{B}}
-\newcommand{\cC}{\mathcal{C}}
-\newcommand{\cD}{\mathcal{D}}
-\newcommand{\cE}{\mathcal{E}}
-\newcommand{\cF}{\mathcal{F}}
-\newcommand{\cG}{\mathcal{G}}
-\newcommand{\cH}{\mathcal{H}}
-\newcommand{\cI}{\mathcal{I}}
-\newcommand{\cL}{\mathcal{L}}
-\newcommand{\cM}{\mathcal{M}}
-\newcommand{\cN}{\mathcal{N}}
-\newcommand{\cO}{\mathcal{O}}
-\newcommand{\cP}{\mathcal{P}}
-\newcommand{\cR}{\mathcal{R}}
-\newcommand{\cS}{\mathcal{S}}
-\newcommand{\cT}{\mathcal{T}}
-\newcommand{\cX}{\mathcal{X}}
-\newcommand{\cY}{\mathcal{Y}}
-\newcommand{\cZ}{\mathcal{Z}}
-\newcommand{\as}{\cX = (X,\{R_{i}\}_{0\leq i\leq d})}
-\newcommand{\tas}{\cX = (X,\{R_{i,j}\}_{(i,j)\in I})}
-\newcommand{\gas}{\cG = (G,\{R_i\}_{0\leq i\leq d})}
-\newcommand{\edge}{\mbox{{\rm edge}}}
-\newcommand{\lp}{\mbox{{\rm loop}}}
-\newcommand{\nmat}{\textrm{Mat}_n(\bC)}
-\newcommand{\xmat}{\textrm{Mat}_X(\bC)}
-\newcommand{\xrmat}{\textrm{Mat}_X(\bR)}
-\newcommand{\mat}{\textrm{Mat}}
-\newcommand{\tr}{\textrm{tr}}
-\newcommand{\rank}{\textrm{rank}}
-\newcommand{\spn}{\textrm{Span}}
-\newcommand{\spec}{\textrm{Spec}}
-
+%
+% \newcommand{\bN}{\mathbb{N}}
+% \newcommand{\bZ}{\mathbb{Z}}
+% \newcommand{\bR}{\mathbb{R}}
+% \newcommand{\bC}{\mathbb{C}}
+% \newcommand{\bQ}{\mathbb{Q}}
+% \newcommand{\cA}{\mathcal{A}}
+% \newcommand{\cB}{\mathcal{B}}
+% \newcommand{\cC}{\mathcal{C}}
+% \newcommand{\cD}{\mathcal{D}}
+% \newcommand{\cE}{\mathcal{E}}
+% \newcommand{\cF}{\mathcal{F}}
+% \newcommand{\cG}{\mathcal{G}}
+% \newcommand{\cH}{\mathcal{H}}
+% \newcommand{\cI}{\mathcal{I}}
+% \newcommand{\cL}{\mathcal{L}}
+% \newcommand{\cM}{\mathcal{M}}
+% \newcommand{\cN}{\mathcal{N}}
+% \newcommand{\cO}{\mathcal{O}}
+% \newcommand{\cP}{\mathcal{P}}
+% \newcommand{\cR}{\mathcal{R}}
+% \newcommand{\cS}{\mathcal{S}}
+% \newcommand{\cT}{\mathcal{T}}
+% \newcommand{\cX}{\mathcal{X}}
+% \newcommand{\cY}{\mathcal{Y}}
+% \newcommand{\cZ}{\mathcal{Z}}
+% \newcommand{\as}{\cX = (X,\{R_{i}\}_{0\leq i\leq d})}
+% \newcommand{\tas}{\cX = (X,\{R_{i,j}\}_{(i,j)\in I})}
+% \newcommand{\gas}{\cG = (G,\{R_i\}_{0\leq i\leq d})}
+% \newcommand{\edge}{\mbox{{\rm edge}}}
+% \newcommand{\lp}{\mbox{{\rm loop}}}
+% \newcommand{\nmat}{\textrm{Mat}_n(\bC)}
+% \newcommand{\xmat}{\textrm{Mat}_X(\bC)}
+% \newcommand{\xrmat}{\textrm{Mat}_X(\bR)}
+% \newcommand{\mat}{\textrm{Mat}}
+% \newcommand{\tr}{\textrm{tr}}
+% \newcommand{\rank}{\textrm{rank}}
+% \newcommand{\spn}{\textrm{Span}}
+% \newcommand{\spec}{\textrm{Spec}}
+%
 
 \makeatother
 \ifLuaTeX
@@ -3116,7 +3116,7 @@ Since \(A\) is real symmetric and
 \[E_i\overline{E_i}^\top = E_i^2 = E_i\]
 with \(E_i\) symmetric
 \[E_i \sim \begin{pmatrix} I & O \\ O & I\end{pmatrix}.\]
-\[\mathrm{trace} E_i = \rank E_i = \dim E_iV.\]
+\[\mathrm{trace} E_i = \mathrm{rank} E_i = \dim E_iV.\]
 Thus, we have the assertion in this case.
 
 Suppose \(\Gamma\) is biregular.

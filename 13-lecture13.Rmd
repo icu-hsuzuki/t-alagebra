@@ -188,7 +188,7 @@ Since $A$ is real symmetric and
 $$E_i\overline{E_i}^\top = E_i^2 = E_i$$
 with $E_i$ symmetric
 $$E_i \sim \begin{pmatrix} I & O \\ O & I\end{pmatrix}.$$
-$$\mathrm{trace} E_i = \rank E_i = \dim E_iV.$$
+$$\mathrm{trace} E_i = \mathrm{rank} E_i = \dim E_iV.$$
 Thus, we have the assertion in this case.
 
 Suppose $\Gamma$ is biregular.
