@@ -72,15 +72,17 @@
 }
 
 %%% HS MEMO BOX - does not work
-% \usepackage{color}
+\usepackage{color}
 \usepackage{framed}
 \setlength{\fboxsep}{.8em}
 
-\newenvironment{hs}{
-  \definecolor{shadecolor}{rgb}{0.64, 0.64, 0.64}  % greay #f5f5f5
-  \color{black}
-  \begin{shaded}}
- {\end{shaded}}
+\definecolor{shadecolor}{RGB}{245,245,245}
+
+\newenvironment{hs}{\begin{shaded}}{\end{shaded}}
+%  \definecolor{shadecolor}{rgb}{0.64, 0.64, 0.64}  % greay #f5f5f5
+%  \color{black}
+
+
 %%%
 
 
@@ -8821,9 +8823,9 @@ For each of the above problems, I have a good deal of background information to 
 We list Definitions, Theorems, Lemmas, etc. with the numbers in the original handwritten note.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3906}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3594}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1154}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6795}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2051}}@{}}
 \toprule()
 \begin{minipage}[b]{\linewidth}\raggedright
 Chapter

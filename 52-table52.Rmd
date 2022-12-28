@@ -3,7 +3,7 @@
 We list Definitions, Theorems, Lemmas, etc. with the numbers in the original handwritten note.
 
 | Chapter | New Numbering                                       | Old Numbering  |
-|----------------|-------------------------|-----------------------|
+|---------|-----------------------------------------------------|----------------|
 | 1       | Example \@ref(exm:four-vertex-graph)                | Example        |
 |         | Example \@ref(exm:adjacency-matrix)                 | Example        |
 |         | Definition \@ref(def:regular)                       | Definition     |
