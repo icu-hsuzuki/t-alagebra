@@ -27,7 +27,9 @@ where $Ay = \theta x$ and $Bx = \theta y$.
 
 3. The matrix $C$ is irreducible and $C^2$ is reducible, if $C_{ij} \geq 0$ for all $i,j$ and $C$ is reducible. (Exercise)
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Note 1. Even if $C$ is not symmetric
 $$\begin{pmatrix} O & A \\ B & O \end{pmatrix} \begin{pmatrix}x\\y\end{pmatrix} = \theta \begin{pmatrix}x\\y\end{pmatrix}\Leftrightarrow \begin{pmatrix} O & A \\ B & O \end{pmatrix} \begin{pmatrix}x\\-y\end{pmatrix} = -\theta \begin{pmatrix}x\\-y\end{pmatrix}$$
 holds. So the geometrix multiplicities coincide. How about the algebraic multiplicities?

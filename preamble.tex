@@ -8,6 +8,26 @@
   \thm@postskip=\thm@preskip
 }
 
+%%% HS MEMO BOX
+% \usepackage{color}
+% \usepackage{framed}
+% \setlength{\fboxsep}{.8em}
+%
+% \newenvironment{hs}{
+%   \definecolor{shadecolor}{rgb}{0, 0, 0}  % greay #f5f5f5
+%   \color{white}
+%   \begin{shaded}}
+%  {\end{shaded}}
+%%%
+
+\usepackage{tcolorbox}
+
+\newtcolorbox{hs}{
+  colback=black,
+  colframe=orange,
+  coltext=white,
+  boxsep=5pt,
+  arc=4pt}
 
 \newcommand{\bN}{\mathbb{N}}
 \newcommand{\bZ}{\mathbb{Z}}

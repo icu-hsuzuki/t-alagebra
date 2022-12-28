@@ -35,5 +35,3 @@ E. Local Repository
 All source files are in the 
 [GitHub Repository](https://github.com/icu-hsuzuki/t-algebra).
 
-
-

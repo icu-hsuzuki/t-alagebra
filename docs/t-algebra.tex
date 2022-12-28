@@ -70,6 +70,26 @@
   \thm@postskip=\thm@preskip
 }
 
+%%% HS MEMO BOX
+% \usepackage{color}
+% \usepackage{framed}
+% \setlength{\fboxsep}{.8em}
+%
+% \newenvironment{hs}{
+%   \definecolor{shadecolor}{rgb}{0, 0, 0}  % greay #f5f5f5
+%   \color{white}
+%   \begin{shaded}}
+%  {\end{shaded}}
+%%%
+
+\usepackage{tcolorbox}
+
+\newtcolorbox{hs}{
+  colback=black,
+  colframe=orange,
+  coltext=white,
+  boxsep=5pt,
+  arc=4pt}
 
 \newcommand{\bN}{\mathbb{N}}
 \newcommand{\bZ}{\mathbb{Z}}
@@ -128,7 +148,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-12-27}
+\date{2022-12-28}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -663,8 +683,7 @@ What does the structure of the \(T(x)\)-module tell us about \(\Gamma\)?
 
 Study those \(\Gamma\) whose modules take `simple' form. The \(\Gamma\)'s involved are highly regular.
 
-\begin{remark}
-\leavevmode
+\textbf{HS MEMO}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -681,8 +700,6 @@ Study those \(\Gamma\) whose modules take `simple' form. The \(\Gamma\)'s involv
   & \Leftarrow T \subset \mathrm{Mat}_X(K) \textrm{ such that for all } a\in T \textrm{ is normal.}
   \end{align*}
 \end{enumerate}
-
-\end{remark}
 
 \hypertarget{lec2}{%
 \chapter{Perron-Frobenius Theorem}\label{lec2}}
@@ -725,7 +742,8 @@ where \(Ay = \theta x\) and \(Bx = \theta y\).
   The matrix \(C\) is irreducible and \(C^2\) is reducible, if \(C_{ij} \geq 0\) for all \(i,j\) and \(C\) is reducible. (Exercise)
 \end{enumerate}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Note 1. Even if \(C\) is not symmetric
 \[\begin{pmatrix} O & A \\ B & O \end{pmatrix} \begin{pmatrix}x\\y\end{pmatrix} = \theta \begin{pmatrix}x\\y\end{pmatrix}\Leftrightarrow \begin{pmatrix} O & A \\ B & O \end{pmatrix} \begin{pmatrix}x\\-y\end{pmatrix} = -\theta \begin{pmatrix}x\\-y\end{pmatrix}\]
 holds. So the geometrix multiplicities coincide. How about the algebraic multiplicities?
@@ -739,7 +757,6 @@ X^- & = \{y\mid \textrm{there is no path of even length from }x \textrm{ to }y\}
 \end{align}
 If there is an edge \(y\sim z\) in \(X^+\) and \(w\in X^-\). Then there would be a path from \(x\) to \(y\) of even length.
 So \(\mathrm{e}(X^+, X^+) = \mathrm{e}(X^-, X^-) = 0.\).
-\end{remark}
 
 \begin{theorem}[Perron-Frobenius]
 \protect\hypertarget{thm:pf}{}\label{thm:pf}

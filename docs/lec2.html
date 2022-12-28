@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-27" />
+<meta name="date" content="2022-12-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -188,8 +188,9 @@ where <span class="math inline">\(Ay = \theta x\)</span> and <span class="math i
 <li><p>If <span class="math inline">\(C\)</span> is bipartite, <span class="math inline">\(C^2\)</span> is reducible.</p></li>
 <li><p>The matrix <span class="math inline">\(C\)</span> is irreducible and <span class="math inline">\(C^2\)</span> is reducible, if <span class="math inline">\(C_{ij} \geq 0\)</span> for all <span class="math inline">\(i,j\)</span> and <span class="math inline">\(C\)</span> is reducible. (Exercise)</p></li>
 </ol>
-<div class="remark">
-<p><span id="unlabeled-div-4" class="remark"><em>Remark</em>. </span>Note 1. Even if <span class="math inline">\(C\)</span> is not symmetric
+<div class="hs">
+<p><strong>HS MEMO</strong></p>
+<p>Note 1. Even if <span class="math inline">\(C\)</span> is not symmetric
 <span class="math display">\[\begin{pmatrix} O &amp; A \\ B &amp; O \end{pmatrix} \begin{pmatrix}x\\y\end{pmatrix} = \theta \begin{pmatrix}x\\y\end{pmatrix}\Leftrightarrow \begin{pmatrix} O &amp; A \\ B &amp; O \end{pmatrix} \begin{pmatrix}x\\-y\end{pmatrix} = -\theta \begin{pmatrix}x\\-y\end{pmatrix}\]</span>
 holds. So the geometrix multiplicities coincide. How about the algebraic multiplicities?</p>
 <p>Note 3. Set <span class="math inline">\(x \sim y\)</span> if and only if <span class="math inline">\(C_{xy}&gt;0\)</span>. So the graph may have loops. Then
@@ -218,7 +219,7 @@ So <span class="math inline">\(\mathrm{e}(X^+, X^+) = \mathrm{e}(X^-, X^-) = 0.\
 <p><span id="lem:pfl" class="lemma"><strong>Lemma 2.1  </strong></span>Let <span class="math inline">\(\langle \;,\; \rangle\)</span> be the dot product in <span class="math inline">\(V = \mathbb{R}^n\)</span>. Pick a symmetric matrix <span class="math inline">\(B \in \mathrm{Mat}_n(\mathbb{R})\)</span>. Suppose all eigenvalues of <span class="math inline">\(B\)</span> are nonnegative. (i.e., <span class="math inline">\(B\)</span> is positive semidefinite.) Then there exist vectors <span class="math inline">\(v_1, v_2, \ldots, v_n\in V\)</span> such that <span class="math inline">\(B_{ij} = \langle v_i, v_j\rangle\)</span> for <span class="math inline">\((1\leq i, j \leq n)\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-5" class="proof"><em>Proof</em>. </span>By elementary linear algebra, there exists an orthonormal basis <span class="math inline">\(w_1, w_2, \ldots, w_n\)</span> of <span class="math inline">\(V\)</span> consisting of eigenvectors of <span class="math inline">\(B\)</span>. Set the <span class="math inline">\(i\)</span>-th column of <span class="math inline">\(P\)</span> is <span class="math inline">\(w_i\)</span> and <span class="math inline">\(D = \mathrm{diag}(\theta_1,\ldots, \theta_n)\)</span>. Then <span class="math inline">\(P^\top P = I\)</span> and <span class="math inline">\(BP = PD\)</span>.</p>
+<p><span id="unlabeled-div-3" class="proof"><em>Proof</em>. </span>By elementary linear algebra, there exists an orthonormal basis <span class="math inline">\(w_1, w_2, \ldots, w_n\)</span> of <span class="math inline">\(V\)</span> consisting of eigenvectors of <span class="math inline">\(B\)</span>. Set the <span class="math inline">\(i\)</span>-th column of <span class="math inline">\(P\)</span> is <span class="math inline">\(w_i\)</span> and <span class="math inline">\(D = \mathrm{diag}(\theta_1,\ldots, \theta_n)\)</span>. Then <span class="math inline">\(P^\top P = I\)</span> and <span class="math inline">\(BP = PD\)</span>.</p>
 <p>Hence,
 <span class="math display">\[B = PDP^{-1} = PDP^\top = QQ^\top,\]</span>
 where
@@ -304,7 +305,7 @@ Let <span class="math inline">\(V_i\)</span> be the eigenspace of <span class="m
 </ol>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span>This is a direct consequences of Theorem <a href="lec2.html#thm:pf">2.1</a> and Note 3.</p>
+<p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span>This is a direct consequences of Theorem <a href="lec2.html#thm:pf">2.1</a> and Note 3.</p>
 </div>
 
 </div>
