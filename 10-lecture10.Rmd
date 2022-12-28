@@ -125,7 +125,9 @@ a_i & = \text{eigenvalue of $E^*_{r+i}AE^*_{r+i}$ on $E^*_{r+i}W$}\\
 \end{align}
 It is similar to show $x = x'$.
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Pick $w\in E^*_{r+i-1}W \setminus \{0\}$
 $$E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}\sigma(W) = \sigma(E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}w) = x_i\sigma(w).$$
 Hence, $x_i$ is the eigenvalue of $E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}$ on $E^*_{r+i-1}W = x_i'$.
@@ -181,7 +183,9 @@ But the coefficient matrix is essentially Vander Monde (since $\deg p_i = i$).
 Hence the system is nonsingular and there are unique values for $m(\theta)$ $(\theta\in \Delta)$.
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $$\begin{pmatrix}
 \theta-a_0 & -1 & \cdots & 0 & 0 \\
 -x_1 & \theta - a_1  & \cdots & 0 & 0 \\

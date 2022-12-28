@@ -29,7 +29,9 @@ Suppose the node $j$ is adjacent to $i$ in $D_E$. By claim 4,
 where
 $$p(s,t) = s^2 - \beta st + t^2 - \gamma(s+t) - \delta.$$
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 \begin{align}
 & (\theta_i-\theta_j)(\theta_i^2 - \beta \theta_i\theta_j + \theta_j^2 - \gamma(\theta_i + \theta_j) - \delta)\\
 & = \quad \theta^3_i-\theta^3_j-(\beta+1)(\theta^2\theta_j - \theta_i\theta_j^2)-\gamma(\theta_i^2-\theta_j^2)-\delta(\theta_i-\theta_j)
@@ -80,7 +82,9 @@ $$\left\langle \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3}(\rho(x)-
 We have,
 $$\sigma = \frac{\theta^*_{i+1}-\theta^*_{i+2}}{\theta^*_i-\theta^*_{i+3}} = \frac{\theta^*_1-\theta^*_2}{\theta^*_0-\theta^*_3}.$$
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Note that since $Y$ is $P$ and $Q$ with respect to $A_1$ and $E_1$, $\theta^*_0, \theta^*_1, \ldots, \theta^*_D$, $\theta_0, \theta_1, \ldots, \theta_D$ are all distinct.
 :::
 
@@ -131,7 +135,9 @@ $$\lambda p_i(\lambda) = p_{i+1}(\lambda) + a_ip_i(\lambda) + b_{i-1}c_ip_{i-1}(
 & \leftrightarrow (ib).
 \end{align}
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 The first $\leftrightarrow$. $\rightarrow$ is clear. 
 
 $\leftarrow$: By the first condition, $AE = \theta E$. So $E$ is a scalar multiple of the primitive idempotent corresponding to $\theta$. Hence, $\mathrm{rank}E = \mathrm{trace}E$ implies $E$ is the primitive idempotent.

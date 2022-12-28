@@ -6,7 +6,9 @@
 
 | $(ic)\to(ia)$ Without loss of generality, we may assume $D\geq 3$, else trivial.
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 The case $D = 2$ should be treated somewhere, but the assumption $D\geq 3$ is not used.
 :::
 
@@ -64,7 +66,9 @@ There exists $f_i\in \mathbb{R}[\lambda]$, $\deg f_i = i$ such that $A_i = f_i(A
 Writing $A_2$, $A_3$ as polynomials in $A$ in Claim 3 and simplifying, we find
 $$A^3A^*-A^*A^3 \in \mathrm{Span}(A^2A^*A-AA^*A^2, A^2A^*-A^*A^2, AA^*-A^*A).$$
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Let $A_3 = \beta_3A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I$ with $\beta_3\neq 0$, and $A_2 = \gamma_2 A^2 + \gamma_1 A + \gamma_0 I$, with $\gamma_2\neq 0$. Then
 \begin{align}
 A^*A_3-A_3A^* & = A^*(\beta_3 A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I) - (\beta_3 A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I)A^*.\\
@@ -130,7 +134,9 @@ If $\alpha_0 = 1$, $f=I$ and $\Delta = \{0, 1, \ldots, D\}$.
 This proves Claim 5.
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Claim 5 proves the following in general.
 
 Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a symmetric association scheme. Fix a vertex $x\in X$, and let

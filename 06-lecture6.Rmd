@@ -142,7 +142,9 @@ AL^* - L^*A & = \sum_{i=0}^D(AE_{i-1}A^*E_i - E_{i-1}A^*E_iA)\\
 
 $(c)$ Similar.
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 \begin{align}
 AR^* - R^*A & = \sum_{i=0}^D (AE_{i+1}A^*E_i - E_{i+1}A^*E_iA)\\
 & = \sum_{i=0}^D E_{i+1}A^*E_i (\theta_{i+1} - \theta_i)\\
@@ -159,7 +161,9 @@ $$R^* = \frac{2A^* + [A^*, A]}{4}, \quad L^* = \frac{2A^* - [A^* - A]}{4}.$$
 Now $(a)$ is seen to be equivalent to (\@ref(eq:6-2)) upon evaluation. 
 This proves Claim 2.
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 \begin{align}
 [L^*,R^*] & = \frac{1}{16}((2A^*-[A^*,A])(2A^*+[A^*,A]) - (2A^*+[A^*,A])(2A^*- [A,A^*]))\\
 & = \frac{1}{16}(4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* - [A^*,A]^2 - 4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* + [A^*,A]^2)\\

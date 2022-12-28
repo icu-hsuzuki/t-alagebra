@@ -43,7 +43,9 @@ E^*_hv^* & = |X|E^*_hE_1v\\
 $$0^-, 0^+, 1^-, 1^+, 2^-, 2^+, \ldots .$$
 $0^-$: Trivial.
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 \begin{align}
 \mathrm{LHS} & = (\theta^*_0 - \theta^*_1)E^*_0A_1v \\
 & = (\theta^*_{-1}-\theta^*_1)E^*_0A_{-1}v - E^*_hv^* \quad \text{(by $(ii)$)}\\
@@ -71,7 +73,9 @@ $i^-$: using $(ii)$ and $(i-1)^+$.
 | $(v)$ Immediate from $(i)-(iv)$.
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 \begin{align}
 Mv + M^*v^* & \subseteq \mathrm{Span}\{\tilde{A}_hv, E^*_hv^*\mid 0\leq h\leq D\}\\
 & \subseteq \mathrm{Span}\{E^*_hA_{h-1}v, E^*_{h-1}A_hv\mid 1\leq h\leq D\}
@@ -120,7 +124,9 @@ as desired.
 
 | $(b)$ is obtained from the traspose of $(ii)$ in Lemma  \@ref(lem:eonemmstar).
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 \begin{align}
 MM^*v & = MM^*E_1v^*\\
 & = M^*E_1v^* + ME^*_0E_1v^* + ME^*_1E_1v^*\\
@@ -196,7 +202,9 @@ where $\ell$ is the number of mutually nonisomorphic $T$-modules with endpoint $
 | $(i)$ If $Tv$ is thin, then by Lemma \@ref(lem:thin-module-structure), $Tv = Mv$. Hence $M^*v^* \subseteq Mv$.
 
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Originally, the statement was $Tv$ is thin if and only if $M^*v = Mv$. This is not the case in general. Suppose $\Gamma$ is thin. Let $W$ be an irreducible $T$-module of endpoint $1$. Then, that $W \cap E^*_1V \ni v \neq 0$ implies $v^*\in W\cap E_1V$ gives one to one and $k\leq m$.
 
 However, by 'Distance-Regular Graphs' [@bcn],
@@ -213,7 +221,9 @@ and $J(v,d)$ is thin.
 So $|X|E_1v = v^*$ may be $0$ sometimes. But as $Tv$ is dual thin of diameter at least $D-2$. The dual endpint $r^*\leq 2$, so in that case, $E_2v \neq 0$. Hence, if $D\geq 3$, $E_2v\neq 0$ always.
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Now assume $M^*v\subseteq Mv = Tv$. Then
 $$Mv = \{f(A)v\mid f(\lambda)\in \mathbb{C}[\lambda]\}.$$
 So,

@@ -81,7 +81,9 @@ E^*_{i-2}A^3 E^*_i & = E^*_{i-2}A\left(\sum_{r=0}^D E^*_r\right)A\left(\sum_{s=0
 \end{align}
 Reducing the other terms in a similar manner, and simplifying, we obtain $(i)$.
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 \begin{align}
 E^*_{i-2}A^*A^3E^*_i & = \theta^*_{i-2}E^*_{i-2}A^3E^*_i\\
 & = \theta^*_{i-2}(FL^2+LFL + L^2F)E^*_i\\
@@ -109,7 +111,9 @@ O &= ((\theta^*_i-\theta^*_{i-2})(FL^2+LFL+L^2F)\\
 | 
 | 
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 | $(ii)$ We have
 $$O = E^*_i(A^3A^*-A^*A^3-(\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*E))E^*_i.$$
 Since $\beta+1\neq 0$, by \@ref(eq:beta3) if $D\geq 3$,
@@ -160,7 +164,9 @@ The resulting equation is equal to \@ref(eq:beta).
 :::
 
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 By Corollary \@ref(cor:beta) and Therem \@ref(thm:aastar),
 $$e^+_i = \frac{\theta^*_{i-1}-(\beta+2)\theta^*_i + (\beta+1)\theta^*_{i+1}}{\beta^*_{i-1}-\theta^*_i},$$
 and
@@ -200,7 +206,9 @@ Immediate from Theorem \@ref(thm:rfl-relations), and Lemma \@ref(lem:epm-gpm).
 :::
 
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 By Theorem \@ref(thm:rfl-relations), and Lemma \@ref(lem:epm-gpm), we have the following, but similarly we can obtain above.
 
 | $(i)$ $FL^2E^*_j \in \mathrm{Span}(LFLE^*_j, L^2FE^*_j, L^2E^*_j)$, $(3\leq j\leq D)$.

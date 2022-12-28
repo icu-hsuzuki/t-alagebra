@@ -57,7 +57,9 @@ So, $u = w+v$, where $w\in E_{i-2}V + E_{i-1}V$. We have,
 $$w = u-v \in E_1V \circ E_{i-1}V + E_{i-1}V + E_{i-2}V$$
 as desired.
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $$E_iV \circ E_jV = \mathrm{Span}(u\circ v \mid u\in E_iV, v\in E_jV).$$
 :::
 
@@ -128,7 +130,9 @@ $$\rho(x) = a_1\cdots a_D\in H.$$
 Then, $\mathrm{R1}-\mathrm{R3}$ hold.
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $\mathrm{R1}, \mathrm{R2}$ are obvious. 
 For $\mathrm{R3}$, we may assume that $x = 1\cdots 1$.
 Restrict

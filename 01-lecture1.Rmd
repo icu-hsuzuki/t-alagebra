@@ -187,7 +187,8 @@ What does the structure of the $T(x)$-module tell us about $\Gamma$?
 
 Study those $\Gamma$ whose modules take 'simple' form. The $\Gamma$'s involved are highly regular. 
 
-:::{.hs}
+
+:::{.hs #first-memo}
 **HS MEMO**
 
 1. The subconstituent algebra $T$ is semisimple as the left regular representation of $T$ is completely reducible. See Curtis-Reiner 25.2 [@cr]. 

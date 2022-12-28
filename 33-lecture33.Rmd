@@ -239,7 +239,9 @@ E^*_1TE^*_1 & = E^*_1E_0M^*E^*_1 + E^*_1ME^*_1 + E^*_1E_1M^*E^*_1\\
 & = \mathrm{Span}(E^*_1E_0E^*_1, E^*_1, E^*_1E_1E^*_1, (E^*_1E_1E^*_1)^2, \ldots).
 \end{align}
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Note that by Lemma \@ref(thm:aastar),
 \begin{align}
 E^*_1ME^*_1 & = \mathrm{Span}(E^*_1A_0E^*_1, E^*_1A_1E^*_1, E^*_1A_2E^*_1)\\

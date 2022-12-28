@@ -20,7 +20,9 @@ Suppose $W$ is thin. Then $W$ is dual thin.
 
 Moreover, $\{i\mid E_iW \neq 0\}$ is a subinterval of $\{0, 1, \ldots, D\}$. (same proof as for distance regular)
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Dual version of Lemma \@ref(lem:irreducible).
 
 **Lemma \@ref(lem:irreducible)'.** 

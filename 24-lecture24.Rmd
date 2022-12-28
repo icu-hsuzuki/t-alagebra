@@ -28,7 +28,9 @@ $$k_i\overline{\sigma_i} = \left\langle \sum_{y\in X, (y,x)\in R_i}\rho(y),\rho(
 Hence, $\alpha$ is independent of $x$. In maatrix form \@ref(eq:sumrhoy) becomes 
 $$EA_i\hat{x} = \alpha E\hat{x}.$$
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $$Eu = Ev \Leftrightarrow \langle z, Eu\rangle = \langle z, Ev\rangle \text{ for all }z\in X \Leftrightarrow (Eu)_z = (Ev)_z \text{ for all }z\in X.$$
 \begin{align}
 (EA_i\hat{x})_z & = \left\langle \rho(z), \sum_{y\in X, (y,x)\in R_i}\rho(y)\right\rangle\\
@@ -46,7 +48,9 @@ $$EA_i \in \mathrm{Span} E\; \text{ and }\; EM = \mathrm{Span} E.$$
 We have $E\in \mathrm{E_j}$ for unique $j$ $(0\leq j\leq D)$.
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $$E = \tau_0 E_0 + \cdots + \tau)D E_D, \; \tau_j\in \mathbb{C}\quad (0\leq j\leq D).$$
 And, at least one of $\tau_j$ is nonzero, and 
 $$\tau_jE_j = EE_j \in \mathrm{Span}E.$$
@@ -112,7 +116,9 @@ _Proof of Claim 2._
 
 | $(i)$ The column $x$ of $A^*A_h - A_hA^*$ is a nonzero scalar $\theta^*_h - \theta^*_0$ times the column $x$ of $A_h$.
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $$ ((A^*A_h - A_hA^*)\hat{x})_y = E_{xy}(A_h)_{yx}- (A_h)_{yx}E_{xx} = (\theta^*_h-\theta^*_0)(A_h)_{yz}.$$
 :::
 
@@ -171,7 +177,9 @@ L & = \sum_{z\in X,(w,z)\in R_i, (y,z)\in R_j}\langle \rho(z), \rho(x)\rangle -\
 \end{align}
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 \begin{align}
 |X|^{-1}\sum_{\ell=1}^D r^\ell_{ij}(A^*A_\ell - A_\ell A^*)_{wy} & = |X|^{-1}r^h_{ij}(A^*A_h- A_hA^*)_{wy}\\
 & = r^h_{ij}(\langle \rho(x),\rho(w)\rangle - \langle \rho(x),\rho(y)\rangle)

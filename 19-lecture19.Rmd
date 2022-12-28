@@ -188,7 +188,9 @@ Observe,
 $$A^*_0 = I, \quad A^*_0 + \cdots + A^*_D = |X|E^*_0, \quad \overline{A^*_i} = A^*_{\hat{i}},$$
 $$A^*_iA^*_j = \sum_{h=0}^D q^h_{ij}A^*_h \quad (0\leq i,j\leq D).$$
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 _Proof._
 $$(A^*_0)_{yy} = |X|(E_0)_{xy} = (J)_{xy} = 1.$$
 $$A^*_0 + \cdots + A^*_D = \sum_{i=0}^D\sum_{j=0}^D q_i(j)E^*_j = |X|E^*_0.$$

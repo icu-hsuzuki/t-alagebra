@@ -108,7 +108,9 @@ a_i(W) & = a_i(x) \quad (0\leq i\leq d)\\
 x_i(W) & = b_{i-1}c_i(x) \quad (1\leq i\leq d)
 \end{align}
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $a_i = a_i(W)$ is an eigenvalue of 
 $$E^*_iAE^*_i \text{ on } E^*_iW = \langle \sum_{y\in \Gamma_i(x)}\hat{y}\rangle. $$
 (See Lemma \@ref(lem:distance-reguarity).)
@@ -207,7 +209,9 @@ m^-(\theta) \neq 0 &\Leftrightarrow m^+(\theta) \neq 0\\
 
 $(iv)$ and $(v)$ are clear.
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $(iii)$ If $d^+$ is odd, $d^+ = d^-$ and $\Gamma$ has even number of eigenvalues, i.e., $0$ is not an eigenvalue.
 So $A$ is nonsingular, and $\Gamma$ is regular.
 :::

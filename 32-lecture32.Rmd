@@ -40,7 +40,9 @@ R^{-1}Rw_i & = R^{-1}w_{i+1}\\
 \end{align}
 Thus, we have $(i)$.
 
-:::{remark}
+:::{.hs}
+**HS MEMO**
+
 \begin{align}
 RLw_i & = Rx_i(W)w_{i-1} = x_i(W)w_i,
 LRw_i & = Lw_{i+1} = x_{i+1}(W)w_i\\
@@ -102,7 +104,9 @@ $$(E^*_iV)_{new} = \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}(L\cdot E^*_i
 We have the assertion.
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $$E^*_iV = \sum_{j<i} V_j + V_i.$$
 For $V_j$ part, take $w_{i-j}\in W$ irreducible with endpoint $j<i$. Then,
 $$Lw_{i-j} = x_{i-j}(W)w_{i-j-1}\neq 0,$$
@@ -149,7 +153,9 @@ $$A\tilde{A}_i = c_{i+1}\tilde{A}_{i+1}+ (a_i-c_{i+1}+c_i)\tilde{A}_i + b_i\tild
 Now $(i)-(iv)$ are obtained by applying this to $v$ on the right and multiplied by $E^*_j$ $(0\leq j\leq D)$ on the left.
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $A\tilde{A}_{i-1}v = AE^*_iA_{i-1}v - AE^*_{i-1}A_iv$. For $1\leq i\leq D$,
 \begin{align}
 & (c_i\tilde{A}_i + (a_{i-1}-c_i+c_{i-1})\tilde{A}_{i-1}+b_{i-1}\tilde{A}_{i-2})v\\
@@ -204,7 +210,9 @@ Now
 E^*_{j+1}A_jv = 0 \quad (n\leq j\leq D). (\#eq:n)
 \end{equation}
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Use induction and Lemma \@ref(lem:action-on-estar1v-new) $(i)$, 
 $$E^*_{j+1}A_jv \in \mathrm{Span}(RE^*_jA_{j-1}v) \quad (j\geq 1).$$
 :::

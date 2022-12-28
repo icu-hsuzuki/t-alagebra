@@ -19,7 +19,9 @@ Then the following are equivalent.
 | $(iii)$ $\theta^*_0\neq \theta^*_h$ for all $h\in \{1, 2, \ldots, D\}$ and \@ref(eq:cibi1) holds for $i=3$.
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Note \@ref(eq:cibi1) is trivial for $i = 1, 2$.
 
 $i=1$: 
@@ -127,7 +129,9 @@ c_i(\theta^*_{i-1}-\theta^*_i) + b_i(\theta^*_i -\theta^*_{i+1}) = (\theta-k) \t
 \end{equation}
 where $c_i, b_i, \theta^*_i, \theta$ are as given.)
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $$\theta = \frac{b_1}{q}-1, \; \frac{\theta^*_i}{\theta^*_0} = 1 + \left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix} q^{1-i}, \; b_0 = \begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma.$$
 $i=0$. 
 $$\frac{\theta^*_i}{\theta^*_0} = \frac{\theta}{k}, \quad - k\left(1-\frac{\theta^*_1}{\theta^*_0}\right)= -k(1-\frac{\theta}{k}) = \theta -k.$$
@@ -153,7 +157,9 @@ qc_i - b_i - q(qc_{i-1}-b_{i-1}) & = (k-\theta)q \quad (1\leq i\leq D)\\
 & = 0.
 \end{align}
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 With the notation of Lemma \@ref(lem:classical-parameters), we have the above equality in general.
 \begin{align}
 & qc_i-b_i - q(qc_{i-1}-b_{i-1})\\
@@ -183,7 +189,9 @@ If $i = D$, $qc_D = -q^Dk$, $c_D = -q^{D-1}k < 0$, a contradiction.
 | $(iii)$ Check the equation $(ii)$ of Theorem \@ref(thm:p-and-q) holds for $i=3$.
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $\theta^*_0\neq \theta^*_h$ for all $h\in \{1,2,\ldots, D\}$ and 
 $$c_3\left(\theta^*_2 - \theta^*_3 - \frac{(\theta^*_1-\theta^*_{2})^2}{\theta^*_0-\theta^*_3}\right) - b_{2} \frac{(\theta^*_1-\theta^*_{3})^2}{\theta^*_0-\theta^*_{2}} = (k-\theta)(\theta^*_1-\theta^*_3)-(\theta+1)(\theta^*_0-\theta^*_2).$$
 _Pf._
@@ -216,7 +224,9 @@ $$c_i = \left(\frac{q^i-1}{q-1}\right)^2 = \begin{bmatrix}{i}\\{1}\end{bmatrix}^
 has classical parameters 
 $$(q,\alpha, \sigma) = \left(q, q, \left(\frac{q^{N-D+1}-1}{q-1}\right)-1\right) = \left(q, q, \begin{bmatrix}{N-D+1}\\{1}\end{bmatrix}-1\right).$$
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 \begin{align}
 b_i & = \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\begin{bmatrix}{N-D+1}\\{1}\end{bmatrix}-1-q\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\\
 & = \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\begin{bmatrix}{N-D+1}\\{1}\end{bmatrix}-\begin{bmatrix}{i+1}\\{1}\end{bmatrix}\right)\\

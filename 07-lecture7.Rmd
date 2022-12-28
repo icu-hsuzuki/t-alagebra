@@ -183,6 +183,8 @@ $$\dim U = 1.$$
 By Claim 1 and Claim 2, we have (TH).
 :::
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Claim 1 shows the following: _If $W$ is an irreducible $T$-module, then $E^*_iW$ is either $0$ or an irreducible $E^*_iTE^*_i$-module._
 :::

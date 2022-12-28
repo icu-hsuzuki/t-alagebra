@@ -133,7 +133,9 @@ X & = \text{the set of all $D\times N$ matrices with entries in $GF(q)$}.\\
 E & = \{xy\mid y, x\in X, \; \mathrm{rank}(x-y) = 1\}.
 \end{align}
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 | $H(D,r)$: $G = S_r \mathrm{wr} S_D$, $G_x = S_{r-1} \mathrm{wr} S_D$, 
 For $x, y\in X$ with $\partial(x, y) = \partial(x,z) = i$,
 \begin{align}

@@ -61,6 +61,7 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
+
 \usepackage{amsthm, amsmath, amssymb, amsbsy, amsopn, amsxtra, amscd, amstext}
 \usepackage{makeidx}
 \makeindex
@@ -70,26 +71,19 @@
   \thm@postskip=\thm@preskip
 }
 
-%%% HS MEMO BOX
-% \usepackage{color}
-% \usepackage{framed}
-% \setlength{\fboxsep}{.8em}
-%
-% \newenvironment{hs}{
-%   \definecolor{shadecolor}{rgb}{0, 0, 0}  % greay #f5f5f5
-%   \color{white}
-%   \begin{shaded}}
-%  {\end{shaded}}
+%%% HS MEMO BOX - does not work
+\usepackage{color}
+\usepackage{framed}
+\setlength{\fboxsep}{.8em}
+
+\newenvironment{hs}{
+  \definecolor{shadecolor}{rgb}{0.64, 0.64, 0.64}  % greay #f5f5f5
+  \color{black}
+  \begin{shaded}}
+ {\end{shaded}}
 %%%
 
-\usepackage{tcolorbox}
 
-\newtcolorbox{hs}{
-  colback=black,
-  colframe=orange,
-  coltext=white,
-  boxsep=5pt,
-  arc=4pt}
 
 \newcommand{\bN}{\mathbb{N}}
 \newcommand{\bZ}{\mathbb{Z}}
@@ -683,6 +677,7 @@ What does the structure of the \(T(x)\)-module tell us about \(\Gamma\)?
 
 Study those \(\Gamma\) whose modules take `simple' form. The \(\Gamma\)'s involved are highly regular.
 
+\leavevmode\vadjust pre{\hypertarget{first-memo}{}}%
 \textbf{HS MEMO}
 
 \begin{enumerate}
@@ -976,9 +971,9 @@ Then Cayley graph \(\Gamma = \Gamma(G, \Delta)\) is defined on the vetex set \(X
 
 \end{example}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \(\mathrm{Aut}(\Gamma) \simeq D_6\times \mathbb{Z}_2\) contains two regular subgroups isomorphic to \(D_6\) and \(\mathbb{Z}_5 \times \mathbb{Z}_2\) and \(\Gamma\) is obtained as Cayley graphs in two ways.
-\end{remark}
 
 Cayley graphs are vertex transitive, indeed.
 
@@ -1214,11 +1209,11 @@ m_0 & m_1 & \cdots & m_D\end{pmatrix},\]
 where
 \[\theta_i = D-2i \quad (0\leq i\leq D), \quad m_i = \binom{D}{i}.\]
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Let \(\theta \in X(G)\). Then \(\theta: X \to \{\pm 1\}\). If
 \[\nu(\theta) = |\{i\mid \theta(a_i) = -1\}|, \]
 then \(\Delta_\theta = D-2i\). Since there are \(\binom{D}{i}\) such \(\theta\), we have te assertion.
-\end{remark}
 
 We want to compute the subconstituent algebra for \(H(D,2)\). First, we make a few observations about arbitrary graphs.
 
@@ -1321,9 +1316,9 @@ is a \(T\)-module with \(0\subsetneq \tilde{W} \subsetneq W\).
 Recall that the standard module \(V\) is an orthogonal direct sum of irreducible \(T\)-modules \(W_1 \oplus W_2 \oplus \cdots\). Given \(W\) in this list, the multiplicity\index{multiplicity} of \(W\) in \(V\) is
 \[|\{j \mid W_j \simeq W\}|.\]
 
-\begin{remark}
+\textbf{HS MEMO}
+
 It is known that the multiplicity does not depend on the decomposition.
-\end{remark}
 
 Now assume that \(\Gamma\) is the \(D\)-cube, \(H(D,2)\) with \(D\geq 1\). Vew
 \begin{align}
@@ -1420,12 +1415,12 @@ Claim: The following hold.
 
 In particular \(\mathrm{Span}(R,L, A^*)\) is a 'representation of Lie algebra \(\mathrm{sl}_2(\mathbb{C})\).
 
-\begin{remark}[Lie Algebra sl2(C)]
+\textbf{HS MEMO}
+
 \[\mathrm{sl}_2(\mathbb{C}) = \{X\mid \mathrm{Mat}(\mathbb{C} \mid \mathrm{tr}(X) = 0\}.\]
 For \(X, Y\in \mathrm{sl}_2(\mathbb{C})\), define a binary operation \([X, Y] = XY - YX\).
 \[A^*\sim \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}, \quad L\sim \begin{pmatrix} 0 & 1 \\ 0 & 0\end{pmatrix}, \quad R\sim \begin{pmatrix} 0 & 0 \\ 1 & 0\end{pmatrix}.\]
 Then these satisfy the relations \((a)\) - \((c)\) above.
-\end{remark}
 
 \emph{Proof of Claim.}
 Apply both sides to \(\hat{S}\) \quad \((S\subseteq \Omega)\). Say \(|S| = i\).
@@ -1681,13 +1676,13 @@ AL^* - L^*A & = \sum_{i=0}^D(AE_{i-1}A^*E_i - E_{i-1}A^*E_iA)\\
 
 \((c)\) Similar.
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \begin{align}
 AR^* - R^*A & = \sum_{i=0}^D (AE_{i+1}A^*E_i - E_{i+1}A^*E_iA)\\
 & = \sum_{i=0}^D E_{i+1}A^*E_i (\theta_{i+1} - \theta_i)\\
 & = 2R^*.
 \end{align}
-\end{remark}
 
 \((a)\) We have, by \((b)\), \((c)\)
 \begin{equation}
@@ -1698,7 +1693,8 @@ Since \(A^* = L^* + R^*\),
 Now \((a)\) is seen to be equivalent to (\eqref{eq:6-2}) upon evaluation.
 This proves Claim 2.
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \begin{align}
 [L^*,R^*] & = \frac{1}{16}((2A^*-[A^*,A])(2A^*+[A^*,A]) - (2A^*+[A^*,A])(2A^*- [A,A^*]))\\
 & = \frac{1}{16}(4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* - [A^*,A]^2 - 4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* + [A^*,A]^2)\\
@@ -1706,7 +1702,6 @@ This proves Claim 2.
 & = A,
 \end{align}
 by (\eqref{eq:6-2}).
-\end{remark}
 
 Now apply same argument as for (\eqref{eq:6-1}), (\eqref{eq:6-2}) of Theorem \ref{thm:hd2-modules} and observe \(A^*\) has \(D+1\) distinct eigenvalues. So,
 \[A^* = \sum_{i=0}^D(D-2i)E^*_i\]
@@ -1979,9 +1974,9 @@ By Claim 1 and Claim 2, we have (TH).
 
 \end{proof}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Claim 1 shows the following: \emph{If \(W\) is an irreducible \(T\)-module, then \(E^*_iW\) is either \(0\) or an irreducible \(E^*_iTE^*_i\)-module.}
-\end{remark}
 
 \hypertarget{lec8}{%
 \chapter{Thin Graphs}\label{lec8}}
@@ -2130,8 +2125,7 @@ X & = \text{the set of all $D\times N$ matrices with entries in $GF(q)$}.\\
 E & = \{xy\mid y, x\in X, \; \mathrm{rank}(x-y) = 1\}.
 \end{align}
 
-\begin{remark}
-\leavevmode
+\textbf{HS MEMO}
 
 \(H(D,r)\): \(G = S_r \mathrm{wr} S_D\), \(G_x = S_{r-1} \mathrm{wr} S_D\),
 
@@ -2153,8 +2147,6 @@ The following graph is distance-transitive but does not satisify (G(\(x\))) for 
 \(J_q(D,N)\):
 
 \[X\cap Y  \leftrightarrow X \cap Z.\]
-
-\end{remark}
 
 The theory of single thin irreducible \(T\)-module.
 
@@ -2483,11 +2475,11 @@ a_i & = \text{eigenvalue of $E^*_{r+i}AE^*_{r+i}$ on $E^*_{r+i}W$}\\
 \end{align}
 It is similar to show \(x = x'\).
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Pick \(w\in E^*_{r+i-1}W \setminus \{0\}\)
 \[E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}\sigma(W) = \sigma(E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}w) = x_i\sigma(w).\]
 Hence, \(x_i\) is the eigenvalue of \(E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}\) on \(E^*_{r+i-1}W = x_i'\).
-\end{remark}
 
 \((iii)\Rightarrow (i)\)
 
@@ -2539,7 +2531,8 @@ But the coefficient matrix is essentially Vander Monde (since \(\deg p_i = i\)).
 Hence the system is nonsingular and there are unique values for \(m(\theta)\) \((\theta\in \Delta)\).
 \end{proof}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \[\begin{pmatrix}
 \theta-a_0 & -1 & \cdots & 0 & 0 \\
 -x_1 & \theta - a_1  & \cdots & 0 & 0 \\
@@ -2566,7 +2559,6 @@ x_1 & a_1  & \cdots & 0 & 0 \\
 \end{pmatrix}
 \]
 with multiplicity \(\dim (\mathrm{Ker}(\theta I - L) = 1)\).
-\end{remark}
 
 \hypertarget{lec11}{%
 \chapter{\texorpdfstring{Examples of \(T\)-Module}{Examples of T-Module}}\label{lec11}}
@@ -3041,7 +3033,8 @@ a_i(W) & = a_i(x) \quad (0\leq i\leq d)\\
 x_i(W) & = b_{i-1}c_i(x) \quad (1\leq i\leq d)
 \end{align}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \(a_i = a_i(W)\) is an eigenvalue of
 \[E^*_iAE^*_i \text{ on } E^*_iW = \langle \sum_{y\in \Gamma_i(x)}\hat{y}\rangle. \]
 (See Lemma \ref{lem:distance-reguarity}.)
@@ -3055,7 +3048,6 @@ A\sum_{y\in X,\partial(x,y)}\hat{y} & = b_{i-1}(x)\sum_{y\in X, \partial(x,y)=i-
 & \quad + c_{i+1}\sum_{y\in X, \partial(x,y)=i+1}\hat{y}
 \end{align}
 So \(x_i = b_{i-1}(x)c_i(x)\).
-\end{remark}
 
 Set \(k^+ = k_x\). Define
 \[k^- = \frac{{\theta_0}^2}{k^+},\]
@@ -3144,10 +3136,10 @@ m^-(\theta) \neq 0 &\Leftrightarrow m^+(\theta) \neq 0\\
 
 \((iv)\) and \((v)\) are clear.
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \((iii)\) If \(d^+\) is odd, \(d^+ = d^-\) and \(\Gamma\) has even number of eigenvalues, i.e., \(0\) is not an eigenvalue.
 So \(A\) is nonsingular, and \(\Gamma\) is regular.
-\end{remark}
 
 \end{proof}
 
@@ -4241,7 +4233,8 @@ Observe,
 \[A^*_0 = I, \quad A^*_0 + \cdots + A^*_D = |X|E^*_0, \quad \overline{A^*_i} = A^*_{\hat{i}},\]
 \[A^*_iA^*_j = \sum_{h=0}^D q^h_{ij}A^*_h \quad (0\leq i,j\leq D).\]
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \emph{Proof.}
 \[(A^*_0)_{yy} = |X|(E_0)_{xy} = (J)_{xy} = 1.\]
 \[A^*_0 + \cdots + A^*_D = \sum_{i=0}^D\sum_{j=0}^D q_i(j)E^*_j = |X|E^*_0.\]
@@ -4255,7 +4248,6 @@ Note that
 & = |X|\sum_{h=0}^D q^h_{ij}(E_h)_{xy}\\
 & = \sum_{h=0}^D q^h_{ij}(A^*_h)_{yy}.
 \end{align}
-\end{remark}
 
 The following statements will be proved after a couple of lemmas in the next lecture.
 
@@ -4878,9 +4870,9 @@ So, \(u = w+v\), where \(w\in E_{i-2}V + E_{i-1}V\). We have,
 \[w = u-v \in E_1V \circ E_{i-1}V + E_{i-1}V + E_{i-2}V\]
 as desired.
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \[E_iV \circ E_jV = \mathrm{Span}(u\circ v \mid u\in E_iV, v\in E_jV).\]
-\end{remark}
 
 By claim,
 \begin{align}
@@ -4950,7 +4942,8 @@ For a vertex \(x = a_1\cdots a_D\in X\), define
 Then, \(\mathrm{R1}-\mathrm{R3}\) hold.
 \end{example}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \(\mathrm{R1}, \mathrm{R2}\) are obvious.
 For \(\mathrm{R3}\), we may assume that \(x = 1\cdots 1\).
 Restrict
@@ -4962,7 +4955,6 @@ on the first coordinate. Then,
 \end{align}
 Hence,
 \[\sum_{y\in X, (y,x)\in R_i}\rho(y) = \left(\binom{D-1}{i} - \binom{D-1}{i-1}\right)\rho(x).\]
-\end{remark}
 
 Let \((\rho, H)\) be a representation of arbitrary commutative scheme \(Y\). Set
 \[E = (\langle \rho(x),\rho(y)\rangle)_{x,y\in X}\]
@@ -5110,7 +5102,8 @@ So,
 Hence, \(\alpha\) is independent of \(x\). In maatrix form \eqref{eq:sumrhoy} becomes
 \[EA_i\hat{x} = \alpha E\hat{x}.\]
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \[Eu = Ev \Leftrightarrow \langle z, Eu\rangle = \langle z, Ev\rangle \text{ for all }z\in X \Leftrightarrow (Eu)_z = (Ev)_z \text{ for all }z\in X.\]
 \begin{align}
 (EA_i\hat{x})_z & = \left\langle \rho(z), \sum_{y\in X, (y,x)\in R_i}\rho(y)\right\rangle\\
@@ -5119,7 +5112,6 @@ Hence, \(\alpha\) is independent of \(x\). In maatrix form \eqref{eq:sumrhoy} be
 \end{align}
 Hence,
 \[EA_i\hat{x} = \alpha E\hat{x}.\]
-\end{remark}
 
 Since \(x\) is arbitrary,
 \[EA_i = \alpha E.\]
@@ -5128,14 +5120,14 @@ So,
 We have \(E\in \mathrm{E_j}\) for unique \(j\) \((0\leq j\leq D)\).
 \end{proof}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \[E = \tau_0 E_0 + \cdots + \tau)D E_D, \; \tau_j\in \mathbb{C}\quad (0\leq j\leq D).\]
 And, at least one of \(\tau_j\) is nonzero, and
 \[\tau_jE_j = EE_j \in \mathrm{Span}E.\]
 So,
 \[\tau_jE_j = E\]
 as \(E_0, \ldots, E_D\) are linearly independent.
-\end{remark}
 
 Let \(Y = (X, \{R_i\}_{0\leq i\leq D})\) be a symmetric scheme, and let \(E\) be a primitive idempotent.
 
@@ -5200,9 +5192,9 @@ Claim 2. \((i)\) \(\{A^*A_h - A_hA^*\mid 1\leq h\leq D\}\) is a basis for \(L\).
 
 \((i)\) The column \(x\) of \(A^*A_h - A_hA^*\) is a nonzero scalar \(\theta^*_h - \theta^*_0\) times the column \(x\) of \(A_h\).
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \[ ((A^*A_h - A_hA^*)\hat{x})_y = E_{xy}(A_h)_{yx}- (A_h)_{yx}E_{xx} = (\theta^*_h-\theta^*_0)(A_h)_{yz}.\]
-\end{remark}
 
 Also the column \(x\) of \(A_0, A_1, \ldots, A_D\) are linearly independent.
 
@@ -5261,12 +5253,12 @@ L & = \sum_{z\in X,(w,z)\in R_i, (y,z)\in R_j}\langle \rho(z), \rho(x)\rangle -\
 
 \end{proof}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \begin{align}
 |X|^{-1}\sum_{\ell=1}^D r^\ell_{ij}(A^*A_\ell - A_\ell A^*)_{wy} & = |X|^{-1}r^h_{ij}(A^*A_h- A_hA^*)_{wy}\\
 & = r^h_{ij}(\langle \rho(x),\rho(w)\rangle - \langle \rho(x),\rho(y)\rangle)
 \end{align}
-\end{remark}
 
 \hypertarget{lec25}{%
 \chapter{Balanced Conditions, II}\label{lec25}}
@@ -5280,9 +5272,9 @@ L & = \sum_{z\in X,(w,z)\in R_i, (y,z)\in R_j}\langle \rho(z), \rho(x)\rangle -\
 
 \((ic)\to(ia)\) Without loss of generality, we may assume \(D\geq 3\), else trivial.
 
-\begin{remark}
+\textbf{HS MEMO}
+
 The case \(D = 2\) should be treated somewhere, but the assumption \(D\geq 3\) is not used.
-\end{remark}
 
 Fix \(w\in X\), and write \(E^*_i \equiv E^*_i(w)\), \(A^*_i\equiv A^*_i(w)\), \(A^*\equiv A^*_1\), and \(A_i\), \(i\)-th distance matrix. Set
 \[E \equiv E_1 = |X|^{-1}\sum_{i=0}^D \theta^*_i A_i.\]
@@ -5338,7 +5330,8 @@ There exists \(f_i\in \mathbb{R}[\lambda]\), \(\deg f_i = i\) such that \(A_i = 
 Writing \(A_2\), \(A_3\) as polynomials in \(A\) in Claim 3 and simplifying, we find
 \[A^3A^*-A^*A^3 \in \mathrm{Span}(A^2A^*A-AA^*A^2, A^2A^*-A^*A^2, AA^*-A^*A).\]
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Let \(A_3 = \beta_3A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I\) with \(\beta_3\neq 0\), and \(A_2 = \gamma_2 A^2 + \gamma_1 A + \gamma_0 I\), with \(\gamma_2\neq 0\). Then
 \begin{align}
 A^*A_3-A_3A^* & = A^*(\beta_3 A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I) - (\beta_3 A^3 + \beta_2 A^2 + \beta_1 A + \beta_0 I)A^*.\\
@@ -5350,7 +5343,6 @@ A^*A_2 - A_2A^* & \in \mathrm{Span}(A^2A^*-A^*A^2, AA^*-AA^*)\\
 AA^*A_2 - A_2A^*A & \in \mathrm{Span}(A^2A^*A-AA^*A^2, AA^*-AA^*)\\
 A^3A^*-A^*A^3 & \in \mathrm{Span}(A^2A^*A-AA^*A^2, A^2A^*-A^*A^2, AA^*-A^*A).
 \end{align}
-\end{remark}
 
 Hence, we can find \(\delta, \gamma, \delta\) satisfying
 \[0 = A^3A^*-A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A).\]
@@ -5405,7 +5397,8 @@ This proves Claim 5.
 
 \end{proof}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Claim 5 proves the following in general.
 
 Let \(Y = (X, \{R_i\}_{0\leq i\leq D})\) be a symmetric association scheme. Fix a vertex \(x\in X\), and let
@@ -5443,7 +5436,6 @@ By the previous lemma, \(D_E\) is connected.
 It seems \(\theta^*_1 \neq \theta^*_2\) is necessary. Clarify the condition \(\theta^*_1 = \theta^*_2\).
 
 Terwilliger claims that \(\theta^*_1 = \theta^*_2\) does not occur under the assumption \((ic)\). (March 7, 1995)
-\end{remark}
 
 \hypertarget{lec26}{%
 \chapter{Representation Diagrams}\label{lec26}}
@@ -5478,12 +5470,12 @@ Suppose the node \(j\) is adjacent to \(i\) in \(D_E\). By claim 4,
 where
 \[p(s,t) = s^2 - \beta st + t^2 - \gamma(s+t) - \delta.\]
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \begin{align}
 & (\theta_i-\theta_j)(\theta_i^2 - \beta \theta_i\theta_j + \theta_j^2 - \gamma(\theta_i + \theta_j) - \delta)\\
 & = \quad \theta^3_i-\theta^3_j-(\beta+1)(\theta^2\theta_j - \theta_i\theta_j^2)-\gamma(\theta_i^2-\theta_j^2)-\delta(\theta_i-\theta_j)
 \end{align}
-\end{remark}
 
 Since \(i\) is adjacent to \(j\), \(q^1_{ij}\neq 0\) and
 \[E_iA^*E_j\neq O\]
@@ -5529,9 +5521,9 @@ Hence,
 We have,
 \[\sigma = \frac{\theta^*_{i+1}-\theta^*_{i+2}}{\theta^*_i-\theta^*_{i+3}} = \frac{\theta^*_1-\theta^*_2}{\theta^*_0-\theta^*_3}.\]
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Note that since \(Y\) is \(P\) and \(Q\) with respect to \(A_1\) and \(E_1\), \(\theta^*_0, \theta^*_1, \ldots, \theta^*_D\), \(\theta_0, \theta_1, \ldots, \theta_D\) are all distinct.
-\end{remark}
 
 So
 \[\beta = \frac{1}{\sigma}-1 = \frac{\theta^*_i - \theta^*_{i+1} + \theta^*_{i+2}-\theta^*_{i+3}}{\theta^*_{i+1}-\theta^*_{i+2}} = \frac{\theta^*_0 - \theta^*_{1} + \theta^*_{2}-\theta^*_{3}}{\theta^*_{1}-\theta^*_{2}}.\]
@@ -5584,11 +5576,11 @@ where \(p_0 = 1\), \(p_1(\lambda) = \lambda\), and
 & \leftrightarrow (ib).
 \end{align}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 The first \(\leftrightarrow\). \(\rightarrow\) is clear.
 
 \(\leftarrow\): By the first condition, \(AE = \theta E\). So \(E\) is a scalar multiple of the primitive idempotent corresponding to \(\theta\). Hence, \(\mathrm{rank}E = \mathrm{trace}E\) implies \(E\) is the primitive idempotent.
-\end{remark}
 
 \((ii)\) We prove by induction on \(i\).
 
@@ -5639,7 +5631,8 @@ Then the following are equivalent.
 
 \end{theorem}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Note \eqref{eq:cibi1} is trivial for \(i = 1, 2\).
 
 \(i=1\):
@@ -5671,7 +5664,6 @@ b_1\theta^*_1 + a_1\theta^*_1 + c_1\theta^*_1 & = k \theta^*_1,
 as \(\theta \theta^*_0 = k\theta^*_1\)
 We have
 \[b_1(\theta^*_2 - \theta^*_1) + (\theta^*_0-\theta^*_1) = \theta(\theta^*_1-\theta^*_0).\]
-\end{remark}
 
 \begin{proof}
 Immediate from the proof of Theorem 2.1 in `A new inequality for distance-regular graphs' \citep{terwilliger:1995} and Theorem \ref{thm:balanced}.
@@ -5750,7 +5742,8 @@ c_i(\theta^*_{i-1}-\theta^*_i) + b_i(\theta^*_i -\theta^*_{i+1}) = (\theta-k) \t
 \end{equation}
 where \(c_i, b_i, \theta^*_i, \theta\) are as given.)
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \[\theta = \frac{b_1}{q}-1, \; \frac{\theta^*_i}{\theta^*_0} = 1 + \left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix} q^{1-i}, \; b_0 = \begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma.\]
 \(i=0\).
 \[\frac{\theta^*_i}{\theta^*_0} = \frac{\theta}{k}, \quad - k\left(1-\frac{\theta^*_1}{\theta^*_0}\right)= -k(1-\frac{\theta}{k}) = \theta -k.\]
@@ -5766,7 +5759,6 @@ where \(c_i, b_i, \theta^*_i, \theta\) are as given.)
 & \quad = \left(\frac{\theta}{k}-1\right)\left(-\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}-\alpha\left(\begin{bmatrix}{i}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}q^{1-i}+\begin{bmatrix}{D-i}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}-\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)\right.\\
 &  \qquad\qquad \left.+\sigma\left(\begin{bmatrix}{D-i}\\{1}\end{bmatrix}-\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}+\begin{bmatrix}{D}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)+\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)
 \end{align}
-\end{remark}
 
 Check \(\theta\neq k\). Suppose \(\theta = k\). Then
 \[\frac{b_1}{q}-1 = k, \; \text{ and }\; q>0.\]
@@ -5776,7 +5768,8 @@ qc_i - b_i - q(qc_{i-1}-b_{i-1}) & = (k-\theta)q \quad (1\leq i\leq D)\\
 & = 0.
 \end{align}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 With the notation of Lemma \ref{lem:classical-parameters}, we have the above equality in general.
 \begin{align}
 & qc_i-b_i - q(qc_{i-1}-b_{i-1})\\
@@ -5792,7 +5785,6 @@ With the notation of Lemma \ref{lem:classical-parameters}, we have the above equ
 & \quad = q\left(k-\frac{\begin{bmatrix}{D}\\{1}\end{bmatrix}-1}{q}(\sigma-\alpha)+1\right)\\
 & \quad = q(k-\theta).
 \end{align}
-\end{remark}
 
 Hence,
 \begin{align}
@@ -5806,7 +5798,8 @@ If \(i = D\), \(qc_D = -q^Dk\), \(c_D = -q^{D-1}k < 0\), a contradiction.
 
 \end{proof}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \(\theta^*_0\neq \theta^*_h\) for all \(h\in \{1,2,\ldots, D\}\) and
 \[c_3\left(\theta^*_2 - \theta^*_3 - \frac{(\theta^*_1-\theta^*_{2})^2}{\theta^*_0-\theta^*_3}\right) - b_{2} \frac{(\theta^*_1-\theta^*_{3})^2}{\theta^*_0-\theta^*_{2}} = (k-\theta)(\theta^*_1-\theta^*_3)-(\theta+1)(\theta^*_0-\theta^*_2).\]
 \emph{Pf.}
@@ -5822,7 +5815,6 @@ If \(i = D\), \(qc_D = -q^Dk\), \(c_D = -q^{D-1}k < 0\), a contradiction.
 & \qquad \left. +\begin{bmatrix}{2}\\{1}\end{bmatrix}q^{-2}\alpha\left(\begin{bmatrix}{D-1}\\{1}\end{bmatrix}+q\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\right)\right)\\
 & = \left(1-\frac{\theta}{k}\right)\left(q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}-\sigma q^{-1}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{D-2}\\{1}\end{bmatrix}+\alpha q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\right)
 \end{align}
-\end{remark}
 
 \begin{example}
 \protect\hypertarget{exm:classical-parameters}{}\label{exm:classical-parameters}
@@ -5844,13 +5836,13 @@ has classical parameters \((q,\alpha, \sigma) = (1, 1, N-D)\).
 has classical parameters
 \[(q,\alpha, \sigma) = \left(q, q, \left(\frac{q^{N-D+1}-1}{q-1}\right)-1\right) = \left(q, q, \begin{bmatrix}{N-D+1}\\{1}\end{bmatrix}-1\right).\]
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \begin{align}
 b_i & = \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\begin{bmatrix}{N-D+1}\\{1}\end{bmatrix}-1-q\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\\
 & = \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\begin{bmatrix}{N-D+1}\\{1}\end{bmatrix}-\begin{bmatrix}{i+1}\\{1}\end{bmatrix}\right)\\
 & = \frac{q(q^D-q^i)(q^{N-D}-q^i)}{(q-1)^2}.
 \end{align}
-\end{remark}
 
 \end{example}
 
@@ -6314,7 +6306,8 @@ E^*_{i-2}A^3 E^*_i & = E^*_{i-2}A\left(\sum_{r=0}^D E^*_r\right)A\left(\sum_{s=0
 \end{align}
 Reducing the other terms in a similar manner, and simplifying, we obtain \((i)\).
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \begin{align}
 E^*_{i-2}A^*A^3E^*_i & = \theta^*_{i-2}E^*_{i-2}A^3E^*_i\\
 & = \theta^*_{i-2}(FL^2+LFL + L^2F)E^*_i\\
@@ -6334,7 +6327,6 @@ O &= ((\theta^*_i-\theta^*_{i-2})(FL^2+LFL+L^2F)\\
 & \quad + \left. \left(\frac{\theta^*_{i-2}-(\beta+1)\theta^*_{i-1}+\beta \theta^*_i}{\theta^*_{i-2}-\theta^*_i}\right)L^2F - \gamma L^2\right)E^*_i\\
 & = (\theta^*_i-\theta^*_{i-2})(g^-_iFL^2 + LFL + g^+_iL^2F - \gamma L^2)E^*_i.
 \end{align}
-\end{remark}
 
 \((ii)\), \((iii)\) are obtained in a similar manner replacing \(i-2\) by \(i\) (resp. \(i-1\)).
 
@@ -6342,8 +6334,7 @@ O &= ((\theta^*_i-\theta^*_{i-2})(FL^2+LFL+L^2F)\\
 
 \hfill\break
 
-\begin{remark}
-\leavevmode
+\textbf{HS MEMO}
 
 \((ii)\) We have
 
@@ -6379,8 +6370,6 @@ O & = E^*_{i-1}(A^3A^*-A^*A^3-(\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\
 & = (e^-_iRL^2 + (\beta+2)LRL + e^+_iL^2R + LF^2 - \beta FLF + F^2L-\gamma(LF+FL)-\delta L)E^*_i.
 \end{align}
 
-\end{remark}
-
 \begin{lemma}
 \protect\hypertarget{lem:epm-gpm}{}\label{lem:epm-gpm}With the notation of Theorem \ref{thm:rfl-relations},
 \begin{align}
@@ -6397,7 +6386,8 @@ In each case, equate the above expression with the corresponding expression in T
 The resulting equation is equal to \eqref{eq:beta}.
 \end{proof}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 By Corollary \ref{cor:beta} and Therem \ref{thm:aastar},
 \[e^+_i = \frac{\theta^*_{i-1}-(\beta+2)\theta^*_i + (\beta+1)\theta^*_{i+1}}{\beta^*_{i-1}-\theta^*_i},\]
 and
@@ -6417,7 +6407,6 @@ g^-_i & = \frac{1}{\theta^*_{i-2}-\theta^*_i}(-\beta\theta^*_{i-2}+(\beta+1)\the
 & = \frac{1}{\theta^*_{i-2}-\theta^*_i}(\theta^*_{i-2}-\theta^*_i + \theta^*_{i}-\theta^*_{i-3})\\
 & = \frac{\theta^*_{i-2}-\theta^*_{i-3}}{\theta^*_{i-2}-\theta^*_{i}}.
 \end{align}
-\end{remark}
 
 \begin{corollary}
 \protect\hypertarget{cor:fr2lr2r2l}{}\label{cor:fr2lr2r2l}
@@ -6439,7 +6428,7 @@ Then the following hold.
 Immediate from Theorem \ref{thm:rfl-relations}, and Lemma \ref{lem:epm-gpm}.
 \end{proof}
 
-\begin{remark}
+\textbf{HS MEMO}
 
 By Theorem \ref{thm:rfl-relations}, and Lemma \ref{lem:epm-gpm}, we have the following, but similarly we can obtain above.
 
@@ -6450,8 +6439,6 @@ By Theorem \ref{thm:rfl-relations}, and Lemma \ref{lem:epm-gpm}, we have the fol
 \((iii)\) \(RL^2E^*_j \in \mathrm{Span}(LRLE^*_j, L^2RE^*_j, F^2LE^*_j, FLFE^*_j, LF^2E^*j, LFE^*_j, FLE^*_j, LE^*_j)\), \((3\leq j\leq D)\).
 
 \((iv)\) \(L^2RE^*_j \in \mathrm{Span}(LRLE^*_j, RL^2E^*_j, F^2LE^*_j, FLFE^*_j, LF^2E^*j, LFE^*_j, FLE^*_j, LE^*_j)\), \((2\leq j\leq D)\).
-
-\end{remark}
 
 \hypertarget{lec31}{%
 \chapter{\texorpdfstring{The ``Inverse'' of \(R\)}{The ``Inverse'' of R}}\label{lec31}}
@@ -6586,6 +6573,8 @@ Let \(E_\theta: V\to V_\theta\) denote the orthogonal projection. Then \(E_\thet
 
 Thus \(E_\theta\in T(x)\).
 
+\textbf{HS MEMO}
+
 \(E_\theta\) is real. Since \(RL\) is an integral matrix, every eigenvalue of \(RL\) is an algebraic integer.
 
 Claim 4. We have
@@ -6673,6 +6662,8 @@ R^{-1}Rw_i & = R^{-1}w_{i+1}\\
 \end{align}
 Thus, we have \((i)\).
 
+\textbf{HS MEMO}
+
 \begin{align}
 RLw_i & = Rx_i(W)w_{i-1} = x_i(W)w_i,
 LRw_i & = Lw_{i+1} = x_{i+1}(W)w_i\\
@@ -6745,14 +6736,14 @@ If each irreducible \(T\)-module with endpoint strictly less than \(i\) is thin,
 We have the assertion.
 \end{definition}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \[E^*_iV = \sum_{j<i} V_j + V_i.\]
 For \(V_j\) part, take \(w_{i-j}\in W\) irreducible with endpoint \(j<i\). Then,
 \[Lw_{i-j} = x_{i-j}(W)w_{i-j-1}\neq 0,\]
 and
 \[L|_{\sum_{j<i}E^*_iV_j}: \sum_{j<i}E^*_iV_j \to V\]
 is one to one.
-\end{remark}
 
 \begin{lemma}
 \protect\hypertarget{lem:action-on-estar1v-new}{}\label{lem:action-on-estar1v-new}
@@ -6799,7 +6790,7 @@ Now \((i)-(iv)\) are obtained by applying this to \(v\) on the right and multipl
 
 \end{proof}
 
-\begin{remark}
+\textbf{HS MEMO}
 
 \(A\tilde{A}_{i-1}v = AE^*_iA_{i-1}v - AE^*_{i-1}A_iv\). For \(1\leq i\leq D\),
 \begin{align}
@@ -6827,8 +6818,6 @@ LE^*_iA_{i-1}v & = E^*_{i-1}AE^*_{i}A_{i-1}v\\
 (Even if \(i=1\), this is valid by setting \(A_{i-2}=O\).)
 
 \((iv)\) For \(1\leq i\leq D-1\), \(LE^*_iA_{i+1}v = E^*_{i-1}AE^*_i A_{i+1} = b_iE^*_{i-1}A_iv\).
-
-\end{remark}
 
 \begin{lemma}
 \protect\hypertarget{lem:generator-endpoint1-mod}{}\label{lem:generator-endpoint1-mod}Let \(\Gamma = (X, E)\) be distance regular of diameter \(D\geq 3\). Fix a vertex \(x\in X\), \(T\equiv T(x)\), \(E^*_i\equiv E^*_i(x)\), \(R = R(x)\), \(F = F(x)\), \(L = L(x)\).
@@ -6858,10 +6847,10 @@ Now
 E^*_{j+1}A_jv = 0 \quad (n\leq j\leq D). \label{eq:n}
 \end{equation}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Use induction and Lemma \ref{lem:action-on-estar1v-new} \((i)\),
 \[E^*_{j+1}A_jv \in \mathrm{Span}(RE^*_jA_{j-1}v) \quad (j\geq 1).\]
-\end{remark}
 
 By our assumption \((i)\), and the definition of \(n\),
 \[E^*_jA_{j+1}v \in \mathrm{Span}(E^*_jA_{j-1}v)\neq 0 \quad (1\leq j\leq n).\]
@@ -7156,7 +7145,8 @@ E^*_1TE^*_1 & = E^*_1E_0M^*E^*_1 + E^*_1ME^*_1 + E^*_1E_1M^*E^*_1\\
 & = \mathrm{Span}(E^*_1E_0E^*_1, E^*_1, E^*_1E_1E^*_1, (E^*_1E_1E^*_1)^2, \ldots).
 \end{align}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Note that by Lemma \ref{thm:aastar},
 \begin{align}
 E^*_1ME^*_1 & = \mathrm{Span}(E^*_1A_0E^*_1, E^*_1A_1E^*_1, E^*_1A_2E^*_1)\\
@@ -7164,7 +7154,6 @@ E^*_1ME^*_1 & = \mathrm{Span}(E^*_1A_0E^*_1, E^*_1A_1E^*_1, E^*_1A_2E^*_1)\\
 \end{align}
 Moreover,
 \[E^*_1\cdots E^*_1E_0E^*_1 \subseteq E^*_1TE_0TE^*_1 = E^*_1M^*E_0M^*E^*_1 \in \mathrm{Span}(E^*_1E_0E^*_1).\]
-\end{remark}
 
 \((iii)\) By \((ii)\), \(E^*_1TE^*_1\) is generated by \(\tilde{J} = |X|E^*_1E_0E^*_1\) and \(E^*_1E_1E^*_1\).
 
@@ -7233,14 +7222,14 @@ E^*_hv^* & = |X|E^*_hE_1v\\
 \[0^-, 0^+, 1^-, 1^+, 2^-, 2^+, \ldots .\]
 \(0^-\): Trivial.
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \begin{align}
 \mathrm{LHS} & = (\theta^*_0 - \theta^*_1)E^*_0A_1v \\
 & = (\theta^*_{-1}-\theta^*_1)E^*_0A_{-1}v - E^*_hv^* \quad \text{(by $(ii)$)}\\
 & = -E^*_0v^*\\
 & = \mathrm{RHS}.
 \end{align}
-\end{remark}
 
 \(i^+\): using \((i)\) and \(i^-\).
 \begin{align}
@@ -7262,7 +7251,8 @@ E^*_hv^* & = |X|E^*_hE_1v\\
 
 \end{proof}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \begin{align}
 Mv + M^*v^* & \subseteq \mathrm{Span}\{\tilde{A}_hv, E^*_hv^*\mid 0\leq h\leq D\}\\
 & \subseteq \mathrm{Span}\{E^*_hA_{h-1}v, E^*_{h-1}A_hv\mid 1\leq h\leq D\}
@@ -7272,7 +7262,6 @@ by \((i)\) and \((ii)\).
 On the other hand,
 \[E^*hA_{h-1}v, E^*_{h-1}A_hv\in Mv + M^*v^* \quad i\in \{1, 2, \ldots, D\}\]
 by \((iii)\) and \((iv)\).
-\end{remark}
 
 \begin{lemma}
 \protect\hypertarget{lem:tv}{}\label{lem:tv}
@@ -7317,7 +7306,8 @@ as desired.
 
 \((b)\) is obtained from the traspose of \((ii)\) in Lemma \ref{lem:eonemmstar}.
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \begin{align}
 MM^*v & = MM^*E_1v^*\\
 & = M^*E_1v^* + ME^*_0E_1v^* + ME^*_1E_1v^*\\
@@ -7335,7 +7325,6 @@ as \(E_0v = 0\), and \(v\) is an eigenvector of \(E^*_1AE^*_1\).
 
 \(\ast\) \(v\in (E^*_1V)_{new}\). If \(v\) is an eigenvector of \(E^*_1AE^*_1\),
 \[E^*_1v^* \in \mathrm{Span}\{v\}.\]
-\end{remark}
 
 \((ii)\) We have
 
@@ -7397,7 +7386,8 @@ where \(\ell\) is the number of mutually nonisomorphic \(T\)-modules with endpoi
 
 \((i)\) If \(Tv\) is thin, then by Lemma \ref{lem:thin-module-structure}, \(Tv = Mv\). Hence \(M^*v^* \subseteq Mv\).
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Originally, the statement was \(Tv\) is thin if and only if \(M^*v = Mv\). This is not the case in general. Suppose \(\Gamma\) is thin. Let \(W\) be an irreducible \(T\)-module of endpoint \(1\). Then, that \(W \cap E^*_1V \ni v \neq 0\) implies \(v^*\in W\cap E_1V\) gives one to one and \(k\leq m\).
 
 However, by `Distance-Regular Graphs' \citep{bcn},
@@ -7412,9 +7402,9 @@ In particular,
 and \(J(v,d)\) is thin.
 
 So \(|X|E_1v = v^*\) may be \(0\) sometimes. But as \(Tv\) is dual thin of diameter at least \(D-2\). The dual endpint \(r^*\leq 2\), so in that case, \(E_2v \neq 0\). Hence, if \(D\geq 3\), \(E_2v\neq 0\) always.
-\end{remark}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Now assume \(M^*v\subseteq Mv = Tv\). Then
 \[Mv = \{f(A)v\mid f(\lambda)\in \mathbb{C}[\lambda]\}.\]
 So,
@@ -7436,7 +7426,6 @@ From above, \(Tv = M^*w^*_0\). So,
 Thus, \(Tv\) is thin.
 
 \ast Need to write down the dual at least for Lemma \ref{lem:thin-module-structure}, Corollary \ref{cor:thin-is-dualthin}.
-\end{remark}
 
 \((iii)\) \(E^*_1W\) is an \(\tilde{A}\)-module. So, there exists \(0\neq v'\in E^*_1W\) that is an eigenvalue for \(\tilde{A}\). Also \(Tv' \subseteq W\).
 
@@ -7650,13 +7639,13 @@ Claim 5. \(\deg p^{++} = \deg p^{--} = 2\). (only need for some \(i\))
 \emph{Proof of Claim 5.}
 We need to calculate \(p^{++}\), \(p^{--}\).
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Pick vertices \(y,z\in X\) such that \(\partial(x,y) = \partial(x,z) =1\). Then
 \[(E^*_1A_{i-1}E^*_iA_{i-1}E^*_1)_{yz} = |\gamma_{i-1}(y)\cap \Gamma_i(x)\cap \Gamma_{i-1}(z)|,\]
 which is equal to \(p^{1}_{i-1,i}\) if \(\partial(y,z)=0\), but \ldots.
 \[(E^*_1A_{i+1}E^*_iA_{i+1}E^*_1)_{yz} = |\gamma_{i+1}(y)\cap \Gamma_i(x)\cap \Gamma_{i+1}(z)|,\]
 which is equal to \(p^{1}_{i+1,i}\) if \(\partial(y,z)=0\), but \ldots.
-\end{remark}
 
 Conclusion.
 \begin{align}
@@ -7703,7 +7692,8 @@ Suppose \(W\) is thin. Then \(W\) is dual thin.
 
 Moreover, \(\{i\mid E_iW \neq 0\}\) is a subinterval of \(\{0, 1, \ldots, D\}\). (same proof as for distance regular)
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Dual version of Lemma \ref{lem:irreducible}.
 
 \textbf{Lemma \ref{lem:irreducible}'.}
@@ -7826,7 +7816,6 @@ Then, \(w^*_0, w^*_1, \ldots, w^*_{d^*}\) is a basis for \(W\). We have \(W = M^
 So, \(E^*_iW = E^*_iM^*w^*_0 = \mathrm{Span}(E^*_iw^*_0)\).
 
 Thus, \(W\) is thin, and so, we have \((ii)\).
-\end{remark}
 
 \hfill\break
 
@@ -7958,7 +7947,8 @@ by Corollary \ref{cor:fr2lr2r2l}.
 Claim \((a)\) \(FR^iv \in \mathrm{Span}(R^iv)\) for \(i\in \{0, \ldots, D-2\}\),
 \(\quad (b)\) \(LR^iv \in \mathrm{Span}(R^{i-1}v)\) for \(i\in \{1, \ldots, D-2\}\).
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \emph{Proof of Claim.}
 \textbar{} \((a)\) by Lemma \ref{lem:tv}, and an assumption
 \[\dim E^*_1W = \dim E^*_2W = 1.\]
@@ -7981,7 +7971,6 @@ LR^iv &= LR^2(R^{i-2}v)\\
 & \in \mathrm{Span}(R^{-1}v),
 \end{align}
 by induction and \((a)\).
-\end{remark}
 
 Suppose \(R^{D-1}v = 0\). Then,
 \[\mathrm{Span}(v, Rv, \ldots, R^{D-2}v) = \widetilde{W}.\]
@@ -8088,11 +8077,11 @@ R^{i-1}(\delta^+_{10} + \delta^+_{11} + \delta^+_{12}) & = R^{i-1}\Delta\hat{y}\
 & \in E_{ii}V.
 \end{align}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 It is because on each irreducible hin module with standard basis \(w_r, w_{r+1}, \ldots, w_{r+d}\),
 \[R^{-1}w_i = w_{i-1}, \; i>r, \; R^{-1}w_r = 0,\]
 and \(E^*_1V\) is an orthogonal direct sum of irreducible modules and \(r\leq 1\).
-\end{remark}
 
 Bu we can control \(R^{i-1}\delta^+_{10}\), \(R^{i-1}\delta^+_{11}\), also.
 
@@ -8173,7 +8162,8 @@ By Theorem \ref{thm:rfl-relations} \((i)\),
 0 = (g_3^-R^2F + RFR + g^+_3FR^2 - \gamma R^2)E^*_1.  \label{eq:g3plus-minus}
 \end{equation}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Theorem \ref{thm:rfl-relations} \((i)\) states
 \[(g_i^-FL^2 + LFL + g^+_iL^2F - \gamma L^2)E^*_i = O \;\text{ for }i\in \{2, \ldots, D\}.\]
 For \(i = 3\),
@@ -8182,7 +8172,6 @@ Taking the transpose, we have
 
 \[(g^{-}_3 R^2 F + RFR + g^{+}_3 FR^2 - \gamma R^2) E^*_1 = O.\]
 Hence, we have \eqref{eq:g3plus-minus}.
-\end{remark}
 
 Multiplying each term on the left by E\^{}*\_4(y)\$, on the right by \(E^*_1(y)\), we find
 \begin{align}
@@ -8273,9 +8262,9 @@ p^{1}_{22} & = \delta_{22}\|^2 \\
 So,
 \[\langle \delta^+_{11}, \delta_{11}\rangle = b_1^{-1}p^{1}_{22}- \Psi = \frac{a_2}{c_2}-\Psi.\]
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \[b^{-1}_1p^1_{22} = b^{-1}_1\frac{k_1}{k_1}p^1_{22} = b^{-1}_1\frac{1}{k_1}k_2p^{2}_{12} = b^{-1}_1\frac{b_1}{c_2}a_2 = \frac{a_2}{c_2}.\]
-\end{remark}
 
 \((iv)\) Interchanging roles of \(x, y\) above, we find there exists \(\delta^{+'}_{11}\in E^*_{11}V\) such that
 
@@ -8529,7 +8518,8 @@ A^+v & = \frac{1}{c_2}(R^{-1}RFv + R^{-1}FRv - a_1R^{-1}Rv) - \Psi v\\
 
 \[A^- = \tilde{A}A^+ - \left(\frac{a_2}{c_2} - \Psi\right)E^*_1 + \Psi(\tilde{J}-\tilde{A}-E^*_1).\]
 
-\begin{remark}
+\textbf{HS MEMO}
+
 If \(r(W) =1\),
 \begin{align}
 A^-v & = \left(a_0(W)\left(\frac{\gamma_1}{c_2}-1-\Psi\right) - \left(\frac{c_2}{a_2}-\Psi\right) + \Psi(-a_0(W)-1)\right) v\\
@@ -8540,7 +8530,6 @@ If \(r(W) = 0\),
 A^-v & = \left(a_1\left(\frac{a_2}{c_2}-\Psi\right) - \left(\frac{a_2}{c_2}-\Psi\right) + \Psi(k-a_1-1)\right) v\\
 & = \left((a_1-1)\frac{a_2}{c_2}+ (k-2a_1)\Psi\right)v.
 \end{align}
-\end{remark}
 
 This completes the proof.
 
@@ -8596,9 +8585,9 @@ k & = 1 + \tilde{m}_1 + \tilde{m}_2 + \tilde{m}_3 + \tilde{m}_4\\
 
 The coefficient matrix for \(\tilde{m}_1,\tilde{m}_2, \tilde{m}_3,\tilde{m}_4\) is nonsingular (this is what you need to check and show).
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Complutation is not completed.
-\end{remark}
 
 \((ii)\) \(\Psi\) is independent of base vertex \(x\).
 
@@ -8648,7 +8637,8 @@ With the above notation, we have the following.
 
 So, \(v\in \mathrm{Span}(\delta_{12}, \delta_{11}, \delta_{10}, \delta^+_{11}, \delta^-_{11})\).
 
-\begin{remark}
+\textbf{HS MEMO}
+
 \begin{align}
 v &\in E^*_1V \cap T(x)\hat{y}\\
 & = E^*_1T(x)E^*_1\hat{y}\\
@@ -8656,7 +8646,6 @@ v &\in E^*_1V \cap T(x)\hat{y}\\
 & = \mathrm{Span}(\delta_{10}+ \delta_{11}+ \delta_{12}, \delta_{10}, \delta_{11}, \delta^+_{11}, \delta^-_{11})\\
 & = \mathrm{Span}(\delta_{10}, \delta_{11},  \delta_{12}, \delta^+_{11}, \delta^-_{11}).
 \end{align}
-\end{remark}
 
 Hence, there exists \(\alpha \in \mathbb{C}\) such that
 \[v-\alpha \delta_{12}  \in \mathrm{Span}(\delta_{10}, \delta_{11}, \delta^+_{11}, \delta^-_{11}) = E^*_{11}H + E^*_{10}H.\]
@@ -8679,11 +8668,11 @@ Hence, \(\dim E^*_{i,i}H = \ell -2\).
 
 \end{proof}
 
-\begin{remark}
+\textbf{HS MEMO}
+
 Since \(H = T(x)\hat{y} \subseteq T(x)E^*_{1}(x)V\), and
 \[(R^{-1})^{i-1}: E^*_iH \to E^*_1H\]
 is one-to-one and onto if \(i\leq D\).
-\end{remark}
 
 \begin{theorem}
 \protect\hypertarget{thm:zi}{}\label{thm:zi}Let \(\Gamma = (X, E)\) be thin distance regular of diameter \(D\geq 5\), and \(Q\)-polynomial with respect to \(E_0, E_1, \ldots, E_D\).

@@ -43,7 +43,9 @@ By Theorem \@ref(thm:rfl-relations) $(i)$,
 0 = (g_3^-R^2F + RFR + g^+_3FR^2 - \gamma R^2)E^*_1.  (\#eq:g3plus-minus)
 \end{equation}
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Theorem \@ref(thm:rfl-relations) $(i)$ states
 $$(g_i^-FL^2 + LFL + g^+_iL^2F - \gamma L^2)E^*_i = O \;\text{ for }i\in \{2, \ldots, D\}.$$
 For $i = 3$, 
@@ -135,7 +137,9 @@ p^{1}_{22} & = \delta_{22}\|^2 \\
 So,
 $$\langle \delta^+_{11}, \delta_{11}\rangle = b_1^{-1}p^{1}_{22}- \Psi = \frac{a_2}{c_2}-\Psi.$$
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 $$b^{-1}_1p^1_{22} = b^{-1}_1\frac{k_1}{k_1}p^1_{22} = b^{-1}_1\frac{1}{k_1}k_2p^{2}_{12} = b^{-1}_1\frac{b_1}{c_2}a_2 = \frac{a_2}{c_2}.$$
 :::
 

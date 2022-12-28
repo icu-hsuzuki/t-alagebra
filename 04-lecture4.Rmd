@@ -104,7 +104,9 @@ m_0 & m_1 & \cdots & m_D\end{pmatrix},$$
 where
 $$\theta_i = D-2i \quad (0\leq i\leq D), \quad m_i = \binom{D}{i}.$$
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Let $\theta \in X(G)$. Then $\theta: X \to \{\pm 1\}$. If 
 $$\nu(\theta) = |\{i\mid \theta(a_i) = -1\}|, $$
 then $\Delta_\theta = D-2i$. Since there are $\binom{D}{i}$ such $\theta$, we have te assertion.

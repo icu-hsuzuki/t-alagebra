@@ -37,7 +37,9 @@ Let $\Gamma$, $E^*_i$, and $T$ be as above. Irreducible $T$-modules $W$ and $W'$
 Recall that the standard module $V$ is an orthogonal direct sum of irreducible $T$-modules $W_1 \oplus W_2 \oplus \cdots$. Given $W$ in this list, the multiplicity\index{multiplicity} of $W$ in $V$ is 
 $$|\{j \mid W_j \simeq W\}|.$$
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 It is known that the multiplicity does not depend on the decomposition.
 :::
 
@@ -134,7 +136,10 @@ Claim: The following hold.
 
 In particular $\mathrm{Span}(R,L, A^*)$ is a 'representation of Lie algebra $\mathrm{sl}_2(\mathbb{C})$.
 
-:::{.remark name="Lie Algebra sl2(C)"}
+
+:::{.hs name="Lie Algebra sl2(C)"}
+**HS MEMO**
+
 $$\mathrm{sl}_2(\mathbb{C}) = \{X\mid \mathrm{Mat}(\mathbb{C} \mid \mathrm{tr}(X) = 0\}.$$
 For $X, Y\in \mathrm{sl}_2(\mathbb{C})$, define a binary operation $[X, Y] = XY - YX$.
 $$A^*\sim \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}, \quad L\sim \begin{pmatrix} 0 & 1 \\ 0 & 0\end{pmatrix}, \quad R\sim \begin{pmatrix} 0 & 0 \\ 1 & 0\end{pmatrix}.$$

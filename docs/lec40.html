@@ -179,7 +179,7 @@ div.csl-indent {
 as in Theorem <a href="lec14.html#lem:thin-endpoint1">14.2</a>. (The eigenvalue for <span class="math inline">\(A^-\)</span> on <span class="math inline">\(v\)</span> will be discussed later in this lecture.)</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-137" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-87" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)-(iii)\)</span> Clear.</div>
 <div class="line-block"><span class="math inline">\((iv)\)</span> We have</div>
 <p><span class="math display">\[\begin{align}
@@ -210,8 +210,9 @@ A^+v &amp; = \frac{1}{c_2}(R^{-1}RFv + R^{-1}FRv - a_1R^{-1}Rv) - \Psi v\\
 \end{align}\]</span></p>
 <div class="line-block"><span class="math inline">\((v)\)</span> Immediate from <span class="math inline">\((iv)\)</span>, and</div>
 <p><span class="math display">\[A^- = \tilde{A}A^+ - \left(\frac{a_2}{c_2} - \Psi\right)E^*_1 + \Psi(\tilde{J}-\tilde{A}-E^*_1).\]</span></p>
-<div class="remark">
-<p><span id="unlabeled-div-136" class="remark"><em>Remark</em>. </span>If <span class="math inline">\(r(W) =1\)</span>,
+<div class="hs">
+<p><strong>HS MEMO</strong></p>
+<p>If <span class="math inline">\(r(W) =1\)</span>,
 <span class="math display">\[\begin{align}
 A^-v &amp; = \left(a_0(W)\left(\frac{\gamma_1}{c_2}-1-\Psi\right) - \left(\frac{c_2}{a_2}-\Psi\right) + \Psi(-a_0(W)-1)\right) v\\
 &amp; = \left(a_0(W)\left(\frac{\gamma_1}{c_2}-1-2\Psi\right) - \frac{c_2}{a_2}\right)v.
@@ -234,7 +235,7 @@ A^-v &amp; = \left(a_1\left(\frac{a_2}{c_2}-\Psi\right) - \left(\frac{a_2}{c_2}-
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(\ell:= \dim E^*_1TE^*_1\)</span> is independent of <span class="math inline">\(x\)</span>.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-139" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-88" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> Let <span class="math inline">\(e_i\in E^*_1TE^*_1\)</span> <span class="math inline">\((1\leq i\leq 4)\)</span> denote the orthogonal projection on to the maximal eigenspace of <span class="math inline">\((E^*_1V)_{new}\)</span> corresponding to <span class="math inline">\(\lambda_i\)</span>. (<span class="math inline">\(e=0\)</span> if and only if <span class="math inline">\(\lambda_i\)</span> does not appear.) Set</div>
 <p><span class="math display">\[e_0 = \frac{1}{k}\tilde{J}.\]</span>
 Then eigenvalues for each <span class="math inline">\(e_1, e_1, e_3, e_4\)</span> are as follows.
@@ -258,8 +259,9 @@ k &amp; = 1 + \tilde{m}_1 + \tilde{m}_2 + \tilde{m}_3 + \tilde{m}_4\\
 0 &amp; = \left(\star\right) + a^-(W_1)\tilde{m}_1 + a^-(W_2)\tilde{m}_2 + a^-(W_3)\tilde{m}_3 + a^-(W_4)\tilde{m}_4.
 \end{align}\]</span></p>
 <p>The coefficient matrix for <span class="math inline">\(\tilde{m}_1,\tilde{m}_2, \tilde{m}_3,\tilde{m}_4\)</span> is nonsingular (this is what you need to check and show).</p>
-<div class="remark">
-<p><span id="unlabeled-div-138" class="remark"><em>Remark</em>. </span>Complutation is not completed.</p>
+<div class="hs">
+<p><strong>HS MEMO</strong></p>
+<p>Complutation is not completed.</p>
 </div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\Psi\)</span> is independent of base vertex <span class="math inline">\(x\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iii)\)</span> We have</div>
@@ -285,13 +287,14 @@ is <span class="math inline">\(T(x,y)\)</span> module.
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(E^*_{i,i}H = \ell-2 \leq 3 \quad (1\leq i\leq D-1)\)</span>.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-141" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-89" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\supseteq\)</span>: We have</div>
 <p><span class="math display">\[\delta_{i,i+1} = E^*_iA_{i+1}\hat{y} \in T(x)\hat{y} = H.\]</span></p>
 <div class="line-block"><span class="math inline">\(\subseteq\)</span>: Pick <span class="math inline">\(h\in E^*_{i,i+1}H\)</span>. Then <span class="math inline">\(h = R^{i-1}v\)</span>, where <span class="math inline">\(v = (R^{-1})^{i-1}h\in E^*_1V\)</span>.</div>
 <p>So, <span class="math inline">\(v\in \mathrm{Span}(\delta_{12}, \delta_{11}, \delta_{10}, \delta^+_{11}, \delta^-_{11})\)</span>.</p>
-<div class="remark">
-<p><span id="unlabeled-div-140" class="remark"><em>Remark</em>. </span><span class="math display">\[\begin{align}
+<div class="hs">
+<p><strong>HS MEMO</strong></p>
+<p><span class="math display">\[\begin{align}
 v &amp;\in E^*_1V \cap T(x)\hat{y}\\
 &amp; = E^*_1T(x)E^*_1\hat{y}\\
 &amp; = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, A^+, A^-)\hat{y}\\
@@ -315,8 +318,9 @@ Thus,
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(E^*_i H = E^*_{i,i+1}H + E^*_{i,i}H + E^*_{i,i-1}H\)</span>, and <span class="math inline">\(\dim E^*_iH = \ell\)</span>, <span class="math inline">\(\dim E^*_{i,i+1}H =1\)</span>, and <span class="math inline">\(\dim E^*_{i,i-1}H = 1\)</span>.</div>
 <p>Hence, <span class="math inline">\(\dim E^*_{i,i}H = \ell -2\)</span>.</p>
 </div>
-<div class="remark">
-<p><span id="unlabeled-div-142" class="remark"><em>Remark</em>. </span>Since <span class="math inline">\(H = T(x)\hat{y} \subseteq T(x)E^*_{1}(x)V\)</span>, and
+<div class="hs">
+<p><strong>HS MEMO</strong></p>
+<p>Since <span class="math inline">\(H = T(x)\hat{y} \subseteq T(x)E^*_{1}(x)V\)</span>, and
 <span class="math display">\[(R^{-1})^{i-1}: E^*_iH \to E^*_1H\]</span>
 is one-to-one and onto if <span class="math inline">\(i\leq D\)</span>.</p>
 </div>
@@ -328,7 +332,7 @@ is one-to-one and onto if <span class="math inline">\(i\leq D\)</span>.</p>
 is independent of <span class="math inline">\(x, y, z\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-143" class="proof"><em>Proof</em>. </span>Observe that <span class="math inline">\(z_i\)</span> is the <span class="math inline">\(zx\)</span> entry in
+<p><span id="unlabeled-div-90" class="proof"><em>Proof</em>. </span>Observe that <span class="math inline">\(z_i\)</span> is the <span class="math inline">\(zx\)</span> entry in
 <span class="math display">\[\Delta = E^*_{i-1}(y)A_{i-1}E^*_1(y)AE^*_1(y)\]</span>
 as
 <span class="math display">\[\Delta \hat{x} = \sum_{z\in X, \partial(x,z)=i, \partial(y,z)=i-1}z_i(x,y,z)\hat{z}.\]</span>

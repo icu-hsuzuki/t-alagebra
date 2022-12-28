@@ -24,7 +24,9 @@ by Corollary \@ref(cor:fr2lr2r2l).
 Claim $(a)$ $FR^iv \in \mathrm{Span}(R^iv)$ for $i\in \{0, \ldots, D-2\}$,
 $\quad (b)$ $LR^iv \in \mathrm{Span}(R^{i-1}v)$ for $i\in \{1, \ldots, D-2\}$.
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 _Proof of Claim._
 | $(a)$ by Lemma \@ref(lem:tv), and an assumption
 $$\dim E^*_1W = \dim E^*_2W = 1.$$
@@ -150,7 +152,9 @@ R^{i-1}(\delta^+_{10} + \delta^+_{11} + \delta^+_{12}) & = R^{i-1}\Delta\hat{y}\
 & \in E_{ii}V.
 \end{align}
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 It is because on each irreducible hin module with standard basis $w_r, w_{r+1}, \ldots, w_{r+d}$, 
 $$R^{-1}w_i = w_{i-1}, \; i>r, \; R^{-1}w_r = 0,$$
 and $E^*_1V$ is an orthogonal direct sum of irreducible modules and $r\leq 1$.

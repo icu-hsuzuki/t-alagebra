@@ -122,7 +122,9 @@ Let $E_\theta: V\to V_\theta$ denote the orthogonal projection. Then $E_\theta$ 
 
 Thus $E_\theta\in T(x)$.
 
-:::{remark}
+:::{.hs}
+**HS MEMO**
+
 $E_\theta$ is real. Since $RL$ is an integral matrix, every eigenvalue of $RL$ is an algebraic integer.
 :::
 

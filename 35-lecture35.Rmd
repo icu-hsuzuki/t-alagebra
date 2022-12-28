@@ -119,7 +119,9 @@ Claim 5. $\deg p^{++} = \deg p^{--} = 2$. (only need for some $i$)
 _Proof of Claim 5._
 We need to calculate $p^{++}$, $p^{--}$.
 
-:::{.remark}
+:::{.hs}
+**HS MEMO**
+
 Pick vertices $y,z\in X$ such that $\partial(x,y) = \partial(x,z) =1$. Then
 $$(E^*_1A_{i-1}E^*_iA_{i-1}E^*_1)_{yz} = |\gamma_{i-1}(y)\cap \Gamma_i(x)\cap \Gamma_{i-1}(z)|,$$
 which is equal to $p^{1}_{i-1,i}$ if $\partial(y,z)=0$, but \ldots.
