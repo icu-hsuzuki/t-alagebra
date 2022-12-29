@@ -66,7 +66,7 @@ In this xase, $k^+k^- = \theta_0^2$, and $\Gamma$ is called bi-regular.
 
 :::{.proof}
 $(i)\to(ii)$
-```{r echo=FALSE, fig.width=2, fig.height=1.5, message=FALSE, fig.align="center"}
+```{r bipartite, echo=FALSE, fig.width=2, fig.height=1.5, message=FALSE, fig.align="center"}
 library(tidyverse)
 df_eg111 <- data.frame(b1x = c(1, 0, 0, 4, 4, 3), b1y = c(3, 3, -3, -3, 3, 3), 
                       b2x = c(6, 5, 5, 9, 9, 8), b2y = c(3, 3, -3, -3, 3, 3),

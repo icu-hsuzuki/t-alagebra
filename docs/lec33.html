@@ -12,7 +12,7 @@
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta name="github-repo" content="icu-hsuzuki/t-algebra" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 33 Algebra on First Subconstitutent | Lecture Note on Terwilliger Algebra" />
@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2022-12-28" />
+<meta name="date" content="2022-12-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -142,7 +142,10 @@ div.csl-indent {
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>A</b> Open Problems</a></li>
 <li class="chapter" data-level="B" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>B</b> Comparison Table</a></li>
-<li class="chapter" data-level="C" data-path="memo.html"><a href="memo.html"><i class="fa fa-check"></i><b>C</b> Technical Memo</a></li>
+<li class="chapter" data-level="C" data-path="memo.html"><a href="memo.html"><i class="fa fa-check"></i><b>C</b> Technical Memo</a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="memo.html"><a href="memo.html#to-do-list"><i class="fa fa-check"></i><b>C.1</b> To Do List</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -178,7 +181,7 @@ div.csl-indent {
 <p>Moreover, <span class="math inline">\(ME^*_0M = M^*E_0M^*\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-71" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-72" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\supseteq\)</span>: <span class="math inline">\(1\in M^*\)</span> implies <span class="math inline">\(M\subseteq MM^*\)</span>.</div>
 <p><span class="math inline">\(\subseteq\)</span>: Pick <span class="math inline">\(\alpha\in E^*_0MM^*\)</span>. Show <span class="math inline">\(\alpha\in E^*_0M\)</span>. Since <span class="math inline">\(A_0, A_1, \ldots, A_D\)</span> span <span class="math inline">\(M\)</span>, and since <span class="math inline">\(E^*_0, E^*_1, \ldots, E^*_D\)</span> span <span class="math inline">\(M^*\)</span>, without loss of generality we may assume that
 <span class="math display">\[\alpha = E^*_0A_iE^*_j\]</span>
@@ -217,7 +220,7 @@ write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="ma
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(E_1M^*M = E_1M^* + E_1E^*_0M + E_1E^*_1M\)</span>.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-72" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-73" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> View <span class="math inline">\(E^*_{-1}\)</span>, <span class="math inline">\(E^*_{D+1}\)</span> as <span class="math inline">\(O\)</span>.</div>
 <p>View <span class="math inline">\(\theta^*_{-1}\)</span>, <span class="math inline">\(\theta^*_{D+1}\)</span> as indeterminates.</p>
 <p>Let <span class="math inline">\(\Delta\)</span> denote <span class="math inline">\(\mathrm{RHS}\)</span> in <span class="math inline">\((i)\)</span>.</p>
@@ -285,7 +288,7 @@ Hence, <a href="lec33.html#eq:i">(33.4)</a> cannot occur either, and we have a c
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(E^*_1E_1E^*_1 = |X|^{-1}(E^*_1(\theta^*_0-\theta^*_2)+\tilde{A}(\theta^*_{1}-\theta^*_2)+\tilde{J}(\theta^*_2))\)</span>.</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-73" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-74" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> The first subconstituent has <span class="math inline">\(k\)</span> vertices.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> The first subconstituent is regular of valency <span class="math inline">\(a_1\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iii)\)</span> Since <span class="math inline">\(E_0 = |X|^{-1}J\)</span>,</div>
@@ -312,7 +315,7 @@ Eliminating the <span class="math inline">\(E^*_1A_2E^*_1\)</span> term in <a hr
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(E^*_1TE^*_1\)</span> is symmetric (in particular, commutative).</div>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-74" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-75" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\supseteq\)</span>: Clear.</div>
 <p><span class="math inline">\(\subseteq\)</span>: <span class="math inline">\(E^*_1T\)</span> is the minimal right ideal of <span class="math inline">\(\Gamma\)</span> that contains <span class="math inline">\(E^*_1\)</span>.</p>
 <p><span class="math inline">\(\mathrm{RHS}\)</span> contains <span class="math inline">\(E^*_1\)</span>, so show <span class="math inline">\(\mathrm{RHS}\)</span> is a right ideal of <span class="math inline">\(T\)</span>.</p>
@@ -399,7 +402,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/33-lecture33.Rmd",
+"link": "https://github.com/icu-hsuzuki/t-algebra/edit/master/33-lecture33.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -410,7 +413,7 @@ gitbook.start({
 "link": "https://github.com/icu-hsuzuki/t-algebra/master/33-lecture33.Rmd",
 "text": null
 },
-"download": ["t-algebra.pdf", "t-algebra.epub"],
+"download": ["t-algebra.pdf"],
 "search": {
 "engine": "fuse",
 "options": null

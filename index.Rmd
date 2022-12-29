@@ -8,7 +8,8 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+#github-repo: rstudio/bookdown-demo
+github-repo: icu-hsuzuki/t-algebra
 description: "This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook."
 ---
 

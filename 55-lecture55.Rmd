@@ -35,3 +35,17 @@ E. Local Repository
 All source files are in the 
 [GitHub Repository](https://github.com/icu-hsuzuki/t-algebra).
 
+|
+## To Do List
+
+* Environment `align` in ePub_book.
+* Shaded Box using `frame` with environment `hs` in PDF
+* Controlling top icons
+* My template of `bookdown`
+
+**Minor**
+
+* Difference in numbering; HTML and PDF
+* `bs4_book` format
+* `bookdown` template and `doc` directory
+* Style of citation in PDF
