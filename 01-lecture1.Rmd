@@ -2,10 +2,12 @@
 **Wednesday, January 20, 1993**
 
 A graph \index{graph} (undirected, without loops or multiple edges) is a pair $\Gamma = (X, E)$, where 
-\begin{align}
-X &= \textrm{finite set (of vertices)}\\
-E & = \textrm{set of (distinct) 2-element subsets of }X \textrm{ (= edges of ) }\Gamma.
-\end{align}
+
+\begin{eqnarray*}
+X &=& \textrm{finite set (of vertices)}\\
+E &=& \textrm{set of (distinct) 2-element subsets of }X \textrm{ (= edges of ) }\Gamma.
+\end{eqnarray*}
+
 vertices $x$ and $y\in X$ are adjacent if and only if $xy\in E$.
 
 :::{.example #four-vertex-graph}

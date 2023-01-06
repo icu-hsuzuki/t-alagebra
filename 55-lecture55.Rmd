@@ -39,6 +39,24 @@ All source files are in the
 ## To Do List
 
 * Environment `align` in ePub_book.
+
+\begin{align}
+A & = B\\
+& = C
+\end{align}
+
+\begin{eqnarray*}
+A &=& B\\
+& = & C
+\end{eqnarray*}
+
+$$
+\begin{array}{lcl}
+A & \!\!=\!\! & B\\
+& \!\!=\!\! & C
+\end{array}
+$$
+
 * Shaded Box using `frame` with environment `hs` in PDF
 * Controlling top icons
 * My template of `bookdown`

@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2022-12-29}
+\date{2023-01-06}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -483,10 +483,12 @@ This book attempts to prepare the way for an eventual classification of the grap
 \textbf{Wednesday, January 20, 1993}
 
 A graph \index{graph} (undirected, without loops or multiple edges) is a pair \(\Gamma = (X, E)\), where
-\begin{align}
-X &= \textrm{finite set (of vertices)}\\
-E & = \textrm{set of (distinct) 2-element subsets of }X \textrm{ (= edges of ) }\Gamma.
-\end{align}
+
+\begin{eqnarray*}
+X &=& \textrm{finite set (of vertices)}\\
+E &=& \textrm{set of (distinct) 2-element subsets of }X \textrm{ (= edges of ) }\Gamma.
+\end{eqnarray*}
+
 vertices \(x\) and \(y\in X\) are adjacent if and only if \(xy\in E\).
 
 \begin{example}
@@ -9048,6 +9050,27 @@ All source files are in the
 \tightlist
 \item
   Environment \texttt{align} in ePub\_book.
+\end{itemize}
+
+\begin{align}
+A & = B\\
+& = C
+\end{align}
+
+\begin{eqnarray*}
+A &=& B\\
+& = & C
+\end{eqnarray*}
+
+\[
+\begin{array}{lcl}
+A & \!\!=\!\! & B\\
+& \!\!=\!\! & C
+\end{array}
+\]
+
+\begin{itemize}
+\tightlist
 \item
   Shaded Box using \texttt{frame} with environment \texttt{hs} in PDF
 \item
