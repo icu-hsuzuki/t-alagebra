@@ -61,6 +61,7 @@ eq:g3plus-minus-zero
 eq:tildea-deltaplus11
 eq:delta-minus12
 eq:sigma
+eq:var-beta
 lec1
 lec2
 lec3
