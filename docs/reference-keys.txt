@@ -106,3 +106,6 @@ prob
 table
 memo
 to-do-list
+lem:orthogonality
+lem:determined-by-m
+cor:isomorphic
