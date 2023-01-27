@@ -108,7 +108,7 @@ $W$, $W'$ denote thin irreducible $T(x)$-modules. The following are equivalent.
 
 :::{.proof}
 $(i)\Rightarrow (iii)$
-Write $r\equiv r(W)$, $r' \equiv r(W')$, $d = d(W)$, $d' = d(W')$, $a_i = a_i(W)$, $a_i' = a_i(W')$, $x_i = x_i(W)$ and $x_i' = x_i(W')$.
+Write $r\equiv r(W)$, $r' \equiv r(W')$, $d \equiv d(W)$, $d' \equiv d(W')$, $a_i \equiv a_i(W)$, $a_i' \equiv a_i(W')$, $x_i \equiv x_i(W)$ and $x_i' \equiv x_i(W')$.
 
 Let $\sigma: W\to W'$ denote an isomorphism of $T$-modules. (See Definition \@ref(def:isomorphic-modules).)
 
