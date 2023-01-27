@@ -57,6 +57,7 @@ Assume $\Gamma$ is bipartite $(X = X^+ \cup X^-)$ ($X^+$ and $X^-$ are nonempty)
 $$\delta_x = \begin{cases} \alpha^+ & \text{if }\: x\in X^+\\
 \alpha^- & \text{if } x\in X^-.
 \end{cases}$$
+
 | $(ii)$ There exist $k+$ and $k^-\in \mathbb{Z}^{>0}$ such that
 $$k(x) = \begin{cases} k^+ & \text{if }\: x\in X^+\\
 k^- & \text{if } x\in X^-.
