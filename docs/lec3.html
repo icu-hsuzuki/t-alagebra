@@ -199,12 +199,12 @@ Then Cayley graph <span class="math inline">\(\Gamma = \Gamma(G, \Delta)\)</span
 <p><img src="t-algebra_files/figure-html/unnamed-chunk-2-1.png" width="192" style="display: block; margin: auto;" /></p>
 </div>
 <div class="example">
-<p><span id="exm:d6" class="example"><strong>Example 3.3  </strong></span><span class="math inline">\(G = \langle a, b \mid a^6 = 1, b^2, ab = ba\rangle\)</span>, <span class="math inline">\(\Delta = \{a, a^{-1}, b\}\)</span>.
+<p><span id="exm:d6" class="example"><strong>Example 3.3  </strong></span><span class="math inline">\(G = \langle a, b \mid a^6 = 1 = b^2, ab = ba\rangle\)</span>, <span class="math inline">\(\Delta = \{a, a^{-1}, b\}\)</span>.
 <img src="t-algebra_files/figure-html/unnamed-chunk-3-1.png" width="336" style="display: block; margin: auto;" /></p>
 </div>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
-<p><span class="math inline">\(\mathrm{Aut}(\Gamma) \simeq D_6\times \mathbb{Z}_2\)</span> contains two regular subgroups isomorphic to <span class="math inline">\(D_6\)</span> and <span class="math inline">\(\mathbb{Z}_5 \times \mathbb{Z}_2\)</span> and <span class="math inline">\(\Gamma\)</span> is obtained as Cayley graphs in two ways.</p>
+<p><span class="math inline">\(\mathrm{Aut}(\Gamma) \simeq D_6\times \mathbb{Z}_2\)</span> contains two regular subgroups isomorphic to <span class="math inline">\(D_6\)</span> and <span class="math inline">\(\mathbb{Z}_6 \times \mathbb{Z}_2\)</span> and <span class="math inline">\(\Gamma\)</span> is obtained as Cayley graphs in two ways.</p>
 </div>
 <p>Cayley graphs are vertex transitive, indeed.</p>
 <div class="theorem">
@@ -235,7 +235,7 @@ Hence, <span class="math inline">\(\hat{g}\in \mathrm{Aut}(\Gamma)\)</span>.</p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(1_G\not\in \Delta\)</span>: Since <span class="math inline">\(\Gamma\)</span> has not loops, <span class="math inline">\((x, 1_Gx) \not\in E\)</span>.</div>
 <p><span class="math inline">\(g\in \Delta \to g^{-1}\in \Delta\)</span>:
 <span class="math display">\[g\in \Delta \to (x, g(x))\in E \to E \ni (g^{-1}(x), g^{-1}(g(x))) = (g^{-1}(x), x).\]</span></p>
-<p><span class="math inline">\(\Delta\)</span> generates <span class="math inline">\(G\)</span>: Suppose <span class="math inline">\(\langle \Delta \subsetneq G\)</span>. Let <span class="math inline">\(\hat{X} = \{g(x)\mid g\in \langle \Delta\rangle\} \subsetneq X\)</span>. (<span class="math inline">\(\hat{X} \subsetneq X\)</span> as <span class="math inline">\(G\)</span> acts regularly on <span class="math inline">\(X\)</span>.)</p>
+<p><span class="math inline">\(\Delta\)</span> generates <span class="math inline">\(G\)</span>: Suppose <span class="math inline">\(\langle \Delta \rangle \subsetneq G\)</span>. Let <span class="math inline">\(\hat{X} = \{g(x)\mid g\in \langle \Delta\rangle\} \subsetneq X\)</span>. (<span class="math inline">\(\hat{X} \subsetneq X\)</span> as <span class="math inline">\(G\)</span> acts regularly on <span class="math inline">\(X\)</span>.)</p>
 <p>Since <span class="math inline">\(\Gamma\)</span> is connected, there exists <span class="math inline">\(y\in \hat{X}\)</span> and <span class="math inline">\(z\in X\setminus \hat{X}\)</span> with <span class="math inline">\(yz\in E\)</span>.</p>
 <p>Let <span class="math inline">\(y = g(x)\)</span>, <span class="math inline">\(g\in \langle \Delta\rangle\)</span>, <span class="math inline">\(z\in h(x)\)</span>, <span class="math inline">\(h\in G\setminus \langle \Delta\rangle\)</span>. Then
 <span class="math display">\[(y,z)=(g(x),h(x))\in E \to (x,g^{-1}h(x))\in E \to g^{-1}h\in \langle \Delta \rangle \to h\in \langle \Delta \rangle. \]</span>
@@ -245,7 +245,7 @@ This is a contradition. Therefore, <span class="math inline">\(\Delta\)</span> g
 is an isomorphism of graphs.</p>
 <p><span class="math inline">\(\theta\)</span> is one-to-one: For <span class="math inline">\(h_1, h_2\in X&#39; = G\)</span>,
 <span class="math display">\[\theta(h_1)=\theta(h_2) \to h_1(x) = h_2(x) \to h_2^{-1}h_1(x)=x \to h_2^{-1}h_1\in \mathrm{Stab}_G(x) = \{1_G\} \to h_1 = h_2.\]</span>
-(<span class="math inline">\(\mathrm{Stab}_G = \{g\in G\mid g(x) = x\}\)</span>.)</p>
+(<span class="math inline">\(\mathrm{Stab}_G(x) = \{g\in G\mid g(x) = x\}\)</span>.)</p>
 <p><span class="math inline">\(\theta\)</span> is onto: Since <span class="math inline">\(G\)</span> is transitive,
 <span class="math display">\[X = \{g(x)\mid g\in G\} = \theta(X&#39;) = \theta(G).\]</span></p>
 <p><span class="math inline">\(\theta\)</span> respects adjacency: For <span class="math inline">\(h_1, h_2\in X&#39; = G\)</span>,
@@ -268,10 +268,10 @@ Therefore <span class="math inline">\(\theta\)</span> is an isomorphism between 
 \theta_2 &amp; 1 &amp; \omega^2 &amp; \omega
 \end{array}, \quad \textrm{with }\; \omega = \frac{-1+\sqrt{-3}}{2}.
 \]</span>
-Here <span class="math inline">\(\omega\)</span> is a primitive cube root pf <span class="math inline">\(q\)</span> in <span class="math inline">\(\mathbb{C}^*\)</span>, i.e., <span class="math inline">\(1+\omega + \omega^2 = 0\)</span>.</p>
+Here <span class="math inline">\(\omega\)</span> is a primitive cube root of <span class="math inline">\(q\)</span> in <span class="math inline">\(\mathbb{C}^*\)</span>, i.e., <span class="math inline">\(1+\omega + \omega^2 = 0\)</span>.</p>
 </div>
 <p>For arbitraty group <span class="math inline">\(G\)</span>, let <span class="math inline">\(X(G)\)</span> be the set of all characters of <span class="math inline">\(G\)</span>.</p>
-<p>Observe: For <span class="math inline">\(\theta_1, \theta_2\in X(G)\)</span>, one can define product $_1_2:
+<p>Observe: For <span class="math inline">\(\theta_1, \theta_2\in X(G)\)</span>, one can define product <span class="math inline">\(\theta_1\theta_2\)</span>:
 <span class="math display">\[\theta_1\theta_2(g) = \theta_1(g)\theta_2(g) \quad \textrm{for all }\; g\in G.\]</span>
 Then <span class="math inline">\(\theta_1\theta_2\in X(G)\)</span>.</p>
 <p>Observe: <span class="math inline">\(X(G)\)</span> with this product is an (abelian) group.</p>
@@ -281,7 +281,7 @@ Then <span class="math inline">\(\theta_1\theta_2\in X(G)\)</span>.</p>
 <div class="proof">
 <p><span id="unlabeled-div-7" class="proof"><em>Proof</em>. </span><span class="math inline">\(G\)</span> is a direct sum of cyclic groups;
 <span class="math display">\[G = G_1\oplus G_2 \oplus \cdots \oplus G_m, \quad \textrm{where } \; G_i = \langle a_i\mid a_i^{d_i} = 1\rangle \quad (1\leq i\leq m).\]</span>
-Pick any alement <span class="math inline">\(\omega_i\)</span> of order <span class="math inline">\(d_i\)</span> in <span class="math inline">\(\mathbb{C}^*\)</span>, i.e., a primitive <span class="math inline">\(d_i\)</span>-the root of <span class="math inline">\(1\)</span>. Define
+Pick any element <span class="math inline">\(\omega_i\)</span> of order <span class="math inline">\(d_i\)</span> in <span class="math inline">\(\mathbb{C}^*\)</span>, i.e., a primitive <span class="math inline">\(d_i\)</span>-the root of <span class="math inline">\(1\)</span>. Define
 <span class="math display">\[\theta_i: G \to \mathbb{C}^* \quad (a_1^{\varepsilon_1}\cdots a_m^{\varepsilon_m} \mapsto \omega_i^{\varepsilon_i} \quad \textrm{where }\; 0\leq \varepsilon_i &lt; d_i, 1\leq i\leq m).\]</span>
 Then <span class="math inline">\(\theta_i\in X(G)\)</span>. (Exercise)</p>
 <p>Claim: There exists an isomorphism of groups <span class="math inline">\(G \to X(G)\)</span> that sends <span class="math inline">\(a_i\)</span> to <span class="math inline">\(\theta_i\)</span>.</p>

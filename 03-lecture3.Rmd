@@ -60,7 +60,7 @@ ggplot(df_eg32, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(pan
 :::
 
 :::{.example #d6}
-$G = \langle a, b \mid a^6 = 1, b^2, ab = ba\rangle$, $\Delta = \{a, a^{-1}, b\}$.
+$G = \langle a, b \mid a^6 = 1 = b^2, ab = ba\rangle$, $\Delta = \{a, a^{-1}, b\}$.
 ```{r echo=FALSE, fig.width=3.5, fig.height=2.5, message=FALSE, fig.align="center", warning = FALSE}
 library(tidyverse)
 df_eg32 <- data.frame(x = c(0, 1, 3, 4, 3, 1, 0, 0.8, 1.5, 1, 1.5, 1.5, 2.5, 3, 2.5, 2.5, 3.2, 4, 3.2, 3.2, 2.5, 3, 2.5,2.5, 1.5, 1, 1.5, 1.5, 0.8), y = c(0, -1.5, -1.5, 0, 1.5, 1.5, 0, 0, -1, -1.5, -1, -1, -1, -1.5, -1, -1, 0, 0, 0, 0, 1, 1.5, 1, 1, 1, 1.5, 1, 1, 0))
@@ -83,7 +83,7 @@ ggplot(df_eg32, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(pan
 :::{.hs}
 **HS MEMO**
 
-$\mathrm{Aut}(\Gamma) \simeq D_6\times \mathbb{Z}_2$ contains two regular subgroups isomorphic to $D_6$ and $\mathbb{Z}_5 \times \mathbb{Z}_2$ and $\Gamma$ is obtained as Cayley graphs in two ways.
+$\mathrm{Aut}(\Gamma) \simeq D_6\times \mathbb{Z}_2$ contains two regular subgroups isomorphic to $D_6$ and $\mathbb{Z}_6 \times \mathbb{Z}_2$ and $\Gamma$ is obtained as Cayley graphs in two ways.
 :::
 
 Cayley graphs are vertex transitive, indeed.
@@ -125,7 +125,7 @@ Observe: $\hat{G}$ is regular on $X$: Clear by construction.
 $g\in \Delta \to g^{-1}\in \Delta$: 
 $$g\in \Delta \to (x, g(x))\in E \to E \ni (g^{-1}(x), g^{-1}(g(x))) = (g^{-1}(x), x).$$
 
-$\Delta$ generates $G$: Suppose $\langle \Delta \subsetneq G$. Let $\hat{X} = \{g(x)\mid g\in \langle \Delta\rangle\} \subsetneq X$. ($\hat{X} \subsetneq X$ as $G$ acts regularly on $X$.)
+$\Delta$ generates $G$: Suppose $\langle \Delta \rangle \subsetneq G$. Let $\hat{X} = \{g(x)\mid g\in \langle \Delta\rangle\} \subsetneq X$. ($\hat{X} \subsetneq X$ as $G$ acts regularly on $X$.)
 
 Since $\Gamma$ is connected, there exists $y\in \hat{X}$ and $z\in X\setminus \hat{X}$ with $yz\in E$. 
 
@@ -139,7 +139,7 @@ is an isomorphism of graphs.
 
 $\theta$ is one-to-one: For $h_1, h_2\in X' = G$,
 $$\theta(h_1)=\theta(h_2) \to h_1(x) = h_2(x) \to h_2^{-1}h_1(x)=x \to h_2^{-1}h_1\in \mathrm{Stab}_G(x) = \{1_G\} \to h_1 = h_2.$$
-($\mathrm{Stab}_G = \{g\in G\mid g(x) = x\}$.)
+($\mathrm{Stab}_G(x) = \{g\in G\mid g(x) = x\}$.)
 
 $\theta$ is onto: Since $G$ is transitive, 
 $$X = \{g(x)\mid g\in G\} = \theta(X') = \theta(G).$$
@@ -168,12 +168,12 @@ $$
 \theta_2 & 1 & \omega^2 & \omega
 \end{array}, \quad \textrm{with }\; \omega = \frac{-1+\sqrt{-3}}{2}.
 $$
-Here $\omega$ is a primitive cube root pf $q$ in $\mathbb{C}^*$, i.e., $1+\omega + \omega^2 = 0$.
+Here $\omega$ is a primitive cube root of $q$ in $\mathbb{C}^*$, i.e., $1+\omega + \omega^2 = 0$.
 :::
 
 For arbitraty group $G$, let $X(G)$ be the set of all characters of $G$.
 
-Observe: For $\theta_1, \theta_2\in X(G)$, one can define product $\theta_1\theta_2:
+Observe: For $\theta_1, \theta_2\in X(G)$, one can define product $\theta_1\theta_2$:
 $$\theta_1\theta_2(g) = \theta_1(g)\theta_2(g) \quad \textrm{for all }\; g\in G.$$
 Then $\theta_1\theta_2\in X(G)$.
 
@@ -186,7 +186,7 @@ The groups $G$ and $X(G)$ are isomorphic for all finite abelian groups $G$.
 :::{.proof}
 $G$ is a direct sum of cyclic groups;
 $$G = G_1\oplus G_2 \oplus \cdots \oplus G_m, \quad \textrm{where } \; G_i = \langle a_i\mid a_i^{d_i} = 1\rangle \quad (1\leq i\leq m).$$
-Pick any alement $\omega_i$ of order $d_i$ in $\mathbb{C}^*$, i.e., a primitive $d_i$-the root of $1$. Define
+Pick any element $\omega_i$ of order $d_i$ in $\mathbb{C}^*$, i.e., a primitive $d_i$-the root of $1$. Define
 $$\theta_i: G \to \mathbb{C}^* \quad (a_1^{\varepsilon_1}\cdots a_m^{\varepsilon_m} \mapsto \omega_i^{\varepsilon_i} \quad \textrm{where }\; 0\leq \varepsilon_i < d_i, 1\leq i\leq m).$$
 Then $\theta_i\in X(G)$. (Exercise)
 
