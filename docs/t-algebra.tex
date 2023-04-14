@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2023-04-13}
+\date{2023-04-14}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -738,7 +738,7 @@ where \(Ay = \theta x\) and \(Bx = \theta y\).
 \item
   If \(C\) is bipartite, \(C^2\) is reducible.
 \item
-  The matrix \(C\) is irreducible and \(C^2\) is reducible, if \(C_{ij} \geq 0\) for all \(i,j\) and \(C\) is reducible. (Exercise)
+  The matrix \(C\) is irreducible and \(C^2\) is reducible, if \(C_{ij} \geq 0\) for all \(i,j\) and \(C\) is bipartite. (Exercise)
 \end{enumerate}
 
 \textbf{HS MEMO}
@@ -772,7 +772,7 @@ Given a matrix \(C\) in \(\mathrm{Mat}_n(\mathbb{R})\) such that
 
 Let \(\theta_0\) be the maximal eigenvalue of \(C\) with eigenspace \(V_0 \subseteq \mathbb{R}^n\), and let \(\theta_r\) be the minimal eigenvalue of \(C\) with eigenspace \(V_r \subseteq \mathbb{R}^n\). Then the following hold.
 
-\((i)\) Suppose \(0\neq v = \begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\\\alpha_n\end{pmatrix} \in V_0\). Then \(\alpha_0 > 0\) for all \(i\), or \(\alpha_i < 0\) for all \(i\).
+\((i)\) Suppose \(0\neq v = \begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\\\alpha_n\end{pmatrix} \in V_0\). Then \(\alpha_i > 0\) for all \(i\), or \(\alpha_i < 0\) for all \(i\).
 
 \((ii)\) \(\mathrm{dim}V_0 = 1\).
 
@@ -829,7 +829,7 @@ Now set
 \[s = \textrm{the number of indices} \; i, \textrm{ where } \alpha_i >0.\]
 Replacing \(v\) by \(-v\) if necessary, without loss of generality we may assume that \(s\geq 1\). We want to show \(s = n\).
 
-Assume \(s < n\). Without loss of generality, we may assume that \(\alpha_i >0\) for \(1\leq i\leq s\) and \(\alpha_i = 0\) for \(s+1 \leq i \leq n\).
+Assume \(s < n\). Without loss of generality, we may assume that \(\alpha_i >0\) for \(1\leq i\leq s\) and \(\alpha_i \leq 0\) for \(s+1 \leq i \leq n\).
 Set
 \[ \rho = \alpha_1v_1 + \cdots + \alpha_sv_s = -\alpha_{s+1}v_{s+1} - \cdots - \alpha_nv_n.\]
 Then, for \(i = 1,\ldots, s\),
@@ -840,14 +840,14 @@ Then, for \(i = 1,\ldots, s\),
 \end{align}
 Hence
 \[0\leq \langle \rho, \rho\rangle = \sum_{i=1}^s \alpha_i \langle v_i, \rho\rangle \leq 0,\]
-as \(\alpha > 0\) and \(\langle v_i, \rho\rangle \leq 0\). Thus, we have
+as \(\alpha_i > 0\) and \(\langle v_i, \rho\rangle \leq 0\). Thus, we have
 \(\langle \rho, \rho \rangle = 0\) and \(\rho = 0\).
 For \(j = s+1, \ldots, n\),
 \[0 = \langle \rho, v_j\rangle = \sum_{i=1}^s \alpha_i\langle v_i, v_j\rangle \leq 0,\]
 as \(\langle v_i, v_j\rangle = -C_{ij}\).
 
 Therefore,
-\[0 = \langle v_i, v_j \rangle = -C_{ij} \textrm{ for } 1\leq i, \leq s, \: s+1 \leq j \leq n.\]
+\[0 = \langle v_i, v_j \rangle = -C_{ij} \textrm{ for } 1\leq i \leq s, \: s+1 \leq j \leq n.\]
 Since \(C\) is symmetric,
 \[C = \begin{pmatrix} \ast & O \\ O & \ast\end{pmatrix}\]
 Thus \(C\) is reducible, which is not the case. Hence \(s = n\).

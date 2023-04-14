@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-04-13" />
+<meta name="date" content="2023-04-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -189,7 +189,7 @@ div.csl-indent {
 where <span class="math inline">\(Ay = \theta x\)</span> and <span class="math inline">\(Bx = \theta y\)</span>.</p>
 <ol start="2" style="list-style-type: decimal">
 <li><p>If <span class="math inline">\(C\)</span> is bipartite, <span class="math inline">\(C^2\)</span> is reducible.</p></li>
-<li><p>The matrix <span class="math inline">\(C\)</span> is irreducible and <span class="math inline">\(C^2\)</span> is reducible, if <span class="math inline">\(C_{ij} \geq 0\)</span> for all <span class="math inline">\(i,j\)</span> and <span class="math inline">\(C\)</span> is reducible. (Exercise)</p></li>
+<li><p>The matrix <span class="math inline">\(C\)</span> is irreducible and <span class="math inline">\(C^2\)</span> is reducible, if <span class="math inline">\(C_{ij} \geq 0\)</span> for all <span class="math inline">\(i,j\)</span> and <span class="math inline">\(C\)</span> is bipartite. (Exercise)</p></li>
 </ol>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
@@ -214,7 +214,7 @@ So <span class="math inline">\(\mathrm{e}(X^+, X^+) = \mathrm{e}(X^-, X^-) = 0.\
 <div class="line-block"><span class="math inline">\((b)\)</span> <span class="math inline">\(C\)</span> is irreducible.</div>
 <div class="line-block"><span class="math inline">\((c)\)</span> <span class="math inline">\(C_{ij} \geq 0\)</span> for all <span class="math inline">\(i,j\)</span>.</div>
 <p>Let <span class="math inline">\(\theta_0\)</span> be the maximal eigenvalue of <span class="math inline">\(C\)</span> with eigenspace <span class="math inline">\(V_0 \subseteq \mathbb{R}^n\)</span>, and let <span class="math inline">\(\theta_r\)</span> be the minimal eigenvalue of <span class="math inline">\(C\)</span> with eigenspace <span class="math inline">\(V_r \subseteq \mathbb{R}^n\)</span>. Then the following hold.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> Suppose <span class="math inline">\(0\neq v = \begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\\\alpha_n\end{pmatrix} \in V_0\)</span>. Then <span class="math inline">\(\alpha_0 &gt; 0\)</span> for all <span class="math inline">\(i\)</span>, or <span class="math inline">\(\alpha_i &lt; 0\)</span> for all <span class="math inline">\(i\)</span>.</div>
+<div class="line-block"><span class="math inline">\((i)\)</span> Suppose <span class="math inline">\(0\neq v = \begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\\\alpha_n\end{pmatrix} \in V_0\)</span>. Then <span class="math inline">\(\alpha_i &gt; 0\)</span> for all <span class="math inline">\(i\)</span>, or <span class="math inline">\(\alpha_i &lt; 0\)</span> for all <span class="math inline">\(i\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\mathrm{dim}V_0 = 1\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(\theta_r \geq -\theta_0\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(\theta_r = \theta_0\)</span> if and only if <span class="math inline">\(C\)</span> is bipartite.</div>
@@ -257,7 +257,7 @@ since <span class="math inline">\(Bv = (\theta_0 I - C)v = 0\)</span>.</p>
 <p>Now set
 <span class="math display">\[s = \textrm{the number of indices} \; i, \textrm{ where } \alpha_i &gt;0.\]</span>
 Replacing <span class="math inline">\(v\)</span> by <span class="math inline">\(-v\)</span> if necessary, without loss of generality we may assume that <span class="math inline">\(s\geq 1\)</span>. We want to show <span class="math inline">\(s = n\)</span>.</p>
-<p>Assume <span class="math inline">\(s &lt; n\)</span>. Without loss of generality, we may assume that <span class="math inline">\(\alpha_i &gt;0\)</span> for <span class="math inline">\(1\leq i\leq s\)</span> and <span class="math inline">\(\alpha_i = 0\)</span> for <span class="math inline">\(s+1 \leq i \leq n\)</span>.
+<p>Assume <span class="math inline">\(s &lt; n\)</span>. Without loss of generality, we may assume that <span class="math inline">\(\alpha_i &gt;0\)</span> for <span class="math inline">\(1\leq i\leq s\)</span> and <span class="math inline">\(\alpha_i \leq 0\)</span> for <span class="math inline">\(s+1 \leq i \leq n\)</span>.
 Set
 <span class="math display">\[ \rho = \alpha_1v_1 + \cdots + \alpha_sv_s = -\alpha_{s+1}v_{s+1} - \cdots - \alpha_nv_n.\]</span>
 Then, for <span class="math inline">\(i = 1,\ldots, s\)</span>,
@@ -268,13 +268,13 @@ Then, for <span class="math inline">\(i = 1,\ldots, s\)</span>,
 \end{align}\]</span>
 Hence
 <span class="math display">\[0\leq \langle \rho, \rho\rangle = \sum_{i=1}^s \alpha_i \langle v_i, \rho\rangle \leq 0,\]</span>
-as <span class="math inline">\(\alpha &gt; 0\)</span> and <span class="math inline">\(\langle v_i, \rho\rangle \leq 0\)</span>. Thus, we have
+as <span class="math inline">\(\alpha_i &gt; 0\)</span> and <span class="math inline">\(\langle v_i, \rho\rangle \leq 0\)</span>. Thus, we have
 <span class="math inline">\(\langle \rho, \rho \rangle = 0\)</span> and <span class="math inline">\(\rho = 0\)</span>.
 For <span class="math inline">\(j = s+1, \ldots, n\)</span>,
 <span class="math display">\[0 = \langle \rho, v_j\rangle = \sum_{i=1}^s \alpha_i\langle v_i, v_j\rangle \leq 0,\]</span>
 as <span class="math inline">\(\langle v_i, v_j\rangle = -C_{ij}\)</span>.</p>
 <p>Therefore,
-<span class="math display">\[0 = \langle v_i, v_j \rangle = -C_{ij} \textrm{ for } 1\leq i, \leq s, \: s+1 \leq j \leq n.\]</span>
+<span class="math display">\[0 = \langle v_i, v_j \rangle = -C_{ij} \textrm{ for } 1\leq i \leq s, \: s+1 \leq j \leq n.\]</span>
 Since <span class="math inline">\(C\)</span> is symmetric,
 <span class="math display">\[C = \begin{pmatrix} \ast &amp; O \\ O &amp; \ast\end{pmatrix}\]</span>
 Thus <span class="math inline">\(C\)</span> is reducible, which is not the case. Hence <span class="math inline">\(s = n\)</span>.</p>
