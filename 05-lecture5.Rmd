@@ -9,7 +9,7 @@ Let $W$ be an irreducible $T$-module with endpoint $r:= \min\{i\mid E_i^*W \neq 
 
 We have 
 \begin{align}
-E_i^*W & \neq 0 & r\leq i \leq r+d\\
+{E^*_i}W & \neq 0 & r\leq i \leq r+d\\
 & = 0 & 0 \leq i < r \;\text{ or }\; r+d < i \leq d(x).
 \end{align}
 
