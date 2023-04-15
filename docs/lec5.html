@@ -189,21 +189,23 @@ Becase <span class="math inline">\(A\tilde{W} \subseteq \tilde{W}\)</span> since
 we have <span class="math inline">\(T\tilde{W} \subseteq{W}\)</span>.</p>
 <p>Suppose <span class="math inline">\(E_{i-1}^*AE_i^*W = 0\)</span> for some <span class="math inline">\(i\)</span> with <span class="math inline">\(r \leq i &lt; r+d\)</span>.</p>
 <p>Similarly,
-<span class="math display">\[\tilde{W} = E^*_iW + \cdots + E^*_{r+d}.W\]</span>
+<span class="math display">\[\tilde{W} = E^*_iW + \cdots + E^*_{r+d}W\]</span>
 is a <span class="math inline">\(T\)</span>-module with <span class="math inline">\(0\subsetneq \tilde{W} \subsetneq W\)</span>.</p>
 <div class="definition">
 <p><span id="def:isomorphic-modules" class="definition"><strong>Definition 5.1  </strong></span>Let <span class="math inline">\(\Gamma\)</span>, <span class="math inline">\(E^*_i\)</span>, and <span class="math inline">\(T\)</span> be as above. Irreducible <span class="math inline">\(T\)</span>-modules <span class="math inline">\(W\)</span> and <span class="math inline">\(W&#39;\)</span> are isomorphic whenever there is an isomorphism <span class="math inline">\(\sigma: W \to W&#39;\)</span> of vector spaces such that <span class="math inline">\(a\sigma = \sigma a\)</span> for all <span class="math inline">\(a\in T\)</span>.</p>
 </div>
-<p>Recall that the standard module <span class="math inline">\(V\)</span> is an orthogonal direct sum of irreducible <span class="math inline">\(T\)</span>-modules <span class="math inline">\(W_1 \oplus W_2 \oplus \cdots\)</span>. Given <span class="math inline">\(W\)</span> in this list, the multiplicity of <span class="math inline">\(W\)</span> in <span class="math inline">\(V\)</span> is
+<p>Recall that the standard module <span class="math inline">\(V\)</span> is an orthogonal direct sum of irreducible <span class="math inline">\(T\)</span>-modules
+<span class="math display">\[W_1 \oplus W_2 \oplus \cdots \oplus W_{\ell}, \; \text{for some }\ell.\]</span>
+Given <span class="math inline">\(W\)</span> in this list, the multiplicity of <span class="math inline">\(W\)</span> in <span class="math inline">\(V\)</span> is
 <span class="math display">\[|\{j \mid W_j \simeq W\}|.\]</span></p>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
 <p>It is known that the multiplicity does not depend on the decomposition.</p>
 </div>
-<p>Now assume that <span class="math inline">\(\Gamma\)</span> is the <span class="math inline">\(D\)</span>-cube, <span class="math inline">\(H(D,2)\)</span> with <span class="math inline">\(D\geq 1\)</span>. Vew
+<p>Now assume that <span class="math inline">\(\Gamma\)</span> is the <span class="math inline">\(D\)</span>-cube, <span class="math inline">\(H(D,2)\)</span> with <span class="math inline">\(D\geq 1\)</span>. View
 <span class="math display">\[\begin{align}
 X &amp; = \{a_1\cdots a_D\mid a_i\in \{1, -1\}, 1\leq i\leq D\},\\
-E &amp; = \{xy\mid x, y\in X, \; x, y \;\text{ differ in exactly 1 coordinate.}\}.
+E &amp; = \{xy\mid x, y\in X, \; x, y \;\text{ differ in exactly 1 coordinate}\}.
 \end{align}\]</span>
 Find <span class="math inline">\(T\)</span>-modules.</p>
 <p>Claim: <span class="math inline">\(H(D,2)\)</span> is bipartite with a partition <span class="math inline">\(X = X^+ \cup X^-\)</span>, where
@@ -282,8 +284,9 @@ Then these satisfy the relations <span class="math inline">\((a)\)</span> - <spa
 Apply both sides to <span class="math inline">\(\hat{S}\)</span> <span class="math inline">\((S\subseteq \Omega)\)</span>. Say <span class="math inline">\(|S| = i\)</span>.</p>
 <p><em>Proof of <span class="math inline">\((a)\)</span>:</em>
 <span class="math display">\[\begin{align}
-(LR - RL)\hat{S} &amp; = L\left(\sum_{\substack{T \subseteq \Omega, T \text{ covers }S\\(D-i \text{ of them})}}\hat{T}\right) - R \left(\sum_{\substack{U \subseteq \Omega, S \text{ covers }U\\(i \text{ of them})}}\hat{T}\right)\\
-&amp; = (D-i)\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V} - \left(i\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V}\right)\\
+(LR - RL)\hat{S} &amp; = L\left(\sum_{\substack{T \subseteq \Omega, T \text{ covers }S\\(D-i \text{ of them})}}\hat{T}\right) - R \left(\sum_{\substack{U \subseteq \Omega, S \text{ covers }U\\(i \text{ of them})}}\hat{U}\right)\\
+&amp; = (D-i)\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V}\\
+&amp; \qquad - \left(i\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V}\right)\\
 &amp; = (D-2i)\hat{S}\\
 &amp; = A^*\hat{S}.
 \end{align}\]</span></p>
@@ -295,7 +298,7 @@ Apply both sides to <span class="math inline">\(\hat{S}\)</span> <span class="ma
 <p><em>Proof of <span class="math inline">\((c)\)</span>:</em>
 <span class="math display">\[\begin{align}
 (A^*R - RA^*)\hat{S} &amp; = (D-2(i+1))R\hat{S} - (D-2i)R\hat{S} \quad (\text{since} \; R\hat{S}\in E^*_{i+1}V)\\
-&amp; = 2R\hat{S}.
+&amp; = -2R\hat{S}.
 \end{align}\]</span></p>
 <p>Let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r\)</span> and diameter <span class="math inline">\(d\)</span> <span class="math inline">\((0\leq r \leq r+d \leq D)\)</span>.</p>
 <p><em>Proof of <span class="math inline">\((i)\)</span> and <span class="math inline">\((ii)\)</span>:</em></p>
@@ -305,7 +308,7 @@ Apply both sides to <span class="math inline">\(\hat{S}\)</span> <span class="ma
 <span class="math display">\[\begin{align}
 LRw &amp; = (A^*+RL)w \quad (\text{by Claim }(a))\\
 &amp; = A^*w \quad (Lw \in E^*_{r-1}W = 0)\\
-&amp; (D-2r)w.
+&amp; = (D-2r)w.
 \end{align}\]</span>
 Define
 <span class="math display">\[w_i = \frac{1}{i!}R^iw \in E^*_{r+i}W \quad (0\leq i \leq d).\]</span>

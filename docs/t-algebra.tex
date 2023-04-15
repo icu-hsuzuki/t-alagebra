@@ -1314,24 +1314,26 @@ we have \(T\tilde{W} \subseteq{W}\).
 Suppose \(E_{i-1}^*AE_i^*W = 0\) for some \(i\) with \(r \leq i < r+d\).
 
 Similarly,
-\[\tilde{W} = E^*_iW + \cdots + E^*_{r+d}.W\]
+\[\tilde{W} = E^*_iW + \cdots + E^*_{r+d}W\]
 is a \(T\)-module with \(0\subsetneq \tilde{W} \subsetneq W\).
 
 \begin{definition}
 \protect\hypertarget{def:isomorphic-modules}{}\label{def:isomorphic-modules}Let \(\Gamma\), \(E^*_i\), and \(T\) be as above. Irreducible \(T\)-modules \(W\) and \(W'\) are isomorphic\index{isomorphic} whenever there is an isomorphism \(\sigma: W \to W'\) of vector spaces such that \(a\sigma = \sigma a\) for all \(a\in T\).
 \end{definition}
 
-Recall that the standard module \(V\) is an orthogonal direct sum of irreducible \(T\)-modules \(W_1 \oplus W_2 \oplus \cdots\). Given \(W\) in this list, the multiplicity\index{multiplicity} of \(W\) in \(V\) is
+Recall that the standard module \(V\) is an orthogonal direct sum of irreducible \(T\)-modules
+\[W_1 \oplus W_2 \oplus \cdots \oplus W_{\ell}, \; \text{for some }\ell.\]
+Given \(W\) in this list, the multiplicity\index{multiplicity} of \(W\) in \(V\) is
 \[|\{j \mid W_j \simeq W\}|.\]
 
 \textbf{HS MEMO}
 
 It is known that the multiplicity does not depend on the decomposition.
 
-Now assume that \(\Gamma\) is the \(D\)-cube, \(H(D,2)\) with \(D\geq 1\). Vew
+Now assume that \(\Gamma\) is the \(D\)-cube, \(H(D,2)\) with \(D\geq 1\). View
 \begin{align}
 X & = \{a_1\cdots a_D\mid a_i\in \{1, -1\}, 1\leq i\leq D\},\\
-E & = \{xy\mid x, y\in X, \; x, y \;\text{ differ in exactly 1 coordinate.}\}.
+E & = \{xy\mid x, y\in X, \; x, y \;\text{ differ in exactly 1 coordinate}\}.
 \end{align}
 Find \(T\)-modules.
 
@@ -1435,8 +1437,9 @@ Apply both sides to \(\hat{S}\) \quad \((S\subseteq \Omega)\). Say \(|S| = i\).
 
 \emph{Proof of \((a)\):}
 \begin{align} 
-(LR - RL)\hat{S} & = L\left(\sum_{\substack{T \subseteq \Omega, T \text{ covers }S\\(D-i \text{ of them})}}\hat{T}\right) - R \left(\sum_{\substack{U \subseteq \Omega, S \text{ covers }U\\(i \text{ of them})}}\hat{T}\right)\\
-& = (D-i)\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V} - \left(i\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V}\right)\\
+(LR - RL)\hat{S} & = L\left(\sum_{\substack{T \subseteq \Omega, T \text{ covers }S\\(D-i \text{ of them})}}\hat{T}\right) - R \left(\sum_{\substack{U \subseteq \Omega, S \text{ covers }U\\(i \text{ of them})}}\hat{U}\right)\\
+& = (D-i)\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V}\\
+& \qquad - \left(i\hat{S} + \sum_{V \subseteq \Omega, |V| = i, |S\cap V| = i-1}\hat{V}\right)\\
 & = (D-2i)\hat{S}\\
 & = A^*\hat{S}.
 \end{align}
@@ -1450,7 +1453,7 @@ Apply both sides to \(\hat{S}\) \quad \((S\subseteq \Omega)\). Say \(|S| = i\).
 \emph{Proof of \((c)\):}
 \begin{align} 
 (A^*R - RA^*)\hat{S} & = (D-2(i+1))R\hat{S} - (D-2i)R\hat{S} \quad (\text{since} \; R\hat{S}\in E^*_{i+1}V)\\
-& = 2R\hat{S}.
+& = -2R\hat{S}.
 \end{align}
 
 Let \(W\) be an irreducible \(T\)-module with endpoint \(r\) and diameter \(d\) \((0\leq r \leq r+d \leq D)\).
@@ -1465,7 +1468,7 @@ Claim: \(LRw = (D-2r)w\).
 \begin{align} 
 LRw & = (A^*+RL)w \quad (\text{by Claim }(a))\\
 & = A^*w \quad (Lw \in E^*_{r-1}W = 0)\\
-& (D-2r)w.
+& = (D-2r)w.
 \end{align}
 Define
 \[w_i = \frac{1}{i!}R^iw \in E^*_{r+i}W \quad (0\leq i \leq d).\]
