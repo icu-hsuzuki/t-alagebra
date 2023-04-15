@@ -1569,7 +1569,9 @@ by induction on \(r\).
 \end{proof}
 
 \begin{theorem}
-\protect\hypertarget{thm:hd2-modules2}{}\label{thm:hd2-modules2}Let \(\Gamma = H(D,2)\) with \(D\geq 1\). Fix a vertex \(x\in X\) and write
+\protect\hypertarget{thm:hd2-modules2}{}\label{thm:hd2-modules2}
+
+Let \(\Gamma = H(D,2)\) with \(D\geq 1\). Fix a vertex \(x\in X\) and write
 \[E^*_i \equiv E^*_i(x), \quad T = T(x), \text{ and } A^* \equiv \sum_{i=0}^D(D-2i)E^*_i.\]
 Let \(W\) be an irreducible \(T\)-module with endpoint \(r\) with \(0\leq r\leq D/2\). Then,
 
@@ -1587,7 +1589,9 @@ with respect to which the matrix corresponding to \(A^*\) is
   &   &      & & 0 & d & 0
 \end{pmatrix}.\]
 In particular,
-\textbar{} \((ii)\) \(E_iA^*E_j = 0\) if \(|i-j|\neq 1\) for \(0 \leq i, j\leq D\).
+
+\((ii)\) \(E_iA^*E_j = 0\) if \(|i-j|\neq 1\) for \(0 \leq i, j\leq D\).
+
 \end{theorem}
 
 \begin{proof}
@@ -1623,9 +1627,10 @@ A^2A^* - 2AA^*A + A^*A^2 - 4A^*  & = 0  \label{eq:6-1}\\
 \begin{align}
 2A - AA^* + A^*A & = 4L\\
 & = 2[A^*, L]\\
-& = A^* \frac{2A - [A,A^*]}{2} - \frac{2A - [A, A^*]}{2}A^*
+& = A^* \frac{2A - [A,A^*]}{2} - \frac{2A - [A, A^*]}{2}A^*\\
+& = A^*A-AA^* + \frac12(-A^*AA^* + {A^*}^2A + A{A^*}^2 - A^*AA^*)
 \end{align}
-So we have (\eqref{eq:6-2})
+So we have \eqref{eq:6-2}
 \[
 {A^*}^2A - 2A^*AA^* + A{A^*}^2 - 4A   = 0.
 \]
@@ -1633,7 +1638,7 @@ So we have (\eqref{eq:6-2})
 By \((a)\),
 \begin{align}
 -16A^* & = [2A + [A, A^*], 2A - [A, A^*]]\\
-& (2A + [A, A^*])(2A - [A, A^*]) - (2A - [A,A^*])(2A + [A, A^*])\\
+& = (2A + [A, A^*])(2A - [A, A^*]) - (2A - [A,A^*])(2A + [A, A^*])\\
 & = [4A^2 - 2A[A, A^*] + [A, A^*](2A) - [A,A^*]^2\\
 & \quad - 4A^2 - 2A[A, A^*] + [A, A^*](2A) + [A, A^*]^2\\
 & = -4A^2A^* + 4AA^*A + 4AA^*A - 4A^*A^2.
@@ -1701,20 +1706,21 @@ AR^* - R^*A & = \sum_{i=0}^D (AE_{i+1}A^*E_i - E_{i+1}A^*E_iA)\\
 \end{equation}
 Since \(A^* = L^* + R^*\),
 \[R^* = \frac{2A^* + [A^*, A]}{4}, \quad L^* = \frac{2A^* - [A^* - A]}{4}.\]
-Now \((a)\) is seen to be equivalent to (\eqref{eq:6-2}) upon evaluation.
+Now \((a)\) is seen to be equivalent to \eqref{eq:6-2} upon evaluation.
 This proves Claim 2.
 
 \textbf{HS MEMO}
 
 \begin{align}
 [L^*,R^*] & = \frac{1}{16}((2A^*-[A^*,A])(2A^*+[A^*,A]) - (2A^*+[A^*,A])(2A^*- [A,A^*]))\\
-& = \frac{1}{16}(4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* - [A^*,A]^2 - 4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* + [A^*,A]^2)\\
+& = \frac{1}{16}(4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* - [A^*,A]^2 - 4{A^*}^2\\
+& \qquad + 2A^*[A^*,A] - [A^*,A]2A^* + [A^*,A]^2)\\
 & = \frac{1}{4}({A^*}^2A - 2A^*AA^* + A{A^*}^2)\\
 & = A,
 \end{align}
-by (\eqref{eq:6-2}).
+by \eqref{eq:6-2}.
 
-Now apply same argument as for (\eqref{eq:6-1}), (\eqref{eq:6-2}) of Theorem \ref{thm:hd2-modules} and observe \(A^*\) has \(D+1\) distinct eigenvalues. So,
+Now apply same argument as for \eqref{eq:6-1}, \eqref{eq:6-2} of Theorem \ref{thm:hd2-modules} and observe \(A^*\) has \(D+1\) distinct eigenvalues. So,
 \[A^* = \sum_{i=0}^D(D-2i)E^*_i\]
 generates
 \[M^* = \mathrm{Span}(E^*_0, \ldots, E^*_D).\]

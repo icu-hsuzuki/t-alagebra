@@ -203,8 +203,8 @@ with respect to which the matrix corresponding to <span class="math inline">\(A^
   &amp;   &amp;      &amp; &amp; d-1 &amp; 0 &amp; 1\\
   &amp;   &amp;      &amp; &amp; 0 &amp; d &amp; 0
 \end{pmatrix}.\]</span>
-In particular,
-| <span class="math inline">\((ii)\)</span> <span class="math inline">\(E_iA^*E_j = 0\)</span> if <span class="math inline">\(|i-j|\neq 1\)</span> for <span class="math inline">\(0 \leq i, j\leq D\)</span>.</p>
+In particular,</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(E_iA^*E_j = 0\)</span> if <span class="math inline">\(|i-j|\neq 1\)</span> for <span class="math inline">\(0 \leq i, j\leq D\)</span>.</div>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-12" class="proof"><em>Proof</em>. </span>We use the notation,
@@ -232,16 +232,17 @@ A^2A^* - 2AA^*A + A^*A^2 - 4A^*  &amp; = 0  \tag{6.1}\\
 <span class="math display">\[\begin{align}
 2A - AA^* + A^*A &amp; = 4L\\
 &amp; = 2[A^*, L]\\
-&amp; = A^* \frac{2A - [A,A^*]}{2} - \frac{2A - [A, A^*]}{2}A^*
+&amp; = A^* \frac{2A - [A,A^*]}{2} - \frac{2A - [A, A^*]}{2}A^*\\
+&amp; = A^*A-AA^* + \frac12(-A^*AA^* + {A^*}^2A + A{A^*}^2 - A^*AA^*)
 \end{align}\]</span>
-So we have (<a href="lec6.html#eq:6-2">(6.2)</a>)
+So we have <a href="lec6.html#eq:6-2">(6.2)</a>
 <span class="math display">\[
 {A^*}^2A - 2A^*AA^* + A{A^*}^2 - 4A   = 0.
 \]</span></p>
 <p>By <span class="math inline">\((a)\)</span>,
 <span class="math display">\[\begin{align}
 -16A^* &amp; = [2A + [A, A^*], 2A - [A, A^*]]\\
-&amp; (2A + [A, A^*])(2A - [A, A^*]) - (2A - [A,A^*])(2A + [A, A^*])\\
+&amp; = (2A + [A, A^*])(2A - [A, A^*]) - (2A - [A,A^*])(2A + [A, A^*])\\
 &amp; = [4A^2 - 2A[A, A^*] + [A, A^*](2A) - [A,A^*]^2\\
 &amp; \quad - 4A^2 - 2A[A, A^*] + [A, A^*](2A) + [A, A^*]^2\\
 &amp; = -4A^2A^* + 4AA^*A + 4AA^*A - 4A^*A^2.
@@ -299,19 +300,20 @@ AR^* - R^*A &amp; = \sum_{i=0}^D (AE_{i+1}A^*E_i - E_{i+1}A^*E_iA)\\
 \end{equation}\]</span>
 Since <span class="math inline">\(A^* = L^* + R^*\)</span>,
 <span class="math display">\[R^* = \frac{2A^* + [A^*, A]}{4}, \quad L^* = \frac{2A^* - [A^* - A]}{4}.\]</span>
-Now <span class="math inline">\((a)\)</span> is seen to be equivalent to (<a href="lec6.html#eq:6-2">(6.2)</a>) upon evaluation.
+Now <span class="math inline">\((a)\)</span> is seen to be equivalent to <a href="lec6.html#eq:6-2">(6.2)</a> upon evaluation.
 This proves Claim 2.</p>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
 <p><span class="math display">\[\begin{align}
 [L^*,R^*] &amp; = \frac{1}{16}((2A^*-[A^*,A])(2A^*+[A^*,A]) - (2A^*+[A^*,A])(2A^*- [A,A^*]))\\
-&amp; = \frac{1}{16}(4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* - [A^*,A]^2 - 4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* + [A^*,A]^2)\\
+&amp; = \frac{1}{16}(4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* - [A^*,A]^2 - 4{A^*}^2\\
+&amp; \qquad + 2A^*[A^*,A] - [A^*,A]2A^* + [A^*,A]^2)\\
 &amp; = \frac{1}{4}({A^*}^2A - 2A^*AA^* + A{A^*}^2)\\
 &amp; = A,
 \end{align}\]</span>
-by (<a href="lec6.html#eq:6-2">(6.2)</a>).</p>
+by <a href="lec6.html#eq:6-2">(6.2)</a>.</p>
 </div>
-<p>Now apply same argument as for (<a href="lec6.html#eq:6-1">(6.1)</a>), (<a href="lec6.html#eq:6-2">(6.2)</a>) of Theorem <a href="lec5.html#thm:hd2-modules">5.1</a> and observe <span class="math inline">\(A^*\)</span> has <span class="math inline">\(D+1\)</span> distinct eigenvalues. So,
+<p>Now apply same argument as for <a href="lec6.html#eq:6-1">(6.1)</a>, <a href="lec6.html#eq:6-2">(6.2)</a> of Theorem <a href="lec5.html#thm:hd2-modules">5.1</a> and observe <span class="math inline">\(A^*\)</span> has <span class="math inline">\(D+1\)</span> distinct eigenvalues. So,
 <span class="math display">\[A^* = \sum_{i=0}^D(D-2i)E^*_i\]</span>
 generates
 <span class="math display">\[M^* = \mathrm{Span}(E^*_0, \ldots, E^*_D).\]</span>

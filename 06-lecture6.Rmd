@@ -41,7 +41,8 @@ $$\begin{pmatrix}
   &   &      & & d-1 & 0 & 1\\
   &   &      & & 0 & d & 0
 \end{pmatrix}.$$
-In particular, 
+In particular,
+
 | $(ii)$ $E_iA^*E_j = 0$ if $|i-j|\neq 1$ for $0 \leq i, j\leq D$.
 :::
 
@@ -78,9 +79,10 @@ _Pf._ \quad By $(b)$,
 \begin{align}
 2A - AA^* + A^*A & = 4L\\
 & = 2[A^*, L]\\
-& = A^* \frac{2A - [A,A^*]}{2} - \frac{2A - [A, A^*]}{2}A^*
+& = A^* \frac{2A - [A,A^*]}{2} - \frac{2A - [A, A^*]}{2}A^*\\
+& = A^*A-AA^* + \frac12(-A^*AA^* + {A^*}^2A + A{A^*}^2 - A^*AA^*)
 \end{align}
-So we have (\@ref(eq:6-2))
+So we have \@ref(eq:6-2)
 $$
 {A^*}^2A - 2A^*AA^* + A{A^*}^2 - 4A   = 0.
 $$
@@ -88,7 +90,7 @@ $$
 By $(a)$, 
 \begin{align}
 -16A^* & = [2A + [A, A^*], 2A - [A, A^*]]\\
-& (2A + [A, A^*])(2A - [A, A^*]) - (2A - [A,A^*])(2A + [A, A^*])\\
+& = (2A + [A, A^*])(2A - [A, A^*]) - (2A - [A,A^*])(2A + [A, A^*])\\
 & = [4A^2 - 2A[A, A^*] + [A, A^*](2A) - [A,A^*]^2\\
 & \quad - 4A^2 - 2A[A, A^*] + [A, A^*](2A) + [A, A^*]^2\\
 & = -4A^2A^* + 4AA^*A + 4AA^*A - 4A^*A^2.
@@ -158,7 +160,7 @@ $(a)$ We have, by $(b)$, $(c)$
 \end{equation}
 Since $A^* = L^* + R^*$, 
 $$R^* = \frac{2A^* + [A^*, A]}{4}, \quad L^* = \frac{2A^* - [A^* - A]}{4}.$$
-Now $(a)$ is seen to be equivalent to (\@ref(eq:6-2)) upon evaluation. 
+Now $(a)$ is seen to be equivalent to \@ref(eq:6-2) upon evaluation. 
 This proves Claim 2.
 
 :::{.hs}
@@ -166,14 +168,15 @@ This proves Claim 2.
 
 \begin{align}
 [L^*,R^*] & = \frac{1}{16}((2A^*-[A^*,A])(2A^*+[A^*,A]) - (2A^*+[A^*,A])(2A^*- [A,A^*]))\\
-& = \frac{1}{16}(4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* - [A^*,A]^2 - 4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* + [A^*,A]^2)\\
+& = \frac{1}{16}(4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* - [A^*,A]^2 - 4{A^*}^2\\
+& \qquad + 2A^*[A^*,A] - [A^*,A]2A^* + [A^*,A]^2)\\
 & = \frac{1}{4}({A^*}^2A - 2A^*AA^* + A{A^*}^2)\\
 & = A,
 \end{align}
-by (\@ref(eq:6-2)).
+by \@ref(eq:6-2).
 :::
 
-Now apply same argument as for (\@ref(eq:6-1)), (\@ref(eq:6-2)) of Theorem \@ref(thm:hd2-modules) and observe $A^*$ has $D+1$ distinct eigenvalues. So,
+Now apply same argument as for \@ref(eq:6-1), \@ref(eq:6-2) of Theorem \@ref(thm:hd2-modules) and observe $A^*$ has $D+1$ distinct eigenvalues. So,
 $$A^* = \sum_{i=0}^D(D-2i)E^*_i$$
 generates 
 $$M^* = \mathrm{Span}(E^*_0, \ldots, E^*_D).$$
