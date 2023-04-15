@@ -150,7 +150,7 @@ $(c)$ Similar.
 \begin{align}
 AR^* - R^*A & = \sum_{i=0}^D (AE_{i+1}A^*E_i - E_{i+1}A^*E_iA)\\
 & = \sum_{i=0}^D E_{i+1}A^*E_i (\theta_{i+1} - \theta_i)\\
-& = 2R^*.
+& = -2R^*.
 \end{align}
 :::
 
@@ -198,7 +198,7 @@ L^*w_i^* & = \frac{1}{i}L^*R^*w_{i-1}^* \\
 \end{align}
 
 So $\mathrm{Span}(w_0^*, w_1^*, \ldots )$ is $L^*$, $R^*$, $A^*$-invariant. Hence,
-$W = \mathrm(Span)(w_0^*, w_1^*, \ldots, w_d^*)$, $w_0^*, w_1^*, \ldots, w_d^* \neq 0$, $w^*_i = 0$ for every $i>d$ by dimension.
+$W = \mathrm{Span}(w_0^*, w_1^*, \ldots, w_d^*)$, $w_0^*, w_1^*, \ldots, w_d^* \neq 0$, $w^*_i = 0$ for every $i>d$ by dimension.
 
 Thus $d = D-2t$.
 
