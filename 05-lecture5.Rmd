@@ -219,7 +219,7 @@ Hence $W'$ is a $T$-module.
 
 Since $W$ is irreducible, $W' = W$.
 
-As $w_i$'s are orthogonal, theyy are linearly independent. Note that $w_i\neq 0$ by the definition of $d$ and Lemma \@ref(lem:irreducible) $(iv)$.
+As $w_i$'s are orthogonal, they are linearly independent. Note that $w_i\neq 0$ by the definition of $d$ and Lemma \@ref(lem:irreducible) $(iv)$.
 
 Claim: $d = D-2r$.
 
