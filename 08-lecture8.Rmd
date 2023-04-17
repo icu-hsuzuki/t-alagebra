@@ -155,7 +155,7 @@ The following graph is distance-transitive but does not satisify (G($x$)) for an
 $$X\cap Y  \leftrightarrow X \cap Z.$$
 :::
 
-The theory of single thin irreducible $T$-module.
+The theory of a single thin irreducible $T$-module.
 
 Let $\Gamma = (X, E)$ be any graph.
 \begin{align}
