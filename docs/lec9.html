@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-04-17" />
+<meta name="date" content="2023-04-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -182,7 +182,7 @@ div.csl-indent {
 <p>Let <span class="math inline">\(a_i = a_i(W)\in \mathbb{C}\)</span> satisfying
 <span class="math display">\[E_{r+i}^*A{E^*_{r+i}|}_{E_{r+i}^*W} = a_i1|_{E_{r+i}^*} \quad (0\leq i\leq d).\]</span>
 Let <span class="math inline">\(x_i = x_i(W)\in \mathbb{C}\)</span> satisfying
-<span class="math display">\[E_{r+i-1}^*A{E^*_{r+i}AE^*_{r+i-1}|}_{E_{r+i}^*W} = x_i1|_{E_{r+i}^*} \quad (0\leq i\leq d).\]</span></p>
+<span class="math display">\[E_{r+i-1}^*A{E^*_{r+i}AE^*_{r+i-1}|}_{E_{r+i-1}^*W} = x_i1|_{E_{r+i-1}^*} \quad (0\leq i\leq d).\]</span></p>
 </div>
 <div class="lemma">
 <p><span id="lem:thin-module-structure" class="lemma"><strong>Lemma 9.1  </strong></span>With above notation, the following hold.</p>
@@ -209,7 +209,7 @@ Hence, <span class="math inline">\(\sigma \geq 0\)</span>.</p>
 <p>Moreover, <span class="math inline">\(x_i\neq 0\)</span> by Lemma <a href="lec4.html#lem:irreducible">4.1</a> <span class="math inline">\((iv)\)</span>.</p>
 <p><span class="math inline">\((iiia)\)</span> Observe
 <span class="math display">\[w_i = E^*_{r+i}AE^*_{r+i-1}w_{i-1} \quad (1\leq i \leq d).\]</span>
-So <span class="math inline">\(w_i \neq 0 \quad (1\leq i \leq d)\)</span> by Lemma <a href="lec4.html#lem:irreducible">4.1</a> <span class="math inline">\((iv)\)</span>.</p>
+So <span class="math inline">\(w_i \neq 0 \quad (0\leq i \leq d)\)</span> by Lemma <a href="lec4.html#lem:irreducible">4.1</a> <span class="math inline">\((iv)\)</span>.</p>
 <p>Hence,
 <span class="math display">\[W = \mathrm{Span}(w_0, \ldots, w_d)\]</span>
 by Lemma <a href="lec4.html#lem:irreducible">4.1</a>. <span class="math inline">\((iii)\)</span>.</p>
@@ -228,7 +228,7 @@ Moreover, <span class="math inline">\(p_{d+1}(A)W = 0\)</span> because of the fo
 <span class="math display">\[\begin{align}
 w &amp; = \sum_{i=0}^d \alpha_i w_i \\
 &amp; = \sum_{i=0}^d \alpha_i p_i(A)w_0 &amp;&amp; \text{for some }\alpha_i\in\mathbb{C}\\
-&amp; = p(A)w_0 &amp;&amp; \text{for some }p\in \mathbb{C}[\lambda]
+&amp; = p(A)w_0 &amp;&amp; \text{for some }p\in \mathbb{C}[\lambda].
 \end{align}\]</span>
 Hence,
 <span class="math display">\[\begin{align}
@@ -259,7 +259,7 @@ Then <span class="math inline">\(w_0, w_1, \ldots, w_d\)</span> is a basis for <
 So,
 <span class="math display">\[E_iW = E_iMw_0 = \mathrm{Span}(E_iw_0).\]</span>
 Thus,
-<span class="math display">\[\dim E_iW = \begin{cases}1 &amp; \text{if } E_iw_0\neq 0\\ 0 &amp; \text{if }E_iw_0 = 0.\end{cases}\]</span>
+<span class="math display">\[\dim E_iW = \begin{cases}1 &amp; \text{if } E_iw_0\neq 0,\\ 0 &amp; \text{if }E_iw_0 = 0.\end{cases}\]</span>
 In particular,
 <span class="math display">\[\dim E^*_iW \leq 1.\]</span></p>
 <p><span class="math inline">\((ii)\)</span> Immediate as
@@ -286,9 +286,9 @@ Now observe,
 by Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a> <span class="math inline">\((ii)\)</span>.
 Also,
 <span class="math display">\[\begin{align}
-\langle w_{i-1}, Aw_i\rangle &amp; = \langle Aw_{i-1}, w_i\rangle \quad (text{since}\; \bar{A}^\top = A)\\
+\langle w_{i-1}, Aw_i\rangle &amp; = \langle Aw_{i-1}, w_i\rangle \quad (\text{since}\; \bar{A}^\top = A)\\
 &amp; = \langle x_i + a_{i-1}w_{i-1} + x_{i-1}x_{i-2}, w_i\rangle\\
-&amp; = \|w_i\|^w.
+&amp; = \|w_i\|^2.
 \end{align}\]</span>
 This proves the lemma.</p>
 </div>
@@ -299,7 +299,7 @@ This proves the lemma.</p>
 such that
 <span class="math display">\[
 m(\theta) = \begin{cases}\frac{\|E_iw\|^2}{\|w\|^2} &amp; \text{where } 0\neq w \in E^*_rW\\
-&amp; \text{ if $\theta = \theta_i$ is an eigenvalue for $\Gamma$}\\
+&amp; \text{ if $\theta = \theta_i$ is an eigenvalue for $\Gamma$,}\\
 0 &amp; \text{if $\theta$ is not an eigenvalue for $\Gamma$.}
 \end{cases}\]</span></p>
 </div>

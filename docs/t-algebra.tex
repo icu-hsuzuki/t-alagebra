@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2023-04-17}
+\date{2023-04-18}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -2202,7 +2202,7 @@ Let \(W\) be an irreducible thin \(T\)-module with endpoint \(r\), diameter \(d\
 Let \(a_i = a_i(W)\in \mathbb{C}\) satisfying
 \[E_{r+i}^*A{E^*_{r+i}|}_{E_{r+i}^*W} = a_i1|_{E_{r+i}^*} \quad (0\leq i\leq d).\]
 Let \(x_i = x_i(W)\in \mathbb{C}\) satisfying
-\[E_{r+i-1}^*A{E^*_{r+i}AE^*_{r+i-1}|}_{E_{r+i}^*W} = x_i1|_{E_{r+i}^*} \quad (0\leq i\leq d).\]
+\[E_{r+i-1}^*A{E^*_{r+i}AE^*_{r+i-1}|}_{E_{r+i-1}^*W} = x_i1|_{E_{r+i-1}^*} \quad (0\leq i\leq d).\]
 \end{definition}
 
 \begin{lemma}
@@ -2242,7 +2242,7 @@ Moreover, \(x_i\neq 0\) by Lemma \ref{lem:irreducible} \((iv)\).
 
 \((iiia)\) Observe
 \[w_i = E^*_{r+i}AE^*_{r+i-1}w_{i-1} \quad (1\leq i \leq d).\]
-So \(w_i \neq 0 \quad (1\leq i \leq d)\) by Lemma \ref{lem:irreducible} \((iv)\).
+So \(w_i \neq 0 \quad (0\leq i \leq d)\) by Lemma \ref{lem:irreducible} \((iv)\).
 
 Hence,
 \[W = \mathrm{Span}(w_0, \ldots, w_d)\]
@@ -2266,7 +2266,7 @@ For every \(w\in W\), write
 \begin{align}
 w & = \sum_{i=0}^d \alpha_i w_i \\
 & = \sum_{i=0}^d \alpha_i p_i(A)w_0 && \text{for some }\alpha_i\in\mathbb{C}\\
-& = p(A)w_0 && \text{for some }p\in \mathbb{C}[\lambda]
+& = p(A)w_0 && \text{for some }p\in \mathbb{C}[\lambda].
 \end{align}
 Hence,
 \begin{align}
@@ -2307,7 +2307,7 @@ Then \(w_0, w_1, \ldots, w_d\) is a basis for \(W\). We have
 So,
 \[E_iW = E_iMw_0 = \mathrm{Span}(E_iw_0).\]
 Thus,
-\[\dim E_iW = \begin{cases}1 & \text{if } E_iw_0\neq 0\\ 0 & \text{if }E_iw_0 = 0.\end{cases}\]
+\[\dim E_iW = \begin{cases}1 & \text{if } E_iw_0\neq 0,\\ 0 & \text{if }E_iw_0 = 0.\end{cases}\]
 In particular,
 \[\dim E^*_iW \leq 1.\]
 
@@ -2337,9 +2337,9 @@ Now observe,
 by Lemma \ref{lem:thin-module-structure} \((ii)\).
 Also,
 \begin{align}
-\langle w_{i-1}, Aw_i\rangle & = \langle Aw_{i-1}, w_i\rangle \quad (text{since}\; \bar{A}^\top = A)\\
+\langle w_{i-1}, Aw_i\rangle & = \langle Aw_{i-1}, w_i\rangle \quad (\text{since}\; \bar{A}^\top = A)\\
 & = \langle x_i + a_{i-1}w_{i-1} + x_{i-1}x_{i-2}, w_i\rangle\\
-& = \|w_i\|^w.
+& = \|w_i\|^2.
 \end{align}
 This proves the lemma.
 \end{proof}
@@ -2352,7 +2352,7 @@ The measure \index{measure} \(m = m_W\) is the function
 such that
 \[
 m(\theta) = \begin{cases}\frac{\|E_iw\|^2}{\|w\|^2} & \text{where } 0\neq w \in E^*_rW\\
-& \text{ if $\theta = \theta_i$ is an eigenvalue for $\Gamma$}\\
+& \text{ if $\theta = \theta_i$ is an eigenvalue for $\Gamma$,}\\
 0 & \text{if $\theta$ is not an eigenvalue for $\Gamma$.}
 \end{cases}\]
 \end{definition}
