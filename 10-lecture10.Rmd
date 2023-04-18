@@ -99,7 +99,7 @@ This proves the assertions.
 With above notation, let 
 $W$, $W'$ denote thin irreducible $T(x)$-modules. The following are equivalent.
 
-| $(i)$ $W$, $W$ are isomorphic as $T$-modules.
+| $(i)$ $W$, $W'$ are isomorphic as $T$-modules.
 
 | $(ii)$ $r(W) = r(W')$ and $m_W = m_{W'}$.
 
@@ -121,14 +121,14 @@ $$E^*_{r+i}AE^*_{r+i}\sigma (W) = \sigma(E^*_{r+i}AE^*_{r+i}w) = \sigma(a_iw) = 
 and $\sigma w\neq 0$. So,
 \begin{align}
 a_i & = \text{eigenvalue of $E^*_{r+i}AE^*_{r+i}$ on $E^*_{r+i}W$}\\
-& = a_i'
+& = a_i'.
 \end{align}
 It is similar to show $x = x'$.
 
 :::{.hs}
 **HS MEMO**
 
-Pick $w\in E^*_{r+i-1}W \setminus \{0\}$
+Pick $w\in E^*_{r+i-1}W \setminus \{0\}$, then
 $$E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}\sigma(W) = \sigma(E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}w) = x_i\sigma(w).$$
 Hence, $x_i$ is the eigenvalue of $E^*_{r+i-1}AE^*_{r+i}AE^*_{r+i-1}$ on $E^*_{r+i-1}W = x_i'$.
 :::
@@ -137,8 +137,8 @@ $(iii)\Rightarrow (i)$
 
 Pick $0\neq w_0\in E^*_rW$, $0\neq w_0'\in E^*_rW'$. Let $p_i$ be in Lemma \@ref(lem:thin-module-structure), and set
 \begin{align}
-w_i & = p_i(A)w_0\in E^*_{r+i}W \quad (0\leq i\leq d) \\
-w_i' & = p_i'(A)w_0' \in E^*_{r+i}W \quad (0\leq i\leq d)
+w_i & = p_i(A)w_0\in E^*_{r+i}W \quad (0\leq i\leq d), \\
+w_i' & = p_i'(A)w_0' \in E^*_{r+i}W \quad (0\leq i\leq d).
 \end{align}
 
 Define a linear transformation,
@@ -171,10 +171,10 @@ $m(\theta) = 0$ if $\theta\not\in\Delta\quad (\theta\in \mathbb{R})$. So it suff
 By Lemma \@ref(lem:orthogonality) $(i)$,
 $$
 \begin{cases}
-\sum_{\theta\in\Delta} m(\theta)p_0(\theta) & = 1\\
-\sum_{\theta\in\Delta} m(\theta)p_1(\theta) & = 0\\
+\sum_{\theta\in\Delta} m(\theta)p_0(\theta) & = 1,\\
+\sum_{\theta\in\Delta} m(\theta)p_1(\theta) & = 0,\\
 \qquad \vdots & \\
-\sum_{\theta\in\Delta} m(\theta)p_d(\theta) & = 0
+\sum_{\theta\in\Delta} m(\theta)p_d(\theta) & = 0.
 \end{cases}
 $$
 $d+1$ linear equation with $d+1$ unknowns $m(\theta)$  ($\theta\in \Delta$).
