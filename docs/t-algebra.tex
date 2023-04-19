@@ -2737,8 +2737,8 @@ Let \(\Gamma = (X, E)\) be a graph, with \(X = \{x, y_1, y_2, y_3, z_1, z_2, z_3
 Then \((i)\), \((ii)\) are not equivalent for a single vertex \(x\).
 \begin{align}
 E^*_0T\hat{x} & = \langle \hat{x}\rangle, \\
-E^*_1T\hat{x} & = \langle y_1 + y_2 + y_3\rangle, \\
-E^*_2T\hat{x} & = \langle z_1 + z_2 + 2z_3\rangle.
+E^*_1T\hat{x} & = \langle \hat{y}_1 + \hat{y}_2 + \hat{y}_3\rangle, \\
+E^*_2T\hat{x} & = \langle \hat{z}_1 + \hat{z}_2 + 2\hat{z}_3\rangle.
 \end{align}
 
 \begin{proof}[Proof of Lemma \ref{lem:distance-reguarity}]
@@ -2758,16 +2758,16 @@ In particular, \(\delta_y = \delta_z\) if \(\partial(x,y) = \partial(x,z)\), as 
 \[y\sim \cdots \sim x \sim \cdots \sim z.\]
 Hence,
 \[E^*_i\delta \in \mathrm{Span}\left(\sum_{y\in X, \partial(x,y) = i}\hat{y}\right).\]
-Since \(E^*_0\delta, E^*_1\delta, \ldots, E^*_d\delta\) forms a basis for \(T(x)\delta\), we have \((ii)\).
+Since \(E^*_0\delta, E^*_1\delta, \ldots, E^*_d\delta\) form a basis for \(T(x)\delta\), we have \((ii)\).
 
 \((ii)\to (iii)\)
 Fix \(x\in X\), and let \(T \equiv T(x)\), \(E^*_i\equiv E^*_i(x)\), and \(d \equiv d(x)\).
 
 \begin{align}
 A\sum_{y\in X, \partial(x.y)=i}\hat{y} & = \sum_{z\in X} |\{y\in X \mid \partial(y,z) = 1, \; \partial(x,y) = i\}|\hat{z}\\
-& = \sum_{z\in X, \partial(x,y) = i-1}b_{i-1}(x,z)\hat{z} \\
-& \qquad + \sum_{z\in X, \partial(x,y) = i} a_{i}(x,z)\hat{z} \\
-& \qquad + \sum_{z\in X, \partial(x,y) = i+1} c_{i+1}(x,z)\hat{z}\\
+& = \sum_{z\in X, \partial(x,z) = i-1}b_{i-1}(x,z)\hat{z} \\
+& \qquad + \sum_{z\in X, \partial(x,z) = i} a_{i}(x,z)\hat{z} \\
+& \qquad + \sum_{z\in X, \partial(x,z) = i+1} c_{i+1}(x,z)\hat{z}\\
 & \in \mathrm{Span}\left\{\left.\sum_{z\in X, \partial(x,z) = j}\hat{z} \; \right| \; j = 0, 1, \ldots, d \right\}.
 \end{align}
 
@@ -2784,7 +2784,7 @@ b_{i-1}(x)\sum_{y\in X, \partial(x,y) = i-1}\hat{y} \\
 & \qquad + c_{i+1}(x)\sum_{y\in X, \partial(x,y) = i+1}\hat{y}.
 \end{align}
 Hence,
-\[W = \left\{\left.\sum_{y\in X, \partial(x,y)=i}\hat{y} \; \right| \; 0\leq i\leq d\; \right\}\]
+\[W = \mathrm{Span}\left\{\left.\sum_{y\in X, \partial(x,y)=i}\hat{y} \; \right| \; 0\leq i\leq d\; \right\}\]
 is \(A\)-invariant and so \(T\)-invariant. Since \(\hat{x}\in W\), \(T\hat{x} = W\) is the trivial module and \(T\hat{x}\) is thin.
 \end{proof}
 

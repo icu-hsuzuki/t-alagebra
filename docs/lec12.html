@@ -182,8 +182,8 @@ Let <span class="math inline">\(\Gamma = (X, E)\)</span> be a graph, with <span 
 Then <span class="math inline">\((i)\)</span>, <span class="math inline">\((ii)\)</span> are not equivalent for a single vertex <span class="math inline">\(x\)</span>.
 <span class="math display">\[\begin{align}
 E^*_0T\hat{x} &amp; = \langle \hat{x}\rangle, \\
-E^*_1T\hat{x} &amp; = \langle y_1 + y_2 + y_3\rangle, \\
-E^*_2T\hat{x} &amp; = \langle z_1 + z_2 + 2z_3\rangle.
+E^*_1T\hat{x} &amp; = \langle \hat{y}_1 + \hat{y}_2 + \hat{y}_3\rangle, \\
+E^*_2T\hat{x} &amp; = \langle \hat{z}_1 + \hat{z}_2 + 2\hat{z}_3\rangle.
 \end{align}\]</span></p>
 <div class="proof">
 <p><span id="unlabeled-div-28" class="proof"><em>Proof</em> (Proof of Lemma <a href="lec12.html#lem:distance-reguarity">12.1</a>). </span><span class="math inline">\((i)\to (ii)\)</span>
@@ -200,14 +200,14 @@ Hence, <span class="math inline">\(\delta_y = \delta_z\)</span> if <span class="
 <span class="math display">\[y\sim \cdots \sim x \sim \cdots \sim z.\]</span>
 Hence,
 <span class="math display">\[E^*_i\delta \in \mathrm{Span}\left(\sum_{y\in X, \partial(x,y) = i}\hat{y}\right).\]</span>
-Since <span class="math inline">\(E^*_0\delta, E^*_1\delta, \ldots, E^*_d\delta\)</span> forms a basis for <span class="math inline">\(T(x)\delta\)</span>, we have <span class="math inline">\((ii)\)</span>.</p>
+Since <span class="math inline">\(E^*_0\delta, E^*_1\delta, \ldots, E^*_d\delta\)</span> form a basis for <span class="math inline">\(T(x)\delta\)</span>, we have <span class="math inline">\((ii)\)</span>.</p>
 <p><span class="math inline">\((ii)\to (iii)\)</span>
 Fix <span class="math inline">\(x\in X\)</span>, and let <span class="math inline">\(T \equiv T(x)\)</span>, <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, and <span class="math inline">\(d \equiv d(x)\)</span>.</p>
 <p><span class="math display">\[\begin{align}
 A\sum_{y\in X, \partial(x.y)=i}\hat{y} &amp; = \sum_{z\in X} |\{y\in X \mid \partial(y,z) = 1, \; \partial(x,y) = i\}|\hat{z}\\
-&amp; = \sum_{z\in X, \partial(x,y) = i-1}b_{i-1}(x,z)\hat{z} \\
-&amp; \qquad + \sum_{z\in X, \partial(x,y) = i} a_{i}(x,z)\hat{z} \\
-&amp; \qquad + \sum_{z\in X, \partial(x,y) = i+1} c_{i+1}(x,z)\hat{z}\\
+&amp; = \sum_{z\in X, \partial(x,z) = i-1}b_{i-1}(x,z)\hat{z} \\
+&amp; \qquad + \sum_{z\in X, \partial(x,z) = i} a_{i}(x,z)\hat{z} \\
+&amp; \qquad + \sum_{z\in X, \partial(x,z) = i+1} c_{i+1}(x,z)\hat{z}\\
 &amp; \in \mathrm{Span}\left\{\left.\sum_{z\in X, \partial(x,z) = j}\hat{z} \; \right| \; j = 0, 1, \ldots, d \right\}.
 \end{align}\]</span></p>
 <p>Hence, <span class="math inline">\(b_{i-1}(x,z)\)</span>, <span class="math inline">\(a_i(x,z)\)</span> and <span class="math inline">\(c_{i+1}(x,z)\)</span> depend only on <span class="math inline">\(i\)</span> and <span class="math inline">\(x\)</span>, and not on <span class="math inline">\(z\)</span>.
@@ -222,7 +222,7 @@ b_{i-1}(x)\sum_{y\in X, \partial(x,y) = i-1}\hat{y} \\
 &amp; \qquad + c_{i+1}(x)\sum_{y\in X, \partial(x,y) = i+1}\hat{y}.
 \end{align}\]</span>
 Hence,
-<span class="math display">\[W = \left\{\left.\sum_{y\in X, \partial(x,y)=i}\hat{y} \; \right| \; 0\leq i\leq d\; \right\}\]</span>
+<span class="math display">\[W = \mathrm{Span}\left\{\left.\sum_{y\in X, \partial(x,y)=i}\hat{y} \; \right| \; 0\leq i\leq d\; \right\}\]</span>
 is <span class="math inline">\(A\)</span>-invariant and so <span class="math inline">\(T\)</span>-invariant. Since <span class="math inline">\(\hat{x}\in W\)</span>, <span class="math inline">\(T\hat{x} = W\)</span> is the trivial module and <span class="math inline">\(T\hat{x}\)</span> is thin.</p>
 </div>
 <p>Next, we show more is true if <span class="math inline">\((i)-(iii)\)</span> hold in Lemma <a href="lec12.html#lem:distance-reguarity">12.1</a>.</p>
