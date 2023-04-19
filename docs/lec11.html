@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-04-18" />
+<meta name="date" content="2023-04-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -245,10 +245,10 @@ Since <span class="math inline">\(\delta&#39; &gt;0\)</span>, <span class="math 
 </div>
 <div class="definition">
 <p><span id="def:distance-regular" class="definition"><strong>Definition 11.1  </strong></span>For any graph <span class="math inline">\(\Gamma = (X, E)\)</span>, fix a vertex <span class="math inline">\(x\in X\)</span>. Set <span class="math inline">\(d = d(x)\)</span>.</p>
-<p><span class="math inline">\(\Gamma\)</span> is distance-regular with respect to <span class="math inline">\(x\)</span>, if for all <span class="math inline">\(i\)</span> : (0id), and all <span class="math inline">\(y\in X\)</span> such that <span class="math inline">\(\partial(x,y) = i\)</span>:
+<p><span class="math inline">\(\Gamma\)</span> is distance-regular with respect to <span class="math inline">\(x\)</span>, if for all <span class="math inline">\(i\)</span> : <span class="math inline">\((0\leq i\leq d)\)</span>, and all <span class="math inline">\(y\in X\)</span> such that <span class="math inline">\(\partial(x,y) = i\)</span>:
 <span class="math display">\[\begin{align}
-c_i(x) &amp; := |\{z\in X \mid \partial(x,z) = i-1, \; \partial(y,z) = 1\}|\\
-a_i(x) &amp; := |\{z\in X \mid \partial(x,z) = i, \; \partial(y,z) = 1\}|\\
+c_i(x) &amp; := |\{z\in X \mid \partial(x,z) = i-1, \; \partial(y,z) = 1\}|,\\
+a_i(x) &amp; := |\{z\in X \mid \partial(x,z) = i, \; \partial(y,z) = 1\}|,\\
 b_i(x) &amp; := |\{z\in X \mid \partial(x,z) = i+1, \; \partial(y,z) = 1\}|
 \end{align}\]</span>
 depends only on <span class="math inline">\(i\)</span>, <span class="math inline">\(x\)</span>, and not on <span class="math inline">\(y\)</span>.</p>
@@ -258,9 +258,9 @@ depends only on <span class="math inline">\(i\)</span>, <span class="math inline
 <div class="example">
 <p><span id="exm:unlabeled-div-27" class="example"><strong>Example 11.1  </strong></span><img src="t-algebra_files/figure-html/unnamed-chunk-6-1.png" width="144" style="display: block; margin: auto;" />
 <span class="math display">\[\begin{align}
-c_0 &amp;= 1 &amp; c_1 &amp;= 1 &amp; c_2 &amp;= 1\\
-a_0 &amp;= 0 &amp; a_1 &amp;= 1 &amp; a_2 &amp;= 1\\
-b_0 &amp;= 2 &amp; b_1 &amp;= 1 &amp; b_2 &amp;= 0
+c_0 &amp;= 1, &amp; c_1 &amp;= 1, &amp; c_2 &amp;= 1,\\
+a_0 &amp;= 0, &amp; a_1 &amp;= 1, &amp; a_2 &amp;= 1,\\
+b_0 &amp;= 2, &amp; b_1 &amp;= 1, &amp; b_2 &amp;= 0.
 \end{align}\]</span></p>
 </div>
 

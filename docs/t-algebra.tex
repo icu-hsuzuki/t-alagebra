@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2023-04-18}
+\date{2023-04-19}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -2685,10 +2685,10 @@ Since \(\delta' >0\), \(\delta'\in \mathrm{Span}(\delta)\), and \(\theta_0 = \sq
 \begin{definition}
 \protect\hypertarget{def:distance-regular}{}\label{def:distance-regular}For any graph \(\Gamma = (X, E)\), fix a vertex \(x\in X\). Set \(d = d(x)\).
 
-\(\Gamma\) is distance-regular \index{distance-regular} with respect to \(x\), if for all \(i\) : (0\leq i\leq d), and all \(y\in X\) such that \(\partial(x,y) = i\):
+\(\Gamma\) is distance-regular \index{distance-regular} with respect to \(x\), if for all \(i\) : \((0\leq i\leq d)\), and all \(y\in X\) such that \(\partial(x,y) = i\):
 \begin{align}
-c_i(x) & := |\{z\in X \mid \partial(x,z) = i-1, \; \partial(y,z) = 1\}|\\
-a_i(x) & := |\{z\in X \mid \partial(x,z) = i, \; \partial(y,z) = 1\}|\\
+c_i(x) & := |\{z\in X \mid \partial(x,z) = i-1, \; \partial(y,z) = 1\}|,\\
+a_i(x) & := |\{z\in X \mid \partial(x,z) = i, \; \partial(y,z) = 1\}|,\\
 b_i(x) & := |\{z\in X \mid \partial(x,z) = i+1, \; \partial(y,z) = 1\}|
 \end{align}
 depends only on \(i\), \(x\), and not on \(y\).
@@ -2704,9 +2704,9 @@ We call \(c_i(x)\), \(a_i(x)\) and \(b_i(x)\) the intersection numbers with resp
 \begin{center}\includegraphics{t-algebra_files/figure-latex/unnamed-chunk-6-1} \end{center}
 
 \begin{align}
-c_0 &= 1 & c_1 &= 1 & c_2 &= 1\\
-a_0 &= 0 & a_1 &= 1 & a_2 &= 1\\
-b_0 &= 2 & b_1 &= 1 & b_2 &= 0
+c_0 &= 1, & c_1 &= 1, & c_2 &= 1,\\
+a_0 &= 0, & a_1 &= 1, & a_2 &= 1,\\
+b_0 &= 2, & b_1 &= 1, & b_2 &= 0.
 \end{align}
 
 \end{example}

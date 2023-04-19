@@ -116,10 +116,10 @@ Since $\delta' >0$, $\delta'\in \mathrm{Span}(\delta)$, and $\theta_0 = \sqrt{k^
 :::{.definition #distance-regular}
 For any graph $\Gamma = (X, E)$, fix a vertex $x\in X$. Set $d = d(x)$. 
 
-$\Gamma$ is distance-regular \index{distance-regular} with respect to $x$, if for all $i$ \: (0\leq i\leq d), and all $y\in X$ such that $\partial(x,y) = i$:
+$\Gamma$ is distance-regular \index{distance-regular} with respect to $x$, if for all $i$ \: $(0\leq i\leq d)$, and all $y\in X$ such that $\partial(x,y) = i$:
 \begin{align}
-c_i(x) & := |\{z\in X \mid \partial(x,z) = i-1, \; \partial(y,z) = 1\}|\\
-a_i(x) & := |\{z\in X \mid \partial(x,z) = i, \; \partial(y,z) = 1\}|\\
+c_i(x) & := |\{z\in X \mid \partial(x,z) = i-1, \; \partial(y,z) = 1\}|,\\
+a_i(x) & := |\{z\in X \mid \partial(x,z) = i, \; \partial(y,z) = 1\}|,\\
 b_i(x) & := |\{z\in X \mid \partial(x,z) = i+1, \; \partial(y,z) = 1\}|
 \end{align}
 depends only on $i$, $x$, and not on $y$.
@@ -140,8 +140,8 @@ ggplot(df_eg112, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(pa
   annotate("text", x=-0.3, y = 0, label = "x") 
 ```
 \begin{align}
-c_0 &= 1 & c_1 &= 1 & c_2 &= 1\\
-a_0 &= 0 & a_1 &= 1 & a_2 &= 1\\
-b_0 &= 2 & b_1 &= 1 & b_2 &= 0
+c_0 &= 1, & c_1 &= 1, & c_2 &= 1,\\
+a_0 &= 0, & a_1 &= 1, & a_2 &= 1,\\
+b_0 &= 2, & b_1 &= 1, & b_2 &= 0.
 \end{align}
 :::
