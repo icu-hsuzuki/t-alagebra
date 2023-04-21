@@ -188,16 +188,15 @@ m^- &amp; \text{ if } x\in X^-\end{cases}\\
 c_i^- &amp; \text{ if } x\in X^-\end{cases}\\
 \text{int. number }b_i(x) &amp; b_i &amp; \begin{cases} b_i^+ &amp; \text{ if } x\in X^+\\
 b_i^- &amp; \text{ if } x\in X^-\end{cases}\\
-\text{int. number }a_i(x) &amp; a_i &amp; \begin{cases} a_i^+ &amp; \text{ if } x\in X^+\\
-a_i^- &amp; \text{ if } x\in X^-\end{cases}\\
+\text{int. number }a_i(x) &amp; a_i &amp; 0\\
 \hline
 \end{array}\]</span></p>
 <p>Call <span class="math inline">\(m\)</span>, <span class="math inline">\(m^{\pm 1}\)</span> the measure of <span class="math inline">\(\Gamma\)</span>.</p>
 </div>
 <p>Assume <span class="math inline">\(\Gamma = (X, E)\)</span> is distance-regular.</p>
-<p>To what extent do <span class="math inline">\(a_i\)</span>’s, <span class="math inline">\(b_i\)</span>’s and <span class="math inline">\(c_i\)</span>’s determine the structure of irreducible <span class="math inline">\(T(x)\)</span>-modules? In general the following hold.</p>
+<p>To what extent do <span class="math inline">\(a_i\)</span>’s, <span class="math inline">\(b_i\)</span>’s and <span class="math inline">\(c_i\)</span>’s determine the structure of irreducible <span class="math inline">\(T(x)\)</span>-modules? In general, the following hold.</p>
 <div class="lemma">
-<p><span id="lem:basic-data" class="lemma"><strong>Lemma 14.1  </strong></span>Assume <span class="math inline">\(\Gamma = (X, E)\)</span> is distance-regular. Pick <span class="math inline">\(x\in X\)</span>. Let <span class="math inline">\(X\)</span> be a thin irreducible <span class="math inline">\(T(x)\)</span>-module with endpoint <span class="math inline">\(r\)</span>, diameter <span class="math inline">\(d\)</span> and measure <span class="math inline">\(m_W\)</span>.</p>
+<p><span id="lem:basic-data" class="lemma"><strong>Lemma 14.1  </strong></span>Assume <span class="math inline">\(\Gamma = (X, E)\)</span> is distance-regular. Pick <span class="math inline">\(x\in X\)</span>. Let <span class="math inline">\(W\)</span> be a thin irreducible <span class="math inline">\(T(x)\)</span>-module with endpoint <span class="math inline">\(r\)</span>, diameter <span class="math inline">\(d\)</span> and measure <span class="math inline">\(m_W\)</span>.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> There is a unique polynomial <span class="math inline">\(f_W \in \mathbb{C}[\lambda]\)</span> with the following properties.</div>
 <div class="line-block"><span class="math inline">\(\quad (ia)\)</span> <span class="math inline">\(\deg f_W \leq D\)</span> (diameter of <span class="math inline">\(\Gamma\)</span>).</div>
 <div class="line-block"><span class="math inline">\(\quad (ib)\)</span> <span class="math inline">\(m_W(\theta) = m(\theta)f_W(\theta)\)</span> for every <span class="math inline">\(\theta\in \mathbb{R}\)</span>, where <span class="math inline">\(m\)</span> is the measure of <span class="math inline">\(\Gamma\)</span>.</div>
@@ -215,7 +214,7 @@ by polynomial interpolation.</p>
 <span class="math display">\[\theta_0, \ldots, \theta_D\in \mathbb{R} \quad \text{and}\quad f_W(\theta_0), \ldots, f_W(\theta_D) \in \mathbb{R}.\]</span></p>
 <p><span class="math inline">\((ii)\)</span> Without loss of generality, we may assume <span class="math inline">\(r &lt; D/2\)</span>, else trivial.</p>
 <p>Pick <span class="math inline">\(0\neq w \in E^*_r(x)W\)</span>.
-<span class="math display">\[w = \sum_{y\in W, \partial(x,y) = r}\alpha_y\hat{y} \quad \text{ some } \; \alpha_y\in \mathbb{C}.\]</span>
+<span class="math display">\[w = \sum_{y\in W, \partial(x,y) = r}\alpha_y\hat{y} \quad \text{ for some } \; \alpha_y\in \mathbb{C}.\]</span>
 Pick <span class="math inline">\(y\in X\)</span> such that <span class="math inline">\(\alpha_y\neq 0\)</span>.</p>
 <p>Set <span class="math inline">\(W&#39;\)</span> be the trivial <span class="math inline">\(T(y)\)</span>-module. (<span class="math inline">\(\langle w, \hat{y}\rangle \neq 0, \text{ as } W\not\bot W&#39;\)</span>.)
 <span class="math display">\[r&#39; = 0, \quad m&#39; = m, \quad \Delta = r.\]</span></p>
@@ -230,7 +229,7 @@ So,
 and <span class="math inline">\(p/\bar{p}&#39;\)</span> satisfies the conditions of <span class="math inline">\(f_W\)</span>.
 <span class="math display">\[\left(\frac{p(\theta)}{\bar{p}&#39;(\theta)} = \frac{m_W(\theta)}{m(\theta)}\right)\]</span></p>
 <p><span class="math inline">\((iii)\)</span>
-<span class="math display">\[E_iW = 0 \rightarrow m_W(\theta_i) = 0 \rightarrow f_W(\theta_i) = 0.\]</span>
+<span class="math display">\[E_iW = 0 \Rightarrow m_W(\theta_i) = 0 \Rightarrow f_W(\theta_i) = 0.\]</span>
 that is, <span class="math inline">\(E_iW = 0\)</span>. Hence <span class="math inline">\(\theta_i\)</span> is a root of <span class="math inline">\(f_W(\lambda) = 0\)</span>.
 So,
 <span class="math display">\[2r \geq \deg f_W \geq |\{\theta_i\mid E_iW = 0\}| = D-d.\]</span>
@@ -242,7 +241,7 @@ This proves the assertions.</p>
 <p><span id="lem:thin-endpoint1" class="lemma"><strong>Lemma 14.2  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be any distance-regular graph with valency <span class="math inline">\(k\)</span>, diameter <span class="math inline">\(D\)</span> <span class="math inline">\((d\geq 2)\)</span>, measure <span class="math inline">\(m\)</span>, and eigenvalues
 <span class="math display">\[k = \theta_0 &gt; \theta_1 &gt; \cdots &gt; \theta_D.\]</span>
 Pick <span class="math inline">\(x\in X\)</span>. Let
-<span class="math inline">\(W\)</span> be a thin irreducible <span class="math inline">\(T(x)\)</span>-module with endpoint <span class="math inline">\(r = 1\)</span>, diameter <span class="math inline">\(D\)</span> and measure <span class="math inline">\(m_W = mf_W\)</span>.
+<span class="math inline">\(W\)</span> be a thin irreducible <span class="math inline">\(T(x)\)</span>-module with endpoint <span class="math inline">\(r = 1\)</span>, diameter <span class="math inline">\(d\)</span> and measure <span class="math inline">\(m_W = mf_W\)</span>.
 Then one fo the following cases <span class="math inline">\((i)-(iv)\)</span> occurs.</p>
 <p><span class="math display">\[\begin{array}{|c|c|c|c|}
 \hline
@@ -259,9 +258,9 @@ Moreover, the isomorphism class of <span class="math inline">\(W\)</span> is det
 </div>
 <p><strong>Note.</strong> By <span class="math inline">\((iii)\)</span>, the possible “shapes” of a thin irreducible <span class="math inline">\(T(x)\)</span>-modules are:
 <span class="math display">\[\begin{align}
-r = 0 &amp; \quad d = D\\
-r = 1 &amp; \quad d = D-1\\
-r = 1 &amp; \quad d = D-2
+r = 0 &amp; \quad d = D,\\
+r = 1 &amp; \quad d = D-1,\\
+r = 1 &amp; \quad d = D-2.
 \end{align}\]</span></p>
 
 </div>
