@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2023-04-19}
+\date{2023-04-21}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -2991,7 +2991,7 @@ And we have,
 This proves Claim.
 
 Similarly,
-\[\mathrm{prof}_{T(x)\delta}\hat{y} = {k_x}^{-1}A\hat{x}.\]
+\[\mathrm{proj}_{T(x)\delta}\hat{y} = {k_x}^{-1}A\hat{x}.\]
 Hence, the polynomials \(p, p'\in \mathbb{C}[\lambda]\) from Theorem \ref{thm:two-thin-modules} equal
 \[\frac{\lambda}{k_y} \quad \text{ and }\quad \frac{\lambda}{k_x}\]
 respectively.
@@ -3049,7 +3049,7 @@ We shall show that \(m\) determines
 Observe:
 \begin{align}
 a_i(W) & = a_i(x) \quad (0\leq i\leq d)\\
-x_i(W) & = b_{i-1}c_i(x) \quad (1\leq i\leq d)
+x_i(W) & = b_{i-1}(x)c_i(x) \quad (1\leq i\leq d)
 \end{align}
 
 \textbf{HS MEMO}
@@ -3064,7 +3064,7 @@ and
 \begin{align}
 A\sum_{y\in X,\partial(x,y)}\hat{y} & = b_{i-1}(x)\sum_{y\in X, \partial(x,y)=i-1}\hat{y} \\
 & \quad + a_i(x)\sum_{y\in X, \partial(x,y)=i}\hat{y} \\
-& \quad + c_{i+1}\sum_{y\in X, \partial(x,y)=i+1}\hat{y}
+& \quad + c_{i+1}(x)\sum_{y\in X, \partial(x,y)=i+1}\hat{y}
 \end{align}
 So \(x_i = b_{i-1}(x)c_i(x)\).
 
@@ -3089,7 +3089,7 @@ Now \(m\) determines
 k^+ & = b_0(x)\\
 k^- & = {\theta_0}^2/k^+\\
 c_i(x) & = x_i(W)/b_{i-1}(x) \quad (1\leq i\leq d)\\
-b_i(x) & = \begin{cases} k^+ - a_i(x) - c_i(c) \quad \text{$i$; even,}\\
+b_i(x) & = \begin{cases} k^+ - a_i(x) - c_i(x) \quad \text{$i$; even,}\\
 k^--a_i(x)-c_i(x) \quad \text{$i$: odd}.
 \end{cases}
 \end{align}
@@ -3110,8 +3110,8 @@ Case \(\Gamma\): regular.
 
 Case \(\Gamma\): biregular.
 
-\((i)\) \(\dim E_V = |X^+| m^+(\theta_i) + |X^-|m^-(\theta_i)\).\\
-\((ii)\) \(\Gamma\) has exactly \(d^++1\) distinct eigenvalues \((d^+\geq d^-\)).\\
+\((i)\) \(\dim E_iV = |X^+| m^+(\theta_i) + |X^-|m^-(\theta_i)\).\\
+\((ii)\) \(\Gamma\) has exactly \(d^++1\) distinct eigenvalues \((d^+\geq d^-)\).\\
 \((iii)\) If \(d^+\) is odd, the \(\Gamma\) is regular.\\
 \((iv)\) \(d^+ = d^-\), or \(d^+ = d^-+1\) is even.\\
 \((v)\) \(a_i(x) = 0\) for all \(i\) and for all \(x\).
@@ -3134,14 +3134,14 @@ Now,
 Since \(A\) is real symmetric and
 \[E_i\overline{E_i}^\top = E_i^2 = E_i\]
 with \(E_i\) symmetric
-\[E_i \sim \begin{pmatrix} I & O \\ O & I\end{pmatrix}.\]
+\[E_i \sim \begin{pmatrix} I & O \\ O & O\end{pmatrix}.\]
 \[\mathrm{trace} E_i = \mathrm{rank} E_i = \dim E_iV.\]
 Thus, we have the assertion in this case.
 
 Suppose \(\Gamma\) is biregular.
 
 Then, same except,
-\[\sum_{x\in X} m_x(\theta_i) = |X^+|m^+(\theta_i) + |X^-||m^-(\theta_i).\]
+\[\sum_{x\in X} m_x(\theta_i) = |X^+|m^+(\theta_i) + |X^-|m^-(\theta_i).\]
 
 \((ii)\)
 \(\Gamma\): regular. Immediately, if \(\theta\) is an eigenvalue of \(\Gamma\), then \(m(\theta) \neq 0\).

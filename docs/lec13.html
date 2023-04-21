@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-04-19" />
+<meta name="date" content="2023-04-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -206,7 +206,7 @@ And we have,
 \end{align}\]</span>
 This proves Claim.</p>
 <p>Similarly,
-<span class="math display">\[\mathrm{prof}_{T(x)\delta}\hat{y} = {k_x}^{-1}A\hat{x}.\]</span>
+<span class="math display">\[\mathrm{proj}_{T(x)\delta}\hat{y} = {k_x}^{-1}A\hat{x}.\]</span>
 Hence, the polynomials <span class="math inline">\(p, p&#39;\in \mathbb{C}[\lambda]\)</span> from Theorem <a href="lec12.html#thm:two-thin-modules">12.1</a> equal
 <span class="math display">\[\frac{\lambda}{k_y} \quad \text{ and }\quad \frac{\lambda}{k_x}\]</span>
 respectively.</p>
@@ -247,7 +247,7 @@ Hence, we have <span class="math inline">\((ib)\)</span>.</p>
 Observe:
 <span class="math display">\[\begin{align}
 a_i(W) &amp; = a_i(x) \quad (0\leq i\leq d)\\
-x_i(W) &amp; = b_{i-1}c_i(x) \quad (1\leq i\leq d)
+x_i(W) &amp; = b_{i-1}(x)c_i(x) \quad (1\leq i\leq d)
 \end{align}\]</span></p>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
@@ -260,7 +260,7 @@ and
 <span class="math display">\[\begin{align}
 A\sum_{y\in X,\partial(x,y)}\hat{y} &amp; = b_{i-1}(x)\sum_{y\in X, \partial(x,y)=i-1}\hat{y} \\
 &amp; \quad + a_i(x)\sum_{y\in X, \partial(x,y)=i}\hat{y} \\
-&amp; \quad + c_{i+1}\sum_{y\in X, \partial(x,y)=i+1}\hat{y}
+&amp; \quad + c_{i+1}(x)\sum_{y\in X, \partial(x,y)=i+1}\hat{y}
 \end{align}\]</span>
 So <span class="math inline">\(x_i = b_{i-1}(x)c_i(x)\)</span>.</p>
 </div>
@@ -282,7 +282,7 @@ k^- &amp; \text{ if $i$ is odd.}
 k^+ &amp; = b_0(x)\\
 k^- &amp; = {\theta_0}^2/k^+\\
 c_i(x) &amp; = x_i(W)/b_{i-1}(x) \quad (1\leq i\leq d)\\
-b_i(x) &amp; = \begin{cases} k^+ - a_i(x) - c_i(c) \quad \text{$i$; even,}\\
+b_i(x) &amp; = \begin{cases} k^+ - a_i(x) - c_i(x) \quad \text{$i$; even,}\\
 k^--a_i(x)-c_i(x) \quad \text{$i$: odd}.
 \end{cases}
 \end{align}\]</span>
@@ -295,8 +295,8 @@ This proves the assertions.</p>
 <span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> has exactly <span class="math inline">\(d+1\)</span> distinct eigenvalues</div>
 <p>(<span class="math inline">\(d = \mathrm{diam}\Gamma = d(x), \; \text{ for all }\; x\in X\)</span>).</p>
 <div class="line-block">Case <span class="math inline">\(\Gamma\)</span>: biregular.</div>
-<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\dim E_V = |X^+| m^+(\theta_i) + |X^-|m^-(\theta_i)\)</span>.<br />
-<span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> has exactly <span class="math inline">\(d^++1\)</span> distinct eigenvalues <span class="math inline">\((d^+\geq d^-\)</span>).<br />
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\dim E_iV = |X^+| m^+(\theta_i) + |X^-|m^-(\theta_i)\)</span>.<br />
+<span class="math inline">\((ii)\)</span> <span class="math inline">\(\Gamma\)</span> has exactly <span class="math inline">\(d^++1\)</span> distinct eigenvalues <span class="math inline">\((d^+\geq d^-)\)</span>.<br />
 <span class="math inline">\((iii)\)</span> If <span class="math inline">\(d^+\)</span> is odd, the <span class="math inline">\(\Gamma\)</span> is regular.<br />
 <span class="math inline">\((iv)\)</span> <span class="math inline">\(d^+ = d^-\)</span>, or <span class="math inline">\(d^+ = d^-+1\)</span> is even.<br />
 <span class="math inline">\((v)\)</span> <span class="math inline">\(a_i(x) = 0\)</span> for all <span class="math inline">\(i\)</span> and for all <span class="math inline">\(x\)</span>.</div>
@@ -315,12 +315,12 @@ Now,
 Since <span class="math inline">\(A\)</span> is real symmetric and
 <span class="math display">\[E_i\overline{E_i}^\top = E_i^2 = E_i\]</span>
 with <span class="math inline">\(E_i\)</span> symmetric
-<span class="math display">\[E_i \sim \begin{pmatrix} I &amp; O \\ O &amp; I\end{pmatrix}.\]</span>
+<span class="math display">\[E_i \sim \begin{pmatrix} I &amp; O \\ O &amp; O\end{pmatrix}.\]</span>
 <span class="math display">\[\mathrm{trace} E_i = \mathrm{rank} E_i = \dim E_iV.\]</span>
 Thus, we have the assertion in this case.</p>
 <p>Suppose <span class="math inline">\(\Gamma\)</span> is biregular.</p>
 <p>Then, same except,
-<span class="math display">\[\sum_{x\in X} m_x(\theta_i) = |X^+|m^+(\theta_i) + |X^-||m^-(\theta_i).\]</span></p>
+<span class="math display">\[\sum_{x\in X} m_x(\theta_i) = |X^+|m^+(\theta_i) + |X^-|m^-(\theta_i).\]</span></p>
 <p><span class="math inline">\((ii)\)</span>
 <span class="math inline">\(\Gamma\)</span>: regular. Immediately, if <span class="math inline">\(\theta\)</span> is an eigenvalue of <span class="math inline">\(\Gamma\)</span>, then <span class="math inline">\(m(\theta) \neq 0\)</span>.</p>
 <p><span class="math inline">\(\Gamma\)</span>: biregular. For each <span class="math inline">\(\theta = \theta_i \in \mathbb{R}\setminus\{0\}\)</span>,
