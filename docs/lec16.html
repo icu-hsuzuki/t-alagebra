@@ -172,7 +172,7 @@ div.csl-indent {
 <p><strong>Wednesday, February 24, 1993</strong></p>
 <p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> denote any graph of diameter <span class="math inline">\(D\)</span>.</p>
 <div class="definition">
-<p><span id="def:ith-incidence" class="definition"><strong>Definition 16.1  </strong></span>For all integer <span class="math inline">\(i\)</span>, the <span class="math inline">\(i\)</span>-th incidence matrix <span class="math inline">\(A_i\in \mathrm{Mat}_X(\mathbb{C})\)</span> satisfies
+<p><span id="def:ith-incidence" class="definition"><strong>Definition 16.1  </strong></span>For all integers <span class="math inline">\(i\)</span>, the <span class="math inline">\(i\)</span>-th incidence matrix <span class="math inline">\(A_i\in \mathrm{Mat}_X(\mathbb{C})\)</span> satisfies
 <span class="math display">\[(A_i)_{xy} = \begin{cases} 1 &amp; \text{if $\partial(x,y) = i$,}\\
 0 &amp; \text{if $\partial(x,y)\neq i$,}
 \end{cases} \quad (x,y\in X).\]</span>
@@ -218,7 +218,7 @@ Hence,
 <p>Thus, <span class="math inline">\(A_0, A_1, \ldots, A_D\)</span> form a basis for <span class="math inline">\(M\)</span>.</p>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(A_0, A_1, \ldots, A_D\)</span> form a basis for an algebra <span class="math inline">\(M\)</span>,</div>
 <p><span class="math display" id="eq:plij">\[\begin{equation}
-A_iA_j = \sum_{\ell = 0}^Dp^{\ell_{ij}}A_\ell \quad \text{for some }\; p^\ell_{ij}\in\mathbb{C}. \tag{16.1}
+A_iA_j = \sum_{\ell = 0}^Dp^\ell_{ij}A_\ell \quad \text{for some }\; p^\ell_{ij}\in\mathbb{C}. \tag{16.1}
 \end{equation}\]</span>
 Fix <span class="math inline">\(h \quad (0\leq h\leq D)\)</span>. Pick <span class="math inline">\(x, y\in X\)</span> with <span class="math inline">\(\partial(x,y) = h\)</span>.</p>
 <p>Compute <span class="math inline">\(x, y\)</span> entry in <a href="lec16.html#eq:plij">(16.1)</a>,
@@ -253,7 +253,7 @@ a_i(W) = \gamma_i - \gamma_{i-1} + a_i + c_i - c_{i+1} \quad (1\leq i\leq D). \t
 \end{equation}\]</span></p>
 </div>
 <p><strong>Note.</strong>
-<span class="math display">\[p_i = p_1^W + \gamma_{i-1}p^W_{i-1} - c_i(p_{i-1}^W + \gamma_{i-2}^W), \; (\gamma_{-1} = -\gamma_{-2} = 0, \; 0\leq i\leq d+1).\]</span></p>
+<span class="math display">\[p_i = p_1^W + \gamma_{i-1}p^W_{i-1} - c_i(p_{i-1}^W + \gamma_{i-2}p_{i-2}^W), \; (\gamma_{-1} = -\gamma_{-2} = 0, \; 0\leq i\leq d+1).\]</span></p>
 <div class="proof">
 <p><span id="unlabeled-div-38" class="proof"><em>Proof</em>. </span>Set
 <span class="math display">\[\tilde{A}_i = A_0 + A_1 + \cdots + A_i \quad (0\leq i\leq D).\]</span></p>
@@ -275,7 +275,7 @@ This proves Claim 1.</p>
 <p>Now pick <span class="math inline">\(0\neq w \in E^*_1(x)W\)</span> and let
 <span class="math display">\[w = \sum_{z\in X, \partial(x,z)=1}\alpha_z\hat{z}.\]</span>
 Pick <span class="math inline">\(y\)</span>, where <span class="math inline">\(\alpha_y\neq 0\)</span>.</p>
-<p>For <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq D)\)</span>, define
+<p>For all <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq D)\)</span>, define
 <span class="math display">\[\begin{align}
 B_i &amp; = \tilde{A}_i(\hat{x}- \hat{y})\\
 &amp; = \sum_{z\in X, \partial(x,z)\leq i}\hat{z} - \sum_{z\in X, \partial(y,z)\leq i} \hat{z}\\
@@ -284,17 +284,17 @@ B_i &amp; = \tilde{A}_i(\hat{x}- \hat{y})\\
 Note that <span class="math inline">\(B_D = O\)</span>, <span class="math inline">\(B_0 = \hat{x}-\hat{y}\)</span>, and
 <span class="math display">\[\langle B_0, w_0\rangle = -\alpha_y \neq 0.\]</span></p>
 <p>From Claim 1,
-<span class="math display">\[AB_i = c_{i+1}B_{i+1}+(a_i-c_{i+1}+c_i)B_i + b_iB_{i-1} \; (0\;eq i\leq D), \; B_{-1} = O.\]</span>
+<span class="math display">\[AB_i = c_{i+1}B_{i+1}+(a_i-c_{i+1}+c_i)B_i + b_iB_{i-1} \; (0\leq i\leq D), \; B_{-1} = O.\]</span>
 Let <span class="math inline">\(p_0^W, \ldots, p^W_d\)</span> denote polynomials for <span class="math inline">\(W\)</span> from Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>. So,
 <span class="math display">\[w_i = p_i^W(A)w \in E^*_{1+i}(x)W, \quad (0\leq i\leq d).\]</span></p>
 <p>Claim 2. <span class="math inline">\(\langle w_i, B_j \rangle = 0\)</span> if <span class="math inline">\(j\not\in \{i, i+1\}\)</span>, <span class="math inline">\((0\leq i\leq d, 0\leq j\leq D)\)</span>.</p>
 <p><em>Proof of Claim 2.</em>
-<span class="math display">\[w_i\in E^*_{1+i}W, \quad B_j\in E^*_j(x)W + E^*_{j+1}(x)W.\]</span>
+<span class="math display">\[w_i\in E^*_{1+i}(x)W, \quad B_j\in E^*_j(x)W + E^*_{j+1}(x)W.\]</span>
 <img src="t-algebra_files/figure-html/unnamed-chunk-8-1.png" width="480" style="display: block; margin: auto;" />
 Vertical lines indicate possible non-orthogonality.</p>
 <p>Compute
 <span class="math display" id="eq:wibj">\[\begin{equation}
-\langle Aw_i, B_j\rangle = \langle w_i, AB_j\rangle, quad (0\leq i\leq D, \; 0\leq j\leq D-1).\tag{16.5}
+\langle Aw_i, B_j\rangle = \langle w_i, AB_j\rangle, \quad (0\leq i\leq D, \; 0\leq j\leq D-1).\tag{16.5}
 \end{equation}\]</span>
 <span class="math display">\[\begin{align}
 \text{LHS} &amp; = \langle w_{i+1},B_j\rangle + a_i(W)\langle w_i,B_j\rangle + x_i(W)\langle w_{i-1},B_j\rangle\\
@@ -333,8 +333,8 @@ Evaluate this using <a href="lec16.html#eq:wj-1bj">(16.6)</a> and <a href="lec16
 <!-- & = (a_j-c_{j+1}+c_j)\langle w_{j-1},B_j\rangle + b_j\langle w_{j-1},B_{j-1}\rangle. -->
 <!-- \end{split} -->
 <span class="math display">\[\frac{w_1(W)\cdots x_j(W)}{c_1\cdots c_j}+(a_{j-1}(W)-a_j+c_{j+1}-c_j)b_2\cdots b_j\gamma_0 = b_j\frac{x_1(W)\cdots x_{j-1}(W)}{c_1\cdots c_{j-1}},\]</span>
-<span class="math display">\[\left(\gamma_i:=\frac{c_2c_3\cdots c_{i+1}b_2b_3\cdots b_{i+1}\gamma_0}{x_0(W)x_2(W)\cdots x_i(W)} \right).\]</span>
-<span class="math display">\[\frac{x_j(W)}{c_j}  = b_j + \frac{c_1c_3\cdots c_{j-1}b_2b_3\cdots b_{j}\gamma_0}{x_0(W)x_2(W)\cdots x_{j-1}(W)}(a_j+c_j-c_{j+1}-a_{j-1}).\]</span>
+<span class="math display">\[\left(\gamma_i:=\frac{c_2c_3\cdots c_{i+1}b_2b_3\cdots b_{i+1}\gamma_0}{x_1(W)x_2(W)\cdots x_i(W)} \right).\]</span>
+<span class="math display">\[\frac{x_j(W)}{c_j}  = b_j + \frac{c_1c_3\cdots c_{j-1}b_2b_3\cdots b_{j}\gamma_0}{x_1(W)x_2(W)\cdots x_{j-1}(W)}(a_j+c_j-c_{j+1}-a_{j-1}).\]</span>
 So,
 <span class="math display">\[x_j(W)  = c_jb_j + \gamma_{j-1}(a_j+c_j-c_{j+1}-a_{j-1}(W)).\]</span>
 This proves <a href="lec16.html#eq:xi">(16.3)</a>.</p>
@@ -377,7 +377,8 @@ a_0(W) &amp; x_1(W)\\ 1 &amp; a_1(W)
 <span class="math inline">\(a_0(W)\)</span>: free.
 <span class="math display">\[\begin{align}
 x_1(W) &amp; = c_1b_1 + (a_0(W) + 1)(a_1 + c_1 - c_2 - a_0(W))\\
-&amp; = k - a_1 - 1 + a_1a_0(W) + a_0(W) - c_2a_0(W) - a_0(W)^2 + a_1 + a - c_2 - a_0(W)\\
+&amp; = k - a_1 - 1 + a_1a_0(W) + a_0(W) - c_2a_0(W) - a_0(W)^2\\
+&amp; \qquad + a_1 + a - c_2 - a_0(W)\\
 &amp; = a_1a_0(W) - c_2a_0(W) + k - c_2 - a_0(W)^2,\\
 \gamma_1 &amp; = 0,\\
 a_1(W) &amp; = -(a_0(W)+1) + a_1 + c_1 - c_2\\
@@ -414,11 +415,11 @@ Then,
 <span class="math display">\[\begin{align}
 a_i(W) &amp; = a_i + c_i - c_{i+1} \quad (0\leq i\leq D-1)\\
 x_i(W) &amp; = b_ic_i \quad (1\leq i\leq D-1)\\
-\gamma_i(W) &amp; = 0.
+\gamma_i(W) &amp; = 0 \quad (0\leq i\leq D-1).
 \end{align}\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-41" class="proof"><em>Proof</em>. </span>Since <span class="math inline">\(\gamma_0 = a_0(W) = 1\)</span>, <span class="math inline">\(\gamma_i = 0\)</span>.</p>
+<p><span id="unlabeled-div-41" class="proof"><em>Proof</em>. </span>Since <span class="math inline">\(\gamma_0 = a_0(W) + 1\)</span>, <span class="math inline">\(\gamma_i = 0\)</span>.</p>
 </div>
 
 </div>

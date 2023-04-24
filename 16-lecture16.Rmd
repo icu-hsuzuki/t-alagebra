@@ -4,7 +4,7 @@
 Let $\Gamma = (X, E)$ denote any graph of diameter $D$.
 
 :::{.definition #ith-incidence}
-For all integer $i$, the $i$-th incidence matrix $A_i\in \mathrm{Mat}_X(\mathbb{C})$ satisfies
+For all integers $i$, the $i$-th incidence matrix $A_i\in \mathrm{Mat}_X(\mathbb{C})$ satisfies
 $$(A_i)_{xy} = \begin{cases} 1 & \text{if $\partial(x,y) = i$,}\\
 0 & \text{if $\partial(x,y)\neq i$,}
 \end{cases} \quad (x,y\in X).$$
@@ -64,7 +64,7 @@ Thus, $A_0, A_1, \ldots, A_D$ form a basis for $M$.
 
 | $(iv)$ $A_0, A_1, \ldots, A_D$ form a basis for an algebra $M$,
 \begin{equation}
-A_iA_j = \sum_{\ell = 0}^Dp^{\ell_{ij}}A_\ell \quad \text{for some }\; p^\ell_{ij}\in\mathbb{C}. (\#eq:plij)
+A_iA_j = \sum_{\ell = 0}^Dp^\ell_{ij}A_\ell \quad \text{for some }\; p^\ell_{ij}\in\mathbb{C}. (\#eq:plij)
 \end{equation}
 Fix $h \quad (0\leq h\leq D)$. Pick $x, y\in X$ with $\partial(x,y) = h$. 
 
@@ -106,7 +106,7 @@ a_i(W) = \gamma_i - \gamma_{i-1} + a_i + c_i - c_{i+1} \quad (1\leq i\leq D). (\
 :::
 
 **Note.**
-$$p_i = p_1^W + \gamma_{i-1}p^W_{i-1} - c_i(p_{i-1}^W + \gamma_{i-2}^W), \; (\gamma_{-1} = -\gamma_{-2} = 0, \; 0\leq i\leq d+1).$$
+$$p_i = p_1^W + \gamma_{i-1}p^W_{i-1} - c_i(p_{i-1}^W + \gamma_{i-2}p_{i-2}^W), \; (\gamma_{-1} = -\gamma_{-2} = 0, \; 0\leq i\leq d+1).$$
 
 :::{.proof}
 Set
@@ -133,7 +133,7 @@ Now pick $0\neq w \in E^*_1(x)W$ and let
 $$w = \sum_{z\in X, \partial(x,z)=1}\alpha_z\hat{z}.$$
 Pick $y$, where $\alpha_y\neq 0$.
 
-For $i$ $(0\leq i\leq D)$, define
+For all $i$ $(0\leq i\leq D)$, define
 \begin{align}
 B_i & = \tilde{A}_i(\hat{x}- \hat{y})\\
 & = \sum_{z\in X, \partial(x,z)\leq i}\hat{z} - \sum_{z\in X, \partial(y,z)\leq i} \hat{z}\\
@@ -143,14 +143,14 @@ Note that $B_D = O$, $B_0 = \hat{x}-\hat{y}$, and
 $$\langle B_0, w_0\rangle = -\alpha_y \neq 0.$$
 
 From Claim 1, 
-$$AB_i = c_{i+1}B_{i+1}+(a_i-c_{i+1}+c_i)B_i + b_iB_{i-1} \; (0\;eq i\leq D), \; B_{-1} = O.$$
+$$AB_i = c_{i+1}B_{i+1}+(a_i-c_{i+1}+c_i)B_i + b_iB_{i-1} \; (0\leq i\leq D), \; B_{-1} = O.$$
 Let $p_0^W, \ldots, p^W_d$ denote polynomials for $W$ from Lemma \@ref(lem:thin-module-structure). So,
 $$w_i = p_i^W(A)w \in E^*_{1+i}(x)W, \quad (0\leq i\leq d).$$
 
 Claim 2. $\langle w_i, B_j \rangle = 0$ if $j\not\in \{i, i+1\}$, $(0\leq i\leq d, 0\leq j\leq D)$.
 
 _Proof of Claim 2._
-$$w_i\in E^*_{1+i}W, \quad B_j\in E^*_j(x)W + E^*_{j+1}(x)W.$$
+$$w_i\in E^*_{1+i}(x)W, \quad B_j\in E^*_j(x)W + E^*_{j+1}(x)W.$$
 ```{r echo=FALSE, fig.width=5, fig.height=1.7, message=FALSE, fig.align="center"}
 library(tidyverse)
 df_eg161 <- data.frame(
@@ -171,7 +171,7 @@ Vertical lines indicate possible non-orthogonality.
 
 Compute 
 \begin{equation}
-\langle Aw_i, B_j\rangle = \langle w_i, AB_j\rangle, quad (0\leq i\leq D, \; 0\leq j\leq D-1).(\#eq:wibj)
+\langle Aw_i, B_j\rangle = \langle w_i, AB_j\rangle, \quad (0\leq i\leq D, \; 0\leq j\leq D-1).(\#eq:wibj)
 \end{equation}
 \begin{align}
 \text{LHS} & = \langle w_{i+1},B_j\rangle + a_i(W)\langle w_i,B_j\rangle + x_i(W)\langle w_{i-1},B_j\rangle\\
@@ -225,8 +225,8 @@ Evaluate this using \@ref(eq:wj-1bj) and \@ref(eq:wjbj). $(\langle w_0, B_0\rang
 <!-- & = (a_j-c_{j+1}+c_j)\langle w_{j-1},B_j\rangle + b_j\langle w_{j-1},B_{j-1}\rangle. -->
 <!-- \end{split} -->
 $$\frac{w_1(W)\cdots x_j(W)}{c_1\cdots c_j}+(a_{j-1}(W)-a_j+c_{j+1}-c_j)b_2\cdots b_j\gamma_0 = b_j\frac{x_1(W)\cdots x_{j-1}(W)}{c_1\cdots c_{j-1}},$$
-$$\left(\gamma_i:=\frac{c_2c_3\cdots c_{i+1}b_2b_3\cdots b_{i+1}\gamma_0}{x_0(W)x_2(W)\cdots x_i(W)} \right).$$
-$$\frac{x_j(W)}{c_j}  = b_j + \frac{c_1c_3\cdots c_{j-1}b_2b_3\cdots b_{j}\gamma_0}{x_0(W)x_2(W)\cdots x_{j-1}(W)}(a_j+c_j-c_{j+1}-a_{j-1}).$$
+$$\left(\gamma_i:=\frac{c_2c_3\cdots c_{i+1}b_2b_3\cdots b_{i+1}\gamma_0}{x_1(W)x_2(W)\cdots x_i(W)} \right).$$
+$$\frac{x_j(W)}{c_j}  = b_j + \frac{c_1c_3\cdots c_{j-1}b_2b_3\cdots b_{j}\gamma_0}{x_1(W)x_2(W)\cdots x_{j-1}(W)}(a_j+c_j-c_{j+1}-a_{j-1}).$$
 So,
 $$x_j(W)  = c_jb_j + \gamma_{j-1}(a_j+c_j-c_{j+1}-a_{j-1}(W)).$$
 This proves \@ref(eq:xi).
@@ -276,7 +276,8 @@ a_0(W) & x_1(W)\\ 1 & a_1(W)
 $a_0(W)$: free.
 \begin{align}
 x_1(W) & = c_1b_1 + (a_0(W) + 1)(a_1 + c_1 - c_2 - a_0(W))\\
-& = k - a_1 - 1 + a_1a_0(W) + a_0(W) - c_2a_0(W) - a_0(W)^2 + a_1 + a - c_2 - a_0(W)\\
+& = k - a_1 - 1 + a_1a_0(W) + a_0(W) - c_2a_0(W) - a_0(W)^2\\
+& \qquad + a_1 + a - c_2 - a_0(W)\\
 & = a_1a_0(W) - c_2a_0(W) + k - c_2 - a_0(W)^2,\\
 \gamma_1 & = 0,\\
 a_1(W) & = -(a_0(W)+1) + a_1 + c_1 - c_2\\
@@ -319,10 +320,10 @@ Then,
 \begin{align}
 a_i(W) & = a_i + c_i - c_{i+1} \quad (0\leq i\leq D-1)\\
 x_i(W) & = b_ic_i \quad (1\leq i\leq D-1)\\
-\gamma_i(W) & = 0.
+\gamma_i(W) & = 0 \quad (0\leq i\leq D-1).
 \end{align}
 :::
 
 :::{.proof}
-Since $\gamma_0 = a_0(W) = 1$, $\gamma_i = 0$.
+Since $\gamma_0 = a_0(W) + 1$, $\gamma_i = 0$.
 :::
