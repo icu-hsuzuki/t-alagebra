@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-04-21" />
+<meta name="date" content="2023-04-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -173,7 +173,7 @@ div.csl-indent {
 <div class="proof">
 <p><span id="unlabeled-div-35" class="proof"><em>Proof</em> (Proof of Lemma <a href="lec14.html#lem:thin-endpoint1">14.2</a> Continued). </span></p>
 <div class="line-block">We have <span class="math inline">\(\deg f_W\leq 2\)</span> by Lemma <a href="lec14.html#lem:basic-data">14.1</a> <span class="math inline">\((ii)\)</span>.</div>
-<p>Also bt Lemma <a href="lec11.html#lem:principal-module">11.1</a>, <span class="math inline">\(E_0W = 0\)</span>.</p>
+<p>Also by Lemma <a href="lec11.html#lem:principal-module">11.1</a>, <span class="math inline">\(E_0W = 0\)</span>.</p>
 <p>(As otherwise <span class="math inline">\(\langle \delta \rangle = E_0V \subseteq W\)</span> and <span class="math inline">\(r(W) = 0\)</span>.)</p>
 <p>Hence, <span class="math inline">\(\lambda - \theta_0 = \lambda - k\)</span> is a factor of <span class="math inline">\(f_W\)</span> by Lemma <a href="lec14.html#lem:basic-data">14.1</a> <span class="math inline">\((iii)\)</span>.</p>
 <p>Let <span class="math inline">\(p_0, p_1, \ldots, p_D\)</span> denote the polynomials for the trivial <span class="math inline">\(T(x)\)</span>-module from Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>.</p>
@@ -185,9 +185,9 @@ div.csl-indent {
 Note that <span class="math inline">\(x_i = b_{i-1}c_i\)</span> is in the proof of Theorem <a href="lec7.html#thm:thin-condition">7.1</a>.</p>
 <p>By construction,
 <span class="math display">\[\begin{align}
-p_0(\lambda) &amp; = 1.
-p_1(\lambda) &amp; = \lambda.
-p_2(\lambda) &amp; \lambda^2 - a_1\lambda - k.
+p_0(\lambda) &amp; = 1,\\
+p_1(\lambda) &amp; = \lambda,\\
+p_2(\lambda) &amp; = \lambda^2 - a_1\lambda - k.
 \end{align}\]</span></p>
 <p>Apparently,
 <span class="math display">\[f_W = \sigma_0 p_0 + \sigma p_1 + \sigma_2 p_2\]</span>
@@ -196,7 +196,7 @@ for some <span class="math inline">\(\sigma_0, \sigma_1, \sigma_2\in \mathbb{C}\
 <span class="math display">\[\begin{align}
 \sigma_0 &amp; = 1,\\
 \sigma_1 &amp; = \frac{a_0(W)}{k},\\
-\sigma_2 &amp; -\frac{1+a_0(W)}{kb_1}.
+\sigma_2 &amp; = -\frac{1+a_0(W)}{kb_1}.
 \end{align}\]</span></p>
 <p><em>Pf of Claim.</em>
 <span class="math display">\[\begin{align}
@@ -209,19 +209,19 @@ We applied Lemma <a href="lec10.html#lem:orthogonality">10.1</a> <span class="ma
 <p>Next by Lemma <a href="lec10.html#lem:orthogonality">10.1</a> <span class="math inline">\((ii)\)</span>, and <span class="math inline">\(p_1(\theta) = \theta\)</span>,
 <span class="math display">\[\begin{align}
 a_0(W) &amp; = \sum_{\theta\in \mathbb{R}}m_W(\theta)\theta\\
-&amp; = \sum_{\theta\in \mathbb{R}}f_W(\theta)\theta\\
+&amp; = \sum_{\theta\in \mathbb{R}}m(\theta)f_W(\theta)\theta\\
 &amp; = \sum_{j = 0}^2\sigma_j\sum_{\theta\in \mathbb{R}}m(\theta)p_j(\theta)p_1(\theta)\\
 &amp; = \sigma_1 x_1(T\delta)\\
 &amp; = \sigma_1b_0c_1\\
 &amp; = \sigma_1 k.
 \end{align}\]</span>
-So for,
+So far,
 <span class="math display">\[f_W(\lambda) = 1 + \frac{a_0(W)}{k}\lambda + \sigma_2(\lambda^2 - a_1\lambda-k).\]</span>
 But,
 <span class="math display">\[\begin{align}
 0 &amp; = f_W(k)\\
 &amp; = 1 + a_0(W) + \sigma_2k(k-a_1-1)\\
-&amp; 1 + a_0(W) + \sigma_2kb_1.
+&amp; = 1 + a_0(W) + \sigma_2kb_1.
 \end{align}\]</span>
 Thus,
 <span class="math display">\[\sigma_2 = -\frac{1+a_0(W)}{kb_1}.\]</span>
@@ -230,7 +230,7 @@ This proves Claim.</p>
 <p>Here, <span class="math inline">\(\sigma_2 = 0\)</span> and
 <span class="math display">\[f_W(\lambda) = 1 + \frac{a_0(W)\lambda}{k} = 1-\frac{\lambda}{k}.\]</span>
 Also,
-<span class="math display">\[d+1 = |\{\theta \mid \theta \;\text{ is an eigenvalue of $\Gamma$}, \; f_W(\theta)\neq 0\} = D.\]</span></p>
+<span class="math display">\[d+1 = |\{\theta \mid \theta \;\text{ is an eigenvalue of $\Gamma$}, \; f_W(\theta)\neq 0\}| = D.\]</span></p>
 <p>Case: <span class="math inline">\(a_0(W) \neq -1\)</span>.</p>
 <p>Here, <span class="math inline">\(\sigma_2\neq 0\)</span>, and <span class="math inline">\(\deg f_W = 2\)</span>. So,
 <span class="math display">\[f_W(\lambda) = (\lambda - k)(\lambda - \beta)\alpha\]</span>
@@ -294,10 +294,10 @@ In fact, <span class="math inline">\(\theta_1 &gt; -1\)</span>, <span class="mat
 </div>
 <p><span class="math inline">\(K_n\)</span> is distance-regular with valency <span class="math inline">\(k = n-1\)</span> and <span class="math inline">\(a_1 = n-2\)</span>, <span class="math inline">\(D = 1\)</span>.
 Moreover, it has two distince eigenvalues <span class="math inline">\(\theta_0\)</span>, <span class="math inline">\(\theta_1\)</span>.</p>
-<p>Recall, <span class="math inline">\(\theta_0, \ldots, \theta_D\)</span> are roots of <span class="math inline">\(p_{D+1}\)</span>, i.e., <span class="math inline">\(D+1\)</span> st polynomial for the trivial module/
+<p>Recall, <span class="math inline">\(\theta_0, \ldots, \theta_D\)</span> are roots of <span class="math inline">\(p_{D+1}\)</span>, i.e., <span class="math inline">\(D+1\)</span> st polynomial for the trivial module.
 <span class="math display">\[\begin{align}
-p_0 &amp; = 1\\
-p_1 &amp; = \lambda\\
+p_0 &amp; = 1,\\
+p_1 &amp; = \lambda,\\
 p_2 &amp; = \lambda^2 - a_1\lambda - k\\
 &amp; = \lambda^2 - (n-2)\lambda - (n-1)\\
 &amp; = (\lambda - (n-1))(\lambda +1).
@@ -321,7 +321,7 @@ The roots are <span class="math inline">\(\theta_0 = n-1 = k\)</span> and <span 
 For every <span class="math inline">\(xy\in E\)</span>,
 <span class="math display">\[\langle v_x, v_y\rangle = \|v_x\|\|v_y\| = 1.\]</span>
 Hence, <span class="math inline">\(v_x = v_y\)</span>, and <span class="math inline">\(v_x\)</span> is independent of <span class="math inline">\(x\in X\)</span>.</p>
-<p>Shus <span class="math inline">\(\langle v_x,v_y\rangle = 1\)</span> for all <span class="math inline">\(x,y\in X\)</span>.</p>
+<p>Thus <span class="math inline">\(\langle v_x,v_y\rangle = 1\)</span> for all <span class="math inline">\(x,y\in X\)</span>.</p>
 <p>We have <span class="math inline">\(I + A = J\)</span>, (all 1’s matrix), and <span class="math inline">\(D = 1\)</span>.</p>
 <p><span class="math inline">\((ii)\)</span> Let <span class="math inline">\(m\)</span> be the trivial measure. Then,
 <span class="math display">\[\begin{align}

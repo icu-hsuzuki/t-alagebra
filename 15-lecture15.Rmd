@@ -5,7 +5,7 @@
   
 | We have $\deg f_W\leq 2$ by Lemma \@ref(lem:basic-data) $(ii)$.
 
-Also bt Lemma \@ref(lem:principal-module), $E_0W = 0$.
+Also by Lemma \@ref(lem:principal-module), $E_0W = 0$.
 
 (As otherwise $\langle \delta \rangle = E_0V \subseteq W$ and $r(W) = 0$.)
 
@@ -22,9 +22,9 @@ Note that $x_i = b_{i-1}c_i$ is in the proof of Theorem \@ref(thm:thin-condition
 
 By construction,
 \begin{align}
-p_0(\lambda) & = 1.
-p_1(\lambda) & = \lambda.
-p_2(\lambda) & \lambda^2 - a_1\lambda - k.
+p_0(\lambda) & = 1,\\
+p_1(\lambda) & = \lambda,\\
+p_2(\lambda) & = \lambda^2 - a_1\lambda - k.
 \end{align}
 
 Apparently, 
@@ -35,7 +35,7 @@ Claim:
 \begin{align}
 \sigma_0 & = 1,\\
 \sigma_1 & = \frac{a_0(W)}{k},\\
-\sigma_2 & -\frac{1+a_0(W)}{kb_1}.
+\sigma_2 & = -\frac{1+a_0(W)}{kb_1}.
 \end{align}
 
 _Pf of Claim._
@@ -50,19 +50,19 @@ We applied Lemma \@ref(lem:orthogonality) $(ib)$, Lemma \@ref(lem:basic-data) $(
 Next by Lemma \@ref(lem:orthogonality) $(ii)$, and $p_1(\theta) = \theta$, 
 \begin{align}
 a_0(W) & = \sum_{\theta\in \mathbb{R}}m_W(\theta)\theta\\
-& = \sum_{\theta\in \mathbb{R}}f_W(\theta)\theta\\
+& = \sum_{\theta\in \mathbb{R}}m(\theta)f_W(\theta)\theta\\
 & = \sum_{j = 0}^2\sigma_j\sum_{\theta\in \mathbb{R}}m(\theta)p_j(\theta)p_1(\theta)\\
 & = \sigma_1 x_1(T\delta)\\
 & = \sigma_1b_0c_1\\
 & = \sigma_1 k.
 \end{align}
-So for,
+So far,
 $$f_W(\lambda) = 1 + \frac{a_0(W)}{k}\lambda + \sigma_2(\lambda^2 - a_1\lambda-k).$$
 But,
 \begin{align}
 0 & = f_W(k)\\
 & = 1 + a_0(W) + \sigma_2k(k-a_1-1)\\
-& 1 + a_0(W) + \sigma_2kb_1.
+& = 1 + a_0(W) + \sigma_2kb_1.
 \end{align}
 Thus,
 $$\sigma_2 = -\frac{1+a_0(W)}{kb_1}.$$
@@ -73,7 +73,7 @@ Case: $a_0(W) = -1$.
 Here, $\sigma_2 = 0$ and
 $$f_W(\lambda) = 1 + \frac{a_0(W)\lambda}{k} = 1-\frac{\lambda}{k}.$$
 Also,
-$$d+1 = |\{\theta \mid \theta \;\text{ is an eigenvalue of $\Gamma$}, \; f_W(\theta)\neq 0\} = D.$$
+$$d+1 = |\{\theta \mid \theta \;\text{ is an eigenvalue of $\Gamma$}, \; f_W(\theta)\neq 0\}| = D.$$
 
 
 Case: $a_0(W) \neq -1$.
@@ -149,10 +149,10 @@ The complete graph \index{complete graph} $K_n$ has $n$ vertices and diameter $D
 $K_n$ is distance-regular with valency $k = n-1$ and $a_1 = n-2$, $D = 1$.
 Moreover, it has two distince eigenvalues $\theta_0$, $\theta_1$.
 
-Recall, $\theta_0, \ldots, \theta_D$ are roots of $p_{D+1}$, i.e., $D+1$ st polynomial for the trivial module/
+Recall, $\theta_0, \ldots, \theta_D$ are roots of $p_{D+1}$, i.e., $D+1$ st polynomial for the trivial module.
 \begin{align}
-p_0 & = 1\\
-p_1 & = \lambda\\
+p_0 & = 1,\\
+p_1 & = \lambda,\\
 p_2 & = \lambda^2 - a_1\lambda - k\\
 & = \lambda^2 - (n-2)\lambda - (n-1)\\
 & = (\lambda - (n-1))(\lambda +1).
@@ -184,7 +184,7 @@ For every $xy\in E$,
 $$\langle v_x, v_y\rangle = \|v_x\|\|v_y\| = 1.$$
 Hence, $v_x = v_y$, and $v_x$ is independent of $x\in X$.
 
-Shus $\langle v_x,v_y\rangle = 1$ for all $x,y\in X$.
+Thus $\langle v_x,v_y\rangle = 1$ for all $x,y\in X$.
 
 We have $I + A = J$, (all 1's matrix), and $D = 1$.
 
