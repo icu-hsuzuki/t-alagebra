@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-04-24" />
+<meta name="date" content="2023-04-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -172,7 +172,7 @@ div.csl-indent {
 <p><strong>Monday, March 1, 1993</strong></p>
 <p><strong>Review</strong></p>
 <p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be a distance-regular graph of diameter <span class="math inline">\(D\geq 2\)</span>. Pick a vertex <span class="math inline">\(x\in X\)</span>.</p>
-<p>Let <span class="math inline">\(W\)</span> be a thin irreducible <span class="math inline">\(T(x)\)</span>-module with endpoint <span class="math inline">\(r = 1\)</span>, diameter <span class="math inline">\(d = D-1\)</span> or <span class="math inline">\(D-2\)</span>, and <span class="math inline">\(r_0 = a_(W) + 1\)</span>.</p>
+<p>Let <span class="math inline">\(W\)</span> be a thin irreducible <span class="math inline">\(T(x)\)</span>-module with endpoint <span class="math inline">\(r = 1\)</span>, diameter <span class="math inline">\(d = D-1\)</span> or <span class="math inline">\(D-2\)</span>, and <span class="math inline">\(r_0 = a_0(W) + 1\)</span>.</p>
 <p>Show
 <span class="math display">\[\gamma_i = \frac{c_2c_2\cdots c_{i+1}b_2b_3\cdots b_{i+1}\gamma_0}{x_1(W)\cdots x_i(W)},\]</span>
 <span class="math inline">\(a_i(W)\)</span> and <span class="math inline">\(x_i(W)\)</span> are all algebraic integers in <span class="math inline">\(\mathbb{Q}[\gamma_0]\)</span>, where
@@ -185,7 +185,7 @@ a_i(W) &amp; = \gamma_i - \gamma_{i-1} + a_i + c_i - c_{i+1} &amp;&amp; (1\leq i
 Recall some <span class="math inline">\(B\in \mathrm{Mat}_n(\mathbb{C})\)</span> is integral whenever
 <span class="math display">\[B\in \mathrm{Mat}_n(\mathbb{Z}).\]</span>
 In this case, the characteristic polynomial
-<span class="math display">\[\det(\lambda I - B) = \lambda^n + \alpha_{n-1}\lambda^{n-1} + \cdots + \alpha_0, \quad \text{some }\; \alpha_0, \ldots, \alpha_{n-1}\in \mathbb{Z}.\]</span>
+<span class="math display">\[\det(\lambda I - B) = \lambda^n + \alpha_{n-1}\lambda^{n-1} + \cdots + \alpha_0, \; \text{ for some }\; \alpha_0, \ldots, \alpha_{n-1}\in \mathbb{Z}.\]</span>
 Hence, eigenvalues of <span class="math inline">\(B\)</span> are algebraic integers.
 But <span class="math inline">\(a_i(W)\)</span> is an eigenvalue of an integral matrices,
 <span class="math display">\[B = E^*_{i+1}(x)AE^*_{i+1}(x).\]</span>
@@ -195,13 +195,13 @@ Hence, <span class="math inline">\(a_i(W)\)</span> is an algebraic integer.</p>
 So <span class="math inline">\(x_i(W)\)</span> is an algebraic integer.
 <span class="math display">\[\gamma_i - \gamma_{i-1} = a_i(W) - a_i - c_i + c_{i+1}\]</span>
 is an algebraic integer.</p>
-<p>Since <span class="math inline">\(\gamma_0 = a_0(W) + 1\)</span> is an algebraic integer, we find <span class="math inline">\(\gamma\)</span> is an algebraic integer for all <span class="math inline">\(i\)</span>.</p>
+<p>Since <span class="math inline">\(\gamma_0 = a_0(W) + 1\)</span> is an algebraic integer, we find <span class="math inline">\(\gamma_i\)</span> is an algebraic integer for all <span class="math inline">\(i\)</span>.</p>
 <div class="definition">
 <p><span id="def:association-scheme" class="definition"><strong>Definition 17.1  </strong></span>A (commutative) association scheme is a configuration <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span>, where <span class="math inline">\(X\)</span> is a finite nonempty set (of vertices),
 <span class="math inline">\(R_0, R_1, \ldots, R_D\)</span> are nonempty subsets of <span class="math inline">\(X\times X\)</span> such that</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(R_0 = \{(x,x)\mid x\in X\}\)</span>,</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(R_0 \cup \cdots \cup R_D = X\times X \quad (\text{disjoint union})\)</span>,</div>
-<div class="line-block"><span class="math inline">\((iii)\)</span> for every <span class="math inline">\(i\)</span>, <span class="math inline">\(R_i^\top = \{(y,x)\mid xy\in R\} = R_{i&#39;}\)</span> some <span class="math inline">\(i&#39;\in \{0,1,\ldots, D\}\)</span>,</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> for every <span class="math inline">\(i\)</span>, <span class="math inline">\(R_i^\top = \{(y,x)\mid xy\in R\} = R_{i&#39;}\)</span> for some <span class="math inline">\(i&#39;\in \{0,1,\ldots, D\}\)</span>,</div>
 <div class="line-block"><span class="math inline">\((iv)\)</span> for every <span class="math inline">\(h, i, j\)</span> (<span class="math inline">\(0\leq h, i, j\leq D\)</span>), and every <span class="math inline">\(x,y\in X\)</span> such that <span class="math inline">\((x,y)\in R_h\)</span>,</div>
 <p><span class="math display">\[p^h_{ij} = |\{z\in X\mid (x,z)\in R_i, \; (z,y)\in R_j\}|\]</span>
 depends only on <span class="math inline">\(h, i, j\)</span> and not on <span class="math inline">\(x,y\)</span>; and</p>
@@ -254,7 +254,7 @@ M &amp; = \{B\in \mathrm{Mat}_X(\mathbb{C}) \mid Bg = gB, \text{ for all }g\in G
 &amp; = \text{the commuting algebra of $G$ on $X$.}
 \end{align}\]</span>
 Here, we view each <span class="math inline">\(g\in G\)</span> as a permutation matrix in <span class="math inline">\(\mathrm{Mat}_X(\mathbb{C})\)</span> satisfying
-<span class="math display">\[g\hat{x} = \widehat{gx}, \quad \text{for all }x\in G.\]</span></p>
+<span class="math display">\[g\hat{x} = \widehat{gx} \quad \text{for all }x\in G.\]</span></p>
 </div>
 <div class="example">
 <p><span id="exm:centralizer-alg" class="example"><strong>Example 17.3  </strong></span>Let <span class="math inline">\(G\)</span> be any finite group. <span class="math inline">\(G\)</span> acts on <span class="math inline">\(X = G\)</span> by conjugation.
@@ -283,8 +283,8 @@ Show <span class="math inline">\(|S| = |T|\)</span>.
 <span class="math display">\[\text{For all }z\in S, \text{ set } \hat{z} = xz^{-1}y.\]</span>
 Observe, <span class="math inline">\(\hat{z}\in T\)</span>.
 <span class="math display">\[\begin{align}
-x^{-1}z\in C_i &amp; x^{-1}\hat{z} = x^{-1}xz^{-1}y\in C_j\\
-z^{-1}y\in C_j &amp; \hat{z}^{-1}y = y^{-1}zx^{-1}x^{-1}y = y^{-1}x(x^{-1}z)x^{-1}y \in C_i.
+x^{-1}z\in C_i \quad  &amp; x^{-1}\hat{z} = x^{-1}xz^{-1}y\in C_j\\
+z^{-1}y\in C_j \quad  &amp; \hat{z}^{-1}y = y^{-1}zx^{-1}x^{-1}y = y^{-1}x(x^{-1}z)x^{-1}y \in C_i.
 \end{align}\]</span>
 Observe
 <span class="math display">\[S\to T \quad (z\mapsto z^{-1}) \quad \text{is one-to-one and onto.}\]</span></p>

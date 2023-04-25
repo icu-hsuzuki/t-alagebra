@@ -5,7 +5,7 @@
 
 Let $\Gamma = (X, E)$ be a distance-regular graph of diameter $D\geq 2$. Pick a vertex $x\in X$. 
 
-Let $W$ be a thin irreducible $T(x)$-module with endpoint $r = 1$, diameter $d = D-1$ or $D-2$, and $r_0 = a_(W) + 1$.
+Let $W$ be a thin irreducible $T(x)$-module with endpoint $r = 1$, diameter $d = D-1$ or $D-2$, and $r_0 = a_0(W) + 1$.
 
 Show
 $$\gamma_i = \frac{c_2c_2\cdots c_{i+1}b_2b_3\cdots b_{i+1}\gamma_0}{x_1(W)\cdots x_i(W)},$$
@@ -20,7 +20,7 @@ $$\gamma_0 \to a_0(W) \to x_1(W) \to \gamma_1 \to a_1(W)\to x_1(W) \to \cdots .$
 Recall some $B\in \mathrm{Mat}_n(\mathbb{C})$ is integral whenever
 $$B\in \mathrm{Mat}_n(\mathbb{Z}).$$
 In this case, the characteristic polynomial
-$$\det(\lambda I - B) = \lambda^n + \alpha_{n-1}\lambda^{n-1} + \cdots + \alpha_0, \quad \text{some }\; \alpha_0, \ldots, \alpha_{n-1}\in \mathbb{Z}.$$
+$$\det(\lambda I - B) = \lambda^n + \alpha_{n-1}\lambda^{n-1} + \cdots + \alpha_0, \; \text{ for some }\; \alpha_0, \ldots, \alpha_{n-1}\in \mathbb{Z}.$$
 Hence, eigenvalues of $B$ are algebraic integers.
 But $a_i(W)$ is an eigenvalue of an integral matrices, 
 $$B = E^*_{i+1}(x)AE^*_{i+1}(x).$$
@@ -32,7 +32,7 @@ So $x_i(W)$ is an algebraic integer.
 $$\gamma_i - \gamma_{i-1} = a_i(W) - a_i - c_i + c_{i+1}$$
 is an algebraic integer.
 
-Since $\gamma_0 = a_0(W) + 1$ is an algebraic integer, we find $\gamma$ is an algebraic integer for all $i$.
+Since $\gamma_0 = a_0(W) + 1$ is an algebraic integer, we find $\gamma_i$ is an algebraic integer for all $i$.
 
 :::{.definition #association-scheme}
 A (commutative) association scheme\index{association scheme} is a configuration $Y = (X, \{R_i\}_{0\leq i\leq D})$, where $X$ is a finite nonempty set (of vertices),
@@ -42,7 +42,7 @@ $R_0, R_1, \ldots, R_D$ are nonempty subsets of $X\times X$ such that
 
 | $(ii)$ $R_0 \cup \cdots \cup R_D = X\times X \quad (\text{disjoint union})$,
 
-| $(iii)$ for every $i$, $R_i^\top = \{(y,x)\mid xy\in R\} = R_{i'}$ some $i'\in \{0,1,\ldots, D\}$,
+| $(iii)$ for every $i$, $R_i^\top = \{(y,x)\mid xy\in R\} = R_{i'}$ for some $i'\in \{0,1,\ldots, D\}$,
 
 | $(iv)$ for every $h, i, j$ ($0\leq h, i, j\leq D$), and every $x,y\in X$ such that $(x,y)\in R_h$, 
 $$p^h_{ij} = |\{z\in X\mid (x,z)\in R_i, \; (z,y)\in R_j\}|$$
@@ -114,7 +114,7 @@ M & = \{B\in \mathrm{Mat}_X(\mathbb{C}) \mid Bg = gB, \text{ for all }g\in G\}\\
 & = \text{the commuting algebra of $G$ on $X$.}
 \end{align}
 Here, we view each $g\in G$ as a permutation matrix in $\mathrm{Mat}_X(\mathbb{C})$ satisfying
-$$g\hat{x} = \widehat{gx}, \quad \text{for all }x\in G.$$
+$$g\hat{x} = \widehat{gx} \quad \text{for all }x\in G.$$
 :::
 
 :::{.example #centralizer-alg}
@@ -151,8 +151,8 @@ Show $|S| = |T|$.
 $$\text{For all }z\in S, \text{ set } \hat{z} = xz^{-1}y.$$
 Observe, $\hat{z}\in T$.
 \begin{align}
-x^{-1}z\in C_i & x^{-1}\hat{z} = x^{-1}xz^{-1}y\in C_j\\
-z^{-1}y\in C_j & \hat{z}^{-1}y = y^{-1}zx^{-1}x^{-1}y = y^{-1}x(x^{-1}z)x^{-1}y \in C_i.
+x^{-1}z\in C_i \quad  & x^{-1}\hat{z} = x^{-1}xz^{-1}y\in C_j\\
+z^{-1}y\in C_j \quad  & \hat{z}^{-1}y = y^{-1}zx^{-1}x^{-1}y = y^{-1}x(x^{-1}z)x^{-1}y \in C_i.
 \end{align}
 Observe
 $$S\to T \quad (z\mapsto z^{-1}) \quad \text{is one-to-one and onto.}$$
