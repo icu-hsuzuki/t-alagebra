@@ -10,7 +10,7 @@ $$R_i = \{xy\mid \partial(x,y) = i\}.$$
 | $(ii)$ There exists $f_i\in \mathbb{C}[\lambda]$, $\deg f_i = i$ such that $f_i(A_1) = A_i$ for all $i$ with $0\leq i\leq D$.
 
 | $(iii)$ The parameter $p^h_{ij}$
-$$\begin{cases} = 0 & \text{if one of $h, i, j$ is larger than the sum of the other two}\\
+$$\begin{cases} = 0 & \text{if one of $h, i, j$ is larger than the sum of the other two,}\\
 \neq 0 & \text{if one of $h,i,j$ is equal to the sum of the other two.}\end{cases}$$
 :::
 
@@ -18,7 +18,7 @@ $$\begin{cases} = 0 & \text{if one of $h, i, j$ is larger than the sum of the ot
 | $(i)\Rightarrow (ii)$: Lemma \@ref(lem:incidence-matrices).
 
 | $(ii)\Rightarrow (iii)$: Define
-$$k_i \equiv p^0_{ii} = |\{z\mid z]in X, \; \partial(x,z) = i \; ((x,z)\in R_i)\}|$$
+$$k_i \equiv p^0_{ii} = |\{z\mid z\in X, \; \partial(x,z) = i, \; ((x,z)\in R_i)\}|$$
 for any $x\in X$.
 Then $k_i \neq 0$ $(0\leq i\leq D)$, $k_0 = 1$.
 
@@ -62,8 +62,8 @@ Fix a vertex $x\in X$, and set $R_i(x) = \{y\mid (x,y)\in R_i\}$.
 
 Then each $y\in R_i(x)$ is adjacent in $\Gamma$ to exactly 
 \begin{align}
-p^i_{1,i+1} & \neq 0  \quad \text{vertices in }\; R_{i}(x),\\
-p^i_{1i} & \qquad \text{vertices in }\; R_{i+1}(x),\\
+p^i_{1,i+1} & \neq 0  \quad \text{vertices in }\; R_{i+1}(x),\\
+p^i_{1i} & \qquad \text{vertices in }\; R_{i}(x),\\
 p^i_{1,i-1} & \neq 0 \quad \text{vertices in }\; R_{i-1}(x).
 \end{align}
 Hence, by induction,

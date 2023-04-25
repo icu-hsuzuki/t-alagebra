@@ -176,14 +176,14 @@ div.csl-indent {
 <p><span class="math display">\[R_i = \{xy\mid \partial(x,y) = i\}.\]</span></p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> There exists <span class="math inline">\(f_i\in \mathbb{C}[\lambda]\)</span>, <span class="math inline">\(\deg f_i = i\)</span> such that <span class="math inline">\(f_i(A_1) = A_i\)</span> for all <span class="math inline">\(i\)</span> with <span class="math inline">\(0\leq i\leq D\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iii)\)</span> The parameter <span class="math inline">\(p^h_{ij}\)</span></div>
-<p><span class="math display">\[\begin{cases} = 0 &amp; \text{if one of $h, i, j$ is larger than the sum of the other two}\\
+<p><span class="math display">\[\begin{cases} = 0 &amp; \text{if one of $h, i, j$ is larger than the sum of the other two,}\\
 \neq 0 &amp; \text{if one of $h,i,j$ is equal to the sum of the other two.}\end{cases}\]</span></p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-42" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\Rightarrow (ii)\)</span>: Lemma <a href="lec16.html#lem:incidence-matrices">16.1</a>.</div>
 <div class="line-block"><span class="math inline">\((ii)\Rightarrow (iii)\)</span>: Define</div>
-<p><span class="math display">\[k_i \equiv p^0_{ii} = |\{z\mid z]in X, \; \partial(x,z) = i \; ((x,z)\in R_i)\}|\]</span>
+<p><span class="math display">\[k_i \equiv p^0_{ii} = |\{z\mid z\in X, \; \partial(x,z) = i, \; ((x,z)\in R_i)\}|\]</span>
 for any <span class="math inline">\(x\in X\)</span>.
 Then <span class="math inline">\(k_i \neq 0\)</span> <span class="math inline">\((0\leq i\leq D)\)</span>, <span class="math inline">\(k_0 = 1\)</span>.</p>
 <p>(By symmetricity, <span class="math inline">\((x,y)\in R_i\)</span> if and only if <span class="math inline">\((y,x)\in R_i\)</span>.)</p>
@@ -219,8 +219,8 @@ AA_j &amp; = \sum_{h}p^h_{1j}A_h\\
 <p>Fix a vertex <span class="math inline">\(x\in X\)</span>, and set <span class="math inline">\(R_i(x) = \{y\mid (x,y)\in R_i\}\)</span>.</p>
 <p>Then each <span class="math inline">\(y\in R_i(x)\)</span> is adjacent in <span class="math inline">\(\Gamma\)</span> to exactly
 <span class="math display">\[\begin{align}
-p^i_{1,i+1} &amp; \neq 0  \quad \text{vertices in }\; R_{i}(x),\\
-p^i_{1i} &amp; \qquad \text{vertices in }\; R_{i+1}(x),\\
+p^i_{1,i+1} &amp; \neq 0  \quad \text{vertices in }\; R_{i+1}(x),\\
+p^i_{1i} &amp; \qquad \text{vertices in }\; R_{i}(x),\\
 p^i_{1,i-1} &amp; \neq 0 \quad \text{vertices in }\; R_{i-1}(x).
 \end{align}\]</span>
 Hence, by induction,
