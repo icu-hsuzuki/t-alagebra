@@ -7,7 +7,7 @@ Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme.
 | $(i)$ $p_0(i) = 1$.
 
 | $(ii)$ $p_i(0) = k_i$, where 
-$$k_i = p^0_{ii'} = |\{y\in X\mid (x,y)\in R_i\}|.$$
+$$k_i = p^0_{ii'} = |\{y\in X\mid (x,y)\in R_i\}| \quad (x\in X).$$
 
 | $(iii)$ $q_0(i) = 1$.
 
@@ -51,7 +51,7 @@ With the above notation
 
 | $(i)$ $p^h_{ij} = p^{h'}_{j'i'}$.
 
-| $(ii)$ $k_hp^h_{ij} = k_jp^j_{i'h} = k^i_{hj'}$.
+| $(ii)$ $k_hp^h_{ij} = k_jp^j_{i'h} = k_ip^i_{hj'}$.
 
 | $(iii)$ $q^h_{ij} = q^{\hat{h}}_{\hat{j}\hat{i}}$.
 
@@ -61,7 +61,7 @@ With the above notation
 :::{.proof}
 | $(i)$ We have
 \begin{align}
-\sum_{h = 0}^D p^h_{ij} A_{h'} & \left(\sum_{h=0}^D p^h_{ij}A_h\right)^\top \\
+\sum_{h = 0}^D p^h_{ij} A_{h'} & = \left(\sum_{h=0}^D p^h_{ij}A_h\right)^\top \\
  & = (A_iA_j)^\top  \\
 & = A_j^\top A_i^\top\\
 & = A_{j'}A_{i'} \\
@@ -102,7 +102,7 @@ Hence, we have $(iv)$.
 :::
 
 :::{.lemma #vanishing-condition}
-Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme. Fix a vertex $x\in X$, and set $E^*\equiv E^*_i(x)$ and $A^*_i \equiv A^*(x)$.
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme. Fix a vertex $x\in X$, and set $E^*_i\equiv E^*_i(x)$ and $A^*_i \equiv A^*(x)$.
 Then the following hold.
 
 | $(i)$ $E^*_iA_jE^*_k = O$ if and only if $p^k_{ij} = 0$ for $0\leq i,j,k\leq D$.

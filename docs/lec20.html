@@ -174,7 +174,7 @@ div.csl-indent {
 <p><span id="lem:pij-qij" class="lemma"><strong>Lemma 20.1  </strong></span>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> be a commutative scheme.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(p_0(i) = 1\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(p_i(0) = k_i\)</span>, where</div>
-<p><span class="math display">\[k_i = p^0_{ii&#39;} = |\{y\in X\mid (x,y)\in R_i\}|.\]</span></p>
+<p><span class="math display">\[k_i = p^0_{ii&#39;} = |\{y\in X\mid (x,y)\in R_i\}| \quad (x\in X).\]</span></p>
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(q_0(i) = 1\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(q_i(0) = m_i\)</span>, where</div>
 <p><span class="math display">\[m_i = \mathrm{rank} E_i.\]</span></p>
@@ -209,7 +209,7 @@ Hence, we have all formulas.</p>
 <div class="lemma">
 <p><span id="lem:phijqhij" class="lemma"><strong>Lemma 20.2  </strong></span>With the above notation</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(p^h_{ij} = p^{h&#39;}_{j&#39;i&#39;}\)</span>.</div>
-<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(k_hp^h_{ij} = k_jp^j_{i&#39;h} = k^i_{hj&#39;}\)</span>.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(k_hp^h_{ij} = k_jp^j_{i&#39;h} = k_ip^i_{hj&#39;}\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(q^h_{ij} = q^{\hat{h}}_{\hat{j}\hat{i}}\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(m_hq^h_{ij} = m_jq^j_{\hat{i}h} = m_iq^i_{h\hat{j}}.\)</span></div>
 </div>
@@ -217,7 +217,7 @@ Hence, we have all formulas.</p>
 <p><span id="unlabeled-div-45" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> We have</div>
 <p><span class="math display">\[\begin{align}
-\sum_{h = 0}^D p^h_{ij} A_{h&#39;} &amp; \left(\sum_{h=0}^D p^h_{ij}A_h\right)^\top \\
+\sum_{h = 0}^D p^h_{ij} A_{h&#39;} &amp; = \left(\sum_{h=0}^D p^h_{ij}A_h\right)^\top \\
 &amp; = (A_iA_j)^\top  \\
 &amp; = A_j^\top A_i^\top\\
 &amp; = A_{j&#39;}A_{i&#39;} \\
@@ -252,7 +252,7 @@ Compute each one.
 Hence, we have <span class="math inline">\((iv)\)</span>.</p>
 </div>
 <div class="lemma">
-<p><span id="lem:vanishing-condition" class="lemma"><strong>Lemma 20.3  </strong></span>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> be a commutative scheme. Fix a vertex <span class="math inline">\(x\in X\)</span>, and set <span class="math inline">\(E^*\equiv E^*_i(x)\)</span> and <span class="math inline">\(A^*_i \equiv A^*(x)\)</span>.
+<p><span id="lem:vanishing-condition" class="lemma"><strong>Lemma 20.3  </strong></span>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> be a commutative scheme. Fix a vertex <span class="math inline">\(x\in X\)</span>, and set <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span> and <span class="math inline">\(A^*_i \equiv A^*(x)\)</span>.
 Then the following hold.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E^*_iA_jE^*_k = O\)</span> if and only if <span class="math inline">\(p^k_{ij} = 0\)</span> for <span class="math inline">\(0\leq i,j,k\leq D\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(E_iA^*_jE_k = O\)</span> if and only if <span class="math inline">\(q^k_{ij} = 0\)</span> for <span class="math inline">\(0\leq i,j,k\leq D\)</span>.</div>
