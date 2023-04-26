@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-04-25" />
+<meta name="date" content="2023-04-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -225,17 +225,17 @@ Since <span class="math inline">\(E_0,\ldots, E_r\)</span> are linearly independ
 <span class="math inline">\(\sigma_i\neq \sigma_j\)</span> implies that there exists <span class="math inline">\(m&#39;\in M\)</span> such that <span class="math inline">\(\sigma_i(m&#39;)\neq \sigma_j(m&#39;)\)</span>.</p>
 <p>Set <span class="math inline">\(m = m&#39;-\sigma_j(m&#39;)I\)</span>. Then,
 <span class="math display">\[\begin{align}
-\sigma_j(m) &amp; \sigma_j(m&#39;) - \sigma_j(m&#39;) &amp; = 0,\\
-\sigma_i(m) &amp; \sigma_i(m&#39;) - \sigma_j(m&#39;) &amp; \neq 0.
+\sigma_j(m) &amp; = \sigma_j(m&#39;) - \sigma_j(m&#39;)  = 0,\\
+\sigma_i(m) &amp; = \sigma_i(m&#39;) - \sigma_j(m&#39;)  \neq 0.
 \end{align}\]</span></p>
 <p>Claim 2. <span class="math inline">\(E_i\in M\)</span> <span class="math inline">\(\quad (0\leq i \leq D)\)</span>.</p>
 <p><em>Pf of Claim 2.</em>
 Fix a vertex <span class="math inline">\(x\in X\)</span>. For all <span class="math inline">\(j\neq i\)</span>, there exists <span class="math inline">\(m_j\in M\)</span> such that
-<span class="math inline">\(\sigma_i(m_j)\neq 0, \quad \sigma_j(m_j) = 0, \quad i\neq j.\)</span>$
+<span class="math display">\[\sigma_i(m_j)\neq 0, \quad \sigma_j(m_j) = 0, \quad i\neq j.\]</span>
 Observe
 <span class="math display">\[s = \sigma_i\left(\prod_{\ell\neq i}m_\ell\right) \neq 0.\]</span>
 Set
-<span class="math display">\[m^* = \sigma_i\left(\prod_{\ell\neq i}m_\ell\right) s^{-1}.\]</span>
+<span class="math display">\[m^* = \left(\prod_{\ell\neq i}m_\ell\right) s^{-1}.\]</span>
 Observe
 <span class="math display">\[\sigma_i(m^*) =1, \quad \sigma_j(m^*) = 0, \quad \text{for all }j\neq i \quad (0\leq j\leq D).\]</span>
 So
@@ -301,7 +301,7 @@ Then,
 <span class="math display">\[E^*_0 + \cdots + E^*_D = I,\]</span>
 <span class="math display">\[(E^*_i)^\top = \overline{E^*_i} = E^*_i.\]</span></p>
 <div class="definition">
-<p><span id="def:dual-bose-mesner" class="definition"><strong>Definition 19.1  </strong></span>Dual Bose-Mesner algebra <span class="math inline">\(M^* \equiv M^*(x)\)</span> with respect to <span class="math inline">\(x\)</span> is
+<p><span id="def:dual-bose-mesner" class="definition"><strong>Definition 19.1  </strong></span>Dual Bose-Mesner algebra : <span class="math inline">\(M^* \equiv M^*(x)\)</span> with respect to <span class="math inline">\(x\)</span> is
 <span class="math display">\[\mathrm{Span}(E^*_0, \ldots, E^*_D).\]</span></p>
 </div>
 <p>Define dual associate matrices <span class="math inline">\(A_0^*, \ldots, A^*_D\)</span>.

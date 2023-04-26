@@ -74,19 +74,19 @@ $\sigma_i\neq \sigma_j$ implies that there exists $m'\in M$ such that $\sigma_i(
 
 Set $m = m'-\sigma_j(m')I$. Then,
 \begin{align}
-\sigma_j(m) & \sigma_j(m') - \sigma_j(m') & = 0,\\
-\sigma_i(m) & \sigma_i(m') - \sigma_j(m') & \neq 0.
+\sigma_j(m) & = \sigma_j(m') - \sigma_j(m')  = 0,\\
+\sigma_i(m) & = \sigma_i(m') - \sigma_j(m')  \neq 0.
 \end{align}
 
 Claim 2. $E_i\in M$ $\quad (0\leq i \leq D)$.
 
 _Pf of Claim 2._
 Fix a vertex $x\in X$. For all $j\neq i$, there exists $m_j\in M$ such that
-$\sigma_i(m_j)\neq 0, \quad \sigma_j(m_j) = 0, \quad i\neq j.$$
+$$\sigma_i(m_j)\neq 0, \quad \sigma_j(m_j) = 0, \quad i\neq j.$$
 Observe 
 $$s = \sigma_i\left(\prod_{\ell\neq i}m_\ell\right) \neq 0.$$
 Set 
-$$m^* = \sigma_i\left(\prod_{\ell\neq i}m_\ell\right) s^{-1}.$$
+$$m^* = \left(\prod_{\ell\neq i}m_\ell\right) s^{-1}.$$
 Observe
 $$\sigma_i(m^*) =1, \quad \sigma_j(m^*) = 0, \quad \text{for all }j\neq i \quad (0\leq j\leq D).$$
 So
@@ -163,7 +163,7 @@ $$E^*_0 + \cdots + E^*_D = I,$$
 $$(E^*_i)^\top = \overline{E^*_i} = E^*_i.$$
 
 :::{.definition #dual-bose-mesner}
-Dual Bose-Mesner algebra \index{dual Bose-Mesner algebra} $M^* \equiv M^*(x)$ with respect to $x$ is 
+Dual Bose-Mesner algebra \index{dual Bose-Mesner algebra}: $M^* \equiv M^*(x)$ with respect to $x$ is 
 $$\mathrm{Span}(E^*_0, \ldots, E^*_D).$$
 :::
 

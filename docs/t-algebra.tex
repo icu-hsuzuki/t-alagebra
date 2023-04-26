@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2023-04-25}
+\date{2023-04-26}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -4138,19 +4138,19 @@ Claim 1. For all distinct \(i, j\) \(\quad (0\leq i, j\leq D)\), there exists \(
 
 Set \(m = m'-\sigma_j(m')I\). Then,
 \begin{align}
-\sigma_j(m) & \sigma_j(m') - \sigma_j(m') & = 0,\\
-\sigma_i(m) & \sigma_i(m') - \sigma_j(m') & \neq 0.
+\sigma_j(m) & = \sigma_j(m') - \sigma_j(m')  = 0,\\
+\sigma_i(m) & = \sigma_i(m') - \sigma_j(m')  \neq 0.
 \end{align}
 
 Claim 2. \(E_i\in M\) \(\quad (0\leq i \leq D)\).
 
 \emph{Pf of Claim 2.}
 Fix a vertex \(x\in X\). For all \(j\neq i\), there exists \(m_j\in M\) such that
-\(\sigma_i(m_j)\neq 0, \quad \sigma_j(m_j) = 0, \quad i\neq j.\)\$
+\[\sigma_i(m_j)\neq 0, \quad \sigma_j(m_j) = 0, \quad i\neq j.\]
 Observe
 \[s = \sigma_i\left(\prod_{\ell\neq i}m_\ell\right) \neq 0.\]
 Set
-\[m^* = \sigma_i\left(\prod_{\ell\neq i}m_\ell\right) s^{-1}.\]
+\[m^* = \left(\prod_{\ell\neq i}m_\ell\right) s^{-1}.\]
 Observe
 \[\sigma_i(m^*) =1, \quad \sigma_j(m^*) = 0, \quad \text{for all }j\neq i \quad (0\leq j\leq D).\]
 So
@@ -4227,7 +4227,7 @@ Then,
 \[(E^*_i)^\top = \overline{E^*_i} = E^*_i.\]
 
 \begin{definition}
-\protect\hypertarget{def:dual-bose-mesner}{}\label{def:dual-bose-mesner}Dual Bose-Mesner algebra \index{dual Bose-Mesner algebra} \(M^* \equiv M^*(x)\) with respect to \(x\) is
+\protect\hypertarget{def:dual-bose-mesner}{}\label{def:dual-bose-mesner}Dual Bose-Mesner algebra \index{dual Bose-Mesner algebra}: \(M^* \equiv M^*(x)\) with respect to \(x\) is
 \[\mathrm{Span}(E^*_0, \ldots, E^*_D).\]
 \end{definition}
 
