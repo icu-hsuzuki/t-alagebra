@@ -4693,10 +4693,11 @@ Let \(Y = (X, \{R_i\}_{0\leq i\leq D})\) be a commutative scheme.
 
 \((v)\) Pick \(x,y\in X\) with \((x,y)\in R_h\). Then,
 
-\sum\emph{\{j=0\}\^{}D p\^{}h}\{ij\} \& = \textbar\{z\in X\mid (x,z)\in R\_i, ; (z,y)\in R\_j ; \text{for some $j$}\}\textbackslash{}
-\& = \textbar\{z\in X\mid (x,z)\in R\_i\}\textbar\textbackslash{}
-\& k\_i.
-\textbackslash end\{align\}
+\begin{align}
+\sum_{j=0}^D p^h_{ij} & = |\{z\in X\mid (x,z)\in R_i, \; (z,y)\in R_j \; \text{for some $j$}\}|\\
+& = |\{z\in X\mid (x,z)\in R_i\}|\\
+& = k_i.
+\end{align}
 
 \((vi)\)
 
@@ -4718,7 +4719,7 @@ This proves the assertions.
 \protect\hypertarget{def:q-polynomial}{}\label{def:q-polynomial}Let \(Y = (X, \{R_i\}_{0\leq i\leq D})\) be a commutative scheme.
 
 \(Y\) is \(Q\)-polynomial \index{$Q$-polynomial} with respect to ordering \(E_0, E_1, \ldots, E_D\) of primitive idempotents, if
-\[q^h_{ij} \begin{cases} = 0 & \text{if one of $h, i, j$ is greater than the sum of the other two}\\
+\[q^h_{ij} \begin{cases} = 0 & \text{if one of $h, i, j$ is greater than the sum of the other two,}\\
 \neq 0 & \text{if one of $h,i,j$ is equal to the sum of the other two.}\end{cases}\]
 In this case, set
 \[c^*_i = q^i_{1,i-1}, \; a^*_i = q^i_{1,i}, \; b^*_i = q^i_{1,i+1} \quad (0\leq i\leq D), \;(c^*_0= b^*_D = 0).\]
@@ -4733,7 +4734,7 @@ This is a contradiction.
 
 Hence, \({E_i}^\top = E_{\hat{i}} = E_i\) for all \(i\).
 
-Therefore \(M\) is symmetric and \(Y\) is symmetric.
+Therefore, \(M\) is symmetric and \(Y\) is symmetric.
 
 Observe: If \(Y\) is \(Q\)-polynomial,
 \[c^*_i + a^*_i + b^*_i = m_1 \quad (0\leq i\leq D)\]
@@ -4771,7 +4772,7 @@ and \(q^i_{10} = q^i_{11} = 0\), \(q^i_{1,i-1} = c^*_i\), \(q^i_{1i} = a^*_i\), 
 \((ii)\to(iii)\) \(A^*_0 = I\),
 
 \begin{align}
-A^*_iA^*_j & = \sum_{h=0}^D q^h_{ij} A^*_h\\
+A^*_iA^*_j & = \sum_{h=0}^D q^h_{ij} A^*_h,\\
 A^*_1A^*_j & = q^{j-1}_{1j}A^*_{j-1} + q^j_{1j}A^*_j + q^{j+1}_{1j}A^*_{j+1} && (q^{j+1}_{1j}\neq 0, 1\leq j\leq D-1).
 \end{align}
 Hence \(A^*_j\) is a polynomial of degree exactly \(j\) in \(A^*_1\) by induction on \(j\).
@@ -4806,7 +4807,7 @@ Also, \(|i-j|>1\) implies \(q^j_{11} = 0\).
 
 Thus, \(E_iA^*_1E_j = 0\) by Lemma \ref{lem:vanishing-condition} \((ii)\).
 
-\((iv)\to (ii)\) \(q^i_{1j} = 0\) if \(|i-j| > 1\). since in this case,
+\((iv)\to (ii)\) \(q^i_{1j} = 0\) if \(|i-j| > 1\), since in this case,
 
 \(E_iA^*_1E_j = O\) implies \(q^i_{1j} = 0\) by Lemma \ref{lem:vanishing-condition} \((ii)\).
 
@@ -4817,7 +4818,7 @@ Without loss of generalith, choose \(j\) minimum. Then
 \[A^*_1A^*_j - q^{j-1}_{1j}A^*_{j-1} - q^j_{1j}A^*_j = O.\]
 the left hand side is a polynomial in \(A^*_1\) of degree \(j+1\).
 
-Hence, the minimal polynomial of \(A^*_1\) has degree less than or equal to \(j+1 \leq D\). But \%A\^{}*\_1\$ has \(D+1\) distince eigenvalues.
+Hence, the minimal polynomial of \(A^*_1\) has degree less than or equal to \(j+1 \leq D\). But \(A^*_1\) has \(D+1\) distince eigenvalues.
 
 This is a contradiction.
 

@@ -195,10 +195,11 @@ div.csl-indent {
 &amp; = |X|^{-1}\delta_{i\hat{j}}m_i.
 \end{align}\]</span></p>
 <div class="line-block"><span class="math inline">\((v)\)</span> Pick <span class="math inline">\(x,y\in X\)</span> with <span class="math inline">\((x,y)\in R_h\)</span>. Then,</div>
-<p><em>{j=0}^D p^h</em>{ij} &amp; = |{zX(x,z)R_i, ; (z,y)R_j ; }\
-&amp; = |{zX(x,z)R_i}|\
-&amp; k_i.
-\end{align}</p>
+<p><span class="math display">\[\begin{align}
+\sum_{j=0}^D p^h_{ij} &amp; = |\{z\in X\mid (x,z)\in R_i, \; (z,y)\in R_j \; \text{for some $j$}\}|\\
+&amp; = |\{z\in X\mid (x,z)\in R_i\}|\\
+&amp; = k_i.
+\end{align}\]</span></p>
 <div class="line-block"><span class="math inline">\((vi)\)</span></div>
 <p><span class="math display">\[E_i \circ E_j = |X|^{-1}\sum_{h=0}^D q^h_{ij}E_h.\]</span>
 So,
@@ -215,7 +216,7 @@ This proves the assertions.</p>
 <div class="definition">
 <p><span id="def:q-polynomial" class="definition"><strong>Definition 22.1  </strong></span>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span> be a commutative scheme.</p>
 <p><span class="math inline">\(Y\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to ordering <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span> of primitive idempotents, if
-<span class="math display">\[q^h_{ij} \begin{cases} = 0 &amp; \text{if one of $h, i, j$ is greater than the sum of the other two}\\
+<span class="math display">\[q^h_{ij} \begin{cases} = 0 &amp; \text{if one of $h, i, j$ is greater than the sum of the other two,}\\
 \neq 0 &amp; \text{if one of $h,i,j$ is equal to the sum of the other two.}\end{cases}\]</span>
 In this case, set
 <span class="math display">\[c^*_i = q^i_{1,i-1}, \; a^*_i = q^i_{1,i}, \; b^*_i = q^i_{1,i+1} \quad (0\leq i\leq D), \;(c^*_0= b^*_D = 0).\]</span></p>
@@ -226,7 +227,7 @@ In this case, set
 by Lemma <a href="lec22.html#lem:phijqhij2">22.1</a> <span class="math inline">\((iv)\)</span>.
 This is a contradiction.</p>
 <p>Hence, <span class="math inline">\({E_i}^\top = E_{\hat{i}} = E_i\)</span> for all <span class="math inline">\(i\)</span>.</p>
-<p>Therefore <span class="math inline">\(M\)</span> is symmetric and <span class="math inline">\(Y\)</span> is symmetric.</p>
+<p>Therefore, <span class="math inline">\(M\)</span> is symmetric and <span class="math inline">\(Y\)</span> is symmetric.</p>
 <p>Observe: If <span class="math inline">\(Y\)</span> is <span class="math inline">\(Q\)</span>-polynomial,
 <span class="math display">\[c^*_i + a^*_i + b^*_i = m_1 \quad (0\leq i\leq D)\]</span>
 (just as <span class="math inline">\(c_i + a_i + b_i = k\)</span> for <span class="math inline">\(P\)</span>-polynomial.)</p>
@@ -250,7 +251,7 @@ and <span class="math inline">\(q^i_{10} = q^i_{11} = 0\)</span>, <span class="m
 <div class="line-block"><span class="math inline">\((i)\to (ii)\)</span> Clear.</div>
 <div class="line-block"><span class="math inline">\((ii)\to(iii)\)</span> <span class="math inline">\(A^*_0 = I\)</span>,</div>
 <p><span class="math display">\[\begin{align}
-A^*_iA^*_j &amp; = \sum_{h=0}^D q^h_{ij} A^*_h\\
+A^*_iA^*_j &amp; = \sum_{h=0}^D q^h_{ij} A^*_h,\\
 A^*_1A^*_j &amp; = q^{j-1}_{1j}A^*_{j-1} + q^j_{1j}A^*_j + q^{j+1}_{1j}A^*_{j+1} &amp;&amp; (q^{j+1}_{1j}\neq 0, 1\leq j\leq D-1).
 \end{align}\]</span>
 Hence <span class="math inline">\(A^*_j\)</span> is a polynomial of degree exactly <span class="math inline">\(j\)</span> in <span class="math inline">\(A^*_1\)</span> by induction on <span class="math inline">\(j\)</span>.
@@ -277,14 +278,14 @@ Each <span class="math inline">\(A^*_i\)</span> is a polynomial in <span class="
 <p>So, <span class="math inline">\(E^*_0V, \ldots, E^*_DV\)</span> are maximal eigenspaces.</p>
 <p>Also, <span class="math inline">\(|i-j|&gt;1\)</span> implies <span class="math inline">\(q^j_{11} = 0\)</span>.</p>
 <p>Thus, <span class="math inline">\(E_iA^*_1E_j = 0\)</span> by Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a> <span class="math inline">\((ii)\)</span>.</p>
-<div class="line-block"><span class="math inline">\((iv)\to (ii)\)</span> <span class="math inline">\(q^i_{1j} = 0\)</span> if <span class="math inline">\(|i-j| &gt; 1\)</span>. since in this case,</div>
+<div class="line-block"><span class="math inline">\((iv)\to (ii)\)</span> <span class="math inline">\(q^i_{1j} = 0\)</span> if <span class="math inline">\(|i-j| &gt; 1\)</span>, since in this case,</div>
 <p><span class="math inline">\(E_iA^*_1E_j = O\)</span> implies <span class="math inline">\(q^i_{1j} = 0\)</span> by Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a> <span class="math inline">\((ii)\)</span>.</p>
 <p>Suppose <span class="math inline">\(q^{j+1}_{1j} = 0\)</span> for some <span class="math inline">\(j\)</span> <span class="math inline">\((0\leq j\leq D-1)\)</span>.</p>
 <p>Without loss of generalith, choose <span class="math inline">\(j\)</span> minimum. Then
 <span class="math inline">\(A^*_h\)</span> is a polynomial of degree <span class="math inline">\(h\)</span> in <span class="math inline">\(A^*_1\)</span> <span class="math inline">\((0\leq h\leq j)\)</span>, and
 <span class="math display">\[A^*_1A^*_j - q^{j-1}_{1j}A^*_{j-1} - q^j_{1j}A^*_j = O.\]</span>
 the left hand side is a polynomial in <span class="math inline">\(A^*_1\)</span> of degree <span class="math inline">\(j+1\)</span>.</p>
-<p>Hence, the minimal polynomial of <span class="math inline">\(A^*_1\)</span> has degree less than or equal to <span class="math inline">\(j+1 \leq D\)</span>. But %A^*_1$ has <span class="math inline">\(D+1\)</span> distince eigenvalues.</p>
+<p>Hence, the minimal polynomial of <span class="math inline">\(A^*_1\)</span> has degree less than or equal to <span class="math inline">\(j+1 \leq D\)</span>. But <span class="math inline">\(A^*_1\)</span> has <span class="math inline">\(D+1\)</span> distince eigenvalues.</p>
 <p>This is a contradiction.</p>
 </div>
 
