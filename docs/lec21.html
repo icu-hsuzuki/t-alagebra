@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-04-26" />
+<meta name="date" content="2023-05-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -179,14 +179,14 @@ Pick a vertex <span class="math inline">\(z\in X\)</span> and compare <span clas
 (A^*_j(x)v)_z &amp; = (A^*_j(x))_{zz}v_z = |X|(E_j)_{xz}\alpha_z.\\
 |X|(E_{\hat{j}}\hat{x}\circ v)_z &amp; = |X|(E_{\hat{j}}\hat{x})_z\cdot \alpha_z  = |X|(E_j)_{xz}\alpha_z.
 \end{align}\]</span>
-Note that <span class="math inline">\(E_{\hat{j}}\hat{x}\)</span> is the column <span class="math inline">\(x\)</span> of <span class="math inline">\(E_{\hat{j}}\)</span> is the row <span class="math inline">\(x\)</span> of <span class="math inline">\(E_j\)</span>.</p>
+Note that <span class="math inline">\(E_{\hat{j}}\hat{x}\)</span> is the column <span class="math inline">\(x\)</span> of <span class="math inline">\(E_{\hat{j}}\)</span>, which is the row <span class="math inline">\(x\)</span> of <span class="math inline">\(E_j\)</span>.</p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> Fix <span class="math inline">\(i, j, h\)</span> such that <span class="math inline">\(q^h_{ij} = 0\)</span>.</div>
 <p>Claim. <span class="math inline">\(E_h(E_iV \circ E_jV) = 0\)</span>.</p>
 <p><span class="math display">\[\begin{align}
 E_h(E_iV \circ E_jV) &amp; = E_h(\mathrm{Span}(v\circ w\mid v\in E_iV, w\in E_jV))\\
 &amp; = E_h(\mathrm{Span}(E_i\hat{y}\circ E_j\hat{z}\mid y,z\in X))\\
 &amp; = \mathrm{Span}(E_h(E_j\hat{z}\circ E_i\hat{y}\mid y,z\in X)\\
-&amp; = \mathrm{Span}((E_hA^*_{\hat{j}}(z)E_i)\hat{y}\mid y,z\in X) &amp;&amp; \text{by $(i)$}
+&amp; = \mathrm{Span}((E_hA^*_{\hat{j}}(z)E_i)\hat{y}\mid y,z\in X) &amp;&amp; \text{by $(i)$.}
 \end{align}\]</span>
 But <span class="math inline">\(q^h_{ij} = 0\)</span> implies <span class="math inline">\(q^{\hat{h}}_{\hat{j}\hat{i}} = 0\)</span>.</p>
 <p>So, by Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a> <span class="math inline">\((ii)\)</span>,
@@ -213,7 +213,7 @@ This proves the assertion.</p>
 </div>
 <div class="lemma">
 <p><span id="lem:norton-algebra" class="lemma"><strong>Lemma 21.1  </strong></span>Given a commutative scheme <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq D})\)</span>, fix <span class="math inline">\(j\)</span> <span class="math inline">\((0\leq j\leq D)\)</span>.
-Define binary multiplication:
+Define a binary multiplication:
 <span class="math display">\[E_jV \times E_jV \longrightarrow E_jV \quad ((v,w) \mapsto v\ast w = E_j(v\circ w)).\]</span>
 Then,</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(v\ast w = w\ast v\)</span>, for all <span class="math inline">\(v,w\in E_jV\)</span>,</div>
@@ -234,7 +234,7 @@ Let
 \mathrm{Aut}Y &amp; = \{\sigma\in \mathrm{Mat}_X(\mathbb{C}) \mid \sigma: \text{ permutation matrix }, \sigma \cdot m = m\cdot \sigma \;\text{ for all }m\in M\}\\
 &amp; = \{\sigma\in \mathrm{Mat}_X(\mathbb{C}) \mid \sigma: \text{ permutation matrix },\\
 &amp; \qquad (x,y)\in R_i \to (\sigma x, \sigma y)\in R_i, \text{ for all } i, \text{ and for all } x,y\in X\}\\
-\mathrm{Aut}(N_j) &amp; = \{\sigma: E_jV \to E_jV \mid \sigma \text{ is $\mathbb{C}$-algebra isomorphims},i.e.,\\
+\mathrm{Aut}(N_j) &amp; = \{\sigma: E_jV \to E_jV \mid \sigma \text{ is a  $\mathbb{C}$-algebra isomorphim},i.e.,\\
 &amp; \qquad \sigma(v\ast w) = \sigma(v)\ast\sigma(w) \text{ for all }v, w\in E_jV\}.
 \end{align}\]</span></p>
 <div class="lemma">
@@ -253,14 +253,14 @@ since <span class="math inline">\(\sigma\)</span> commutes with each element of 
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\sigma|_{E_jV}: E_jV \to E_jV\)</span> is an isomorphism of a vector space. Since <span class="math inline">\(\sigma\)</span> is invertible,for all <span class="math inline">\(v,w\in E_jV\)</span>,</div>
 <p><span class="math display">\[\sigma(v\ast w) = \sigma(E_j(E_jv\circ E_jw)) = E_j\sigma(E_jv\circ E_jw) = E_j(E_j\sigma v\circ E_j\sigma w) = \sigma(v)\ast \sigma(w).\]</span></p>
 <div class="line-block"><span class="math inline">\((iii)\)</span> Immediate from <span class="math inline">\((i)\)</span> and <span class="math inline">\((ii)\)</span>.</div>
-<div class="line-block"><span class="math inline">\((iv)\)</span> Here Bose-Mesner algebra <span class="math inline">\(M\)</span> is the full commuting algebra, i.e.,</div>
+<div class="line-block"><span class="math inline">\((iv)\)</span> Here, Bose-Mesner algebra <span class="math inline">\(M\)</span> is the full commuting algebra, i.e.,</div>
 <p><span class="math display">\[M = \{m\in \mathrm{Mat}_X(\mathbb{C})\mid \sigma\cdot m = m\cdot \sigma, \text{ for all }\sigma\in \mathrm{Aut}(Y)\}.\]</span>
 Suppose there sia a nonzero proper subspace <span class="math inline">\(0\neq W\subsetneq E_jV\)</span> that is <span class="math inline">\(\mathrm{Aut}(Y)\)</span>-invariant.</p>
 <p>Set
 <span class="math display">\[W^\bot = \{v\in E_jV\mid \langle w, v\rangle = 0, \text{ for all }w\in W\}.\]</span>
 Then, <span class="math inline">\(W^\bot\)</span> is a module for <span class="math inline">\(\mathrm{Aut}(Y)\)</span>, since <span class="math inline">\(\mathrm{Aut}(Y)\)</span> is closed under transpose conjugate.</p>
-<p>Let <span class="math inline">\(e: V\to W\)</span> and <span class="math inline">\(f: V\to W^\bot\)</span> be orthogonal projection such that <span class="math inline">\(e + f = E_j\)</span>,
-<span class="math display">\[e^e = e, f^e = f, ef = fe = 0, eE_h = 0, \text{ if } h\neq j.\]</span></p>
+<p>Let <span class="math inline">\(e: V\to W\)</span> and <span class="math inline">\(f: V\to W^\bot\)</span> be the orthogonal projection such that <span class="math inline">\(e + f = E_j\)</span>,
+<span class="math display">\[e^2 = e, f^2 = f, ef = fe = 0, eE_h = 0, \text{ if } h\neq j.\]</span></p>
 <p>Since <span class="math inline">\(e\)</span> commutes with all <span class="math inline">\(\sigma\in \mathrm{Aut}(Y)\)</span>, <span class="math inline">\(e\in M\)</span> and
 <span class="math display">\[e = \sum_{i=0}^D \alpha_i E_i.\]</span>
 If <span class="math inline">\(h\neq j\)</span>, then <span class="math inline">\(0 = eE_h\)</span> and <span class="math inline">\(\alpha_h = 0\)</span>. Thus, <span class="math inline">\(e = \alpha_jE_j\)</span>, i.e.,

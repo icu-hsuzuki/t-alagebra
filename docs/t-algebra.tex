@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2023-04-26}
+\date{2023-05-01}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -4498,7 +4498,7 @@ Pick a vertex \(z\in X\) and compare \(z\)-coordinate of each side in \((i)\).
 (A^*_j(x)v)_z & = (A^*_j(x))_{zz}v_z = |X|(E_j)_{xz}\alpha_z.\\
 |X|(E_{\hat{j}}\hat{x}\circ v)_z & = |X|(E_{\hat{j}}\hat{x})_z\cdot \alpha_z  = |X|(E_j)_{xz}\alpha_z.
 \end{align}
-Note that \(E_{\hat{j}}\hat{x}\) is the column \(x\) of \(E_{\hat{j}}\) is the row \(x\) of \(E_j\).
+Note that \(E_{\hat{j}}\hat{x}\) is the column \(x\) of \(E_{\hat{j}}\), which is the row \(x\) of \(E_j\).
 
 \((ii)\) Fix \(i, j, h\) such that \(q^h_{ij} = 0\).
 
@@ -4508,7 +4508,7 @@ Claim. \(E_h(E_iV \circ E_jV) = 0\).
 E_h(E_iV \circ E_jV) & = E_h(\mathrm{Span}(v\circ w\mid v\in E_iV, w\in E_jV))\\
 & = E_h(\mathrm{Span}(E_i\hat{y}\circ E_j\hat{z}\mid y,z\in X))\\
 & = \mathrm{Span}(E_h(E_j\hat{z}\circ E_i\hat{y}\mid y,z\in X)\\
-& = \mathrm{Span}((E_hA^*_{\hat{j}}(z)E_i)\hat{y}\mid y,z\in X) && \text{by $(i)$}
+& = \mathrm{Span}((E_hA^*_{\hat{j}}(z)E_i)\hat{y}\mid y,z\in X) && \text{by $(i)$.}
 \end{align}
 But \(q^h_{ij} = 0\) implies \(q^{\hat{h}}_{\hat{j}\hat{i}} = 0\).
 
@@ -4542,7 +4542,7 @@ This proves the assertion.
 \protect\hypertarget{lem:norton-algebra}{}\label{lem:norton-algebra}
 
 Given a commutative scheme \(Y = (X, \{R_i\}_{0\leq i\leq D})\), fix \(j\) \((0\leq j\leq D)\).
-Define binary multiplication:
+Define a binary multiplication:
 \[E_jV \times E_jV \longrightarrow E_jV \quad ((v,w) \mapsto v\ast w = E_j(v\circ w)).\]
 Then,
 
@@ -4575,7 +4575,7 @@ Let
 \mathrm{Aut}Y & = \{\sigma\in \mathrm{Mat}_X(\mathbb{C}) \mid \sigma: \text{ permutation matrix }, \sigma \cdot m = m\cdot \sigma \;\text{ for all }m\in M\}\\
 & = \{\sigma\in \mathrm{Mat}_X(\mathbb{C}) \mid \sigma: \text{ permutation matrix },\\
 & \qquad (x,y)\in R_i \to (\sigma x, \sigma y)\in R_i, \text{ for all } i, \text{ and for all } x,y\in X\}\\
-\mathrm{Aut}(N_j) & = \{\sigma: E_jV \to E_jV \mid \sigma \text{ is $\mathbb{C}$-algebra isomorphims},i.e.,\\
+\mathrm{Aut}(N_j) & = \{\sigma: E_jV \to E_jV \mid \sigma \text{ is a  $\mathbb{C}$-algebra isomorphim},i.e.,\\
 & \qquad \sigma(v\ast w) = \sigma(v)\ast\sigma(w) \text{ for all }v, w\in E_jV\}.
 \end{align}
 
@@ -4610,7 +4610,7 @@ since \(\sigma\) commutes with each element of \(M\).
 
 \((iii)\) Immediate from \((i)\) and \((ii)\).
 
-\((iv)\) Here Bose-Mesner algebra \(M\) is the full commuting algebra, i.e.,
+\((iv)\) Here, Bose-Mesner algebra \(M\) is the full commuting algebra, i.e.,
 
 \[M = \{m\in \mathrm{Mat}_X(\mathbb{C})\mid \sigma\cdot m = m\cdot \sigma, \text{ for all }\sigma\in \mathrm{Aut}(Y)\}.\]
 Suppose there sia a nonzero proper subspace \(0\neq W\subsetneq E_jV\) that is \(\mathrm{Aut}(Y)\)-invariant.
@@ -4619,8 +4619,8 @@ Set
 \[W^\bot = \{v\in E_jV\mid \langle w, v\rangle = 0, \text{ for all }w\in W\}.\]
 Then, \(W^\bot\) is a module for \(\mathrm{Aut}(Y)\), since \(\mathrm{Aut}(Y)\) is closed under transpose conjugate.
 
-Let \(e: V\to W\) and \(f: V\to W^\bot\) be orthogonal projection such that \(e + f = E_j\),
-\[e^e = e, f^e = f, ef = fe = 0, eE_h = 0, \text{ if } h\neq j.\]
+Let \(e: V\to W\) and \(f: V\to W^\bot\) be the orthogonal projection such that \(e + f = E_j\),
+\[e^2 = e, f^2 = f, ef = fe = 0, eE_h = 0, \text{ if } h\neq j.\]
 
 Since \(e\) commutes with all \(\sigma\in \mathrm{Aut}(Y)\), \(e\in M\) and
 \[e = \sum_{i=0}^D \alpha_i E_i.\]
