@@ -178,7 +178,7 @@ div.csl-indent {
 <p>Let <span class="math inline">\(E:=(\langle \rho(x), \rho(y))_{x,y\in X}\)</span>.</p>
 <p>By <span class="math inline">\(\mathrm{R2}\)</span>,
 <span class="math display">\[E = \sum_{i = 0}^D \sigma_i A_i, \quad \text{some}\; \sigma_0, \sigma_1, \ldots, \sigma_D\in \mathbb{C}.\]</span>
-Hence, <span class="math inline">\(E\)</span> belongs to the Bose-Mesner algebra $M of <span class="math inline">\(Y\)</span>.</p>
+Hence, <span class="math inline">\(E\)</span> belongs to the Bose-Mesner algebra <span class="math inline">\(M\)</span> of <span class="math inline">\(Y\)</span>.</p>
 <p>We want to show that <span class="math inline">\(E\)</span> is a scalar multiple of a primitive idempotent.</p>
 <p>Fix <span class="math inline">\(x\in X\)</span> and fix <span class="math inline">\(i\)</span> <span class="math inline">\((0\leq i\leq D)\)</span>.</p>
 <p>By <span class="math inline">\(\mathrm{R3}\)</span>,
@@ -208,7 +208,7 @@ We have <span class="math inline">\(E\in \mathrm{E_j}\)</span> for unique <span 
 </div>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
-<p><span class="math display">\[E = \tau_0 E_0 + \cdots + \tau)D E_D, \; \tau_j\in \mathbb{C}\quad (0\leq j\leq D).\]</span>
+<p><span class="math display">\[E = \tau_0 E_0 + \cdots + \tau_D E_D, \; \tau_j\in \mathbb{C}\quad (0\leq j\leq D).\]</span>
 And, at least one of <span class="math inline">\(\tau_j\)</span> is nonzero, and
 <span class="math display">\[\tau_jE_j = EE_j \in \mathrm{Span}E.\]</span>
 So,
@@ -227,7 +227,7 @@ as <span class="math inline">\(E_0, \ldots, E_D\)</span> are linearly independen
 <p><span class="math display">\[\sum_{z\in X, (x,z)\in R_i, (y,z)\in R_j}\rho(z) - \sum_{z&#39;\in X, (x,z&#39;)\in R_j, (y,z&#39;)\in R_i}\rho(z&#39;)\in \mathrm{Span}(\rho(x)-\rho(y)).\]</span></p>
 <div class="line-block"><span class="math inline">\(\quad (ic)\)</span> <span class="math inline">\((\rho, H)\)</span> is nondegenerate and for all <span class="math inline">\(x,y\in X\)</span>,</div>
 <p><span class="math display">\[\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z&#39;\in X, (x,z&#39;)\in R_2, (y,z&#39;)\in R_1}\rho(z&#39;)\in \mathrm{Span}(\rho(x)-\rho(y)).\]</span></p>
-<div class="line-block"><span class="math inline">\((ii)\)</span> Wirte</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Write</div>
 <p><span class="math display">\[E = |X|^{-1}\sum_{j=0}^D \theta^*_j A_j,\]</span>
 and suppose <span class="math inline">\((ia)-(ic)\)</span> hold. Then the coefficient in <span class="math inline">\((ib)\)</span> is
 <span class="math display">\[p^h_{ij}\frac{\theta_i^*-\theta_j^*}{\theta^*_0-\theta^*_h} \quad (1\leq h\leq D, 0\leq i,j\leq D).\]</span></p>
@@ -246,7 +246,7 @@ and suppose <span class="math inline">\((ia)-(ic)\)</span> hold. Then the coeffi
 L &amp; = \mathrm{Span}(E_iA^*E_j - E_jA^*E_i \mid 0\leq i&lt;j\leq D)\\
 &amp; = \mathrm{Span}(E_iA^*E_{i+1} - E_{i+1}A^*E_i \mid 0\leq i\leq D-1).
 \end{align}\]</span>
-Since <span class="math inline">\(E_iA^*E_j = O\)</span> if <span class="math inline">\(q^1_{ij} = 0\)</span> by Lemma <a href="lec20.html#lem:phijqhij">20.2</a> and Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a>,
+Since <span class="math inline">\(E_iA^*E_j = 0\)</span> if <span class="math inline">\(q^1_{ij} = 0\)</span> by Lemma <a href="lec20.html#lem:phijqhij">20.2</a> and Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a>,
 and this occurs if <span class="math inline">\(|i-j|&gt;1\)</span> by <span class="math inline">\(Q\)</span>-polynomial property.</p>
 <p>Hence, <span class="math inline">\(\dim L \leq D\)</span>.</p>
 <p>Claim 2. <span class="math inline">\((i)\)</span> <span class="math inline">\(\{A^*A_h - A_hA^*\mid 1\leq h\leq D\}\)</span> is a basis for <span class="math inline">\(L\)</span>. In particular,</p>
@@ -263,8 +263,8 @@ and this occurs if <span class="math inline">\(|i-j|&gt;1\)</span> by <span clas
 <p>They are in <span class="math inline">\(L\)</span> by construction, so they form a basis for <span class="math inline">\(L\)</span> by Claim 1.</p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> This is immediate since</div>
 <p><span class="math display">\[A_iA^*A_j - A_jA^*A_i\in L, \quad \text{for all $i,j$}.\]</span></p>
-<p>Cloim 3.
-<span class="math display">\[r^\ell_{ij} = p^\ell_{ij}\left(\frac{\theta^*-\theta^*_j}{\theta^*_0 - \theta^*_\ell}\right)\quad (1\leq \ell\leq D, 0\leq i,j\leq D).\]</span></p>
+<p>Claim 3.
+<span class="math display">\[r^\ell_{ij} = p^\ell_{ij}\left(\frac{\theta^*_i-\theta^*_j}{\theta^*_0 - \theta^*_\ell}\right)\quad (1\leq \ell\leq D, 0\leq i,j\leq D).\]</span></p>
 <p><em>Proof of Claim 3.</em>
 Fix <span class="math inline">\(i,j\)</span>,
 <span class="math display">\[A_iA^*A_j - A_jA^*A_i - \sum_{h=1}^D r^h_{ij}(A^*A_h - A_hA^*) = 0.\]</span>
@@ -298,11 +298,12 @@ It suffices to show that <span class="math inline">\(L = 0\)</span>.</p>
 <p>Note that since <span class="math inline">\(x\)</span> is arbitrary, if <span class="math inline">\(\mathrm{LHS}\)</span> of <a href="lec24.html#eq:rhozrhoz">(24.2)</a> is zero.
 <span class="math display">\[\begin{align}
 L &amp; = \sum_{z\in X,(w,z)\in R_i, (y,z)\in R_j}\langle \rho(z), \rho(x)\rangle -\sum_{z&#39;\in X, (w,z&#39;)\in R_j, (y,z)\in R_i}\langle\rho(z&#39;),\rho(x)\rangle \\
-&amp; \quad - r^h_{ij}\langle \rho(w)-\rho(y), \rho(x)\rangle\\
+&amp; \qquad - r^h_{ij}\langle \rho(w)-\rho(y), \rho(x)\rangle\\
 &amp; = |X|^{-1}(A_iA^*A_j)_{wy} - |X|^{-1}(A_jA^*A_i)_{wy}-|X|^{-1}\sum_{\ell=1}^Dr^\ell_{ij}(A^*A_\ell - A_\ell A^*)_{wy}\\
 &amp; = |X|^{-1} \text{times $wy$ entry of a matrix known to be zero by Claim 2}\\
 &amp; = 0.
-\end{align}\]</span></p>
+\end{align}\]</span>
+Thus we have the claim.</p>
 </div>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>

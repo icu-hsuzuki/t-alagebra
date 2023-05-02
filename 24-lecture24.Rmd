@@ -13,7 +13,7 @@ Let $E:=(\langle \rho(x), \rho(y))_{x,y\in X}$.
 
 By $\mathrm{R2}$,
 $$E = \sum_{i = 0}^D \sigma_i A_i, \quad \text{some}\; \sigma_0, \sigma_1, \ldots, \sigma_D\in \mathbb{C}.$$
-Hence, $E$ belongs to the Bose-Mesner algebra $M of $Y$.
+Hence, $E$ belongs to the Bose-Mesner algebra $M$ of $Y$.
 
 We want to show that $E$ is a scalar multiple of a primitive idempotent.
 
@@ -51,7 +51,7 @@ We have $E\in \mathrm{E_j}$ for unique $j$ $(0\leq j\leq D)$.
 :::{.hs}
 **HS MEMO**
 
-$$E = \tau_0 E_0 + \cdots + \tau)D E_D, \; \tau_j\in \mathbb{C}\quad (0\leq j\leq D).$$
+$$E = \tau_0 E_0 + \cdots + \tau_D E_D, \; \tau_j\in \mathbb{C}\quad (0\leq j\leq D).$$
 And, at least one of $\tau_j$ is nonzero, and 
 $$\tau_jE_j = EE_j \in \mathrm{Span}E.$$
 So, 
@@ -79,7 +79,7 @@ $$\sum_{z\in X, (x,z)\in R_i, (y,z)\in R_j}\rho(z) - \sum_{z'\in X, (x,z')\in R_
 | $\quad (ic)$ $(\rho, H)$ is nondegenerate and for all $x,y\in X$, 
 $$\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z')\in \mathrm{Span}(\rho(x)-\rho(y)).$$
 
-| $(ii)$ Wirte
+| $(ii)$ Write
 $$E = |X|^{-1}\sum_{j=0}^D \theta^*_j A_j,$$
 and suppose $(ia)-(ic)$ hold. Then the coefficient in $(ib)$ is
 $$p^h_{ij}\frac{\theta_i^*-\theta_j^*}{\theta^*_0-\theta^*_h} \quad (1\leq h\leq D, 0\leq i,j\leq D).$$
@@ -102,7 +102,7 @@ _Proof of Claim 1._
 L & = \mathrm{Span}(E_iA^*E_j - E_jA^*E_i \mid 0\leq i<j\leq D)\\
 & = \mathrm{Span}(E_iA^*E_{i+1} - E_{i+1}A^*E_i \mid 0\leq i\leq D-1).
 \end{align}
-Since $E_iA^*E_j = O$ if $q^1_{ij} = 0$ by Lemma \@ref(lem:phijqhij) and Lemma \@ref(lem:vanishing-condition),
+Since $E_iA^*E_j = 0$ if $q^1_{ij} = 0$ by Lemma \@ref(lem:phijqhij) and Lemma \@ref(lem:vanishing-condition),
 and this occurs if $|i-j|>1$ by $Q$-polynomial property.
 
 Hence, $\dim L \leq D$.
@@ -131,8 +131,8 @@ They are in $L$ by construction, so they form a basis for $L$ by Claim 1.
 | $(ii)$ This is immediate since
 $$A_iA^*A_j - A_jA^*A_i\in L, \quad \text{for all $i,j$}.$$
 
-Cloim 3. 
-$$r^\ell_{ij} = p^\ell_{ij}\left(\frac{\theta^*-\theta^*_j}{\theta^*_0 - \theta^*_\ell}\right)\quad (1\leq \ell\leq D, 0\leq i,j\leq D).$$
+Claim 3. 
+$$r^\ell_{ij} = p^\ell_{ij}\left(\frac{\theta^*_i-\theta^*_j}{\theta^*_0 - \theta^*_\ell}\right)\quad (1\leq \ell\leq D, 0\leq i,j\leq D).$$
 
 _Proof of Claim 3._ 
 Fix $i,j$,
@@ -170,11 +170,12 @@ It suffices to show that $L = 0$.
 Note that since $x$ is arbitrary, if $\mathrm{LHS}$ of \@ref(eq:rhozrhoz) is zero.
 \begin{align}
 L & = \sum_{z\in X,(w,z)\in R_i, (y,z)\in R_j}\langle \rho(z), \rho(x)\rangle -\sum_{z'\in X, (w,z')\in R_j, (y,z)\in R_i}\langle\rho(z'),\rho(x)\rangle \\
-& \quad - r^h_{ij}\langle \rho(w)-\rho(y), \rho(x)\rangle\\
+& \qquad - r^h_{ij}\langle \rho(w)-\rho(y), \rho(x)\rangle\\
 & = |X|^{-1}(A_iA^*A_j)_{wy} - |X|^{-1}(A_jA^*A_i)_{wy}-|X|^{-1}\sum_{\ell=1}^Dr^\ell_{ij}(A^*A_\ell - A_\ell A^*)_{wy}\\
 & = |X|^{-1} \text{times $wy$ entry of a matrix known to be zero by Claim 2}\\
 & = 0.
 \end{align}
+Thus we have the claim.
 :::
 
 :::{.hs}
