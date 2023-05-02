@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2023-05-01}
+\date{2023-05-02}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -4861,7 +4861,7 @@ by Lemma \ref{lem:vector-function-product}.
 Also \(E_0V \subseteq \mathrm{Span}(\delta)\), where \(\delta\) is all 1's vector, i.e., \(1\) as a function \(X\to \mathbb{C}\).
 So,
 \begin{equation}
-E_0\circ E_jV = E_jV \quad (0\leq j\leq D). \label{eq:e0vejv}
+E_0V\circ E_jV = E_jV \quad (0\leq j\leq D). \label{eq:e0vejv}
 \end{equation}
 Show \((ii)\) by induction on \(i\).
 
@@ -4878,7 +4878,7 @@ by \eqref{eq:e1vejv}.
 
 \(\supseteq\).
 
-Claim. \(E_i\subseteq E_1V\circ E_{i-1}V + E_{i-1}V + E_{i-2}V \quad (2\leq i\leq D)\).
+Claim. \(E_iV\subseteq E_1V\circ E_{i-1}V + E_{i-1}V + E_{i-2}V \quad (2\leq i\leq D)\).
 
 \emph{Proof of Claim.} By \eqref{eq:ej1e1vejv},
 \[E_i(E_1V \circ E_{i-1}V) = E_iV.\]
@@ -4897,7 +4897,7 @@ as desired.
 By claim,
 \begin{align}
 & E_0V + E_1V + \cdots + E_iV\\
-& \quad \subseteq E_0V + E_1V + \cdots + E_iV + E_1V\circ E_{i-1}V\\
+& \quad \subseteq E_0V + E_1V + \cdots + E_{i-1}V + E_1V\circ E_{i-1}V\\
 & \quad \subseteq E_0V + E_1V + \cdots + (E_{1}V)^{i-1} + E_1V(E_0V + E_1V + \cdots + (E_{1}V)^{i-1})\\
 & \quad \subseteq E_0V  + E_1V + \cdots + (E_{1}V)^{i-1} + (E_1V)^{i}.
 \end{align}
@@ -4970,8 +4970,8 @@ Restrict
 \[\sum_{y\in X, (y,x)\in R_i}\rho(y)\]
 on the first coordinate. Then,
 \begin{align}
--1 & \quad \text{appers }\; \binom{D-1}{i-1} \;\text{ times}\\
-1 & \quad \text{appers } \;\binom{D-1}{i} \;\text{ times}.
+-1 & \quad \text{appears }\; \binom{D-1}{i-1} \;\text{ times}\\
+1 & \quad \text{appears } \;\binom{D-1}{i} \;\text{ times}.
 \end{align}
 Hence,
 \[\sum_{y\in X, (y,x)\in R_i}\rho(y) = \left(\binom{D-1}{i} - \binom{D-1}{i-1}\right)\rho(x).\]
@@ -5032,7 +5032,7 @@ Let \(E_j\) be any primitive idempotent of \(Y\).
 & = (\overline{E_j\hat{x}})^\top E_j\hat{y}\\
 & = \hat{x}^\top \overline{E_j}^\top E_j\hat{y}\\
 & = \hat{x}^\top E_j \hat{y}\\
-& (E_j)_{xy}.
+& = (E_j)_{xy}.
 \end{align}
 Note that \(\overline{E_j}^\top = E_j\) by Lemma \ref{lem:ei}.
 
@@ -5041,7 +5041,7 @@ Recall
 So,
 \[(E_j)_{xy} = |X|^{-1}q_j(i), \quad \text{ where } \; (x,y)\in R_i.\]
 
-\(\mathrm{R2}\): Recall
+\(\mathrm{R3}\): Recall
 \[A_i = p_i(0)E_0 + \cdots + p_i(D)E_D.\]
 So,
 \(E_jA_i = p_i(j)E_j\), and
@@ -5072,8 +5072,8 @@ So,
 
 \begin{align}
 \|\rho(x)\|^2 & = \langle \rho(x), \rho(y)\rangle\\
-& |X|^{-1}q_j(0)\\
-& |X|^{-1}m_j,
+& = |X|^{-1}q_j(0)\\
+& = |X|^{-1}m_j,
 \end{align}
 as \(m_j = \dim E_jV\), and is independent of \(x\in X\).
 
@@ -5081,7 +5081,7 @@ Pick distinct \(x,y\in X\) such that \((x,y)\in R_i\) with \(i\neq 0\).
 
 Then,
 \begin{align}
-\rho(x) = \rho(y) & \Leftrightarrow \langle \rho(x),\rho(y)\rangle = \|\rho(x)^2\| = |X|^{-1}q_j(0)\\
+\rho(x) = \rho(y) & \Leftrightarrow \langle \rho(x),\rho(y)\rangle = \|\rho(x)\|^2 = |X|^{-1}q_j(0)\\
 & \Leftrightarrow |X|^{-1}q_j(i) = |X|^{-1}q_j(0)\\
 & \Leftrightarrow q_j(i) = q_j(0).
 \end{align}

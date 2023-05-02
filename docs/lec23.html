@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-05-01" />
+<meta name="date" content="2023-05-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -193,7 +193,7 @@ by Lemma <a href="lec20.html#lem:vector-function-product">20.4</a>.</p>
 <p>Also <span class="math inline">\(E_0V \subseteq \mathrm{Span}(\delta)\)</span>, where <span class="math inline">\(\delta\)</span> is all 1’s vector, i.e., <span class="math inline">\(1\)</span> as a function <span class="math inline">\(X\to \mathbb{C}\)</span>.
 So,
 <span class="math display" id="eq:e0vejv">\[\begin{equation}
-E_0\circ E_jV = E_jV \quad (0\leq j\leq D). \tag{23.3}
+E_0V\circ E_jV = E_jV \quad (0\leq j\leq D). \tag{23.3}
 \end{equation}\]</span>
 Show <span class="math inline">\((ii)\)</span> by induction on <span class="math inline">\(i\)</span>.</p>
 <p>The cases <span class="math inline">\(i=0, 1\)</span> are trivial.</p>
@@ -206,7 +206,7 @@ Show <span class="math inline">\((ii)\)</span> by induction on <span class="math
 \end{align}\]</span>
 by <a href="lec23.html#eq:e1vejv">(23.1)</a>.</p>
 <p><span class="math inline">\(\supseteq\)</span>.</p>
-<p>Claim. <span class="math inline">\(E_i\subseteq E_1V\circ E_{i-1}V + E_{i-1}V + E_{i-2}V \quad (2\leq i\leq D)\)</span>.</p>
+<p>Claim. <span class="math inline">\(E_iV\subseteq E_1V\circ E_{i-1}V + E_{i-1}V + E_{i-2}V \quad (2\leq i\leq D)\)</span>.</p>
 <p><em>Proof of Claim.</em> By <a href="lec23.html#eq:ej1e1vejv">(23.2)</a>,
 <span class="math display">\[E_i(E_1V \circ E_{i-1}V) = E_iV.\]</span>
 For all <span class="math inline">\(v\in E_i V\)</span>, there exists <span class="math inline">\(u\in E_1V\circ E_{i-1}V\)</span> such that <span class="math inline">\(E_iu = v\)</span>.</p>
@@ -222,7 +222,7 @@ as desired.</p>
 <p>By claim,
 <span class="math display">\[\begin{align}
 &amp; E_0V + E_1V + \cdots + E_iV\\
-&amp; \quad \subseteq E_0V + E_1V + \cdots + E_iV + E_1V\circ E_{i-1}V\\
+&amp; \quad \subseteq E_0V + E_1V + \cdots + E_{i-1}V + E_1V\circ E_{i-1}V\\
 &amp; \quad \subseteq E_0V + E_1V + \cdots + (E_{1}V)^{i-1} + E_1V(E_0V + E_1V + \cdots + (E_{1}V)^{i-1})\\
 &amp; \quad \subseteq E_0V  + E_1V + \cdots + (E_{1}V)^{i-1} + (E_1V)^{i}.
 \end{align}\]</span></p>
@@ -278,8 +278,8 @@ Restrict
 <span class="math display">\[\sum_{y\in X, (y,x)\in R_i}\rho(y)\]</span>
 on the first coordinate. Then,
 <span class="math display">\[\begin{align}
--1 &amp; \quad \text{appers }\; \binom{D-1}{i-1} \;\text{ times}\\
-1 &amp; \quad \text{appers } \;\binom{D-1}{i} \;\text{ times}.
+-1 &amp; \quad \text{appears }\; \binom{D-1}{i-1} \;\text{ times}\\
+1 &amp; \quad \text{appears } \;\binom{D-1}{i} \;\text{ times}.
 \end{align}\]</span>
 Hence,
 <span class="math display">\[\sum_{y\in X, (y,x)\in R_i}\rho(y) = \left(\binom{D-1}{i} - \binom{D-1}{i-1}\right)\rho(x).\]</span></p>
@@ -320,14 +320,14 @@ since <span class="math inline">\(\langle \;, \;\rangle\)</span> is Hermitean.</
 &amp; = (\overline{E_j\hat{x}})^\top E_j\hat{y}\\
 &amp; = \hat{x}^\top \overline{E_j}^\top E_j\hat{y}\\
 &amp; = \hat{x}^\top E_j \hat{y}\\
-&amp; (E_j)_{xy}.
+&amp; = (E_j)_{xy}.
 \end{align}\]</span>
 Note that <span class="math inline">\(\overline{E_j}^\top = E_j\)</span> by Lemma <a href="lec19.html#lem:ei">19.1</a>.</p>
 <p>Recall
 <span class="math display">\[E_j = |X|^{-1}(q_j(0)A_0 + \cdots + q_j(D)A_D).\]</span>
 So,
 <span class="math display">\[(E_j)_{xy} = |X|^{-1}q_j(i), \quad \text{ where } \; (x,y)\in R_i.\]</span></p>
-<p><span class="math inline">\(\mathrm{R2}\)</span>: Recall
+<p><span class="math inline">\(\mathrm{R3}\)</span>: Recall
 <span class="math display">\[A_i = p_i(0)E_0 + \cdots + p_i(D)E_D.\]</span>
 So,
 <span class="math inline">\(E_jA_i = p_i(j)E_j\)</span>, and
@@ -354,14 +354,14 @@ So,
 <div class="line-block"><span class="math inline">\((iv)\)</span> By <span class="math inline">\((ii)\)</span>,</div>
 <p><span class="math display">\[\begin{align}
 \|\rho(x)\|^2 &amp; = \langle \rho(x), \rho(y)\rangle\\
-&amp; |X|^{-1}q_j(0)\\
-&amp; |X|^{-1}m_j,
+&amp; = |X|^{-1}q_j(0)\\
+&amp; = |X|^{-1}m_j,
 \end{align}\]</span>
 as <span class="math inline">\(m_j = \dim E_jV\)</span>, and is independent of <span class="math inline">\(x\in X\)</span>.</p>
 <p>Pick distinct <span class="math inline">\(x,y\in X\)</span> such that <span class="math inline">\((x,y)\in R_i\)</span> with <span class="math inline">\(i\neq 0\)</span>.</p>
 <p>Then,
 <span class="math display">\[\begin{align}
-\rho(x) = \rho(y) &amp; \Leftrightarrow \langle \rho(x),\rho(y)\rangle = \|\rho(x)^2\| = |X|^{-1}q_j(0)\\
+\rho(x) = \rho(y) &amp; \Leftrightarrow \langle \rho(x),\rho(y)\rangle = \|\rho(x)\|^2 = |X|^{-1}q_j(0)\\
 &amp; \Leftrightarrow |X|^{-1}q_j(i) = |X|^{-1}q_j(0)\\
 &amp; \Leftrightarrow q_j(i) = q_j(0).
 \end{align}\]</span></p>
