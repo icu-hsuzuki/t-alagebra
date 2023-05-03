@@ -20,7 +20,7 @@ Now it is sufficient to show the following.
 Claim 6. Let $i$ be a node in $D_E$. Then $i$ is adjacent to at most $2$ arcs.
 
 _Proof of Claim 6._
-Suppose the node $j$ is adjacent to $i$ in $D_E$. By claim 4,
+Suppose the node $j$ is adjacent to $i$ in $D_E$. By Claim 4,
 \begin{align}
 0 & = E_i(A^3A^* - A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2) - \gamma(A^2A^*-A^*A) - \delta(AA^*-A^*A))E_j\\
 & = E_iA^*E_j(\theta^3_i-\theta^3_j-(\beta+1)(\theta^2\theta_j - \theta_i\theta_j^2)-\gamma(\theta_i^2-\theta_j^2)-\delta(\theta_i-\theta_j))\\
@@ -42,7 +42,7 @@ Since $i$ is adjacent to $j$, $q^1_{ij}\neq 0$ and
 $$E_iA^*E_j\neq O$$
 by Lemma \@ref(lem:vanishing-condition) $(ii)$.
 Since $Y$ is $P$-polynomial, 
-$$\theta_i \neq \theta_j \quad \text{ if }; i\neq j.$$
+$$\theta_i \neq \theta_j \quad \text{ if }\; i\neq j.$$
 Hence $p(\theta_i,\theta_j) = 0$. But $p$ is quadratic in $t$. So $p(\theta_i,t) = 0$ has at most two solutions for $\theta_j$.
 
 Now $D_E$ is a pth, and $\Gamma$ is $Q$-polynomial with respect to $E$. 
@@ -94,7 +94,7 @@ We have the assertion.
 :::
 
 
-Given the intersection number of a distance-regular graph $\Gamma$. The following 2 lemmas give an efficient method to determine if $\Gamma$ is $Q$-polynomial with respect to some primitive idempotent.
+Given the intersection number of a distance-regular graph $\Gamma$. The following two lemmas give an efficient method to determine if $\Gamma$ is $Q$-polynomial with respect to some primitive idempotent.
 
 :::{.lemma #dual-eigenvalues}
 Let $\Gamma$ be a distance-regular graph of diameter $D\geq 1$.
@@ -112,14 +112,14 @@ c_1 & a_1 & b_1 & 0 & \cdots & 0\\
 \cdots & \ddots & \ddots & \ddots & \ddots & 0 \\
 0 & \cdots & 0 & c_{D-1} & a_{D-1} & b_{D-1}\\
 0 & \cdots & \cdots & 0 & c_D & a_D 
-\end{pmatrix} \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots \\\vdots \\\vdots\\ \theta^*_D\end{pmatrix} = \theta\cdots \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots\\\vdots\\ \vdots \\ \theta^*_D\end{pmatrix},
+\end{pmatrix} \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots \\\vdots \\\vdots\\ \theta^*_D\end{pmatrix} = \theta\cdot \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots\\\vdots\\ \vdots \\ \theta^*_D\end{pmatrix},
 $$
 and $\theta^*_0 = \mathrm{rank}E$.
 
 | $(ii)$ Suppose $(ia)$, $(ib)$ hold. Then,
 $$\frac{\theta^*_1}{\theta^*_0}, \ldots, \frac{\theta^*_D}{\theta^*_0}$$
 can be computed from $\theta$ using
-$$\frac{\theta^*_i}{\theta^*_0} = \frac{p_i(\theta)}{kb_1\cdots b_{i-1}}, \quad (1\leq i\leq D),$$
+$$\frac{\theta^*_i}{\theta^*_0} = \frac{p_i(\theta)}{kb_1\cdots b_{i-1}} \quad (1\leq i\leq D),$$
 where $p_0 = 1$, $p_1(\lambda) = \lambda$, and 
 $$\lambda p_i(\lambda) = p_{i+1}(\lambda) + a_ip_i(\lambda) + b_{i-1}c_ip_{i-1}(\lambda)\quad (0\leq i\leq D).$$
 :::
@@ -127,7 +127,7 @@ $$\lambda p_i(\lambda) = p_{i+1}(\lambda) + a_ip_i(\lambda) + b_{i-1}c_ip_{i-1}(
 :::{.proof}
 | $(i)$ We have
 \begin{align}
-(ia) & \leftrightarrow (A- \theta I)E = O \text{ and } E^2 = E\\
+(ia) & \leftrightarrow (A- \theta I)E = 0 \text{ and } E^2 = E\\
 & \leftrightarrow 0 = \sum_{i=0}^D(A-\theta I)\theta^*_i A_i \text{ and $\mathrm{rank}E = \mathrm{trace}E = \theta^*_0$}\\
 & \qquad = \sum_{i=0}^D\theta^*_i(c_{i+1}A_{i+1}+ a_iA_i + b_{i-1}A_{i-1}-\theta A_i)\\
 & \qquad = \sum_{j=0}^D A_j(c_j\theta^*_{j-1}+a_j\theta^*_j+b_j\theta^*_{j+1}-\theta \theta^*_j)\\

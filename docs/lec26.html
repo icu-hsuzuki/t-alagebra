@@ -183,7 +183,7 @@ by setting <span class="math inline">\(E = E_1\)</span>.</p>
 <p>Now it is sufficient to show the following.</p>
 <p>Claim 6. Let <span class="math inline">\(i\)</span> be a node in <span class="math inline">\(D_E\)</span>. Then <span class="math inline">\(i\)</span> is adjacent to at most <span class="math inline">\(2\)</span> arcs.</p>
 <p><em>Proof of Claim 6.</em>
-Suppose the node <span class="math inline">\(j\)</span> is adjacent to <span class="math inline">\(i\)</span> in <span class="math inline">\(D_E\)</span>. By claim 4,
+Suppose the node <span class="math inline">\(j\)</span> is adjacent to <span class="math inline">\(i\)</span> in <span class="math inline">\(D_E\)</span>. By Claim 4,
 <span class="math display">\[\begin{align}
 0 &amp; = E_i(A^3A^* - A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2) - \gamma(A^2A^*-A^*A) - \delta(AA^*-A^*A))E_j\\
 &amp; = E_iA^*E_j(\theta^3_i-\theta^3_j-(\beta+1)(\theta^2\theta_j - \theta_i\theta_j^2)-\gamma(\theta_i^2-\theta_j^2)-\delta(\theta_i-\theta_j))\\
@@ -202,7 +202,7 @@ where
 <span class="math display">\[E_iA^*E_j\neq O\]</span>
 by Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a> <span class="math inline">\((ii)\)</span>.
 Since <span class="math inline">\(Y\)</span> is <span class="math inline">\(P\)</span>-polynomial,
-<span class="math display">\[\theta_i \neq \theta_j \quad \text{ if }; i\neq j.\]</span>
+<span class="math display">\[\theta_i \neq \theta_j \quad \text{ if }\; i\neq j.\]</span>
 Hence <span class="math inline">\(p(\theta_i,\theta_j) = 0\)</span>. But <span class="math inline">\(p\)</span> is quadratic in <span class="math inline">\(t\)</span>. So <span class="math inline">\(p(\theta_i,t) = 0\)</span> has at most two solutions for <span class="math inline">\(\theta_j\)</span>.</p>
 <p>Now <span class="math inline">\(D_E\)</span> is a pth, and <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E\)</span>.</p>
 <p>This proves Theorem <a href="lec24.html#thm:balanced">24.1</a>.</p>
@@ -241,7 +241,7 @@ We have,
 <span class="math display">\[\beta = \frac{1}{\sigma}-1 = \frac{\theta^*_i - \theta^*_{i+1} + \theta^*_{i+2}-\theta^*_{i+3}}{\theta^*_{i+1}-\theta^*_{i+2}} = \frac{\theta^*_0 - \theta^*_{1} + \theta^*_{2}-\theta^*_{3}}{\theta^*_{1}-\theta^*_{2}}.\]</span>
 We have the assertion.</p>
 </div>
-<p>Given the intersection number of a distance-regular graph <span class="math inline">\(\Gamma\)</span>. The following 2 lemmas give an efficient method to determine if <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to some primitive idempotent.</p>
+<p>Given the intersection number of a distance-regular graph <span class="math inline">\(\Gamma\)</span>. The following two lemmas give an efficient method to determine if <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to some primitive idempotent.</p>
 <div class="lemma">
 <p><span id="lem:dual-eigenvalues" class="lemma"><strong>Lemma 26.1  </strong></span>Let <span class="math inline">\(\Gamma\)</span> be a distance-regular graph of diameter <span class="math inline">\(D\geq 1\)</span>.
 Pick <span class="math inline">\(\theta, \theta^*_0, \theta^*_1, \ldots, \theta^*_D\in \mathbb{R}\)</span> such that <span class="math inline">\(\theta^*_0 \neq 0\)</span>, and set
@@ -255,13 +255,13 @@ c_1 &amp; a_1 &amp; b_1 &amp; 0 &amp; \cdots &amp; 0\\
 \cdots &amp; \ddots &amp; \ddots &amp; \ddots &amp; \ddots &amp; 0 \\
 0 &amp; \cdots &amp; 0 &amp; c_{D-1} &amp; a_{D-1} &amp; b_{D-1}\\
 0 &amp; \cdots &amp; \cdots &amp; 0 &amp; c_D &amp; a_D
-\end{pmatrix} \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots \\\vdots \\\vdots\\ \theta^*_D\end{pmatrix} = \theta\cdots \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots\\\vdots\\ \vdots \\ \theta^*_D\end{pmatrix},
+\end{pmatrix} \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots \\\vdots \\\vdots\\ \theta^*_D\end{pmatrix} = \theta\cdot \begin{pmatrix} \theta^*_0\\\theta^*_1\\\vdots\\\vdots\\ \vdots \\ \theta^*_D\end{pmatrix},
 \]</span>
 and <span class="math inline">\(\theta^*_0 = \mathrm{rank}E\)</span>.</p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> Suppose <span class="math inline">\((ia)\)</span>, <span class="math inline">\((ib)\)</span> hold. Then,</div>
 <p><span class="math display">\[\frac{\theta^*_1}{\theta^*_0}, \ldots, \frac{\theta^*_D}{\theta^*_0}\]</span>
 can be computed from <span class="math inline">\(\theta\)</span> using
-<span class="math display">\[\frac{\theta^*_i}{\theta^*_0} = \frac{p_i(\theta)}{kb_1\cdots b_{i-1}}, \quad (1\leq i\leq D),\]</span>
+<span class="math display">\[\frac{\theta^*_i}{\theta^*_0} = \frac{p_i(\theta)}{kb_1\cdots b_{i-1}} \quad (1\leq i\leq D),\]</span>
 where <span class="math inline">\(p_0 = 1\)</span>, <span class="math inline">\(p_1(\lambda) = \lambda\)</span>, and
 <span class="math display">\[\lambda p_i(\lambda) = p_{i+1}(\lambda) + a_ip_i(\lambda) + b_{i-1}c_ip_{i-1}(\lambda)\quad (0\leq i\leq D).\]</span></p>
 </div>
@@ -269,7 +269,7 @@ where <span class="math inline">\(p_0 = 1\)</span>, <span class="math inline">\(
 <p><span id="unlabeled-div-60" class="proof"><em>Proof</em>. </span></p>
 <div class="line-block"><span class="math inline">\((i)\)</span> We have</div>
 <p><span class="math display">\[\begin{align}
-(ia) &amp; \leftrightarrow (A- \theta I)E = O \text{ and } E^2 = E\\
+(ia) &amp; \leftrightarrow (A- \theta I)E = 0 \text{ and } E^2 = E\\
 &amp; \leftrightarrow 0 = \sum_{i=0}^D(A-\theta I)\theta^*_i A_i \text{ and $\mathrm{rank}E = \mathrm{trace}E = \theta^*_0$}\\
 &amp; \qquad = \sum_{i=0}^D\theta^*_i(c_{i+1}A_{i+1}+ a_iA_i + b_{i-1}A_{i-1}-\theta A_i)\\
 &amp; \qquad = \sum_{j=0}^D A_j(c_j\theta^*_{j-1}+a_j\theta^*_j+b_j\theta^*_{j+1}-\theta \theta^*_j)\\
