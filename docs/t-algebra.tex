@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2023-05-02}
+\date{2023-05-03}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -5300,7 +5300,7 @@ The case \(D = 2\) should be treated somewhere, but the assumption \(D\geq 3\) i
 Fix \(w\in X\), and write \(E^*_i \equiv E^*_i(w)\), \(A^*_i\equiv A^*_i(w)\), \(A^*\equiv A^*_1\), and \(A_i\), \(i\)-th distance matrix. Set
 \[E \equiv E_1 = |X|^{-1}\sum_{i=0}^D \theta^*_i A_i.\]
 Since \((\rho, H)\) is nondegenerate,
-\[\theta^*_0 \neq \theta^*_h, \; \text{for all }h\in \{1,2,\ldots, D\}\]
+\[\theta^*_0 \neq \theta^*_h \; \text{for all }h\in \{1,2,\ldots, D\}\]
 See Lemma \ref{lem:rep-of-scheme} \((iv)\).
 
 Claim 1. Pick \(h\) \((1\leq h\leq D)\), and \(x,y\) with \((x,y)\in R_h\). Then
@@ -5314,7 +5314,7 @@ By our assumption,
 Hence,
 \begin{align}
 |X|^{-1}p^h_{12}(\theta^*_1-\theta^*_2) & = \left\langle \sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z'), \rho(x)\right\rangle \\
-& = \alpha\langle \rho(x)-\rho(y), \rho(x)\\
+& = \alpha\langle \rho(x)-\rho(y), \rho(x)\rangle\\
 & = \alpha |X|^{-1}(\theta_0^*-\theta^*_h).
 \end{align}
 We have
@@ -5371,7 +5371,7 @@ On the other hand,
 \begin{align}
 & [A, A^2A^*-\beta AA^*A+A^*A^2-\gamma(AA^*+A^*A)-\delta A^*]\\
 & \quad = A^3A^*-A^2A^*A-\beta A^2A^*A + \beta AA^*A^2 + AA^*A^2 - A^*A^3 \\
-& \quad\quad - \gamma A^2A^* - \gamma AA^*A + \gamma AA^*A + \gamma A^*A^2 - \delta AA^* + \delta A^*A\\
+& \qquad\quad - \gamma A^2A^* - \gamma AA^*A + \gamma AA^*A + \gamma A^*A^2 - \delta AA^* + \delta A^*A\\
 & \quad = A^3A^* - A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta (AA^*-A^*A).
 \end{align}
 Thus we have \((i)\) and \((ii)\).
@@ -5382,12 +5382,12 @@ Connect distinct nodes \(,\) by undirected arc if \(q^1_{ij}\neq 0\). (Note \(q^
 
 Since \(q^1_{0j} = \delta_{1j}\), the \(0\)-node is adjacent to the \(1\)-node and no other node.
 
-\(Y\) is \(Q\)-polynomial with respect to \(E\) if and only if \(E_E\) is a path.
+\(Y\) is \(Q\)-polynomial with respect to \(E\) if and only if \(D_E\) is a path.
 
 Claim 5. \(D_E\) is connected.
 
 \emph{Proof of Claim 5.}
-Suppose there exists \(\Delta \subseteq \{0,1,\ldots, D\}\) such that \(i,j\) not connected for every \(i\in \Delta\) and \(j\in \{0,1,\ldots, D\}\setminus D\).
+Suppose there exists \(\Delta \subseteq \{0,1,\ldots, D\}\) such that \(i,j\) not connected for every \(i\in \Delta\) and \(j\in \{0,1,\ldots, D\}\setminus \Delta\).
 
 Set
 \[f = \sum_{i\in \Delta}E_i.\]
@@ -5438,17 +5438,18 @@ is connected.
 \((iii)\) \(C_M(A^*) = \{L\in M\mid LA^* = A^*L\} = \mathrm{Span}(I).\)
 
 \emph{Proof.}
-\textbar{} \((i)\) The column \(x\) of \(A_hA^* - A^*(A_h)\) is \(\theta^*_0-\theta^*_h\) times the column \(x\) of \(A_h\).
 
-\((iii)\) \({\displaystyle 0 = [\sum_{h=0}^D\alpha_hA_h, A^*] = \sum_{h=1}^D\alpha_h(A_hA^*-A^*A_h)}\). Hence, \(\alpha_0 = \cdots =\alpha_D = 0\).
+\((i)\) The column \(x\) of \(A_hA^* - A^*(A_h)\) is \(\theta^*_0-\theta^*_h\) times the column \(x\) of \(A_h\).
+
+\((iii)\) \({\displaystyle 0 = \left[\sum_{h=0}^D\alpha_hA_h, A^*\right] = \sum_{h=1}^D\alpha_h(A_hA^*-A^*A_h)}\). Hence, \(\alpha_0 = \cdots =\alpha_D = 0\).
 
 \((ii)\) \(\Delta\) is a connected component. Let \(f = \sum_{i\in \Delta}E_i\), then \(f\in C_M(A^*)\).
 
 Let \(Y = (X, \{R_i\}_{0\leq i\leq 2})\) be a symmetric association scheme with \(D = 2\). Let
 \[E = \frac{1}{|X|}\sum_{j=0}^2\theta^*_j A_j\]
-be a primitive idempotent. If \(\theta^*_0, \theta_1^*, \theta^*_2\).
+be a primitive idempotent.
 
-Then \(Y\) us \(Q\)-polynomial with respect to \(E\).
+Suppose \(\theta^*_0\neq \theta_1^*, \theta^*_2\). Then \(Y\) is \(Q\)-polynomial with respect to \(E\).
 
 \emph{Proof.}
 By the previous lemma, \(D_E\) is connected.

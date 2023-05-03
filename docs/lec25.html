@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-05-02" />
+<meta name="date" content="2023-05-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@ div.csl-indent {
 <p>Fix <span class="math inline">\(w\in X\)</span>, and write <span class="math inline">\(E^*_i \equiv E^*_i(w)\)</span>, <span class="math inline">\(A^*_i\equiv A^*_i(w)\)</span>, <span class="math inline">\(A^*\equiv A^*_1\)</span>, and <span class="math inline">\(A_i\)</span>, <span class="math inline">\(i\)</span>-th distance matrix. Set
 <span class="math display">\[E \equiv E_1 = |X|^{-1}\sum_{i=0}^D \theta^*_i A_i.\]</span>
 Since <span class="math inline">\((\rho, H)\)</span> is nondegenerate,
-<span class="math display">\[\theta^*_0 \neq \theta^*_h, \; \text{for all }h\in \{1,2,\ldots, D\}\]</span>
+<span class="math display">\[\theta^*_0 \neq \theta^*_h \; \text{for all }h\in \{1,2,\ldots, D\}\]</span>
 See Lemma <a href="lec23.html#lem:rep-of-scheme">23.1</a> <span class="math inline">\((iv)\)</span>.</p>
 <p>Claim 1. Pick <span class="math inline">\(h\)</span> <span class="math inline">\((1\leq h\leq D)\)</span>, and <span class="math inline">\(x,y\)</span> with <span class="math inline">\((x,y)\in R_h\)</span>. Then
 <span class="math display">\[\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z&#39;\in X, (x,z&#39;)\in R_2, (y,z&#39;)\in R_1}\rho(z&#39;) = r^h_{12}(\rho(x)-\rho(y)),\]</span>
@@ -193,7 +193,7 @@ By our assumption,
 Hence,
 <span class="math display">\[\begin{align}
 |X|^{-1}p^h_{12}(\theta^*_1-\theta^*_2) &amp; = \left\langle \sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z&#39;\in X, (x,z&#39;)\in R_2, (y,z&#39;)\in R_1}\rho(z&#39;), \rho(x)\right\rangle \\
-&amp; = \alpha\langle \rho(x)-\rho(y), \rho(x)\\
+&amp; = \alpha\langle \rho(x)-\rho(y), \rho(x)\rangle\\
 &amp; = \alpha |X|^{-1}(\theta_0^*-\theta^*_h).
 \end{align}\]</span>
 We have
@@ -239,17 +239,17 @@ On the other hand,
 <span class="math display">\[\begin{align}
 &amp; [A, A^2A^*-\beta AA^*A+A^*A^2-\gamma(AA^*+A^*A)-\delta A^*]\\
 &amp; \quad = A^3A^*-A^2A^*A-\beta A^2A^*A + \beta AA^*A^2 + AA^*A^2 - A^*A^3 \\
-&amp; \quad\quad - \gamma A^2A^* - \gamma AA^*A + \gamma AA^*A + \gamma A^*A^2 - \delta AA^* + \delta A^*A\\
+&amp; \qquad\quad - \gamma A^2A^* - \gamma AA^*A + \gamma AA^*A + \gamma A^*A^2 - \delta AA^* + \delta A^*A\\
 &amp; \quad = A^3A^* - A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta (AA^*-A^*A).
 \end{align}\]</span>
 Thus we have <span class="math inline">\((i)\)</span> and <span class="math inline">\((ii)\)</span>.</p>
 <p>Define a diagram <span class="math inline">\(D_E\)</span> on nodes <span class="math inline">\(0, 1, \ldots, D\)</span>.</p>
 <p>Connect distinct nodes <span class="math inline">\(,\)</span> by undirected arc if <span class="math inline">\(q^1_{ij}\neq 0\)</span>. (Note <span class="math inline">\(q^1_{ij} = q^1_{ji}\)</span>).</p>
 <p>Since <span class="math inline">\(q^1_{0j} = \delta_{1j}\)</span>, the <span class="math inline">\(0\)</span>-node is adjacent to the <span class="math inline">\(1\)</span>-node and no other node.</p>
-<p><span class="math inline">\(Y\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E\)</span> if and only if <span class="math inline">\(E_E\)</span> is a path.</p>
+<p><span class="math inline">\(Y\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E\)</span> if and only if <span class="math inline">\(D_E\)</span> is a path.</p>
 <p>Claim 5. <span class="math inline">\(D_E\)</span> is connected.</p>
 <p><em>Proof of Claim 5.</em>
-Suppose there exists <span class="math inline">\(\Delta \subseteq \{0,1,\ldots, D\}\)</span> such that <span class="math inline">\(i,j\)</span> not connected for every <span class="math inline">\(i\in \Delta\)</span> and <span class="math inline">\(j\in \{0,1,\ldots, D\}\setminus D\)</span>.</p>
+Suppose there exists <span class="math inline">\(\Delta \subseteq \{0,1,\ldots, D\}\)</span> such that <span class="math inline">\(i,j\)</span> not connected for every <span class="math inline">\(i\in \Delta\)</span> and <span class="math inline">\(j\in \{0,1,\ldots, D\}\setminus \Delta\)</span>.</p>
 <p>Set
 <span class="math display">\[f = \sum_{i\in \Delta}E_i.\]</span>
 Observe
@@ -284,14 +284,14 @@ If <span class="math inline">\(\theta_0 = \theta^*_h\)</span>, <span class="math
 <p><span class="math display">\[i\sim j \Leftrightarrow E(E_i\circ E_j)\neq O\]</span>
 is connected.</p>
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(C_M(A^*) = \{L\in M\mid LA^* = A^*L\} = \mathrm{Span}(I).\)</span></div>
-<p><em>Proof.</em>
-| <span class="math inline">\((i)\)</span> The column <span class="math inline">\(x\)</span> of <span class="math inline">\(A_hA^* - A^*(A_h)\)</span> is <span class="math inline">\(\theta^*_0-\theta^*_h\)</span> times the column <span class="math inline">\(x\)</span> of <span class="math inline">\(A_h\)</span>.</p>
-<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\({\displaystyle 0 = [\sum_{h=0}^D\alpha_hA_h, A^*] = \sum_{h=1}^D\alpha_h(A_hA^*-A^*A_h)}\)</span>. Hence, <span class="math inline">\(\alpha_0 = \cdots =\alpha_D = 0\)</span>.</div>
+<p><em>Proof.</em></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> The column <span class="math inline">\(x\)</span> of <span class="math inline">\(A_hA^* - A^*(A_h)\)</span> is <span class="math inline">\(\theta^*_0-\theta^*_h\)</span> times the column <span class="math inline">\(x\)</span> of <span class="math inline">\(A_h\)</span>.</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\({\displaystyle 0 = \left[\sum_{h=0}^D\alpha_hA_h, A^*\right] = \sum_{h=1}^D\alpha_h(A_hA^*-A^*A_h)}\)</span>. Hence, <span class="math inline">\(\alpha_0 = \cdots =\alpha_D = 0\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(\Delta\)</span> is a connected component. Let <span class="math inline">\(f = \sum_{i\in \Delta}E_i\)</span>, then <span class="math inline">\(f\in C_M(A^*)\)</span>.</div>
 <p>Let <span class="math inline">\(Y = (X, \{R_i\}_{0\leq i\leq 2})\)</span> be a symmetric association scheme with <span class="math inline">\(D = 2\)</span>. Let
 <span class="math display">\[E = \frac{1}{|X|}\sum_{j=0}^2\theta^*_j A_j\]</span>
-be a primitive idempotent. If <span class="math inline">\(\theta^*_0, \theta_1^*, \theta^*_2\)</span>.</p>
-<p>Then <span class="math inline">\(Y\)</span> us <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E\)</span>.</p>
+be a primitive idempotent.</p>
+<p>Suppose <span class="math inline">\(\theta^*_0\neq \theta_1^*, \theta^*_2\)</span>. Then <span class="math inline">\(Y\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E\)</span>.</p>
 <p><em>Proof.</em>
 By the previous lemma, <span class="math inline">\(D_E\)</span> is connected.</p>
 <p><strong>Note.</strong>
