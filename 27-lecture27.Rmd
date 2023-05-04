@@ -26,7 +26,7 @@ Note \@ref(eq:cibi1) is trivial for $i = 1, 2$.
 
 $i=1$: 
 \begin{align}
-\mathrm{LHS} & = \left(\theta^*_2-\theta^*_1 - \frac{\theta^*_1-\theta^*_0)^2}{\theta^*-\theta^*_1}\right)+ k(\theta^*-\theta^*_0)\\
+\mathrm{LHS} & = \left(\theta^*_2-\theta^*_1 - \frac{(\theta^*_1-\theta^*_0)^2}{\theta^*_0-\theta^*_1}\right)+ k(\theta^*_2-\theta^*_0)\\
 & = \theta^*_2-\theta^*_1 - \theta^*_0 + \theta^*_1 + k(\theta_2^*-\theta^*_0)\\
 & = (k+1)(\theta^*_2-\theta^*_0)\\
 \mathrm{RHS} & = (k-\theta)(\theta^*_1+\theta^*_2-\theta^*_0-\theta^*_1)-(\theta+1)(\theta^*_0-\theta^*_2)\\
@@ -35,22 +35,22 @@ $i=1$:
 
 $i=2$:
 \begin{align}
-\mathrm{LHS} & = b_1\left(\theta^*_2-\theta^*_1 - \frac{\theta^*_1-\theta^*_0)^2}{\theta^*-\theta^*_1}\right)\\
+\mathrm{LHS} & = b_1\left(\theta^*_2-\theta^*_1 - \frac{(\theta^*_1-\theta^*_0)^2}{\theta^*_0-\theta^*_1}\right)\\
 & = b_1\frac{(\theta^*_2-\theta^*_1)(\theta^*_0-\theta^*_1-\theta^*_2+\theta^*_1)}{\theta^*_0-\theta^*_1}\\
 & = b_1\frac{(\theta^*_2-\theta^*_1)(\theta^*_0-\theta^*_2)}{\theta^*_0-\theta^*_1}\\
-\mathrm{RHS} & = (\theta+1)(\theta^*_0-\theta^*_2).
+\mathrm{RHS} & = -(\theta+1)(\theta^*_0-\theta^*_2).
 \end{align}
 Hence,
 \begin{align}
 \mathrm{LHS}=\mathrm{RHS} & \leftrightarrow b_1\frac{\theta^*_2-\theta^*_1}{\theta^*_0-\theta^*_1} + (\theta + 1) = 0\\
-& = b_1(\theta^*_2-\theta^*_1)+(\theta+1)(\theta^*_0-\theta^*_1) = 0.
+& \leftrightarrow b_1(\theta^*_2-\theta^*_1)+(\theta+1)(\theta^*_0-\theta^*_1) = 0.
 \end{align}
 On the other hand,
 \begin{align}
 b_1\theta^*_2 + a_1\theta^*_1 + c_1\theta^*_0 & = \theta \theta^*_1\\
 b_1\theta^*_1 + a_1\theta^*_1 + c_1\theta^*_1 & = k \theta^*_1,
 \end{align}
-as $\theta \theta^*_0 = k\theta^*_1$
+as $\theta \theta^*_0 = k\theta^*_1$.
 We have
 $$b_1(\theta^*_2 - \theta^*_1) + (\theta^*_0-\theta^*_1) = \theta(\theta^*_1-\theta^*_0).$$
 :::
@@ -70,9 +70,9 @@ $$\frac{\theta^*_i-\theta^*_{i+1}+\theta^*_{i+2}-\theta^*_{i-3}}{\theta^*_{i+1}-
 & = (k-\theta)(\theta^*_1+\theta^*_2-\theta^*_{i-1}-\theta^*_i)-(\theta+1)(\theta^*_0-\theta^*_2).
 \end{align}
 
-Furthermore, we can show for $c_1, \ldots, c_D$, $a_1, \ldots, a_D$, $b_0, b_1, \ldots, b_{D-1}$ in terms of $5$ parameters.
+Furthermore, we can solve for $c_1, \ldots, c_D$, $a_1, \ldots, a_D$, $b_0, b_1, \ldots, b_{D-1}$ in terms of five free parameters.
 
-In general, we can take the $5$ parameters to be
+In general, we can take the five parameters to be
 $$D, q, s^*, r_1, r_2$$
 and get
 \begin{align}
@@ -134,9 +134,9 @@ where $c_i, b_i, \theta^*_i, \theta$ are as given.)
 
 $$\theta = \frac{b_1}{q}-1, \; \frac{\theta^*_i}{\theta^*_0} = 1 + \left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix} q^{1-i}, \; b_0 = \begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma.$$
 $i=0$. 
-$$\frac{\theta^*_i}{\theta^*_0} = \frac{\theta}{k}, \quad - k\left(1-\frac{\theta^*_1}{\theta^*_0}\right)= -k(1-\frac{\theta}{k}) = \theta -k.$$
+$$\frac{\theta^*_i}{\theta^*_0} = \frac{\theta}{k}, \quad - k\left(1-\frac{\theta^*_1}{\theta^*_0}\right)= -k\left(1-\frac{\theta}{k}\right) = \theta -k.$$
 $$\frac{\theta^*_{i-1}-\theta^*_i}{\theta^*_0} = \left(\frac{\theta}{k}-1\right)\left(\begin{bmatrix}{i-1}\\{1}\end{bmatrix}q^{2-i}-\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)=-\left(\frac{\theta}{k}-1\right)q^{1-i}.$$
-$$\theta-k=\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-1\right)(\sigma-\alpha)/q-1 \begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma = \begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)-1-\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma.$$
+$$\theta-k=\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-1\right)(\sigma-\alpha)/q-1 - \begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma = \begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)-1-\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma.$$
 \begin{align}
 & (c_i(\theta^*_{i-1}-\theta^*_i) + b_i(\theta^*_i -\theta^*_{i+1}) - (\theta-k) \theta^*_i)/\theta^*_0\\
 & \quad = -\begin{bmatrix}{i}\\{1}\end{bmatrix}\left(1+\alpha \begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\left(\frac{\theta}{k}-1\right)q^{1-i} + \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\sigma- \alpha \begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\frac{\theta}{k}-1\right)q^{-i}\\
@@ -202,7 +202,7 @@ _Pf._
 & = \left(1-\frac{\theta}{k}\right)\left(q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}+\alpha\left(q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{2}\\{1}\end{bmatrix}+q^{-1}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{D-2}\\{1}\end{bmatrix}\right)\right.\\
 & \qquad \left.-q^{-1}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{D-2}\\{1}\end{bmatrix}\sigma\right)\\
 \frac{\mathrm{RHS}}{\theta^*_0} & = \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma-\begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)+1\right)\left(1-\frac{\theta}{k}\right)\left(\begin{bmatrix}{3}\\{1}\end{bmatrix}q^{-2}-1\right)\\
-& \qquad \begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)\left(1-\frac{\theta}{k}\right)\begin{bmatrix}{2}\\{1}\end{bmatrix}q^{-1}\\
+& \qquad -\begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)\left(1-\frac{\theta}{k}\right)\begin{bmatrix}{2}\\{1}\end{bmatrix}q^{-1}\\
 & = \left(1-\frac{\theta}{k}\right)\left(q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}+\begin{bmatrix}{2}\\{1}\end{bmatrix}q^{-1}\sigma\left(q^{D-2}-\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\right)\right.\\
 & \qquad \left. +\begin{bmatrix}{2}\\{1}\end{bmatrix}q^{-2}\alpha\left(\begin{bmatrix}{D-1}\\{1}\end{bmatrix}+q\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\right)\right)\\
 & = \left(1-\frac{\theta}{k}\right)\left(q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}-\sigma q^{-1}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{D-2}\\{1}\end{bmatrix}+\alpha q^{-2}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{2}\\{1}\end{bmatrix}\begin{bmatrix}{D-1}\\{1}\end{bmatrix}\right)

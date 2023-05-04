@@ -16,7 +16,7 @@ We want to show that
 $$a_{yz} = a_{zy}.$$
 We may assume that 
 $$\partial(x, y) = \partial(x,z) = i,$$
-othewise 
+otherwise 
 $$a_{yz} = a_{zy} = 0.$$
 By our assumption, there exists $g\in G$ such that
 $$g(y) = z, \quad g(z) = y, \quad g(x) = x.$$

@@ -133,7 +133,7 @@ Then we have the following implications of conditions:
 $$\text{TH} \Leftrightarrow \text{C} \Leftarrow \text{S} \Leftarrow \text{G},$$
 where
 
-| (TH) $\Gamma$ is thinn with respect to $x$.
+| (TH) $\Gamma$ is thin with respect to $x$.
 
 | (C) $E^*_iTE^*_i$ is commutative for every $i$,  $(0\leq i \leq D)$.
 
