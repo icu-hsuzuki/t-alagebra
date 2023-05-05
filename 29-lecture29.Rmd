@@ -21,14 +21,14 @@ h = |i-j| & \rightarrow p^h_{ij} \neq 0, \; q^h_{ij} \neq 0.
 \end{align}
 
 Some $A_h$ (resp. $A^*_h$) is a polynomial of degree exactly $h$ in $A$ (resp. $A^*$), it follows, for $h, i, j$ $(0\leq h, i, j\leq D)$,
-$$E^*_iA^hE^*_j, \; E_i{A^*}^hE_j \quad \begin{cases} = 0 & \text{if } h < |i-j|\\
+$$E^*_iA^hE^*_j, \; E_i{A^*}^hE_j \quad \begin{cases} = 0 & \text{if } h < |i-j|,\\
 \neq 0 & \text{if } h = |i-j|.\end{cases}$$
 
 We saw that there exist $\beta, \gamma, \delta\in \mathbb{R}$ such that
 $$0 = [A, A^2A^*-\beta AA^*A + A^*A^2 - \gamma(AA^*+A^*A) - \delta A^*].$$
 In fact, there exist $\beta, \gamma^*, \delta^*\in \mathbb{R}$ such that
 $$0 = [A^*, {A^*}^2A-\beta A^*AA^* + A{A^*}^2 - \gamma^*(A^*A+AA^*) - \delta^* A]$$
-as well as will will now show.
+as well as we will now show.
 
 Let $K$ denote any field. Let $V$ denote any vector space over $K$ of finite positive dimension. Let $\mathrm{End}_K(V)$ denote the $K$-algebra of all $K$-linear transformations $V\to V$.
 
@@ -36,9 +36,9 @@ Let $K$ denote any field. Let $V$ denote any vector space over $K$ of finite pos
 :::{.theorem #aastar}
 Given semi-simple elements $A, A^*\in \mathrm{End}_K(V)$, suppose
 \begin{align}
-E_i(A^*)^hE_j: & \begin{cases} = 0 & \text{if } h < |i-j|\\
+E_i(A^*)^hE_j & \begin{cases} = 0 & \text{if } h < |i-j|,\\
 \neq 0 & \text{if } h = |i-j|.\end{cases} \quad (0\leq h,i,j\leq D) (\#eq:eastare)\\
-E^*_iA^hE^*_j: & \begin{cases} = 0 & \text{if } h < |i-j|\\
+E^*_iA^hE^*_j & \begin{cases} = 0 & \text{if } h < |i-j|,\\
 \neq 0 & \text{if } h = |i-j|.\end{cases} \quad (0\leq h,i,j\leq R) (\#eq:estaraestar)
 \end{align}
 for some ordering $E_0, E_1, \ldots, E_D$ of the primitive idempotents for $A$, and some ordering $E^*_0, E^*_1, \ldots, E^*_R$ of primitive idempotents for $A^*$. Then
@@ -50,7 +50,7 @@ for some ordering $E_0, E_1, \ldots, E_D$ of the primitive idempotents for $A$, 
 0 & = [A, A^2A^*-\beta AA^*A + A^*A^2 - \gamma(AA^*+A^*A) - \delta A^*]  (\#eq:abracket)\\
 & = A^3A^*-A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2)\\
 & \quad -\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A)  (\#eq:aastar)\\
-0 & = [A^*, {A^*}^2A-\beta^* A^*AA^* + A{A^*}^2 - \gamma^*(A^*A+AA^*) - \delta^* A]  (\#eq:astarbracket)\\
+0 & = [A^*, {A^*}^2A-\beta A^*AA^* + A{A^*}^2 - \gamma^*(A^*A+AA^*) - \delta^* A]  (\#eq:astarbracket)\\
 & = {A^*}^3A - A{A^*}^3 - (\beta+1)({A^*}^2AA^*-A^*A{A^*}^2)\\
 & \quad -\gamma^*({A^*}^2A-A{A^*}^2)-\delta^*(A^*A-AA^*).  (\#eq:astara)
 \end{align}
@@ -64,7 +64,7 @@ for some ordering $E_0, E_1, \ldots, E_D$ of the primitive idempotents for $A$, 
 \delta & = \theta^2_i - \beta \theta_i\theta_{i+1} + \theta^2_{i+1} - \gamma(\theta_i + \theta_{i+1}) \quad (0\leq i\leq D-1) (\#eq:delta)\\
 \delta^* & = {\theta^*}^2_i - \beta {\theta^*}_i{\theta^*}_{i+1} + {\theta^*}^2_{i+1} - \gamma^*({\theta^*}_i + {\theta^*}_{i+1}) \quad (0\leq i\leq D-1) (\#eq:deltastar)
 \end{align}
-In particular, $\beta, \gamma, \gamma^*, \delta, \delta^*$ are uniquely determined by $A$, $A^*$ and the above ordering of ther primitive idempotents, whenever $D\geq 3$.
+In particular, $\beta, \gamma, \gamma^*, \delta, \delta^*$ are uniquely determined by $A$, $A^*$ and the above ordering of their primitive idempotents, whenever $D\geq 3$.
 :::
 
 :::{.proof}
@@ -95,7 +95,7 @@ A^*E_i^* & = E_i^*A^* = \theta_i^*E_i^* \quad (0\leq i\leq D).
 Claim 1. For all integers $i,j,k,\ell$ $(0\leq i, j, k, \ell\leq D)$ such that $j+k \leq i-\ell$,
 \begin{equation}
 E^*_iA^jA^*A^kE^*_\ell = \begin{cases} \theta^*_{\ell+k}E^*_iA^{j+k}E^*_\ell & \text{if } j+k = i-l,\\
-0 & \text{if } j+k < i-\ell.\end{cases} (\#eq:eistarajastarakestarell)
+O & \text{if } j+k < i-\ell.\end{cases} (\#eq:eistarajastarakestarell)
 \end{equation}
 
 _Proof of Claim 1._
@@ -103,11 +103,11 @@ The product \@ref(eq:eistarajastarakestarell) eqia;s
 $$E^*_iA^j\left(\sum_{h=0}^D \theta_h^* E_h^*\right)A^kE^*_\ell = \sum_{h=0}^D \theta^*_h E^*_iA^jE^*_hA^kE^*_\ell.$$
 Now pick any $h$ $(0\leq h\leq D)$, where
 $$E^*_iA^jE^*_hA^kE^*_\ell \neq O.$$
-Tehn by \@ref(eq:estaraestar), $j\geq |i-h|$, otherwise
+Then by \@ref(eq:estaraestar), $j\geq |i-h|$, otherwise
 $$E^*_iA^jE^*_h = O$$
 and by \@ref(eq:eastare), $k\geq |h-\ell|$ otherwise
 $$E^*_hA^kE^*_\ell = O.$$
-Hence
+Hence,
 $$j+k \geq |i-h|+|h-\ell| \geq |i-\ell| \geq i-\ell.$$
 Now if $j+k < i-\ell$, we see there is no such $h$, so \@ref(eq:eistarajastarakestarell) holds.
 
@@ -139,7 +139,7 @@ Claim 3. $\{A^iA^* - A^*A^i\mid 1\leq i\leq D\}$ is a basis for $L$.
 
 _Proof of Claim 3._
 Since 
-$$A^iA^*-A^*A^i = A^iA^*I - iA^*A^i$$
+$$A^iA^*-A^*A^i = A^iA^*I - IA^*A^i$$
 is contained in $L$ $(1\leq i\leq D)$, and since $\dim L \leq D$, it suffices to show the given elements are linearly independent.
 
 Suppose they are dependent. Then there exists an integer $i$ $(1\leq i\leq D)$ such that 
@@ -157,7 +157,7 @@ But the left side of \@ref(eq:eistaraiestar0) is nonzero.
 A contradiction.
 
 
-Since $a^2A^*A-AA^*A^2$ is contained in $L$, we find by Claim 2,
+Since $A^2A^*A-AA^*A^2$ is contained in $L$, we find by Claim 2,
 \begin{equation}
 A^2A^*A - AA^*A^2 = \sum_{i=1}^D\alpha_i(A^iA^*-A^*A^i) (\#eq:a2astara)
 \end{equation}
@@ -175,9 +175,9 @@ Then by \@ref(eq:a2astara), and Claim 1,
 & \neq O.
 \end{align}
 
-(Since $\alpha_i=$ if $i>t$,
+(Since $\alpha_i=0$ if $i>t$,
 \begin{align}
-E^*_tA^2A^*AE^*_0 & = E^*_tAA^*A^2E^*_0 = O \quad (\text{as} 2+1 < t-0)\\
+E^*_tA^2A^*AE^*_0 & = E^*_tAA^*A^2E^*_0 = O \quad (\text{as } 2+1 < t-0)\\
 E^*_tA^iA^*E^*_0 & = E^*_tA^*A^iE^*_0 = O\\
 E^*_tA^tA^*E^*_0 & = \theta^*_0 E^*_tA^tE^*_0,\\
 E^*_tA^*A^tE^*_0 & = \theta^*_tE^*_tA^*A^tE^*_0.)\\
@@ -207,7 +207,7 @@ Claim 6. Lines \@ref(eq:abracket), \@ref(eq:aastar), \@ref(eq:betastar) hold.
 _Proof of Claim 6._
 First suppose $D\geq 3$. Then by \@ref(eq:a2astara), Claims 4, and 5,
 \begin{equation}
-A^22A^*A-AA^*A^2 = \alpha_3(A^3A^*-A^*A^3)+\alpha_2(A^2A^*-A^*A^2) + \alpha_1(AA^*-A^*A), (\#eq:a2astara3)
+A^2A^*A-AA^*A^2 = \alpha_3(A^3A^*-A^*A^3)+\alpha_2(A^2A^*-A^*A^2) + \alpha_1(AA^*-A^*A), (\#eq:a2astara3)
 \end{equation}
 where $\alpha_3\neq 0$. Hence
 $$A^3A^*-A^*A^3-\frac{1}{\alpha_3}(A^2A^*A-AA^*A^2)+\frac{\alpha_2}{\alpha_3}(A^2A^*-A^*A^2)+
@@ -233,7 +233,7 @@ So, \@ref(eq:a2astara3) holds for appropriate $\alpha_1$ and $\alpha_2\in K$.
 Now, \@ref(eq:aastar) holds, where $\beta$, $\gamma$, $\delta$ are given by \@ref(eq:beta3), \@ref(eq:gamma3), \@ref(eq:delta3).
 
 
-Claim 7. Lines \@ref(eq:beta), \@ref(eq:gamma), \@ref(eq:delta) hold.
+Claim 7. Lines \@ref(eq:beta), \@ref(eq:gamma1), \@ref(eq:delta) hold.
 
 _Proof of Claim 7._
 Pick an integer $i$ $(0\leq i\leq D-1)$.
@@ -241,7 +241,7 @@ Pick an integer $i$ $(0\leq i\leq D-1)$.
 By \@ref(eq:aastar), we have
 \begin{align}
 O & = E_i(A^3A^*-A^*A^3-(\beta+1)(A^2A^*A-AA^*A^2)-\gamma(A^2A^*-A^*A^2)-\delta(AA^*-A^*A))E_{i+1}\\
-& = E_iA^*E_{i+1}(\theta^3_i-\theta^3-(\beta+1)(\theta^*_i\theta_{i+1}-\theta_i\theta^2)-\gamma(\theta^2_i-\theta^2_{i+1})-\delta(\theta_i-\theta_{i+1}))\\
+& = E_iA^*E_{i+1}(\theta^3_i-\theta^3_{i+1}-(\beta+1)(\theta^*_i\theta_{i+1}-\theta_i\theta^2_{i+1})-\gamma(\theta^2_i-\theta^2_{i+1})-\delta(\theta_i-\theta_{i+1}))\\
 & = E_iA^*E_{i+1}(\theta_i-\theta_{i+1})(\theta^2_i+\theta_i\theta_{i+1}+\theta_{i+1}^2-(\beta+1)\theta_i\theta_{i+1}-\gamma(\theta_i+\theta_{i+1})-\delta)\\
 & = E_iA^*E_{i+1}(\theta_i-\theta_{i+1})(\theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta).
 \end{align}
@@ -250,21 +250,21 @@ But $E_iA^*E_{i+1} \neq O$ by \@ref(eq:eastare), and of course, $\theta_i\neq \t
 $$0 = \theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta.$$
 This proves \@ref(eq:delta).
 
-To obtain \@ref(eq:gamma), pick any integer $i$ $(0\leq i\leq D-2)$.
+To obtain \@ref(eq:gamma1), pick any integer $i$ $(0\leq i\leq D-2)$.
 Then by \@ref(eq:delta),
 \begin{align}
 0 & = \theta^2_i-\beta\theta_i\theta_{i+1}+\theta_{i+1}^2-\gamma(\theta_i+\theta_{i+1})-\delta\\
 & \qquad -(\theta^2_{i+1}-\beta\theta_{i+1}\theta_{i+2}+\theta_{i+2}^2-\gamma(\theta_{i+1}+\theta_{i+2})-\delta)\\
-& = \theta_i^2 - \beta\theta_i\theta_{i+1}-\gamma\theta_i + \beta\theta_{i+1}\theta_{i+2}-{\theta^*_{i+2}}^2 + \gamma\theta_{i+2}\\
+& = \theta_i^2 - \beta\theta_i\theta_{i+1}-\gamma\theta_i + \beta\theta_{i+1}\theta_{i+2}-{\theta_{i+2}}^2 + \gamma\theta_{i+2}\\
 & = (\theta_i-\theta_{i+2})(\theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma).
 \end{align}
 So $0 = \theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma$. 
 
-This gives \@ref(eq:gamma).
+This gives \@ref(eq:gamma1).
 
 To see \@ref(eq:beta), pick an integer $i$ $(0\leq i\leq D-3)$.
 
-Then by \@ref(eq:gamma),
+Then by \@ref(eq:gamma1),
 \begin{align}
 0 & = (\theta_i - \beta\theta_{i+1} + \theta_{i+2} - \gamma) - (\theta_{i+1} - \beta\theta_{i+2} + \theta_{i+3} - \gamma) \\
 & = \theta_i-(\beta+1)\theta_{i+1} + (\beta+1)\theta_{i+2} - \theta_{i+3}.
