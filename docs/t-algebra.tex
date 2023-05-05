@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2023-05-05}
+\date{2023-05-06}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -6478,8 +6478,7 @@ L & = \sum_{i=0}^D E^*_{i-1}AE^*_i,\\
 F & = \sum_{i=0}^D E^*_{i}AE^*_i.
 \end{align}
 
-Observe \(R\) is not invertible (indeed \(RE%*_D = O
-\).)
+Observe \(R\) is not invertible (indeed \(RE^*_D = O\).)
 So, \(R^{-1}\) does not exist.
 
 Below we find a matrix ``\(R^{-1}\)''\(\in T(x)\) such that \(R^{-1}Rv = v\) for ``almost all'' \(v\in V\).
@@ -6493,7 +6492,7 @@ Fix a vertex \(x\in X\), write
 \[R\equiv R(x), \quad L \equiv L(x), \quad E^*_i\equiv E^*_i(x) \quad \text{for all }i.\]
 Then,
 
-\((i)\) There exists unique ``\(R^{_1}\)''\(\in \mathrm{Mat}_X(\mathbb{C})\) such that;
+\((i)\) There exists unique ``\(R^{-1}\)''\(\in \mathrm{Mat}_X(\mathbb{C})\) such that;
 
 \(\quad (ia)\) \(R^{-1}v = 0\) if \(Lv = 0\) for \(v\in V\).
 
@@ -6564,7 +6563,7 @@ So,
 as desired.
 
 Uniqueness:
-Suppose a matrix \(\hat{R}^{-1}\in \mathrm{Mat}_X(\mathbb{C})\) satisfies \((ia), (ib)\). Then, \(\hat{R}^{-1}\) satisfies \eqref{eq:rinversev} atove.
+Suppose a matrix \(\hat{R}^{-1}\in \mathrm{Mat}_X(\mathbb{C})\) satisfies \((ia), (ib)\). Then, \(\hat{R}^{-1}\) satisfies \eqref{eq:rinversev} above.
 
 (\emph{Pf.} The first part is clear. Let \(v\in (\mathrm{Ker}L)^\bot\). By Claim 2, there exists \(w\in (\mathrm{Ker}L)^\bot\) such that \(v\in RLw\). So \(\hat{R}^{-1}v = \hat{R}^{-1}RLw = Lw = L(RL)^{-1}v\).)
 
@@ -6579,7 +6578,7 @@ If \(v\in \mathrm{Ker}L\), then \(R^{-1}v = 0\in E^*_{i-1}V\).
 If \(v\in (\mathrm{Ker}L)^\bot\), then
 \[R^{-1}v = L(RL)^{-1}v \in LE^*_iV \subseteq E^*_{i-1}V.\]
 
-\((iii)\) Observe \(R, L\in \mathrm(Mat)_X(\mathbb{Q})\).
+\((iii)\) Observe \(R, L\in \mathrm{Mat}_X(\mathbb{Q})\).
 
 So \(V\), \(\mathrm{Ker}L\), each has basis consisting of vectors in \(\mathbb{Q}^{|X|}\).
 
