@@ -176,10 +176,10 @@ div.csl-indent {
 <p><span class="math display">\[R^{-1}R v = \begin{cases} v &amp; \text{if } i&lt;d,\\
 0 &amp; \text{if } i = d.
 \end{cases}\]</span></p>
-<div class="line-block"><span class="math inline">\((ii)\)</span> Assume <span class="math inline">\(\Gamma\)</span> is distance regular and thin with respect to <span class="math inline">\(x\)</span>. Pick <span class="math inline">\(t\)</span> <span class="math inline">\((0\leq &lt; D/2)\)</span>, and pick <span class="math inline">\(v\in E^*_tV\)</span>. Then</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Assume <span class="math inline">\(\Gamma\)</span> is distance regular and thin with respect to <span class="math inline">\(x\)</span>. Pick <span class="math inline">\(t\)</span> <span class="math inline">\((0\leq i &lt; D/2)\)</span>, and pick <span class="math inline">\(v\in E^*_tV\)</span>. Then</div>
 <p><span class="math display">\[R^{-1}R^iv = R^{i-1}v\quad (1\leq i\leq D-2t).\]</span>
 In particular, <span class="math inline">\(R^{-1}R v = v\)</span>.</p>
-<div class="line-block"><span class="math inline">\((iii)\)</span> Assume <span class="math inline">\(\Gamma\)</span> is distance regulaar and thin with respect to <span class="math inline">\(x\)</span>. Then</div>
+<div class="line-block"><span class="math inline">\((iii)\)</span> Assume <span class="math inline">\(\Gamma\)</span> is distance regular and thin with respect to <span class="math inline">\(x\)</span>. Then</div>
 <p><span class="math display">\[R: E^*_iV \to E^*_{i+1}V \quad (0\leq i&lt; D/2)\]</span>
 is one-to-one.</p>
 </div>
@@ -204,11 +204,11 @@ Thus, we have <span class="math inline">\((i)\)</span>.</p>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
 <p><span class="math display">\[\begin{align}
-RLw_i &amp; = Rx_i(W)w_{i-1} = x_i(W)w_i,
-LRw_i &amp; = Lw_{i+1} = x_{i+1}(W)w_i\\
+RLw_i &amp; = Rx_i(W)w_{i-1} = x_i(W)w_i,\\
+LRw_i &amp; = Lw_{i+1} = x_{i+1}(W)w_i,\\
 [L,R]w_i &amp; = (x_{i+1}(W)-x_i(W))w_i, \quad (0\leq i\leq d),\\
 &amp; \qquad x_0(W) = 0, \quad x_{d+1}(W) = 0, \\
-[L,R]|_W &amp; = \sum_{i=0}^d(x_{i+1}-x_i(W))E^*_{r+i}|W.
+[L,R]|_W &amp; = \sum_{i=0}^d(x_{i+1}-x_i(W))E^*_{r+i}|_W.
 \end{align}\]</span></p>
 </div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> Let</div>
@@ -250,7 +250,7 @@ where the sum begin over irreducible <span class="math inline">\(T\)</span>-modu
 <li><span class="math inline">\((E^*_iV)_{new} \equiv E^*_iV_i \quad (0\leq i\leq D).\)</span></li>
 </ol>
 <p>In general,
-<span class="math display">\[(E^*_iV)_{new} \subseteq \mathrm{Ker}L \cap E^*iV \subseteq \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}(LE^*_i).\]</span></p>
+<span class="math display">\[(E^*_iV)_{new} \subseteq \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}(LE^*_i).\]</span></p>
 <p>If each irreducible <span class="math inline">\(T\)</span>-module with endpoint strictly less than <span class="math inline">\(i\)</span> is thin,
 <span class="math display">\[(E^*_iV)_{new} = \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}(L\cdot E^*_i).\]</span>
 We have the assertion.</p>
@@ -276,7 +276,7 @@ is one to one.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> Let</div>
 <p><span class="math display">\[v = \sum_{y\in X, \partial(x,y)=1}\alpha_y \hat{y} \quad \text{for some }\{\alpha_g\}\subseteq \mathbb{C}.\]</span>
 Then
-<span class="math display">\[Lv = \left(\sum_{y\in X, \partial(x,y)=1}\alpha_y\right)\hat{x} = .\]</span>
+<span class="math display">\[Lv = \left(\sum_{y\in X, \partial(x,y)=1}\alpha_y\right)\hat{x} = 0.\]</span>
 So,
 <span class="math display">\[\sum_{y\in X, \partial(x,y)=1}\alpha_y = 0.\]</span>
 Thus,
@@ -324,13 +324,13 @@ LE^*_iA_{i-1}v &amp; = E^*_{i-1}AE^*_{i}A_{i-1}v\\
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E^*_iA_{i-1}v\)</span>, <span class="math inline">\(E^*_{i}A_{i+1}v\)</span> are linearly dependent for every <span class="math inline">\(i\)</span> <span class="math inline">\((1\leq i\leq D-1)\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> There exists a thin irreducible <span class="math inline">\(T\)</span>-module <span class="math inline">\(W\)</span> with endpoint <span class="math inline">\(1\)</span> that contains <span class="math inline">\(v\)</span>.</div>
 <p>If <span class="math inline">\((i)\)</span>, <span class="math inline">\((ii)\)</span> hold then
-<span class="math display">\[W = \mathrm{Span}(E^*_1, E^*_2A_1v, \ldots, E^*_DA_{i-1}v).\]</span></p>
+<span class="math display">\[W = \mathrm{Span}(E^*_1A_0v, E^*_2A_1v, \ldots, E^*_DA_{i-1}v).\]</span></p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-71" class="proof"><em>Proof</em>. </span><span class="math inline">\((ii)\to(i)\)</span>. Clear as
 <span class="math display">\[E^*_iA_{i-1}v, \; E^*_iA_{i+1}v \in E^*_iW = \mathrm{Span}(w_{i-1}).\]</span></p>
 <div class="line-block"><span class="math inline">\((i)\to(ii)\)</span> Consider the sequence</div>
-<p><span class="math display">\[E^*_1A_{i-1}v, E^*_2A_1v, E^*_3A_2v, \ldots, E^*_{D+1}A_Dv.\]</span>
+<p><span class="math display">\[E^*_1A_{0}v, E^*_2A_1v, E^*_3A_2v, \ldots, E^*_{D+1}A_Dv.\]</span>
 The first term is nonzero and the last term is <span class="math inline">\(0\)</span>.
 So there exists
 <span class="math display">\[n := \mathrm{min}\{i\mid 1\leq i\leq D, \; E^*_{i+1}A_iv = 0\}.\]</span>
@@ -357,7 +357,7 @@ FE^*_jA_{j-1}v &amp; \in \mathrm{Span}(RE^*_{j-1}A_jv, E^*_jA_{j-1}v, E^*_jA_{j+
 <span class="math display">\[\begin{align}
 FE^*_jA_{j-1}v &amp; \in \mathrm{Span}(FE^*_{j-1}A_j v, E^*_{j-1}A_{j}v, E^*_{j-1}A_{j-2}v)\\
 &amp; \subseteq \mathrm{Span}(FE^*_{j-1}A_{j-2}v, E^*_{j-1}A_{j-2}v)\\
-&amp; \mathrm{Span}(E^*_{j-1}A_{j-2}v) \quad (2\leq j\leq n).
+&amp; \subseteq \mathrm{Span}(E^*_{j-1}A_{j-2}v) \quad (2\leq j\leq n).
 \end{align}\]</span></p>
 <p>Hence,
 <span class="math display">\[W = \mathrm{Span}(E^*_1A_0v, E^*_2A_1v, \ldots, E^*_nA_{n-1}v).\]</span>
