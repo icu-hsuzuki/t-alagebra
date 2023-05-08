@@ -176,7 +176,7 @@ div.csl-indent {
 Fix a vertex <span class="math inline">\(x\in X\)</span>, write <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span>, <span class="math inline">\(M^* \equiv M^*(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>.</p>
 <p>Pick <span class="math inline">\(0\neq v\in (E^*_1V)_{new}\)</span>. Set <span class="math inline">\(v^* = |X|E_1v\)</span>. We will show that
 <span class="math display">\[Tv = Mv + M^*v^*.\]</span>
-We need preliminary lemma.</p>
+We need a preliminary lemma.</p>
 <div class="lemma">
 <p><span id="lem:mvplusmstarvstar" class="lemma"><strong>Lemma 34.1  </strong></span>With the atove notation, we have the following.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\tilde{A}_hv = E^*_{h+1}A_hv - E^*_hA_{h+1}v\)</span>, <span class="math inline">\(h\in \{0, 1, \ldots, D\}\)</span>.</div>
@@ -213,7 +213,7 @@ E^*_hv^* &amp; = |X|E^*_hE_1v\\
 <p><span class="math inline">\(i^+\)</span>: using <span class="math inline">\((i)\)</span> and <span class="math inline">\(i^-\)</span>.
 <span class="math display">\[\begin{align}
 \mathrm{LHS} &amp; = (\theta^*_i - \theta^*_{i+1})E^*_{i+1}A_iv \\
-&amp; = (\theta^*_{i}-\theta^*_{i+1})E^*_{i+1}A_{i+1}v + (\theta^*_i-\theta^*_{i+1})\tilde{A}_iv \quad \text{(by $(i)$)}\\
+&amp; = (\theta^*_{i}-\theta^*_{i+1})E^*_{i}A_{i+1}v + (\theta^*_i-\theta^*_{i+1})\tilde{A}_iv \quad \text{(by $(i)$)}\\
 &amp; = \left(\sum_{h=0}^{i-1}(\theta^*_h-\theta^*_{i})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^* + (\theta^*_i-\theta^*_{i+1})\left(\sum_{h=0}^i A_h\right)v \quad \text{(by $i^-$)}\\
 &amp; = \left(\sum_{h=0}^i (\theta^*_h-\theta^*_{i+1})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^*.
 \end{align}\]</span></p>
@@ -279,7 +279,7 @@ E^*_1v^* &amp; = |X|E^*_1E_1v \\
 &amp; \in \mathrm{Span}\{v\},
 \end{align}\]</span>
 as <span class="math inline">\(E_0v = 0\)</span>, and <span class="math inline">\(v\)</span> is an eigenvector of <span class="math inline">\(E^*_1AE^*_1\)</span>.</p>
-<p><span class="math inline">\(\ast\)</span> <span class="math inline">\(v\in (E^*_1V)_{new}\)</span>. If <span class="math inline">\(v\)</span> is an eigenvector of <span class="math inline">\(E^*_1AE^*_1\)</span>,
+<p><span class="math inline">\(\star\)</span> <span class="math inline">\(v\in (E^*_1V)_{new}\)</span>. If <span class="math inline">\(v\)</span> is an eigenvector of <span class="math inline">\(E^*_1AE^*_1\)</span>,
 <span class="math display">\[E^*_1v^* \in \mathrm{Span}\{v\}.\]</span></p>
 </div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> We have</div>
@@ -290,7 +290,7 @@ Tv &amp; = Mv + M^*v^*\\
 &amp; = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^*_D, v_0^-, \ldots, v^-_{D-1}\}
 \end{align}\]</span>
 by Lemma <a href="lec34.html#lem:mvplusmstarvstar">34.1</a> <span class="math inline">\((v)\)</span>.</p>
-<p>But <span class="math inline">\(v^-_0 = E^*_0A_1v = 0\)</span> sing <span class="math inline">\(v\in (E^*_1V)_{new}\)</span>, and <span class="math inline">\(v^-_1\in \mathrm{Span}\{v^+_1\}\)</span>.</p>
+<p>But <span class="math inline">\(v^-_0 = E^*_0A_1v = 0\)</span> since <span class="math inline">\(v\in (E^*_1V)_{new}\)</span>, and <span class="math inline">\(v^-_1\in \mathrm{Span}\{v^+_1\}\)</span>.</p>
 <p>Indeed,
 <span class="math display">\[v^-_1 = E^*_1A_2v = (-1-a_0(Tv))v^+_1.\]</span>
 where <span class="math inline">\(a_0(Tv)\)</span> is the eigenvalue of <span class="math inline">\(v\)</span> associated with <span class="math inline">\(\tilde{A}\)</span>.</p>
@@ -302,20 +302,20 @@ where <span class="math inline">\(a_0(Tv)\)</span> is the eigenvalue of <span cl
 &amp; = v + a_0(Tv)v + v^-_1.
 \end{align}\]</span>
 Therefore,
-<span class="math display">\[Tv = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^*_D, v_0^-, \ldots, v^-_{D-1}\}.\]</span></p>
+<span class="math display">\[Tv = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^+_D, v_2^-, \ldots, v^-_{D-1}\}.\]</span></p>
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(v^+_i, v^-_i\in E^*_iV\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iv)\)</span> Suppose <span class="math inline">\(Tv\)</span> is reducible, i.e., <span class="math inline">\(Tv = W_1 + W_2\)</span>. (orthogonal direct sum of nonzero <span class="math inline">\(T\)</span>-modules)</div>
-<p><span class="math display">\[E^*_1Tv = E^*W_1 + E^*_1W_2\]</span>
+<p><span class="math display">\[E^*_1Tv = E^*_1W_1 + E^*_1W_2\]</span>
 has dimension <span class="math inline">\(1\)</span> by <span class="math inline">\((iii)\)</span>. Assume <span class="math inline">\(v\in E^*_1W_1\)</span>. Then <span class="math inline">\(Tv \subseteq W_1\)</span>, a contradiction.</p>
 </div>
 <div class="lemma">
 <p><span id="lem:tv-thin" class="lemma"><strong>Lemma 34.3  </strong></span>With the notation of Lemma <a href="lec34.html#lem:mvplusmstarvstar">34.1</a>, assume <span class="math inline">\(0\neq v\in (E^*_1V)_{new}\)</span> is an eigenvector for <span class="math inline">\(\tilde{A}:=E^*_1AE^*_1\)</span>.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(Tv\)</span> is thin if and only if <span class="math inline">\(M^*v \subseteq Mv\)</span>.</div>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(Tv\)</span> is thin if and only if <span class="math inline">\(M^*v^* \subseteq Mv\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> Let <span class="math inline">\(W\)</span> denote any irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(1\)</span>. Then</div>
 <p><span class="math display">\[W = Tv&#39;\]</span>
 for some <span class="math inline">\(0\neq v&#39;\in (E^*_1V)_{new}\)</span> that is an eigenvector of <span class="math inline">\(\tilde{A}\)</span>.</p>
 <div class="line-block"><span class="math inline">\((iii)\)</span> Denote eigenvalue of <span class="math inline">\(\tilde{A}\)</span> associated to <span class="math inline">\(v\)</span> (resp. <span class="math inline">\(v&#39;\)</span>) by <span class="math inline">\(a_0(Tv)\)</span> (resp. <span class="math inline">\(a_0(Tv&#39;)\)</span>).</div>
-<p>Then <span class="math inline">\(Tv\)</span>, <span class="math inline">\(Tv&#39;\)</span> are isomorphic <span class="math inline">\(T\)</span>-module if and only if <span class="math inline">\(a_0(Tv) = a_1(Tv&#39;)\)</span>.</p>
+<p>Then <span class="math inline">\(Tv\)</span>, <span class="math inline">\(Tv&#39;\)</span> are isomorphic <span class="math inline">\(T\)</span>-module if and only if <span class="math inline">\(a_0(Tv) = a_0(Tv&#39;)\)</span>.</p>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(E^*_1TE^*_1\)</span> has basis</div>
 <p><span class="math display">\[\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2, \ldots, \tilde{A}^{\ell-1},\]</span>
 where <span class="math inline">\(\ell\)</span> is the number of mutually nonisomorphic <span class="math inline">\(T\)</span>-modules with endpoint <span class="math inline">\(1\)</span>.</p>
@@ -325,12 +325,12 @@ where <span class="math inline">\(\ell\)</span> is the number of mutually noniso
 <div class="line-block"><span class="math inline">\((i)\)</span> If <span class="math inline">\(Tv\)</span> is thin, then by Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>, <span class="math inline">\(Tv = Mv\)</span>. Hence <span class="math inline">\(M^*v^* \subseteq Mv\)</span>.</div>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
-<p>Originally, the statement was <span class="math inline">\(Tv\)</span> is thin if and only if <span class="math inline">\(M^*v = Mv\)</span>. This is not the case in general. Suppose <span class="math inline">\(\Gamma\)</span> is thin. Let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module of endpoint <span class="math inline">\(1\)</span>. Then, that <span class="math inline">\(W \cap E^*_1V \ni v \neq 0\)</span> implies <span class="math inline">\(v^*\in W\cap E_1V\)</span> gives one to one and <span class="math inline">\(k\leq m\)</span>.</p>
+<p>Originally, the statement was <span class="math inline">\(Tv\)</span> is thin if and only if <span class="math inline">\(M^*v^* = Mv\)</span>. This is not the case in general. Suppose <span class="math inline">\(\Gamma\)</span> is thin. Let <span class="math inline">\(W\)</span> be an irreducible <span class="math inline">\(T\)</span>-module of endpoint <span class="math inline">\(1\)</span>. Then, that <span class="math inline">\(W \cap E^*_1V \ni v \neq 0\)</span> implies <span class="math inline">\(v^*\in W\cap E_1V\)</span> gives one to one and <span class="math inline">\(k\leq m\)</span>.</p>
 <p>However, by ‘Distance-Regular Graphs’ <span class="citation">(<a href="#ref-bcn" role="doc-biblioref">A. E. Brouwer 1989</a>)</span>,</p>
 <p><span class="math inline">\(J(v,d)\)</span>: <span class="math inline">\(v\geq 2d\)</span>
 <span class="math display">\[\begin{align}
-b_j = (d-j)(v-d-j) &amp; c_j = j^2\\
-\theta_j = (d-j)(v-d-j)-j &amp; m_j = \binom{v}{j}-\binom{v}{j-1}
+b_j = (d-j)(v-d-j), &amp; \quad c_j = j^2,\\
+\theta_j = (d-j)(v-d-j)-j, &amp; \quad m_j = \binom{v}{j}-\binom{v}{j-1}.
 \end{align}\]</span>
 In particular,
 <span class="math display">\[k = b_0 = d(v-d) &gt; m_1 = v-1 \quad \text{ if }d\geq 2,\]</span>
@@ -339,7 +339,7 @@ and <span class="math inline">\(J(v,d)\)</span> is thin.</p>
 </div>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
-<p>Now assume <span class="math inline">\(M^*v\subseteq Mv = Tv\)</span>. Then
+<p>Now assume <span class="math inline">\(M^*v^*\subseteq Mv = Tv\)</span>. Then
 <span class="math display">\[Mv = \{f(A)v\mid f(\lambda)\in \mathbb{C}[\lambda]\}.\]</span>
 So,
 <span class="math display">\[E_iTv = E_iMv \in \mathrm{Span}(E_iv).\]</span>
@@ -363,9 +363,9 @@ Thus, <span class="math inline">\(Tv\)</span> is thin.</p>
 <div class="line-block"><span class="math inline">\((iii)\)</span> Suppose <span class="math inline">\(Tv \to Tv&#39;\)</span> is an isomorsphism of <span class="math inline">\(T\)</span>-modules.</div>
 <p>Recall <span class="math inline">\(\sigma s = s\sigma\)</span> for all <span class="math inline">\(s\in T\)</span>.
 <span class="math display">\[\mathrm{Span}\{\sigma v\} = \sigma E^*_1Tv = E^*_1\sigma Tv = E^*_1Tv&#39; = \mathrm{Span}\{v&#39;\}.\]</span>
-Hence
+Hence,
 <span class="math display">\[a_0(Tv)\sigma v = \sigma(a_0(Tv)v) = \sigma \tilde{A}v = \tilde{A}\sigma v = a_0(Tv&#39;)\sigma v.\]</span>
-Since <span class="math inline">\(\sigma v \neq 0\)</span>, <span class="math inline">\(a_0(Tv) = a_0(Tv)\)</span>.</p>
+Since <span class="math inline">\(\sigma v \neq 0\)</span>, <span class="math inline">\(a_0(Tv) = a_0(Tv&#39;)\)</span>.</p>
 <p>Now suppose <span class="math inline">\(a_0(Tv)=a_0(Tv&#39;)\)</span>. Show
 <span class="math display">\[\sigma: Tv \to Tv&#39; \quad (sv \mapsto sv&#39;) \quad (s\in T)\]</span>
 is an isomorphism of <span class="math inline">\(T\)</span>-modules.</p>

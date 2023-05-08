@@ -7202,7 +7202,7 @@ Fix a vertex \(x\in X\), write \(E^*_i \equiv E^*_i(x)\), \(M^* \equiv M^*(x)\),
 
 Pick \(0\neq v\in (E^*_1V)_{new}\). Set \(v^* = |X|E_1v\). We will show that
 \[Tv = Mv + M^*v^*.\]
-We need preliminary lemma.
+We need a preliminary lemma.
 
 \begin{lemma}
 \protect\hypertarget{lem:mvplusmstarvstar}{}\label{lem:mvplusmstarvstar}
@@ -7256,7 +7256,7 @@ E^*_hv^* & = |X|E^*_hE_1v\\
 \(i^+\): using \((i)\) and \(i^-\).
 \begin{align}
 \mathrm{LHS} & = (\theta^*_i - \theta^*_{i+1})E^*_{i+1}A_iv \\
-& = (\theta^*_{i}-\theta^*_{i+1})E^*_{i+1}A_{i+1}v + (\theta^*_i-\theta^*_{i+1})\tilde{A}_iv \quad \text{(by $(i)$)}\\
+& = (\theta^*_{i}-\theta^*_{i+1})E^*_{i}A_{i+1}v + (\theta^*_i-\theta^*_{i+1})\tilde{A}_iv \quad \text{(by $(i)$)}\\
 & = \left(\sum_{h=0}^{i-1}(\theta^*_h-\theta^*_{i})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^* + (\theta^*_i-\theta^*_{i+1})\left(\sum_{h=0}^i A_h\right)v \quad \text{(by $i^-$)}\\
 & = \left(\sum_{h=0}^i (\theta^*_h-\theta^*_{i+1})A_h\right)v - \left(\sum_{h=0}^i E^*_h\right)v^*.
 \end{align}
@@ -7345,7 +7345,7 @@ E^*_1v^* & = |X|E^*_1E_1v \\
 \end{align}
 as \(E_0v = 0\), and \(v\) is an eigenvector of \(E^*_1AE^*_1\).
 
-\(\ast\) \(v\in (E^*_1V)_{new}\). If \(v\) is an eigenvector of \(E^*_1AE^*_1\),
+\(\star\) \(v\in (E^*_1V)_{new}\). If \(v\) is an eigenvector of \(E^*_1AE^*_1\),
 \[E^*_1v^* \in \mathrm{Span}\{v\}.\]
 
 \((ii)\) We have
@@ -7358,7 +7358,7 @@ Tv & = Mv + M^*v^*\\
 \end{align}
 by Lemma \ref{lem:mvplusmstarvstar} \((v)\).
 
-But \(v^-_0 = E^*_0A_1v = 0\) sing \(v\in (E^*_1V)_{new}\), and \(v^-_1\in \mathrm{Span}\{v^+_1\}\).
+But \(v^-_0 = E^*_0A_1v = 0\) since \(v\in (E^*_1V)_{new}\), and \(v^-_1\in \mathrm{Span}\{v^+_1\}\).
 
 Indeed,
 \[v^-_1 = E^*_1A_2v = (-1-a_0(Tv))v^+_1.\]
@@ -7372,13 +7372,13 @@ To see this, observe
 & = v + a_0(Tv)v + v^-_1.
 \end{align}
 Therefore,
-\[Tv = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^*_D, v_0^-, \ldots, v^-_{D-1}\}.\]
+\[Tv = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^+_D, v_2^-, \ldots, v^-_{D-1}\}.\]
 
 \((iii)\) \(v^+_i, v^-_i\in E^*_iV\).
 
 \((iv)\) Suppose \(Tv\) is reducible, i.e., \(Tv = W_1 + W_2\). (orthogonal direct sum of nonzero \(T\)-modules)
 
-\[E^*_1Tv = E^*W_1 + E^*_1W_2\]
+\[E^*_1Tv = E^*_1W_1 + E^*_1W_2\]
 has dimension \(1\) by \((iii)\). Assume \(v\in E^*_1W_1\). Then \(Tv \subseteq W_1\), a contradiction.
 
 \end{proof}
@@ -7386,7 +7386,7 @@ has dimension \(1\) by \((iii)\). Assume \(v\in E^*_1W_1\). Then \(Tv \subseteq 
 \begin{lemma}
 \protect\hypertarget{lem:tv-thin}{}\label{lem:tv-thin}With the notation of Lemma \ref{lem:mvplusmstarvstar}, assume \(0\neq v\in (E^*_1V)_{new}\) is an eigenvector for \(\tilde{A}:=E^*_1AE^*_1\).
 
-\((i)\) \(Tv\) is thin if and only if \(M^*v \subseteq Mv\).
+\((i)\) \(Tv\) is thin if and only if \(M^*v^* \subseteq Mv\).
 
 \((ii)\) Let \(W\) denote any irreducible \(T\)-module with endpoint \(1\). Then
 
@@ -7395,7 +7395,7 @@ for some \(0\neq v'\in (E^*_1V)_{new}\) that is an eigenvector of \(\tilde{A}\).
 
 \((iii)\) Denote eigenvalue of \(\tilde{A}\) associated to \(v\) (resp. \(v'\)) by \(a_0(Tv)\) (resp. \(a_0(Tv')\)).
 
-Then \(Tv\), \(Tv'\) are isomorphic \(T\)-module if and only if \(a_0(Tv) = a_1(Tv')\).
+Then \(Tv\), \(Tv'\) are isomorphic \(T\)-module if and only if \(a_0(Tv) = a_0(Tv')\).
 
 \((iv)\) \(E^*_1TE^*_1\) has basis
 
@@ -7410,14 +7410,14 @@ where \(\ell\) is the number of mutually nonisomorphic \(T\)-modules with endpoi
 
 \textbf{HS MEMO}
 
-Originally, the statement was \(Tv\) is thin if and only if \(M^*v = Mv\). This is not the case in general. Suppose \(\Gamma\) is thin. Let \(W\) be an irreducible \(T\)-module of endpoint \(1\). Then, that \(W \cap E^*_1V \ni v \neq 0\) implies \(v^*\in W\cap E_1V\) gives one to one and \(k\leq m\).
+Originally, the statement was \(Tv\) is thin if and only if \(M^*v^* = Mv\). This is not the case in general. Suppose \(\Gamma\) is thin. Let \(W\) be an irreducible \(T\)-module of endpoint \(1\). Then, that \(W \cap E^*_1V \ni v \neq 0\) implies \(v^*\in W\cap E_1V\) gives one to one and \(k\leq m\).
 
 However, by `Distance-Regular Graphs' \citep{bcn},
 
 \(J(v,d)\): \(v\geq 2d\)
 \begin{align}
-b_j = (d-j)(v-d-j) & c_j = j^2\\
-\theta_j = (d-j)(v-d-j)-j & m_j = \binom{v}{j}-\binom{v}{j-1}
+b_j = (d-j)(v-d-j), & \quad c_j = j^2,\\
+\theta_j = (d-j)(v-d-j)-j, & \quad m_j = \binom{v}{j}-\binom{v}{j-1}.
 \end{align}
 In particular,
 \[k = b_0 = d(v-d) > m_1 = v-1 \quad \text{ if }d\geq 2,\]
@@ -7427,7 +7427,7 @@ So \(|X|E_1v = v^*\) may be \(0\) sometimes. But as \(Tv\) is dual thin of diame
 
 \textbf{HS MEMO}
 
-Now assume \(M^*v\subseteq Mv = Tv\). Then
+Now assume \(M^*v^*\subseteq Mv = Tv\). Then
 \[Mv = \{f(A)v\mid f(\lambda)\in \mathbb{C}[\lambda]\}.\]
 So,
 \[E_iTv = E_iMv \in \mathrm{Span}(E_iv).\]
@@ -7457,9 +7457,9 @@ Since \(W\) is irreducible, \(Tv' = W\).
 
 Recall \(\sigma s = s\sigma\) for all \(s\in T\).
 \[\mathrm{Span}\{\sigma v\} = \sigma E^*_1Tv = E^*_1\sigma Tv = E^*_1Tv' = \mathrm{Span}\{v'\}.\]
-Hence
+Hence,
 \[a_0(Tv)\sigma v = \sigma(a_0(Tv)v) = \sigma \tilde{A}v = \tilde{A}\sigma v = a_0(Tv')\sigma v.\]
-Since \(\sigma v \neq 0\), \(a_0(Tv) = a_0(Tv)\).
+Since \(\sigma v \neq 0\), \(a_0(Tv) = a_0(Tv')\).
 
 Now suppose \(a_0(Tv)=a_0(Tv')\). Show
 \[\sigma: Tv \to Tv' \quad (sv \mapsto sv') \quad (s\in T)\]
