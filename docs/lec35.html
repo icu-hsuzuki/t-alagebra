@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-05-08" />
+<meta name="date" content="2023-05-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -173,9 +173,9 @@ div.csl-indent {
 <div class="theorem">
 <p><span id="thm:dim5" class="theorem"><strong>Theorem 35.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be distance regular of diameter <span class="math inline">\(D\geq 3\)</span>.
 Assume <span class="math inline">\(\Gamma\)</span> is <span class="math inline">\(Q\)</span>-polynomial with respect to
-$<span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>.
+<span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>.
 Fix a vertex <span class="math inline">\(x\in X\)</span>, and write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> Up to isomorphism, there are at most <span class="math inline">\(4\)</span> thin irreducible <span class="math inline">\(T\)</span>-modules with endpoint <span class="math inline">\(1\)</span>.</div>
+<div class="line-block"><span class="math inline">\((i)\)</span> Up to isomorphism, there are at most four thin irreducible <span class="math inline">\(T\)</span>-modules with endpoint <span class="math inline">\(1\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> Suppose <span class="math inline">\(\Gamma\)</span> is thin with respect to <span class="math inline">\(x\)</span>. Then</div>
 <p><span class="math display">\[\dim E^*_1TE^*_1 \leq 5.\]</span></p>
 </div>
@@ -209,37 +209,37 @@ E^*_1MM^* &amp; = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^*,\\
 E^*_1MM^*M &amp; = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*E_1E^*_1M, \tag{35.1}\\
 E^*_1MM^*MM^* &amp; = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*E_1E^*_1M + E^*E_1E^*_1MM^*,\\
 &amp; \qquad \vdots
-\end{align}\]</span>
-Multiply <a href="lec35.html#eq:e1starmmstarm">(35.1)</a> through on the right by <span class="math inline">\(E^*_1\)</span> to get
-<span class="math display">\[E^*_1MM^*ME^*_1 = E^*_1ME^*_1 + E^*E_1E^*_1ME^*_1 = \mathrm{Span}\{\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2\},\]</span>
+\end{align}\]</span></p>
+<p>Multiply <a href="lec35.html#eq:e1starmmstarm">(35.1)</a> through on the right by <span class="math inline">\(E^*_1\)</span> to get
+<span class="math display">\[E^*_1MM^*ME^*_1 = E^*_1ME^*_1 + E^*_1E_1E^*_1ME^*_1 = \mathrm{Span}\{\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2\},\]</span>
 since <span class="math inline">\(\tilde{J}^2, \tilde{A}\tilde{J} = \tilde{J}\tilde{A}\in \mathrm{Span}\{\tilde{J}\}\)</span>.</p>
 <p>This proves Claim 2.</p>
 <p>Now, let <span class="math inline">\(W\)</span> denote any irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(1\)</span>, and pick <span class="math inline">\(0\neq v\in E^*_1W\)</span>. Set
 <span class="math display">\[v^+_i = E^*_iA_{i-1}E^*_1v, \quad v^-_i = E^*_iA_{i+1}E^*_1v, \; i\in \{1, \ldots, D\}.\]</span>
 We know by Lemma <a href="lec34.html#lem:tv">34.2</a> <span class="math inline">\((ii)\)</span> that <span class="math inline">\(W\)</span> is thin if and only if <span class="math inline">\(v^+_i, v^-_i\)</span> are linearly dependent for all <span class="math inline">\(i\in \{2, \ldots, D-1\}\)</span>.</p>
 <p>In general,
-<span class="math display">\[\Phi_i = \det \begin{pmatrix}\|v^+_i\|^2 &amp; \langle v^*+_i, v^-_i\rangle\\
+<span class="math display">\[\Phi_i = \det \begin{pmatrix}\|v^+_i\|^2 &amp; \langle v^+_i, v^-_i\rangle\\
 \langle v^+_i,v^-_i\rangle &amp; \|v^-_i\|^2 \end{pmatrix} \geq 0\]</span>
 with equality if and only if <span class="math inline">\(v^+_i, v^-_i\)</span> are linearly dependent,
-(becase <span class="math inline">\(\Phi_i\)</span> is the determinant of a Gram matrix).</p>
+(because <span class="math inline">\(\Phi_i\)</span> is the determinant of a Gram matrix).</p>
 <p>Let <span class="math inline">\(i\)</span> be an integer in <span class="math inline">\(\{2, \ldots, D-1\}\)</span>.</p>
 <p>Claim 3. There exists <span class="math inline">\(p^{++}\in \mathrm{C}[\lambda]\)</span>, <span class="math inline">\(\deg p^{++}\leq 2\)</span> (that depends only on the intersection numbers)
 such that
 <span class="math display">\[\|v^+_i\|^2 = \|v\|^2 p^{++}(a_0(W)).\]</span></p>
 <p><em>Proof of Claim 3.</em>
-<span class="math display">\[\|v^+_i\|^2  = \bar{v}^\top E^*1A_{i-1}E^*_iE^*_iA_{i-1}E^*_1v = \bar{v}^\top E^*1A_{i-1}E^*_iA_{i-1}E^*_1v.\]</span>
+<span class="math display">\[\|v^+_i\|^2  = \bar{v}^\top E^*_1A_{i-1}E^*_iE^*_iA_{i-1}E^*_1v = \bar{v}^\top E^*_1A_{i-1}E^*_iA_{i-1}E^*_1v.\]</span>
 But,
-<span class="math display">\[E^*1A_{i-1}E^*_iA_{i-1}E^*_1 \in E^*1MM^*ME^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2)\]</span>
+<span class="math display">\[E^*_1A_{i-1}E^*_iA_{i-1}E^*_1 \in E^*_1MM^*ME^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2)\]</span>
 by Claim 2.</p>
 <p>So, there exists <span class="math inline">\(\alpha \in \mathbb{C}\)</span>, and <span class="math inline">\(p^{++}\in \mathbb{C}[\lambda]\)</span> with <span class="math inline">\(\deg p^{++}\leq 2\)</span> such that
-<span class="math display">\[E^*1A_{i-1}E^*_iA_{i-1}E^*_1 = \alpha \tilde{J} + p^{++}(\tilde{A}), \quad (\tilde{A}^0 = E^*_1).\]</span>
+<span class="math display">\[E^*_1A_{i-1}E^*_iA_{i-1}E^*_1 = \alpha \tilde{J} + p^{++}(\tilde{A}), \quad (\tilde{A}^0 = E^*_1).\]</span>
 Now,
-<span class="math display">\[\|v^+_i\|^2 = \bar{v}^\top (\alpha \tilde{J} = p^{++}(\tilde{A}))v = \|v\|^2 p^{++}(a_0(W)),\]</span>
+<span class="math display">\[\|v^+_i\|^2 = \bar{v}^\top (\alpha \tilde{J} + p^{++}(\tilde{A}))v = \|v\|^2 p^{++}(a_0(W)),\]</span>
 since <span class="math inline">\(\tilde{J}v = 0\)</span>, and <span class="math inline">\(\tilde{A}v = a_0(W)v\)</span>.</p>
 <p>This proves Claim 3.</p>
 <p>Similarly, there exist <span class="math inline">\(p^{--}, p^{+-}\in \mathbb{C}[\lambda]\)</span> with <span class="math inline">\(\deg p^{--}, \deg p^{+-}\leq 2\)</span> such that
 <span class="math display">\[\|v^-_i\|^2 = \|v\|^2p^{--}p(a_0(W)), \; \langle v^+_i, v^-_i\rangle = \|v\|^2 p^{+-}(a_0(W)).\]</span></p>
-<p>Claim 4. <span class="math inline">\(E^*1A_{i-1}E^*_iA_{i+1}E^*_1 = (\tilde{J}-\tilde{A}-E^*_1)p^2_{i-1,i+1}\)</span>. In particular,
+<p>Claim 4. <span class="math inline">\(E^*_1A_{i-1}E^*_iA_{i+1}E^*_1 = (\tilde{J}-\tilde{A}-E^*_1)p^2_{i-1,i+1}\)</span>. In particular,
 <span class="math display">\[p^{+-}(\lambda) = -p^2_{i-1,i+1}(\lambda +1).\]</span></p>
 <p><em>Proof of Claim 4.</em>
 Pick vertices <span class="math inline">\(y,z\in X\)</span> such that <span class="math inline">\(\partial(x,y) = \partial(x,z) = 1\)</span>.</p>
@@ -251,14 +251,14 @@ Pick vertices <span class="math inline">\(y,z\in X\)</span> such that <span clas
 0 &amp; \text{if } \partial(y,z) = 1, \\
 p^2_{i-1,i+1} &amp; \text{if }\partial(y,z)=2,
 \end{cases}\\
-&amp; = \mathrm{RHS}_{yz}
+&amp; = \mathrm{RHS}_{yz}.
 \end{align}\]</span>
 Note that <span class="math inline">\(E^*_1A_2E^*_1 = \tilde{J}- \tilde{A} - E^*_1\)</span>.</p>
 <p>Now,
 <span class="math display">\[\begin{align}
-\langle v^+_i, v^-i\rangle &amp; = \bar{v}^\top E^*_1A_{i-1}E^*_iA_{i+1}E^*_1v\\
+\langle v^+_i, v^-_i\rangle &amp; = \bar{v}^\top E^*_1A_{i-1}E^*_iA_{i+1}E^*_1v\\
 &amp; = p^2_{i-1,i+1}(\bar{v}^\top (\tilde{J}-\tilde{A}-E^*_1)v)\\
-&amp; = (a_0(W)+1)p^2_{i-1,i+1}\|v\|^2.
+&amp; = -(a_0(W)+1)p^2_{i-1,i+1}\|v\|^2.
 \end{align}\]</span></p>
 <p>Claim 5. <span class="math inline">\(\deg p^{++} = \deg p^{--} = 2\)</span>. (only need for some <span class="math inline">\(i\)</span>)</p>
 <p><em>Proof of Claim 5.</em>
@@ -266,21 +266,21 @@ We need to calculate <span class="math inline">\(p^{++}\)</span>, <span class="m
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
 <p>Pick vertices <span class="math inline">\(y,z\in X\)</span> such that <span class="math inline">\(\partial(x,y) = \partial(x,z) =1\)</span>. Then
-<span class="math display">\[(E^*_1A_{i-1}E^*_iA_{i-1}E^*_1)_{yz} = |\gamma_{i-1}(y)\cap \Gamma_i(x)\cap \Gamma_{i-1}(z)|,\]</span>
-which is equal to <span class="math inline">\(p^{1}_{i-1,i}\)</span> if <span class="math inline">\(\partial(y,z)=0\)</span>, but .
-<span class="math display">\[(E^*_1A_{i+1}E^*_iA_{i+1}E^*_1)_{yz} = |\gamma_{i+1}(y)\cap \Gamma_i(x)\cap \Gamma_{i+1}(z)|,\]</span>
-which is equal to <span class="math inline">\(p^{1}_{i+1,i}\)</span> if <span class="math inline">\(\partial(y,z)=0\)</span>, but .</p>
+<span class="math display">\[(E^*_1A_{i-1}E^*_iA_{i-1}E^*_1)_{yz} = |\Gamma_{i-1}(y)\cap \Gamma_i(x)\cap \Gamma_{i-1}(z)|,\]</span>
+which is equal to <span class="math inline">\(p^{1}_{i-1,i}\)</span> if <span class="math inline">\(\partial(y,z)=0\)</span>.
+<span class="math display">\[(E^*_1A_{i+1}E^*_iA_{i+1}E^*_1)_{yz} = |\Gamma_{i+1}(y)\cap \Gamma_i(x)\cap \Gamma_{i+1}(z)|,\]</span>
+which is equal to <span class="math inline">\(p^{1}_{i+1,i}\)</span> if <span class="math inline">\(\partial(y,z)=0\)</span>.</p>
 </div>
 <p>Conclusion.
 <span class="math display">\[\begin{align}
-\Phi_i &amp; = \det \begin{pmatrix}\|v^+_i\|^2 &amp; \langle v^*+_i, v^-_i\rangle\\
+\Phi_i &amp; = \det \begin{pmatrix}\|v^+_i\|^2 &amp; \langle v^+_i, v^-_i\rangle\\
 \langle v^+_i,v^-_i\rangle &amp; \|v^-_i\|^2 \end{pmatrix} \geq 0\\
 &amp; = \|v\|^4(p^{++}(\lambda)p^{--}(\lambda) - (p^2_{i-1,i+1})^2(\lambda+1)^2\\
 &amp; \geq 0,
 \end{align}\]</span>
-where $<span class="math inline">\(\lambda = a_0(W)\)</span>.</p>
+where <span class="math inline">\(\lambda = a_0(W)\)</span>.</p>
 <p><span class="math inline">\(W\)</span> is thin if and only if <span class="math inline">\(\Phi_i(\lambda) = 0\)</span> for all <span class="math inline">\(i\in \{2, \ldots, D-1\}\)</span>.</p>
-<p>Each <span class="math inline">\(\Phi_i\)</span> is degree <span class="math inline">\(4\)</span>, so at most <span class="math inline">\(4\)</span> different thin irreducible modules <span class="math inline">\(W\)</span> of endpoint <span class="math inline">\(1\)</span> up to isomorphism.</p>
+<p>Each <span class="math inline">\(\Phi_i\)</span> is degree <span class="math inline">\(4\)</span> solutions for <span class="math inline">\(\lambda\)</span>. Since <span class="math inline">\(\lambda\)</span> determines the isomorphism class of <span class="math inline">\(W\)</span> by Lemma <a href="lec34.html#lem:tv-thin">34.3</a> (iii), there are at most <span class="math inline">\(4\)</span> different thin irreducible modules <span class="math inline">\(W\)</span> of endpoint <span class="math inline">\(1\)</span> up to isomorphism.</p>
 </div>
 <p><strong>Note.</strong>
 In fact <span class="math inline">\(\Phi_i(\lambda)\)</span> is independent of <span class="math inline">\(i\)</span> up to scalar multiple for <span class="math inline">\(i\in \{2,\ldots, D-1\}\)</span>.</p>

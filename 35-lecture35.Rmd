@@ -4,10 +4,10 @@
 :::{.theorem #dim5}
 Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$.
 Assume $\Gamma$ is $Q$-polynomial with respect to 
-$$E_0, E_1, \ldots, E_D$.
+$E_0, E_1, \ldots, E_D$.
 Fix a vertex $x\in X$, and write $E^*_i\equiv E^*_i(x)$, $T\equiv T(x)$.
 
-| $(i)$ Up to isomorphism, there are at most $4$ thin irreducible $T$-modules with endpoint $1$.
+| $(i)$ Up to isomorphism, there are at most four thin irreducible $T$-modules with endpoint $1$.
 
 | $(ii)$ Suppose $\Gamma$ is thin with respect to $x$. Then 
 $$\dim E^*_1TE^*_1 \leq 5.$$
@@ -49,8 +49,9 @@ E^*_1MM^*M & = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*E_1E^*_1M, (\#eq:e1starmm
 E^*_1MM^*MM^* & = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*E_1E^*_1M + E^*E_1E^*_1MM^*,\\
 & \qquad \vdots
 \end{align}
+
 Multiply \@ref(eq:e1starmmstarm) through on the right by $E^*_1$ to get
-$$E^*_1MM^*ME^*_1 = E^*_1ME^*_1 + E^*E_1E^*_1ME^*_1 = \mathrm{Span}\{\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2\},$$
+$$E^*_1MM^*ME^*_1 = E^*_1ME^*_1 + E^*_1E_1E^*_1ME^*_1 = \mathrm{Span}\{\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2\},$$
 since $\tilde{J}^2, \tilde{A}\tilde{J} = \tilde{J}\tilde{A}\in \mathrm{Span}\{\tilde{J}\}$.
 
 This proves Claim 2.
@@ -60,10 +61,10 @@ $$v^+_i = E^*_iA_{i-1}E^*_1v, \quad v^-_i = E^*_iA_{i+1}E^*_1v, \; i\in \{1, \ld
 We know by Lemma \@ref(lem:tv) $(ii)$ that $W$ is thin if and only if $v^+_i, v^-_i$ are linearly dependent for all $i\in \{2, \ldots, D-1\}$.
 
 In general,
-$$\Phi_i = \det \begin{pmatrix}\|v^+_i\|^2 & \langle v^*+_i, v^-_i\rangle\\
+$$\Phi_i = \det \begin{pmatrix}\|v^+_i\|^2 & \langle v^+_i, v^-_i\rangle\\
 \langle v^+_i,v^-_i\rangle & \|v^-_i\|^2 \end{pmatrix} \geq 0$$
 with equality if and only if $v^+_i, v^-_i$ are linearly dependent,
-(becase $\Phi_i$ is the determinant of a Gram matrix).
+(because $\Phi_i$ is the determinant of a Gram matrix).
 
 Let $i$ be an integer in $\{2, \ldots, D-1\}$.
 
@@ -72,15 +73,15 @@ such that
 $$\|v^+_i\|^2 = \|v\|^2 p^{++}(a_0(W)).$$
 
 _Proof of Claim 3._
-$$\|v^+_i\|^2  = \bar{v}^\top E^*1A_{i-1}E^*_iE^*_iA_{i-1}E^*_1v = \bar{v}^\top E^*1A_{i-1}E^*_iA_{i-1}E^*_1v.$$
+$$\|v^+_i\|^2  = \bar{v}^\top E^*_1A_{i-1}E^*_iE^*_iA_{i-1}E^*_1v = \bar{v}^\top E^*_1A_{i-1}E^*_iA_{i-1}E^*_1v.$$
 But,
-$$E^*1A_{i-1}E^*_iA_{i-1}E^*_1 \in E^*1MM^*ME^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2)$$
+$$E^*_1A_{i-1}E^*_iA_{i-1}E^*_1 \in E^*_1MM^*ME^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2)$$
 by Claim 2.
 
 So, there exists $\alpha \in \mathbb{C}$, and $p^{++}\in \mathbb{C}[\lambda]$ with $\deg p^{++}\leq 2$ such that
-$$E^*1A_{i-1}E^*_iA_{i-1}E^*_1 = \alpha \tilde{J} + p^{++}(\tilde{A}), \quad (\tilde{A}^0 = E^*_1).$$
+$$E^*_1A_{i-1}E^*_iA_{i-1}E^*_1 = \alpha \tilde{J} + p^{++}(\tilde{A}), \quad (\tilde{A}^0 = E^*_1).$$
 Now,
-$$\|v^+_i\|^2 = \bar{v}^\top (\alpha \tilde{J} = p^{++}(\tilde{A}))v = \|v\|^2 p^{++}(a_0(W)),$$
+$$\|v^+_i\|^2 = \bar{v}^\top (\alpha \tilde{J} + p^{++}(\tilde{A}))v = \|v\|^2 p^{++}(a_0(W)),$$
 since $\tilde{J}v = 0$, and $\tilde{A}v = a_0(W)v$.
 
 This proves Claim 3.
@@ -88,7 +89,7 @@ This proves Claim 3.
 Similarly, there exist $p^{--}, p^{+-}\in \mathbb{C}[\lambda]$ with $\deg p^{--}, \deg p^{+-}\leq 2$ such that
 $$\|v^-_i\|^2 = \|v\|^2p^{--}p(a_0(W)), \; \langle v^+_i, v^-_i\rangle = \|v\|^2 p^{+-}(a_0(W)).$$
 
-Claim 4. $E^*1A_{i-1}E^*_iA_{i+1}E^*_1 = (\tilde{J}-\tilde{A}-E^*_1)p^2_{i-1,i+1}$. In particular,
+Claim 4. $E^*_1A_{i-1}E^*_iA_{i+1}E^*_1 = (\tilde{J}-\tilde{A}-E^*_1)p^2_{i-1,i+1}$. In particular,
 $$p^{+-}(\lambda) = -p^2_{i-1,i+1}(\lambda +1).$$
 
 _Proof of Claim 4._
@@ -102,15 +103,15 @@ Pick vertices $y,z\in X$ such that $\partial(x,y) = \partial(x,z) = 1$.
 0 & \text{if } \partial(y,z) = 1, \\
 p^2_{i-1,i+1} & \text{if }\partial(y,z)=2,
 \end{cases}\\
-& = \mathrm{RHS}_{yz}
+& = \mathrm{RHS}_{yz}.
 \end{align}
 Note that $E^*_1A_2E^*_1 = \tilde{J}- \tilde{A} - E^*_1$.
 
 Now,
 \begin{align}
-\langle v^+_i, v^-i\rangle & = \bar{v}^\top E^*_1A_{i-1}E^*_iA_{i+1}E^*_1v\\
+\langle v^+_i, v^-_i\rangle & = \bar{v}^\top E^*_1A_{i-1}E^*_iA_{i+1}E^*_1v\\
 & = p^2_{i-1,i+1}(\bar{v}^\top (\tilde{J}-\tilde{A}-E^*_1)v)\\
-& = (a_0(W)+1)p^2_{i-1,i+1}\|v\|^2.
+& = -(a_0(W)+1)p^2_{i-1,i+1}\|v\|^2.
 \end{align}
 
 
@@ -123,24 +124,24 @@ We need to calculate $p^{++}$, $p^{--}$.
 **HS MEMO**
 
 Pick vertices $y,z\in X$ such that $\partial(x,y) = \partial(x,z) =1$. Then
-$$(E^*_1A_{i-1}E^*_iA_{i-1}E^*_1)_{yz} = |\gamma_{i-1}(y)\cap \Gamma_i(x)\cap \Gamma_{i-1}(z)|,$$
-which is equal to $p^{1}_{i-1,i}$ if $\partial(y,z)=0$, but \ldots.
-$$(E^*_1A_{i+1}E^*_iA_{i+1}E^*_1)_{yz} = |\gamma_{i+1}(y)\cap \Gamma_i(x)\cap \Gamma_{i+1}(z)|,$$
-which is equal to $p^{1}_{i+1,i}$ if $\partial(y,z)=0$, but \ldots.
+$$(E^*_1A_{i-1}E^*_iA_{i-1}E^*_1)_{yz} = |\Gamma_{i-1}(y)\cap \Gamma_i(x)\cap \Gamma_{i-1}(z)|,$$
+which is equal to $p^{1}_{i-1,i}$ if $\partial(y,z)=0$.
+$$(E^*_1A_{i+1}E^*_iA_{i+1}E^*_1)_{yz} = |\Gamma_{i+1}(y)\cap \Gamma_i(x)\cap \Gamma_{i+1}(z)|,$$
+which is equal to $p^{1}_{i+1,i}$ if $\partial(y,z)=0$.
 :::
 
 Conclusion.
 \begin{align}
-\Phi_i & = \det \begin{pmatrix}\|v^+_i\|^2 & \langle v^*+_i, v^-_i\rangle\\
+\Phi_i & = \det \begin{pmatrix}\|v^+_i\|^2 & \langle v^+_i, v^-_i\rangle\\
 \langle v^+_i,v^-_i\rangle & \|v^-_i\|^2 \end{pmatrix} \geq 0\\
 & = \|v\|^4(p^{++}(\lambda)p^{--}(\lambda) - (p^2_{i-1,i+1})^2(\lambda+1)^2\\
 & \geq 0,
 \end{align}
-where $$\lambda = a_0(W)$.
+where $\lambda = a_0(W)$.
 
 $W$ is thin if and only if $\Phi_i(\lambda) = 0$ for all $i\in \{2, \ldots, D-1\}$.
 
-Each $\Phi_i$ is degree $4$, so at most $4$ different thin irreducible modules $W$ of endpoint $1$ up to isomorphism.
+Each $\Phi_i$ is degree $4$ solutions for $\lambda$. Since $\lambda$ determines the isomorphism class of $W$ by Lemma \@ref(lem:tv-thin) (iii), there are at most $4$ different thin irreducible modules $W$ of endpoint $1$ up to isomorphism.
 :::
 
 **Note.**
