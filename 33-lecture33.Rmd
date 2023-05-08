@@ -47,7 +47,7 @@ so,
 $$TE^*_0T = (TE^*_0)(E^*_0T) = ME^*_0E^*_0M = ME^*_0M.$$
 
 | $(iv)$ We have
-$$E^*_0E_0E^*_0 = \frac{1}{|X|}E^*_0\left(\sum_{h=-}^D A_h\right)E^*_0 = \frac{1}{|X|}E^*_0A_0E^*_0 = |X|^{-1}E^*_0.$$
+$$E^*_0E_0E^*_0 = \frac{1}{|X|}E^*_0\left(\sum_{h=0}^D A_h\right)E^*_0 = \frac{1}{|X|}E^*_0A_0E^*_0 = |X|^{-1}E^*_0.$$
 
 | $(v)$ The first part is clear by using Lemma \@ref(lem:vanishing-condition) $(ii)$, 
 $$E_hA^*_iE_j\neq O \Leftrightarrow q^j_{hi} \neq 0,$$
@@ -178,7 +178,7 @@ E^*_1E_1E^*_1 & = E^*_1\left(|X|^{-1}\sum_{h=0}^D\theta^*_h A_h\right)E^*_1\\
 Also,
 \begin{align}
 \tilde{J} & = E^*_1JE^*_1\\
-& = E^*A_0E^*_1 + E^*A_1E^*_1 + E^*_1A_2E^*_1\\
+& = E^*_1A_0E^*_1 + E^*_1A_1E^*_1 + E^*_1A_2E^*_1\\
 & = E^*_1 + \tilde{A} + E^*_1A_2E^*_1. (\#eq:tildej)
 \end{align}
 Eliminating the $E^*_1A_2E^*_1$ term in \@ref(eq:e1stare1e1star) using equation \@ref(eq:tildej), we get $(iv)$.
