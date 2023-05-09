@@ -7724,17 +7724,19 @@ Let \(A^* \equiv A^*_1(x)\), \(W\) an irreducible \(T\)-moduoe, and \(d^* = \{i\
 
 \((i)\) \(E_iA^*E_j = 0 \; \text{ if }\; |i-j|>1, \; E_iA^*E_j\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d^*(x)\).\\
 \((ii)\) \(A^*E_jW \subseteq E_{j-1}W + E_jW + E_{j+1}W\), \(0\leq j \leq d^*(x)\). \((E_iW = 0 \; \text{ if } i<j\) or \(i > d^*(x)\).)\\
-\((iii)\) \(E_jW \neq 0\) if \(r\leq j \leq r+d\), \(=0\) if \(0\leq j\leq r\) or \(r+d < j \leq d^*(x)\).\\
+\((iii)\) \(E_jW \neq 0\) if \(r^*\leq j \leq r^*+d^*\), \(E_jW=0\) if \(0\leq j\leq r^*\) or \(r^*+d^* < j \leq d^*(x)\).\\
 \((iv)\) \(E_iA^*E_jW \neq 0\), if \(|i-j| = 1\) \((r^* \leq i,j \leq r^*+d^*)\).
 
 \emph{Proof of \ref{lem:irreducible}'}
-\textbar{} \((i)\) By Lemma \ref{lem:vanishing-condition},
+
+\((i)\) By Lemma \ref{lem:vanishing-condition},
+
 \[E_iA^*E_j = O \leftrightarrow q^j_{i1} = 0.\]
 By Lemma \ref{lem:q-conditions},
 \begin{align}
-\Gamma\text{: $Q$-polynomial} &\leftrightarrow q^j_{i1} \;\begin{cases} = 0 & \text{if }|j-i|>1\\
+\Gamma\text{: $Q$-polynomial} &\leftrightarrow q^j_{i1} \;\begin{cases} = 0 & \text{if }|j-i|>1,\\
 \neq 0 & \text{if }|j-i|=1.\end{cases}\\
-& \leftrightarrow E_iA^*E_j \;\begin{cases} = O & \text{if }|j-i|>1\\
+& \leftrightarrow E_iA^*E_j \;\begin{cases} = O & \text{if }|j-i|>1,\\
 \neq O & \text{if }|j-i|=1.\end{cases}
 \end{align}
 
@@ -7792,14 +7794,16 @@ With above notation, the following hold.
 \(\quad (ivb)\) \(p^*_{d^*+1}\) is the minimal polynomial of \(A^*|_W\).
 
 \emph{Proof of Lemma \ref{lem:thin-module-structure}'}
-\textbar{} \((i)\) Recall
-\[A^* = \sum_{j=0}^D\theta^*_jE^*_j, \quad \theta^*_j = q_1(j) = |X|(E_1)_{xy}\in \mathbb{R}, \; \partial(x,y)=j.\]
-\(a_i\) is an eigenvalue of a real symmetric matrix \(E_{r^*+i}A^*E_{r^*+i}\).
 
-\((ii)\) Let \(B = E^*_{r+i}AE^*_{r+i-1}\).
+\((i)\) Recall
+
+\[A^* = \sum_{j=0}^D\theta^*_jE^*_j, \quad \theta^*_j = q_1(j) = |X|(E_1)_{xy}\in \mathbb{R}, \; \partial(x,y)=j.\]
+\(a_i^*\) is an eigenvalue of a real symmetric matrix \(E_{r^*+i}A^*E_{r^*+i}\).
+
+\((ii)\) Let \(B = E^*_{r^*+i}AE^*_{r^*+i-1}\).
 
 Then, \(x^*_i\) is an eigenvalue of a real symmetrix matrix \(B^\top B\).
-Let \(\mathrm{Span}\{v_{i-1}\} = E_{r^*+i}A^*E_{r^*+i-1}W\), and \(Bv_{i-1}\neq 0\) by Lemma \ref{lem:irreducible}' \((iv)\) for \(i\in \{1, \ldots, d^*\}\). So, \(x_i\in \mathbb{R}^{>0}\) for all \(i\in \{1, \ldots, d^*\}\).
+Let \(\mathrm{Span}\{v_{i-1}\} = E_{r^*+i-1}W\), and \(Bv_{i-1}\neq 0\) by Lemma \ref{lem:irreducible}' \((iv)\) for \(i\in \{1, \ldots, d^*\}\). So, \(x_i\in \mathbb{R}^{>0}\) for all \(i\in \{1, \ldots, d^*\}\).
 
 \((iiia)\) Observe
 
@@ -7808,7 +7812,7 @@ So \(w^*_i \neq 0\) for all \(i\in \{1, \ldots, d^*\}\) by Lemma \ref{lem:irredu
 
 Hence,
 \[W = \mathrm{Span}(w^*_0, \ldots, w^*_d)\]
-by Lemma \ref{lem:irreducible}'. \((iii)\).
+by Lemma \ref{lem:irreducible}' \((iii)\).
 
 \((iiib)\) We have that
 \begin{align}
@@ -7832,6 +7836,7 @@ With the notation above, let \(W\) be a dualthin irreducible \(T\)-module with d
 \((ii)\) \(d^* = d = |\{i\mid E^*_iW\neq 0\}| -1\).
 
 \emph{Proof of Corollary \ref{cor:thin-is-dualthin}'}
+
 Set as in Lemma \{\ref{lem:irreducible}\}'.
 \[w^*_i = p^*_i(A^*)w^*_0 \in E_{r^*+i}W.\]
 Then, \(w^*_0, w^*_1, \ldots, w^*_{d^*}\) is a basis for \(W\). We have \(W = M^*w^*_0\).
@@ -7858,7 +7863,7 @@ Up to isomorphism,
 
 there are at most \(3\) thin irreducible \(T\)-modules with \(r(W) =1\) and \(r^*(W)=1\),
 
-there are at most \(1\) thin irreducible \(T\)-modules with \(r(W) = 1\) and \(r^*(W)=2\),
+there are at most \(1\) thin irreducible \(T\)-module with \(r(W) = 1\) and \(r^*(W)=2\),
 
 there are none thin irreducible \(T\)-modules with \(r(W) = 1\) and \(r^*(W) > 2\).
 
@@ -7866,7 +7871,7 @@ By dual argument,
 
 there are at most \(3\) thin irreducible \(T\)-modules with \(r^*(W) =1\) and \(r(W)=1\),
 
-there are at most \(1\) thin irreducible \(T\)-modules with \(r^*(W) = 1\) and \(r(W)=2\),
+there are at most \(1\) thin irreducible \(T\)-module with \(r^*(W) = 1\) and \(r(W)=2\),
 
 there are none thin irreducible \(T\)-modules with \(r%*(W) = 1
 \) and \(r(W) > 2\).
@@ -7886,7 +7891,7 @@ Then the following are equivalent.
 
 \begin{conjecture}
 \protect\hypertarget{cnj:unimodality}{}\label{cnj:unimodality}Let \(\Gamma = (X, E)\) be distance regular of diameter \(D\geq 3\), \(Q\)-polynomial with respect to \(E_0, E_1, \ldots, E_D\).
-Fix a vertex \(x\in X\), and write \(E^*\equiv E^*_i(x)\), \(T\equiv T(x)\). Let \(W\) denote an irreducible \(T\)-module with endpoint \(r\), dual endpoint \(r^*\), diameter \(d\) and dual diameter \(d^*\).
+Fix a vertex \(x\in X\), and write \(E^*_i\equiv E^*_i(x)\), \(T\equiv T(x)\). Let \(W\) denote an irreducible \(T\)-module with endpoint \(r\), dual endpoint \(r^*\), diameter \(d\) and dual diameter \(d^*\).
 
 Then the following hold.
 
@@ -7910,7 +7915,7 @@ Let \(\Gamma = (X, E)\) be distance regular of diameter \(D\geq 3\), \(Q\)-polyn
 
 \[1, 2, 2, \ldots, 2, 1.\]
 
-\((ii)\) \(v, Av, A_2v, \ldots, A_{D_2}v\), \(v^*, A^*v^*, A^*_2v^*, \ldots, A^*_{D-2}v^*\) is a basis for \(W\), where
+\((ii)\) \(v, Av, A_2v, \ldots, A_{D-2}v\), \(v^*, A^*v^*, A^*_2v^*, \ldots, A^*_{D-2}v^*\) is a basis for \(W\), where
 
 \[0\neq v\in E^*_iW, \text{ and } v^* = |X|E_1v.\]
 
@@ -7928,9 +7933,9 @@ I believe the entries are necely foctorable expressions in the basic variables,
 \[q, s, s^*, r_1, r_1.\]
 (Hint: use Theorem \ref{thm:dim5}.)
 
-If not, find dome nice basis for \(W\), and find the matrices representing \(A\), \(A^*\) with respect to this basis.
+If not, find some nice basis for \(W\), and find the matrices representing \(A\), \(A^*\) with respect to this basis.
 
-Prehaps, some orthogonal basis based on \((iii)\).
+Perhaps, some orthogonal basis based on \((iii)\).
 
 Algebraically, everything is determined by the intersection numbers and \(a_0(W)\).
 

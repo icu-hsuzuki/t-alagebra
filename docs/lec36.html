@@ -190,16 +190,16 @@ div.csl-indent {
 Let <span class="math inline">\(A^* \equiv A^*_1(x)\)</span>, <span class="math inline">\(W\)</span> an irreducible <span class="math inline">\(T\)</span>-moduoe, and <span class="math inline">\(d^* = \{i\mid E_iW\neq 0\}|-1\)</span>.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E_iA^*E_j = 0 \; \text{ if }\; |i-j|&gt;1, \; E_iA^*E_j\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d^*(x)\)</span>.<br />
 <span class="math inline">\((ii)\)</span> <span class="math inline">\(A^*E_jW \subseteq E_{j-1}W + E_jW + E_{j+1}W\)</span>, <span class="math inline">\(0\leq j \leq d^*(x)\)</span>. <span class="math inline">\((E_iW = 0 \; \text{ if } i&lt;j\)</span> or <span class="math inline">\(i &gt; d^*(x)\)</span>.)<br />
-<span class="math inline">\((iii)\)</span> <span class="math inline">\(E_jW \neq 0\)</span> if <span class="math inline">\(r\leq j \leq r+d\)</span>, <span class="math inline">\(=0\)</span> if <span class="math inline">\(0\leq j\leq r\)</span> or <span class="math inline">\(r+d &lt; j \leq d^*(x)\)</span>.<br />
+<span class="math inline">\((iii)\)</span> <span class="math inline">\(E_jW \neq 0\)</span> if <span class="math inline">\(r^*\leq j \leq r^*+d^*\)</span>, <span class="math inline">\(E_jW=0\)</span> if <span class="math inline">\(0\leq j\leq r^*\)</span> or <span class="math inline">\(r^*+d^* &lt; j \leq d^*(x)\)</span>.<br />
 <span class="math inline">\((iv)\)</span> <span class="math inline">\(E_iA^*E_jW \neq 0\)</span>, if <span class="math inline">\(|i-j| = 1\)</span> <span class="math inline">\((r^* \leq i,j \leq r^*+d^*)\)</span>.</div>
-<p><em>Proof of <a href="lec4.html#lem:irreducible">4.1</a>’</em>
-| <span class="math inline">\((i)\)</span> By Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a>,
-<span class="math display">\[E_iA^*E_j = O \leftrightarrow q^j_{i1} = 0.\]</span>
+<p><em>Proof of <a href="lec4.html#lem:irreducible">4.1</a>’</em></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> By Lemma <a href="lec20.html#lem:vanishing-condition">20.3</a>,</div>
+<p><span class="math display">\[E_iA^*E_j = O \leftrightarrow q^j_{i1} = 0.\]</span>
 By Lemma <a href="lec22.html#lem:q-conditions">22.2</a>,
 <span class="math display">\[\begin{align}
-\Gamma\text{: $Q$-polynomial} &amp;\leftrightarrow q^j_{i1} \;\begin{cases} = 0 &amp; \text{if }|j-i|&gt;1\\
+\Gamma\text{: $Q$-polynomial} &amp;\leftrightarrow q^j_{i1} \;\begin{cases} = 0 &amp; \text{if }|j-i|&gt;1,\\
 \neq 0 &amp; \text{if }|j-i|=1.\end{cases}\\
-&amp; \leftrightarrow E_iA^*E_j \;\begin{cases} = O &amp; \text{if }|j-i|&gt;1\\
+&amp; \leftrightarrow E_iA^*E_j \;\begin{cases} = O &amp; \text{if }|j-i|&gt;1,\\
 \neq O &amp; \text{if }|j-i|=1.\end{cases}
 \end{align}\]</span></p>
 <div class="line-block"><span class="math inline">\((ii)\)</span> We have</div>
@@ -236,19 +236,19 @@ With above notation, the following hold.</p>
 <p><span class="math display">\[p^*_0 = 1, \quad \lambda p^*_i = p^*_{i+1} + a^*_i p^*_i + x^*_i p^*_{i-1} \quad \text{ for all } i\in \{0, \ldots, d^*\}, \quad p^*_{-1} = 0.\]</span></p>
 <div class="line-block"><span class="math inline">\(\quad (iva)\)</span> <span class="math inline">\(p^*_i(A^*)w^*_0 = w^*_i\)</span>, for all <span class="math inline">\(i\in \{0, \ldots, d^*+1\}\)</span>.</div>
 <div class="line-block"><span class="math inline">\(\quad (ivb)\)</span> <span class="math inline">\(p^*_{d^*+1}\)</span> is the minimal polynomial of <span class="math inline">\(A^*|_W\)</span>.</div>
-<p><em>Proof of Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>’</em>
-| <span class="math inline">\((i)\)</span> Recall
-<span class="math display">\[A^* = \sum_{j=0}^D\theta^*_jE^*_j, \quad \theta^*_j = q_1(j) = |X|(E_1)_{xy}\in \mathbb{R}, \; \partial(x,y)=j.\]</span>
-<span class="math inline">\(a_i\)</span> is an eigenvalue of a real symmetric matrix <span class="math inline">\(E_{r^*+i}A^*E_{r^*+i}\)</span>.</p>
-<div class="line-block"><span class="math inline">\((ii)\)</span> Let <span class="math inline">\(B = E^*_{r+i}AE^*_{r+i-1}\)</span>.</div>
+<p><em>Proof of Lemma <a href="lec9.html#lem:thin-module-structure">9.1</a>’</em></p>
+<div class="line-block"><span class="math inline">\((i)\)</span> Recall</div>
+<p><span class="math display">\[A^* = \sum_{j=0}^D\theta^*_jE^*_j, \quad \theta^*_j = q_1(j) = |X|(E_1)_{xy}\in \mathbb{R}, \; \partial(x,y)=j.\]</span>
+<span class="math inline">\(a_i^*\)</span> is an eigenvalue of a real symmetric matrix <span class="math inline">\(E_{r^*+i}A^*E_{r^*+i}\)</span>.</p>
+<div class="line-block"><span class="math inline">\((ii)\)</span> Let <span class="math inline">\(B = E^*_{r^*+i}AE^*_{r^*+i-1}\)</span>.</div>
 <p>Then, <span class="math inline">\(x^*_i\)</span> is an eigenvalue of a real symmetrix matrix <span class="math inline">\(B^\top B\)</span>.
-Let <span class="math inline">\(\mathrm{Span}\{v_{i-1}\} = E_{r^*+i}A^*E_{r^*+i-1}W\)</span>, and <span class="math inline">\(Bv_{i-1}\neq 0\)</span> by Lemma <a href="lec4.html#lem:irreducible">4.1</a>’ <span class="math inline">\((iv)\)</span> for <span class="math inline">\(i\in \{1, \ldots, d^*\}\)</span>. So, <span class="math inline">\(x_i\in \mathbb{R}^{&gt;0}\)</span> for all <span class="math inline">\(i\in \{1, \ldots, d^*\}\)</span>.</p>
+Let <span class="math inline">\(\mathrm{Span}\{v_{i-1}\} = E_{r^*+i-1}W\)</span>, and <span class="math inline">\(Bv_{i-1}\neq 0\)</span> by Lemma <a href="lec4.html#lem:irreducible">4.1</a>’ <span class="math inline">\((iv)\)</span> for <span class="math inline">\(i\in \{1, \ldots, d^*\}\)</span>. So, <span class="math inline">\(x_i\in \mathbb{R}^{&gt;0}\)</span> for all <span class="math inline">\(i\in \{1, \ldots, d^*\}\)</span>.</p>
 <div class="line-block"><span class="math inline">\((iiia)\)</span> Observe</div>
 <p><span class="math display">\[w^*_i = E_{r^*+i}A^*E^*_{r^*+i-1}w^*_{i-1} \quad \text{ for all }i\in \{1, \ldots, d^*\}.\]</span>
 So <span class="math inline">\(w^*_i \neq 0\)</span> for all <span class="math inline">\(i\in \{1, \ldots, d^*\}\)</span> by Lemma <a href="lec4.html#lem:irreducible">4.1</a>’ <span class="math inline">\((iv)\)</span>.</p>
 <p>Hence,
 <span class="math display">\[W = \mathrm{Span}(w^*_0, \ldots, w^*_d)\]</span>
-by Lemma <a href="lec4.html#lem:irreducible">4.1</a>’. <span class="math inline">\((iii)\)</span>.</p>
+by Lemma <a href="lec4.html#lem:irreducible">4.1</a>’ <span class="math inline">\((iii)\)</span>.</p>
 <p><span class="math inline">\((iiib)\)</span> We have that
 <span class="math display">\[\begin{align}
 A^*w^*_i &amp; = E_{r^*+i+1}A^*w^*_i + E_{r^*+i}A^*w^*_i + E_{r^*+i-1}A^*w^*_i\\
@@ -264,8 +264,8 @@ Since <span class="math inline">\(W = \{p(A^*)w^*_0\mid p\in \mathbb{C}[\lambda]
 With the notation above, let <span class="math inline">\(W\)</span> be a dualthin irreducible <span class="math inline">\(T\)</span>-module with dual endpoint <span class="math inline">\(r^*(W)\)</span>, and dual diameter <span class="math inline">\(d^*\)</span>. Then,</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(W\)</span> is thin,</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(d^* = d = |\{i\mid E^*_iW\neq 0\}| -1\)</span>.</div>
-<p><em>Proof of Corollary <a href="lec9.html#cor:thin-is-dualthin">9.1</a>’</em>
-Set as in Lemma {<a href="lec4.html#lem:irreducible">4.1</a>}’.
+<p><em>Proof of Corollary <a href="lec9.html#cor:thin-is-dualthin">9.1</a>’</em></p>
+<p>Set as in Lemma {<a href="lec4.html#lem:irreducible">4.1</a>}’.
 <span class="math display">\[w^*_i = p^*_i(A^*)w^*_0 \in E_{r^*+i}W.\]</span>
 Then, <span class="math inline">\(w^*_0, w^*_1, \ldots, w^*_{d^*}\)</span> is a basis for <span class="math inline">\(W\)</span>. We have <span class="math inline">\(W = M^*w^*_0\)</span>.</p>
 <p>So, <span class="math inline">\(E^*_iW = E^*_iM^*w^*_0 = \mathrm{Span}(E^*_iw^*_0)\)</span>.</p>
@@ -281,11 +281,11 @@ Then, <span class="math inline">\(w^*_0, w^*_1, \ldots, w^*_{d^*}\)</span> is a 
 <p><span class="math inline">\(\quad r^*(W) = 1\)</span>.</p>
 <p>Up to isomorphism,</p>
 <p>there are at most <span class="math inline">\(3\)</span> thin irreducible <span class="math inline">\(T\)</span>-modules with <span class="math inline">\(r(W) =1\)</span> and <span class="math inline">\(r^*(W)=1\)</span>,</p>
-<p>there are at most <span class="math inline">\(1\)</span> thin irreducible <span class="math inline">\(T\)</span>-modules with <span class="math inline">\(r(W) = 1\)</span> and <span class="math inline">\(r^*(W)=2\)</span>,</p>
+<p>there are at most <span class="math inline">\(1\)</span> thin irreducible <span class="math inline">\(T\)</span>-module with <span class="math inline">\(r(W) = 1\)</span> and <span class="math inline">\(r^*(W)=2\)</span>,</p>
 <p>there are none thin irreducible <span class="math inline">\(T\)</span>-modules with <span class="math inline">\(r(W) = 1\)</span> and <span class="math inline">\(r^*(W) &gt; 2\)</span>.</p>
 <p>By dual argument,</p>
 <p>there are at most <span class="math inline">\(3\)</span> thin irreducible <span class="math inline">\(T\)</span>-modules with <span class="math inline">\(r^*(W) =1\)</span> and <span class="math inline">\(r(W)=1\)</span>,</p>
-<p>there are at most <span class="math inline">\(1\)</span> thin irreducible <span class="math inline">\(T\)</span>-modules with <span class="math inline">\(r^*(W) = 1\)</span> and <span class="math inline">\(r(W)=2\)</span>,</p>
+<p>there are at most <span class="math inline">\(1\)</span> thin irreducible <span class="math inline">\(T\)</span>-module with <span class="math inline">\(r^*(W) = 1\)</span> and <span class="math inline">\(r(W)=2\)</span>,</p>
 <p>there are none thin irreducible <span class="math inline">\(T\)</span>-modules with <span class="math inline">\(r%*(W) = 1\)</span> and <span class="math inline">\(r(W) &gt; 2\)</span>.</p>
 <div class="conjecture">
 <p><span id="cnj:q-polynomial" class="conjecture"><strong>Conjecture 36.1  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be a thin distance regular graph of diameter <span class="math inline">\(D\geq 3\)</span>. Let <span class="math inline">\(E_1\)</span> be any primitive idempotent not equal to <span class="math inline">\(E_0\)</span>.</p>
@@ -295,7 +295,7 @@ Then, <span class="math inline">\(w^*_0, w^*_1, \ldots, w^*_{d^*}\)</span> is a 
 </div>
 <div class="conjecture">
 <p><span id="cnj:unimodality" class="conjecture"><strong>Conjecture 36.2  </strong></span>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be distance regular of diameter <span class="math inline">\(D\geq 3\)</span>, <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>.
-Fix a vertex <span class="math inline">\(x\in X\)</span>, and write <span class="math inline">\(E^*\equiv E^*_i(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>. Let <span class="math inline">\(W\)</span> denote an irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r\)</span>, dual endpoint <span class="math inline">\(r^*\)</span>, diameter <span class="math inline">\(d\)</span> and dual diameter <span class="math inline">\(d^*\)</span>.</p>
+Fix a vertex <span class="math inline">\(x\in X\)</span>, and write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>. Let <span class="math inline">\(W\)</span> denote an irreducible <span class="math inline">\(T\)</span>-module with endpoint <span class="math inline">\(r\)</span>, dual endpoint <span class="math inline">\(r^*\)</span>, diameter <span class="math inline">\(d\)</span> and dual diameter <span class="math inline">\(d^*\)</span>.</p>
 <p>Then the following hold.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(d = d^*\)</span>.</div>
 <div class="line-block"><span class="math inline">\((ii)\)</span> there exists <span class="math inline">\(s \in \{r, \ldots, r+d\}\)</span> such that</div>
@@ -308,7 +308,7 @@ Fix a vertex <span class="math inline">\(x\in X\)</span>, and write <span class=
 <p><span id="cnj:not-thin" class="conjecture"><strong>Conjecture 36.3  </strong></span>The following are equivalent.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> The sequence <span class="math inline">\(\dim E^*_1W, \dim E^*_2W, \ldots, E^*_DW\)</span> equals</div>
 <p><span class="math display">\[1, 2, 2, \ldots, 2, 1.\]</span></p>
-<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(v, Av, A_2v, \ldots, A_{D_2}v\)</span>, <span class="math inline">\(v^*, A^*v^*, A^*_2v^*, \ldots, A^*_{D-2}v^*\)</span> is a basis for <span class="math inline">\(W\)</span>, where</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(v, Av, A_2v, \ldots, A_{D-2}v\)</span>, <span class="math inline">\(v^*, A^*v^*, A^*_2v^*, \ldots, A^*_{D-2}v^*\)</span> is a basis for <span class="math inline">\(W\)</span>, where</div>
 <p><span class="math display">\[0\neq v\in E^*_iW, \text{ and } v^* = |X|E_1v.\]</span></p>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(v^+_1, v^+_2, \ldots, v^+_D, v^-_2, v^-_3, \ldots, v^-_{D-1}\)</span> is a basis for <span class="math inline">\(W\)</span>, where</div>
 <p><span class="math display">\[v^+_i = E^*_iA_{i-1}v, \quad v^-_i = E^*_iA_{i+1}v.\]</span></p>
@@ -319,8 +319,8 @@ Let <span class="math inline">\(B\)</span> denote the orthogonal basis for <span
 <p>I believe the entries are necely foctorable expressions in the basic variables,
 <span class="math display">\[q, s, s^*, r_1, r_1.\]</span>
 (Hint: use Theorem <a href="lec35.html#thm:dim5">35.1</a>.)</p>
-<p>If not, find dome nice basis for <span class="math inline">\(W\)</span>, and find the matrices representing <span class="math inline">\(A\)</span>, <span class="math inline">\(A^*\)</span> with respect to this basis.</p>
-<p>Prehaps, some orthogonal basis based on <span class="math inline">\((iii)\)</span>.</p>
+<p>If not, find some nice basis for <span class="math inline">\(W\)</span>, and find the matrices representing <span class="math inline">\(A\)</span>, <span class="math inline">\(A^*\)</span> with respect to this basis.</p>
+<p>Perhaps, some orthogonal basis based on <span class="math inline">\((iii)\)</span>.</p>
 <p>Algebraically, everything is determined by the intersection numbers and <span class="math inline">\(a_0(W)\)</span>.</p>
 <p>Combinatorically, certain quantities mulst be nonnegative integers. Does this give some new bounds, or other information on <span class="math inline">\(a_0(W)\)</span>?</p>
 
