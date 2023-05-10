@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2023-05-09}
+\date{2023-05-10}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -7968,23 +7968,25 @@ We have that
 
 \((1)\) \(FR^2E^*_j \in \mathrm{Span}(RFRE^*_j, R^2FE^*_j, R^2E^*_j)\) for \(i\in \{0, \ldots, D-3\}\).
 
-\((2)\) \(LR^2E^*_j \in \mathrm{Span}(RLRE^*_j, R^2LE^*_j, F^2E^*_j, FRFE^*_j, RF^2E^*_j, RFE^*_j, FRE^*_j, RE^*_j)\) for \(i\in \{0, \ldots, D-3\}\)
+\((2)\) \(LR^2E^*_j \in \mathrm{Span}(RLRE^*_j, R^2LE^*_j, F^2RE^*_j, FRFE^*_j, RF^2E^*_j, RFE^*_j, FRE^*_j, RE^*_j)\) for \(i\in \{0, \ldots, D-3\}\)
 
 by Corollary \ref{cor:fr2lr2r2l}.
 
-Claim \((a)\) \(FR^iv \in \mathrm{Span}(R^iv)\) for \(i\in \{0, \ldots, D-2\}\),
+Claim \((a)\) \(FR^iv \in \mathrm{Span}(R^iv)\) for \(i\in \{0, \ldots, D-2\}\),\\
 \(\quad (b)\) \(LR^iv \in \mathrm{Span}(R^{i-1}v)\) for \(i\in \{1, \ldots, D-2\}\).
 
 \textbf{HS MEMO}
 
 \emph{Proof of Claim.}
-\textbar{} \((a)\) by Lemma \ref{lem:tv}, and an assumption
+
+\((a)\) By Lemma \ref{lem:tv}, and our assumption
+
 \[\dim E^*_1W = \dim E^*_2W = 1.\]
 So, \(Rv\neq 0\), and \(E^*_2W = \mathrm{Span}(Rv)\).
 
 We may assume \(i\geq 2\). Then \(R^{i-2}v \in E^*_{i-1}W\),
 \begin{align}
-FR^iv & = FR^2R^{i-2}v, \quad \text{if }\; i\leq D-2,
+FR^iv & = FR^2R^{i-2}v, \quad \text{if }\; i\leq D-2,\\
 & = R(FR + RF + R)R^{i-2}v\\
 & \in R(\mathrm{Span}(R^{i-1}v)) \\
 & = \mathrm{Span}(R^iv),
@@ -7996,12 +7998,12 @@ by the induction hypothesis.
 \begin{align}
 LR^iv &= LR^2(R^{i-2}v)\\
 & = (RLR + R^2L + F^2R + FRF + RF^2 + RF + FR + R)R^{i-2}v\\
-& \in \mathrm{Span}(R^{-1}v),
+& \in \mathrm{Span}(R^{i-1}v),
 \end{align}
 by induction and \((a)\).
 
 Suppose \(R^{D-1}v = 0\). Then,
-\[\mathrm{Span}(v, Rv, \ldots, R^{D-2}v) = \widetilde{W}.\]
+\[\mathrm{Span}(v, Rv, \ldots, R^{D-2}v) = \widetilde{W}\]
 is invariant under \(M\) and \(M^*\), hence, under \(T\).
 
 Since \(W\) is irreducible, \(W = \widetilde{W}\), and \(W\) is thin in this case.
@@ -8015,8 +8017,10 @@ Hence, each \(R^iv\) is a polynomial of degree \(i\) in \(A\) applied to \(v\), 
 Also,
 \[A_Dv = Jv - \left(\sum_{h=0}^{D-1}A_h\right)v \in \mathrm{Span}(v, A_1v, \ldots, A_{D-1}v).\]
 Thus,
-\[Mv = \mathrm{Span}(v, A_1v, \ldots, A_{D-1}v) = \widetilde{W}\]
-is invariant under \(M\), \(M^*\), and hence \(T\). We have \(W = \widehat{W}\) and \(W\) is thin.
+\[Mv = \mathrm{Span}(v, Rv, \ldots, R^{D-1}v).\]
+Therefore,
+\[\mathrm{Span}(v, Rv, \ldots, R^{D-1}v) = \widetilde{W}\]
+is invariant under \(M\), \(M^*\), and hence \(T\). We have \(W = \widetilde{W}\) and \(W\) is thin.
 \end{proof}
 
 \begin{definition}
@@ -8041,7 +8045,7 @@ Pick \(O\neq B \in \mathrm{Mat}_X(\mathbb{C})\).
 \[\alpha A + \beta I \quad (\alpha, \beta\in \mathbb{C})\]
 is a generalized adjacency matrix.
 
-If \(\Gamma\) is distance-regular, all generalized adjacecy matrices are of this form.
+If \(\Gamma\) is distance regular, all generalized adjacecy matrices are of this form.
 \end{example}
 
 Let \(\Gamma = (X, E)\) be a distance-regular graph of diameter \(D\geq 3\). Assume \(\Gamma\) is thin, and \(Q\)-polynomial.
@@ -8067,6 +8071,8 @@ is a generalized adjacency matrix for \(\Gamma_1\) for all \(i\in \{1, \ldots, D
 Write \(T \equiv T(x)\). Fix \(i\in \{1, \ldots, D-3\}\).
 
 Recall \(R^{-1}\in T\) by Lemma \ref{lem:inverse-of-r} \((iv)\).
+
+Since \(E^*_{i-1}R^{-1}E^*_i = R^{-1}E^*_i\) by Lemma \ref{lem:inverse-of-r} \((ii)\),
 \[\Delta \in E^*_1TE^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2, \ldots)\]
 by Lemma \ref{lem:tv-thin} \((iv)\).
 
@@ -8081,15 +8087,15 @@ Suppose \(\Delta_{yz}\neq 0\). Then,
 We will show this cannot occur.
 
 Notation: Set
-\[E^*_{ij} = E^*_i(x)E^*_(y), \; i,j\in \{0, 1, \ldots, D\}.\]
+\[E^*_{ij} = E^*_i(x)E^*_j(y), \; i,j\in \{0, 1, \ldots, D\}.\]
 Then,
-\(E^*_{ij}V = \mathrm{Span}(\hat{w}\mid w\in X, \partial(x,w)=i, \partial(y,w)=j) \text{ for } i,j\in \{0, 1, \ldots, D\}.\)\$
+\[E^*_{ij}V = \mathrm{Span}(\hat{w}\mid w\in X, \partial(x,w)=i, \partial(y,w)=j) \text{ for } i,j\in \{0, 1, \ldots, D\}.\]
 Let \(\delta\) denote the all \(1\)'s vector in \(V\). Let
 \[\delta_{ij} = E^*_{ij}\delta = \sum_{w\in X, \partial(x,w)=i, \partial(y,w)=j}\hat{w}.\]
 
 Now,
-\[\Delta\hat{y} \in E^*_1(x)V = E^*_{10}(x)V + E^*_{11}V + E^*_{12}V \quad \text{(orthogonal direct sum)}.\]
-So, there exist \(\delta^+_{10}\in E^*_{10}(x)V\), \(\delta^+_{11}\in E^*_{11}V\), and \(\delta^+_{12}\in E^*_{12}V\) such that
+\[\Delta\hat{y} \in E^*_1(x)V = E^*_{10}V + E^*_{11}V + E^*_{12}V \quad \text{(orthogonal direct sum)}.\]
+So, there exist \(\delta^+_{10}\in E^*_{10}V\), \(\delta^+_{11}\in E^*_{11}V\), and \(\delta^+_{12}\in E^*_{12}V\) such that
 \[\Delta \hat{y} = \delta^+_{10} + \delta^+_{11} + \delta^+_{12}.\]
 
 Observe: \(\hat{z}\in E^*_{12}V\) is not orthogonal to \(\Delta \hat{y}\).
@@ -8107,13 +8113,13 @@ R^{i-1}(\delta^+_{10} + \delta^+_{11} + \delta^+_{12}) & = R^{i-1}\Delta\hat{y}\
 
 \textbf{HS MEMO}
 
-It is because on each irreducible hin module with standard basis \(w_r, w_{r+1}, \ldots, w_{r+d}\),
+It is because on each irreducible thin module with standard basis \(w_r, w_{r+1}, \ldots, w_{r+d}\),
 \[R^{-1}w_i = w_{i-1}, \; i>r, \; R^{-1}w_r = 0,\]
 and \(E^*_1V\) is an orthogonal direct sum of irreducible modules and \(r\leq 1\).
 
-Bu we can control \(R^{i-1}\delta^+_{10}\), \(R^{i-1}\delta^+_{11}\), also.
+But we can control \(R^{i-1}\delta^+_{10}\), \(R^{i-1}\delta^+_{11}\), also.
 
-Claim. \(RE^*_{jj}V \subseteq E^*_{j+1,j+1}V + E^*_{j+1, j}V, \; j\in \{1, \ldots, D-1\}.\)\$
+Claim. \(RE^*_{jj}V \subseteq E^*_{j+1,j+1}V + E^*_{j+1, j}V, \; j\in \{1, \ldots, D-1\}.\)
 
 \emph{Proof of Claim.} Clear.
 

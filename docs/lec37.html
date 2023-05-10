@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-05-09" />
+<meta name="date" content="2023-05-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -183,19 +183,19 @@ Fix a vertex <span class="math inline">\(x\in X\)</span>, and write <span class=
 </ul>
 <p>We have that</p>
 <div class="line-block"><span class="math inline">\((1)\)</span> <span class="math inline">\(FR^2E^*_j \in \mathrm{Span}(RFRE^*_j, R^2FE^*_j, R^2E^*_j)\)</span> for <span class="math inline">\(i\in \{0, \ldots, D-3\}\)</span>.</div>
-<div class="line-block"><span class="math inline">\((2)\)</span> <span class="math inline">\(LR^2E^*_j \in \mathrm{Span}(RLRE^*_j, R^2LE^*_j, F^2E^*_j, FRFE^*_j, RF^2E^*_j, RFE^*_j, FRE^*_j, RE^*_j)\)</span> for <span class="math inline">\(i\in \{0, \ldots, D-3\}\)</span></div>
+<div class="line-block"><span class="math inline">\((2)\)</span> <span class="math inline">\(LR^2E^*_j \in \mathrm{Span}(RLRE^*_j, R^2LE^*_j, F^2RE^*_j, FRFE^*_j, RF^2E^*_j, RFE^*_j, FRE^*_j, RE^*_j)\)</span> for <span class="math inline">\(i\in \{0, \ldots, D-3\}\)</span></div>
 <p>by Corollary <a href="lec30.html#cor:fr2lr2r2l">30.1</a>.</p>
-<p>Claim <span class="math inline">\((a)\)</span> <span class="math inline">\(FR^iv \in \mathrm{Span}(R^iv)\)</span> for <span class="math inline">\(i\in \{0, \ldots, D-2\}\)</span>,
+<p>Claim <span class="math inline">\((a)\)</span> <span class="math inline">\(FR^iv \in \mathrm{Span}(R^iv)\)</span> for <span class="math inline">\(i\in \{0, \ldots, D-2\}\)</span>,<br />
 <span class="math inline">\(\quad (b)\)</span> <span class="math inline">\(LR^iv \in \mathrm{Span}(R^{i-1}v)\)</span> for <span class="math inline">\(i\in \{1, \ldots, D-2\}\)</span>.</p>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
-<p><em>Proof of Claim.</em>
-| <span class="math inline">\((a)\)</span> by Lemma <a href="lec34.html#lem:tv">34.2</a>, and an assumption
-<span class="math display">\[\dim E^*_1W = \dim E^*_2W = 1.\]</span>
+<p><em>Proof of Claim.</em></p>
+<div class="line-block"><span class="math inline">\((a)\)</span> By Lemma <a href="lec34.html#lem:tv">34.2</a>, and our assumption</div>
+<p><span class="math display">\[\dim E^*_1W = \dim E^*_2W = 1.\]</span>
 So, <span class="math inline">\(Rv\neq 0\)</span>, and <span class="math inline">\(E^*_2W = \mathrm{Span}(Rv)\)</span>.</p>
 <p>We may assume <span class="math inline">\(i\geq 2\)</span>. Then <span class="math inline">\(R^{i-2}v \in E^*_{i-1}W\)</span>,
 <span class="math display">\[\begin{align}
-FR^iv &amp; = FR^2R^{i-2}v, \quad \text{if }\; i\leq D-2,
+FR^iv &amp; = FR^2R^{i-2}v, \quad \text{if }\; i\leq D-2,\\
 &amp; = R(FR + RF + R)R^{i-2}v\\
 &amp; \in R(\mathrm{Span}(R^{i-1}v)) \\
 &amp; = \mathrm{Span}(R^iv),
@@ -205,12 +205,12 @@ by the induction hypothesis.</p>
 <p><span class="math display">\[\begin{align}
 LR^iv &amp;= LR^2(R^{i-2}v)\\
 &amp; = (RLR + R^2L + F^2R + FRF + RF^2 + RF + FR + R)R^{i-2}v\\
-&amp; \in \mathrm{Span}(R^{-1}v),
+&amp; \in \mathrm{Span}(R^{i-1}v),
 \end{align}\]</span>
 by induction and <span class="math inline">\((a)\)</span>.</p>
 </div>
 <p>Suppose <span class="math inline">\(R^{D-1}v = 0\)</span>. Then,
-<span class="math display">\[\mathrm{Span}(v, Rv, \ldots, R^{D-2}v) = \widetilde{W}.\]</span>
+<span class="math display">\[\mathrm{Span}(v, Rv, \ldots, R^{D-2}v) = \widetilde{W}\]</span>
 is invariant under <span class="math inline">\(M\)</span> and <span class="math inline">\(M^*\)</span>, hence, under <span class="math inline">\(T\)</span>.</p>
 <p>Since <span class="math inline">\(W\)</span> is irreducible, <span class="math inline">\(W = \widetilde{W}\)</span>, and <span class="math inline">\(W\)</span> is thin in this case.</p>
 <p>Suppose <span class="math inline">\(R^{D-1}v \neq 0\)</span>.</p>
@@ -220,8 +220,10 @@ is invariant under <span class="math inline">\(M\)</span> and <span class="math 
 Also,
 <span class="math display">\[A_Dv = Jv - \left(\sum_{h=0}^{D-1}A_h\right)v \in \mathrm{Span}(v, A_1v, \ldots, A_{D-1}v).\]</span>
 Thus,
-<span class="math display">\[Mv = \mathrm{Span}(v, A_1v, \ldots, A_{D-1}v) = \widetilde{W}\]</span>
-is invariant under <span class="math inline">\(M\)</span>, <span class="math inline">\(M^*\)</span>, and hence <span class="math inline">\(T\)</span>. We have <span class="math inline">\(W = \widehat{W}\)</span> and <span class="math inline">\(W\)</span> is thin.</p>
+<span class="math display">\[Mv = \mathrm{Span}(v, Rv, \ldots, R^{D-1}v).\]</span>
+Therefore,
+<span class="math display">\[\mathrm{Span}(v, Rv, \ldots, R^{D-1}v) = \widetilde{W}\]</span>
+is invariant under <span class="math inline">\(M\)</span>, <span class="math inline">\(M^*\)</span>, and hence <span class="math inline">\(T\)</span>. We have <span class="math inline">\(W = \widetilde{W}\)</span> and <span class="math inline">\(W\)</span> is thin.</p>
 </div>
 <div class="definition">
 <p><span id="def:generalized-adjacency-matrix" class="definition"><strong>Definition 37.1  </strong></span>Let <span class="math inline">\(\Gamma = (X,E)\)</span> be any regular graph (not necessarily connected).</p>
@@ -235,7 +237,7 @@ is invariant under <span class="math inline">\(M\)</span>, <span class="math inl
 <p><span id="exm:generalized-adjacecy-matrix" class="example"><strong>Example 37.1  </strong></span>Any nonzero matrix of form
 <span class="math display">\[\alpha A + \beta I \quad (\alpha, \beta\in \mathbb{C})\]</span>
 is a generalized adjacency matrix.</p>
-<p>If <span class="math inline">\(\Gamma\)</span> is distance-regular, all generalized adjacecy matrices are of this form.</p>
+<p>If <span class="math inline">\(\Gamma\)</span> is distance regular, all generalized adjacecy matrices are of this form.</p>
 </div>
 <p>Let <span class="math inline">\(\Gamma = (X, E)\)</span> be a distance-regular graph of diameter <span class="math inline">\(D\geq 3\)</span>. Assume <span class="math inline">\(\Gamma\)</span> is thin, and <span class="math inline">\(Q\)</span>-polynomial.</p>
 <p>Pick a vertex <span class="math inline">\(x\in X\)</span>, and write <span class="math inline">\(E^*_i \equiv E^*_i(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>. Then,
@@ -252,7 +254,8 @@ is a generalized adjacency matrix for <span class="math inline">\(\Gamma_1\)</sp
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-81" class="proof"><em>Proof</em>. </span>Write <span class="math inline">\(T \equiv T(x)\)</span>. Fix <span class="math inline">\(i\in \{1, \ldots, D-3\}\)</span>.</p>
-<p>Recall <span class="math inline">\(R^{-1}\in T\)</span> by Lemma <a href="lec31.html#lem:inverse-of-r">31.1</a> <span class="math inline">\((iv)\)</span>.
+<p>Recall <span class="math inline">\(R^{-1}\in T\)</span> by Lemma <a href="lec31.html#lem:inverse-of-r">31.1</a> <span class="math inline">\((iv)\)</span>.</p>
+<p>Since <span class="math inline">\(E^*_{i-1}R^{-1}E^*_i = R^{-1}E^*_i\)</span> by Lemma <a href="lec31.html#lem:inverse-of-r">31.1</a> <span class="math inline">\((ii)\)</span>,
 <span class="math display">\[\Delta \in E^*_1TE^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2, \ldots)\]</span>
 by Lemma <a href="lec34.html#lem:tv-thin">34.3</a> <span class="math inline">\((iv)\)</span>.</p>
 <p>Hence, <span class="math inline">\(\Delta\)</span> satisfied the condition <span class="math inline">\((ii)\)</span> of Definition <a href="lec37.html#def:generalized-adjacency-matrix">37.1</a>.</p>
@@ -264,14 +267,14 @@ Suppose <span class="math inline">\(\Delta_{yz}\neq 0\)</span>. Then,
 <span class="math display">\[\langle \Delta\hat{y},\hat{z}\rangle \neq 0.\]</span>
 We will show this cannot occur.</p>
 <p>Notation: Set
-<span class="math display">\[E^*_{ij} = E^*_i(x)E^*_(y), \; i,j\in \{0, 1, \ldots, D\}.\]</span>
+<span class="math display">\[E^*_{ij} = E^*_i(x)E^*_j(y), \; i,j\in \{0, 1, \ldots, D\}.\]</span>
 Then,
-<span class="math inline">\(E^*_{ij}V = \mathrm{Span}(\hat{w}\mid w\in X, \partial(x,w)=i, \partial(y,w)=j) \text{ for } i,j\in \{0, 1, \ldots, D\}.\)</span>$
+<span class="math display">\[E^*_{ij}V = \mathrm{Span}(\hat{w}\mid w\in X, \partial(x,w)=i, \partial(y,w)=j) \text{ for } i,j\in \{0, 1, \ldots, D\}.\]</span>
 Let <span class="math inline">\(\delta\)</span> denote the all <span class="math inline">\(1\)</span>’s vector in <span class="math inline">\(V\)</span>. Let
 <span class="math display">\[\delta_{ij} = E^*_{ij}\delta = \sum_{w\in X, \partial(x,w)=i, \partial(y,w)=j}\hat{w}.\]</span></p>
 <p>Now,
-<span class="math display">\[\Delta\hat{y} \in E^*_1(x)V = E^*_{10}(x)V + E^*_{11}V + E^*_{12}V \quad \text{(orthogonal direct sum)}.\]</span>
-So, there exist <span class="math inline">\(\delta^+_{10}\in E^*_{10}(x)V\)</span>, <span class="math inline">\(\delta^+_{11}\in E^*_{11}V\)</span>, and <span class="math inline">\(\delta^+_{12}\in E^*_{12}V\)</span> such that
+<span class="math display">\[\Delta\hat{y} \in E^*_1(x)V = E^*_{10}V + E^*_{11}V + E^*_{12}V \quad \text{(orthogonal direct sum)}.\]</span>
+So, there exist <span class="math inline">\(\delta^+_{10}\in E^*_{10}V\)</span>, <span class="math inline">\(\delta^+_{11}\in E^*_{11}V\)</span>, and <span class="math inline">\(\delta^+_{12}\in E^*_{12}V\)</span> such that
 <span class="math display">\[\Delta \hat{y} = \delta^+_{10} + \delta^+_{11} + \delta^+_{12}.\]</span></p>
 <p>Observe: <span class="math inline">\(\hat{z}\in E^*_{12}V\)</span> is not orthogonal to <span class="math inline">\(\Delta \hat{y}\)</span>.</p>
 <p>So, <span class="math inline">\(\delta^+_{12}\neq 0\)</span>.</p>
@@ -285,12 +288,12 @@ R^{i-1}(\delta^+_{10} + \delta^+_{11} + \delta^+_{12}) &amp; = R^{i-1}\Delta\hat
 \end{align}\]</span></p>
 <div class="hs">
 <p><strong>HS MEMO</strong></p>
-<p>It is because on each irreducible hin module with standard basis <span class="math inline">\(w_r, w_{r+1}, \ldots, w_{r+d}\)</span>,
+<p>It is because on each irreducible thin module with standard basis <span class="math inline">\(w_r, w_{r+1}, \ldots, w_{r+d}\)</span>,
 <span class="math display">\[R^{-1}w_i = w_{i-1}, \; i&gt;r, \; R^{-1}w_r = 0,\]</span>
 and <span class="math inline">\(E^*_1V\)</span> is an orthogonal direct sum of irreducible modules and <span class="math inline">\(r\leq 1\)</span>.</p>
 </div>
-<p>Bu we can control <span class="math inline">\(R^{i-1}\delta^+_{10}\)</span>, <span class="math inline">\(R^{i-1}\delta^+_{11}\)</span>, also.</p>
-<p>Claim. <span class="math inline">\(RE^*_{jj}V \subseteq E^*_{j+1,j+1}V + E^*_{j+1, j}V, \; j\in \{1, \ldots, D-1\}.\)</span>$</p>
+<p>But we can control <span class="math inline">\(R^{i-1}\delta^+_{10}\)</span>, <span class="math inline">\(R^{i-1}\delta^+_{11}\)</span>, also.</p>
+<p>Claim. <span class="math inline">\(RE^*_{jj}V \subseteq E^*_{j+1,j+1}V + E^*_{j+1, j}V, \; j\in \{1, \ldots, D-1\}.\)</span></p>
 <p><em>Proof of Claim.</em> Clear.</p>
 <p>By Claim
 <span class="math display">\[\begin{align}
