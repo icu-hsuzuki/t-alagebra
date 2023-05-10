@@ -15,7 +15,7 @@ $$\partial(w,x) = \partial(w,y) = 2, \; \partial(w,z)=1.$$
 | $(i)$ Write $E^*_i\equiv E^*_i(x)$, $R \equiv R(x)$, $F \equiv F(x)$, $L \equiv L(x)$, and $T \equiv T(x)$.
 Suppose there exists
 \begin{equation}
-0\neq v\in E^*_{11}V \; \text{ such that }\; E^*_{22}AE^*_{11}v = 0. (\#eq:existence-of-v),
+0\neq v\in E^*_{11}V \; \text{ such that }\; E^*_{22}AE^*_{11}v = 0. (\#eq:existence-of-v)
 \end{equation}
 
 Claim 1. $E^*_{34}A^2E^*_{12}AE^*_{11}v \neq 0$.
@@ -27,7 +27,7 @@ is one-to-one.
 
 Since $v\in E^*_1(y)V$, we find
 \begin{align}
-0 & \neq R^4(y)v\\
+0 & \neq R^3(y)v\\
 & = E^*_4(y)A^3E^*_1(y)v\\
 & = E^*_4(y)A^2E^*_2(y)AE^*_{11}v\\
 & = E^*_4(y)A^2\left(\sum_{h=0}^D E^*_{h,2}\right)AE^*_{11}v\\
@@ -52,11 +52,11 @@ For $i = 3$,
 $$E^*_1(g^-_3 FL^2 + LFL + g^+_3 L^2F - \gamma L^2)E^*_3 = O.$$
 Taking the transpose, we have
 
-$$(g^{-}_3 R^2 F + RFR + g^{+}_3 FR^2 - \gamma R^2) E^*_1 = O.$$
+$$E^*_3(g^{-}_3 R^2 F + RFR + g^{+}_3 FR^2 - \gamma R^2) E^*_1 = O.$$
 Hence, we have \@ref(eq:g3plus-minus).
 :::
 
-Multiplying each term on the left by E^*_4(y)$, on the right by $E^*_1(y)$, we find
+Multiplying each term on the left by $E^*_4(y)$, on the right by $E^*_1(y)$, we find
 \begin{align}
 O & = g^-_3E^*_{34}R^2FE^*_{11} + E^*_{34}RFRE^*_{11} + g^+_3E^*_{34}FR^2E^*_{11}-\gamma E^*_{34}R^2E^*_{11}\\
 & = g^-_3E^*_{34}A^2E^*_{12}AE^*_{11} + E^*_{34}AE^*_{23}AE^*_{22}AE^*_{11} + g^+_3E^*_{34}AE^*_{33}AE^*_{22}AE^*_{11}. (\#eq:g3plus-minus-zero)
@@ -90,7 +90,7 @@ With the notation of Lemma \@ref(lem:e11star-to-e22star), the following hold.
 
 | $(i)$ $E^*_{22}AE^*_{11}\delta^+_{11} = \delta_{22}$.
 
-| $(ii)$ $E^*_{21}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{21}.
+| $(ii)$ $E^*_{21}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{21}$.
 
 | $(iii)$ $\langle \delta^+_{11}, \delta_{11}\rangle = \frac{a_2}{c_2} - \Psi(x,y)$.
 
@@ -127,11 +127,11 @@ The second term is zero.
 
 | $(iii)$ We have
 \begin{align}
-p^{1}_{22} & = \delta_{22}\|^2 \\
+p^{1}_{22} & = \|\delta_{22}\|^2 \\
 & = \langle \delta_{22}, \delta_{21}+\delta_{22}+\delta_{23}\rangle\\
 & = \langle R(\delta^+_{11} + \Psi \hat{y}), \delta_{21}+\delta_{22}+\delta_{23}\rangle\\
 & = \langle \delta^+_{11} + \Psi \hat{y}, L(\delta_{21}+\delta_{22}+\delta_{23})\rangle\\
-& = b_1\langle \delta^+_{11} + \Psi \hat{y}, \delta_{10}+\delta_{11}+\delta_{12})\rangle\\
+& = b_1\langle \delta^+_{11} + \Psi \hat{y}, \delta_{10}+\delta_{11}+\delta_{12}\rangle\\
 & = b_1(\langle \delta^+_{11}, \delta_{11}\rangle + \Psi).
 \end{align}
 So,

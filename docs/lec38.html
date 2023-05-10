@@ -182,7 +182,7 @@ Pick vertices <span class="math inline">\(x,y\in X\)</span> such that <span clas
 <div class="line-block"><span class="math inline">\((i)\)</span> Write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(R \equiv R(x)\)</span>, <span class="math inline">\(F \equiv F(x)\)</span>, <span class="math inline">\(L \equiv L(x)\)</span>, and <span class="math inline">\(T \equiv T(x)\)</span>.</div>
 <p>Suppose there exists
 <span class="math display" id="eq:existence-of-v">\[\begin{equation}
-0\neq v\in E^*_{11}V \; \text{ such that }\; E^*_{22}AE^*_{11}v = 0. \tag{38.1},
+0\neq v\in E^*_{11}V \; \text{ such that }\; E^*_{22}AE^*_{11}v = 0. \tag{38.1}
 \end{equation}\]</span></p>
 <p>Claim 1. <span class="math inline">\(E^*_{34}A^2E^*_{12}AE^*_{11}v \neq 0\)</span>.</p>
 <p><em>Proof of Claim 1.</em>
@@ -191,7 +191,7 @@ Recall by Lemma <a href="lec32.html#lem:action-of-r">32.1</a> <span class="math 
 is one-to-one.</p>
 <p>Since <span class="math inline">\(v\in E^*_1(y)V\)</span>, we find
 <span class="math display">\[\begin{align}
-0 &amp; \neq R^4(y)v\\
+0 &amp; \neq R^3(y)v\\
 &amp; = E^*_4(y)A^3E^*_1(y)v\\
 &amp; = E^*_4(y)A^2E^*_2(y)AE^*_{11}v\\
 &amp; = E^*_4(y)A^2\left(\sum_{h=0}^D E^*_{h,2}\right)AE^*_{11}v\\
@@ -212,10 +212,10 @@ This proves the claim.</p>
 For <span class="math inline">\(i = 3\)</span>,
 <span class="math display">\[E^*_1(g^-_3 FL^2 + LFL + g^+_3 L^2F - \gamma L^2)E^*_3 = O.\]</span>
 Taking the transpose, we have</p>
-<p><span class="math display">\[(g^{-}_3 R^2 F + RFR + g^{+}_3 FR^2 - \gamma R^2) E^*_1 = O.\]</span>
+<p><span class="math display">\[E^*_3(g^{-}_3 R^2 F + RFR + g^{+}_3 FR^2 - \gamma R^2) E^*_1 = O.\]</span>
 Hence, we have <a href="lec38.html#eq:g3plus-minus">(38.2)</a>.</p>
 </div>
-<p>Multiplying each term on the left by E^*_4(y)$, on the right by <span class="math inline">\(E^*_1(y)\)</span>, we find
+<p>Multiplying each term on the left by <span class="math inline">\(E^*_4(y)\)</span>, on the right by <span class="math inline">\(E^*_1(y)\)</span>, we find
 <span class="math display" id="eq:g3plus-minus-zero">\[\begin{align}
 O &amp; = g^-_3E^*_{34}R^2FE^*_{11} + E^*_{34}RFRE^*_{11} + g^+_3E^*_{34}FR^2E^*_{11}-\gamma E^*_{34}R^2E^*_{11}\\
 &amp; = g^-_3E^*_{34}A^2E^*_{12}AE^*_{11} + E^*_{34}AE^*_{23}AE^*_{22}AE^*_{11} + g^+_3E^*_{34}AE^*_{33}AE^*_{22}AE^*_{11}. \tag{38.3}
@@ -241,7 +241,7 @@ where
 <div class="lemma">
 <p><span id="lem:map-e11star-to-e22star" class="lemma"><strong>Lemma 38.2  </strong></span>With the notation of Lemma <a href="lec38.html#lem:e11star-to-e22star">38.1</a>, the following hold.</p>
 <div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(E^*_{22}AE^*_{11}\delta^+_{11} = \delta_{22}\)</span>.</div>
-<div class="line-block"><span class="math inline">\((ii)\)</span> $E^*_{21}AE^*<em>{11}^+</em>{11} = -(x,y)_{21}.</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(E^*_{21}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{21}\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iii)\)</span> <span class="math inline">\(\langle \delta^+_{11}, \delta_{11}\rangle = \frac{a_2}{c_2} - \Psi(x,y)\)</span>.</div>
 <div class="line-block"><span class="math inline">\((iv)\)</span> <span class="math inline">\(\Psi(x,y) = \Psi(y,x)\)</span>.</div>
 <div class="line-block"><span class="math inline">\((v)\)</span> <span class="math inline">\(E^*_{12}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{12}\)</span>.</div>
@@ -271,11 +271,11 @@ The second term is zero.</p>
 \end{align}\]</span></p>
 <div class="line-block"><span class="math inline">\((iii)\)</span> We have</div>
 <p><span class="math display">\[\begin{align}
-p^{1}_{22} &amp; = \delta_{22}\|^2 \\
+p^{1}_{22} &amp; = \|\delta_{22}\|^2 \\
 &amp; = \langle \delta_{22}, \delta_{21}+\delta_{22}+\delta_{23}\rangle\\
 &amp; = \langle R(\delta^+_{11} + \Psi \hat{y}), \delta_{21}+\delta_{22}+\delta_{23}\rangle\\
 &amp; = \langle \delta^+_{11} + \Psi \hat{y}, L(\delta_{21}+\delta_{22}+\delta_{23})\rangle\\
-&amp; = b_1\langle \delta^+_{11} + \Psi \hat{y}, \delta_{10}+\delta_{11}+\delta_{12})\rangle\\
+&amp; = b_1\langle \delta^+_{11} + \Psi \hat{y}, \delta_{10}+\delta_{11}+\delta_{12}\rangle\\
 &amp; = b_1(\langle \delta^+_{11}, \delta_{11}\rangle + \Psi).
 \end{align}\]</span>
 So,
