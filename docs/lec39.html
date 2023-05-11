@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-05-10" />
+<meta name="date" content="2023-05-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -171,7 +171,7 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 39</span> <span class="math inline">\(A^+\)</span> and <span class="math inline">\(A^-\)</span><a href="lec39.html#lec39" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Wednesday, May 5, 1993</strong></p>
 <p>Assume <span class="math inline">\(\Gamma = (X, E)\)</span> is thin, distance regular of diameter <span class="math inline">\(D\geq 5\)</span>, and <span class="math inline">\(Q\)</span>-polynomial with respect to <span class="math inline">\(E_0, E_1, \ldots, E_D\)</span>.</p>
-<p>Fix a vertex <span class="math inline">\(x\in X\)</span>, write <span class="math inline">\(E^*\equiv E^*_i(x)\)</span>, <span class="math inline">\(R\equiv R(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>.</p>
+<p>Fix a vertex <span class="math inline">\(x\in X\)</span>, write <span class="math inline">\(E^*_i\equiv E^*_i(x)\)</span>, <span class="math inline">\(R\equiv R(x)\)</span>, <span class="math inline">\(T\equiv T(x)\)</span>.</p>
 <p>Pick <span class="math inline">\(y\in X\)</span> with <span class="math inline">\(\partial(x,y) = 1\)</span>. Write <span class="math inline">\(E^*_{i,j} \equiv E^*(x)E^*(y)\)</span>, <span class="math inline">\(\delta_{ij} = E^*_{ij}\delta\)</span>, and <span class="math inline">\(\tilde{A} = E^*_1AE^*_1\)</span>.</p>
 <p>Recall that <span class="math inline">\(\delta^+_{11}\in E^*_{11}V\)</span> and
 <span class="math display">\[R^{-1}E^*_2A_2E^*_1\hat{y} = \delta^+_{11} + \Psi(x,y)\hat{y}.\]</span>
@@ -183,21 +183,21 @@ We saw <span class="math inline">\(\Psi(x,y) = \Psi(y,x)\)</span>. We shall show
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-84" class="proof"><em>Proof</em>. </span></p>
-<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\delta^-_{12}\in E^*_{12}\)</span>, <span class="math inline">\(\delta^-_{11}\in E^*_{11}V\)</span> and <span class="math inline">\(\delta^-_{10}\in E^*_{10}V\)</span>, and</div>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(\delta^-_{12}\in E^*_{12}V\)</span>, <span class="math inline">\(\delta^-_{11}\in E^*_{11}V\)</span> and <span class="math inline">\(\delta^-_{10}\in E^*_{10}V\)</span>, and</div>
 <p><span class="math display" id="eq:tildea-deltaplus11">\[\begin{equation}
 \tilde{A}\delta^+_{11} = \delta^-_{12} + \delta^-_{11} + \delta^-_{10}, \tag{39.1}
 \end{equation}\]</span>
 <span class="math display" id="eq:delta-minus12">\[\begin{equation}
-\delta^-{12} = E^*_{12}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{12} \tag{39.2},
+\delta^-_{12} = E^*_{12}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{12} \tag{39.2},
 \end{equation}\]</span>
 by Lemma <a href="lec38.html#lem:map-e11star-to-e22star">38.2</a> <span class="math inline">\((v)\)</span>.</p>
 <p>Also, <span class="math inline">\(\delta^-_{10} = \sigma\hat{y}\)</span> for some <span class="math inline">\(\sigma\in \mathbb{C}\)</span>, where
-<span class="math display" id="eq:sigma">\[\begin{align}
-\sigma &amp; = \langle \tilde{A}\delta^+_{11}, \hat{y}\rangle \\
-&amp; = \langle \delta^+_{11}, \tilde{A}\hat{y}y\rangle\\
-&amp; = \langle \delta^+_{11}, \delta_{11}\rangle \\
-&amp; = \frac{a_2}{c_2}-\Psi. \tag{39.3}
-\end{align}\]</span></p>
+<span class="math display" id="eq:sigma">\[\begin{equation}
+\sigma  = \langle \tilde{A}\delta^+_{11}, \hat{y}\rangle
+= \langle \delta^+_{11}, \tilde{A}\hat{y}\rangle
+= \langle \delta^+_{11}, \delta_{11}\rangle
+= \frac{a_2}{c_2}-\Psi. \tag{39.3}
+\end{equation}\]</span></p>
 <p>Solving for <span class="math inline">\(\delta^-_{11}\)</span> in <a href="lec39.html#eq:tildea-deltaplus11">(39.1)</a>, using <a href="lec39.html#eq:delta-minus12">(39.2)</a> and <a href="lec39.html#eq:sigma">(39.3)</a>, we have
 <span class="math display">\[\begin{align}
 \delta^-_{11} &amp; = \tilde{A}\delta^+_{11} - \delta^-_{12} - \delta^-_{10}\\
@@ -219,17 +219,17 @@ we have <span class="math inline">\(\delta^+_{11}(x,y) = \delta^+_{11}(y,x)\)</s
 <p>Observe: <span class="math inline">\(\Delta \in E^*_1TE^*_1\)</span> and <span class="math inline">\(E^*_1TE^*_1\)</span> is symmetrix by Lemma <a href="lec33.html#lem:e1starte1star">33.4</a>.</p>
 <p>Hence, <span class="math inline">\(\Delta_{yz} = \Delta_{zy}\)</span>.</p>
 <p>Since <span class="math inline">\(\Delta\in \mathrm{Mat}_X(\mathbb{R})\)</span>,
-<span class="math display">\[\langle \Delta\hat{y}, \hat{z}\langle = \langle \Delta \hat{z}, \hat{y}\rangle.\]</span>
+<span class="math display">\[\langle \Delta\hat{y}, \hat{z}\rangle = \langle \Delta \hat{z}, \hat{y}\rangle.\]</span>
 But,
 <span class="math display">\[\begin{align}
-\langle \Delta\hat{y}, \hat{z}\langle &amp; = \langle \tilde{A}\delta^+_{11} + \Psi(x,y)\hat{y}, \hat{z}\rangle \\
+\langle \Delta\hat{y}, \hat{z}\rangle &amp; = \langle \tilde{A}\delta^+_{11} + \Psi(x,y)\hat{y}, \hat{z}\rangle \\
 &amp; = \langle \tilde{A}\delta^+_{11}, \hat{z}\rangle\\
-&amp; = \langle \delta^-_{11} + \left(\frac{a_2}{c_2}-\Psi\right)\hat{y} - \Psi(x,y)\delta_{12}, \hat{z}\rangle\\
+&amp; = \Bigl\langle \delta^-_{11} + \left(\frac{a_2}{c_2}-\Psi\right)\hat{y} - \Psi(x,y)\delta_{12}, \hat{z}\Bigr\rangle\\
 &amp; = -\Psi(x,y).
 \end{align}\]</span>
 Note that <span class="math inline">\(\partial(x,y) = 2\)</span> by Lemma <a href="lec39.html#lem:delta-minus11">39.1</a> <span class="math inline">\((i)\)</span>.</p>
 <p>Similarly,
-<span class="math display">\[\Delta\hat{z}, \hat{y}\rangle = -\Psi(x,z).\]</span>
+<span class="math display">\[\langle\Delta\hat{z}, \hat{y}\rangle = -\Psi(x,z).\]</span>
 Hence, <span class="math inline">\(\Psi(x,y) = \Psi(x,z)\)</span>.</p>
 <p>Case: <span class="math inline">\(\partial(y,z) = 1\)</span>.</p>
 <p>By Lemma <a href="lec38.html#lem:e11star-to-e22star">38.1</a> <span class="math inline">\((ii)\)</span>, there exists <span class="math inline">\(w\in X\)</span> such that
@@ -241,8 +241,9 @@ from the first case.</p>
 </div>
 <div class="lemma">
 <p><span id="lem:aplus-aminus" class="lemma"><strong>Lemma 39.3  </strong></span>With the above notation, the following hold.</p>
-<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(A^+: = R^{-1}E^*_2A_2E^*_1 - \Psi E^*_1\)</span>.</div>
-<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(A^- = \tilde{A}A^+ - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1 + \Psi(\tilde{J} - \tilde{A} - E^*_1)\)</span> are both generalized adjacency matrices for the subgraph induced on the first subconstituent with respect to <span class="math inline">\(x\)</span>.</div>
+<div class="line-block"><span class="math inline">\((i)\)</span> <span class="math inline">\(A^+: = R^{-1}E^*_2A_2E^*_1 - \Psi E^*_1\)</span>, and</div>
+<div class="line-block"><span class="math inline">\((ii)\)</span> <span class="math inline">\(A^- = \tilde{A}A^+ - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1 + \Psi(\tilde{J} - \tilde{A} - E^*_1)\)</span></div>
+<p>are both generalized adjacency matrices for the subgraph induced on the first subconstituent with respect to <span class="math inline">\(x\)</span>.</p>
 <p>Moreover, <span class="math inline">\(A^+\)</span>, <span class="math inline">\(A^-\)</span> have <span class="math inline">\(0\)</span> diagonal.</p>
 </div>
 <div class="proof">
@@ -254,13 +255,13 @@ if <span class="math inline">\(\partial(y,z) = 0\)</span> or <span class="math i
 <p>Since
 <span class="math display">\[\begin{align}
 A^-\hat{y} &amp; = \tilde{A}A^+\hat{y} - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1\hat{y} + \Psi(\tilde{J} - \tilde{A} - E^*_1)\hat{y}\\
-&amp; = \tilde{A}\delta^+_{11} - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1\hat{y} + \Psi\delta_{12}\\
+&amp; = \tilde{A}\delta^+_{11} - \left(\frac{a_2}{c_2}-\Psi\right)\hat{y} + \Psi\delta_{12}\\
 &amp; = \delta^-_{11},
 \end{align}\]</span>
 <span class="math display">\[A^-_{yz} = \langle A^-\hat{y}, \hat{z}\rangle = \langle \delta^-_{11}, \hat{z}\rangle = 0,\]</span>
 if <span class="math inline">\(\partial(y,z) = 0\)</span> or <span class="math inline">\(2\)</span>.</p>
 <p>Since <span class="math inline">\(E^*_1TE^*_1 = \mathrm{Span}(\tilde{J},E^*_1, \tilde{A}, \tilde{A}^2, \ldots)\)</span> by Lemma <a href="lec33.html#lem:e1starte1star">33.4</a>.</p>
-<p><span class="math inline">\(A^+, A^-\)</span> are both generalized matricxes for adjacency subgraph induced on the first subconstituent with respect to <span class="math inline">\(x\)</span>.</p>
+<p><span class="math inline">\(A^+, A^-\)</span> are both generalized matrices for the adjacency subgraph induced on the first subconstituent concerning <span class="math inline">\(x\)</span>.</p>
 </div>
 <p>Similarly,
 <span class="math display">\[E^*_1TE^*_1 \ni \tilde{J}, E^*_1, \tilde{A}, A^+, A^-,\]</span>

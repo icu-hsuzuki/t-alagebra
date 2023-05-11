@@ -3,7 +3,7 @@
 
 Assume $\Gamma = (X, E)$ is thin, distance regular of diameter $D\geq 5$, and $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$.
 
-Fix a vertex $x\in X$, write $E^*\equiv E^*_i(x)$, $R\equiv R(x)$, $T\equiv T(x)$. 
+Fix a vertex $x\in X$, write $E^*_i\equiv E^*_i(x)$, $R\equiv R(x)$, $T\equiv T(x)$. 
 
 Pick $y\in X$ with $\partial(x,y) = 1$. Write $E^*_{i,j} \equiv E^*(x)E^*(y)$, $\delta_{ij} = E^*_{ij}\delta$, and $\tilde{A} = E^*_1AE^*_1$.
 
@@ -20,22 +20,22 @@ With the above notation, set $\Psi:=\Psi(x,y)$. Then the following hold.
 :::
 
 :::{.proof}
-| $(i)$ $\delta^-_{12}\in E^*_{12}$, $\delta^-_{11}\in E^*_{11}V$ and $\delta^-_{10}\in E^*_{10}V$, and
+| $(i)$ $\delta^-_{12}\in E^*_{12}V$, $\delta^-_{11}\in E^*_{11}V$ and $\delta^-_{10}\in E^*_{10}V$, and
 \begin{equation}
 \tilde{A}\delta^+_{11} = \delta^-_{12} + \delta^-_{11} + \delta^-_{10}, (\#eq:tildea-deltaplus11)
 \end{equation}
 \begin{equation}
-\delta^-{12} = E^*_{12}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{12} (\#eq:delta-minus12),
+\delta^-_{12} = E^*_{12}AE^*_{11}\delta^+_{11} = -\Psi(x,y)\delta_{12} (\#eq:delta-minus12),
 \end{equation}
 by Lemma \@ref(lem:map-e11star-to-e22star) $(v)$.
 
 Also, $\delta^-_{10} = \sigma\hat{y}$ for some $\sigma\in \mathbb{C}$, where
-\begin{align}
-\sigma & = \langle \tilde{A}\delta^+_{11}, \hat{y}\rangle \\
-& = \langle \delta^+_{11}, \tilde{A}\hat{y}y\rangle\\
-& = \langle \delta^+_{11}, \delta_{11}\rangle \\
-& = \frac{a_2}{c_2}-\Psi. (\#eq:sigma)
-\end{align}
+\begin{equation}
+\sigma  = \langle \tilde{A}\delta^+_{11}, \hat{y}\rangle 
+ = \langle \delta^+_{11}, \tilde{A}\hat{y}\rangle
+ = \langle \delta^+_{11}, \delta_{11}\rangle 
+ = \frac{a_2}{c_2}-\Psi. (\#eq:sigma)
+\end{equation}
 
 Solving for $\delta^-_{11}$ in \@ref(eq:tildea-deltaplus11), using \@ref(eq:delta-minus12) and \@ref(eq:sigma), we have
 \begin{align}
@@ -66,18 +66,18 @@ Observe: $\Delta \in E^*_1TE^*_1$ and $E^*_1TE^*_1$ is symmetrix by Lemma \@ref(
 Hence, $\Delta_{yz} = \Delta_{zy}$.
 
 Since $\Delta\in \mathrm{Mat}_X(\mathbb{R})$,
-$$\langle \Delta\hat{y}, \hat{z}\langle = \langle \Delta \hat{z}, \hat{y}\rangle.$$
+$$\langle \Delta\hat{y}, \hat{z}\rangle = \langle \Delta \hat{z}, \hat{y}\rangle.$$
 But,
 \begin{align}
-\langle \Delta\hat{y}, \hat{z}\langle & = \langle \tilde{A}\delta^+_{11} + \Psi(x,y)\hat{y}, \hat{z}\rangle \\
+\langle \Delta\hat{y}, \hat{z}\rangle & = \langle \tilde{A}\delta^+_{11} + \Psi(x,y)\hat{y}, \hat{z}\rangle \\
 & = \langle \tilde{A}\delta^+_{11}, \hat{z}\rangle\\
-& = \langle \delta^-_{11} + \left(\frac{a_2}{c_2}-\Psi\right)\hat{y} - \Psi(x,y)\delta_{12}, \hat{z}\rangle\\
+& = \Bigl\langle \delta^-_{11} + \left(\frac{a_2}{c_2}-\Psi\right)\hat{y} - \Psi(x,y)\delta_{12}, \hat{z}\Bigr\rangle\\
 & = -\Psi(x,y).
 \end{align}
 Note that $\partial(x,y) = 2$ by Lemma \@ref(lem:delta-minus11) $(i)$.
 
 Similarly, 
-$$\Delta\hat{z}, \hat{y}\rangle = -\Psi(x,z).$$
+$$\langle\Delta\hat{z}, \hat{y}\rangle = -\Psi(x,z).$$
 Hence, $\Psi(x,y) = \Psi(x,z)$.
 
 Case: $\partial(y,z) = 1$.
@@ -102,9 +102,11 @@ from the first case.
 :::{.lemma #aplus-aminus} 
 With the above notation, the following hold.
 
-| $(i)$ $A^+: = R^{-1}E^*_2A_2E^*_1 - \Psi E^*_1$.
+| $(i)$ $A^+: = R^{-1}E^*_2A_2E^*_1 - \Psi E^*_1$, and 
 
-| $(ii)$ $A^- = \tilde{A}A^+ - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1 + \Psi(\tilde{J} - \tilde{A} - E^*_1)$ are both generalized adjacency matrices for the subgraph induced on the first subconstituent with respect to $x$.
+| $(ii)$ $A^- = \tilde{A}A^+ - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1 + \Psi(\tilde{J} - \tilde{A} - E^*_1)$ 
+
+are both generalized adjacency matrices for the subgraph induced on the first subconstituent with respect to $x$.
 
 Moreover, $A^+$, $A^-$ have $0$ diagonal.
 :::
@@ -121,7 +123,7 @@ if $\partial(y,z) = 0$ or $2$.
 Since
 \begin{align}
 A^-\hat{y} & = \tilde{A}A^+\hat{y} - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1\hat{y} + \Psi(\tilde{J} - \tilde{A} - E^*_1)\hat{y}\\
-& = \tilde{A}\delta^+_{11} - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1\hat{y} + \Psi\delta_{12}\\
+& = \tilde{A}\delta^+_{11} - \left(\frac{a_2}{c_2}-\Psi\right)\hat{y} + \Psi\delta_{12}\\
 & = \delta^-_{11},
 \end{align}
 $$A^-_{yz} = \langle A^-\hat{y}, \hat{z}\rangle = \langle \delta^-_{11}, \hat{z}\rangle = 0,$$
@@ -129,7 +131,7 @@ if $\partial(y,z) = 0$ or $2$.
 
 Since $E^*_1TE^*_1 = \mathrm{Span}(\tilde{J},E^*_1, \tilde{A}, \tilde{A}^2, \ldots)$ by Lemma \@ref(lem:e1starte1star).
 
-$A^+, A^-$ are both generalized matricxes for adjacency subgraph induced on the first subconstituent with respect to $x$.
+$A^+, A^-$ are both generalized matrices for the adjacency subgraph induced on the first subconstituent concerning $x$.
 :::
 
 Similarly,
