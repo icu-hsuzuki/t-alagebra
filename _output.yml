@@ -17,7 +17,6 @@ bookdown::pdf_book:
     after_body:
       postamble.tex
   latex_engine: xelatex
-  block_style: tcolorbox
   citation_package: natbib
   keep_tex: yes
 #bookdown::epub_book: #default
