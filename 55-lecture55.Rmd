@@ -40,27 +40,33 @@ All source files are in the
 
 * Environment `align` in ePub_book.
 
-It may be better to give up ePub book mode.
+    - It may be better to give up ePub book mode.
 
 * https://github.com/rstudio/bookdown/issues/530
 * See also bookdown ePub version page 33. I could not retrieve the same. (See page 32 as well.)
-
+* Environment of align
+    1. `align`
 \begin{align}
 A & = B\\
 & = C
 \end{align}
 
+    2. `eqnarray*`
 \begin{eqnarray*}
 A &=& B\\
 & = & C
 \end{eqnarray*}
 
+    3. `array` in equation with minus spacing
 $$
 \begin{array}{lcl}
 A & \!\!=\!\! & B\\
 & \!\!=\!\! & C
 \end{array}
 $$
+
+    4. `split` in equation
+
 \begin{equation}
 \begin{split}
 A & = B\\

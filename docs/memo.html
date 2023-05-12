@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-05-11" />
+<meta name="date" content="2023-05-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -203,28 +203,35 @@ div.csl-indent {
 <div id="to-do-list" class="section level2 hasAnchor" number="43.1">
 <h2><span class="header-section-number">C.1</span> To Do List<a href="memo.html#to-do-list" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Environment <code>align</code> in ePub_book.</li>
-</ul>
-<p>It may be better to give up ePub book mode.</p>
+<li><p>Environment <code>align</code> in ePub_book.</p>
 <ul>
-<li><a href="https://github.com/rstudio/bookdown/issues/530" class="uri">https://github.com/rstudio/bookdown/issues/530</a></li>
-<li>See also bookdown ePub version page 33. I could not retrieve the same. (See page 32 as well.)</li>
-</ul>
-<p><span class="math display">\[\begin{align}
+<li>It may be better to give up ePub book mode.</li>
+</ul></li>
+<li><p><a href="https://github.com/rstudio/bookdown/issues/530" class="uri">https://github.com/rstudio/bookdown/issues/530</a></p></li>
+<li><p>See also bookdown ePub version page 33. I could not retrieve the same. (See page 32 as well.)</p></li>
+<li><p>Environment of align</p>
+<ol style="list-style-type: decimal">
+<li><p><code>align</code>
+<span class="math display">\[\begin{align}
 A &amp; = B\\
 &amp; = C
-\end{align}\]</span></p>
-<p><span class="math display">\[\begin{eqnarray*}
+\end{align}\]</span></p></li>
+<li><p><code>eqnarray*</code>
+<span class="math display">\[\begin{eqnarray*}
 A &amp;=&amp; B\\
 &amp; = &amp; C
-\end{eqnarray*}\]</span></p>
-<p><span class="math display">\[
+\end{eqnarray*}\]</span></p></li>
+<li><p><code>array</code> in equation with minus spacing
+<span class="math display">\[
 \begin{array}{lcl}
 A &amp; \!\!=\!\! &amp; B\\
 &amp; \!\!=\!\! &amp; C
 \end{array}
-\]</span>
-<span class="math display" id="eq:var-beta">\[\begin{equation}
+\]</span></p></li>
+<li><p><code>split</code> in equation</p></li>
+</ol></li>
+</ul>
+<p><span class="math display" id="eq:var-beta">\[\begin{equation}
 \begin{split}
 A &amp; = B\\
 &amp; = C

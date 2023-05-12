@@ -144,7 +144,7 @@
 
 \title{Lecture Note on Terwilliger Algebra}
 \author{P. Terwilliger, edited by H. Suzuki}
-\date{2023-05-11}
+\date{2023-05-12}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -9075,37 +9075,48 @@ All source files are in the
 \section{To Do List}\label{to-do-list}}
 
 \begin{itemize}
-\tightlist
 \item
   Environment \texttt{align} in ePub\_book.
-\end{itemize}
 
-It may be better to give up ePub book mode.
-
-\begin{itemize}
-\tightlist
+  \begin{itemize}
+  \tightlist
+  \item
+    It may be better to give up ePub book mode.
+  \end{itemize}
 \item
   \url{https://github.com/rstudio/bookdown/issues/530}
 \item
   See also bookdown ePub version page 33. I could not retrieve the same. (See page 32 as well.)
+\item
+  Environment of align
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    \texttt{align}
+    \begin{align}
+    A & = B\\
+    & = C
+    \end{align}
+  \item
+    \texttt{eqnarray*}
+    \begin{eqnarray*}
+    A &=& B\\
+    & = & C
+    \end{eqnarray*}
+  \item
+    \texttt{array} in equation with minus spacing
+    \[
+    \begin{array}{lcl}
+    A & \!\!=\!\! & B\\
+    & \!\!=\!\! & C
+    \end{array}
+    \]
+  \item
+    \texttt{split} in equation
+  \end{enumerate}
 \end{itemize}
 
-\begin{align}
-A & = B\\
-& = C
-\end{align}
-
-\begin{eqnarray*}
-A &=& B\\
-& = & C
-\end{eqnarray*}
-
-\[
-\begin{array}{lcl}
-A & \!\!=\!\! & B\\
-& \!\!=\!\! & C
-\end{array}
-\]
 \begin{equation}
 \begin{split}
 A & = B\\
