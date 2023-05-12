@@ -61,6 +61,12 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
+\usepackage{tcolorbox}
+\definecolor{shadecolor}{RGB}{245,245,245}
+\newtcolorbox{hs}{
+colback=shadecolor,
+colframe=orange,
+coltext=black}
 
 %\usepackage{amsthm, amsmath, amssymb, amsbsy, amsopn, amsxtra, amscd, amstext}
 \usepackage{makeidx}
@@ -73,20 +79,11 @@
 
 %%% HS MEMO BOX - does not work
 \usepackage{color}
-%\usepackage{tcolorbox}
 \usepackage{framed}
 \setlength{\fboxsep}{.8em}
 
-%\definecolor{shadecolor}{RGB}{245,245,245}
 
 %\newenvironment{hs}{\begin{shaded}}{\end{shaded}}
-%\newtcolorbox{hs}{
-%colback=shadecolor,
-%colframe=orange,
-%coltext=black}
-%  \definecolor{shadecolor}{rgb}{0.64, 0.64, 0.64}  % greay #f5f5f5
-%  \color{black}
-%}
 %%%
 
 
@@ -131,7 +128,7 @@
 % \newcommand{\spec}{\textrm{Spec}}
 %
 
-\makeatother
+%\makeatother
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
