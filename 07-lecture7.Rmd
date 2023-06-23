@@ -170,7 +170,7 @@ Claim 2. Each irreducible $S = E_i^*TE_i^*$-module $U$ has dimension $1$. In par
 _Proof of Claim 2._
 Pick
 $$0\neq a \in E_i^*TE_i^*.$$
-Since $\mathbb{C}$ is algebraicallt closed, $a$ has an eigenvector $w\in U$ with eigenvalue $\theta$. Then,
+Since $\mathbb{C}$ is algebraically closed, $a$ has an eigenvector $w\in U$ with eigenvalue $\theta$. Then,
 \begin{align}
 (a- \theta I)U & = (a-\theta I)Sw\\
 & = S(a-\theta I)w\\

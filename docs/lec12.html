@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 12 Distance-Regular | Lecture Note on Terwilliger Algebra</title>
   <meta name="description" content="This is a lecture note using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 12 Distance-Regular | Lecture Note on Terwilliger Algebra" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="P. Terwilliger, edited by H. Suzuki" />
 
 
-<meta name="date" content="2023-05-12" />
+<meta name="date" content="2023-06-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,6 +55,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -190,7 +194,7 @@ E^*_2T\hat{x} &amp; = \langle \hat{z}_1 + \hat{z}_2 + 2\hat{z}_3\rangle.
 Let <span class="math inline">\(\delta = \sum_{y\in X}\delta_y\hat{y}\)</span> be an eigenvector for the maximal eigenvalue <span class="math inline">\(\theta_0\)</span>. Then,
 <span class="math display">\[\begin{align}
 \sum_{y\in X, \partial(x,y) = 1}\hat{y} &amp; = A\hat{x} \in T(x)\hat{x} = T(x)\delta \ni E^*_1\delta\\
-&amp; = \sum_{y\in X, \partial(x,y)=1}\delta_h\hat{y}
+&amp; = \sum_{y\in X, \partial(x,y)=1}\delta_y\hat{y}
 \end{align}\]</span>
 If the trivial <span class="math inline">\(T(x)\)</span>-module is thin,
 <span class="math display">\[\delta_y = \delta_z \; \text{ for }\; y, z\in X, \; \partial(x,y) = \partial(x,z) = 1.\]</span>
@@ -238,7 +242,7 @@ measure <span class="math inline">\(m: \mathbb{R} \to \mathbb{R}\)</span> determ
 measure <span class="math inline">\(m: \mathbb{R} \to \mathbb{R}\)</span> determined by <span class="math inline">\(W&#39;\)</span>.</p>
 <p>Recall <span class="math inline">\(W\)</span>, <span class="math inline">\(W&#39;\)</span> are orthogonal if
 <span class="math display">\[\langle w, w&#39;\rangle = 0 \quad \text{for all }w\in W, w&#39;\in W&#39;.\]</span></p>
-<p>We shall show if <span class="math inline">\(W\)</span> and <span class="math inline">\(W&#39;\)</span> are note orthogonal, then <span class="math inline">\(m\)</span> and <span class="math inline">\(m&#39;\)</span> are related:
+<p>We shall show if <span class="math inline">\(W\)</span> and <span class="math inline">\(W&#39;\)</span> are not orthogonal, then <span class="math inline">\(m\)</span> and <span class="math inline">\(m&#39;\)</span> are related:
 <span class="math display">\[m\cdot \mathrm{poly}_1 = m&#39;\cdot \mathrm{poly}_2\]</span>
 for some polynomials with
 <span class="math display">\[\deg \mathrm{poly}_1 + \deg \mathrm{poly}_2 \leq 2\cdot \partial(x,y).\]</span></p>
@@ -276,7 +280,7 @@ is in a real number in interval <span class="math inline">\([0,1]\)</span>.</p>
 <span class="math display">\[v\in W, \; v&#39;\in W&#39; \; \text{ sich that }\; \langle v, v&#39;\rangle \neq 0.\]</span>
 Then there exists <span class="math inline">\(a\in M\)</span> such that
 <span class="math display">\[v&#39; = aw&#39;.\]</span>
-(This is becase <span class="math inline">\(w&#39;_i = p&#39;_i(A)w_0&#39;\)</span> and hence for every <span class="math inline">\(v&#39;\in W&#39;\)</span>, there is a polynomial <span class="math inline">\(q\in \mathbb{C}[\lambda]\)</span>, <span class="math inline">\(q(A)w_0&#39; = v\)</span>.)</p>
+(This is because <span class="math inline">\(w&#39;_i = p&#39;_i(A)w_0&#39;\)</span> and hence for every <span class="math inline">\(v&#39;\in W&#39;\)</span>, there is a polynomial <span class="math inline">\(q\in \mathbb{C}[\lambda]\)</span>, <span class="math inline">\(q(A)w_0&#39; = v\)</span>.)</p>
 <p>We have
 <span class="math display">\[0\neq \langle v&#39;, v\rangle = \langle aw&#39;, v\rangle = \langle w&#39;, a^*v\rangle\]</span>
 and <span class="math inline">\(a^*v\in W\)</span>.</p>

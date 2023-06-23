@@ -37,7 +37,7 @@ $(i)\to (ii)$
 Let $\delta = \sum_{y\in X}\delta_y\hat{y}$ be an eigenvector for the maximal eigenvalue $\theta_0$. Then,
 \begin{align}
 \sum_{y\in X, \partial(x,y) = 1}\hat{y} & = A\hat{x} \in T(x)\hat{x} = T(x)\delta \ni E^*_1\delta\\
-& = \sum_{y\in X, \partial(x,y)=1}\delta_h\hat{y}
+& = \sum_{y\in X, \partial(x,y)=1}\delta_y\hat{y}
 \end{align}
 If the trivial $T(x)$-module is thin, 
 $$\delta_y = \delta_z \; \text{ for }\; y, z\in X, \; \partial(x,y) = \partial(x,z) = 1.$$
@@ -98,7 +98,7 @@ measure $m: \mathbb{R} \to \mathbb{R}$ determined by $W'$.
 Recall $W$, $W'$ are orthogonal if 
 $$\langle w, w'\rangle = 0 \quad \text{for all }w\in W, w'\in W'.$$
 
-We shall show if $W$ and $W'$ are note orthogonal, then $m$ and $m'$ are related:
+We shall show if $W$ and $W'$ are not orthogonal, then $m$ and $m'$ are related:
 $$m\cdot \mathrm{poly}_1 = m'\cdot \mathrm{poly}_2$$
 for some polynomials with 
 $$\deg \mathrm{poly}_1 + \deg \mathrm{poly}_2 \leq 2\cdot \partial(x,y).$$
@@ -152,7 +152,7 @@ $(i)$ Since $W$, $W'$ are not orthogonal, there exist
 $$v\in W, \; v'\in W' \; \text{ sich that }\; \langle v, v'\rangle \neq 0.$$
 Then there exists $a\in M$ such that 
 $$v' = aw'.$$
-(This is becase $w'_i = p'_i(A)w_0'$ and hence for every $v'\in W'$, there is a polynomial $q\in \mathbb{C}[\lambda]$, $q(A)w_0' = v$.)
+(This is because $w'_i = p'_i(A)w_0'$ and hence for every $v'\in W'$, there is a polynomial $q\in \mathbb{C}[\lambda]$, $q(A)w_0' = v$.)
 
 We have 
 $$0\neq \langle v', v\rangle = \langle aw', v\rangle = \langle w', a^*v\rangle$$

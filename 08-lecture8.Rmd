@@ -99,7 +99,7 @@ $$g_1\in G \text{ such that } g_1x = x'.$$
 Observe that 
 $$\partial(x', y') = \partial(x,y) = \partial(g_1x, g_1y) = \partial(x', g_1y).$$
 Hence, there exisits an element 
-$$g_2\in G \text{ such that } g_1x' = x', g_2y' = g_1y', g_2g_1y = y'$$
+$$g_2\in G \text{ such that } g_1x' = x', g_2y' = g_1y, g_2g_1y = y'$$
 by (G($x'$)) property.
 
 Set $g = g_2g_1$. Then 
@@ -148,8 +148,6 @@ Y = \{j\in \Omega \mid x_j\neq y_j\} & \leftrightarrow Z = \{j\in \Omega \mid x_
 X\cap Y & \leftrightarrow X \cap Z\\
 (\Omega \setminus X)\cap Y & \leftrightarrow (\Omega \setminus X)\cap Z.
 \end{align}
-
-The following graph is distance-transitive but does not satisify (G($x$)) for any $x\in G$.
 
 | $J_q(D,N)$: 
 $$X\cap Y  \leftrightarrow X \cap Z.$$
