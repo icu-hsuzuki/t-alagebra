@@ -175,7 +175,7 @@ Claim: $\alpha_i = 0$ $(\Delta - r + r' < i\leq d)$.
 
 In particular, $\deg p' \leq \Delta - r + r'$.
 
-_Pf._ Obseve:
+_Pf._ Observe:
 $$w'\in E^*_{r'}(y)V, \quad w \in E^*_r(x)V,$$
 for $\partial(x,y) = \Delta$. 
 $$E^*_{r'}(y)V \cap E^*_{r+i}(x)V = 0$$

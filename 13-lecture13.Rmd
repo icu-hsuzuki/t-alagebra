@@ -10,9 +10,9 @@ and the trivial $T(y)$-module $T(y)\delta$ is thin with measure $m_y$.
 
 Then,
 
-| $(ia)$ ${\displaystyle \frac{m_x(\theta)}{k_x} = \frac{m_y(\theta)}{k_y} \text{ for all } \theta\in \mathbb{R} \setminus \{0\}}$.
+| $(ia)$ ${\displaystyle \frac{m_x(\theta)}{k_x} = \frac{m_y(\theta)}{k_y} \text{ for all } \theta\in \mathbb{R \setminus \{0\}}}$.
 
-| $(ib)$ ${\displaystyle \frac{m_x(0) -1}{k_x} = \frac{m_y(0)-1}{k_y} \text{ for all } \theta\in \mathbb{R} \setminus \{0\}}$.
+| $(ib)$ ${\displaystyle \frac{m_x(0) -1}{k_x} = \frac{m_y(0)-1}{k_y} \text{ for all } \theta\in \mathbb{R \setminus \{0\}}}$.
 
 $$(\delta = \sum_{y\in X}\delta_y \hat{y} \quad \text{eigenvector corresponding to the maximal eigenvalue})$$
 :::
