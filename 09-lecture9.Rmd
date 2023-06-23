@@ -139,7 +139,7 @@ $$\frac{\|w_i\|^2}{\|w_0\|^2} = x_1x_2\cdots x_i \quad (1\leq i\leq d).$$
 
 :::{.proof}
 It suffices to show that
-$$\|w_i\|^2 = x_i\|w_i\|^2 \quad (1\leq i\leq d).$$
+$$\|w_i\|^2 = x_i\|w_{i-1}\|^2 \quad (1\leq i\leq d).$$
 Recall by Lemma \@ref(lem:thin-module-structure) $(iiib)$ that
 $$Aw_j = w_{j+1} + a_jw_j + x_jw_{j-1} \quad (0\leq j\leq d), \quad w_{-1} = w_{d+1} = 0.$$
 Now observe,
