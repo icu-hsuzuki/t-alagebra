@@ -140,11 +140,11 @@ ${\displaystyle \mathrm{proj}_{W}w' = p'(A)\frac{\|w'\|}{\|w\|}w}$
 for some $0\neq p'\in \mathbb{C}[\lambda]$ with $\deg p \leq \Delta - r + r', d$.
 
 | $(ii)$ For all eigenvalues $\theta_i$ of $\Gamma$, 
-$$\frac{\langle E_iw, E_iw'\rangle}{\|w\|\|w'\|} = m(\theta_i)\overline{p'(\theta_i)}.$$
+$$\frac{\langle E_iw, E_iw'\rangle}{\|w\|\|w'\|} = m(\theta_i)\overline{p'(\theta_i)} = m'(\theta_i)p(\theta_i).$$
 
 | $(iii)$ For all eigenvalues $\theta_i$ of $\Gamma$,
 $$p(\theta_i)p'(\theta_i)$$
-is in a real number in interval $[0,1]$.
+is a real number in interval $[0,1]$.
 :::
 
 :::{.proof}

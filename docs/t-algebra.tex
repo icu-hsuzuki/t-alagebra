@@ -2854,12 +2854,12 @@ for some \(0\neq p'\in \mathbb{C}[\lambda]\) with \(\deg p \leq \Delta - r + r',
 
 \((ii)\) For all eigenvalues \(\theta_i\) of \(\Gamma\),
 
-\[\frac{\langle E_iw, E_iw'\rangle}{\|w\|\|w'\|} = m(\theta_i)\overline{p'(\theta_i)}.\]
+\[\frac{\langle E_iw, E_iw'\rangle}{\|w\|\|w'\|} = m(\theta_i)\overline{p'(\theta_i)} = m'(\theta_i)p(\theta_i).\]
 
 \((iii)\) For all eigenvalues \(\theta_i\) of \(\Gamma\),
 
 \[p(\theta_i)p'(\theta_i)\]
-is in a real number in interval \([0,1]\).
+is a real number in interval \([0,1]\).
 \end{theorem}
 
 \begin{proof}
@@ -3311,7 +3311,7 @@ Recall,
 \sum_{\theta\in \mathbb{R}}m(\theta)p_i(\theta)p_j(\theta) & = \delta_{ij}x_1x_2\cdots x_i \quad (0\leq i,j\leq D)\\
 & = \delta_{ij}b_0b_1\cdots b_{i-1}c_1c_2\cdots c_i.
 \end{align}
-Note that \(x_i = b_{i-1}c_i\) is in the proof of Theorem \ref{thm:thin-condition}.
+Note that \(x_i = b_{i-1}c_i\) is in the proof of Theorem \ref{thm:distance-regular-x}.
 
 By construction,
 \begin{align}
@@ -3321,7 +3321,7 @@ p_2(\lambda) & = \lambda^2 - a_1\lambda - k.
 \end{align}
 
 Apparently,
-\[f_W = \sigma_0 p_0 + \sigma p_1 + \sigma_2 p_2\]
+\[f_W = \sigma_0 p_0 + \sigma_1 p_1 + \sigma_2 p_2\]
 for some \(\sigma_0, \sigma_1, \sigma_2\in \mathbb{C}\).
 
 Claim:
@@ -3420,8 +3420,8 @@ f_W(\lambda) & = \frac{(\lambda - k)(\lambda - \theta_D)}{k(\theta_D+1)},
 \end{align}
 and we have \((ii)\).
 
-If \(\beta \not\in \{\theta_1, \theta_2\}\),
-\[\theta \in (-\infty, \theta_D) \cup (\theta_1, \infty),\]
+If \(\beta \not\in \{\theta_1, \theta_D\}\),
+\[\beta \in (-\infty, \theta_D) \cup (\theta_1, \infty),\]
 we have \((iv)\).
 
 Note using \eqref{eq:a0W}, we have \((iv)\).
