@@ -91,7 +91,7 @@ This proves the assertions.
 
 
 :::{.lemma #thin-endpoint1}
-Let $\Gamma = (X, E)$ be any distance-regular graph with valency $k$, diameter $D$ $(d\geq 2)$, measure $m$, and eigenvalues
+Let $\Gamma = (X, E)$ be any distance-regular graph with valency $k$, diameter $D$ $(D\geq 2)$, measure $m$, and eigenvalues
 $$k = \theta_0 > \theta_1 > \cdots > \theta_D.$$
 Pick $x\in X$. Let 
 $W$ be a thin irreducible $T(x)$-module with endpoint $r = 1$, diameter $d$ and measure $m_W = mf_W$.
