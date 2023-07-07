@@ -195,7 +195,7 @@ $(ii)$ Let $m$ be the trivial measure. Then,
 & = m(k)(k+1) + \sum_{\theta\neq k}m(\theta)(\theta+1)\\
 & \leq (k+1)|X|^{-1}.
 \end{align}
-Note that $m(k) = |X|^{-1}\dim d_0V = |X|^{-1}$.
+Note that $m(k) = |X|^{-1}\dim E_0V = |X|^{-1}$.
 
 So $k+1 \geq |X|$ or $k = |X|-1$. Thus,
 $xy\in E$ for every $x,y\in X$, and $D = 1$.
